@@ -7476,7 +7476,7 @@
         "type": "function",
         "z": "8b99f8fe.7b27b8",
         "name": "",
-        "func": "\nlet path = msg.payload\n\nmsg.payload = {};\nmsg.payload.filename = path;\nreturn msg;",
+        "func": "\nlet path = msg.payload\n\nmsg.payload = {};\nmsg.filename = path;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
