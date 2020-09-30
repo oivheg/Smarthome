@@ -7449,8 +7449,26 @@
         "y": 1020,
         "wires": [
             [
-                "be878fbe.4f7ed"
+                "be878fbe.4f7ed",
+                "57629e2d.93d6f"
             ]
         ]
+    },
+    {
+        "id": "57629e2d.93d6f",
+        "type": "debug",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 816,
+        "y": 1132,
+        "wires": []
     }
 ]
