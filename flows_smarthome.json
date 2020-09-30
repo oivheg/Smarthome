@@ -5331,7 +5331,8 @@
         "y": 660,
         "wires": [
             [
-                "d7ddc374.33edb"
+                "d7ddc374.33edb",
+                "e60235b7.339ea8"
             ],
             [
                 "6372b05.0367a5"
@@ -7424,5 +7425,21 @@
                 "6d3ac280.326dfc"
             ]
         ]
+    },
+    {
+        "id": "e60235b7.339ea8",
+        "type": "debug",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1810,
+        "y": 900,
+        "wires": []
     }
 ]
