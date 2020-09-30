@@ -7302,5 +7302,82 @@
                 "8f0e361a.88e718"
             ]
         ]
+    },
+    {
+        "id": "7152deea.25fcb",
+        "type": "pushbullet",
+        "z": "8b99f8fe.7b27b8",
+        "config": "530528aa.2006c8",
+        "pushtype": "note",
+        "title": "Nattmodus",
+        "chan": "",
+        "name": "Nattmodus",
+        "x": 1002,
+        "y": 826,
+        "wires": []
+    },
+    {
+        "id": "f1fa0dbe.152c3",
+        "type": "file in",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "filename": "/usr/local/HomeSeer/html/images/Tegneserier",
+        "format": "stream",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 520,
+        "y": 840,
+        "wires": [
+            [
+                "defd5ac4.5d4958"
+            ]
+        ]
+    },
+    {
+        "id": "45ed298b.458838",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 840,
+        "wires": [
+            [
+                "f1fa0dbe.152c3"
+            ]
+        ]
+    },
+    {
+        "id": "defd5ac4.5d4958",
+        "type": "debug",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 940,
+        "wires": []
     }
 ]
