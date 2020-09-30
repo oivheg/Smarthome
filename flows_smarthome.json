@@ -7455,23 +7455,6 @@
         ]
     },
     {
-        "id": "57629e2d.93d6f",
-        "type": "debug",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 816,
-        "y": 1132,
-        "wires": []
-    },
-    {
         "id": "d6cb1829.e1d2e8",
         "type": "function",
         "z": "8b99f8fe.7b27b8",
@@ -7485,7 +7468,7 @@
         "y": 1080,
         "wires": [
             [
-                "57629e2d.93d6f"
+                "be878fbe.4f7ed"
             ]
         ]
     }
