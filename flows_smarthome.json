@@ -7409,26 +7409,7 @@
         "y": 960,
         "wires": [
             [
-                "d6cb1829.e1d2e8"
-            ]
-        ]
-    },
-    {
-        "id": "d6cb1829.e1d2e8",
-        "type": "function",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "func": "\nlet path = msg.payload\n\nmsg.payload = {};\nmsg.filename = path;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 650,
-        "y": 1080,
-        "wires": [
-            [
-                "5a4cb787.125528",
-                "defd5ac4.5d4958"
+                "7152deea.25fcb"
             ]
         ]
     },
