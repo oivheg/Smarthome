@@ -7358,8 +7358,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 940,
+        "x": 1050,
+        "y": 1020,
         "wires": []
     },
     {
@@ -7381,7 +7381,75 @@
         "y": 960,
         "wires": [
             [
+                "24dfc256.71129e"
+            ]
+        ]
+    },
+    {
+        "id": "be878fbe.4f7ed",
+        "type": "file in",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "filename": "",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 810,
+        "y": 1020,
+        "wires": [
+            [
                 "defd5ac4.5d4958"
+            ]
+        ]
+    },
+    {
+        "id": "24dfc256.71129e",
+        "type": "delay",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 550,
+        "y": 960,
+        "wires": [
+            [
+                "a2337f62.7bcff"
+            ]
+        ]
+    },
+    {
+        "id": "a2337f62.7bcff",
+        "type": "change",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filename",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1020,
+        "wires": [
+            [
+                "be878fbe.4f7ed"
             ]
         ]
     }
