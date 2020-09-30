@@ -7424,35 +7424,7 @@
         "y": 960,
         "wires": [
             [
-                "a2337f62.7bcff",
                 "d6cb1829.e1d2e8"
-            ]
-        ]
-    },
-    {
-        "id": "a2337f62.7bcff",
-        "type": "change",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filename",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 650,
-        "y": 1020,
-        "wires": [
-            [
-                "be878fbe.4f7ed"
             ]
         ]
     },
