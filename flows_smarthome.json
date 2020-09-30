@@ -4117,7 +4117,8 @@
                 "d4cd1de.82711e"
             ],
             [
-                "b951c7f1.f25428"
+                "b951c7f1.f25428",
+                "3b2e7d2c.6070d2"
             ]
         ]
     },
@@ -7441,6 +7442,23 @@
         "statusType": "auto",
         "x": 750,
         "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3b2e7d2c.6070d2",
+        "type": "debug",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 280,
         "wires": []
     }
 ]
