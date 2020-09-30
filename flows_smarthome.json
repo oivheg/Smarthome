@@ -6784,7 +6784,7 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 60,
+        "x": 90,
         "y": 600,
         "wires": [
             [
@@ -7393,6 +7393,35 @@
         "wires": [
             [
                 "7152deea.25fcb"
+            ]
+        ]
+    },
+    {
+        "id": "70db2a89.dfa5d4",
+        "type": "inject",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "30",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 2040,
+        "y": 500,
+        "wires": [
+            [
+                "6d3ac280.326dfc"
             ]
         ]
     }
