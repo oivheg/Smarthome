@@ -615,6 +615,11 @@
         "willPayload": ""
     },
     {
+        "id": "d4f8fc23.2b07",
+        "type": "pushbullet-config",
+        "name": "Not valid!!"
+    },
+    {
         "id": "c93d9ccb.30d74",
         "type": "function",
         "z": "1c11632f.f206fd",
@@ -7341,8 +7346,7 @@
         "y": 840,
         "wires": [
             [
-                "e090fcff.94f85",
-                "7152deea.25fcb"
+                "e090fcff.94f85"
             ]
         ]
     },
@@ -7400,8 +7404,7 @@
         "y": 1020,
         "wires": [
             [
-                "defd5ac4.5d4958",
-                "7152deea.25fcb"
+                "defd5ac4.5d4958"
             ]
         ]
     },
@@ -7443,6 +7446,109 @@
         "wires": [
             [
                 "be878fbe.4f7ed"
+            ]
+        ]
+    },
+    {
+        "id": "a3daadbc.5c255",
+        "type": "pushbullet",
+        "z": "8b99f8fe.7b27b8",
+        "config": "d4f8fc23.2b07",
+        "pushtype": "file",
+        "title": "IP Cam Image",
+        "chan": "",
+        "name": "Push local IP Cam Image",
+        "x": 1130,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "abde26b1.5421d8",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Start IP Cam Image push",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "none",
+        "x": 266,
+        "y": 1240,
+        "wires": [
+            [
+                "9cde73c8.63219"
+            ]
+        ]
+    },
+    {
+        "id": "9cde73c8.63219",
+        "type": "http request",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Get IP Cam Image",
+        "method": "GET",
+        "ret": "bin",
+        "url": "http://youripcam:1234/snapshot.cgi",
+        "x": 494,
+        "y": 1240,
+        "wires": [
+            [
+                "c21366a4.3dec98",
+                "1c2f35e3.e3d0ca"
+            ]
+        ]
+    },
+    {
+        "id": "49102d23.b6efd4",
+        "type": "function",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Add attributes",
+        "func": "msg.payload = \"/tmp/test.jpg\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 897,
+        "y": 1240,
+        "wires": [
+            [
+                "a3daadbc.5c255"
+            ]
+        ]
+    },
+    {
+        "id": "c21366a4.3dec98",
+        "type": "file",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Store file to tmp",
+        "filename": "/tmp/test.jpg",
+        "appendNewline": false,
+        "overwriteFile": "true",
+        "x": 733,
+        "y": 1170,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c2f35e3.e3d0ca",
+        "type": "delay",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Wait for stored file",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 708,
+        "y": 1240,
+        "wires": [
+            [
+                "49102d23.b6efd4"
             ]
         ]
     }
