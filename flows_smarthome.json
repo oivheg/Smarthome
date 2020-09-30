@@ -7408,21 +7408,22 @@
         "type": "delay",
         "z": "8b99f8fe.7b27b8",
         "name": "",
-        "pauseType": "delay",
+        "pauseType": "rate",
         "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
-        "nbRateUnits": "1",
+        "nbRateUnits": "4",
         "rateUnits": "second",
         "randomFirst": "1",
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 550,
+        "x": 570,
         "y": 960,
         "wires": [
             [
-                "a2337f62.7bcff"
+                "a2337f62.7bcff",
+                "d6cb1829.e1d2e8"
             ]
         ]
     },
@@ -7449,8 +7450,7 @@
         "y": 1020,
         "wires": [
             [
-                "be878fbe.4f7ed",
-                "57629e2d.93d6f"
+                "be878fbe.4f7ed"
             ]
         ]
     },
@@ -7470,5 +7470,23 @@
         "x": 816,
         "y": 1132,
         "wires": []
+    },
+    {
+        "id": "d6cb1829.e1d2e8",
+        "type": "function",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "func": "\nlet path = msg.payload\n\nmsg.payload = {};\nmsg.payload.filename = path;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 650,
+        "y": 1080,
+        "wires": [
+            [
+                "57629e2d.93d6f"
+            ]
+        ]
     }
 ]
