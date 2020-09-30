@@ -7317,8 +7317,8 @@
         "title": "Tegneserier",
         "chan": "",
         "name": "Tegneserier",
-        "x": 1002,
-        "y": 826,
+        "x": 990,
+        "y": 820,
         "wires": []
     },
     {
@@ -7391,24 +7391,6 @@
         ]
     },
     {
-        "id": "be878fbe.4f7ed",
-        "type": "file in",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "filename": "",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "utf8",
-        "x": 810,
-        "y": 1020,
-        "wires": [
-            [
-                "defd5ac4.5d4958"
-            ]
-        ]
-    },
-    {
         "id": "24dfc256.71129e",
         "type": "delay",
         "z": "8b99f8fe.7b27b8",
@@ -7445,7 +7427,7 @@
         "y": 1080,
         "wires": [
             [
-                "be878fbe.4f7ed"
+                "7152deea.25fcb"
             ]
         ]
     },
@@ -7549,6 +7531,24 @@
         "wires": [
             [
                 "49102d23.b6efd4"
+            ]
+        ]
+    },
+    {
+        "id": "5a4cb787.125528",
+        "type": "function",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Add attributes",
+        "func": "msg.payload = \"/tmp/test.jpg\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 900,
+        "y": 920,
+        "wires": [
+            [
+                "7152deea.25fcb"
             ]
         ]
     }
