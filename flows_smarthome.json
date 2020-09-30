@@ -7317,24 +7317,6 @@
         "wires": []
     },
     {
-        "id": "f1fa0dbe.152c3",
-        "type": "file in",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "filename": "/usr/local/HomeSeer/html/images/Tegneserier",
-        "format": "stream",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 520,
-        "y": 840,
-        "wires": [
-            [
-                "defd5ac4.5d4958"
-            ]
-        ]
-    },
-    {
         "id": "45ed298b.458838",
         "type": "inject",
         "z": "8b99f8fe.7b27b8",
@@ -7359,7 +7341,7 @@
         "y": 840,
         "wires": [
             [
-                "f1fa0dbe.152c3"
+                "e090fcff.94f85"
             ]
         ]
     },
@@ -7379,5 +7361,28 @@
         "x": 700,
         "y": 940,
         "wires": []
+    },
+    {
+        "id": "e090fcff.94f85",
+        "type": "fs-file-lister",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "start": "/usr/local/HomeSeer/html/images/Tegneserier",
+        "pattern": "*.*",
+        "folders": "*",
+        "hidden": false,
+        "lstype": "files",
+        "path": true,
+        "single": false,
+        "depth": 0,
+        "stat": false,
+        "showWarnings": true,
+        "x": 330,
+        "y": 960,
+        "wires": [
+            [
+                "defd5ac4.5d4958"
+            ]
+        ]
     }
 ]
