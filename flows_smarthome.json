@@ -7317,8 +7317,8 @@
         "title": "Tegneserier",
         "chan": "",
         "name": "Tegneserier",
-        "x": 990,
-        "y": 820,
+        "x": 770,
+        "y": 840,
         "wires": []
     },
     {
@@ -7336,36 +7336,19 @@
             }
         ],
         "repeat": "",
-        "crontab": "",
+        "crontab": "00 12 * * *",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 190,
+        "x": 200,
         "y": 840,
         "wires": [
             [
                 "e090fcff.94f85"
             ]
         ]
-    },
-    {
-        "id": "defd5ac4.5d4958",
-        "type": "debug",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1050,
-        "y": 1020,
-        "wires": []
     },
     {
         "id": "e090fcff.94f85",
@@ -7382,8 +7365,8 @@
         "depth": 0,
         "stat": false,
         "showWarnings": true,
-        "x": 330,
-        "y": 960,
+        "x": 360,
+        "y": 840,
         "wires": [
             [
                 "24dfc256.71129e"
@@ -7405,129 +7388,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 570,
-        "y": 960,
-        "wires": [
-            [
-                "7152deea.25fcb"
-            ]
-        ]
-    },
-    {
-        "id": "a3daadbc.5c255",
-        "type": "pushbullet",
-        "z": "8b99f8fe.7b27b8",
-        "config": "d4f8fc23.2b07",
-        "pushtype": "file",
-        "title": "IP Cam Image",
-        "chan": "",
-        "name": "Push local IP Cam Image",
-        "x": 1130,
-        "y": 1240,
-        "wires": []
-    },
-    {
-        "id": "abde26b1.5421d8",
-        "type": "inject",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Start IP Cam Image push",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "topic": "",
-        "payload": "",
-        "payloadType": "none",
-        "x": 266,
-        "y": 1240,
-        "wires": [
-            [
-                "9cde73c8.63219"
-            ]
-        ]
-    },
-    {
-        "id": "9cde73c8.63219",
-        "type": "http request",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Get IP Cam Image",
-        "method": "GET",
-        "ret": "bin",
-        "url": "http://youripcam:1234/snapshot.cgi",
-        "x": 494,
-        "y": 1240,
-        "wires": [
-            [
-                "c21366a4.3dec98",
-                "1c2f35e3.e3d0ca"
-            ]
-        ]
-    },
-    {
-        "id": "49102d23.b6efd4",
-        "type": "function",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Add attributes",
-        "func": "msg.payload = \"/tmp/test.jpg\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 897,
-        "y": 1240,
-        "wires": [
-            [
-                "a3daadbc.5c255"
-            ]
-        ]
-    },
-    {
-        "id": "c21366a4.3dec98",
-        "type": "file",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Store file to tmp",
-        "filename": "/tmp/test.jpg",
-        "appendNewline": false,
-        "overwriteFile": "true",
-        "x": 733,
-        "y": 1170,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1c2f35e3.e3d0ca",
-        "type": "delay",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Wait for stored file",
-        "pauseType": "delay",
-        "timeout": "3",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 708,
-        "y": 1240,
-        "wires": [
-            [
-                "49102d23.b6efd4"
-            ]
-        ]
-    },
-    {
-        "id": "5a4cb787.125528",
-        "type": "function",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Add attributes",
-        "func": "msg.payload = \"/tmp/test.jpg\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 900,
-        "y": 920,
+        "x": 580,
+        "y": 840,
         "wires": [
             [
                 "7152deea.25fcb"
