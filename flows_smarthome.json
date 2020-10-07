@@ -1603,8 +1603,7 @@
         "y": 520,
         "wires": [
             [
-                "55a1471c.7ca3e8",
-                "9bbfb61b.57ed88"
+                "55a1471c.7ca3e8"
             ]
         ]
     },
@@ -1732,7 +1731,7 @@
         "z": "8b99f8fe.7b27b8",
         "name": "to bedroom",
         "links": [],
-        "x": 1275,
+        "x": 1395,
         "y": 480,
         "wires": []
     },
@@ -1755,7 +1754,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1120,
+        "x": 1240,
         "y": 480,
         "wires": [
             [
@@ -4006,7 +4005,7 @@
         "func": "msg.payload = {\"mode\":\"sleep\"};\nglobal.set(\"Mode\", \"sleep\")\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1090,
+        "x": 1250,
         "y": 520,
         "wires": [
             [
@@ -4022,7 +4021,7 @@
         "links": [
             "3072aa8d.fc3b66"
         ],
-        "x": 1275,
+        "x": 1395,
         "y": 520,
         "wires": []
     },
@@ -6891,8 +6890,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 870,
-        "y": 540,
+        "x": 1090,
+        "y": 520,
         "wires": [
             [
                 "d1068875.e54d18"
@@ -6931,13 +6930,13 @@
         "id": "8bc83fb6.95689",
         "type": "change",
         "z": "8b99f8fe.7b27b8",
-        "name": "true",
+        "name": "false",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "true",
+                "to": "false",
                 "tot": "bool"
             }
         ],
@@ -6951,8 +6950,8 @@
         "wires": [
             [
                 "a731240e.5da298",
-                "fe989649.553108",
-                "f67b9d7c.ac75"
+                "f67b9d7c.ac75",
+                "9bbfb61b.57ed88"
             ]
         ]
     },
@@ -6960,13 +6959,13 @@
         "id": "2571016f.0085ee",
         "type": "change",
         "z": "8b99f8fe.7b27b8",
-        "name": "false",
+        "name": "true",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "false",
+                "to": "true",
                 "tot": "bool"
             }
         ],
@@ -6989,8 +6988,8 @@
         "z": "8b99f8fe.7b27b8",
         "name": "",
         "pauseType": "delay",
-        "timeout": "10",
-        "timeoutUnits": "seconds",
+        "timeout": "2",
+        "timeoutUnits": "minutes",
         "rate": "1",
         "nbRateUnits": "1",
         "rateUnits": "second",
@@ -6998,8 +6997,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 880,
-        "y": 500,
+        "x": 1280,
+        "y": 560,
         "wires": [
             [
                 "fe989649.553108"
