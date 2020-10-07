@@ -7480,5 +7480,34 @@
         "x": 360,
         "y": 720,
         "wires": []
+    },
+    {
+        "id": "6ad7814b.044d7",
+        "type": "inject",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "props": [
+            {
+                "p": "enabeledEnabled",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "741be682.621ef8"
+            ]
+        ]
     }
 ]
