@@ -6588,36 +6588,6 @@
         ]
     },
     {
-        "id": "6ad7814b.044d7",
-        "type": "inject",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "props": [
-            {
-                "p": "enabeled",
-                "v": "false",
-                "vt": "bool"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 190,
-        "y": 320,
-        "wires": [
-            [
-                "741be682.621ef8",
-                "e45c34de.f632c8"
-            ]
-        ]
-    },
-    {
         "id": "e5f5aa31.81fff8",
         "type": "function",
         "z": "94ff8f0f.02c5a",
