@@ -6863,11 +6863,13 @@
         "y": 480,
         "wires": [
             [
-                "dda2305e.f8873"
+                "dda2305e.f8873",
+                "50033918.b9e678"
             ],
             [
                 "2a12fa10.833ac6",
-                "dda2305e.f8873"
+                "dda2305e.f8873",
+                "50033918.b9e678"
             ]
         ]
     },
@@ -6928,5 +6930,21 @@
                 "6a44834f.a649fc"
             ]
         ]
+    },
+    {
+        "id": "50033918.b9e678",
+        "type": "debug",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 320,
+        "wires": []
     }
 ]
