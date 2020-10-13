@@ -63,6 +63,59 @@
         "info": ""
     },
     {
+        "id": "94ff8f0f.02c5a",
+        "type": "subflow",
+        "name": "Deconz converter",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 420,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "e5f5aa31.81fff8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 720,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "e5f5aa31.81fff8",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "Name",
+                "type": "str",
+                "value": "default"
+            },
+            {
+                "name": "ETG",
+                "type": "str",
+                "value": "1"
+            }
+        ],
+        "color": "#DDAA99",
+        "status": {
+            "x": 640,
+            "y": 140,
+            "wires": [
+                {
+                    "id": "94ff8f0f.02c5a",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
         "id": "682302c8.9d819c",
         "type": "group",
         "z": "1c11632f.f206fd",
@@ -6783,6 +6836,22 @@
                 "741be682.621ef8",
                 "e45c34de.f632c8"
             ]
+        ]
+    },
+    {
+        "id": "e5f5aa31.81fff8",
+        "type": "function",
+        "z": "94ff8f0f.02c5a",
+        "name": "Convert",
+        "func": "  var mvmnt = {};\n        mvmnt.name = env.get(\"Name\");\n        mvmnt.topic = mvmnt.name;\n       // mvmnt.temperature = msg.payload.devices[0].temperature;\n        mvmnt.room = env.get(\"ETG\");\n       // mvmnt.id = msg.payload.devices[0].id;\n       // mvmnt.illuminance = msg.payload.devices[0].illuminance;\n        mvmnt.presence = msg.payload.presence;\n        mvmnt.dark = msg.payload.dark;\nreturn mvmnt;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 560,
+        "y": 200,
+        "wires": [
+            []
         ]
     }
 ]
