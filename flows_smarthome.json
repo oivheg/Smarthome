@@ -133,10 +133,9 @@
             "5483e66f.781f18",
             "6a44834f.a649fc",
             "96c7928d.91306",
-            "b2d6229c.8a4dc",
             "4041d59d.e27a3c",
             "2a12fa10.833ac6",
-            "a3886aca.0ec2b8"
+            "dcb8fc88.dda92"
         ],
         "x": 174,
         "y": 379,
@@ -4727,8 +4726,8 @@
         "y": 480,
         "wires": [
             [
-                "b2d6229c.8a4dc",
-                "fbefe13.48c352"
+                "fbefe13.48c352",
+                "dcb8fc88.dda92"
             ]
         ]
     },
@@ -4746,7 +4745,7 @@
         "extend": false,
         "overrideDelay": false,
         "units": "ms",
-        "reset": "",
+        "reset": "false",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
@@ -4782,7 +4781,7 @@
         "y": 480,
         "wires": [
             [
-                "f1ecea5f.4ebfe8"
+                "1106e25f.216e3e"
             ]
         ]
     },
@@ -5004,8 +5003,7 @@
         "y": 820,
         "wires": [
             [
-                "8f4bfbbd.bb7058",
-                "b2d6229c.8a4dc"
+                "8f4bfbbd.bb7058"
             ],
             [
                 "d03e20c.bd966e"
@@ -5339,28 +5337,6 @@
         "wires": [
             [
                 "84f62162.14f0c"
-            ]
-        ]
-    },
-    {
-        "id": "b2d6229c.8a4dc",
-        "type": "function",
-        "z": "1c11632f.f206fd",
-        "g": "682302c8.9d819c",
-        "name": "Lights ?",
-        "func": " var reset = {};\n    reset.reset = true;\n\nif (msg.payload === false) {\n    \n    \n    return [reset, msg];\n}\n\n\n\n\n\nif (flow.get(\"Light_enabled\") === true  ) {\n   \n  return [msg,reset] ;  \n}else{\n    return [null,null];\n}\n",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 680,
-        "y": 500,
-        "wires": [
-            [
-                "dda2305e.f8873"
-            ],
-            [
-                "2a12fa10.833ac6"
             ]
         ]
     },
@@ -5800,8 +5776,9 @@
         "op2type": "bool",
         "duration": "10",
         "extend": true,
+        "overrideDelay": false,
         "units": "min",
-        "reset": "",
+        "reset": "true",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
@@ -5809,36 +5786,7 @@
         "y": 520,
         "wires": [
             [
-                "48d4f8d0.54a8c8",
-                "a3886aca.0ec2b8"
-            ]
-        ]
-    },
-    {
-        "id": "a3886aca.0ec2b8",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "g": "682302c8.9d819c",
-        "name": "Reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 870,
-        "y": 480,
-        "wires": [
-            [
-                "dda2305e.f8873"
+                "48d4f8d0.54a8c8"
             ]
         ]
     },
@@ -6871,6 +6819,55 @@
         "wires": [
             [
                 "328ec247.9e5eee"
+            ]
+        ]
+    },
+    {
+        "id": "1106e25f.216e3e",
+        "type": "rbe",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1210,
+        "y": 480,
+        "wires": [
+            [
+                "f1ecea5f.4ebfe8"
+            ]
+        ]
+    },
+    {
+        "id": "dcb8fc88.dda92",
+        "type": "switch",
+        "z": "1c11632f.f206fd",
+        "g": "682302c8.9d819c",
+        "name": "",
+        "property": "Light_enabled",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 650,
+        "y": 480,
+        "wires": [
+            [
+                "dda2305e.f8873"
+            ],
+            [
+                "2a12fa10.833ac6",
+                "dda2305e.f8873"
             ]
         ]
     }
