@@ -6901,5 +6901,63 @@
                 "78b65f45.8b367"
             ]
         ]
+    },
+    {
+        "id": "a9d3ef51.adfc4",
+        "type": "inject",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 100,
+        "y": 540,
+        "wires": [
+            [
+                "e1568b9c.db9628"
+            ]
+        ]
+    },
+    {
+        "id": "cf48444.eae36b8",
+        "type": "inject",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 600,
+        "wires": [
+            [
+                "e1568b9c.db9628"
+            ]
+        ]
     }
 ]
