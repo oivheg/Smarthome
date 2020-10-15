@@ -6322,8 +6322,8 @@
             [
                 "167a965f.fa254a",
                 "1f68a3c8.dad9ac",
-                "18e793bb.41ccac",
-                "7f1b180d.9e1838"
+                "7f1b180d.9e1838",
+                "45e7346a.4285dc"
             ]
         ]
     },
@@ -6998,6 +6998,29 @@
             [
                 "18e793bb.41ccac",
                 "1f68a3c8.dad9ac"
+            ]
+        ]
+    },
+    {
+        "id": "45e7346a.4285dc",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 720,
+        "wires": [
+            [
+                "18e793bb.41ccac"
             ]
         ]
     }
