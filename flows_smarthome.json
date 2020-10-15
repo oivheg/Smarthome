@@ -4016,7 +4016,8 @@
         "links": [
             "5483e66f.781f18",
             "617791f9.9eee",
-            "be2ad471.d9c448"
+            "be2ad471.d9c448",
+            "99ed1ce4.90a0c"
         ],
         "x": 1375,
         "y": 120,
@@ -4063,7 +4064,8 @@
         "links": [
             "a575a24f.3f6a",
             "83702e42.6f5b7",
-            "f66e7e24.aca9d"
+            "f66e7e24.aca9d",
+            "c825f67d.b5dba8"
         ],
         "x": 1375,
         "y": 160,
@@ -4213,7 +4215,7 @@
         "y": 780,
         "wires": [
             [
-                "3e3d7f92.ce6b7"
+                "ff979eb7.893f3"
             ]
         ]
     },
@@ -4239,7 +4241,7 @@
         "y": 820,
         "wires": [
             [
-                "3e3d7f92.ce6b7"
+                "ff979eb7.893f3"
             ]
         ]
     },
@@ -4265,41 +4267,7 @@
         "y": 740,
         "wires": [
             [
-                "a5e9a69.b159d58"
-            ]
-        ]
-    },
-    {
-        "id": "3e3d7f92.ce6b7",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "Set BlockMovementD",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BlockMovementD",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "basement",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2280,
-        "y": 800,
-        "wires": [
-            [
-                "c1c45106.da7ab"
+                "ff979eb7.893f3"
             ]
         ]
     },
@@ -4355,7 +4323,9 @@
             "c1c45106.da7ab",
             "117c7706.e9e429",
             "c1069822.fa4578",
-            "6e1a0143.f51f8"
+            "6e1a0143.f51f8",
+            "e9e9aaf2.37c198",
+            "7c9078bb.3bd958"
         ],
         "x": 135,
         "y": 520,
@@ -4380,60 +4350,6 @@
         "wires": [
             [
                 "54bf5eae.c8ef3"
-            ]
-        ]
-    },
-    {
-        "id": "117c7706.e9e429",
-        "type": "link out",
-        "z": "1c11632f.f206fd",
-        "name": "Upstairs Reset",
-        "links": [
-            "64bc6db.9a90194",
-            "ffb91c4a.2fcd3"
-        ],
-        "x": 2555,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "c1c45106.da7ab",
-        "type": "link out",
-        "z": "1c11632f.f206fd",
-        "name": "Basemet Reset",
-        "links": [
-            "4ca4adb3.a95524",
-            "64bc6db.9a90194",
-            "2d663d9b.44ff02"
-        ],
-        "x": 2555,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "a5e9a69.b159d58",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "Auto",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BlockMovementD",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2230,
-        "y": 740,
-        "wires": [
-            [
-                "c1c45106.da7ab"
             ]
         ]
     },
@@ -4656,266 +4572,6 @@
             [
                 "cec0f8cb.33f1b8"
             ]
-        ]
-    },
-    {
-        "id": "84f62162.14f0c",
-        "type": "switch",
-        "z": "1c11632f.f206fd",
-        "name": "Light Upstairs",
-        "property": "illuminance",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "lt",
-                "v": "250",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2280,
-        "y": 460,
-        "wires": [
-            [
-                "380809d7.8a9a36"
-            ],
-            [
-                "a5ffe432.5d25f8"
-            ]
-        ]
-    },
-    {
-        "id": "380809d7.8a9a36",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "Enable Light",
-        "rules": [
-            {
-                "t": "set",
-                "p": "Light_enabled",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2494.6666870117188,
-        "y": 443.2833251953125,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a5ffe432.5d25f8",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "Disable Light",
-        "rules": [
-            {
-                "t": "set",
-                "p": "Light_enabled",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2490,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "617791f9.9eee",
-        "type": "link in",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "links": [
-            "d4cd1de.82711e"
-        ],
-        "x": 1975,
-        "y": 460,
-        "wires": [
-            [
-                "84f62162.14f0c"
-            ]
-        ]
-    },
-    {
-        "id": "e47aed6e.91552",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "Set BlockMovementU",
-        "rules": [
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "upstairs",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "power",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "BlockMovementU",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2280,
-        "y": 600,
-        "wires": [
-            [
-                "117c7706.e9e429"
-            ]
-        ]
-    },
-    {
-        "id": "22d50ecc.987be2",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "auto",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BlockMovementU",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2230,
-        "y": 680,
-        "wires": [
-            [
-                "117c7706.e9e429"
-            ]
-        ]
-    },
-    {
-        "id": "ae82d5b4.4e3f18",
-        "type": "switch",
-        "z": "1c11632f.f206fd",
-        "name": "Light Downstairs",
-        "property": "illuminance",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "lt",
-                "v": "250",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2290,
-        "y": 540,
-        "wires": [
-            [
-                "6d3ac280.326dfc"
-            ],
-            [
-                "ceb3d81a.48a848"
-            ]
-        ]
-    },
-    {
-        "id": "6d3ac280.326dfc",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "Enable Light",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BLight_enabled",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2494.6666870117188,
-        "y": 523.2833251953125,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ceb3d81a.48a848",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "Disable Light",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BLight_enabled",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2490,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "83702e42.6f5b7",
-        "type": "link in",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "links": [
-            "b951c7f1.f25428"
-        ],
-        "x": 1975,
-        "y": 540,
-        "wires": [
-            []
         ]
     },
     {
@@ -6075,7 +5731,7 @@
             "64bc6db.9a90194"
         ],
         "x": 1595,
-        "y": 660,
+        "y": 880,
         "wires": []
     },
     {
@@ -6098,7 +5754,7 @@
         "to": "",
         "reg": false,
         "x": 1000,
-        "y": 840,
+        "y": 1060,
         "wires": [
             [
                 "6e1a0143.f51f8"
@@ -6121,7 +5777,7 @@
         "repair": false,
         "outputs": 1,
         "x": 1410,
-        "y": 660,
+        "y": 880,
         "wires": [
             [
                 "6e1a0143.f51f8"
@@ -6140,7 +5796,7 @@
         "startOffset": 0,
         "endOffset": 0,
         "x": 1310,
-        "y": 580,
+        "y": 800,
         "wires": [
             [
                 "6e1a0143.f51f8"
@@ -6167,7 +5823,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 870,
-        "y": 820,
+        "y": 1040,
         "wires": [
             [
                 "5f77e25d.b94d0c"
@@ -6191,7 +5847,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 870,
-        "y": 860,
+        "y": 1080,
         "wires": [
             [
                 "5f77e25d.b94d0c"
@@ -6218,7 +5874,7 @@
         "to": "",
         "reg": false,
         "x": 880,
-        "y": 460,
+        "y": 680,
         "wires": [
             [
                 "5d4636fd.b16148"
@@ -6245,7 +5901,7 @@
         "to": "",
         "reg": false,
         "x": 1000,
-        "y": 640,
+        "y": 860,
         "wires": [
             [
                 "5d4636fd.b16148"
@@ -6263,7 +5919,7 @@
         "initialize": "",
         "finalize": "",
         "x": 680,
-        "y": 840,
+        "y": 1060,
         "wires": [
             [
                 "4ca76adb.630d34"
@@ -6291,7 +5947,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 710,
-        "y": 440,
+        "y": 660,
         "wires": [
             [
                 "f5037a50.817ae8",
@@ -6317,7 +5973,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 710,
-        "y": 480,
+        "y": 700,
         "wires": [
             [
                 "f5037a50.817ae8",
@@ -6341,7 +5997,7 @@
         "repair": false,
         "outputs": 1,
         "x": 870,
-        "y": 680,
+        "y": 900,
         "wires": [
             [
                 "52e0046d.a53a8c"
@@ -6366,7 +6022,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 710,
-        "y": 640,
+        "y": 860,
         "wires": [
             [
                 "52e0046d.a53a8c"
@@ -6397,7 +6053,7 @@
         "officon": "remove_red_eye",
         "offcolor": "grey",
         "x": 510,
-        "y": 840,
+        "y": 1060,
         "wires": [
             [
                 "746a942.43c286c",
@@ -6425,7 +6081,7 @@
         "to": "",
         "reg": false,
         "x": 940,
-        "y": 360,
+        "y": 580,
         "wires": [
             []
         ]
@@ -6450,7 +6106,7 @@
         "to": "",
         "reg": false,
         "x": 650,
-        "y": 360,
+        "y": 580,
         "wires": [
             [
                 "31e4a4c9.5261bc",
@@ -6477,7 +6133,7 @@
         "repair": false,
         "outputs": 2,
         "x": 500,
-        "y": 480,
+        "y": 700,
         "wires": [
             [
                 "31e4a4c9.5261bc",
@@ -6507,7 +6163,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 710,
-        "y": 680,
+        "y": 900,
         "wires": [
             [
                 "d8799574.05a9b8"
@@ -6533,7 +6189,7 @@
         "repair": false,
         "outputs": 2,
         "x": 500,
-        "y": 660,
+        "y": 880,
         "wires": [
             [
                 "71bb07f3.efd1e8",
@@ -6554,7 +6210,7 @@
             "1329b56.bea634b"
         ],
         "x": 1295,
-        "y": 660,
+        "y": 880,
         "wires": []
     },
     {
@@ -6577,7 +6233,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 840,
+        "y": 1060,
         "wires": [
             [
                 "b5c52e38.5a0b5",
@@ -6596,7 +6252,7 @@
         ],
         "uncaught": false,
         "x": 510,
-        "y": 360,
+        "y": 580,
         "wires": [
             [
                 "7284606e.34aff"
@@ -6627,7 +6283,7 @@
         "officon": "remove_red_eye",
         "offcolor": "grey",
         "x": 320,
-        "y": 480,
+        "y": 700,
         "wires": [
             [
                 "4f3eee1e.36e83",
@@ -6659,7 +6315,7 @@
         "officon": "remove_red_eye",
         "offcolor": "grey",
         "x": 320,
-        "y": 660,
+        "y": 880,
         "wires": [
             [
                 "4f3eee1e.36e83",
@@ -6676,7 +6332,7 @@
             "328ec247.9e5eee"
         ],
         "x": 175,
-        "y": 840,
+        "y": 1060,
         "wires": [
             [
                 "7513b7d0.fbf588"
@@ -6692,7 +6348,7 @@
             "93ef5d70.0130e"
         ],
         "x": 455,
-        "y": 800,
+        "y": 1020,
         "wires": []
     },
     {
@@ -6705,7 +6361,7 @@
             "e92f253c.11b9b8"
         ],
         "x": 175,
-        "y": 480,
+        "y": 700,
         "wires": [
             [
                 "18e793bb.41ccac",
@@ -6722,7 +6378,7 @@
             "b951c7f1.f25428"
         ],
         "x": 155,
-        "y": 660,
+        "y": 880,
         "wires": [
             [
                 "c07d4e60.269f4",
@@ -6752,7 +6408,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 60,
-        "y": 560,
+        "y": 780,
         "wires": [
             [
                 "a3713cf3.b331a"
@@ -6781,7 +6437,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 50,
-        "y": 620,
+        "y": 840,
         "wires": [
             [
                 "a3713cf3.b331a"
@@ -6799,7 +6455,7 @@
         "inout": "out",
         "property": "payload",
         "x": 290,
-        "y": 440,
+        "y": 660,
         "wires": [
             [
                 "c30c4c38.708fe"
@@ -6817,7 +6473,7 @@
         "inout": "out",
         "property": "payload",
         "x": 290,
-        "y": 620,
+        "y": 840,
         "wires": [
             [
                 "ee25b1da.bb3eb"
@@ -6833,7 +6489,7 @@
             "93ef5d70.0130e"
         ],
         "x": 375,
-        "y": 440,
+        "y": 660,
         "wires": []
     },
     {
@@ -6845,7 +6501,7 @@
             "93ef5d70.0130e"
         ],
         "x": 375,
-        "y": 620,
+        "y": 840,
         "wires": []
     },
     {
@@ -6886,5 +6542,363 @@
         "x": 2065,
         "y": 660,
         "wires": []
+    },
+    {
+        "id": "ff979eb7.893f3",
+        "type": "link out",
+        "z": "1c11632f.f206fd",
+        "name": "btn_downstairs",
+        "links": [],
+        "x": 2055,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "78e382b2.97061c",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "Light Upstairs",
+        "property": "illuminance",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "250",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 620,
+        "y": 100,
+        "wires": [
+            [
+                "cdf8cec8.0f578"
+            ],
+            [
+                "2600e127.11eeee"
+            ]
+        ]
+    },
+    {
+        "id": "cdf8cec8.0f578",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Enable Light",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Light_enabled",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 834.6666870117188,
+        "y": 83.2833251953125,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2600e127.11eeee",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Disable Light",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Light_enabled",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99ed1ce4.90a0c",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "links": [
+            "d4cd1de.82711e"
+        ],
+        "x": 315,
+        "y": 100,
+        "wires": [
+            [
+                "78e382b2.97061c"
+            ]
+        ]
+    },
+    {
+        "id": "a0afb43e.e37c98",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Set BlockMovementU",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "upstairs",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "power",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "BlockMovementU",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 240,
+        "wires": [
+            [
+                "e9e9aaf2.37c198"
+            ]
+        ]
+    },
+    {
+        "id": "4686c700.425e88",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "Light Downstairs",
+        "property": "illuminance",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "250",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "ae464c91.30545"
+            ],
+            [
+                "58dcc160.dfa1c"
+            ]
+        ]
+    },
+    {
+        "id": "ae464c91.30545",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Enable Light",
+        "rules": [
+            {
+                "t": "set",
+                "p": "BLight_enabled",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 834.6666870117188,
+        "y": 163.2833251953125,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58dcc160.dfa1c",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Disable Light",
+        "rules": [
+            {
+                "t": "set",
+                "p": "BLight_enabled",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c825f67d.b5dba8",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "links": [
+            "b951c7f1.f25428"
+        ],
+        "x": 315,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9e9aaf2.37c198",
+        "type": "link out",
+        "z": "aa0ae7ae.75d228",
+        "name": "Upstairs Reset",
+        "links": [
+            "64bc6db.9a90194",
+            "ffb91c4a.2fcd3"
+        ],
+        "x": 895,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "7c9078bb.3bd958",
+        "type": "link out",
+        "z": "aa0ae7ae.75d228",
+        "name": "Basemet Reset",
+        "links": [
+            "4ca4adb3.a95524",
+            "64bc6db.9a90194",
+            "2d663d9b.44ff02"
+        ],
+        "x": 895,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a16a8c68.84be7",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Set BlockMovementD",
+        "rules": [
+            {
+                "t": "set",
+                "p": "BlockMovementD",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "basement",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 440,
+        "wires": [
+            [
+                "7c9078bb.3bd958"
+            ]
+        ]
+    },
+    {
+        "id": "dcf62a02.3c69d8",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Auto",
+        "rules": [
+            {
+                "t": "set",
+                "p": "BlockMovementD",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 380,
+        "wires": [
+            [
+                "7c9078bb.3bd958"
+            ]
+        ]
+    },
+    {
+        "id": "bea89d86.a9618",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "auto",
+        "rules": [
+            {
+                "t": "set",
+                "p": "BlockMovementU",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 320,
+        "wires": [
+            [
+                "e9e9aaf2.37c198"
+            ]
+        ]
     }
 ]
