@@ -1521,7 +1521,7 @@
         "y": 80,
         "wires": [
             [
-                "c775a129.77c34"
+                "ba60c720.f08e38"
             ],
             [
                 "9ab1a383.0f88b"
@@ -1574,7 +1574,7 @@
         "y": 140,
         "wires": [
             [
-                "c775a129.77c34"
+                "ba60c720.f08e38"
             ],
             [
                 "9ab1a383.0f88b"
@@ -6912,21 +6912,23 @@
         "wires": []
     },
     {
-        "id": "c775a129.77c34",
-        "type": "delay",
+        "id": "ba60c720.f08e38",
+        "type": "trigger",
         "z": "1b14ec1b.20ab54",
         "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "10",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "x": 820,
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "nul",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 810,
         "y": 80,
         "wires": [
             [
