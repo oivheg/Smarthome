@@ -4627,7 +4627,7 @@
         "wires": [
             [
                 "195ebfa7.e0d1a",
-                "452ae4bf.bd332c"
+                "8b7a0dc.31806f"
             ],
             []
         ]
@@ -4642,12 +4642,10 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 540,
-        "y": 100,
+        "x": 520,
+        "y": 40,
         "wires": [
-            [
-                "e92f253c.11b9b8"
-            ]
+            []
         ]
     },
     {
@@ -4679,7 +4677,6 @@
         "y": 160,
         "wires": [
             [
-                "2a1a71f2.69c5fe",
                 "84d4238b.16cfe"
             ],
             []
@@ -4697,22 +4694,6 @@
         "x": 695,
         "y": 160,
         "wires": []
-    },
-    {
-        "id": "2a1a71f2.69c5fe",
-        "type": "function",
-        "z": "a7af161f.d5ece8",
-        "name": "Convert",
-        "func": "  var mvmnt = {};\n        mvmnt.name = \"Gangen\";\n        mvmnt.topic = mvmnt.name;\n       // mvmnt.temperature = msg.payload.devices[0].temperature;\n        mvmnt.room = 1;\n       // mvmnt.id = msg.payload.devices[0].id;\n       // mvmnt.illuminance = msg.payload.devices[0].illuminance;\n        mvmnt.presence = msg.payload.presence;\n        mvmnt.dark = msg.payload.dark;\nreturn mvmnt;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 540,
-        "y": 160,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "5c6e44d5.cb5f8c",
@@ -5589,8 +5570,8 @@
                 "type": "str"
             }
         ],
-        "x": 550,
-        "y": 200,
+        "x": 530,
+        "y": 160,
         "wires": [
             [
                 "328ec247.9e5eee"
@@ -6928,8 +6909,29 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
+        "x": 970,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "8b7a0dc.31806f",
+        "type": "subflow:94ff8f0f.02c5a",
+        "z": "a7af161f.d5ece8",
+        "name": "",
+        "env": [
+            {
+                "name": "Name",
+                "value": "Trapp",
+                "type": "str"
+            }
+        ],
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [
+                "452ae4bf.bd332c",
+                "e92f253c.11b9b8"
+            ]
+        ]
     }
 ]
