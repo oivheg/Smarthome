@@ -6938,10 +6938,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload.illuminance",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
+        "x": 1100,
         "y": 400,
         "wires": []
     }
