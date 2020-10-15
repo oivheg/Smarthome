@@ -7038,8 +7038,8 @@
                 "t": "set",
                 "p": "MVM_ON",
                 "pt": "flow",
-                "to": "true",
-                "tot": "bool"
+                "to": "payload",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -7061,10 +7061,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
