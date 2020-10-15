@@ -72,7 +72,7 @@
     {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
-        "name": "Deconz converter",
+        "name": "Deconz  Movement",
         "info": "",
         "category": "",
         "in": [
@@ -4574,26 +4574,8 @@
         "y": 100,
         "wires": [
             [
-                "195ebfa7.e0d1a",
-                "8b7a0dc.31806f",
-                "70cc4b64.126b74"
+                "8b7a0dc.31806f"
             ],
-            []
-        ]
-    },
-    {
-        "id": "195ebfa7.e0d1a",
-        "type": "function",
-        "z": "a7af161f.d5ece8",
-        "name": "Convert",
-        "func": "  var mvmnt = {};\n        mvmnt.name = msg.topic;\n        mvmnt.topic = mvmnt.name;\n       // mvmnt.temperature = msg.payload.devices[0].temperature;\n        mvmnt.room = 2;\n       // mvmnt.id = msg.payload.devices[0].id;\n       // mvmnt.illuminance = msg.payload.devices[0].illuminance;\n        mvmnt.presence = msg.payload.presence;\n        mvmnt.dark = msg.payload.dark;\n         mvmnt.payload = msg.payload.presence;\nreturn mvmnt;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 520,
-        "y": 40,
-        "wires": [
             []
         ]
     },
@@ -6801,23 +6783,6 @@
         ]
     },
     {
-        "id": "452ae4bf.bd332c",
-        "type": "debug",
-        "z": "a7af161f.d5ece8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 970,
-        "y": 60,
-        "wires": []
-    },
-    {
         "id": "8b7a0dc.31806f",
         "type": "subflow:94ff8f0f.02c5a",
         "z": "a7af161f.d5ece8",
@@ -6833,26 +6798,9 @@
         "y": 100,
         "wires": [
             [
-                "452ae4bf.bd332c",
                 "e92f253c.11b9b8"
             ]
         ]
-    },
-    {
-        "id": "70cc4b64.126b74",
-        "type": "debug",
-        "z": "a7af161f.d5ece8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 40,
-        "wires": []
     },
     {
         "id": "167a965f.fa254a",
