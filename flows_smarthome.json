@@ -6881,5 +6881,68 @@
                 "18e793bb.41ccac"
             ]
         ]
+    },
+    {
+        "id": "c660d15c.213f9",
+        "type": "get-state",
+        "z": "e3737c94.fd59f",
+        "user": "fae123cb.bd4b2",
+        "name": "1 etg LUX",
+        "get_type": "devices",
+        "device_id": "23",
+        "device": "23",
+        "room": "",
+        "x": 880,
+        "y": 400,
+        "wires": [
+            [
+                "ac6ccde9.2f87f"
+            ]
+        ]
+    },
+    {
+        "id": "801ff201.a3dac",
+        "type": "inject",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 670,
+        "y": 400,
+        "wires": [
+            [
+                "c660d15c.213f9"
+            ]
+        ]
+    },
+    {
+        "id": "ac6ccde9.2f87f",
+        "type": "debug",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 400,
+        "wires": []
     }
 ]
