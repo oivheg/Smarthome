@@ -5968,7 +5968,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1000,
+        "x": 940,
         "y": 720,
         "wires": [
             [
@@ -5976,7 +5976,7 @@
                 "507210ce.4f9a2"
             ],
             [
-                "507210ce.4f9a2"
+                "2bef6e7c.82d912"
             ]
         ]
     },
@@ -7075,6 +7075,29 @@
         "wires": [
             [
                 "1262fceb.3723b3"
+            ]
+        ]
+    },
+    {
+        "id": "2bef6e7c.82d912",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "MVM_ON",
+        "property": "MVM_ON",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1080,
+        "y": 760,
+        "wires": [
+            [
+                "507210ce.4f9a2"
             ]
         ]
     }
