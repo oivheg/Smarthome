@@ -5565,7 +5565,7 @@
         "type": "function",
         "z": "94ff8f0f.02c5a",
         "name": "Convert",
-        "func": "  var mvmnt = {};\n        mvmnt.name = env.get(\"Name\");\n        mvmnt.topic = mvmnt.name;\n       // mvmnt.temperature = msg.payload.devices[0].temperature;\n        mvmnt.room = env.get(\"ETG\");\n       // mvmnt.id = msg.payload.devices[0].id;\n       // mvmnt.illuminance = msg.payload.devices[0].illuminance;\n        mvmnt.presence = msg.payload.presence;\n        mvmnt.dark = msg.payload.dark;\nreturn mvmnt;",
+        "func": "  var mvmnt = {};\n        mvmnt.name = env.get(\"Name\");\n        mvmnt.topic = mvmnt.name;\n       // mvmnt.temperature = msg.payload.devices[0].temperature;\n        mvmnt.room = env.get(\"ETG\");\n       // mvmnt.id = msg.payload.devices[0].id;\n       // mvmnt.illuminance = msg.payload.devices[0].illuminance;\n        mvmnt.payload = msg.payload.presence; // presence\n        mvmnt.dark = msg.payload.dark;\nreturn mvmnt;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6382,64 +6382,6 @@
         "wires": [
             [
                 "c07d4e60.269f4",
-                "a3713cf3.b331a"
-            ]
-        ]
-    },
-    {
-        "id": "c73e889.6259978",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 60,
-        "y": 780,
-        "wires": [
-            [
-                "a3713cf3.b331a"
-            ]
-        ]
-    },
-    {
-        "id": "f0e61416.071948",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 50,
-        "y": 840,
-        "wires": [
-            [
                 "a3713cf3.b331a"
             ]
         ]
