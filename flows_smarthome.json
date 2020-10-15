@@ -4626,7 +4626,8 @@
         "y": 100,
         "wires": [
             [
-                "195ebfa7.e0d1a"
+                "195ebfa7.e0d1a",
+                "452ae4bf.bd332c"
             ],
             []
         ]
@@ -6913,5 +6914,22 @@
                 "dcf62a02.3c69d8"
             ]
         ]
+    },
+    {
+        "id": "452ae4bf.bd332c",
+        "type": "debug",
+        "z": "a7af161f.d5ece8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 60,
+        "wires": []
     }
 ]
