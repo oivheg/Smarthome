@@ -123,58 +123,6 @@
         }
     },
     {
-        "id": "682302c8.9d819c",
-        "type": "group",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "style": {
-            "stroke": "#777777",
-            "fill": "none",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [],
-        "x": 174,
-        "y": 379,
-        "w": 40,
-        "h": 40
-    },
-    {
-        "id": "138044d1.a3f37b",
-        "type": "group",
-        "z": "1c11632f.f206fd",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true
-        },
-        "nodes": [],
-        "x": 154,
-        "y": 559,
-        "w": 40,
-        "h": 40
-    },
-    {
-        "id": "f2958898.ff1ca8",
-        "type": "group",
-        "z": "1c11632f.f206fd",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true
-        },
-        "nodes": [],
-        "x": 174,
-        "y": 739,
-        "w": 40,
-        "h": 40
-    },
-    {
         "id": "f6aee802.f74bc8",
         "type": "mqtt-broker",
         "z": "",
@@ -2410,8 +2358,8 @@
         "timer": "",
         "oldrc": false,
         "name": "",
-        "x": 1340,
-        "y": 100,
+        "x": 1360,
+        "y": 80,
         "wires": [
             [],
             [],
@@ -2430,8 +2378,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1140,
-        "y": 100,
+        "x": 1160,
+        "y": 80,
         "wires": [
             [
                 "817f1df1.c5f98"
@@ -2992,7 +2940,7 @@
         "name": "Mr Robot",
         "server": "6708f2f6.06829c",
         "outputAtStartup": true,
-        "x": 200,
+        "x": 260,
         "y": 80,
         "wires": [
             [
@@ -3023,7 +2971,7 @@
         "offvalueType": "bool",
         "officon": "fa-sign-out",
         "offcolor": "red",
-        "x": 840,
+        "x": 800,
         "y": 80,
         "wires": [
             []
@@ -3039,7 +2987,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 550,
+        "x": 610,
         "y": 80,
         "wires": [
             [
@@ -3675,7 +3623,7 @@
         "z": "1c11632f.f206fd",
         "name": "Status / INFO",
         "info": "",
-        "x": 150,
+        "x": 210,
         "y": 40,
         "wires": []
     },
@@ -3702,8 +3650,8 @@
         "offvalueType": "str",
         "officon": "fa-sign-out",
         "offcolor": "red",
-        "x": 730,
-        "y": 120,
+        "x": 790,
+        "y": 140,
         "wires": [
             []
         ]
@@ -3716,8 +3664,8 @@
         "func": "     msg.label = global.get(\"Mode\");\n     msg.payload = global.get(\"Mode\");\n \nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 490,
-        "y": 120,
+        "x": 610,
+        "y": 140,
         "wires": [
             [
                 "1ecef1db.323e0e"
@@ -3733,8 +3681,8 @@
             "247260f.c82dca",
             "fc4fe81e.444628"
         ],
-        "x": 155,
-        "y": 120,
+        "x": 215,
+        "y": 140,
         "wires": [
             [
                 "f679bcb.a33044"
@@ -3764,8 +3712,8 @@
         "offvalueType": "bool",
         "officon": "fa-user",
         "offcolor": "orange",
-        "x": 380,
-        "y": 220,
+        "x": 800,
+        "y": 200,
         "wires": [
             [
                 "b670eaa0.8e6998",
@@ -3796,8 +3744,8 @@
         "offvalueType": "bool",
         "officon": "fa-user",
         "offcolor": "orange",
-        "x": 370,
-        "y": 260,
+        "x": 790,
+        "y": 240,
         "wires": [
             [
                 "b670eaa0.8e6998",
@@ -3813,8 +3761,8 @@
         "links": [
             "772b0560.6b8bcc"
         ],
-        "x": 155,
-        "y": 220,
+        "x": 215,
+        "y": 200,
         "wires": [
             [
                 "45a078fc.952f68"
@@ -3829,8 +3777,8 @@
         "links": [
             "47763aff.5ff334"
         ],
-        "x": 155,
-        "y": 260,
+        "x": 215,
+        "y": 240,
         "wires": [
             [
                 "e9824990.fac3a8"
@@ -3845,8 +3793,8 @@
         "links": [
             "e3ae9576.18be48"
         ],
-        "x": 795,
-        "y": 240,
+        "x": 1155,
+        "y": 220,
         "wires": []
     },
     {
@@ -3989,8 +3937,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 670,
-        "y": 240,
+        "x": 1030,
+        "y": 220,
         "wires": [
             [
                 "19836afb.acbac5",
@@ -4089,8 +4037,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "yes",
-        "x": 1850,
-        "y": 640,
+        "x": 510,
+        "y": 500,
         "wires": [
             [
                 "6987ca2e.892e94"
@@ -4115,8 +4063,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "yes",
-        "x": 1850,
-        "y": 600,
+        "x": 510,
+        "y": 460,
         "wires": [
             [
                 "6987ca2e.892e94"
@@ -4141,8 +4089,8 @@
         "payload": "",
         "payloadType": "date",
         "topic": "auto",
-        "x": 1850,
-        "y": 680,
+        "x": 510,
+        "y": 540,
         "wires": [
             [
                 "6987ca2e.892e94"
@@ -4161,8 +4109,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1670,
-        "y": 700,
+        "x": 330,
+        "y": 560,
         "wires": [
             [
                 "d2142d17.21a64",
@@ -4211,8 +4159,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "yes",
-        "x": 1850,
-        "y": 780,
+        "x": 510,
+        "y": 640,
         "wires": [
             [
                 "ff979eb7.893f3"
@@ -4237,8 +4185,8 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "yes",
-        "x": 1850,
-        "y": 820,
+        "x": 510,
+        "y": 680,
         "wires": [
             [
                 "ff979eb7.893f3"
@@ -4263,8 +4211,8 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "no",
-        "x": 1850,
-        "y": 740,
+        "x": 510,
+        "y": 600,
         "wires": [
             [
                 "ff979eb7.893f3"
@@ -4364,8 +4312,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 940,
-        "y": 240,
+        "x": 1300,
+        "y": 220,
         "wires": []
     },
     {
@@ -4378,8 +4326,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 250,
-        "y": 220,
+        "x": 590,
+        "y": 200,
         "wires": [
             [
                 "e45c34de.f632c8"
@@ -4396,8 +4344,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 250,
-        "y": 260,
+        "x": 590,
+        "y": 240,
         "wires": [
             [
                 "741be682.621ef8"
@@ -4760,31 +4708,13 @@
         "spotifyAccessToken": "",
         "spotifyAccessTokenExpiration": "",
         "spotifyDeviceName": "",
-        "x": 910,
-        "y": 960,
+        "x": 420,
+        "y": 320,
         "wires": [
             [
-                "dd2dec87.c202d",
                 "f847eafc.0e0ae8"
             ]
         ]
-    },
-    {
-        "id": "dd2dec87.c202d",
-        "type": "debug",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 1000,
-        "wires": []
     },
     {
         "id": "f847eafc.0e0ae8",
@@ -4805,8 +4735,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1170,
-        "y": 920,
+        "x": 620,
+        "y": 320,
         "wires": [
             []
         ]
@@ -4826,7 +4756,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": true,
-        "x": 360,
+        "x": 420,
         "y": 80,
         "wires": [
             [
@@ -5210,8 +5140,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 280,
+        "x": 990,
+        "y": 260,
         "wires": [
             []
         ]
@@ -5235,39 +5165,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6f576ed2.0fcae",
-        "type": "inject",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 320,
+        "x": 990,
         "y": 180,
         "wires": [
-            [
-                "fe7d3938.a5fd88"
-            ]
+            []
         ]
     },
     {
@@ -6425,8 +6326,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 650,
-        "y": 920,
+        "x": 270,
+        "y": 320,
         "wires": [
             [
                 "352f3a96.368046"
@@ -6441,8 +6342,8 @@
         "links": [
             "fabdb6a9.b22598"
         ],
-        "x": 2065,
-        "y": 660,
+        "x": 725,
+        "y": 520,
         "wires": []
     },
     {
@@ -6453,8 +6354,8 @@
         "links": [
             "56d97603.6cdfe8"
         ],
-        "x": 2055,
-        "y": 780,
+        "x": 715,
+        "y": 640,
         "wires": []
     },
     {
