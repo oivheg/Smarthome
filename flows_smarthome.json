@@ -672,8 +672,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 40,
+        "x": 340,
+        "y": 140,
         "wires": [
             [
                 "47a496d1.bcac18",
@@ -693,8 +693,8 @@
         "topic": "",
         "payload": "GO",
         "payloadType": "str",
-        "x": 70,
-        "y": 340,
+        "x": 310,
+        "y": 440,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -713,8 +713,8 @@
         "topic": "",
         "payload": "STOP",
         "payloadType": "str",
-        "x": 70,
-        "y": 380,
+        "x": 310,
+        "y": 480,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -729,8 +729,8 @@
         "func": "msg.payload = \"Please Remember to Take out the TRASH\";\nmsg.emitVolume = 50;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 490,
-        "y": 260,
+        "x": 730,
+        "y": 360,
         "wires": [
             [
                 "7db434df.a3db2c"
@@ -745,8 +745,8 @@
         "func": "msg.payload = \"Please Remember to Take out the TRASH\";\nmsg.topic = \"Remember Garbage\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 490,
-        "y": 220,
+        "x": 730,
+        "y": 320,
         "wires": [
             [
                 "c0005e0c.a1014"
@@ -775,8 +775,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 290,
-        "y": 20,
+        "x": 530,
+        "y": 120,
         "wires": [
             [
                 "584db3f7.80672c"
@@ -805,8 +805,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 20,
+        "x": 680,
+        "y": 120,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -832,8 +832,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 440,
-        "y": 60,
+        "x": 680,
+        "y": 160,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -899,8 +899,8 @@
         "payload": "STOP",
         "payloadType": "str",
         "topic": "FALSE",
-        "x": 70,
-        "y": 300,
+        "x": 310,
+        "y": 400,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -919,8 +919,8 @@
         "cancel": "",
         "topic": "Husk SÃ¸ppel",
         "name": "Husk SÃ¸ppel",
-        "x": 490,
-        "y": 180,
+        "x": 730,
+        "y": 280,
         "wires": []
     },
     {
@@ -1101,8 +1101,8 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 100,
-        "y": 120,
+        "x": 340,
+        "y": 220,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -1203,8 +1203,8 @@
         "send_stop": false,
         "default_start": false,
         "differ": false,
-        "x": 280,
-        "y": 220,
+        "x": 520,
+        "y": 320,
         "wires": [
             [
                 "e24d6f6a.515a6",
@@ -1411,8 +1411,8 @@
         "links": [
             "fee9f406.ef48d8"
         ],
-        "x": 615,
-        "y": 260,
+        "x": 855,
+        "y": 360,
         "wires": []
     },
     {
@@ -1423,8 +1423,8 @@
         "links": [
             "9d6f976b.5d59f8"
         ],
-        "x": 615,
-        "y": 220,
+        "x": 855,
+        "y": 320,
         "wires": []
     },
     {
@@ -2082,8 +2082,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 300,
-        "y": 320,
+        "x": 540,
+        "y": 420,
         "wires": [
             [
                 "9430e52f.746a78"
