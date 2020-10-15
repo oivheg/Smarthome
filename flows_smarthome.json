@@ -6538,7 +6538,9 @@
         "type": "link out",
         "z": "1c11632f.f206fd",
         "name": "btn_upstairs",
-        "links": [],
+        "links": [
+            "fabdb6a9.b22598"
+        ],
         "x": 2065,
         "y": 660,
         "wires": []
@@ -6548,7 +6550,9 @@
         "type": "link out",
         "z": "1c11632f.f206fd",
         "name": "btn_downstairs",
-        "links": [],
+        "links": [
+            "56d97603.6cdfe8"
+        ],
         "x": 2055,
         "y": 780,
         "wires": []
@@ -6840,7 +6844,7 @@
         "to": "",
         "reg": false,
         "x": 620,
-        "y": 440,
+        "y": 380,
         "wires": [
             [
                 "7c9078bb.3bd958"
@@ -6867,7 +6871,7 @@
         "to": "",
         "reg": false,
         "x": 570,
-        "y": 380,
+        "y": 440,
         "wires": [
             [
                 "7c9078bb.3bd958"
@@ -6898,6 +6902,100 @@
         "wires": [
             [
                 "e9e9aaf2.37c198"
+            ]
+        ]
+    },
+    {
+        "id": "fabdb6a9.b22598",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "btn_upstairs",
+        "links": [
+            "6987ca2e.892e94"
+        ],
+        "x": 205,
+        "y": 280,
+        "wires": [
+            [
+                "429f76d8.f44498"
+            ]
+        ]
+    },
+    {
+        "id": "429f76d8.f44498",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "auto",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [
+                "a0afb43e.e37c98"
+            ],
+            [
+                "bea89d86.a9618"
+            ]
+        ]
+    },
+    {
+        "id": "56d97603.6cdfe8",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "btn_downstairs",
+        "links": [
+            "ff979eb7.893f3"
+        ],
+        "x": 195,
+        "y": 420,
+        "wires": [
+            [
+                "128d5a8c.8a17f5"
+            ]
+        ]
+    },
+    {
+        "id": "128d5a8c.8a17f5",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "auto",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 420,
+        "wires": [
+            [
+                "a16a8c68.84be7"
+            ],
+            [
+                "dcf62a02.3c69d8"
             ]
         ]
     }
