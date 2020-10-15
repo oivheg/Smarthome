@@ -7101,5 +7101,34 @@
                 "507210ce.4f9a2"
             ]
         ]
+    },
+    {
+        "id": "b78e310f.ee90d",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 680,
+        "y": 760,
+        "wires": [
+            [
+                "b600d86a.761f18"
+            ]
+        ]
     }
 ]
