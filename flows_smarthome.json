@@ -5173,61 +5173,6 @@
         ]
     },
     {
-        "id": "6d1ea27e.1a500c",
-        "type": "inject",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "props": [
-            {
-                "p": "type",
-                "v": "MUTE",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 680,
-        "y": 940,
-        "wires": [
-            [
-                "352f3a96.368046"
-            ]
-        ]
-    },
-    {
-        "id": "4b22a0ad.593cb",
-        "type": "inject",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload.type",
-                "v": "MUTE",
-                "vt": "str"
-            },
-            {
-                "p": "payload.app",
-                "v": "PLEX",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 700,
-        "y": 1000,
-        "wires": [
-            [
-                "352f3a96.368046"
-            ]
-        ]
-    },
-    {
         "id": "1f150a19.40f1f6",
         "type": "delay",
         "z": "1c11632f.f206fd",
@@ -6931,5 +6876,34 @@
         "x": 375,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "a45951ad.ff222",
+        "type": "inject",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 650,
+        "y": 920,
+        "wires": [
+            [
+                "352f3a96.368046"
+            ]
+        ]
     }
 ]
