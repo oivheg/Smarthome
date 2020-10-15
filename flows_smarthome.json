@@ -6214,34 +6214,6 @@
         "wires": []
     },
     {
-        "id": "7513b7d0.fbf588",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "presence",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 300,
-        "y": 1060,
-        "wires": [
-            [
-                "b5c52e38.5a0b5",
-                "5a15544b.c6b1ac"
-            ]
-        ]
-    },
-    {
         "id": "7f54548b.72cc3c",
         "type": "complete",
         "z": "aa0ae7ae.75d228",
@@ -6335,7 +6307,8 @@
         "y": 1060,
         "wires": [
             [
-                "7513b7d0.fbf588"
+                "b5c52e38.5a0b5",
+                "5a15544b.c6b1ac"
             ]
         ]
     },
