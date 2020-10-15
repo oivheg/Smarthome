@@ -6320,8 +6320,9 @@
         "y": 700,
         "wires": [
             [
-                "1f137cdd.1976f3",
-                "167a965f.fa254a"
+                "167a965f.fa254a",
+                "1f68a3c8.dad9ac",
+                "18e793bb.41ccac"
             ]
         ]
     },
@@ -6952,37 +6953,6 @@
         "wires": []
     },
     {
-        "id": "1f137cdd.1976f3",
-        "type": "and-gate",
-        "z": "aa0ae7ae.75d228",
-        "name": "TRUE",
-        "rules": [
-            {
-                "t": "true",
-                "propertyType": "msg",
-                "property": "payload",
-                "topic": "Trapp"
-            },
-            {
-                "t": "true",
-                "propertyType": "msg",
-                "property": "payload",
-                "topic": "Kitchen: eye"
-            }
-        ],
-        "outputTopic": "",
-        "gateType": "and",
-        "emitOnlyIfTrue": false,
-        "x": 310,
-        "y": 640,
-        "wires": [
-            [
-                "18e793bb.41ccac",
-                "1f68a3c8.dad9ac"
-            ]
-        ]
-    },
-    {
         "id": "7f1b180d.9e1838",
         "type": "debug",
         "z": "aa0ae7ae.75d228",
@@ -7022,7 +6992,7 @@
         "gateType": "and",
         "emitOnlyIfTrue": false,
         "x": 320,
-        "y": 700,
+        "y": 660,
         "wires": [
             [
                 "18e793bb.41ccac",
