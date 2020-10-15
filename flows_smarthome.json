@@ -6313,7 +6313,7 @@
         "type": "switch",
         "z": "aa0ae7ae.75d228",
         "name": "Light Upstairs",
-        "property": "illuminance",
+        "property": "payload.illuminance",
         "propertyType": "msg",
         "rules": [
             {
@@ -7055,6 +7055,20 @@
         "wires": [
             [
                 "507210ce.4f9a2"
+            ]
+        ]
+    },
+    {
+        "id": "e17d0a43.b0e048",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "links": [],
+        "x": 785,
+        "y": 540,
+        "wires": [
+            [
+                "7284606e.34aff"
             ]
         ]
     }
