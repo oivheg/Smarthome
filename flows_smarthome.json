@@ -4087,11 +4087,11 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "yes",
-        "x": 2050,
+        "x": 1850,
         "y": 640,
         "wires": [
             [
-                "e47aed6e.91552"
+                "6987ca2e.892e94"
             ]
         ]
     },
@@ -4113,11 +4113,11 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "yes",
-        "x": 2050,
+        "x": 1850,
         "y": 600,
         "wires": [
             [
-                "e47aed6e.91552"
+                "6987ca2e.892e94"
             ]
         ]
     },
@@ -4138,12 +4138,12 @@
         "icon": "",
         "payload": "",
         "payloadType": "date",
-        "topic": "no",
-        "x": 2050,
+        "topic": "auto",
+        "x": 1850,
         "y": 680,
         "wires": [
             [
-                "22d50ecc.987be2"
+                "6987ca2e.892e94"
             ]
         ]
     },
@@ -4159,7 +4159,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1870,
+        "x": 1670,
         "y": 700,
         "wires": [
             [
@@ -4209,7 +4209,7 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "yes",
-        "x": 2050,
+        "x": 1850,
         "y": 780,
         "wires": [
             [
@@ -4235,7 +4235,7 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "yes",
-        "x": 2050,
+        "x": 1850,
         "y": 820,
         "wires": [
             [
@@ -4261,7 +4261,7 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "no",
-        "x": 2050,
+        "x": 1850,
         "y": 740,
         "wires": [
             [
@@ -4414,7 +4414,7 @@
         "id": "a5e9a69.b159d58",
         "type": "change",
         "z": "1c11632f.f206fd",
-        "name": "Set BlockMovementD",
+        "name": "Auto",
         "rules": [
             {
                 "t": "set",
@@ -4429,7 +4429,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2280,
+        "x": 2230,
         "y": 740,
         "wires": [
             [
@@ -4800,7 +4800,7 @@
         "id": "22d50ecc.987be2",
         "type": "change",
         "z": "1c11632f.f206fd",
-        "name": "Set BlockMovementU",
+        "name": "auto",
         "rules": [
             {
                 "t": "set",
@@ -4815,7 +4815,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2280,
+        "x": 2230,
         "y": 680,
         "wires": [
             [
@@ -5905,35 +5905,6 @@
         ]
     },
     {
-        "id": "70db2a89.dfa5d4",
-        "type": "inject",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "30",
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 2040,
-        "y": 500,
-        "wires": [
-            [
-                "6d3ac280.326dfc"
-            ]
-        ]
-    },
-    {
         "id": "e5f5aa31.81fff8",
         "type": "function",
         "z": "94ff8f0f.02c5a",
@@ -6905,5 +6876,15 @@
                 "352f3a96.368046"
             ]
         ]
+    },
+    {
+        "id": "6987ca2e.892e94",
+        "type": "link out",
+        "z": "1c11632f.f206fd",
+        "name": "btn_upstairs",
+        "links": [],
+        "x": 2065,
+        "y": 660,
+        "wires": []
     }
 ]
