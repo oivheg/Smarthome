@@ -5856,7 +5856,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
+        "x": 1180,
         "y": 680,
         "wires": [
             [
@@ -5929,7 +5929,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 710,
+        "x": 1010,
         "y": 660,
         "wires": [
             [
@@ -5955,7 +5955,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 710,
+        "x": 1010,
         "y": 700,
         "wires": [
             [
@@ -6063,7 +6063,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 1240,
         "y": 580,
         "wires": [
             []
@@ -6088,7 +6088,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
+        "x": 950,
         "y": 580,
         "wires": [
             [
@@ -6115,7 +6115,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 500,
+        "x": 800,
         "y": 700,
         "wires": [
             [
@@ -6206,7 +6206,7 @@
             "22d50ecc.987be2"
         ],
         "uncaught": false,
-        "x": 510,
+        "x": 810,
         "y": 580,
         "wires": [
             [
@@ -6237,7 +6237,7 @@
         "offvalueType": "bool",
         "officon": "remove_red_eye",
         "offcolor": "grey",
-        "x": 320,
+        "x": 620,
         "y": 700,
         "wires": [
             [
@@ -6320,9 +6320,8 @@
         "y": 700,
         "wires": [
             [
-                "18e793bb.41ccac",
-                "1f68a3c8.dad9ac",
-                "7f1b180d.9e1838"
+                "1f137cdd.1976f3",
+                "167a965f.fa254a"
             ]
         ]
     },
@@ -6353,7 +6352,7 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 290,
+        "x": 570,
         "y": 660,
         "wires": [
             [
@@ -6387,7 +6386,7 @@
         "links": [
             "93ef5d70.0130e"
         ],
-        "x": 375,
+        "x": 675,
         "y": 660,
         "wires": []
     },
@@ -6956,24 +6955,31 @@
         "id": "1f137cdd.1976f3",
         "type": "and-gate",
         "z": "aa0ae7ae.75d228",
-        "name": "",
+        "name": "TRUE",
         "rules": [
             {
-                "t": "eq",
-                "v": "",
-                "vt": "str",
+                "t": "true",
                 "propertyType": "msg",
                 "property": "payload",
-                "topic": ""
+                "topic": "Trapp"
+            },
+            {
+                "t": "true",
+                "propertyType": "msg",
+                "property": "payload",
+                "topic": "Kitchen: eye"
             }
         ],
         "outputTopic": "",
         "gateType": "and",
         "emitOnlyIfTrue": false,
-        "x": 230,
-        "y": 560,
+        "x": 310,
+        "y": 640,
         "wires": [
-            []
+            [
+                "18e793bb.41ccac",
+                "1f68a3c8.dad9ac"
+            ]
         ]
     },
     {
@@ -6989,8 +6995,39 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 320,
+        "x": 870,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "167a965f.fa254a",
+        "type": "and-gate",
+        "z": "aa0ae7ae.75d228",
+        "name": "FALSE",
+        "rules": [
+            {
+                "t": "false",
+                "propertyType": "msg",
+                "property": "payload",
+                "topic": "Trapp"
+            },
+            {
+                "t": "false",
+                "propertyType": "msg",
+                "property": "payload",
+                "topic": "Kitchen: eye"
+            }
+        ],
+        "outputTopic": "",
+        "gateType": "and",
+        "emitOnlyIfTrue": false,
+        "x": 320,
+        "y": 700,
+        "wires": [
+            [
+                "18e793bb.41ccac",
+                "1f68a3c8.dad9ac"
+            ]
+        ]
     }
 ]
