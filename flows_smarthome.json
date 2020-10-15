@@ -6943,23 +6943,6 @@
         ]
     },
     {
-        "id": "fa725fe7.9adf",
-        "type": "debug",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 580,
-        "wires": []
-    },
-    {
         "id": "c23b0641.83f398",
         "type": "change",
         "z": "aa0ae7ae.75d228",
@@ -7007,8 +6990,7 @@
         "y": 700,
         "wires": [
             [
-                "18e793bb.41ccac",
-                "fa725fe7.9adf"
+                "18e793bb.41ccac"
             ]
         ]
     },
