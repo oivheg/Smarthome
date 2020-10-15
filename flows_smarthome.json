@@ -6069,7 +6069,7 @@
         "type": "ui_switch",
         "z": "aa0ae7ae.75d228",
         "name": "Bevegelse oppe",
-        "label": "bevegelse oppe {{flow.U_illumenance}}",
+        "label": "bevegelse oppe {{msg.illum}}",
         "tooltip": "",
         "group": "56a8be2a.9b9eb",
         "order": 1,
@@ -6356,11 +6356,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 834.6666870117188,
-        "y": 83.2833251953125,
+        "x": 830,
+        "y": 80,
         "wires": [
             [
-                "c23b0641.83f398"
+                "c23b0641.83f398",
+                "66a711ec.d93fb"
             ]
         ]
     },
@@ -6387,7 +6388,8 @@
         "y": 120,
         "wires": [
             [
-                "c23b0641.83f398"
+                "c23b0641.83f398",
+                "66a711ec.d93fb"
             ]
         ]
     },
@@ -6821,8 +6823,8 @@
         "y": 700,
         "wires": [
             [
-                "18e793bb.41ccac",
-                "fa725fe7.9adf"
+                "fa725fe7.9adf",
+                "b7bcba1b.e24698"
             ]
         ]
     },
@@ -6849,7 +6851,8 @@
         "y": 660,
         "wires": [
             [
-                "18e793bb.41ccac"
+                "18e793bb.41ccac",
+                "b7bcba1b.e24698"
             ]
         ]
     },
@@ -6979,5 +6982,48 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "b7bcba1b.e24698",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "illum",
+                "pt": "msg",
+                "to": "U_illumenance",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 780,
+        "wires": [
+            [
+                "18e793bb.41ccac"
+            ]
+        ]
+    },
+    {
+        "id": "66a711ec.d93fb",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 60,
+        "wires": []
     }
 ]
