@@ -6321,7 +6321,8 @@
         "wires": [
             [
                 "18e793bb.41ccac",
-                "1f68a3c8.dad9ac"
+                "1f68a3c8.dad9ac",
+                "7f1b180d.9e1838"
             ]
         ]
     },
@@ -6949,6 +6950,47 @@
         "statusType": "auto",
         "x": 710,
         "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1f137cdd.1976f3",
+        "type": "and-gate",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str",
+                "propertyType": "msg",
+                "property": "payload",
+                "topic": ""
+            }
+        ],
+        "outputTopic": "",
+        "gateType": "and",
+        "emitOnlyIfTrue": false,
+        "x": 230,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f1b180d.9e1838",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 620,
         "wires": []
     }
 ]
