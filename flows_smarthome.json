@@ -3962,10 +3962,7 @@
         "z": "e3737c94.fd59f",
         "name": "Movement oppe",
         "links": [
-            "5483e66f.781f18",
-            "617791f9.9eee",
-            "be2ad471.d9c448",
-            "99ed1ce4.90a0c"
+            "be2ad471.d9c448"
         ],
         "x": 1375,
         "y": 120,
@@ -3997,7 +3994,8 @@
         "y": 140,
         "wires": [
             [
-                "d4cd1de.82711e"
+                "d4cd1de.82711e",
+                "c660d15c.213f9"
             ],
             [
                 "b951c7f1.f25428"
@@ -6425,9 +6423,9 @@
         "id": "99ed1ce4.90a0c",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
-        "name": "",
+        "name": "Set Upstairs lights ",
         "links": [
-            "d4cd1de.82711e"
+            "e03e153f.c778d8"
         ],
         "x": 315,
         "y": 100,
@@ -6892,11 +6890,11 @@
         "device_id": "23",
         "device": "23",
         "room": "",
-        "x": 880,
-        "y": 400,
+        "x": 1440,
+        "y": 240,
         "wires": [
             [
-                "ac6ccde9.2f87f"
+                "e03e153f.c778d8"
             ]
         ]
     },
@@ -6921,8 +6919,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 670,
-        "y": 400,
+        "x": 630,
+        "y": 420,
         "wires": [
             [
                 "c660d15c.213f9"
@@ -6930,20 +6928,15 @@
         ]
     },
     {
-        "id": "ac6ccde9.2f87f",
-        "type": "debug",
+        "id": "e03e153f.c778d8",
+        "type": "link out",
         "z": "e3737c94.fd59f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload.illuminance",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1100,
-        "y": 400,
+        "name": "1 etg Lux",
+        "links": [
+            "99ed1ce4.90a0c"
+        ],
+        "x": 1575,
+        "y": 240,
         "wires": []
     }
 ]
