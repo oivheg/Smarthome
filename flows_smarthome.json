@@ -5156,7 +5156,7 @@
             {
                 "t": "set",
                 "p": "isStandBy",
-                "pt": "flow",
+                "pt": "global",
                 "to": "platform.isStandBy",
                 "tot": "msg"
             }
@@ -5166,7 +5166,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1160,
+        "x": 1170,
         "y": 920,
         "wires": [
             []
