@@ -1556,7 +1556,7 @@
         "wires": [
             [
                 "4f048068.a4401",
-                "4324ade3.0032c4"
+                "ddeb10c8.abffe"
             ],
             []
         ]
@@ -7286,5 +7286,30 @@
         "x": 730,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "ddeb10c8.abffe",
+        "type": "trigger",
+        "z": "1b14ec1b.20ab54",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "nul",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "4324ade3.0032c4"
+            ]
+        ]
     }
 ]
