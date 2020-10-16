@@ -7210,31 +7210,6 @@
         "wires": []
     },
     {
-        "id": "8e3d6b7f.8c6798",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 500,
-        "y": 780,
-        "wires": [
-            [
-                "18e793bb.41ccac"
-            ]
-        ]
-    },
-    {
         "id": "86abaea5.5ee2",
         "type": "debug",
         "z": "aa0ae7ae.75d228",
@@ -7250,30 +7225,5 @@
         "x": 1370,
         "y": 740,
         "wires": []
-    },
-    {
-        "id": "7022a6dd.5c9f78",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 490,
-        "y": 820,
-        "wires": [
-            [
-                "18e793bb.41ccac"
-            ]
-        ]
     }
 ]
