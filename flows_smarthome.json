@@ -6856,7 +6856,6 @@
         "y": 660,
         "wires": [
             [
-                "18e793bb.41ccac",
                 "b7bcba1b.e24698"
             ]
         ]
@@ -7208,5 +7207,30 @@
         "x": 1400,
         "y": 780,
         "wires": []
+    },
+    {
+        "id": "8e3d6b7f.8c6798",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 500,
+        "y": 780,
+        "wires": [
+            [
+                "18e793bb.41ccac"
+            ]
+        ]
     }
 ]
