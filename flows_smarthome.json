@@ -7239,7 +7239,7 @@
         "type": "debug",
         "z": "aa0ae7ae.75d228",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7266,12 +7266,14 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "false",
+        "payload": "true",
         "payloadType": "bool",
         "x": 490,
         "y": 820,
         "wires": [
-            []
+            [
+                "18e793bb.41ccac"
+            ]
         ]
     }
 ]
