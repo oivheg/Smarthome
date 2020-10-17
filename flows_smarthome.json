@@ -7317,5 +7317,34 @@
                 "7284606e.34aff"
             ]
         ]
+    },
+    {
+        "id": "2238d2a9.30abae",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 60,
+        "y": 620,
+        "wires": [
+            [
+                "45e7346a.4285dc"
+            ]
+        ]
     }
 ]
