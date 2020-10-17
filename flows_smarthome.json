@@ -1829,7 +1829,8 @@
         "links": [
             "3072aa8d.fc3b66",
             "6c1d6758.428808",
-            "8456ad2c.7b492"
+            "8456ad2c.7b492",
+            "e17d0a43.b0e048"
         ],
         "x": 2175,
         "y": 280,
@@ -7023,8 +7024,10 @@
         "id": "e17d0a43.b0e048",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
-        "name": "",
-        "links": [],
+        "name": "RESET lights",
+        "links": [
+            "fc4fe81e.444628"
+        ],
         "x": 785,
         "y": 540,
         "wires": [
@@ -7283,6 +7286,35 @@
         "wires": [
             [
                 "4324ade3.0032c4"
+            ]
+        ]
+    },
+    {
+        "id": "91672681.4feeb8",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 470,
+        "y": 540,
+        "wires": [
+            [
+                "7284606e.34aff"
             ]
         ]
     }
