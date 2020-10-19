@@ -6413,7 +6413,7 @@
         "type": "switch",
         "z": "aa0ae7ae.75d228",
         "name": "Light Downstairs",
-        "property": "illuminance",
+        "property": "payload.illuminance",
         "propertyType": "msg",
         "rules": [
             {
