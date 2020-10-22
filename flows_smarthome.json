@@ -3477,28 +3477,28 @@
         "y": 660,
         "wires": [
             [
-                "466cff57.fcb33"
+                "7422f190.1aacf"
             ],
             [
-                "4f33c9f6.ad1e68"
+                "ae05daf4.f22088"
             ],
             [
-                "a2fed04b.6ba6e"
+                "57f7d91c.4946d8"
             ],
             [
-                "b589b4e9.120d78"
+                "3de67605.ae865a"
             ],
             [
-                "9f779d8a.090bb"
+                "a60ec8c0.5360a8"
             ],
             [
-                "c0544bd5.949b88"
+                "9d11c4da.344988"
             ],
             [
-                "9fd93982.55a7b8"
+                "472600f9.2afc6"
             ],
             [
-                "6a5da06c.379e1"
+                "78b65f45.8b367"
             ]
         ]
     },
@@ -4222,15 +4222,14 @@
         "y": 520,
         "wires": [
             [
-                "466cff57.fcb33",
-                "4f33c9f6.ad1e68"
+                "7422f190.1aacf",
+                "ae05daf4.f22088"
             ],
             [
-                "a2fed04b.6ba6e",
                 "57f7d91c.4946d8"
             ],
             [
-                "b589b4e9.120d78"
+                "3de67605.ae865a"
             ]
         ]
     },
@@ -5433,96 +5432,6 @@
         "wires": [
             [
                 "328ec247.9e5eee"
-            ]
-        ]
-    },
-    {
-        "id": "b589b4e9.120d78",
-        "type": "rbe",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.power",
-        "x": 830,
-        "y": 640,
-        "wires": [
-            [
-                "3de67605.ae865a"
-            ]
-        ]
-    },
-    {
-        "id": "9f779d8a.090bb",
-        "type": "rbe",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.power",
-        "x": 830,
-        "y": 680,
-        "wires": [
-            [
-                "a60ec8c0.5360a8"
-            ]
-        ]
-    },
-    {
-        "id": "c0544bd5.949b88",
-        "type": "rbe",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.power",
-        "x": 830,
-        "y": 720,
-        "wires": [
-            [
-                "9d11c4da.344988"
-            ]
-        ]
-    },
-    {
-        "id": "9fd93982.55a7b8",
-        "type": "rbe",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.power",
-        "x": 830,
-        "y": 760,
-        "wires": [
-            [
-                "472600f9.2afc6"
-            ]
-        ]
-    },
-    {
-        "id": "6a5da06c.379e1",
-        "type": "rbe",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.power",
-        "x": 830,
-        "y": 800,
-        "wires": [
-            [
-                "78b65f45.8b367"
             ]
         ]
     },
@@ -7216,6 +7125,7 @@
         "id": "393a4057.b5cf3",
         "type": "change",
         "z": "e3737c94.fd59f",
+        "d": true,
         "name": "",
         "rules": [
             {
@@ -7235,68 +7145,14 @@
         "y": 420,
         "wires": [
             [
-                "466cff57.fcb33",
-                "4f33c9f6.ad1e68",
-                "a2fed04b.6ba6e",
-                "b589b4e9.120d78",
-                "9f779d8a.090bb",
-                "c0544bd5.949b88",
-                "9fd93982.55a7b8",
-                "6a5da06c.379e1"
-            ]
-        ]
-    },
-    {
-        "id": "a2fed04b.6ba6e",
-        "type": "rbe",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.power",
-        "x": 830,
-        "y": 600,
-        "wires": [
-            [
-                "57f7d91c.4946d8"
-            ]
-        ]
-    },
-    {
-        "id": "4f33c9f6.ad1e68",
-        "type": "rbe",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.power",
-        "x": 830,
-        "y": 560,
-        "wires": [
-            [
-                "ae05daf4.f22088"
-            ]
-        ]
-    },
-    {
-        "id": "466cff57.fcb33",
-        "type": "rbe",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.power",
-        "x": 830,
-        "y": 520,
-        "wires": [
-            [
-                "7422f190.1aacf"
+                "7422f190.1aacf",
+                "ae05daf4.f22088",
+                "57f7d91c.4946d8",
+                "3de67605.ae865a",
+                "a60ec8c0.5360a8",
+                "9d11c4da.344988",
+                "472600f9.2afc6",
+                "78b65f45.8b367"
             ]
         ]
     },
