@@ -125,7 +125,6 @@
     {
         "id": "f6aee802.f74bc8",
         "type": "mqtt-broker",
-        "z": "",
         "name": "Homeseer",
         "broker": "192.168.1.103",
         "port": "1883",
@@ -147,7 +146,6 @@
     {
         "id": "dccbff74.2769",
         "type": "node-hue-bridge",
-        "z": "",
         "name": "Hue Bridge",
         "address": "192.168.1.53",
         "key": "VBGb8l3baRWQyLpSQK2-GAB6H0UsRj37n3e51l3O",
@@ -252,7 +250,6 @@
     {
         "id": "8d9ae12b.2a6f5",
         "type": "ui_tab",
-        "z": "",
         "name": "Home",
         "icon": "dashboard",
         "disabled": false,
@@ -261,7 +258,6 @@
     {
         "id": "8a264f87.d9145",
         "type": "ui_group",
-        "z": "",
         "name": "Floorplan",
         "tab": "8d9ae12b.2a6f5",
         "order": 1,
@@ -272,13 +268,11 @@
     {
         "id": "530528aa.2006c8",
         "type": "pushbullet-config",
-        "z": "",
         "name": "Øivind"
     },
     {
         "id": "d1934670.897a88",
         "type": "googlehome-config-node",
-        "z": "",
         "ipaddress": "192.168.1.89",
         "name": "Kjeller: Norsk",
         "language": "no"
@@ -286,7 +280,6 @@
     {
         "id": "a967d384.f5115",
         "type": "googlehome-config-node",
-        "z": "",
         "ipaddress": "192.168.1.89",
         "name": "Kjeller: RU",
         "language": "ru"
@@ -294,7 +287,6 @@
     {
         "id": "35cb409b.4a073",
         "type": "googlehome-config-node",
-        "z": "",
         "ipaddress": "192.168.1.89",
         "name": "Kjeller: ENG",
         "language": "en"
@@ -302,7 +294,6 @@
     {
         "id": "5ee6b185.35f2d",
         "type": "googlehome-config-node",
-        "z": "",
         "ipaddress": "192.168.1.44",
         "name": "Stue: RU",
         "language": "ru"
@@ -310,7 +301,6 @@
     {
         "id": "354eb0bd.91999",
         "type": "googlehome-config-node",
-        "z": "",
         "ipaddress": "192.168.1.44",
         "name": "Stue: ENG",
         "language": "en"
@@ -318,7 +308,6 @@
     {
         "id": "429b8253.24d1dc",
         "type": "googlehome-config-node",
-        "z": "",
         "ipaddress": "192.168.1.44",
         "name": "Stue: NO",
         "language": "no"
@@ -326,7 +315,6 @@
     {
         "id": "ca3eef.3da5b11",
         "type": "ui_group",
-        "z": "",
         "name": "Kjeller",
         "tab": "8d9ae12b.2a6f5",
         "order": 2,
@@ -337,7 +325,6 @@
     {
         "id": "56a8be2a.9b9eb",
         "type": "ui_group",
-        "z": "",
         "name": "House",
         "tab": "8d9ae12b.2a6f5",
         "order": 3,
@@ -348,7 +335,6 @@
     {
         "id": "efd0ae.1a06bf5",
         "type": "ui_group",
-        "z": "",
         "name": "1 Etg",
         "tab": "8d9ae12b.2a6f5",
         "order": 4,
@@ -359,7 +345,6 @@
     {
         "id": "12895ae7.9c6bf5",
         "type": "deconz-server",
-        "z": "",
         "name": "Zigbee",
         "ip": "192.168.1.103",
         "port": "80",
@@ -371,14 +356,12 @@
     {
         "id": "1f05e387.5d527c",
         "type": "ui_tab",
-        "z": "",
         "name": "List",
         "icon": "dashboard"
     },
     {
         "id": "54f6a8ea.957eb8",
         "type": "nora-config",
-        "z": "",
         "name": "hegglunds",
         "group": "",
         "notify": false
@@ -386,7 +369,6 @@
     {
         "id": "99977a8c.c02588",
         "type": "influxdb",
-        "z": "",
         "hostname": "127.0.0.1",
         "port": "8086",
         "protocol": "http",
@@ -398,7 +380,6 @@
     {
         "id": "583fffe9.e7d8f",
         "type": "ui_group",
-        "z": "",
         "name": "Bevegelse",
         "tab": "1f05e387.5d527c",
         "order": 1,
@@ -409,7 +390,6 @@
     {
         "id": "6708f2f6.06829c",
         "type": "miio-roborock-server",
-        "z": "",
         "name": "Mr Robot",
         "ip": "192.168.1.90",
         "token": "4e765244557a37537139316f77595245",
@@ -418,7 +398,6 @@
     {
         "id": "4ec8324b.b2dc1c",
         "type": "ambi-config",
-        "z": "",
         "clientId": "c52c175d-8388-4974-be6e-2db7abf90818",
         "clientSecret": "8046ff33-2c02-4aa7-95d5-cb71848032dd",
         "username": "oivheg@gmail.com",
@@ -427,7 +406,6 @@
     {
         "id": "36cbdad6.513a26",
         "type": "hs-server",
-        "z": "",
         "name": "Homeseer",
         "host": "localhost",
         "port": "81"
@@ -435,7 +413,6 @@
     {
         "id": "fae123cb.bd4b2",
         "type": "futurehome-login",
-        "z": "",
         "displayName": "Øivind",
         "site_name": "Hegglunds",
         "base_uri": "futurehome.no/",
@@ -444,7 +421,6 @@
     {
         "id": "3587f56e.3de5ba",
         "type": "castv2-connection",
-        "z": "",
         "name": "",
         "target": "SHIELD",
         "host": "",
@@ -453,7 +429,6 @@
     {
         "id": "c2122377.b14ac",
         "type": "mqtt-broker",
-        "z": "",
         "name": "",
         "broker": "cube.local",
         "port": "1884",
@@ -475,7 +450,6 @@
     {
         "id": "3cfc41c.b6569be",
         "type": "mqtt-broker",
-        "z": "",
         "name": "Smarthub",
         "broker": "zwave.local",
         "port": "1884",
@@ -7388,6 +7362,35 @@
                 "31e4a4c9.5261bc",
                 "507210ce.4f9a2",
                 "1262fceb.3723b3"
+            ]
+        ]
+    },
+    {
+        "id": "166d91e3.cb3bde",
+        "type": "inject",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "393a4057.b5cf3"
             ]
         ]
     }
