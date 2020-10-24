@@ -6169,8 +6169,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 620,
-        "y": 100,
+        "x": 624.0000114440918,
+        "y": 61.000000953674316,
         "wires": [
             [
                 "cdf8cec8.0f578"
@@ -6199,8 +6199,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
-        "y": 80,
+        "x": 834.0000114440918,
+        "y": 41.000000953674316,
         "wires": [
             [
                 "c23b0641.83f398"
@@ -6226,8 +6226,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
-        "y": 120,
+        "x": 834.0000114440918,
+        "y": 81.00000095367432,
         "wires": [
             [
                 "c23b0641.83f398"
@@ -6242,52 +6242,11 @@
         "links": [
             "e03e153f.c778d8"
         ],
-        "x": 315,
-        "y": 100,
+        "x": 319.0000114440918,
+        "y": 61.000000953674316,
         "wires": [
             [
                 "78e382b2.97061c"
-            ]
-        ]
-    },
-    {
-        "id": "a0afb43e.e37c98",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "Set BlockMovementU",
-        "rules": [
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "upstairs",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "power",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "BlockMovementU",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 240,
-        "wires": [
-            [
-                "e9e9aaf2.37c198"
             ]
         ]
     },
@@ -6388,7 +6347,7 @@
         "y": 180,
         "wires": [
             [
-                "4686c700.425e88"
+                "abcc07af.4c8fe8"
             ]
         ]
     },
@@ -6418,94 +6377,6 @@
         "x": 895,
         "y": 420,
         "wires": []
-    },
-    {
-        "id": "a16a8c68.84be7",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "Set BlockMovementD",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BlockMovementD",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "basement",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 380,
-        "wires": [
-            [
-                "7c9078bb.3bd958"
-            ]
-        ]
-    },
-    {
-        "id": "dcf62a02.3c69d8",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "Auto",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BlockMovementD",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 570,
-        "y": 440,
-        "wires": [
-            [
-                "7c9078bb.3bd958"
-            ]
-        ]
-    },
-    {
-        "id": "bea89d86.a9618",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "auto",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BlockMovementU",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 570,
-        "y": 320,
-        "wires": [
-            [
-                "e9e9aaf2.37c198"
-            ]
-        ]
     },
     {
         "id": "fabdb6a9.b22598",
@@ -6547,10 +6418,10 @@
         "y": 280,
         "wires": [
             [
-                "a0afb43e.e37c98"
+                "e9e9aaf2.37c198"
             ],
             [
-                "bea89d86.a9618"
+                "e9e9aaf2.37c198"
             ]
         ]
     },
@@ -6579,12 +6450,12 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "else"
-            },
-            {
                 "t": "cont",
                 "v": "auto",
                 "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "false",
@@ -6594,10 +6465,14 @@
         "y": 420,
         "wires": [
             [
-                "a16a8c68.84be7"
+                "7c9078bb.3bd958",
+                "ae464c91.30545",
+                "8a0c640c.996fb8"
             ],
             [
-                "dcf62a02.3c69d8"
+                "7c9078bb.3bd958",
+                "58dcc160.dfa1c",
+                "82ef7cc9.6440f"
             ]
         ]
     },
@@ -6776,8 +6651,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1090,
-        "y": 100,
+        "x": 1094.0000114440918,
+        "y": 61.000000953674316,
         "wires": [
             []
         ]
@@ -6871,36 +6746,6 @@
         "wires": [
             [
                 "7284606e.34aff"
-            ]
-        ]
-    },
-    {
-        "id": "be00c41b.814d48",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 610,
-        "y": 140,
-        "wires": [
-            [
-                "cdf8cec8.0f578",
-                "ae464c91.30545"
             ]
         ]
     },
@@ -7247,6 +7092,105 @@
         "wires": [
             [
                 "393a4057.b5cf3"
+            ]
+        ]
+    },
+    {
+        "id": "2899fe6e.4401a2",
+        "type": "ui_button",
+        "z": "1c11632f.f206fd",
+        "name": "FILM",
+        "group": "ca3eef.3da5b11",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Se på FILM ( Lys av ) ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "block",
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "ff979eb7.893f3"
+            ]
+        ]
+    },
+    {
+        "id": "82ef7cc9.6440f",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Block LIght",
+        "rules": [
+            {
+                "t": "set",
+                "p": "basement",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a0c640c.996fb8",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "allow LIght",
+        "rules": [
+            {
+                "t": "set",
+                "p": "basement",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "abcc07af.4c8fe8",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "property": "basement",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 180,
+        "wires": [
+            [
+                "4686c700.425e88"
             ]
         ]
     }
