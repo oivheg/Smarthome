@@ -7165,7 +7165,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
+        "x": 650,
         "y": 380,
         "wires": [
             []
@@ -7175,7 +7175,7 @@
         "id": "abcc07af.4c8fe8",
         "type": "switch",
         "z": "aa0ae7ae.75d228",
-        "name": "",
+        "name": "Allow Light ?",
         "property": "basement",
         "propertyType": "flow",
         "rules": [
@@ -7186,7 +7186,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 430,
+        "x": 450,
         "y": 180,
         "wires": [
             [
