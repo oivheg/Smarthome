@@ -154,6 +154,12 @@
                     },
                     {
                         "id": "d3ba4ca2.8554d"
+                    },
+                    {
+                        "id": "7e546c3.3eb7794"
+                    },
+                    {
+                        "id": "4bded5f5.5e225c"
                     }
                 ]
             }
@@ -184,7 +190,7 @@
                         "port": 0
                     },
                     {
-                        "id": "3225176.1269de8",
+                        "id": "acc8dc6a.4246f",
                         "port": 0
                     }
                 ]
@@ -7331,9 +7337,7 @@
             [
                 "14bc3937.ad4257"
             ],
-            [
-                "9ac87e3.65fdc8"
-            ]
+            []
         ]
     },
     {
@@ -7353,9 +7357,7 @@
             [
                 "ee0cac1c.3b7c3"
             ],
-            [
-                "9ac87e3.65fdc8"
-            ]
+            []
         ]
     },
     {
@@ -7366,7 +7368,7 @@
         "lat": "58.851468",
         "lon": "5.748852",
         "startTime": "20:00",
-        "endTime": "23:00",
+        "endTime": "22:00",
         "startOffset": 0,
         "endOffset": 0,
         "x": 410,
@@ -7375,9 +7377,7 @@
             [
                 "1732dcca.1a2903"
             ],
-            [
-                "9ac87e3.65fdc8"
-            ]
+            []
         ]
     },
     {
@@ -7397,9 +7397,7 @@
             [
                 "c907fe20.72aa6"
             ],
-            [
-                "9ac87e3.65fdc8"
-            ]
+            []
         ]
     },
     {
@@ -7419,9 +7417,7 @@
             [
                 "10faff0a.197481"
             ],
-            [
-                "9ac87e3.65fdc8"
-            ]
+            []
         ]
     },
     {
@@ -7454,8 +7450,7 @@
         "y": 120,
         "wires": [
             [
-                "27e86256.4bd24e",
-                "b1d6f5f3.4b2948"
+                "27e86256.4bd24e"
             ]
         ]
     },
@@ -7489,8 +7484,7 @@
         "y": 280,
         "wires": [
             [
-                "27e86256.4bd24e",
-                "b1d6f5f3.4b2948"
+                "27e86256.4bd24e"
             ]
         ]
     },
@@ -7524,8 +7518,7 @@
         "y": 240,
         "wires": [
             [
-                "27e86256.4bd24e",
-                "b1d6f5f3.4b2948"
+                "27e86256.4bd24e"
             ]
         ]
     },
@@ -7559,8 +7552,7 @@
         "y": 200,
         "wires": [
             [
-                "27e86256.4bd24e",
-                "b1d6f5f3.4b2948"
+                "27e86256.4bd24e"
             ]
         ]
     },
@@ -7594,8 +7586,7 @@
         "y": 160,
         "wires": [
             [
-                "27e86256.4bd24e",
-                "b1d6f5f3.4b2948"
+                "27e86256.4bd24e"
             ]
         ]
     },
@@ -7671,16 +7662,43 @@
         ]
     },
     {
-        "id": "9ac87e3.65fdc8",
+        "id": "7e546c3.3eb7794",
+        "type": "time-range-switch",
+        "z": "5bd36af.4ea5494",
+        "name": "Sen Kveld",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "22:00",
+        "endTime": "23:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "acc8dc6a.4246f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "acc8dc6a.4246f",
         "type": "change",
         "z": "5bd36af.4ea5494",
-        "name": "ingen tid ",
+        "name": "2 min",
         "rules": [
             {
                 "t": "set",
-                "p": "payload",
+                "p": "delay",
                 "pt": "msg",
-                "to": "ingen tid",
+                "to": "120000",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "sen kveld",
                 "tot": "str"
             }
         ],
@@ -7689,30 +7707,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 640,
-        "y": 320,
-        "wires": [
-            [
-                "3225176.1269de8"
-            ]
-        ]
-    },
-    {
-        "id": "3225176.1269de8",
-        "type": "delay",
-        "z": "5bd36af.4ea5494",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 870,
+        "x": 630,
         "y": 320,
         "wires": [
             [
@@ -7721,17 +7716,42 @@
         ]
     },
     {
-        "id": "b1d6f5f3.4b2948",
+        "id": "4bded5f5.5e225c",
+        "type": "time-range-switch",
+        "z": "5bd36af.4ea5494",
+        "name": "Natt",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "23:00",
+        "endTime": "06:30",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "56324a59.cc82b4",
         "type": "change",
         "z": "5bd36af.4ea5494",
-        "name": "",
+        "name": "5 min",
         "rules": [
             {
                 "t": "set",
-                "p": "reset",
+                "p": "delay",
                 "pt": "msg",
-                "to": "true",
-                "tot": "bool"
+                "to": "120000",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "sen kveld",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -7739,12 +7759,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
-        "y": 280,
+        "x": 630,
+        "y": 360,
         "wires": [
-            [
-                "3225176.1269de8"
-            ]
+            []
         ]
     }
 ]
