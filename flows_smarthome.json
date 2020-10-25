@@ -5568,51 +5568,6 @@
         ]
     },
     {
-        "id": "7cb6969c.3a23a8",
-        "type": "switch",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1790,
-        "y": 860,
-        "wires": [
-            [
-                "6e1a0143.f51f8"
-            ]
-        ]
-    },
-    {
-        "id": "5d4636fd.b16148",
-        "type": "time-range-switch",
-        "z": "aa0ae7ae.75d228",
-        "name": "Dag",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "07:00",
-        "endTime": "22:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 1790,
-        "y": 800,
-        "wires": [
-            [
-                "6e1a0143.f51f8"
-            ],
-            [
-                "7cb6969c.3a23a8"
-            ]
-        ]
-    },
-    {
         "id": "4ca76adb.630d34",
         "type": "trigger",
         "z": "aa0ae7ae.75d228",
@@ -5684,7 +5639,7 @@
         "y": 740,
         "wires": [
             [
-                "5d4636fd.b16148"
+                "6e1a0143.f51f8"
             ]
         ]
     },
@@ -5711,7 +5666,7 @@
         "y": 840,
         "wires": [
             [
-                "5d4636fd.b16148"
+                "6e1a0143.f51f8"
             ]
         ]
     },
