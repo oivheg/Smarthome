@@ -6819,7 +6819,9 @@
         "x": 1080,
         "y": 620,
         "wires": [
-            []
+            [
+                "76797716.0f6318"
+            ]
         ]
     },
     {
@@ -7590,7 +7592,56 @@
         "x": 1230,
         "y": 660,
         "wires": [
-            []
+            [
+                "507210ce.4f9a2",
+                "5075db67.250164"
+            ]
+        ]
+    },
+    {
+        "id": "5075db67.250164",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "[delay,\ttopic\t]",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "a6f09432.dbd988",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 910,
+        "y": 560,
+        "wires": [
+            [
+                "76797716.0f6318"
+            ]
         ]
     }
 ]
