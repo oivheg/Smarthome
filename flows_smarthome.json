@@ -14,6 +14,13 @@
         "info": ""
     },
     {
+        "id": "5da0cd6c.528c64",
+        "type": "tab",
+        "label": "Timing",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "bc3b2c68.b35f6",
         "type": "tab",
         "label": "Garbage Collector",
@@ -7271,5 +7278,275 @@
         "x": 635,
         "y": 1100,
         "wires": []
+    },
+    {
+        "id": "af0c44a7.493f38",
+        "type": "comment",
+        "z": "5da0cd6c.528c64",
+        "name": "Upstairs Timing",
+        "info": "",
+        "x": 280,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2603e6d2.f1973a",
+        "type": "time-range-switch",
+        "z": "5da0cd6c.528c64",
+        "name": "Dag",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "10:00",
+        "endTime": "16:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 430,
+        "y": 220,
+        "wires": [
+            [
+                "14bc3937.ad4257"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "cdb73747.3ca6b8",
+        "type": "time-range-switch",
+        "z": "5da0cd6c.528c64",
+        "name": "Ettermiddag",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "16:00",
+        "endTime": "20:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 450,
+        "y": 260,
+        "wires": [
+            [
+                "ee0cac1c.3b7c3"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d3ba4ca2.8554d",
+        "type": "time-range-switch",
+        "z": "5da0cd6c.528c64",
+        "name": "Kveld",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "20:00",
+        "endTime": "23:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 430,
+        "y": 300,
+        "wires": [
+            [
+                "1732dcca.1a2903"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "89e42a76.f6f2f8",
+        "type": "time-range-switch",
+        "z": "5da0cd6c.528c64",
+        "name": "TIdlig Morgen",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "06:30",
+        "endTime": "08:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "c907fe20.72aa6"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "64d46e65.a7d2e",
+        "type": "time-range-switch",
+        "z": "5da0cd6c.528c64",
+        "name": "Morgen",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "08:00",
+        "endTime": "10:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 440,
+        "y": 180,
+        "wires": [
+            [
+                "10faff0a.197481"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c907fe20.72aa6",
+        "type": "change",
+        "z": "5da0cd6c.528c64",
+        "name": "5 min",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "300000",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "tidlig",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1732dcca.1a2903",
+        "type": "change",
+        "z": "5da0cd6c.528c64",
+        "name": "5 min",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "300000",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "kveld",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee0cac1c.3b7c3",
+        "type": "change",
+        "z": "5da0cd6c.528c64",
+        "name": "20 min",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "1800000 ",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ettermiddag",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "14bc3937.ad4257",
+        "type": "change",
+        "z": "5da0cd6c.528c64",
+        "name": "5 min",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "300000",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "dag",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10faff0a.197481",
+        "type": "change",
+        "z": "5da0cd6c.528c64",
+        "name": "15 min",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "900000 ",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "morgen",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 180,
+        "wires": [
+            []
+        ]
     }
 ]
