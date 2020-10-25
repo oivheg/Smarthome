@@ -4317,7 +4317,7 @@
                 "6add0bf.60245f4"
             ],
             [
-                "57f7d91c.4946d8"
+                "530ebd3a.88d104"
             ],
             [
                 "3de67605.ae865a"
@@ -5632,7 +5632,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1660,
+        "x": 1540,
         "y": 740,
         "wires": [
             [
@@ -5659,8 +5659,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1500,
-        "y": 840,
+        "x": 1540,
+        "y": 880,
         "wires": [
             [
                 "6e1a0143.f51f8"
@@ -5705,7 +5705,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1490,
+        "x": 1370,
         "y": 660,
         "wires": [
             [
@@ -5730,34 +5730,11 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1490,
+        "x": 1370,
         "y": 740,
         "wires": [
             [
                 "f5037a50.817ae8"
-            ]
-        ]
-    },
-    {
-        "id": "d8799574.05a9b8",
-        "type": "switch",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "property": "isStandBy",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1350,
-        "y": 920,
-        "wires": [
-            [
-                "52e0046d.a53a8c"
             ]
         ]
     },
@@ -5778,7 +5755,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1170,
+        "x": 1370,
         "y": 840,
         "wires": [
             [
@@ -5898,11 +5875,11 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1170,
+        "x": 1370,
         "y": 920,
         "wires": [
             [
-                "d8799574.05a9b8"
+                "52e0046d.a53a8c"
             ]
         ]
     },
@@ -5928,12 +5905,10 @@
         "y": 880,
         "wires": [
             [
-                "71bb07f3.efd1e8",
-                "93e84eaf.45413"
+                "976640e9.63cfd"
             ],
             [
-                "93e84eaf.45413",
-                "71bb07f3.efd1e8"
+                "976640e9.63cfd"
             ]
         ]
     },
@@ -6903,7 +6878,7 @@
         "links": [
             "d6d31aed.f07d78"
         ],
-        "x": 1135,
+        "x": 1275,
         "y": 880,
         "wires": [
             [
@@ -6920,7 +6895,7 @@
         "links": [
             "d6d31aed.f07d78"
         ],
-        "x": 1455,
+        "x": 1335,
         "y": 700,
         "wires": [
             [
@@ -7419,7 +7394,7 @@
         "z": "aa0ae7ae.75d228",
         "name": "TID",
         "env": [],
-        "x": 1190,
+        "x": 1130,
         "y": 720,
         "wires": [
             [
@@ -7442,7 +7417,7 @@
         "targetType": "jsonata",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1500,
+        "x": 1380,
         "y": 620,
         "wires": []
     },
@@ -7731,7 +7706,7 @@
         "id": "5dab10b.ba0abf",
         "type": "switch",
         "z": "e3737c94.fd59f",
-        "name": "",
+        "name": "time",
         "property": "topic",
         "propertyType": "msg",
         "rules": [
@@ -7763,6 +7738,86 @@
                 "7422f190.1aacf"
             ],
             []
+        ]
+    },
+    {
+        "id": "530ebd3a.88d104",
+        "type": "subflow:5bd36af.4ea5494",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "x": 570,
+        "y": 520,
+        "wires": [
+            [
+                "e0c4e177.87e4f"
+            ]
+        ]
+    },
+    {
+        "id": "e0c4e177.87e4f",
+        "type": "switch",
+        "z": "e3737c94.fd59f",
+        "name": "time",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "natt",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": true,
+        "outputs": 2,
+        "x": 710,
+        "y": 520,
+        "wires": [
+            [
+                "57f7d91c.4946d8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "976640e9.63cfd",
+        "type": "subflow:5bd36af.4ea5494",
+        "z": "aa0ae7ae.75d228",
+        "name": "TID",
+        "env": [],
+        "x": 1130,
+        "y": 880,
+        "wires": [
+            [
+                "71bb07f3.efd1e8",
+                "39ce9f35.91027"
+            ]
+        ]
+    },
+    {
+        "id": "39ce9f35.91027",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "TV on ?",
+        "property": "isStandBy",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1140,
+        "y": 920,
+        "wires": [
+            [
+                "93e84eaf.45413"
+            ]
         ]
     }
 ]
