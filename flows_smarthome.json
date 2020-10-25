@@ -7924,64 +7924,6 @@
         ]
     },
     {
-        "id": "36adab4d.9182b4",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 570,
-        "y": 940,
-        "wires": [
-            [
-                "a3713cf3.b331a"
-            ]
-        ]
-    },
-    {
-        "id": "1ffc5cf0.6b1953",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 570,
-        "y": 980,
-        "wires": [
-            [
-                "a3713cf3.b331a"
-            ]
-        ]
-    },
-    {
         "id": "eee132b.9f0bfd",
         "type": "debug",
         "z": "aa0ae7ae.75d228",
