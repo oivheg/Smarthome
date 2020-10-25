@@ -7642,13 +7642,10 @@
         "type": "subflow:5bd36af.4ea5494",
         "z": "e3737c94.fd59f",
         "name": "",
-        "x": 690,
-        "y": 480,
+        "x": 570,
+        "y": 460,
         "wires": [
             [
-                "a763216.789e8e",
-                "7422f190.1aacf",
-                "ae05daf4.f22088",
                 "5dab10b.ba0abf"
             ]
         ]
@@ -7666,8 +7663,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
-        "y": 440,
+        "x": 950,
+        "y": 400,
         "wires": []
     },
     {
@@ -7735,21 +7732,36 @@
         "type": "switch",
         "z": "e3737c94.fd59f",
         "name": "",
-        "property": "payload",
+        "property": "topic",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "eq",
-                "v": "",
+                "t": "cont",
+                "v": "sen kveld",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            },
+            {
+                "t": "cont",
+                "v": "natt",
                 "vt": "str"
             }
         ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 920,
-        "y": 400,
+        "checkall": "false",
+        "repair": true,
+        "outputs": 3,
+        "x": 710,
+        "y": 460,
         "wires": [
+            [
+                "7422f190.1aacf"
+            ],
+            [
+                "ae05daf4.f22088",
+                "7422f190.1aacf"
+            ],
             []
         ]
     }
