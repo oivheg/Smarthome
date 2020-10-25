@@ -5701,7 +5701,7 @@
         "extend": false,
         "overrideDelay": false,
         "units": "ms",
-        "reset": "",
+        "reset": "false",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
@@ -7818,6 +7818,31 @@
             [
                 "93e84eaf.45413"
             ]
+        ]
+    },
+    {
+        "id": "7674abac.aa5b44",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 700,
+        "wires": [
+            []
         ]
     }
 ]
