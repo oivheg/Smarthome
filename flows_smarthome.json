@@ -192,6 +192,10 @@
                     {
                         "id": "acc8dc6a.4246f",
                         "port": 0
+                    },
+                    {
+                        "id": "56324a59.cc82b4",
+                        "port": 0
                     }
                 ]
             }
@@ -7729,7 +7733,9 @@
         "x": 410,
         "y": 360,
         "wires": [
-            [],
+            [
+                "56324a59.cc82b4"
+            ],
             []
         ]
     },
@@ -7737,20 +7743,20 @@
         "id": "56324a59.cc82b4",
         "type": "change",
         "z": "5bd36af.4ea5494",
-        "name": "5 min",
+        "name": "Natt",
         "rules": [
             {
                 "t": "set",
-                "p": "delay",
+                "p": "reset",
                 "pt": "msg",
-                "to": "120000",
-                "tot": "num"
+                "to": "true",
+                "tot": "bool"
             },
             {
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "sen kveld",
+                "to": "natt",
                 "tot": "str"
             }
         ],
@@ -7762,7 +7768,9 @@
         "x": 630,
         "y": 360,
         "wires": [
-            []
+            [
+                "27e86256.4bd24e"
+            ]
         ]
     }
 ]
