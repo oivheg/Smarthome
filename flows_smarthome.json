@@ -3612,7 +3612,7 @@
         "name": "Lights",
         "info": "",
         "x": 150,
-        "y": 440,
+        "y": 420,
         "wires": []
     },
     {
@@ -7668,5 +7668,65 @@
         "x": 900,
         "y": 440,
         "wires": []
+    },
+    {
+        "id": "fc831ceb.ff11f",
+        "type": "inject",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "room",
+                "v": "upstairs",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "5da7627f.49119c"
+            ]
+        ]
+    },
+    {
+        "id": "d5fda8b9.80efe8",
+        "type": "inject",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "room",
+                "v": "upstairs",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "5da7627f.49119c"
+            ]
+        ]
     }
 ]
