@@ -214,27 +214,6 @@
         }
     },
     {
-        "id": "f6aee802.f74bc8",
-        "type": "mqtt-broker",
-        "name": "Homeseer",
-        "broker": "192.168.1.103",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": false,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "homeseer",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
         "id": "dccbff74.2769",
         "type": "node-hue-bridge",
         "name": "Hue Bridge",
@@ -495,13 +474,6 @@
         "password": "y4mHub&PcsW0%p!I"
     },
     {
-        "id": "36cbdad6.513a26",
-        "type": "hs-server",
-        "name": "Homeseer",
-        "host": "localhost",
-        "port": "81"
-    },
-    {
         "id": "fae123cb.bd4b2",
         "type": "futurehome-login",
         "displayName": "Øivind",
@@ -516,53 +488,6 @@
         "target": "SHIELD",
         "host": "",
         "port": "8009"
-    },
-    {
-        "id": "c2122377.b14ac",
-        "type": "mqtt-broker",
-        "name": "",
-        "broker": "cube.local",
-        "port": "1884",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": false,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "3cfc41c.b6569be",
-        "type": "mqtt-broker",
-        "name": "Smarthub",
-        "broker": "zwave.local",
-        "port": "1884",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
-        "id": "d4f8fc23.2b07",
-        "type": "pushbullet-config",
-        "name": "Not valid!!"
     },
     {
         "id": "1269d82b.213da8",
