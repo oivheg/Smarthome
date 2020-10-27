@@ -620,7 +620,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2050,
+        "x": 2330,
         "y": 240,
         "wires": [
             [
@@ -640,7 +640,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2050,
+        "x": 2330,
         "y": 280,
         "wires": [
             [
@@ -1138,7 +1138,7 @@
         "y": 280,
         "wires": [
             [
-                "fc71e441.058a48"
+                "13147755.3444a9"
             ]
         ]
     },
@@ -1174,7 +1174,7 @@
         "y": 240,
         "wires": [
             [
-                "16e01a0.bfa88e6"
+                "8ea5666a.e0fea8"
             ]
         ]
     },
@@ -1810,7 +1810,7 @@
             "8456ad2c.7b492",
             "e17d0a43.b0e048"
         ],
-        "x": 2175,
+        "x": 2455,
         "y": 240,
         "wires": []
     },
@@ -1825,7 +1825,7 @@
             "8456ad2c.7b492",
             "e17d0a43.b0e048"
         ],
-        "x": 2175,
+        "x": 2455,
         "y": 280,
         "wires": []
     },
@@ -2096,7 +2096,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1870,
+        "x": 2150,
         "y": 280,
         "wires": [
             [
@@ -2123,7 +2123,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1870,
+        "x": 2150,
         "y": 240,
         "wires": [
             [
@@ -2172,7 +2172,7 @@
         "links": [
             "2e0d79f5.69a796"
         ],
-        "x": 1595,
+        "x": 1875,
         "y": 200,
         "wires": [
             [
@@ -2202,7 +2202,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1890,
+        "x": 2170,
         "y": 200,
         "wires": [
             [
@@ -2427,56 +2427,6 @@
             [
                 "3054be45.205a62",
                 "389edf89.60cfe"
-            ]
-        ]
-    },
-    {
-        "id": "16e01a0.bfa88e6",
-        "type": "trigger",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "op1": "home",
-        "op2": "0",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "0",
-        "extend": false,
-        "units": "ms",
-        "reset": "away",
-        "bytopic": "all",
-        "outputs": 1,
-        "x": 1660,
-        "y": 240,
-        "wires": [
-            [
-                "fc71e441.058a48",
-                "3e0910d1.7d582"
-            ]
-        ]
-    },
-    {
-        "id": "fc71e441.058a48",
-        "type": "trigger",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "op1": "away",
-        "op2": "0",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "0",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "home",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1660,
-        "y": 280,
-        "wires": [
-            [
-                "16e01a0.bfa88e6",
-                "6fce2655.029658"
             ]
         ]
     },
@@ -2899,7 +2849,7 @@
         "fan_speed": 100,
         "voice_pack": null,
         "homekit_stop_to_dock": true,
-        "x": 2680,
+        "x": 2960,
         "y": 340,
         "wires": [
             []
@@ -2920,7 +2870,7 @@
         "fan_speed": 100,
         "voice_pack": null,
         "homekit_stop_to_dock": true,
-        "x": 2320,
+        "x": 2600,
         "y": 180,
         "wires": [
             []
@@ -3047,7 +2997,7 @@
         "endTime": "16:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 2310,
+        "x": 2590,
         "y": 340,
         "wires": [
             [
@@ -3072,7 +3022,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 2490,
+        "x": 2770,
         "y": 340,
         "wires": [
             [
@@ -4433,7 +4383,7 @@
         "oauthClient": "4ec8324b.b2dc1c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
-        "x": 2340,
+        "x": 2620,
         "y": 140,
         "wires": []
     },
@@ -4445,7 +4395,7 @@
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
         "value": "21",
-        "x": 2330,
+        "x": 2610,
         "y": 460,
         "wires": []
     },
@@ -8130,11 +8080,112 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1870,
+        "x": 2150,
         "y": 320,
         "wires": [
             [
                 "e4c32eed.12537"
+            ]
+        ]
+    },
+    {
+        "id": "8ea5666a.e0fea8",
+        "type": "change",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Home",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 240,
+        "wires": [
+            [
+                "7ebfcd20.4e57e4"
+            ]
+        ]
+    },
+    {
+        "id": "13147755.3444a9",
+        "type": "change",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Home",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 280,
+        "wires": [
+            [
+                "7ebfcd20.4e57e4"
+            ]
+        ]
+    },
+    {
+        "id": "7ebfcd20.4e57e4",
+        "type": "rbe",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1710,
+        "y": 260,
+        "wires": [
+            [
+                "feab733b.3d7c5"
+            ]
+        ]
+    },
+    {
+        "id": "feab733b.3d7c5",
+        "type": "switch",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1860,
+        "y": 260,
+        "wires": [
+            [
+                "3e0910d1.7d582"
+            ],
+            [
+                "6fce2655.029658"
             ]
         ]
     }
