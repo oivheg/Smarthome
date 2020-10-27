@@ -668,7 +668,8 @@
         "y": 140,
         "wires": [
             [
-                "6a421ae3.f71ae4"
+                "6a421ae3.f71ae4",
+                "47a496d1.bcac18"
             ]
         ]
     },
@@ -766,7 +767,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 530,
+        "x": 550,
         "y": 180,
         "wires": [
             [
@@ -907,12 +908,14 @@
         "position": "top right",
         "displayTime": "10",
         "highlight": "",
+        "sendall": true,
         "outputs": 0,
         "ok": "OK",
         "cancel": "",
-        "topic": "Husk SÃ¸ppel",
-        "name": "Husk SÃ¸ppel",
-        "x": 980,
+        "raw": false,
+        "topic": "Husk Søppel",
+        "name": "Husk Søppel",
+        "x": 970,
         "y": 60,
         "wires": []
     },
@@ -1094,8 +1097,8 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 400,
-        "y": 140,
+        "x": 360,
+        "y": 180,
         "wires": [
             [
                 "47a496d1.bcac18",
@@ -1199,7 +1202,7 @@
         "default_start": false,
         "differ": false,
         "x": 700,
-        "y": 100,
+        "y": 80,
         "wires": [
             [
                 "e24d6f6a.515a6",
