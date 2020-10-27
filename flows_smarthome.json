@@ -3463,8 +3463,8 @@
         "z": "e3737c94.fd59f",
         "name": "Lights",
         "info": "",
-        "x": 150,
-        "y": 420,
+        "x": 130,
+        "y": 440,
         "wires": []
     },
     {
@@ -5084,8 +5084,8 @@
         "device": "22",
         "device_id": "22",
         "name": "Ovn",
-        "x": 830,
-        "y": 280,
+        "x": 950,
+        "y": 860,
         "wires": []
     },
     {
@@ -5110,8 +5110,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 300,
-        "y": 280,
+        "x": 420,
+        "y": 860,
         "wires": [
             [
                 "845f8e9d.766ea"
@@ -5131,8 +5131,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 450,
-        "y": 260,
+        "x": 570,
+        "y": 840,
         "wires": [
             [
                 "8d086061.8b918"
@@ -5149,8 +5149,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 450,
-        "y": 300,
+        "x": 570,
+        "y": 880,
         "wires": [
             [
                 "8d086061.8b918"
@@ -6444,8 +6444,8 @@
         "device_id": "23",
         "device": "23",
         "room": "",
-        "x": 1440,
-        "y": 240,
+        "x": 1460,
+        "y": 120,
         "wires": [
             [
                 "e03e153f.c778d8"
@@ -6461,7 +6461,7 @@
             "99ed1ce4.90a0c"
         ],
         "x": 1575,
-        "y": 240,
+        "y": 120,
         "wires": []
     },
     {
@@ -7418,83 +7418,6 @@
         ]
     },
     {
-        "id": "a763216.789e8e",
-        "type": "debug",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "fc831ceb.ff11f",
-        "type": "inject",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "room",
-                "v": "upstairs",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 150,
-        "y": 460,
-        "wires": [
-            [
-                "5da7627f.49119c"
-            ]
-        ]
-    },
-    {
-        "id": "d5fda8b9.80efe8",
-        "type": "inject",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "room",
-                "v": "upstairs",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 130,
-        "y": 580,
-        "wires": [
-            [
-                "5da7627f.49119c"
-            ]
-        ]
-    },
-    {
         "id": "5dab10b.ba0abf",
         "type": "switch",
         "z": "e3737c94.fd59f",
@@ -7527,8 +7450,7 @@
             ],
             [
                 "ae05daf4.f22088",
-                "7422f190.1aacf",
-                "a763216.789e8e"
+                "7422f190.1aacf"
             ],
             []
         ]
