@@ -1691,7 +1691,7 @@
         "repair": false,
         "outputs": 2,
         "x": 770,
-        "y": 420,
+        "y": 400,
         "wires": [
             [
                 "4182b18c.6b705"
@@ -1769,8 +1769,8 @@
             "b630d8c.cb7f128",
             "fc4fe81e.444628"
         ],
-        "x": 295,
-        "y": 380,
+        "x": 355,
+        "y": 360,
         "wires": [
             [
                 "6bb5ecbc.1d0e04"
@@ -1796,7 +1796,7 @@
         "repair": false,
         "outputs": 2,
         "x": 770,
-        "y": 380,
+        "y": 360,
         "wires": [
             [
                 "4182b18c.6b705"
@@ -1930,7 +1930,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 290,
-        "y": 300,
+        "y": 320,
         "wires": [
             [
                 "8818e486.2765d8"
@@ -2043,8 +2043,8 @@
         "links": [
             "d8a4e608.f39898"
         ],
-        "x": 1515,
-        "y": 440,
+        "x": 1315,
+        "y": 400,
         "wires": []
     },
     {
@@ -2210,8 +2210,8 @@
         "invert": false,
         "nora": "54f6a8ea.957eb8",
         "topic": "rullegardin",
-        "x": 610,
-        "y": 460,
+        "x": 770,
+        "y": 500,
         "wires": [
             [
                 "d6717b22.f0d1e8"
@@ -2226,8 +2226,8 @@
         "func": "msg.payload = {openPercent : 100};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1170,
-        "y": 580,
+        "x": 1210,
+        "y": 480,
         "wires": [
             [
                 "525d4b6.a82efb4"
@@ -2242,8 +2242,8 @@
         "func": "msg.payload = {openPercent : 0};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1170,
-        "y": 540,
+        "x": 1210,
+        "y": 440,
         "wires": [
             [
                 "525d4b6.a82efb4"
@@ -2273,7 +2273,7 @@
         "repair": true,
         "outputs": 2,
         "x": 770,
-        "y": 460,
+        "y": 440,
         "wires": [
             [
                 "4182b18c.6b705"
@@ -2293,8 +2293,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1250,
-        "y": 440,
+        "x": 1220,
+        "y": 400,
         "wires": [
             [
                 "bb45bf3b.5ab5f"
@@ -2317,7 +2317,7 @@
         "repair": true,
         "outputs": 1,
         "x": 630,
-        "y": 300,
+        "y": 320,
         "wires": [
             [
                 "cec0f8cb.33f1b8"
@@ -2667,8 +2667,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 490,
-        "y": 300,
+        "x": 450,
+        "y": 320,
         "wires": [
             [
                 "2603c373.b06f0c"
@@ -4387,8 +4387,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 390,
-        "y": 380,
+        "x": 450,
+        "y": 360,
         "wires": [
             [
                 "d87cbd2e.f854f"
@@ -4414,8 +4414,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 380,
+        "x": 600,
+        "y": 360,
         "wires": [
             [
                 "cec0f8cb.33f1b8"
@@ -4677,8 +4677,8 @@
         "links": [
             "1b253553.66750b"
         ],
-        "x": 365,
-        "y": 480,
+        "x": 355,
+        "y": 400,
         "wires": [
             [
                 "a4770dbb.04eff"
@@ -4693,8 +4693,8 @@
         "links": [
             "800c441a.1f78d8"
         ],
-        "x": 1205,
-        "y": 300,
+        "x": 1175,
+        "y": 360,
         "wires": []
     },
     {
