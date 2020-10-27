@@ -585,7 +585,6 @@
             [
                 "d5a9cb0d.738118",
                 "394f6d15.3c43e2",
-                "d141af98.8dd0d",
                 "d6d8cf38.1794d"
             ],
             [
@@ -1563,12 +1562,13 @@
         "id": "4f048068.a4401",
         "type": "function",
         "z": "1b14ec1b.20ab54",
+        "d": true,
         "name": "Happy hungry",
         "func": "msg.payload = \"Happy is hungry\";\nmsg.emitVolume =50;\n\n\nlet msg2 = {};\nmsg2.payload = [ {\n        \"title\": \"Eat\",\n        \"description\": \"Happy wants to eat\",\n        \"icon\": \"https://lh3.googleusercontent.com/F7dHEApWlOufIKF5NX7EHtx1VTPfKWRIN-bOMch2Mi5eixq7cASp-Jh4kr2T4u5l5OUwkhZgowOD6HSOvnnSDi14oaDkREKSmejYnyOujkuSUw5mkIr_AqgIkZro25qWezWl3jxMwv-yTNCzPGV_ABugX9malJX4ZMEumc0cz5wQHsJxfh334ayq_yAslDd7cRzVytebggUPZ7kzxiWYtNAPZLzuOhZLu831adN6OM91wD7glPQoticU3Lh97Hzi1bHI55CEsMuY0DI4jIGlHCkhziI7Xm3FoZCjqX467O5uqKxHzdsamQ9FLGPquo7xr5FBaFUlrwtYoliH1kfSLEVF5C2b_zwErbcjQPCmKyPWQiUthDLvtcatWZ-zC7XmZb3knlSdb_ecwFmbm5lyn0krvtDU123uynS_xLK2C8uXhUP_A3r2msHBEIqrQoDP3HCHlJl2rOQ77Mxgh1uqUCZTT2EUGs67B-beYgbVcd_8wydZfHl6Pn4LP04yilrP3yCZtPT9zC_j-XM4AH_5kunbXytenZHLteaI4ppe4u9lnRCjX5nq8vshrXfOJINr_XvBbUQRHb1uUxQ9N0R_a8i7McUanKl06SX967PMOl9mxSC4LrisMzTj4KoWATsVCU8oXeo6DEsx-l0ICLeLven98hfoAFZym6jPVhBbUmZF7c_IGuqEgUvDw0HI1jc5uATSRxz-7YDELuDpAz4DKQBMMToV-yZdpNQXsM3zpu1Je7j9nA=w563-h545-no\"\n    }];\n\nreturn [msg, msg2];",
         "outputs": 2,
         "noerr": 0,
-        "x": 520,
-        "y": 140,
+        "x": 500,
+        "y": 180,
         "wires": [
             [],
             []
@@ -4325,21 +4325,6 @@
         ]
     },
     {
-        "id": "d141af98.8dd0d",
-        "type": "debug",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1280,
-        "y": 100,
-        "wires": []
-    },
-    {
         "id": "22d0e1ba.e0cbce",
         "type": "complete",
         "z": "f487aa99.386108",
@@ -6627,31 +6612,6 @@
         ]
     },
     {
-        "id": "edc3a198.468d9",
-        "type": "inject",
-        "z": "1b14ec1b.20ab54",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 370,
-        "y": 260,
-        "wires": [
-            [
-                "4324ade3.0032c4"
-            ]
-        ]
-    },
-    {
         "id": "4324ade3.0032c4",
         "type": "http request",
         "z": "1b14ec1b.20ab54",
@@ -6664,29 +6624,11 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 530,
-        "y": 260,
+        "x": 690,
+        "y": 140,
         "wires": [
-            [
-                "aefa0a38.de6058"
-            ]
+            []
         ]
-    },
-    {
-        "id": "aefa0a38.de6058",
-        "type": "debug",
-        "z": "1b14ec1b.20ab54",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "ddeb10c8.abffe",
@@ -6705,8 +6647,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 420,
-        "y": 200,
+        "x": 500,
+        "y": 140,
         "wires": [
             [
                 "4324ade3.0032c4"
