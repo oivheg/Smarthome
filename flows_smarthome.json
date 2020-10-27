@@ -14,13 +14,6 @@
         "info": ""
     },
     {
-        "id": "5da0cd6c.528c64",
-        "type": "tab",
-        "label": "Timing",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "bc3b2c68.b35f6",
         "type": "tab",
         "label": "Garbage Collector",
@@ -655,6 +648,15 @@
         "type": "inject",
         "z": "bc3b2c68.b35f6",
         "name": "INFORM",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "3600",
         "crontab": "",
         "once": true,
@@ -662,11 +664,10 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 340,
+        "x": 220,
         "y": 140,
         "wires": [
             [
-                "47a496d1.bcac18",
                 "6a421ae3.f71ae4"
             ]
         ]
@@ -683,8 +684,8 @@
         "topic": "",
         "payload": "GO",
         "payloadType": "str",
-        "x": 310,
-        "y": 440,
+        "x": 230,
+        "y": 60,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -703,8 +704,8 @@
         "topic": "",
         "payload": "STOP",
         "payloadType": "str",
-        "x": 310,
-        "y": 480,
+        "x": 230,
+        "y": 100,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -719,8 +720,8 @@
         "func": "msg.payload = \"Please Remember to Take out the TRASH\";\nmsg.emitVolume = 50;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 730,
-        "y": 360,
+        "x": 970,
+        "y": 140,
         "wires": [
             [
                 "7db434df.a3db2c"
@@ -735,8 +736,8 @@
         "func": "msg.payload = \"Please Remember to Take out the TRASH\";\nmsg.topic = \"Remember Garbage\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 730,
-        "y": 320,
+        "x": 970,
+        "y": 100,
         "wires": [
             [
                 "c0005e0c.a1014"
@@ -766,7 +767,7 @@
         "repair": false,
         "outputs": 2,
         "x": 530,
-        "y": 120,
+        "y": 180,
         "wires": [
             [
                 "584db3f7.80672c"
@@ -795,8 +796,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
-        "y": 120,
+        "x": 700,
+        "y": 160,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -822,8 +823,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
-        "y": 160,
+        "x": 700,
+        "y": 200,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -891,8 +892,8 @@
         "payload": "STOP",
         "payloadType": "str",
         "topic": "FALSE",
-        "x": 310,
-        "y": 400,
+        "x": 230,
+        "y": 20,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -911,8 +912,8 @@
         "cancel": "",
         "topic": "Husk SÃ¸ppel",
         "name": "Husk SÃ¸ppel",
-        "x": 730,
-        "y": 280,
+        "x": 980,
+        "y": 60,
         "wires": []
     },
     {
@@ -1093,8 +1094,8 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 340,
-        "y": 220,
+        "x": 400,
+        "y": 140,
         "wires": [
             [
                 "47a496d1.bcac18"
@@ -1195,8 +1196,8 @@
         "send_stop": false,
         "default_start": false,
         "differ": false,
-        "x": 520,
-        "y": 320,
+        "x": 700,
+        "y": 100,
         "wires": [
             [
                 "e24d6f6a.515a6",
@@ -1403,8 +1404,8 @@
         "links": [
             "fee9f406.ef48d8"
         ],
-        "x": 855,
-        "y": 360,
+        "x": 1095,
+        "y": 140,
         "wires": []
     },
     {
@@ -1415,8 +1416,8 @@
         "links": [
             "9d6f976b.5d59f8"
         ],
-        "x": 855,
-        "y": 320,
+        "x": 1095,
+        "y": 100,
         "wires": []
     },
     {
@@ -2058,26 +2059,6 @@
         "x": 1030,
         "y": 120,
         "wires": []
-    },
-    {
-        "id": "3a030b43.080134",
-        "type": "inject",
-        "z": "bc3b2c68.b35f6",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 540,
-        "y": 420,
-        "wires": [
-            [
-                "9430e52f.746a78"
-            ]
-        ]
     },
     {
         "id": "6fce2655.029658",
@@ -6979,16 +6960,6 @@
         ],
         "x": 635,
         "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "af0c44a7.493f38",
-        "type": "comment",
-        "z": "5da0cd6c.528c64",
-        "name": "Upstairs Timing",
-        "info": "",
-        "x": 280,
-        "y": 80,
         "wires": []
     },
     {
