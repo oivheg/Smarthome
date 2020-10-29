@@ -1143,7 +1143,8 @@
         "y": 280,
         "wires": [
             [
-                "13147755.3444a9"
+                "13147755.3444a9",
+                "fa3eba93.d4d698"
             ]
         ]
     },
@@ -7931,5 +7932,22 @@
                 "13147755.3444a9"
             ]
         ]
+    },
+    {
+        "id": "fa3eba93.d4d698",
+        "type": "debug",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1520,
+        "y": 360,
+        "wires": []
     }
 ]
