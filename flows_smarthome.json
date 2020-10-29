@@ -7856,7 +7856,7 @@
         "type": "function",
         "z": "c99beb5f.614cb8",
         "name": "",
-        "func": "msg.payload = \"Light:\"+ msg.Enabeled+\"  Time:\"+ msg.topic+\"\";\nreturn msg;",
+        "func": "msg.payload = \"Light:\"+ msg.Enabeled +\"  Time:\"+ msg.topic+\"\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
