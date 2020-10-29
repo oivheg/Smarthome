@@ -3045,7 +3045,7 @@
             [
                 "c5c2b5a2.bb5b18",
                 "8a445ed4.3671e",
-                "c45627f1.7688b8"
+                "5c6e44d5.cb5f8c"
             ]
         ]
     },
@@ -3135,7 +3135,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 860,
+        "x": 720,
         "y": 140,
         "wires": [
             [
@@ -3148,7 +3148,7 @@
                 "f2e0b439.cfe148"
             ],
             [
-                "8d3b028a.588a3"
+                "dd32e2f.5d7022"
             ],
             [
                 "f57725ce.089018"
@@ -3898,8 +3898,8 @@
         "links": [
             "be2ad471.d9c448"
         ],
-        "x": 1375,
-        "y": 120,
+        "x": 1575,
+        "y": 160,
         "wires": []
     },
     {
@@ -3924,8 +3924,8 @@
         "checkall": "false",
         "repair": true,
         "outputs": 2,
-        "x": 1270,
-        "y": 140,
+        "x": 1410,
+        "y": 180,
         "wires": [
             [
                 "d4cd1de.82711e",
@@ -3947,8 +3947,8 @@
             "f66e7e24.aca9d",
             "c825f67d.b5dba8"
         ],
-        "x": 1375,
-        "y": 160,
+        "x": 1575,
+        "y": 200,
         "wires": []
     },
     {
@@ -4047,29 +4047,6 @@
             [
                 "d2142d17.21a64",
                 "80ef18fb.d3bc48"
-            ]
-        ]
-    },
-    {
-        "id": "c45627f1.7688b8",
-        "type": "switch",
-        "z": "e3737c94.fd59f",
-        "name": "Gusetmode",
-        "property": "guestmode",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": true,
-        "outputs": 1,
-        "x": 490,
-        "y": 140,
-        "wires": [
-            [
-                "5c6e44d5.cb5f8c"
             ]
         ]
     },
@@ -4554,7 +4531,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 680,
+        "x": 520,
         "y": 140,
         "wires": [
             [
@@ -4591,7 +4568,7 @@
         "name": "",
         "links": [],
         "x": 1095,
-        "y": 180,
+        "y": 280,
         "wires": []
     },
     {
@@ -6424,7 +6401,7 @@
         "device_id": "23",
         "device": "23",
         "room": "",
-        "x": 1460,
+        "x": 1620,
         "y": 120,
         "wires": [
             [
@@ -6440,7 +6417,7 @@
         "links": [
             "99ed1ce4.90a0c"
         ],
-        "x": 1575,
+        "x": 1815,
         "y": 120,
         "wires": []
     },
@@ -7572,7 +7549,7 @@
         "type": "debug",
         "z": "e3737c94.fd59f",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7974,5 +7951,53 @@
         "x": 440,
         "y": 1140,
         "wires": []
+    },
+    {
+        "id": "dd32e2f.5d7022",
+        "type": "switch",
+        "z": "e3737c94.fd59f",
+        "name": "Home",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": true,
+        "outputs": 1,
+        "x": 1130,
+        "y": 180,
+        "wires": [
+            [
+                "c601c69e.6137e8"
+            ]
+        ]
+    },
+    {
+        "id": "c601c69e.6137e8",
+        "type": "switch",
+        "z": "e3737c94.fd59f",
+        "name": "Gusetmode",
+        "property": "guestmode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": true,
+        "outputs": 1,
+        "x": 1270,
+        "y": 180,
+        "wires": [
+            [
+                "8d3b028a.588a3"
+            ]
+        ]
     }
 ]
