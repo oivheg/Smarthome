@@ -5784,8 +5784,8 @@
         "wires": [
             [
                 "4f3eee1e.36e83",
-                "c07d4e60.269f4",
-                "82ee926f.96b95"
+                "82ee926f.96b95",
+                "ee25b1da.bb3eb"
             ]
         ]
     },
@@ -5852,24 +5852,6 @@
         ]
     },
     {
-        "id": "c07d4e60.269f4",
-        "type": "rbe",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 850,
-        "y": 780,
-        "wires": [
-            [
-                "ee25b1da.bb3eb"
-            ]
-        ]
-    },
-    {
         "id": "c30c4c38.708fe",
         "type": "link out",
         "z": "aa0ae7ae.75d228",
@@ -5889,7 +5871,7 @@
         "links": [
             "93ef5d70.0130e"
         ],
-        "x": 935,
+        "x": 815,
         "y": 780,
         "wires": []
     },
