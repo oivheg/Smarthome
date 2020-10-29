@@ -3147,7 +3147,10 @@
                 "f2e0b439.cfe148"
             ],
             [
-                "dd32e2f.5d7022"
+                "dd32e2f.5d7022",
+                "c660d15c.213f9",
+                "d2c31c81.92246",
+                "8f6f299f.d6ac38"
             ],
             [
                 "f57725ce.089018"
@@ -3927,8 +3930,7 @@
         "y": 180,
         "wires": [
             [
-                "d4cd1de.82711e",
-                "c660d15c.213f9"
+                "d4cd1de.82711e"
             ],
             [
                 "b951c7f1.f25428"
@@ -6011,9 +6013,10 @@
         "id": "c825f67d.b5dba8",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
-        "name": "",
+        "name": "set-downstaris lights",
         "links": [
-            "b951c7f1.f25428"
+            "b951c7f1.f25428",
+            "9a820556.4df458"
         ],
         "x": 615,
         "y": 420,
@@ -7869,6 +7872,70 @@
         "statusType": "auto",
         "x": 750,
         "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d2c31c81.92246",
+        "type": "get-state",
+        "z": "e3737c94.fd59f",
+        "user": "fae123cb.bd4b2",
+        "name": "B etg LUX",
+        "get_type": "devices",
+        "device": "19",
+        "room": "",
+        "x": 1630,
+        "y": 240,
+        "wires": [
+            [
+                "9a820556.4df458",
+                "5afb63dd.42399c"
+            ]
+        ]
+    },
+    {
+        "id": "9a820556.4df458",
+        "type": "link out",
+        "z": "e3737c94.fd59f",
+        "name": "1 etg Lux",
+        "links": [
+            "c825f67d.b5dba8"
+        ],
+        "x": 1815,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8f6f299f.d6ac38",
+        "type": "debug",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5afb63dd.42399c",
+        "type": "debug",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1930,
+        "y": 160,
         "wires": []
     }
 ]
