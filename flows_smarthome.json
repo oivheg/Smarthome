@@ -2092,34 +2092,6 @@
         ]
     },
     {
-        "id": "3e0910d1.7d582",
-        "type": "change",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Reset Away",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1830,
-        "y": 240,
-        "wires": [
-            [
-                "6fce2655.029658",
-                "f0615fd.9f26ba"
-            ]
-        ]
-    },
-    {
         "id": "e1dcab5a.66f5f8",
         "type": "time-range-switch",
         "z": "8b99f8fe.7b27b8",
@@ -7774,33 +7746,6 @@
         "wires": []
     },
     {
-        "id": "cee10e12.581c1",
-        "type": "inject",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1330,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "fa3eba93.d4d698",
         "type": "debug",
         "z": "8b99f8fe.7b27b8",
@@ -7865,8 +7810,8 @@
         "wires": [
             [
                 "77b78689.5eac68",
-                "3e0910d1.7d582",
-                "6fce2655.029658"
+                "6fce2655.029658",
+                "f0615fd.9f26ba"
             ]
         ]
     }
