@@ -7744,24 +7744,6 @@
         ]
     },
     {
-        "id": "7ebfcd20.4e57e4",
-        "type": "rbe",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 1710,
-        "y": 260,
-        "wires": [
-            [
-                "feab733b.3d7c5"
-            ]
-        ]
-    },
-    {
         "id": "feab733b.3d7c5",
         "type": "switch",
         "z": "8b99f8fe.7b27b8",
@@ -7932,8 +7914,8 @@
         "y": 280,
         "wires": [
             [
-                "7ebfcd20.4e57e4",
-                "a5d3065e.5a0698"
+                "a5d3065e.5a0698",
+                "feab733b.3d7c5"
             ]
         ]
     },
@@ -7958,8 +7940,8 @@
         "y": 240,
         "wires": [
             [
-                "7ebfcd20.4e57e4",
-                "77b78689.5eac68"
+                "77b78689.5eac68",
+                "feab733b.3d7c5"
             ]
         ]
     }
