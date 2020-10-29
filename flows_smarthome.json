@@ -5845,7 +5845,7 @@
         "y": 1100,
         "wires": [
             [
-                "bc3425f1.e04ed8"
+                "1e23dfbc.fdad1"
             ]
         ]
     },
@@ -6396,33 +6396,6 @@
         "y": 420,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "bc3425f1.e04ed8",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "illum",
-                "pt": "msg",
-                "to": "B_illumenance",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 270,
-        "y": 1100,
-        "wires": [
-            [
-                "1e23dfbc.fdad1"
-            ]
         ]
     },
     {
