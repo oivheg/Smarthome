@@ -207,6 +207,48 @@
         }
     },
     {
+        "id": "c99beb5f.614cb8",
+        "type": "subflow",
+        "name": "Light Enabeled",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "d21593f0.281a6"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 540,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "976640e9.63cfd",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99",
+        "status": {
+            "x": 580,
+            "y": 180,
+            "wires": [
+                {
+                    "id": "4fdcf2d1.2bd64c",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
         "id": "dccbff74.2769",
         "type": "node-hue-bridge",
         "name": "Hue Bridge",
@@ -5696,10 +5738,10 @@
     {
         "id": "d21593f0.281a6",
         "type": "switch",
-        "z": "aa0ae7ae.75d228",
+        "z": "c99beb5f.614cb8",
         "name": "Light Enabelde",
-        "property": "BLight_enabled",
-        "propertyType": "flow",
+        "property": "Enabeled",
+        "propertyType": "msg",
         "rules": [
             {
                 "t": "true"
@@ -5711,8 +5753,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 880,
-        "y": 840,
+        "x": 200,
+        "y": 80,
         "wires": [
             [
                 "976640e9.63cfd"
@@ -5730,8 +5772,8 @@
         "links": [
             "1329b56.bea634b"
         ],
-        "x": 815,
-        "y": 900,
+        "x": 795,
+        "y": 880,
         "wires": []
     },
     {
@@ -5795,8 +5837,8 @@
         "wires": [
             [
                 "4f3eee1e.36e83",
-                "d21593f0.281a6",
-                "c07d4e60.269f4"
+                "c07d4e60.269f4",
+                "82ee926f.96b95"
             ]
         ]
     },
@@ -5891,7 +5933,7 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 850,
+        "x": 830,
         "y": 800,
         "wires": [
             [
@@ -5919,7 +5961,7 @@
         "links": [
             "93ef5d70.0130e"
         ],
-        "x": 935,
+        "x": 915,
         "y": 800,
         "wires": []
     },
@@ -7150,8 +7192,8 @@
         "z": "aa0ae7ae.75d228",
         "name": "TID",
         "env": [],
-        "x": 1190,
-        "y": 740,
+        "x": 1170,
+        "y": 720,
         "wires": [
             [
                 "507210ce.4f9a2",
@@ -7406,14 +7448,14 @@
     {
         "id": "976640e9.63cfd",
         "type": "subflow:5bd36af.4ea5494",
-        "z": "aa0ae7ae.75d228",
+        "z": "c99beb5f.614cb8",
         "name": "TID",
         "env": [],
-        "x": 1090,
-        "y": 840,
+        "x": 410,
+        "y": 80,
         "wires": [
             [
-                "2cc544a8.55fc3c"
+                "4fdcf2d1.2bd64c"
             ]
         ]
     },
@@ -7492,8 +7534,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1070,
-        "y": 740,
+        "x": 1030,
+        "y": 760,
         "wires": [
             [
                 "76797716.0f6318"
@@ -7503,7 +7545,7 @@
     {
         "id": "728e655.258b19c",
         "type": "switch",
-        "z": "aa0ae7ae.75d228",
+        "z": "c99beb5f.614cb8",
         "name": "false",
         "property": "payload",
         "propertyType": "msg",
@@ -7515,8 +7557,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 910,
-        "y": 880,
+        "x": 230,
+        "y": 120,
         "wires": [
             [
                 "976640e9.63cfd"
@@ -7565,7 +7607,7 @@
         "y": 940,
         "wires": [
             [
-                "d21593f0.281a6"
+                "82ee926f.96b95"
             ]
         ]
     },
@@ -7594,7 +7636,7 @@
         "y": 980,
         "wires": [
             [
-                "d21593f0.281a6"
+                "82ee926f.96b95"
             ]
         ]
     },
@@ -7786,6 +7828,69 @@
                 "77b78689.5eac68",
                 "6fce2655.029658",
                 "f0615fd.9f26ba"
+            ]
+        ]
+    },
+    {
+        "id": "fb8b40b3.74c7a",
+        "type": "subflow:c99beb5f.614cb8",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "env": [
+            {
+                "name": "Enabeled",
+                "value": "true",
+                "type": "json"
+            }
+        ],
+        "x": 1020,
+        "y": 840,
+        "wires": [
+            [
+                "2cc544a8.55fc3c"
+            ]
+        ]
+    },
+    {
+        "id": "4fdcf2d1.2bd64c",
+        "type": "function",
+        "z": "c99beb5f.614cb8",
+        "name": "",
+        "func": "msg.payload = \"Light:\"+ msg.Enabeled+\"  Time:\"+ msg.topic+\"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 470,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82ee926f.96b95",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Enabeled",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Enabeled",
+                "pt": "msg",
+                "to": "basement",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 840,
+        "wires": [
+            [
+                "fb8b40b3.74c7a"
             ]
         ]
     }
