@@ -3045,7 +3045,7 @@
             [
                 "c5c2b5a2.bb5b18",
                 "8a445ed4.3671e",
-                "5338ff6b.dfd0f"
+                "c45627f1.7688b8"
             ]
         ]
     },
@@ -3135,7 +3135,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 960,
+        "x": 860,
         "y": 140,
         "wires": [
             [
@@ -4065,7 +4065,7 @@
         "checkall": "true",
         "repair": true,
         "outputs": 1,
-        "x": 610,
+        "x": 490,
         "y": 140,
         "wires": [
             [
@@ -4554,7 +4554,7 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 780,
+        "x": 680,
         "y": 140,
         "wires": [
             [
@@ -7572,7 +7572,7 @@
         "type": "debug",
         "z": "e3737c94.fd59f",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7611,31 +7611,6 @@
             ],
             [
                 "39ce9f35.91027"
-            ]
-        ]
-    },
-    {
-        "id": "5338ff6b.dfd0f",
-        "type": "switch",
-        "z": "e3737c94.fd59f",
-        "name": "Home",
-        "property": "Mode",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "home",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": true,
-        "outputs": 1,
-        "x": 470,
-        "y": 140,
-        "wires": [
-            [
-                "c45627f1.7688b8"
             ]
         ]
     },
