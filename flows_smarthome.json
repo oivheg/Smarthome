@@ -6053,64 +6053,10 @@
         "y": 420,
         "wires": [
             [
-                "ae464c91.30545"
+                "8a0c640c.996fb8"
             ],
             [
-                "58dcc160.dfa1c"
-            ]
-        ]
-    },
-    {
-        "id": "ae464c91.30545",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "Enable Light",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BLight_enabled",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 380,
-        "wires": [
-            [
-                "76c860b3.3a25c"
-            ]
-        ]
-    },
-    {
-        "id": "58dcc160.dfa1c",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "Disable Light",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BLight_enabled",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 460,
-        "wires": [
-            [
-                "76c860b3.3a25c"
+                "82ef7cc9.6440f"
             ]
         ]
     },
@@ -6248,11 +6194,11 @@
         "wires": [
             [
                 "7c9078bb.3bd958",
-                "8a0c640c.996fb8"
+                "7b1ad62d.a48d08"
             ],
             [
                 "7c9078bb.3bd958",
-                "82ef7cc9.6440f"
+                "9b546f75.d4d83"
             ]
         ]
     },
@@ -6500,7 +6446,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1340,
+        "x": 1360,
         "y": 420,
         "wires": [
             []
@@ -6665,13 +6611,6 @@
                 "pt": "flow",
                 "to": "false",
                 "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STOP",
-                "tot": "str"
             }
         ],
         "action": "",
@@ -6679,12 +6618,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 460,
+        "x": 1150,
+        "y": 440,
         "wires": [
             [
-                "58dcc160.dfa1c",
-                "99cf600c.4082"
+                "76c860b3.3a25c"
             ]
         ]
     },
@@ -6700,13 +6638,6 @@
                 "pt": "flow",
                 "to": "true",
                 "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "GO",
-                "tot": "str"
             }
         ],
         "action": "",
@@ -6714,12 +6645,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 380,
+        "x": 1150,
+        "y": 400,
         "wires": [
             [
-                "ae464c91.30545",
-                "99cf600c.4082"
+                "76c860b3.3a25c"
             ]
         ]
     },
@@ -7825,22 +7755,6 @@
         ]
     },
     {
-        "id": "e6f9c4f5.61c128",
-        "type": "debug",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "99cf600c.4082",
         "type": "traffic",
         "z": "aa0ae7ae.75d228",
@@ -7866,28 +7780,26 @@
         ]
     },
     {
-        "id": "8de941e2.c4809",
-        "type": "inject",
+        "id": "9b546f75.d4d83",
+        "type": "change",
         "z": "aa0ae7ae.75d228",
-        "name": "GO",
-        "props": [
+        "name": "STOP",
+        "rules": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "STOP",
+                "tot": "str"
             }
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "GO",
-        "payloadType": "str",
-        "x": 550,
-        "y": 620,
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 460,
         "wires": [
             [
                 "99cf600c.4082"
@@ -7895,19 +7807,26 @@
         ]
     },
     {
-        "id": "f699a9c5.886a88",
-        "type": "inject",
+        "id": "7b1ad62d.a48d08",
+        "type": "change",
         "z": "aa0ae7ae.75d228",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "STOP",
-        "payloadType": "str",
-        "x": 550,
-        "y": 660,
+        "name": "GO",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "GO",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 380,
         "wires": [
             [
                 "99cf600c.4082"
