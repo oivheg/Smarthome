@@ -6421,7 +6421,7 @@
         "y": 1100,
         "wires": [
             [
-                "a3713cf3.b331a"
+                "1e23dfbc.fdad1"
             ]
         ]
     },
@@ -7902,5 +7902,32 @@
         "x": 1815,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "1e23dfbc.fdad1",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "U-illum",
+        "rules": [
+            {
+                "t": "set",
+                "p": "illum",
+                "pt": "msg",
+                "to": "B_illumenance",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1100,
+        "wires": [
+            [
+                "a3713cf3.b331a"
+            ]
+        ]
     }
 ]
