@@ -5515,8 +5515,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1550,
-        "y": 560,
+        "x": 1390,
+        "y": 720,
         "wires": [
             [
                 "f5037a50.817ae8"
@@ -5540,8 +5540,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1550,
-        "y": 640,
+        "x": 1390,
+        "y": 760,
         "wires": [
             [
                 "f5037a50.817ae8"
@@ -6660,14 +6660,13 @@
         "links": [
             "d6d31aed.f07d78"
         ],
-        "x": 1315,
+        "x": 1215,
         "y": 680,
         "wires": [
             [
                 "31e4a4c9.5261bc",
                 "507210ce.4f9a2",
-                "c6e34ddc.070a3",
-                "de20bb66.265808"
+                "c6e34ddc.070a3"
             ]
         ]
     },
@@ -7157,8 +7156,7 @@
             [
                 "507210ce.4f9a2",
                 "31e4a4c9.5261bc",
-                "5075db67.250164",
-                "de20bb66.265808"
+                "5075db67.250164"
             ]
         ]
     },
@@ -7175,8 +7173,8 @@
         "targetType": "jsonata",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1380,
-        "y": 620,
+        "x": 1340,
+        "y": 540,
         "wires": []
     },
     {
@@ -7632,32 +7630,6 @@
         "wires": []
     },
     {
-        "id": "de20bb66.265808",
-        "type": "trigger",
-        "z": "aa0ae7ae.75d228",
-        "d": true,
-        "name": "",
-        "op1": "true",
-        "op2": "false",
-        "op1type": "bool",
-        "op2type": "bool",
-        "duration": "30",
-        "extend": true,
-        "overrideDelay": true,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1370,
-        "y": 740,
-        "wires": [
-            [
-                "f5037a50.817ae8"
-            ]
-        ]
-    },
-    {
         "id": "2cc544a8.55fc3c",
         "type": "switch",
         "z": "aa0ae7ae.75d228",
@@ -7679,10 +7651,12 @@
         "y": 840,
         "wires": [
             [
-                "71bb07f3.efd1e8"
+                "71bb07f3.efd1e8",
+                "93e84eaf.45413"
             ],
             [
-                "39ce9f35.91027"
+                "39ce9f35.91027",
+                "71bb07f3.efd1e8"
             ]
         ]
     },
