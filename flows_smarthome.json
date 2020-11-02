@@ -7185,14 +7185,20 @@
         "rules": [
             {
                 "t": "true"
+            },
+            {
+                "t": "null"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 1,
+        "outputs": 2,
         "x": 1200,
         "y": 1140,
         "wires": [
+            [
+                "93e84eaf.45413"
+            ],
             [
                 "93e84eaf.45413"
             ]
@@ -7399,7 +7405,7 @@
                 "type": "json"
             }
         ],
-        "x": 1060,
+        "x": 1020,
         "y": 1100,
         "wires": [
             [
