@@ -7900,5 +7900,34 @@
                 "a3713cf3.b331a"
             ]
         ]
+    },
+    {
+        "id": "e69e05f8.6718d8",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1770,
+        "y": 360,
+        "wires": [
+            [
+                "e4c32eed.12537"
+            ]
+        ]
     }
 ]
