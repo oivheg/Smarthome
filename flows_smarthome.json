@@ -598,7 +598,16 @@
         "type": "inject",
         "z": "8b99f8fe.7b27b8",
         "name": "Every 30 seconds",
-        "repeat": "30",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
         "crontab": "",
         "once": false,
         "onceDelay": "",
