@@ -70,6 +70,13 @@
         "info": ""
     },
     {
+        "id": "4eba78c9.04dd28",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -533,6 +540,23 @@
         "disp": true,
         "width": "6",
         "collapse": false
+    },
+    {
+        "id": "93bf6bca.bc3238",
+        "type": "ui_group",
+        "name": "She-bear: status",
+        "tab": "fd92601d.1a632",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fd92601d.1a632",
+        "type": "ui_tab",
+        "name": "Garden",
+        "icon": "local_florist",
+        "order": 2
     },
     {
         "id": "c93d9ccb.30d74",
@@ -3616,6 +3640,8 @@
         "func": "     msg.label = global.get(\"Mode\");\n     msg.payload = global.get(\"Mode\");\n \nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 610,
         "y": 140,
         "wires": [
@@ -8597,6 +8623,35 @@
                 "fbde8b9b.41d5c8",
                 "d3a7cd73.75602"
             ]
+        ]
+    },
+    {
+        "id": "c58ee072.8a123",
+        "type": "ui_switch",
+        "z": "4eba78c9.04dd28",
+        "name": "",
+        "label": "Valve",
+        "tooltip": "Think twice before click",
+        "group": "93bf6bca.bc3238",
+        "order": 7,
+        "width": "2",
+        "height": "2",
+        "passthru": false,
+        "decouple": "true",
+        "topic": "homie/shiber-01/shiber/valve/set",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-tint",
+        "oncolor": "cyan",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-fire",
+        "offcolor": "red",
+        "x": 710,
+        "y": 320,
+        "wires": [
+            []
         ]
     }
 ]
