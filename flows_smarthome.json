@@ -70,6 +70,13 @@
         "info": ""
     },
     {
+        "id": "4d75da30.0d8fe4",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -549,6 +556,23 @@
         "type": "ui_tab",
         "name": "Garden",
         "icon": "local_florist",
+        "order": 2
+    },
+    {
+        "id": "7fccc952.17a8e8",
+        "type": "ui_group",
+        "name": "luces",
+        "tab": "7b345faa.30565",
+        "order": 2,
+        "disp": true,
+        "width": "7",
+        "collapse": true
+    },
+    {
+        "id": "7b345faa.30565",
+        "type": "ui_tab",
+        "name": "SALON",
+        "icon": "fa-television",
         "order": 2
     },
     {
@@ -8617,5 +8641,59 @@
                 "d3a7cd73.75602"
             ]
         ]
+    },
+    {
+        "id": "9697e2fb.c46fe",
+        "type": "change",
+        "z": "4d75da30.0d8fe4",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "1",
+                "fromt": "num",
+                "to": "<i class=\"fa fa-lightbulb-o fa-2x nr-dashboard-warning\"></i>",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "0",
+                "fromt": "num",
+                "to": "<p><i class=\"fa fa-lightbulb-o fa-2x\"></i> ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 280,
+        "wires": [
+            [
+                "f70cab64.9dd638"
+            ]
+        ]
+    },
+    {
+        "id": "f70cab64.9dd638",
+        "type": "ui_text",
+        "z": "4d75da30.0d8fe4",
+        "group": "7fccc952.17a8e8",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "name": "icon status entrada",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 870,
+        "y": 280,
+        "wires": []
     }
 ]
