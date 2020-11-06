@@ -8727,5 +8727,34 @@
                 "254ff95e.602e66"
             ]
         ]
+    },
+    {
+        "id": "c8d7cd85.3ddb7",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 650,
+        "y": 1480,
+        "wires": [
+            [
+                "254ff95e.602e66"
+            ]
+        ]
     }
 ]
