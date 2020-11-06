@@ -8573,5 +8573,34 @@
                 "e54806fb.80a248"
             ]
         ]
+    },
+    {
+        "id": "d4be8433.cc0168",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 560,
+        "wires": [
+            [
+                "39e203a7.f8c33c"
+            ]
+        ]
     }
 ]
