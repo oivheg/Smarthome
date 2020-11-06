@@ -8218,29 +8218,6 @@
         "wires": []
     },
     {
-        "id": "bbe0eb3.c2bbb18",
-        "type": "switch",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 270,
-        "y": 1380,
-        "wires": [
-            [
-                "af18fdf6.83584"
-            ]
-        ]
-    },
-    {
         "id": "50b0d259.df502c",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
@@ -8252,7 +8229,7 @@
         "y": 1380,
         "wires": [
             [
-                "bbe0eb3.c2bbb18"
+                "af18fdf6.83584"
             ]
         ]
     },
@@ -8699,64 +8676,6 @@
         "x": 1200,
         "y": 1500,
         "wires": []
-    },
-    {
-        "id": "bf5a2871.416b38",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 620,
-        "y": 1320,
-        "wires": [
-            [
-                "254ff95e.602e66"
-            ]
-        ]
-    },
-    {
-        "id": "c8d7cd85.3ddb7",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 650,
-        "y": 1480,
-        "wires": [
-            [
-                "254ff95e.602e66"
-            ]
-        ]
     },
     {
         "id": "42c32723.2edfe8",
