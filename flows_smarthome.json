@@ -2723,7 +2723,8 @@
         "y": 220,
         "wires": [
             [
-                "77ccbb67.9f0614"
+                "77ccbb67.9f0614",
+                "fbc6ad8c.12496"
             ]
         ]
     },
@@ -8703,5 +8704,21 @@
                 "57db3a14.e415b4"
             ]
         ]
+    },
+    {
+        "id": "fbc6ad8c.12496",
+        "type": "debug",
+        "z": "f487aa99.386108",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 160,
+        "wires": []
     }
 ]
