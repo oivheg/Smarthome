@@ -70,13 +70,6 @@
         "info": ""
     },
     {
-        "id": "4d75da30.0d8fe4",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -4518,15 +4511,15 @@
         "id": "6d8cd486.3ac49c",
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
-        "name": "Bevegelse Trapp",
+        "name": "Bevegelse StueVtoalett",
         "server": "12895ae7.9c6bf5",
         "device": "ec:1b:bd:ff:fe:3f:85:d8-01-0006",
-        "device_name": "Trapp : ZHAPresence",
-        "topic": "Trapp",
+        "device_name": "1etg: Stue-Gang : ZHAPresence",
+        "topic": "StueVtoalett",
         "state": "0",
         "output": "always",
         "outputAtStartup": true,
-        "x": 280,
+        "x": 300,
         "y": 100,
         "wires": [
             [
@@ -6223,7 +6216,7 @@
         "env": [
             {
                 "name": "Name",
-                "value": "Trapp",
+                "value": "StueVtoalett",
                 "type": "str"
             }
         ],
@@ -8639,110 +8632,6 @@
                 "602fce3c.7d792",
                 "fbde8b9b.41d5c8",
                 "d3a7cd73.75602"
-            ]
-        ]
-    },
-    {
-        "id": "9697e2fb.c46fe",
-        "type": "change",
-        "z": "4d75da30.0d8fe4",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "1",
-                "fromt": "num",
-                "to": "<i class=\"fa fa-lightbulb-o fa-2x nr-dashboard-warning\"></i>",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "0",
-                "fromt": "num",
-                "to": "<p><i class=\"fa fa-lightbulb-o fa-2x\"></i> ",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 680,
-        "y": 280,
-        "wires": [
-            [
-                "f70cab64.9dd638"
-            ]
-        ]
-    },
-    {
-        "id": "f70cab64.9dd638",
-        "type": "ui_text",
-        "z": "4d75da30.0d8fe4",
-        "group": "7fccc952.17a8e8",
-        "order": 1,
-        "width": "1",
-        "height": "1",
-        "name": "icon status entrada",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-center",
-        "x": 870,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "38b5bf26.7a06e",
-        "type": "inject",
-        "z": "4d75da30.0d8fe4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "str",
-        "x": 500,
-        "y": 300,
-        "wires": [
-            [
-                "9697e2fb.c46fe"
-            ]
-        ]
-    },
-    {
-        "id": "5c33ab4b.2200a4",
-        "type": "inject",
-        "z": "4d75da30.0d8fe4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "str",
-        "x": 490,
-        "y": 340,
-        "wires": [
-            [
-                "9697e2fb.c46fe"
             ]
         ]
     }
