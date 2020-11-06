@@ -2723,8 +2723,7 @@
         "y": 220,
         "wires": [
             [
-                "77ccbb67.9f0614",
-                "fbc6ad8c.12496"
+                "77ccbb67.9f0614"
             ]
         ]
     },
@@ -8121,7 +8120,6 @@
             [
                 "ef4292f2.6c39b",
                 "bb437d8d.3536a",
-                "854f8a7e.511828",
                 "42c32723.2edfe8"
             ]
         ]
@@ -8178,8 +8176,7 @@
         "y": 1380,
         "wires": [
             [
-                "af18fdf6.83584",
-                "329396a7.6485fa"
+                "af18fdf6.83584"
             ]
         ]
     },
@@ -8535,23 +8532,6 @@
         ]
     },
     {
-        "id": "854f8a7e.511828",
-        "type": "debug",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1200,
-        "y": 1500,
-        "wires": []
-    },
-    {
         "id": "42c32723.2edfe8",
         "type": "change",
         "z": "aa0ae7ae.75d228",
@@ -8577,39 +8557,5 @@
                 "57db3a14.e415b4"
             ]
         ]
-    },
-    {
-        "id": "fbc6ad8c.12496",
-        "type": "debug",
-        "z": "f487aa99.386108",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "329396a7.6485fa",
-        "type": "debug",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 1440,
-        "wires": []
     }
 ]
