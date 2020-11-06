@@ -4236,7 +4236,8 @@
             "6e1a0143.f51f8",
             "7c9078bb.3bd958",
             "e9e9aaf2.37c198",
-            "f7029354.44404"
+            "f7029354.44404",
+            "641555a3.3a90ec"
         ],
         "x": 135,
         "y": 520,
@@ -6008,7 +6009,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 960,
+        "x": 1240,
         "y": 280,
         "wires": [
             [
@@ -6027,7 +6028,7 @@
         "links": [
             "e03e153f.c778d8"
         ],
-        "x": 615,
+        "x": 895,
         "y": 280,
         "wires": [
             [
@@ -6383,7 +6384,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1360,
+        "x": 1640,
         "y": 280,
         "wires": [
             []
@@ -6509,7 +6510,8 @@
         "name": "RESET",
         "links": [
             "ad38c25a.4977e",
-            "442ce5b6.a24c4c"
+            "442ce5b6.a24c4c",
+            "27734f04.1bd46"
         ],
         "x": 435,
         "y": 860,
@@ -6519,18 +6521,16 @@
         "id": "ad38c25a.4977e",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
-        "name": "RESET",
+        "name": "RESET Basement",
         "links": [
             "7c9078bb.3bd958",
-            "d6d31aed.f07d78",
-            "f7029354.44404"
+            "d6d31aed.f07d78"
         ],
         "x": 1115,
-        "y": 1060,
+        "y": 1040,
         "wires": [
             [
-                "71bb07f3.efd1e8",
-                "93e84eaf.45413"
+                "51f7530b.4eb36c"
             ]
         ]
     },
@@ -6538,18 +6538,17 @@
         "id": "442ce5b6.a24c4c",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
-        "name": "RESET",
+        "name": "RESET Upstairs",
         "links": [
+            "641555a3.3a90ec",
             "d6d31aed.f07d78",
             "e9e9aaf2.37c198"
         ],
-        "x": 1115,
-        "y": 940,
+        "x": 1095,
+        "y": 840,
         "wires": [
             [
-                "31e4a4c9.5261bc",
-                "507210ce.4f9a2",
-                "c6e34ddc.070a3"
+                "85ddaf17.27755"
             ]
         ]
     },
@@ -6652,7 +6651,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
+        "x": 1430,
         "y": 300,
         "wires": [
             [
@@ -6679,7 +6678,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
+        "x": 1430,
         "y": 260,
         "wires": [
             [
@@ -7598,13 +7597,6 @@
                 "pt": "msg",
                 "to": "upstairs",
                 "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
             }
         ],
         "action": "",
@@ -7800,7 +7792,7 @@
         "send_stop": false,
         "default_start": true,
         "differ": false,
-        "x": 770,
+        "x": 1050,
         "y": 280,
         "wires": [
             [
@@ -8468,12 +8460,10 @@
         "id": "f7029354.44404",
         "type": "link out",
         "z": "aa0ae7ae.75d228",
-        "name": "Basemet Reset",
+        "name": "Bedroom Reset",
         "links": [
-            "4ca4adb3.a95524",
             "64bc6db.9a90194",
-            "2d663d9b.44ff02",
-            "ad38c25a.4977e"
+            "27734f04.1bd46"
         ],
         "x": 555,
         "y": 600,
@@ -8632,6 +8622,142 @@
                 "602fce3c.7d792",
                 "fbde8b9b.41d5c8",
                 "d3a7cd73.75602"
+            ]
+        ]
+    },
+    {
+        "id": "641555a3.3a90ec",
+        "type": "link out",
+        "z": "aa0ae7ae.75d228",
+        "name": "Upstairs Reset",
+        "links": [
+            "442ce5b6.a24c4c",
+            "64bc6db.9a90194"
+        ],
+        "x": 955,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "85ddaf17.27755",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 840,
+        "wires": [
+            [
+                "31e4a4c9.5261bc",
+                "507210ce.4f9a2",
+                "c6e34ddc.070a3"
+            ]
+        ]
+    },
+    {
+        "id": "51f7530b.4eb36c",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 1060,
+        "wires": [
+            [
+                "71bb07f3.efd1e8",
+                "93e84eaf.45413"
+            ]
+        ]
+    },
+    {
+        "id": "f725ec81.1653e",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 1300,
+        "wires": [
+            [
+                "57db3a14.e415b4",
+                "bb437d8d.3536a"
+            ]
+        ]
+    },
+    {
+        "id": "27734f04.1bd46",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "RESET Soverom",
+        "links": [
+            "d6d31aed.f07d78",
+            "f7029354.44404"
+        ],
+        "x": 1095,
+        "y": 1300,
+        "wires": [
+            [
+                "f725ec81.1653e"
             ]
         ]
     }
