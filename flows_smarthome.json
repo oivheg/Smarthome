@@ -70,13 +70,6 @@
         "info": ""
     },
     {
-        "id": "4eba78c9.04dd28",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -8623,35 +8616,6 @@
                 "fbde8b9b.41d5c8",
                 "d3a7cd73.75602"
             ]
-        ]
-    },
-    {
-        "id": "c58ee072.8a123",
-        "type": "ui_switch",
-        "z": "4eba78c9.04dd28",
-        "name": "",
-        "label": "Valve",
-        "tooltip": "Think twice before click",
-        "group": "93bf6bca.bc3238",
-        "order": 7,
-        "width": "2",
-        "height": "2",
-        "passthru": false,
-        "decouple": "false",
-        "topic": "homie/shiber-01/shiber/valve/set",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-tint",
-        "oncolor": "cyan",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-fire",
-        "offcolor": "red",
-        "x": 710,
-        "y": 320,
-        "wires": [
-            []
         ]
     }
 ]
