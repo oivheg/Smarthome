@@ -8557,5 +8557,36 @@
                 "57db3a14.e415b4"
             ]
         ]
+    },
+    {
+        "id": "dd4605d3.809e18",
+        "type": "inject",
+        "z": "f487aa99.386108",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "602fce3c.7d792",
+                "fbde8b9b.41d5c8",
+                "d3a7cd73.75602"
+            ]
+        ]
     }
 ]
