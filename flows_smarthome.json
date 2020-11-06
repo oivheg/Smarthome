@@ -8593,13 +8593,42 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 340,
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 320,
         "y": 560,
         "wires": [
             [
                 "39e203a7.f8c33c"
+            ]
+        ]
+    },
+    {
+        "id": "5534b617.bf8488",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 21 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 310,
+        "y": 660,
+        "wires": [
+            [
+                "2e757049.801b"
             ]
         ]
     }
