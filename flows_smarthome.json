@@ -8704,10 +8704,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -8715,10 +8711,35 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 510,
+        "payload": "1",
+        "payloadType": "str",
+        "x": 500,
         "y": 300,
+        "wires": [
+            [
+                "9697e2fb.c46fe"
+            ]
+        ]
+    },
+    {
+        "id": "5c33ab4b.2200a4",
+        "type": "inject",
+        "z": "4d75da30.0d8fe4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 490,
+        "y": 340,
         "wires": [
             [
                 "9697e2fb.c46fe"
