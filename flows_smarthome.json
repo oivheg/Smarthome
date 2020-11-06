@@ -4158,7 +4158,7 @@
             },
             {
                 "t": "cont",
-                "v": "soverom",
+                "v": "bedroom",
                 "vt": "str"
             }
         ],
@@ -4190,7 +4190,8 @@
         "links": [
             "6e1a0143.f51f8",
             "7c9078bb.3bd958",
-            "e9e9aaf2.37c198"
+            "e9e9aaf2.37c198",
+            "f7029354.44404"
         ],
         "x": 135,
         "y": 520,
@@ -5935,7 +5936,8 @@
         "z": "1c11632f.f206fd",
         "name": "btn_downstairs",
         "links": [
-            "56d97603.6cdfe8"
+            "56d97603.6cdfe8",
+            "1aceef23.4fc291"
         ],
         "x": 715,
         "y": 640,
@@ -6477,7 +6479,8 @@
         "name": "RESET",
         "links": [
             "7c9078bb.3bd958",
-            "d6d31aed.f07d78"
+            "d6d31aed.f07d78",
+            "f7029354.44404"
         ],
         "x": 1115,
         "y": 1060,
@@ -8111,7 +8114,7 @@
         "offvalueType": "bool",
         "officon": "remove_red_eye",
         "offcolor": "grey",
-        "x": 700,
+        "x": 680,
         "y": 1380,
         "wires": [
             [
@@ -8182,7 +8185,7 @@
                 "t": "set",
                 "p": "Enabeled",
                 "pt": "msg",
-                "to": "upstairs",
+                "to": "bedroom",
                 "tot": "flow"
             }
         ],
@@ -8247,6 +8250,327 @@
         "wires": [
             [
                 "bbe0eb3.c2bbb18"
+            ]
+        ]
+    },
+    {
+        "id": "6e045be5.c83874",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bedroom_illumenance",
+                "pt": "flow",
+                "to": "payload.illuminance",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1390,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3510f454.e53bec",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Block LIght",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bedroom",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 620,
+        "wires": [
+            [
+                "6e045be5.c83874"
+            ]
+        ]
+    },
+    {
+        "id": "ce2c692a.a3a9c8",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "allow LIght",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bedroom",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 580,
+        "wires": [
+            [
+                "6e045be5.c83874"
+            ]
+        ]
+    },
+    {
+        "id": "c40e547e.a15af8",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "Light bedroom",
+        "property": "payload.illuminance",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "250",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 960,
+        "y": 600,
+        "wires": [
+            [
+                "ce2c692a.a3a9c8"
+            ],
+            [
+                "3510f454.e53bec"
+            ]
+        ]
+    },
+    {
+        "id": "2e757049.801b",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "STOP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "STOP",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 640,
+        "wires": [
+            [
+                "3e68a854.c13848",
+                "3510f454.e53bec"
+            ]
+        ]
+    },
+    {
+        "id": "39e203a7.f8c33c",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "GO",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "GO",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 560,
+        "wires": [
+            [
+                "3e68a854.c13848",
+                "ce2c692a.a3a9c8"
+            ]
+        ]
+    },
+    {
+        "id": "3e68a854.c13848",
+        "type": "traffic",
+        "z": "aa0ae7ae.75d228",
+        "name": "AUTO LIght",
+        "property_allow": "payload",
+        "filter_allow": "GO",
+        "ignore_case_allow": false,
+        "negate_allow": false,
+        "send_allow": false,
+        "property_stop": "payload",
+        "filter_stop": "stop",
+        "ignore_case_stop": true,
+        "negate_stop": false,
+        "send_stop": false,
+        "default_start": true,
+        "differ": false,
+        "x": 770,
+        "y": 600,
+        "wires": [
+            [
+                "c40e547e.a15af8"
+            ]
+        ]
+    },
+    {
+        "id": "32e7306b.a8497",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "button",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "auto",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 390,
+        "y": 600,
+        "wires": [
+            [
+                "f7029354.44404",
+                "39e203a7.f8c33c"
+            ],
+            [
+                "f7029354.44404",
+                "2e757049.801b"
+            ]
+        ]
+    },
+    {
+        "id": "6ff82cc7.7f6d34",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "set-downstaris lights",
+        "links": [],
+        "x": 615,
+        "y": 600,
+        "wires": [
+            [
+                "3e68a854.c13848",
+                "6eb3e4fa.843cac"
+            ]
+        ]
+    },
+    {
+        "id": "f7029354.44404",
+        "type": "link out",
+        "z": "aa0ae7ae.75d228",
+        "name": "Basemet Reset",
+        "links": [
+            "4ca4adb3.a95524",
+            "64bc6db.9a90194",
+            "2d663d9b.44ff02",
+            "ad38c25a.4977e"
+        ],
+        "x": 555,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "e54806fb.80a248",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "basement",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "bedroom",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 600,
+        "wires": [
+            [
+                "32e7306b.a8497"
+            ]
+        ]
+    },
+    {
+        "id": "6eb3e4fa.843cac",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "1aceef23.4fc291",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "btn_downstairs",
+        "links": [
+            "ff979eb7.893f3"
+        ],
+        "x": 155,
+        "y": 600,
+        "wires": [
+            [
+                "e54806fb.80a248"
             ]
         ]
     }
