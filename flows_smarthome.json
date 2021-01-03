@@ -5978,11 +5978,11 @@
         "links": [
             "e03e153f.c778d8"
         ],
-        "x": 1135,
-        "y": 160,
+        "x": 1335,
+        "y": 220,
         "wires": [
             [
-                "439233b8.e2040c"
+                "78e382b2.97061c"
             ]
         ]
     },
@@ -6486,8 +6486,8 @@
             "641555a3.3a90ec",
             "d6d31aed.f07d78"
         ],
-        "x": 1095,
-        "y": 840,
+        "x": 1135,
+        "y": 940,
         "wires": [
             [
                 "85ddaf17.27755"
@@ -7572,31 +7572,6 @@
         ]
     },
     {
-        "id": "439233b8.e2040c",
-        "type": "traffic",
-        "z": "aa0ae7ae.75d228",
-        "name": "AUTO LIght",
-        "property_allow": "payload",
-        "filter_allow": "GO",
-        "ignore_case_allow": false,
-        "negate_allow": false,
-        "send_allow": false,
-        "property_stop": "payload",
-        "filter_stop": "stop",
-        "ignore_case_stop": true,
-        "negate_stop": false,
-        "send_stop": false,
-        "default_start": true,
-        "differ": false,
-        "x": 1310,
-        "y": 220,
-        "wires": [
-            [
-                "78e382b2.97061c"
-            ]
-        ]
-    },
-    {
         "id": "f2786c6b.d98eb",
         "type": "change",
         "z": "aa0ae7ae.75d228",
@@ -8265,7 +8240,7 @@
             "442ce5b6.a24c4c"
         ],
         "x": 1095,
-        "y": 160,
+        "y": 180,
         "wires": []
     },
     {
@@ -8287,8 +8262,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1210,
-        "y": 840,
+        "x": 1230,
+        "y": 940,
         "wires": [
             [
                 "31e4a4c9.5261bc",
@@ -8451,14 +8426,10 @@
         "wires": [
             [
                 "641555a3.3a90ec",
-                "8dccbcbf.51ae1",
-                "439233b8.e2040c",
                 "24f6cd3c.7c32c2"
             ],
             [
                 "641555a3.3a90ec",
-                "57f2007.501ce",
-                "439233b8.e2040c",
                 "24f6cd3c.7c32c2"
             ]
         ]
@@ -9209,8 +9180,8 @@
         "links": [
             "9c7d5bc1.e49d18"
         ],
-        "x": 1255,
-        "y": 180,
+        "x": 1095,
+        "y": 220,
         "wires": []
     },
     {
