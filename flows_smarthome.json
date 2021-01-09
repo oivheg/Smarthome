@@ -256,6 +256,63 @@
         }
     },
     {
+        "id": "c8930ccb.6e912",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "dbfcd776.f2b518"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "dbfcd776.f2b518",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "dbfcd776.f2b518",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 340,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "dbfcd776.f2b518",
+                        "port": 2
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99",
+        "outputLabels": [
+            "ON",
+            "OFF",
+            "AUTO"
+        ]
+    },
+    {
         "id": "dccbff74.2769",
         "type": "node-hue-bridge",
         "name": "Hue Bridge",
@@ -650,6 +707,14 @@
         "disp": false,
         "width": "6",
         "collapse": false
+    },
+    {
+        "id": "1744610e.18ab3f",
+        "type": "castv2-connection",
+        "name": "",
+        "target": "Stue",
+        "host": "",
+        "port": "8009"
     },
     {
         "id": "c93d9ccb.30d74",
@@ -3238,9 +3303,9 @@
             ],
             [
                 "dd32e2f.5d7022",
-                "c660d15c.213f9",
-                "d2c31c81.92246",
-                "c601c69e.6137e8"
+                "c601c69e.6137e8",
+                "277f34fb.de5d9c",
+                "63ddbc3d.17bc34"
             ],
             [
                 "f57725ce.089018"
@@ -4052,19 +4117,19 @@
         "name": "Off",
         "group": "efd0ae.1a06bf5",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "2",
+        "height": "1",
         "passthru": false,
-        "label": "OFF",
+        "label": "",
         "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
+        "color": "red",
+        "bgcolor": "{{background}}",
+        "icon": "power_settings_new",
         "payload": "false",
         "payloadType": "bool",
-        "topic": "OFF",
-        "x": 510,
-        "y": 500,
+        "topic": "off",
+        "x": 830,
+        "y": 480,
         "wires": [
             [
                 "6987ca2e.892e94"
@@ -4078,19 +4143,19 @@
         "name": "On",
         "group": "efd0ae.1a06bf5",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": "2",
+        "height": "1",
         "passthru": false,
-        "label": "ON",
+        "label": "",
         "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
+        "color": "green",
+        "bgcolor": "{{background}}",
+        "icon": "power_settings_new",
         "payload": "true",
         "payloadType": "bool",
-        "topic": "ON",
-        "x": 510,
-        "y": 460,
+        "topic": "on",
+        "x": 830,
+        "y": 440,
         "wires": [
             [
                 "6987ca2e.892e94"
@@ -4104,19 +4169,19 @@
         "name": "Auto",
         "group": "efd0ae.1a06bf5",
         "order": 2,
-        "width": 0,
-        "height": 0,
+        "width": "2",
+        "height": "1",
         "passthru": true,
         "label": "AUTO",
         "tooltip": "",
         "color": "",
-        "bgcolor": "",
+        "bgcolor": "{{background}}",
         "icon": "",
         "payload": "",
         "payloadType": "date",
         "topic": "auto",
-        "x": 510,
-        "y": 540,
+        "x": 830,
+        "y": 520,
         "wires": [
             [
                 "6987ca2e.892e94"
@@ -4130,9 +4195,6 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
-            },
-            {
                 "p": "topic",
                 "vt": "str"
             }
@@ -4141,16 +4203,14 @@
         "crontab": "",
         "once": true,
         "onceDelay": "2",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 310,
-        "y": 600,
+        "topic": "auto",
+        "x": 830,
+        "y": 560,
         "wires": [
             [
-                "d2142d17.21a64",
-                "80ef18fb.d3bc48",
-                "216a5566.53b0aa"
+                "6987ca2e.892e94",
+                "ff979eb7.893f3",
+                "fb14610a.ba0cf"
             ]
         ]
     },
@@ -4166,13 +4226,13 @@
         "passthru": true,
         "label": "",
         "tooltip": "",
-        "color": "white",
-        "bgcolor": "red",
+        "color": "red",
+        "bgcolor": "{{background}}",
         "icon": "power_settings_new",
         "payload": "false",
         "payloadType": "bool",
-        "topic": "yes",
-        "x": 510,
+        "topic": "off",
+        "x": 830,
         "y": 640,
         "wires": [
             [
@@ -4192,14 +4252,14 @@
         "passthru": true,
         "label": "",
         "tooltip": "",
-        "color": "white",
-        "bgcolor": "green",
+        "color": "green",
+        "bgcolor": "{{background}}",
         "icon": "power_settings_new",
         "payload": "true",
         "payloadType": "bool",
-        "topic": "yes",
-        "x": 510,
-        "y": 680,
+        "topic": "on",
+        "x": 830,
+        "y": 600,
         "wires": [
             [
                 "ff979eb7.893f3"
@@ -4219,13 +4279,13 @@
         "label": "AUTO",
         "tooltip": "",
         "color": "",
-        "bgcolor": "orange",
+        "bgcolor": "{{background}}",
         "icon": "",
         "payload": "false",
         "payloadType": "bool",
         "topic": "auto",
-        "x": 510,
-        "y": 600,
+        "x": 830,
+        "y": 680,
         "wires": [
             [
                 "ff979eb7.893f3"
@@ -4277,8 +4337,7 @@
                 "3de67605.ae865a"
             ],
             [
-                "472600f9.2afc6",
-                "59e04511.60847c"
+                "472600f9.2afc6"
             ]
         ]
     },
@@ -4677,8 +4736,8 @@
         "spotifyAccessToken": "",
         "spotifyAccessTokenExpiration": "",
         "spotifyDeviceName": "",
-        "x": 420,
-        "y": 320,
+        "x": 240,
+        "y": 680,
         "wires": [
             [
                 "f847eafc.0e0ae8"
@@ -4704,8 +4763,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 320,
+        "x": 420,
+        "y": 680,
         "wires": [
             [
                 "92c02252.b1e1"
@@ -5963,8 +6022,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 270,
-        "y": 320,
+        "x": 220,
+        "y": 640,
         "wires": [
             [
                 "352f3a96.368046"
@@ -5977,10 +6036,11 @@
         "z": "1c11632f.f206fd",
         "name": "btn_upstairs",
         "links": [
+            "6e6f2eda.8a5af",
             "fabdb6a9.b22598"
         ],
-        "x": 725,
-        "y": 520,
+        "x": 1055,
+        "y": 480,
         "wires": []
     },
     {
@@ -5989,9 +6049,10 @@
         "z": "1c11632f.f206fd",
         "name": "btn_downstairs",
         "links": [
+            "34407a70.7715c6",
             "56d97603.6cdfe8"
         ],
-        "x": 715,
+        "x": 1035,
         "y": 640,
         "wires": []
     },
@@ -6317,8 +6378,8 @@
         "user": "fae123cb.bd4b2",
         "name": "1 etg LUX",
         "get_type": "devices",
-        "device_id": "23",
-        "device": "23",
+        "device_id": "10",
+        "device": "10",
         "room": "",
         "x": 1620,
         "y": 120,
@@ -6538,7 +6599,7 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "block",
-        "x": 510,
+        "x": 830,
         "y": 720,
         "wires": [
             [
@@ -9134,16 +9195,16 @@
         "order": 6,
         "width": "2",
         "height": "1",
-        "passthru": true,
+        "passthru": false,
         "label": "",
         "tooltip": "",
-        "color": "",
-        "bgcolor": "Red",
+        "color": "red",
+        "bgcolor": "{{background}}",
         "icon": "fa-bed",
         "payload": "false",
         "payloadType": "bool",
-        "topic": "yes",
-        "x": 510,
+        "topic": "off",
+        "x": 830,
         "y": 820,
         "wires": [
             [
@@ -9160,16 +9221,16 @@
         "order": 4,
         "width": "2",
         "height": "1",
-        "passthru": true,
+        "passthru": false,
         "label": "",
         "tooltip": "",
-        "color": "black",
-        "bgcolor": "Green",
+        "color": "green",
+        "bgcolor": "{{background}}",
         "icon": "fa-bed",
         "payload": "true",
         "payloadType": "bool",
-        "topic": "yes",
-        "x": 510,
+        "topic": "on",
+        "x": 830,
         "y": 780,
         "wires": [
             [
@@ -9181,11 +9242,12 @@
         "id": "fb14610a.ba0cf",
         "type": "link out",
         "z": "1c11632f.f206fd",
-        "name": "",
+        "name": "btn_Bedroom",
         "links": [
-            "1aceef23.4fc291"
+            "1aceef23.4fc291",
+            "d9e85afd.05fb38"
         ],
-        "x": 695,
+        "x": 1035,
         "y": 800,
         "wires": []
     },
@@ -9198,16 +9260,16 @@
         "order": 5,
         "width": "2",
         "height": "1",
-        "passthru": true,
-        "label": "S_AUTO",
+        "passthru": false,
+        "label": "AUTO",
         "tooltip": "",
         "color": "",
-        "bgcolor": "orange",
+        "bgcolor": "{{background}}",
         "icon": "",
         "payload": "false",
         "payloadType": "bool",
         "topic": "auto",
-        "x": 510,
+        "x": 830,
         "y": 860,
         "wires": [
             [
@@ -9348,7 +9410,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 190,
+        "x": 510,
         "y": 720,
         "wires": [
             [
@@ -9356,132 +9418,6 @@
             ],
             [
                 "247a7dc5.f58342"
-            ]
-        ]
-    },
-    {
-        "id": "82c9dc8d.87c11",
-        "type": "ui_button",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "group": "26332cb7.024dd4",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Start",
-        "color": "black",
-        "bgcolor": "{{background}}",
-        "icon": "",
-        "payload": "RUNNING",
-        "payloadType": "str",
-        "topic": "",
-        "x": 990,
-        "y": 540,
-        "wires": [
-            [
-                "319cf0e6.f709a"
-            ]
-        ]
-    },
-    {
-        "id": "319cf0e6.f709a",
-        "type": "delay",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "0.5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 1176,
-        "y": 539,
-        "wires": [
-            [
-                "6176046c.1b3b6c",
-                "2bd239b8.7085a6"
-            ]
-        ]
-    },
-    {
-        "id": "6176046c.1b3b6c",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "RED",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1180,
-        "y": 620,
-        "wires": [
-            [
-                "82c9dc8d.87c11"
-            ]
-        ]
-    },
-    {
-        "id": "f59c0526.513b98",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "background",
-                "pt": "msg",
-                "to": "green",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1480,
-        "y": 620,
-        "wires": [
-            [
-                "82c9dc8d.87c11"
-            ]
-        ]
-    },
-    {
-        "id": "2bd239b8.7085a6",
-        "type": "delay",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "3",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 1400,
-        "y": 540,
-        "wires": [
-            [
-                "f59c0526.513b98"
             ]
         ]
     },
@@ -9511,11 +9447,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 310,
+        "x": 630,
         "y": 740,
         "wires": [
             [
-                "2899fe6e.4401a2"
+                "2899fe6e.4401a2",
+                "216a5566.53b0aa"
             ]
         ]
     },
@@ -9545,7 +9482,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 310,
+        "x": 630,
         "y": 700,
         "wires": [
             [
@@ -9608,51 +9545,6 @@
         "wires": [
             [
                 "af18fdf6.83584"
-            ]
-        ]
-    },
-    {
-        "id": "59e04511.60847c",
-        "type": "debug",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1360,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "90b855bb.f14988",
-        "type": "inject",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "00 12 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 270,
-        "y": 860,
-        "wires": [
-            [
-                "216a5566.53b0aa"
             ]
         ]
     },
@@ -9721,6 +9613,191 @@
         "wires": [
             [
                 "4506d661.fb2f78"
+            ]
+        ]
+    },
+    {
+        "id": "dbfcd776.f2b518",
+        "type": "function",
+        "z": "c8930ccb.6e912",
+        "name": "",
+        "func": "let green = {\"background\": \"green\"};\nlet orange = {\"background\": \"orange\"};\nlet grey = {\"background\": \"grey\"};\nlet red = {\"background\": \"red\"};\nswitch(msg.topic) {\n  case \"on\":\n    return [green, grey,grey];\n    \n  case \"off\":\n     return [grey, red,grey];\n   \n   case \"auto\":\n     return [grey, grey, orange];\n}\n\nreturn msg;",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "ON",
+            "OFF",
+            "AUTO"
+        ]
+    },
+    {
+        "id": "d9e85afd.05fb38",
+        "type": "link in",
+        "z": "1c11632f.f206fd",
+        "name": "btn_Color",
+        "links": [
+            "fb14610a.ba0cf"
+        ],
+        "x": 495,
+        "y": 820,
+        "wires": [
+            [
+                "1d4bef5d.bd33a1"
+            ]
+        ]
+    },
+    {
+        "id": "1d4bef5d.bd33a1",
+        "type": "subflow:c8930ccb.6e912",
+        "z": "1c11632f.f206fd",
+        "name": "Bedroom",
+        "env": [],
+        "x": 600,
+        "y": 820,
+        "wires": [
+            [
+                "d2e37f4b.df0e9"
+            ],
+            [
+                "65f5a4f8.7de8fc"
+            ],
+            [
+                "216a5566.53b0aa"
+            ]
+        ]
+    },
+    {
+        "id": "790d26f6.d423a8",
+        "type": "subflow:c8930ccb.6e912",
+        "z": "1c11632f.f206fd",
+        "name": "Basement",
+        "env": [],
+        "x": 640,
+        "y": 640,
+        "wires": [
+            [
+                "8cc2264a.376548"
+            ],
+            [
+                "71871582.621a2c"
+            ],
+            [
+                "80ef18fb.d3bc48"
+            ]
+        ]
+    },
+    {
+        "id": "2b70efb5.d5416",
+        "type": "subflow:c8930ccb.6e912",
+        "z": "1c11632f.f206fd",
+        "name": "Upstairs",
+        "env": [],
+        "x": 640,
+        "y": 480,
+        "wires": [
+            [
+                "ed7a3ab.c4f31c8"
+            ],
+            [
+                "57ba7f31.9cd56"
+            ],
+            [
+                "d2142d17.21a64"
+            ]
+        ]
+    },
+    {
+        "id": "34407a70.7715c6",
+        "type": "link in",
+        "z": "1c11632f.f206fd",
+        "name": "btn_B-Color",
+        "links": [
+            "ff979eb7.893f3"
+        ],
+        "x": 495,
+        "y": 640,
+        "wires": [
+            [
+                "790d26f6.d423a8"
+            ]
+        ]
+    },
+    {
+        "id": "6e6f2eda.8a5af",
+        "type": "link in",
+        "z": "1c11632f.f206fd",
+        "name": "btn_U-Color",
+        "links": [
+            "6987ca2e.892e94"
+        ],
+        "x": 495,
+        "y": 480,
+        "wires": [
+            [
+                "2b70efb5.d5416"
+            ]
+        ]
+    },
+    {
+        "id": "277f34fb.de5d9c",
+        "type": "change",
+        "z": "e3737c94.fd59f",
+        "name": "clean",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 240,
+        "wires": [
+            [
+                "d2c31c81.92246"
+            ]
+        ]
+    },
+    {
+        "id": "63ddbc3d.17bc34",
+        "type": "change",
+        "z": "e3737c94.fd59f",
+        "name": "clean",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 120,
+        "wires": [
+            [
+                "c660d15c.213f9"
             ]
         ]
     }
