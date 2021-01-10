@@ -4171,7 +4171,7 @@
         "order": 2,
         "width": "2",
         "height": "1",
-        "passthru": true,
+        "passthru": false,
         "label": "AUTO",
         "tooltip": "",
         "color": "",
@@ -6099,7 +6099,8 @@
         "y": 220,
         "wires": [
             [
-                "78e382b2.97061c"
+                "78e382b2.97061c",
+                "7246ff.ebbd89"
             ]
         ]
     },
@@ -6378,8 +6379,8 @@
         "user": "fae123cb.bd4b2",
         "name": "1 etg LUX",
         "get_type": "devices",
-        "device_id": "10",
-        "device": "10",
+        "device_id": "23",
+        "device": "23",
         "room": "",
         "x": 1620,
         "y": 120,
@@ -8588,8 +8589,7 @@
         "y": 340,
         "wires": [
             [
-                "f7029354.44404",
-                "ce2c692a.a3a9c8"
+                "f7029354.44404"
             ],
             [
                 "f7029354.44404",
@@ -9800,5 +9800,51 @@
                 "c660d15c.213f9"
             ]
         ]
+    },
+    {
+        "id": "25961872.82b6d8",
+        "type": "inject",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 910,
+        "y": 300,
+        "wires": [
+            [
+                "c660d15c.213f9"
+            ]
+        ]
+    },
+    {
+        "id": "7246ff.ebbd89",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 160,
+        "wires": []
     }
 ]
