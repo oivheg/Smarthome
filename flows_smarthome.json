@@ -352,6 +352,11 @@
                 "name": "room",
                 "type": "str",
                 "value": "room"
+            },
+            {
+                "name": "illumenance",
+                "type": "num",
+                "value": "200"
             }
         ],
         "color": "#DDAA99",
@@ -5795,7 +5800,7 @@
         "type": "ui_switch",
         "z": "aa0ae7ae.75d228",
         "name": "Bevegelse oppe",
-        "label": "Bevegelse Oppe {{msg.illum}}",
+        "label": "Bevegelse Oppe {{msg.illumenance}}",
         "tooltip": "",
         "group": "56a8be2a.9b9eb",
         "order": 8,
@@ -5828,7 +5833,7 @@
         "type": "ui_switch",
         "z": "aa0ae7ae.75d228",
         "name": "Bevegelse nede",
-        "label": "Bevegelse Nede {{msg.illum}}",
+        "label": "Bevegelse Nede {{msg.illumenance}}",
         "tooltip": "",
         "group": "56a8be2a.9b9eb",
         "order": 10,
@@ -6226,8 +6231,7 @@
         "y": 980,
         "wires": [
             [
-                "6df68a1.4455e74",
-                "b7bcba1b.e24698"
+                "6df68a1.4455e74"
             ]
         ]
     },
@@ -6261,8 +6265,7 @@
         "y": 920,
         "wires": [
             [
-                "6df68a1.4455e74",
-                "b7bcba1b.e24698"
+                "6df68a1.4455e74"
             ]
         ]
     },
@@ -6318,34 +6321,6 @@
         "wires": [
             [
                 "976db23e.1f8ba"
-            ]
-        ]
-    },
-    {
-        "id": "b7bcba1b.e24698",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "d": true,
-        "name": "U-illum",
-        "rules": [
-            {
-                "t": "set",
-                "p": "illum",
-                "pt": "msg",
-                "to": "U_illumenance",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 1020,
-        "wires": [
-            [
-                "18e793bb.41ccac"
             ]
         ]
     },
@@ -9915,60 +9890,6 @@
         ]
     },
     {
-        "id": "89153d4d.33deb",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 450,
-        "y": 1640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9ffd1835.a11158",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 450,
-        "y": 1680,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "12e98816.16dea8",
         "type": "change",
         "z": "95167fef.b6134",
@@ -10005,6 +9926,13 @@
                 "pt": "msg",
                 "to": "Reset",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "ON",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -10057,8 +9985,8 @@
         "rules": [
             {
                 "t": "lt",
-                "v": "250",
-                "vt": "num"
+                "v": "illumenance",
+                "vt": "env"
             },
             {
                 "t": "null"
@@ -10138,6 +10066,11 @@
                 "name": "room",
                 "value": "upstairs",
                 "type": "str"
+            },
+            {
+                "name": "illumenance",
+                "value": "170",
+                "type": "num"
             }
         ],
         "x": 1090,
@@ -10185,6 +10118,11 @@
                 "name": "room",
                 "value": "basement",
                 "type": "str"
+            },
+            {
+                "name": "illumenance",
+                "value": "170",
+                "type": "num"
             }
         ],
         "x": 1090,
@@ -10306,6 +10244,64 @@
         "wires": [
             [
                 "d2c31c81.92246"
+            ]
+        ]
+    },
+    {
+        "id": "8de46d19.0ae46",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 380,
+        "y": 800,
+        "wires": [
+            [
+                "6df68a1.4455e74"
+            ]
+        ]
+    },
+    {
+        "id": "fdb78f15.0af7e",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 369.20001220703125,
+        "y": 850,
+        "wires": [
+            [
+                "6df68a1.4455e74"
             ]
         ]
     }
