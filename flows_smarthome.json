@@ -331,6 +331,9 @@
                     },
                     {
                         "id": "ab9063bb.93cdb"
+                    },
+                    {
+                        "id": "e6f595a8.bbe788"
                     }
                 ]
             }
@@ -2155,7 +2158,7 @@
             "e17d0a43.b0e048"
         ],
         "x": 2155,
-        "y": 320,
+        "y": 380,
         "wires": []
     },
     {
@@ -4013,7 +4016,7 @@
         "y": 340,
         "wires": [
             [
-                "f530a672.6d7088"
+                "33127a60.00f3f6"
             ]
         ]
     },
@@ -4599,8 +4602,8 @@
         "oauthClient": "4ec8324b.b2dc1c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
-        "x": 2400,
-        "y": 200,
+        "x": 2520,
+        "y": 80,
         "wires": []
     },
     {
@@ -8563,13 +8566,6 @@
                 "pt": "msg",
                 "to": "true",
                 "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
             }
         ],
         "action": "",
@@ -8581,7 +8577,8 @@
         "y": 180,
         "wires": [
             [
-                "d6d31aed.f07d78"
+                "d6d31aed.f07d78",
+                "f33c2274.35e8f"
             ]
         ]
     },
@@ -9970,10 +9967,12 @@
         "y": 160,
         "wires": [
             [
-                "938ec30b.4297f"
+                "938ec30b.4297f",
+                "fb3a9993.6269b8"
             ],
             [
-                "938ec30b.4297f"
+                "938ec30b.4297f",
+                "fb3a9993.6269b8"
             ]
         ]
     },
@@ -10394,7 +10393,122 @@
         "y": 380,
         "wires": [
             [
+                "794fbb2d.825084"
+            ]
+        ]
+    },
+    {
+        "id": "33127a60.00f3f6",
+        "type": "delay",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "f530a672.6d7088"
+            ]
+        ]
+    },
+    {
+        "id": "794fbb2d.825084",
+        "type": "delay",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 280,
+        "y": 380,
+        "wires": [
+            [
                 "884604e4.6cfe58"
+            ]
+        ]
+    },
+    {
+        "id": "f33c2274.35e8f",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e6f595a8.bbe788",
+        "type": "switch",
+        "z": "95167fef.b6134",
+        "name": "",
+        "property": "reset",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "a11a91da.5ad24"
+            ]
+        ]
+    },
+    {
+        "id": "573ad2.f49d253",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "7284606e.34aff"
             ]
         ]
     }
