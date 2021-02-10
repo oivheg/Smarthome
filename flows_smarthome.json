@@ -1018,7 +1018,7 @@
         "type": "function",
         "z": "8b99f8fe.7b27b8",
         "name": "Determine device presence",
-        "func": "const lastSeenSeconds = 70;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\n\nreturn Object.keys(people).map(function(topic) {\n    let devices = msg.payload[0].filter(device => device.name === people[topic] && device.last_seen > presenceCutoff);\n    return {\n        topic: topic,\n        retain: true,\n        payload: devices.length > 0\n    };\n});",
+        "func": "const lastSeenSeconds = 70;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\n\nreturn Object.keys(people).map(function(topic) {\n    let devices = msg.payload[0].filter(device => device.name === people[topic] && device.last_seen > presenceCutoff);\n    return {\n        topic: topic,\n        retain: true,\n        payload: devices.length > 0,\n        raw: devices\n    };\n});",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -1029,7 +1029,8 @@
             [
                 "d5a9cb0d.738118",
                 "394f6d15.3c43e2",
-                "d6d8cf38.1794d"
+                "d6d8cf38.1794d",
+                "58d313a8.85221c"
             ],
             [
                 "d5a9cb0d.738118",
@@ -10147,7 +10148,8 @@
                 "93125ad8.268fd8"
             ],
             [
-                "7619e08.a8fb32"
+                "7619e08.a8fb32",
+                "fb3a9993.6269b8"
             ]
         ]
     },
@@ -11000,6 +11002,23 @@
         "statusType": "auto",
         "x": 460,
         "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "58d313a8.85221c",
+        "type": "debug",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 140,
         "wires": []
     }
 ]
