@@ -1018,7 +1018,7 @@
         "type": "function",
         "z": "8b99f8fe.7b27b8",
         "name": "Determine device presence",
-        "func": "const lastSeenSeconds = 70;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\n\nreturn Object.keys(people).map(function(topic) {\n    let devices = msg.payload[0].filter(device => device.name === people[topic] && device.last_seen > presenceCutoff);\n    return {\n        topic: topic,\n        retain: true,\n        payload: devices.length > 0,\n        raw: devices\n    };\n});",
+        "func": "const lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\n\nreturn Object.keys(people).map(function(topic) {\n    let devices = msg.payload[0].filter(device => device.name === people[topic] && device.last_seen > presenceCutoff);\n    return {\n        topic: topic,\n        retain: true,\n        payload: devices.length > 0,\n        raw: devices\n    };\n});",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -2468,32 +2468,6 @@
         "wires": []
     },
     {
-        "id": "6fce2655.029658",
-        "type": "trigger",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "op1": "",
-        "op2": "false",
-        "op1type": "nul",
-        "op2type": "bool",
-        "duration": "10",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "true",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1830,
-        "y": 280,
-        "wires": [
-            [
-                "e4c32eed.12537",
-                "a5d3065e.5a0698"
-            ]
-        ]
-    },
-    {
         "id": "e1dcab5a.66f5f8",
         "type": "time-range-switch",
         "z": "8b99f8fe.7b27b8",
@@ -2533,8 +2507,8 @@
         "links": [
             "2e0d79f5.69a796"
         ],
-        "x": 1655,
-        "y": 200,
+        "x": 1795,
+        "y": 160,
         "wires": [
             [
                 "3e6914e6.deefec"
@@ -2560,11 +2534,11 @@
                 "vt": "str"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1850,
-        "y": 200,
+        "x": 1910,
+        "y": 160,
         "wires": [
             [],
             [
@@ -6962,14 +6936,14 @@
         "type": "trigger",
         "z": "8b99f8fe.7b27b8",
         "name": "away",
-        "op1": "false",
-        "op2": "0",
-        "op1type": "bool",
-        "op2type": "str",
-        "duration": "0",
+        "op1": "",
+        "op2": "false",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "15",
         "extend": false,
         "overrideDelay": false,
-        "units": "ms",
+        "units": "min",
         "reset": "true",
         "bytopic": "all",
         "topic": "topic",
@@ -6978,7 +6952,9 @@
         "y": 280,
         "wires": [
             [
-                "6fce2655.029658"
+                "e4c32eed.12537",
+                "fde9f041.eb152",
+                "a5d3065e.5a0698"
             ]
         ]
     },
@@ -7003,9 +6979,9 @@
         "y": 240,
         "wires": [
             [
-                "77b78689.5eac68",
-                "6fce2655.029658",
-                "f0615fd.9f26ba"
+                "f0615fd.9f26ba",
+                "15e4457d.ab633b",
+                "77b78689.5eac68"
             ]
         ]
     },
@@ -9390,23 +9366,23 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "true"
+                "t": "false"
             },
             {
-                "t": "false"
+                "t": "else"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 2,
         "x": 590,
         "y": 180,
         "wires": [
             [
-                "49d59fdb.c8f13"
+                "1320f8a5.4784c7"
             ],
             [
-                "1320f8a5.4784c7"
+                "49d59fdb.c8f13"
             ]
         ]
     },
@@ -11026,6 +11002,85 @@
         "statusType": "auto",
         "x": 1040,
         "y": 140,
+        "wires": []
+    },
+    {
+        "id": "50a60792.19b3e8",
+        "type": "castv2-sender",
+        "z": "1c11632f.f206fd",
+        "name": "OFFICE",
+        "connection": "862863a9.265f3",
+        "spotifyAccessToken": "",
+        "spotifyAccessTokenExpiration": "",
+        "spotifyDeviceName": "",
+        "x": 2040,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1a25373.858cb",
+        "type": "link in",
+        "z": "1c11632f.f206fd",
+        "name": "OFFICE",
+        "links": [
+            "dc33a268.a0933"
+        ],
+        "x": 1755,
+        "y": 360,
+        "wires": [
+            [
+                "50a60792.19b3e8"
+            ]
+        ]
+    },
+    {
+        "id": "15e4457d.ab633b",
+        "type": "function",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Text: English",
+        "func": "  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: \"System is HOME\",\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\n\n\nreturn [msg];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1750,
+        "y": 360,
+        "wires": [
+            [
+                "dc33a268.a0933"
+            ]
+        ]
+    },
+    {
+        "id": "fde9f041.eb152",
+        "type": "function",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Text: English",
+        "func": "  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: \"System is AWAY\",\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\n\n\nreturn [msg];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1750,
+        "y": 400,
+        "wires": [
+            [
+                "dc33a268.a0933"
+            ]
+        ]
+    },
+    {
+        "id": "dc33a268.a0933",
+        "type": "link out",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "links": [
+            "e1a25373.858cb"
+        ],
+        "x": 1925,
+        "y": 400,
         "wires": []
     }
 ]
