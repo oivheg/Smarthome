@@ -1624,7 +1624,8 @@
         "y": 240,
         "wires": [
             [
-                "a5d3065e.5a0698"
+                "a5d3065e.5a0698",
+                "9af23f9.43b2dc"
             ]
         ]
     },
@@ -8998,7 +8999,8 @@
                 "983ec0ae.1da1d"
             ],
             [
-                "1409254b.a545db"
+                "1409254b.a545db",
+                "983ec0ae.1da1d"
             ]
         ]
     },
@@ -9006,6 +9008,7 @@
         "id": "1409254b.a545db",
         "type": "time-range-switch",
         "z": "95167fef.b6134",
+        "d": true,
         "name": "Kveld",
         "lat": "58.851468",
         "lon": "5.748852",
@@ -9304,6 +9307,7 @@
         "id": "c1a57d04.02dd2",
         "type": "time-range-switch",
         "z": "95167fef.b6134",
+        "d": true,
         "name": "Natt",
         "lat": "58.851468",
         "lon": "5.748852",
@@ -11082,5 +11086,61 @@
         "x": 1925,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "34c79095.990bc",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1250,
+        "y": 360,
+        "wires": [
+            [
+                "9af23f9.43b2dc"
+            ]
+        ]
+    },
+    {
+        "id": "9af23f9.43b2dc",
+        "type": "change",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1520,
+        "y": 340,
+        "wires": [
+            [
+                "77b78689.5eac68"
+            ]
+        ]
     }
 ]
