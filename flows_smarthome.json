@@ -2152,12 +2152,12 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "2002",
-                "vt": "str"
+                "v": "7002",
+                "vt": "num"
             },
             {
                 "t": "eq",
-                "v": "1002",
+                "v": "8002",
                 "vt": "num"
             }
         ],
@@ -4958,14 +4958,15 @@
         "z": "a7af161f.d5ece8",
         "name": "",
         "server": "12895ae7.9c6bf5",
-        "device": "group_1",
-        "device_name": "○ TRADFRI open/close remote",
+        "device": "cc:cc:cc:ff:fe:02:96:c6-01",
+        "device_name": "Window covering device 5 : Window covering device",
         "command": "on",
         "commandType": "deconz_cmd",
         "payload": "payload",
         "payloadType": "msg",
         "transitionTime": "",
-        "x": 710,
+        "transitionTimeType": "num",
+        "x": 780,
         "y": 520,
         "wires": []
     },
@@ -4975,13 +4976,13 @@
         "z": "a7af161f.d5ece8",
         "name": "",
         "server": "12895ae7.9c6bf5",
-        "device": "cc:cc:cc:ff:fe:02:96:c6-01-0001",
-        "device_name": "FYRTUR block-out roller blind  : ZHABattery",
+        "device": "cc:cc:cc:ff:fe:02:96:c6-01",
+        "device_name": "Window covering device 5 : Window covering device",
         "topic": "",
         "state": 0,
         "output": "always",
         "outputAtStartup": true,
-        "x": 330,
+        "x": 360,
         "y": 480,
         "wires": [
             [
@@ -4998,7 +4999,7 @@
         "links": [
             "ad29b802.69fbb8"
         ],
-        "x": 535,
+        "x": 655,
         "y": 480,
         "wires": []
     },
@@ -11643,7 +11644,8 @@
         "wires": [
             [
                 "17e5203c.4a11f",
-                "b3936326.9069d"
+                "b3936326.9069d",
+                "1b253553.66750b"
             ],
             []
         ]
@@ -11956,6 +11958,18 @@
             [
                 "54c12383.3b8e7c"
             ]
+        ]
+    },
+    {
+        "id": "851c511e.0f3ef",
+        "type": "link in",
+        "z": "605ae98f.8a9998",
+        "name": "",
+        "links": [],
+        "x": 545,
+        "y": 260,
+        "wires": [
+            []
         ]
     }
 ]
