@@ -2181,8 +2181,7 @@
         "wires": [
             [
                 "389edf89.60cfe",
-                "230efc3d.2db2b4",
-                "7254adf9.0093e4"
+                "230efc3d.2db2b4"
             ]
         ]
     },
@@ -2384,8 +2383,7 @@
         "wires": [
             [
                 "3054be45.205a62",
-                "230efc3d.2db2b4",
-                "8132adc3.8f403"
+                "230efc3d.2db2b4"
             ]
         ]
     },
@@ -4478,6 +4476,7 @@
         "payload": "false",
         "payloadType": "bool",
         "topic": "off",
+        "topicType": "str",
         "x": 830,
         "y": 640,
         "wires": [
@@ -4504,6 +4503,7 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "on",
+        "topicType": "str",
         "x": 830,
         "y": 600,
         "wires": [
@@ -4610,8 +4610,7 @@
         "y": 521,
         "wires": [
             [
-                "5da7627f.49119c",
-                "45ea5ee.dcb4da"
+                "5da7627f.49119c"
             ]
         ]
     },
@@ -4629,8 +4628,7 @@
         "y": 520,
         "wires": [
             [
-                "54bf5eae.c8ef3",
-                "308f9f05.6007a"
+                "54bf5eae.c8ef3"
             ]
         ]
     },
@@ -6467,6 +6465,7 @@
         "payload": "true",
         "payloadType": "bool",
         "topic": "block",
+        "topicType": "str",
         "x": 830,
         "y": 720,
         "wires": [
@@ -11052,7 +11051,6 @@
         "wires": [
             [
                 "81af6cca.e9c66",
-                "1421ac56.bacd24",
                 "89d0b2b7.ea426",
                 "dfb84673.fd6598"
             ]
@@ -11462,23 +11460,6 @@
         ]
     },
     {
-        "id": "1421ac56.bacd24",
-        "type": "debug",
-        "z": "1c88039c.df631c",
-        "name": "BEFORE",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "platform.applications[0].statusText",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 160,
-        "wires": []
-    },
-    {
         "id": "89d0b2b7.ea426",
         "type": "switch",
         "z": "1c88039c.df631c",
@@ -11747,7 +11728,7 @@
                 "vt": "num"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 3,
         "x": 570,
@@ -11863,14 +11844,14 @@
         "z": "1c11632f.f206fd",
         "name": "Decons_Upstairs",
         "links": [
-            "fbd30b58.0dc988",
-            "63220a70.24ebb4"
+            "fbd30b58.0dc988"
         ],
         "x": 855,
         "y": 400,
         "wires": [
             [
-                "6987ca2e.892e94"
+                "6987ca2e.892e94",
+                "92f84c27.14377"
             ]
         ]
     },
@@ -11921,7 +11902,7 @@
         "y": 140,
         "wires": [
             [
-                "3df7161b.f9b00a"
+                "77d4a580.a4a38c"
             ]
         ]
     },
@@ -13173,7 +13154,7 @@
                 "vt": "num"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
         "outputs": 3,
         "x": 570,
@@ -13250,7 +13231,6 @@
         "z": "a7af161f.d5ece8",
         "name": "Downstairs",
         "links": [
-            "87af81c4.c910b",
             "c720f0cc.65429"
         ],
         "x": 855,
@@ -13411,22 +13391,6 @@
         ]
     },
     {
-        "id": "7254adf9.0093e4",
-        "type": "debug",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1030,
-        "y": 1100,
-        "wires": []
-    },
-    {
         "id": "fe014a3e.1f2268",
         "type": "rbe",
         "z": "34fc4e1d.243ef2",
@@ -13442,22 +13406,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "8132adc3.8f403",
-        "type": "debug",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 990,
-        "y": 1360,
-        "wires": []
     },
     {
         "id": "80d38318.f00d4",
@@ -13485,31 +13433,6 @@
         "wires": [
             [
                 "693c952.eff766c"
-            ]
-        ]
-    },
-    {
-        "id": "3df7161b.f9b00a",
-        "type": "trigger",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "pay",
-        "op2type": "nul",
-        "duration": "3",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "topic",
-        "topic": "id",
-        "outputs": 1,
-        "x": 620,
-        "y": 140,
-        "wires": [
-            [
-                "77d4a580.a4a38c"
             ]
         ]
     },
@@ -13755,23 +13678,6 @@
         ]
     },
     {
-        "id": "308f9f05.6007a",
-        "type": "debug",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 420,
-        "wires": []
-    },
-    {
         "id": "1ea4dd9b.16af32",
         "type": "time-range-switch",
         "z": "aa0ae7ae.75d228",
@@ -13794,23 +13700,6 @@
                 "8d0b6550.aa8c48"
             ]
         ]
-    },
-    {
-        "id": "45ea5ee.dcb4da",
-        "type": "debug",
-        "z": "e3737c94.fd59f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "3d5c496e.056dd6",
@@ -13855,28 +13744,11 @@
         ]
     },
     {
-        "id": "5d46e1d5.f86ea",
-        "type": "debug",
-        "z": "a7af161f.d5ece8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload.open",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1010,
-        "y": 680,
-        "wires": []
-    },
-    {
         "id": "da3398b4.aebae8",
         "type": "function",
         "z": "a7af161f.d5ece8",
         "name": "CleanData",
-        "func": "let data = {};\ndata.presence = msg.payload_raw.state.presence;\ndata.topic = \"Bathroom\";\nreturn data;",
+        "func": "let data = {};\ndata.payload = msg.payload_raw.state.presence;\ndata.topic = \"Bathroom\";\nreturn data;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -13903,8 +13775,7 @@
         "y": 880,
         "wires": [
             [
-                "dc7a9dbe.e7065",
-                "c91bc6da.c9e7e8"
+                "dc7a9dbe.e7065"
             ]
         ]
     },
@@ -14034,23 +13905,6 @@
         ]
     },
     {
-        "id": "c91bc6da.c9e7e8",
-        "type": "debug",
-        "z": "a7af161f.d5ece8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "state",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 1000,
-        "wires": []
-    },
-    {
         "id": "bcd0d539.041d58",
         "type": "change",
         "z": "aa0ae7ae.75d228",
@@ -14135,6 +13989,23 @@
         "statusType": "auto",
         "x": 1190,
         "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "92f84c27.14377",
+        "type": "debug",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 400,
         "wires": []
     }
 ]
