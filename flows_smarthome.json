@@ -8377,33 +8377,6 @@
         ]
     },
     {
-        "id": "7284606e.34aff",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "Reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 270,
-        "y": 180,
-        "wires": [
-            [
-                "d6d31aed.f07d78"
-            ]
-        ]
-    },
-    {
         "id": "e17d0a43.b0e048",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
@@ -8419,21 +8392,6 @@
                 "7284606e.34aff"
             ]
         ]
-    },
-    {
-        "id": "d6d31aed.f07d78",
-        "type": "link out",
-        "z": "aa0ae7ae.75d228",
-        "name": "RESET",
-        "links": [
-            "ad38c25a.4977e",
-            "442ce5b6.a24c4c",
-            "9c7d5bc1.e49d18",
-            "7dd012b9.740fbc"
-        ],
-        "x": 435,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "551be057.65bed",
@@ -8815,7 +8773,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1270,
+        "x": 1250,
         "y": 200,
         "wires": [
             [
@@ -9868,7 +9826,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
+        "x": 500,
         "y": 140,
         "wires": [
             [
@@ -14007,5 +13965,41 @@
         "x": 980,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "7284606e.34aff",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "GO",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 180,
+        "wires": [
+            [
+                "af4303d0.15fad",
+                "d3c43c4.fea9bc",
+                "882dbe4f.06e99"
+            ]
+        ]
     }
 ]
