@@ -112,6 +112,13 @@
         "info": ""
     },
     {
+        "id": "332fb103.56557e",
+        "type": "tab",
+        "label": "Example 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -1016,6 +1023,49 @@
         "type": "spotify-auth",
         "name": "Spotify OAuth2",
         "scope": "app-remote-control\nuser-read-recently-played\nuser-modify-playback-state\nuser-read-currently-playing\nplaylist-read-private\nstreaming\n"
+    },
+    {
+        "id": "fa370de0.93e89",
+        "type": "mqtt-broker",
+        "name": "Smarthub",
+        "broker": "cube.local",
+        "port": "1884",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1ebf33a2.f94f3c",
+        "type": "ui_group",
+        "name": "FIMP",
+        "tab": "4de6cf0d.5a88",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4de6cf0d.5a88",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "c93d9ccb.30d74",
@@ -11529,6 +11579,7 @@
         "id": "dfb84673.fd6598",
         "type": "switch",
         "z": "1c88039c.df631c",
+        "d": true,
         "name": "",
         "property": "platform.applications[0].statusText",
         "propertyType": "msg",
@@ -13850,7 +13901,8 @@
         "y": 1680,
         "wires": [
             [
-                "27dec093.5ab8e"
+                "27dec093.5ab8e",
+                "1ea4dd9b.16af32"
             ]
         ]
     },
@@ -14049,6 +14101,349 @@
         "wires": [
             [
                 "1ea4dd9b.16af32"
+            ]
+        ]
+    },
+    {
+        "id": "9e74ea6e.bbc458",
+        "type": "mqtt out",
+        "z": "332fb103.56557e",
+        "name": "",
+        "topic": "pt:j1/mt:evt/rt:app/rn:vinculum/ad:1",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fa370de0.93e89",
+        "x": 260,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "786f93c9.a66e3c",
+        "type": "mqtt in",
+        "z": "332fb103.56557e",
+        "name": "",
+        "topic": "pt:j1/mt:evt/rt:app/rn:vinculum/ad:1",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "fa370de0.93e89",
+        "nl": false,
+        "rap": false,
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "88df4cc5.d5a4e",
+                "37537a12.b5f1a6",
+                "167a7363.dda55d",
+                "772729ef.1bda48"
+            ]
+        ]
+    },
+    {
+        "id": "88df4cc5.d5a4e",
+        "type": "function",
+        "z": "332fb103.56557e",
+        "name": "",
+        "func": "var val = msg.payload.val;\nmsg.payload = val;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "e50fcacf.555d78"
+            ]
+        ]
+    },
+    {
+        "id": "e50fcacf.555d78",
+        "type": "ui_switch",
+        "z": "332fb103.56557e",
+        "name": "",
+        "label": "Wall plug",
+        "tooltip": "",
+        "group": "1ebf33a2.f94f3c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "8e96ced4.d7167"
+            ]
+        ]
+    },
+    {
+        "id": "8e96ced4.d7167",
+        "type": "function",
+        "z": "332fb103.56557e",
+        "name": "",
+        "func": "var fimp_msg = {\n    \"type\": \"cmd.binary.set\",\n    \"serv\": \"out_bin_switch\",\n    \"val_t\": \"bool\",\n    \"val\": msg.payload,\n    \"tags\": null,\n    \"props\": {},\n    \"ver\": \"1\",\n    \"corid\": \"\",\n    \"src\": \"node-red\",\n    \"ctime\": \"\",\n    \"uid\": \"\"\n};\nmsg.payload = fimp_msg;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 220,
+        "wires": [
+            [
+                "9e74ea6e.bbc458"
+            ]
+        ]
+    },
+    {
+        "id": "e9d0e558.3433d8",
+        "type": "comment",
+        "z": "332fb103.56557e",
+        "name": "Subscribed to events from out_bin_switch service with address 50_0",
+        "info": "https://github.com/futurehomeno/fimp-api#output-binary-switch-service",
+        "x": 360,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6d83b202.c6393c",
+        "type": "comment",
+        "z": "332fb103.56557e",
+        "name": "Sending FIMP command to the same service as subscribed to",
+        "info": "https://github.com/futurehomeno/fimp-api#output-binary-switch-service",
+        "x": 340,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "1b0fc218.1080ce",
+        "type": "comment",
+        "z": "332fb103.56557e",
+        "name": "Constructing FIMP message",
+        "info": "{\n    \"type\": \"cmd.binary.set\",\n    \"serv\": \"out_bin_switch\",\n    \"val_t\": \"bool\",\n    \"val\": msg.payload,\n    \"tags\": null,\n    \"props\": {},\n    \"ver\": \"1\",\n    \"corid\": \"\",\n    \"src\": \"node-red\",\n    \"ctime\": \"\",\n    \"uid\": \"\"\n}",
+        "x": 560,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d980996.e574a68",
+        "type": "comment",
+        "z": "332fb103.56557e",
+        "name": "UI switch",
+        "info": "localhost:1880/ui",
+        "x": 340,
+        "y": 268.18181800842285,
+        "wires": []
+    },
+    {
+        "id": "eb06d7f5.9618f8",
+        "type": "comment",
+        "z": "332fb103.56557e",
+        "name": "Translating FIMP msg to switch input",
+        "info": "",
+        "x": 190,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "25850af9.745856",
+        "type": "debug",
+        "z": "332fb103.56557e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f44bffb.ebe6a",
+        "type": "mqtt in",
+        "z": "332fb103.56557e",
+        "name": "",
+        "topic": "pt:j1/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "41e681f.e420d8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 500,
+        "wires": [
+            [
+                "b76d662f.d74e58"
+            ]
+        ]
+    },
+    {
+        "id": "b76d662f.d74e58",
+        "type": "debug",
+        "z": "332fb103.56557e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "37537a12.b5f1a6",
+        "type": "json",
+        "z": "332fb103.56557e",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 710,
+        "y": 100,
+        "wires": [
+            [
+                "25850af9.745856"
+            ]
+        ]
+    },
+    {
+        "id": "167a7363.dda55d",
+        "type": "debug",
+        "z": "332fb103.56557e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.val.param.functionality",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "26f10138.57f6de",
+        "type": "debug",
+        "z": "332fb103.56557e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "772729ef.1bda48",
+        "type": "change",
+        "z": "332fb103.56557e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "power",
+                "pt": "msg",
+                "to": "payload.val.changes.power",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "id",
+                "pt": "msg",
+                "to": "payload.val.id",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "name",
+                "pt": "msg",
+                "to": "payload.val.param.client.name",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "type",
+                "pt": "msg",
+                "to": "payload.val.param.functionality",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "null",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 260,
+        "wires": [
+            [
+                "e6b4aaee.07d548"
+            ]
+        ]
+    },
+    {
+        "id": "e6b4aaee.07d548",
+        "type": "trigger",
+        "z": "332fb103.56557e",
+        "name": "filter",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "nul",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "topic",
+        "topic": "id",
+        "outputs": 1,
+        "x": 870,
+        "y": 260,
+        "wires": [
+            [
+                "26f10138.57f6de"
             ]
         ]
     }
