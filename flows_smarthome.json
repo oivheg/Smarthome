@@ -5864,20 +5864,20 @@
         "id": "be2ad471.d9c448",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
-        "d": true,
         "name": "Movement oppe",
         "links": [
-            "d4cd1de.82711e",
-            "e92f253c.11b9b8",
+            "328ec247.9e5eee",
             "63e9f9b.1d13608",
-            "328ec247.9e5eee"
+            "d4cd1de.82711e",
+            "e92f253c.11b9b8"
         ],
-        "x": 155,
+        "x": 55,
         "y": 960,
         "wires": [
             [
                 "167a965f.fa254a",
-                "45e7346a.4285dc"
+                "45e7346a.4285dc",
+                "95aab23e.65d6c"
             ]
         ]
     },
@@ -5893,7 +5893,7 @@
         "y": 1180,
         "wires": [
             [
-                "1c3cf2d2.a6e61d"
+                "a3713cf3.b331a"
             ]
         ]
     },
@@ -6153,11 +6153,12 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 290,
+        "x": 310,
         "y": 980,
         "wires": [
             [
-                "6df68a1.4455e74"
+                "18e793bb.41ccac",
+                "df5dc943.b5d0b8"
             ]
         ]
     },
@@ -6191,7 +6192,7 @@
         "y": 920,
         "wires": [
             [
-                "6df68a1.4455e74"
+                "18e793bb.41ccac"
             ]
         ]
     },
@@ -9265,60 +9266,6 @@
         "y": 200,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "6df68a1.4455e74",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "U_illumenance",
-        "rules": [
-            {
-                "t": "set",
-                "p": "illumenance",
-                "pt": "msg",
-                "to": "U_illumenance",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 980,
-        "wires": [
-            [
-                "18e793bb.41ccac"
-            ]
-        ]
-    },
-    {
-        "id": "1c3cf2d2.a6e61d",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "B_illumenance",
-        "rules": [
-            {
-                "t": "set",
-                "p": "illumenance",
-                "pt": "msg",
-                "to": "B_illumenance",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 1180,
-        "wires": [
-            [
-                "a3713cf3.b331a"
-            ]
         ]
     },
     {
@@ -13855,11 +13802,13 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1430,
+        "x": 1590,
         "y": 1040,
         "wires": [
             [
-                "8b1a5d59.7fc6e"
+                "8b1a5d59.7fc6e",
+                "f5aec9fe.06b5b8",
+                "2543e4c5.28612c"
             ]
         ]
     },
@@ -13970,10 +13919,11 @@
         "y": 980,
         "wires": [
             [
-                "aa371fd5.55fc7"
+                "aa371fd5.55fc7",
+                "8b1a5d59.7fc6e"
             ],
             [
-                "fbbaf9bf.b55188"
+                "8b1a5d59.7fc6e"
             ]
         ]
     },
@@ -13987,7 +13937,7 @@
         "rules": [
             {
                 "t": "lte",
-                "v": "240",
+                "v": "150",
                 "vt": "num"
             }
         ],
@@ -14042,16 +13992,15 @@
         "extend": false,
         "overrideDelay": false,
         "units": "min",
-        "reset": "",
+        "reset": "true",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1590,
+        "x": 1430,
         "y": 1040,
         "wires": [
             [
-                "f5aec9fe.06b5b8",
-                "2543e4c5.28612c"
+                "fbbaf9bf.b55188"
             ]
         ]
     },
@@ -14133,5 +14082,39 @@
                 "21c80566.d9201a"
             ]
         ]
+    },
+    {
+        "id": "df5dc943.b5d0b8",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "95aab23e.65d6c",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 140,
+        "y": 1040,
+        "wires": []
     }
 ]
