@@ -5748,7 +5748,9 @@
         "x": 670,
         "y": 1360,
         "wires": [
-            []
+            [
+                "32457667.0ab38a"
+            ]
         ]
     },
     {
@@ -13706,8 +13708,8 @@
         "links": [
             "64bc6db.9a90194"
         ],
-        "x": 1975,
-        "y": 960,
+        "x": 1915,
+        "y": 1300,
         "wires": []
     },
     {
@@ -14116,5 +14118,86 @@
         "x": 140,
         "y": 1040,
         "wires": []
+    },
+    {
+        "id": "32457667.0ab38a",
+        "type": "trigger",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "op1": "true",
+        "op2": "true",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "true",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1210,
+        "y": 1360,
+        "wires": [
+            [
+                "c09112f8.37222"
+            ]
+        ]
+    },
+    {
+        "id": "c09112f8.37222",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "gangen",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1650,
+        "y": 1340,
+        "wires": [
+            [
+                "21c80566.d9201a"
+            ]
+        ]
+    },
+    {
+        "id": "fe69a9d7.5d8828",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 750,
+        "y": 1300,
+        "wires": [
+            [
+                "32457667.0ab38a"
+            ]
+        ]
     }
 ]
