@@ -3616,7 +3616,7 @@
         "type": "function",
         "z": "e3737c94.fd59f",
         "name": "Type/ Function",
-        "func": "\n\nif(typeof  msg.payload.site !== \"undefined\")\n{\n    var Mode = msg.payload.site.mode;\n return msg; \n} \n\nif(typeof  msg.payload.devices === \"undefined\"  ||  msg.payload.devices === null)\n{\n    //node.warn(\"no Device\");\n    return null;\n}\n\nif(typeof  msg.payload.devices[0].functionality !== \"undefined\" && msg.payload.devices[0].functionality !== null )\n{\n \n    if (msg.payload.devices[0].functionality == \"lighting\") {\n        var Light = {};\n        Light.name = msg.payload.devices[0].name;\n        Light.power = msg.payload.devices[0].power;\n        Light.Room = msg.payload.devices[0].room;\n        Light.id = msg.payload.devices[0].id;\n       return [null,Light];  \n    }\n     if (msg.payload.devices[0].functionality == \"heating\") {\n        var Heat = {};\n        Heat.name = msg.payload.devices[0].name;\n        Heat.power = msg.payload.devices[0].power;\n        Heat.Room = msg.payload.devices[0].room;\n        Heat.id = msg.payload.devices[0].id;\n       return [null,null,Heat];  \n    }\n    if (msg.payload.devices[0].functionality == \"appliance\") {\n        var appliance = {};\n        appliance.name = msg.payload.devices[0].name;\n        appliance.power = msg.payload.devices[0].power;\n        appliance.Room = msg.payload.devices[0].room;\n        appliance.id = msg.payload.devices[0].id;\n       return [null,null,null,null,appliance];  \n    }\n \n} else if (msg.payload.devices[0].functionality === null){\n   \n    var mvmnt = {};\n        mvmnt.name = msg.payload.devices[0].name;\n        mvmnt.topic = mvmnt.name;\n        mvmnt.temperature = msg.payload.devices[0].temperature;\n        mvmnt.room = msg.payload.devices[0].room;\n        mvmnt.id = msg.payload.devices[0].id;\n        mvmnt.illuminance = msg.payload.devices[0].illuminance;\n        mvmnt.payload = msg.payload.devices[0].presence;\n        \n    return [null,null,null,mvmnt];  \n}\n\n  \n",
+        "func": "\n\nif(typeof  msg.payload.site !== \"undefined\")\n{\n    var Mode = msg.payload.site.mode;\n return msg; \n} \n\nif(typeof  msg.payload.devices === \"undefined\"  ||  msg.payload.devices === null)\n{\n    //node.warn(\"no Device\");\n    return null;\n}\n\nif(typeof  msg.payload.devices[0].functionality !== \"undefined\" && msg.payload.devices[0].functionality !== null )\n{\n \n    if (msg.payload.devices[0].functionality == \"lighting\") {\n        var Light = {};\n        Light.name = msg.payload.devices[0].name;\n        Light.power = msg.payload.devices[0].power;\n        Light.Room = msg.payload.devices[0].room;\n        Light.id = msg.payload.devices[0].id;\n       return [null,Light];  \n    }\n     if (msg.payload.devices[0].functionality == \"heating\") {\n        var Heat = {};\n        Heat.name = msg.payload.devices[0].name;\n        Heat.power = msg.payload.devices[0].power;\n        Heat.Room = msg.payload.devices[0].room;\n        Heat.id = msg.payload.devices[0].id;\n       return [null,null,Heat];  \n    }\n    if (msg.payload.devices[0].functionality == \"appliance\") {\n        var appliance = {};\n        appliance.name = msg.payload.devices[0].name;\n        appliance.power = msg.payload.devices[0].power;\n        appliance.Room = msg.payload.devices[0].room;\n        appliance.id = msg.payload.devices[0].id;\n       return [null,null,null,null,appliance];  \n    }\n \n} else if (msg.payload.devices[0].functionality === null){\n   \n    var mvmnt = {};\n        mvmnt.name = msg.payload.devices[0].name;\n        mvmnt.topic = mvmnt.name;\n        mvmnt.temperature = msg.payload.devices[0].temperature;\n        mvmnt.room = msg.payload.devices[0].room;\n        mvmnt.id = msg.payload.devices[0].id;\n        mvmnt.illuminance = msg.payload.devices[0].param.illuminance\n        mvmnt.payload = msg.payload.devices[0].param.presence\n        \n    return [null,null,null,mvmnt];  \n}\n\n  \n",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -3635,8 +3635,7 @@
                 "f2e0b439.cfe148"
             ],
             [
-                "c601c69e.6137e8",
-                "cee617de.204748"
+                "c601c69e.6137e8"
             ],
             [
                 "f57725ce.089018"
@@ -11250,7 +11249,7 @@
         "wires": [
             [
                 "77d4a580.a4a38c",
-                "81986ad.ca77798"
+                "281fd72f.7d3738"
             ]
         ]
     },
@@ -13898,7 +13897,8 @@
         "y": 1180,
         "wires": [
             [
-                "b00b230d.2767e"
+                "b00b230d.2767e",
+                "d7dad521.bb39b8"
             ]
         ]
     },
@@ -14188,35 +14188,6 @@
         "wires": []
     },
     {
-        "id": "35859154.d1535e",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 450,
-        "y": 1120,
-        "wires": [
-            [
-                "a3713cf3.b331a"
-            ]
-        ]
-    },
-    {
         "id": "61870be1.807fe4",
         "type": "rbe",
         "z": "a7af161f.d5ece8",
@@ -14297,23 +14268,6 @@
         "wires": []
     },
     {
-        "id": "81986ad.ca77798",
-        "type": "debug",
-        "z": "e3737c94.fd59f",
-        "name": "BEFORE",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 910,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "b7e566ed.ad5be8",
         "type": "inject",
         "z": "aa0ae7ae.75d228",
@@ -14341,23 +14295,6 @@
                 "8b1a5d59.7fc6e"
             ]
         ]
-    },
-    {
-        "id": "cee617de.204748",
-        "type": "debug",
-        "z": "e3737c94.fd59f",
-        "name": "MOVEMENT",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1230,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "b00b230d.2767e",
@@ -14437,5 +14374,39 @@
                 "69bb91cc.c35c3"
             ]
         ]
+    },
+    {
+        "id": "d7dad521.bb39b8",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "281fd72f.7d3738",
+        "type": "debug",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 300,
+        "wires": []
     }
 ]
