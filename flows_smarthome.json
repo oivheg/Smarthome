@@ -1074,6 +1074,11 @@
         "addchar": false
     },
     {
+        "id": "1d707c49.07a204",
+        "type": "server",
+        "name": "Home Assistant [mine]"
+    },
+    {
         "id": "c93d9ccb.30d74",
         "type": "function",
         "z": "1c11632f.f206fd",
@@ -5761,7 +5766,7 @@
         "y": 1360,
         "wires": [
             [
-                "32457667.0ab38a"
+                "2328a9aa.3593a6"
             ]
         ]
     },
@@ -5856,7 +5861,7 @@
         "y": 1180,
         "wires": [
             [
-                "feb0457f.4f29c8"
+                "fecb01c.4479f"
             ]
         ]
     },
@@ -5880,6 +5885,7 @@
         "id": "be2ad471.d9c448",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
+        "d": true,
         "name": "Movement oppe",
         "links": [
             "328ec247.9e5eee",
@@ -5900,6 +5906,7 @@
         "id": "f66e7e24.aca9d",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
+        "d": true,
         "name": "Movement Nede",
         "links": [
             "b951c7f1.f25428"
@@ -5986,8 +5993,7 @@
         "z": "aa0ae7ae.75d228",
         "name": "Basemet Reset",
         "links": [
-            "7dd012b9.740fbc",
-            "ad38c25a.4977e"
+            "7a4a01ee.c97e"
         ],
         "x": 1135,
         "y": 300,
@@ -13821,31 +13827,6 @@
         ]
     },
     {
-        "id": "feb0457f.4f29c8",
-        "type": "trigger",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "op1": "true",
-        "op2": "false",
-        "op1type": "bool",
-        "op2type": "bool",
-        "duration": "15",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1050,
-        "y": 1180,
-        "wires": [
-            [
-                "b00b230d.2767e"
-            ]
-        ]
-    },
-    {
         "id": "3e9a212f.e23ece",
         "type": "change",
         "z": "aa0ae7ae.75d228",
@@ -13881,8 +13862,8 @@
         "op2": "false",
         "op1type": "bool",
         "op2type": "bool",
-        "duration": "5",
-        "extend": false,
+        "duration": "2",
+        "extend": true,
         "overrideDelay": false,
         "units": "min",
         "reset": "",
@@ -13890,7 +13871,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 1210,
-        "y": 1360,
+        "y": 1340,
         "wires": [
             [
                 "c09112f8.37222"
@@ -14212,11 +14193,11 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1260,
+        "x": 1190,
         "y": 1180,
         "wires": [
             [
-                "3e9a212f.e23ece"
+                "294d2366.9bddec"
             ],
             [
                 "834598d1.172408"
@@ -14238,11 +14219,11 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1454.741455078125,
-        "y": 1220.3692626953125,
+        "x": 1330,
+        "y": 1260,
         "wires": [
             [
-                "3e9a212f.e23ece"
+                "fbb5cbd7.17f808"
             ]
         ]
     },
@@ -14487,6 +14468,231 @@
         "wires": [
             [
                 "69f4a103.cfabb"
+            ]
+        ]
+    },
+    {
+        "id": "fbb5cbd7.17f808",
+        "type": "trigger",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "op1": "",
+        "op2": "false",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "15",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1510,
+        "y": 1260,
+        "wires": [
+            [
+                "3e9a212f.e23ece",
+                "1d184ca0.1f8693"
+            ]
+        ]
+    },
+    {
+        "id": "294d2366.9bddec",
+        "type": "trigger",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1400,
+        "y": 1180,
+        "wires": [
+            [
+                "3e9a212f.e23ece"
+            ]
+        ]
+    },
+    {
+        "id": "1d184ca0.1f8693",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1430,
+        "y": 1220,
+        "wires": [
+            [
+                "294d2366.9bddec",
+                "fbb5cbd7.17f808"
+            ]
+        ]
+    },
+    {
+        "id": "7a4a01ee.c97e",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "btn:block D",
+        "links": [
+            "7c9078bb.3bd958"
+        ],
+        "x": 935,
+        "y": 1220,
+        "wires": [
+            [
+                "1d184ca0.1f8693",
+                "fecb01c.4479f"
+            ]
+        ]
+    },
+    {
+        "id": "fecb01c.4479f",
+        "type": "traffic",
+        "z": "aa0ae7ae.75d228",
+        "name": "btn_block:D",
+        "property_allow": "payload",
+        "filter_allow": "go",
+        "ignore_case_allow": true,
+        "negate_allow": false,
+        "send_allow": false,
+        "property_stop": "payload",
+        "filter_stop": "stop",
+        "ignore_case_stop": true,
+        "negate_stop": false,
+        "send_stop": false,
+        "default_start": true,
+        "differ": false,
+        "x": 1030,
+        "y": 1180,
+        "wires": [
+            [
+                "b00b230d.2767e"
+            ]
+        ]
+    },
+    {
+        "id": "46dd0261.44736c",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 06 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "GO",
+        "payloadType": "str",
+        "x": 810,
+        "y": 1080,
+        "wires": [
+            [
+                "fecb01c.4479f"
+            ]
+        ]
+    },
+    {
+        "id": "325b272b.9ad5e8",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 21 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "STOP",
+        "payloadType": "str",
+        "x": 820,
+        "y": 1120,
+        "wires": [
+            [
+                "fecb01c.4479f"
+            ]
+        ]
+    },
+    {
+        "id": "2328a9aa.3593a6",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 970,
+        "y": 1360,
+        "wires": [
+            [
+                "32457667.0ab38a"
+            ],
+            [
+                "cc8e9ca9.b2787"
+            ]
+        ]
+    },
+    {
+        "id": "cc8e9ca9.b2787",
+        "type": "trigger",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "op1": "",
+        "op2": "false",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1210,
+        "y": 1380,
+        "wires": [
+            [
+                "c09112f8.37222"
             ]
         ]
     }
