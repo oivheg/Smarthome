@@ -5885,7 +5885,6 @@
         "id": "be2ad471.d9c448",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
-        "d": true,
         "name": "Movement oppe",
         "links": [
             "328ec247.9e5eee",
@@ -5906,7 +5905,6 @@
         "id": "f66e7e24.aca9d",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
-        "d": true,
         "name": "Movement Nede",
         "links": [
             "b951c7f1.f25428"
@@ -7625,11 +7623,13 @@
         "y": 260,
         "wires": [
             [
-                "641555a3.3a90ec"
+                "641555a3.3a90ec",
+                "dc6b913c.d50ee"
             ],
             [
                 "641555a3.3a90ec",
-                "b831f3e7.05899"
+                "b831f3e7.05899",
+                "dc6b913c.d50ee"
             ]
         ]
     },
@@ -13540,9 +13540,9 @@
         "type": "trigger",
         "z": "aa0ae7ae.75d228",
         "name": "ON",
-        "op1": "ondimm",
+        "op1": "true",
         "op2": "false",
-        "op1type": "flow",
+        "op1type": "bool",
         "op2type": "bool",
         "duration": "0",
         "extend": false,
@@ -13682,7 +13682,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "false",
+        "payload": "true",
         "payloadType": "bool",
         "x": 500,
         "y": 880,
@@ -13845,7 +13845,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1660,
+        "x": 1780,
         "y": 1180,
         "wires": [
             [
@@ -14197,7 +14197,7 @@
         "y": 1180,
         "wires": [
             [
-                "294d2366.9bddec"
+                "c008c880.cb5218"
             ],
             [
                 "834598d1.172408"
@@ -14219,7 +14219,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1330,
+        "x": 1450,
         "y": 1260,
         "wires": [
             [
@@ -14488,7 +14488,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1510,
+        "x": 1630,
         "y": 1260,
         "wires": [
             [
@@ -14514,7 +14514,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1400,
+        "x": 1520,
         "y": 1180,
         "wires": [
             [
@@ -14541,7 +14541,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1430,
+        "x": 1550,
         "y": 1220,
         "wires": [
             [
@@ -14589,56 +14589,6 @@
         "wires": [
             [
                 "b00b230d.2767e"
-            ]
-        ]
-    },
-    {
-        "id": "46dd0261.44736c",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "00 06 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "GO",
-        "payloadType": "str",
-        "x": 810,
-        "y": 1080,
-        "wires": [
-            [
-                "fecb01c.4479f"
-            ]
-        ]
-    },
-    {
-        "id": "325b272b.9ad5e8",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "00 21 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "STOP",
-        "payloadType": "str",
-        "x": 820,
-        "y": 1120,
-        "wires": [
-            [
-                "fecb01c.4479f"
             ]
         ]
     },
@@ -14694,6 +14644,42 @@
             [
                 "c09112f8.37222"
             ]
+        ]
+    },
+    {
+        "id": "dc6b913c.d50ee",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c008c880.cb5218",
+        "type": "time-range-switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "Dag",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "06:00",
+        "endTime": "21:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1330,
+        "y": 1180,
+        "wires": [
+            [
+                "294d2366.9bddec"
+            ],
+            []
         ]
     }
 ]
