@@ -119,6 +119,20 @@
         "info": ""
     },
     {
+        "id": "dbbefab9.123858",
+        "type": "tab",
+        "label": "Example 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4edd86b6.331768",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -12675,7 +12689,8 @@
             [
                 "22d65e61.97a332",
                 "8d0b6550.aa8c48",
-                "5de5dabb.2f6fe4"
+                "5de5dabb.2f6fe4",
+                "bc4170fe.8b1c"
             ]
         ]
     },
@@ -12700,7 +12715,7 @@
         "type": "trigger",
         "z": "aa0ae7ae.75d228",
         "name": "ON",
-        "op1": "30",
+        "op1": "50",
         "op2": "0",
         "op1type": "num",
         "op2type": "str",
@@ -13139,7 +13154,7 @@
         "type": "mqtt out",
         "z": "332fb103.56557e",
         "name": "",
-        "topic": "pt:j1/mt:evt/rt:app/rn:vinculum/ad:1",
+        "topic": "pt:j1/mt:evt/rt:app/rn:vinculum/ad:6",
         "qos": "2",
         "retain": "",
         "respTopic": "",
@@ -13326,7 +13341,7 @@
         "y": 500,
         "wires": [
             [
-                "b76d662f.d74e58"
+                "e3054360.ca726"
             ]
         ]
     },
@@ -13343,7 +13358,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 310,
+        "x": 470,
         "y": 500,
         "wires": []
     },
@@ -14629,15 +14644,16 @@
         "name": "Dag",
         "lat": "58.851468",
         "lon": "5.748852",
-        "startTime": "23:00",
-        "endTime": "21:00",
+        "startTime": "21:00",
+        "endTime": "23:00",
         "startOffset": 0,
         "endOffset": 0,
         "x": 790,
         "y": 1940,
         "wires": [
             [
-                "22d65e61.97a332"
+                "22d65e61.97a332",
+                "c8cb9540.feae88"
             ],
             [
                 "bc4170fe.8b1c"
@@ -14679,6 +14695,477 @@
         ],
         "x": 595,
         "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a94489d5.10fa18",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 280,
+        "y": 1820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e8c4a02.fb6e84",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "state",
+                "v": "false",
+                "vt": "bool"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 2080,
+        "wires": [
+            [
+                "bcd0d539.041d58"
+            ]
+        ]
+    },
+    {
+        "id": "c8cb9540.feae88",
+        "type": "debug",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "22a66a89.1c1d56",
+        "type": "inject",
+        "z": "332fb103.56557e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "e50fcacf.555d78"
+            ]
+        ]
+    },
+    {
+        "id": "8fccd74b.a74dc8",
+        "type": "inject",
+        "z": "332fb103.56557e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 280,
+        "wires": [
+            [
+                "e50fcacf.555d78"
+            ]
+        ]
+    },
+    {
+        "id": "e3054360.ca726",
+        "type": "json",
+        "z": "332fb103.56557e",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 290,
+        "y": 500,
+        "wires": [
+            [
+                "b76d662f.d74e58"
+            ]
+        ]
+    },
+    {
+        "id": "24db528a.26700e",
+        "type": "mqtt out",
+        "z": "dbbefab9.123858",
+        "name": "",
+        "topic": "pt:j1/mt:cmd/rt:dev/rn:zw/ad:1/sv:out_bin_switch/ad:6_0",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fa370de0.93e89",
+        "x": 330,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "5008c15f.8a24e",
+        "type": "mqtt in",
+        "z": "dbbefab9.123858",
+        "name": "",
+        "topic": "pt:j1/mt:evt/rt:dev/rn:zw/ad:1/sv:out_bin_switch/ad:6_0",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "fa370de0.93e89",
+        "nl": false,
+        "rap": false,
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "4f9b2877.416888"
+            ]
+        ]
+    },
+    {
+        "id": "4f9b2877.416888",
+        "type": "function",
+        "z": "dbbefab9.123858",
+        "name": "",
+        "func": "var val = msg.payload.val;\nmsg.payload = val;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "2e3da864.2e5f78"
+            ]
+        ]
+    },
+    {
+        "id": "2e3da864.2e5f78",
+        "type": "ui_switch",
+        "z": "dbbefab9.123858",
+        "name": "",
+        "label": "Wall plug",
+        "tooltip": "",
+        "group": "1ebf33a2.f94f3c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "84a639ca.7c6bc8"
+            ]
+        ]
+    },
+    {
+        "id": "84a639ca.7c6bc8",
+        "type": "function",
+        "z": "dbbefab9.123858",
+        "name": "",
+        "func": "var fimp_msg = {\n    \"type\": \"cmd.binary.set\",\n    \"serv\": \"out_bin_switch\",\n    \"val_t\": \"bool\",\n    \"val\": msg.payload,\n    \"tags\": null,\n    \"props\": {},\n    \"ver\": \"1\",\n    \"corid\": \"\",\n    \"src\": \"node-red\",\n    \"ctime\": \"\",\n    \"uid\": \"\"\n};\nmsg.payload = fimp_msg;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 220,
+        "wires": [
+            [
+                "24db528a.26700e"
+            ]
+        ]
+    },
+    {
+        "id": "2d307510.2a331a",
+        "type": "comment",
+        "z": "dbbefab9.123858",
+        "name": "Subscribed to events from out_bin_switch service with address 50_0",
+        "info": "https://github.com/futurehomeno/fimp-api#output-binary-switch-service",
+        "x": 360,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "3fc8ef2d.7e256",
+        "type": "comment",
+        "z": "dbbefab9.123858",
+        "name": "Sending FIMP command to the same service as subscribed to",
+        "info": "https://github.com/futurehomeno/fimp-api#output-binary-switch-service",
+        "x": 340,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "338d5c43.b810c4",
+        "type": "comment",
+        "z": "dbbefab9.123858",
+        "name": "Constructing FIMP message",
+        "info": "{\n    \"type\": \"cmd.binary.set\",\n    \"serv\": \"out_bin_switch\",\n    \"val_t\": \"bool\",\n    \"val\": msg.payload,\n    \"tags\": null,\n    \"props\": {},\n    \"ver\": \"1\",\n    \"corid\": \"\",\n    \"src\": \"node-red\",\n    \"ctime\": \"\",\n    \"uid\": \"\"\n}",
+        "x": 560,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7824b6e9.49e298",
+        "type": "comment",
+        "z": "dbbefab9.123858",
+        "name": "UI switch",
+        "info": "localhost:1880/ui",
+        "x": 340,
+        "y": 268.18181800842285,
+        "wires": []
+    },
+    {
+        "id": "d0ad4d36.38575",
+        "type": "comment",
+        "z": "dbbefab9.123858",
+        "name": "Translating FIMP msg to switch input",
+        "info": "",
+        "x": 190,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ed876b6c.e43528",
+        "type": "Thing Setup",
+        "z": "4edd86b6.331768",
+        "thingType": "Lifx",
+        "things": [
+            {
+                "name": "Bathroom Light",
+                "id": "d073d7ad76e5",
+                "props": "",
+                "state": "",
+                "proxy": ""
+            },
+            {
+                "name": "Living Room Light",
+                "id": "d0769d63e4a6",
+                "props": "",
+                "state": "",
+                "proxy": ""
+            },
+            {
+                "name": "Kitchen Light",
+                "id": "d07a632ea96c",
+                "props": "",
+                "state": "",
+                "proxy": ""
+            }
+        ],
+        "statusFunction": "if (state.on === undefined) return null\nlet text = state.on ? 'On' : 'Off'\nif (state.hasOwnProperty('brightness') && state.on)\n    text += ` ${state.brightness < 1 ? state.brightness * 100 : state.brightness}%`\nreturn {\n    fill: state.on ? 'yellow' : 'grey',\n    shape: 'dot',\n    text\n}",
+        "debug": false,
+        "x": 200,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7d505bde.df4254",
+        "type": "Thing Update",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "",
+        "thingType": "Lifx",
+        "debug": false,
+        "x": 530,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d0eea84c.b46138",
+        "type": "Thing Process",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "thingType": "Lifx",
+        "topic": "$id",
+        "debug": false,
+        "x": 730,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "464d11c5.6d1b5",
+        "type": "Thing Trigger",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "triggerThing": {
+            "path": "id",
+            "type": "str",
+            "value": ""
+        },
+        "triggerState": null,
+        "triggerTest": null,
+        "ignoreInit": false,
+        "payload": {
+            "type": "state",
+            "value": ""
+        },
+        "x": 570,
+        "y": 420,
+        "wires": [
+            [
+                "1e4e617e.247a5f"
+            ]
+        ]
+    },
+    {
+        "id": "1e4e617e.247a5f",
+        "type": "debug",
+        "z": "4edd86b6.331768",
+        "name": "Kitchen Light Changed",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "29c85b88.abdbe4",
+        "type": "Thing Command",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "Kitchen Light",
+        "command": "",
+        "commandType": "str",
+        "debug": false,
+        "x": 410,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3087e467.1280bc",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "29c85b88.abdbe4"
+            ]
+        ]
+    },
+    {
+        "id": "429039ed.3dc428",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "29c85b88.abdbe4"
+            ]
+        ]
+    },
+    {
+        "id": "3ab68b34.7a79d4",
+        "type": "comment",
+        "z": "4edd86b6.331768",
+        "name": "Basic Simple",
+        "info": "This example uses the Lifx platform. The Lifx node works well with the thing nodes, as it requires no initization to receive inbound messages. And the Lifx node already uses the MAC address as the message topic, so the Lifx Things are setup with the MAC address as their ID.",
+        "x": 170,
+        "y": 260,
         "wires": []
     }
 ]
