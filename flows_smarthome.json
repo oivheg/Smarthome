@@ -5901,7 +5901,6 @@
         "id": "be2ad471.d9c448",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
-        "d": true,
         "name": "Movement oppe",
         "links": [
             "328ec247.9e5eee",
@@ -15185,7 +15184,7 @@
         "y": 1040,
         "wires": [
             [
-                "67141bec.caf254"
+                "13c4bdcf.c92d92"
             ],
             [
                 "5e0d8112.7e4fc"
@@ -15448,6 +15447,35 @@
         "wires": [
             [
                 "a2adaa8d.513fa8"
+            ]
+        ]
+    },
+    {
+        "id": "13c4bdcf.c92d92",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "er bevegelse",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1010,
+        "y": 1060,
+        "wires": [
+            [
+                "af91d33b.a8943"
+            ],
+            [
+                "ad1d50aa.cbb4"
             ]
         ]
     }
