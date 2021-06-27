@@ -13699,7 +13699,7 @@
         "rules": [
             {
                 "t": "lte",
-                "v": "150",
+                "v": "140",
                 "vt": "num"
             }
         ],
@@ -15026,7 +15026,7 @@
                 "val": "payload.val.changes.power"
             }
         ],
-        "x": 680,
+        "x": 940,
         "y": 320,
         "wires": []
     },
@@ -15042,8 +15042,7 @@
         "y": 420,
         "wires": [
             [
-                "1b735eb2.af9271",
-                "f9271ba6.147da8"
+                "1b735eb2.af9271"
             ]
         ]
     },
@@ -15206,23 +15205,6 @@
         "wires": []
     },
     {
-        "id": "4b5f64d3.b0f53c",
-        "type": "debug",
-        "z": "4edd86b6.331768",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "a2adaa8d.513fa8",
         "type": "change",
         "z": "4edd86b6.331768",
@@ -15241,11 +15223,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 400,
+        "x": 660,
         "y": 320,
         "wires": [
             [
-                "4b5f64d3.b0f53c",
                 "7d505bde.df4254"
             ]
         ]
@@ -15415,23 +15396,6 @@
         "wires": []
     },
     {
-        "id": "f9271ba6.147da8",
-        "type": "debug",
-        "z": "4edd86b6.331768",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "466ec7c3.fe6948",
         "type": "mqtt in",
         "z": "4edd86b6.331768",
@@ -15446,7 +15410,7 @@
         "y": 320,
         "wires": [
             [
-                "a2adaa8d.513fa8"
+                "8386f04b.e927a"
             ]
         ]
     },
@@ -15477,6 +15441,37 @@
             [
                 "ad1d50aa.cbb4"
             ]
+        ]
+    },
+    {
+        "id": "8386f04b.e927a",
+        "type": "switch",
+        "z": "4edd86b6.331768",
+        "name": "functionality",
+        "property": "payload.val.param.functionality",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "lighting",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "a2adaa8d.513fa8"
+            ],
+            []
         ]
     }
 ]
