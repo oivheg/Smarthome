@@ -14794,6 +14794,72 @@
                 "state": [],
                 "commands": [],
                 "children": []
+            },
+            {
+                "name": "kjøkken",
+                "id": "10",
+                "props": {
+                    "address": "3",
+                    "sv": "out_lvl_switch"
+                },
+                "state": [],
+                "commands": [],
+                "children": []
+            },
+            {
+                "name": "stue",
+                "id": "11",
+                "props": {
+                    "address": "14",
+                    "sv": "out_bin_switch"
+                },
+                "state": [],
+                "commands": [],
+                "children": []
+            },
+            {
+                "name": "bathroom",
+                "id": "46",
+                "props": {
+                    "address": "37",
+                    "sv": "out_lvl_switch"
+                },
+                "state": [],
+                "commands": [],
+                "children": []
+            },
+            {
+                "name": "closet",
+                "id": "9",
+                "props": {
+                    "address": "12",
+                    "sv": "out_bin_switch"
+                },
+                "state": [],
+                "commands": [],
+                "children": []
+            },
+            {
+                "name": "laundry",
+                "id": "15",
+                "props": {
+                    "address": 9,
+                    "sv": "out_bin_switch"
+                },
+                "state": [],
+                "commands": [],
+                "children": []
+            },
+            {
+                "name": "basement",
+                "id": "17",
+                "props": {
+                    "address": "18",
+                    "sv": "out_bin_switch"
+                },
+                "state": [],
+                "commands": [],
+                "children": []
             }
         ],
         "state": [
@@ -14824,7 +14890,7 @@
                 "val": "payload.val.changes.power"
             }
         ],
-        "x": 940,
+        "x": 820,
         "y": 320,
         "wires": []
     },
@@ -14836,8 +14902,8 @@
         "thingType": "FH_Light",
         "topic": "$id",
         "debug": false,
-        "x": 740,
-        "y": 420,
+        "x": 1020,
+        "y": 320,
         "wires": [
             [
                 "1b735eb2.af9271"
@@ -14845,35 +14911,10 @@
         ]
     },
     {
-        "id": "464d11c5.6d1b5",
-        "type": "Thing Trigger",
-        "z": "4edd86b6.331768",
-        "nodeName": "",
-        "triggerThing": {
-            "path": "type",
-            "type": "str",
-            "value": "FH_Light"
-        },
-        "triggerState": null,
-        "triggerTest": null,
-        "ignoreInit": false,
-        "payload": {
-            "type": "state",
-            "value": ""
-        },
-        "x": 970,
-        "y": 220,
-        "wires": [
-            [
-                "1e4e617e.247a5f"
-            ]
-        ]
-    },
-    {
         "id": "1e4e617e.247a5f",
         "type": "debug",
         "z": "4edd86b6.331768",
-        "name": "FH_LIght Changed ",
+        "name": "TO FLOWS: FH_LIght Changed ",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -14882,8 +14923,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 220,
+        "x": 1310,
+        "y": 120,
         "wires": []
     },
     {
@@ -14895,8 +14936,8 @@
         "command": "",
         "commandType": "msg",
         "debug": false,
-        "x": 410,
-        "y": 420,
+        "x": 1110,
+        "y": 560,
         "wires": []
     },
     {
@@ -14916,8 +14957,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 210,
-        "y": 400,
+        "x": 890,
+        "y": 540,
         "wires": [
             [
                 "29c85b88.abdbe4"
@@ -14941,8 +14982,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 210,
-        "y": 440,
+        "x": 890,
+        "y": 580,
         "wires": [
             [
                 "29c85b88.abdbe4"
@@ -15021,7 +15062,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
+        "x": 630,
         "y": 320,
         "wires": [
             [
@@ -15033,7 +15074,7 @@
         "id": "bfd0dbf0.b44958",
         "type": "debug",
         "z": "4edd86b6.331768",
-        "name": "",
+        "name": "TO FH HUB",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -15042,72 +15083,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1110,
-        "y": 380,
+        "x": 1410,
+        "y": 280,
         "wires": []
-    },
-    {
-        "id": "c7632896.fee698",
-        "type": "Thing Command",
-        "z": "4edd86b6.331768",
-        "nodeName": "",
-        "name": "Hallway",
-        "command": "",
-        "commandType": "msg",
-        "debug": false,
-        "x": 420,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "cddbc1e0.50e3b",
-        "type": "inject",
-        "z": "4edd86b6.331768",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 190,
-        "y": 520,
-        "wires": [
-            [
-                "c7632896.fee698"
-            ]
-        ]
-    },
-    {
-        "id": "8eeb6909.181eb8",
-        "type": "inject",
-        "z": "4edd86b6.331768",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 190,
-        "y": 560,
-        "wires": [
-            [
-                "c7632896.fee698"
-            ]
-        ]
     },
     {
         "id": "778ae721.87dd18",
@@ -15166,8 +15144,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 910,
-        "y": 420,
+        "x": 1190,
+        "y": 320,
         "wires": [
             [
                 "bfd0dbf0.b44958",
@@ -15189,8 +15167,8 @@
         "correl": "",
         "expiry": "",
         "broker": "41e681f.e420d8",
-        "x": 1130,
-        "y": 420,
+        "x": 1410,
+        "y": 320,
         "wires": []
     },
     {
@@ -15267,7 +15245,8 @@
         "y": 320,
         "wires": [
             [
-                "a2adaa8d.513fa8"
+                "a2adaa8d.513fa8",
+                "54d0eff0999dd2f8"
             ],
             []
         ]
@@ -15710,5 +15689,488 @@
                 "f18dc025.04a4a"
             ]
         ]
+    },
+    {
+        "id": "54d0eff0999dd2f8",
+        "type": "debug",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.val",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "02046d58b1fac856",
+        "type": "Thing Trigger",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "triggerThing": {
+            "path": "type",
+            "type": "str",
+            "value": "FH_Light"
+        },
+        "triggerState": null,
+        "triggerTest": null,
+        "ignoreInit": false,
+        "payload": {
+            "type": "state",
+            "value": ""
+        },
+        "x": 1050,
+        "y": 120,
+        "wires": [
+            [
+                "1e4e617e.247a5f"
+            ]
+        ]
+    },
+    {
+        "id": "c7632896.fee698",
+        "type": "Thing Command",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "Hallway",
+        "command": "",
+        "commandType": "msg",
+        "debug": false,
+        "x": 1120,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "cddbc1e0.50e3b",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 620,
+        "wires": [
+            [
+                "c7632896.fee698"
+            ]
+        ]
+    },
+    {
+        "id": "8eeb6909.181eb8",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 660,
+        "wires": [
+            [
+                "c7632896.fee698"
+            ]
+        ]
+    },
+    {
+        "id": "96c080fecd0e011a",
+        "type": "Thing Command",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "kjøkken",
+        "command": "",
+        "commandType": "msg",
+        "debug": false,
+        "x": 1120,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "8dce18d37cd20957",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 700,
+        "wires": [
+            [
+                "96c080fecd0e011a"
+            ]
+        ]
+    },
+    {
+        "id": "9b7bcf4815b3bfb4",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 740,
+        "wires": [
+            [
+                "96c080fecd0e011a"
+            ]
+        ]
+    },
+    {
+        "id": "81fd17b027d474eb",
+        "type": "Thing Command",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "stue",
+        "command": "",
+        "commandType": "msg",
+        "debug": false,
+        "x": 1130,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "20923e1389cb9960",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 780,
+        "wires": [
+            [
+                "81fd17b027d474eb"
+            ]
+        ]
+    },
+    {
+        "id": "2b0b2807baf47bf7",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 820,
+        "wires": [
+            [
+                "81fd17b027d474eb"
+            ]
+        ]
+    },
+    {
+        "id": "4641ead92141c38b",
+        "type": "Thing Command",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "bathroom",
+        "command": "",
+        "commandType": "msg",
+        "debug": false,
+        "x": 1120,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "932b6eedddb37fdc",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 860,
+        "wires": [
+            [
+                "4641ead92141c38b"
+            ]
+        ]
+    },
+    {
+        "id": "de16953b36f1bb14",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 900,
+        "wires": [
+            [
+                "4641ead92141c38b"
+            ]
+        ]
+    },
+    {
+        "id": "f22cecac18bfa57f",
+        "type": "Thing Command",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "closet",
+        "command": "",
+        "commandType": "msg",
+        "debug": false,
+        "x": 1130,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "b574c4f6bc86b28f",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 940,
+        "wires": [
+            [
+                "f22cecac18bfa57f"
+            ]
+        ]
+    },
+    {
+        "id": "8daccd7b98aa7d92",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 980,
+        "wires": [
+            [
+                "f22cecac18bfa57f"
+            ]
+        ]
+    },
+    {
+        "id": "4749784bee6169be",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 1020,
+        "wires": [
+            [
+                "948b5d093e5d3a94"
+            ]
+        ]
+    },
+    {
+        "id": "a1aca308f9983c57",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 1060,
+        "wires": [
+            [
+                "948b5d093e5d3a94"
+            ]
+        ]
+    },
+    {
+        "id": "948b5d093e5d3a94",
+        "type": "Thing Command",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "laundry",
+        "command": "",
+        "commandType": "msg",
+        "debug": false,
+        "x": 1120,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "f4b4c43e093b401a",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 1100,
+        "wires": [
+            [
+                "9677aa0452a92d2b"
+            ]
+        ]
+    },
+    {
+        "id": "af6cb597c85eb764",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 1140,
+        "wires": [
+            [
+                "9677aa0452a92d2b"
+            ]
+        ]
+    },
+    {
+        "id": "9677aa0452a92d2b",
+        "type": "Thing Command",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "basement",
+        "command": "",
+        "commandType": "msg",
+        "debug": false,
+        "x": 1120,
+        "y": 1120,
+        "wires": []
     }
 ]
