@@ -1251,6 +1251,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 2030,
         "y": 240,
         "wires": [
@@ -1271,6 +1272,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 2030,
         "y": 280,
         "wires": [
@@ -4520,10 +4522,7 @@
         "y": 560,
         "wires": [
             [
-                "6987ca2e.892e94",
-                "ff979eb7.893f3",
-                "32131fe0.68d4c",
-                "fb14610a.ba0cf"
+                "f8670f96ca7cf391"
             ]
         ]
     },
@@ -8059,22 +8058,6 @@
         ]
     },
     {
-        "id": "939d1d44.2632e",
-        "type": "link in",
-        "z": "aa0ae7ae.75d228",
-        "name": "Block Bedroom",
-        "links": [
-            "f7029354.44404"
-        ],
-        "x": 1475,
-        "y": 2240,
-        "wires": [
-            [
-                "3e68a854.c13848"
-            ]
-        ]
-    },
-    {
         "id": "65f5a4f8.7de8fc",
         "type": "ui_button",
         "z": "1c11632f.f206fd",
@@ -9357,7 +9340,6 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
         "payloadType": "date",
         "x": 500,
         "y": 140,
@@ -12939,7 +12921,8 @@
         "y": 1900,
         "wires": [
             [
-                "bcd0d539.041d58"
+                "bcd0d539.041d58",
+                "d1585d50a844f655"
             ]
         ]
     },
@@ -13051,8 +13034,7 @@
         "wires": [
             [
                 "af4303d0.15fad",
-                "d3c43c4.fea9bc",
-                "882dbe4f.06e99"
+                "d3c43c4.fea9bc"
             ]
         ]
     },
@@ -13931,7 +13913,7 @@
         "to": "",
         "reg": false,
         "x": 1220,
-        "y": 1040,
+        "y": 1060,
         "wires": [
             [
                 "8b1a5d59.7fc6e"
@@ -14860,6 +14842,17 @@
                 "state": [],
                 "commands": [],
                 "children": []
+            },
+            {
+                "name": "bedroom",
+                "id": "20",
+                "props": {
+                    "address": "22",
+                    "sv": "out_lvl_switch"
+                },
+                "state": [],
+                "commands": [],
+                "children": []
             }
         ],
         "state": [
@@ -14871,8 +14864,8 @@
         "commands": [],
         "statusFunction": "if (state.power === undefined) return null\nlet text = state.power == \"on\" ? 'On' : 'Off'\nif (state.hasOwnProperty('brightness') && state.on){\n     text += ` ${state.brightness < 1 ? state.brightness * 100 : state.brightness}%`\n}\n   \n    \nreturn {\n    fill: state.power == \"on\" ? 'yellow' : 'grey',\n    shape: 'dot',\n    text\n}",
         "debug": true,
-        "x": 480,
-        "y": 120,
+        "x": 220,
+        "y": 400,
         "wires": []
     },
     {
@@ -14923,8 +14916,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1310,
-        "y": 120,
+        "x": 1470,
+        "y": 380,
         "wires": []
     },
     {
@@ -14994,9 +14987,9 @@
         "id": "3ab68b34.7a79d4",
         "type": "comment",
         "z": "4edd86b6.331768",
-        "name": "Basic Simple",
+        "name": "Futurehome MQTT communication ",
         "info": "This example uses the Lifx platform. The Lifx node works well with the thing nodes, as it requires no initization to receive inbound messages. And the Lifx node already uses the MAC address as the message topic, so the Lifx Things are setup with the MAC address as their ID.",
-        "x": 170,
+        "x": 240,
         "y": 260,
         "wires": []
     },
@@ -15039,8 +15032,8 @@
         "commands": [],
         "statusFunction": "if (state.on === undefined) return null\nlet text = state.on ? 'On' : 'Off'\nif (state.hasOwnProperty('brightness') && state.on)\n    text += ` ${state.brightness < 1 ? state.brightness * 100 : state.brightness}%`\nreturn {\n    fill: state.on ? 'yellow' : 'grey',\n    shape: 'dot',\n    text\n}",
         "debug": false,
-        "x": 160,
-        "y": 120,
+        "x": 220,
+        "y": 60,
         "wires": []
     },
     {
@@ -15678,7 +15671,7 @@
         "type": "debug",
         "z": "4edd86b6.331768",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -15707,8 +15700,8 @@
             "type": "state",
             "value": ""
         },
-        "x": 1050,
-        "y": 120,
+        "x": 1210,
+        "y": 380,
         "wires": [
             [
                 "1e4e617e.247a5f"
@@ -16201,6 +16194,259 @@
         "wires": [
             [
                 "8e07c57f.92d158"
+            ]
+        ]
+    },
+    {
+        "id": "435ed411d57f1466",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1850,
+        "y": 320,
+        "wires": [
+            [
+                "f0615fd.9f26ba"
+            ]
+        ]
+    },
+    {
+        "id": "1c20a4d6ec9e5593",
+        "type": "function",
+        "z": "e3737c94.fd59f",
+        "name": "Away",
+        "func": "msg.payload = {\"mode\":\"away\"};\nglobal.set(\"Mode\", \"away\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "794fbb2d.825084",
+                "884604e4.6cfe58",
+                "6684c5c1bcf16811"
+            ]
+        ]
+    },
+    {
+        "id": "7dd6f353099e3a96",
+        "type": "inject",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "1c20a4d6ec9e5593"
+            ]
+        ]
+    },
+    {
+        "id": "6684c5c1bcf16811",
+        "type": "debug",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f8670f96ca7cf391",
+        "type": "change",
+        "z": "1c11632f.f206fd",
+        "name": "set Auto",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Auto",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 520,
+        "wires": [
+            [
+                "6987ca2e.892e94",
+                "ff979eb7.893f3",
+                "32131fe0.68d4c",
+                "fb14610a.ba0cf"
+            ]
+        ]
+    },
+    {
+        "id": "41c183996b5493bd",
+        "type": "inject",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "20",
+        "topic": "Auto",
+        "x": 1090,
+        "y": 400,
+        "wires": [
+            [
+                "f8670f96ca7cf391"
+            ]
+        ]
+    },
+    {
+        "id": "a39ca4b6eb25ddad",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 1220,
+        "wires": [
+            [
+                "fb133105d0f1ee94"
+            ]
+        ]
+    },
+    {
+        "id": "aef7bdb8b9383103",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 890,
+        "y": 1260,
+        "wires": [
+            [
+                "fb133105d0f1ee94"
+            ]
+        ]
+    },
+    {
+        "id": "fb133105d0f1ee94",
+        "type": "Thing Command",
+        "z": "4edd86b6.331768",
+        "nodeName": "",
+        "name": "bedroom",
+        "command": "",
+        "commandType": "msg",
+        "debug": false,
+        "x": 1120,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "939d1d44.2632e",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "Block Bedroom",
+        "links": [
+            "f7029354.44404"
+        ],
+        "x": 1475,
+        "y": 2240,
+        "wires": [
+            [
+                "3e68a854.c13848"
+            ]
+        ]
+    },
+    {
+        "id": "579bb856c24442fe",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "Reset",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 10 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 620,
+        "y": 400,
+        "wires": [
+            [
+                "882dbe4f.06e99"
             ]
         ]
     }
