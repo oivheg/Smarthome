@@ -1769,12 +1769,6 @@
                 "t": "false",
                 "propertyType": "msg",
                 "property": "payload",
-                "topic": "presence/person3"
-            },
-            {
-                "t": "false",
-                "propertyType": "msg",
-                "property": "payload",
                 "topic": "presence/karina"
             }
         ],
@@ -1806,12 +1800,6 @@
                 "propertyType": "msg",
                 "property": "payload",
                 "topic": "presence/karina"
-            },
-            {
-                "t": "true",
-                "propertyType": "msg",
-                "property": "payload",
-                "topic": "presence/person3"
             }
         ],
         "outputTopic": "Home",
@@ -6855,7 +6843,7 @@
         "op1type": "nul",
         "op2type": "bool",
         "duration": "15",
-        "extend": false,
+        "extend": true,
         "overrideDelay": false,
         "units": "min",
         "reset": "true",
@@ -9028,6 +9016,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 1390,
         "y": 360,
         "wires": [
@@ -14217,7 +14206,7 @@
         "extend": false,
         "overrideDelay": false,
         "units": "min",
-        "reset": "",
+        "reset": "true",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
@@ -14347,7 +14336,8 @@
         "y": 1360,
         "wires": [
             [
-                "32457667.0ab38a"
+                "32457667.0ab38a",
+                "cc8e9ca9.b2787"
             ],
             [
                 "cc8e9ca9.b2787"
@@ -14367,7 +14357,7 @@
         "extend": false,
         "overrideDelay": false,
         "units": "min",
-        "reset": "",
+        "reset": "true",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
@@ -14411,7 +14401,8 @@
         "y": 1180,
         "wires": [
             [
-                "294d2366.9bddec"
+                "294d2366.9bddec",
+                "fbb5cbd7.17f808"
             ],
             []
         ]
@@ -15454,11 +15445,14 @@
                 "t": "eq",
                 "v": "night",
                 "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 630,
         "y": 440,
         "wires": [
@@ -15467,6 +15461,10 @@
                 "ae05daf4.f22088"
             ],
             [
+                "ae05daf4.f22088"
+            ],
+            [
+                "7422f190.1aacf",
                 "ae05daf4.f22088"
             ]
         ]
