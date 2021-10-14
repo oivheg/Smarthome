@@ -3508,7 +3508,7 @@
         "name": "",
         "lat": "58.851468",
         "lon": "5.748852",
-        "startTime": "08:00",
+        "startTime": "07:00",
         "endTime": "16:00",
         "startOffset": 0,
         "endOffset": 0,
@@ -4646,7 +4646,8 @@
                 "57f7d91c.4946d8"
             ],
             [
-                "3de67605.ae865a"
+                "3de67605.ae865a",
+                "58ce8bd6e6898786"
             ],
             [
                 "472600f9.2afc6"
@@ -4964,9 +4965,9 @@
         "name": "Bevegelse Gangen",
         "server": "12895ae7.9c6bf5",
         "device": "ec:1b:bd:ff:fe:a2:fd:03-01-0006",
-        "device_name": "Gang : ZHAPresence",
+        "device_name": "Gangen : ZHAPresence",
         "topic": "",
-        "state": "0",
+        "state": 0,
         "output": "always",
         "outputAtStartup": true,
         "x": 290,
@@ -7729,9 +7730,7 @@
         "x": 2270,
         "y": 200,
         "wires": [
-            [
-                "4ad4e281.7dd9ac"
-            ],
+            [],
             []
         ]
     },
@@ -13653,15 +13652,15 @@
         "op2": "false",
         "op1type": "bool",
         "op2type": "bool",
-        "duration": "2",
-        "extend": true,
+        "duration": "0",
+        "extend": false,
         "overrideDelay": false,
         "units": "min",
-        "reset": "",
+        "reset": "false",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1210,
+        "x": 1220,
         "y": 1340,
         "wires": [
             [
@@ -13715,13 +13714,14 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 750,
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 740,
         "y": 1300,
         "wires": [
             [
-                "32457667.0ab38a"
+                "32457667.0ab38a",
+                "cc8e9ca9.b2787"
             ]
         ]
     },
@@ -14340,7 +14340,8 @@
                 "cc8e9ca9.b2787"
             ],
             [
-                "cc8e9ca9.b2787"
+                "cc8e9ca9.b2787",
+                "32457667.0ab38a"
             ]
         ]
     },
@@ -16490,6 +16491,53 @@
                 "edb28abb09198c2e",
                 "39d342f9b13ef084",
                 "497306aa42a97714"
+            ]
+        ]
+    },
+    {
+        "id": "58ce8bd6e6898786",
+        "type": "debug",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "2f0a76f061dcaa64",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 743.6505737304688,
+        "y": 1268.3692626953125,
+        "wires": [
+            [
+                "32457667.0ab38a",
+                "cc8e9ca9.b2787"
             ]
         ]
     }
