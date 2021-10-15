@@ -1192,7 +1192,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "10",
         "crontab": "",
         "once": false,
         "onceDelay": "",
@@ -1204,41 +1204,6 @@
             [
                 "f44e1823.867bc8"
             ]
-        ]
-    },
-    {
-        "id": "6cef8202.47cb9c",
-        "type": "function",
-        "z": "8b99f8fe.7b27b8",
-        "d": true,
-        "name": "Determine device presence",
-        "func": "const lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\n\nreturn Object.keys(people).map(function(topic) {\n    let devices = msg.payload[0].filter(device => device.name === people[topic] && device.last_seen > presenceCutoff);\n    return {\n        topic: topic,\n        retain: true,\n        payload: devices.length > 0,\n        raw: devices\n    };\n});",
-        "outputs": 3,
-        "noerr": 1,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1080,
-        "y": 240,
-        "wires": [
-            [
-                "d5a9cb0d.738118",
-                "394f6d15.3c43e2",
-                "d6d8cf38.1794d"
-            ],
-            [
-                "d5a9cb0d.738118",
-                "394f6d15.3c43e2",
-                "3d692d1e.98b022"
-            ],
-            [
-                "394f6d15.3c43e2"
-            ]
-        ],
-        "outputLabels": [
-            "oivheg ",
-            "Karina ",
-            "Stian"
         ]
     },
     {
@@ -1754,69 +1719,6 @@
         ]
     },
     {
-        "id": "394f6d15.3c43e2",
-        "type": "and-gate",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Er Borte",
-        "rules": [
-            {
-                "t": "false",
-                "propertyType": "msg",
-                "property": "payload",
-                "topic": "presence/heggland"
-            },
-            {
-                "t": "false",
-                "propertyType": "msg",
-                "property": "payload",
-                "topic": "presence/karina"
-            }
-        ],
-        "outputTopic": "Gone",
-        "gateType": "and",
-        "emitOnlyIfTrue": true,
-        "x": 1400,
-        "y": 280,
-        "wires": [
-            [
-                "77b78689.5eac68",
-                "e51241c57ff762ab"
-            ]
-        ]
-    },
-    {
-        "id": "d5a9cb0d.738118",
-        "type": "or-gate",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Er Hjemme",
-        "rules": [
-            {
-                "t": "true",
-                "propertyType": "msg",
-                "property": "payload",
-                "topic": "presence/heggland"
-            },
-            {
-                "t": "true",
-                "propertyType": "msg",
-                "property": "payload",
-                "topic": "presence/karina"
-            }
-        ],
-        "outputTopic": "Home",
-        "gateType": "or",
-        "emitOnlyIfTrue": true,
-        "x": 1410,
-        "y": 240,
-        "wires": [
-            [
-                "a5d3065e.5a0698",
-                "77b78689.5eac68",
-                "c684d24da108c725"
-            ]
-        ]
-    },
-    {
         "id": "47a496d1.bcac18",
         "type": "traffic",
         "z": "bc3b2c68.b35f6",
@@ -1858,7 +1760,6 @@
         "y": 240,
         "wires": [
             [
-                "6cef8202.47cb9c",
                 "eabe9d09ac5494a3"
             ]
         ]
@@ -2892,8 +2793,8 @@
         "links": [
             "d871d736.d19838"
         ],
-        "x": 1495,
-        "y": 160,
+        "x": 1715,
+        "y": 440,
         "wires": []
     },
     {
@@ -2905,8 +2806,8 @@
             "b9ab5a15.2f2aa8",
             "84abded8.462ac"
         ],
-        "x": 1495,
-        "y": 200,
+        "x": 1715,
+        "y": 480,
         "wires": []
     },
     {
@@ -4752,29 +4653,6 @@
         ]
     },
     {
-        "id": "4ad4e281.7dd9ac",
-        "type": "ambi-comfort-mode",
-        "z": "8b99f8fe.7b27b8",
-        "oauthClient": "4ec8324b.b2dc1c",
-        "room_name": "varmepumpe",
-        "location_name": "Gravarsveien 57 A",
-        "x": 2620,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "af800f77.82ef5",
-        "type": "ambi-away-temp-upper",
-        "z": "8b99f8fe.7b27b8",
-        "oauthClient": "4ec8324b.b2dc1c",
-        "room_name": "varmepumpe",
-        "location_name": "Gravarsveien 57 A",
-        "value": "21",
-        "x": 2190,
-        "y": 440,
-        "wires": []
-    },
-    {
         "id": "6bb5ecbc.1d0e04",
         "type": "switch",
         "z": "605ae98f.8a9998",
@@ -4836,8 +4714,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 1390,
-        "y": 160,
+        "x": 1510,
+        "y": 420,
         "wires": [
             [
                 "772b0560.6b8bcc"
@@ -4854,8 +4732,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 1390,
-        "y": 200,
+        "x": 1510,
+        "y": 460,
         "wires": [
             [
                 "47763aff.5ff334"
@@ -6794,13 +6672,14 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1610,
+        "x": 1510,
         "y": 280,
         "wires": [
             [
                 "e4c32eed.12537",
                 "fde9f041.eb152",
-                "a5d3065e.5a0698"
+                "a5d3065e.5a0698",
+                "7cc0632f36592083"
             ]
         ]
     },
@@ -6821,7 +6700,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1610,
+        "x": 1510,
         "y": 240,
         "wires": [
             [
@@ -10215,8 +10094,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1870,
-        "y": 140,
+        "x": 1810,
+        "y": 360,
         "wires": [
             [
                 "dc33a268.a0933"
@@ -10233,7 +10112,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1750,
+        "x": 1810,
         "y": 400,
         "wires": [
             [
@@ -16025,35 +15904,6 @@
         ]
     },
     {
-        "id": "435ed411d57f1466",
-        "type": "inject",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1850,
-        "y": 320,
-        "wires": [
-            [
-                "f0615fd.9f26ba"
-            ]
-        ]
-    },
-    {
         "id": "1c20a4d6ec9e5593",
         "type": "function",
         "z": "e3737c94.fd59f",
@@ -16278,142 +16128,6 @@
         ]
     },
     {
-        "id": "4a67a089f39e1056",
-        "type": "inject",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "presence/heggland",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 960,
-        "y": 40,
-        "wires": [
-            [
-                "39d342f9b13ef084",
-                "edb28abb09198c2e"
-            ]
-        ]
-    },
-    {
-        "id": "39d342f9b13ef084",
-        "type": "change",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "presence/karina",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1070,
-        "y": 120,
-        "wires": [
-            [
-                "497306aa42a97714",
-                "edb28abb09198c2e"
-            ]
-        ]
-    },
-    {
-        "id": "497306aa42a97714",
-        "type": "change",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "presence/karina",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1070,
-        "y": 160,
-        "wires": [
-            [
-                "edb28abb09198c2e"
-            ]
-        ]
-    },
-    {
-        "id": "edb28abb09198c2e",
-        "type": "change",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "rules": [],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1270,
-        "y": 100,
-        "wires": [
-            [
-                "d5a9cb0d.738118",
-                "394f6d15.3c43e2"
-            ]
-        ]
-    },
-    {
-        "id": "9a955b39036a167d",
-        "type": "inject",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "presence/heggland",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 890,
-        "y": 80,
-        "wires": [
-            [
-                "edb28abb09198c2e",
-                "39d342f9b13ef084",
-                "497306aa42a97714"
-            ]
-        ]
-    },
-    {
         "id": "58ce8bd6e6898786",
         "type": "debug",
         "z": "e3737c94.fd59f",
@@ -16493,40 +16207,6 @@
         ]
     },
     {
-        "id": "c684d24da108c725",
-        "type": "debug",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1600,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "e51241c57ff762ab",
-        "type": "debug",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1560,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "eabe9d09ac5494a3",
         "type": "function",
         "z": "8b99f8fe.7b27b8",
@@ -16537,62 +16217,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1040,
-        "y": 400,
+        "x": 1100,
+        "y": 240,
         "wires": [
             [
-                "854ae8bbbaf6b54b",
-                "1e1f56fa524173df"
+                "1e1f56fa524173df",
+                "f471eaf5a8b7a9c1"
             ]
         ],
         "outputLabels": [
             "oivheg "
-        ]
-    },
-    {
-        "id": "854ae8bbbaf6b54b",
-        "type": "debug",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1130,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "e4100251f361afd8",
-        "type": "inject",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1570,
-        "y": 100,
-        "wires": [
-            [
-                "a5d3065e.5a0698"
-            ]
         ]
     },
     {
@@ -16613,8 +16247,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1280,
-        "y": 360,
+        "x": 1310,
+        "y": 240,
         "wires": [
             [
                 "77b78689.5eac68",
@@ -16622,6 +16256,56 @@
             ],
             [
                 "77b78689.5eac68"
+            ]
+        ]
+    },
+    {
+        "id": "f471eaf5a8b7a9c1",
+        "type": "function",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "func": "msg.people.forEach(function(element) {\n    msg.payload =true;\n    if (element == \"heggland\"){\n        node.send(msg);\n        \n    }\n    if (element == \"karina\") {\n        node.send([null,msg]);\n\n    }\n});",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 420,
+        "wires": [
+            [
+                "d6d8cf38.1794d"
+            ],
+            [
+                "3d692d1e.98b022"
+            ]
+        ]
+    },
+    {
+        "id": "7cc0632f36592083",
+        "type": "change",
+        "z": "8b99f8fe.7b27b8",
+        "name": "home = false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 320,
+        "wires": [
+            [
+                "d6d8cf38.1794d",
+                "3d692d1e.98b022"
             ]
         ]
     }
