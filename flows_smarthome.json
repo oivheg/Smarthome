@@ -1192,12 +1192,11 @@
                 "vt": "str"
             }
         ],
-        "repeat": "10",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": "",
         "topic": "",
-        "payload": "",
         "payloadType": "date",
         "x": 210,
         "y": 240,
@@ -1211,6 +1210,7 @@
         "id": "6cef8202.47cb9c",
         "type": "function",
         "z": "8b99f8fe.7b27b8",
+        "d": true,
         "name": "Determine device presence",
         "func": "const lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\n\nreturn Object.keys(people).map(function(topic) {\n    let devices = msg.payload[0].filter(device => device.name === people[topic] && device.last_seen > presenceCutoff);\n    return {\n        topic: topic,\n        retain: true,\n        payload: devices.length > 0,\n        raw: devices\n    };\n});",
         "outputs": 3,
@@ -1779,7 +1779,8 @@
         "y": 280,
         "wires": [
             [
-                "77b78689.5eac68"
+                "77b78689.5eac68",
+                "e51241c57ff762ab"
             ]
         ]
     },
@@ -1810,7 +1811,8 @@
         "wires": [
             [
                 "a5d3065e.5a0698",
-                "77b78689.5eac68"
+                "77b78689.5eac68",
+                "c684d24da108c725"
             ]
         ]
     },
@@ -1856,7 +1858,8 @@
         "y": 240,
         "wires": [
             [
-                "6cef8202.47cb9c"
+                "6cef8202.47cb9c",
+                "eabe9d09ac5494a3"
             ]
         ]
     },
@@ -2094,10 +2097,11 @@
         "type": "deconz-input",
         "z": "1b14ec1b.20ab54",
         "name": "",
-        "server": "12895ae7.9c6bf5",
-        "device": "00:15:8d:00:01:4a:08:f7-01-0006",
-        "device_name": "Happy sulten : ZHASwitch",
         "topic": "",
+        "server": "12895ae7.9c6bf5",
+        "device_name": "Happy sulten : ZHASwitch",
+        "outputs": 2,
+        "device": "00:15:8d:00:01:4a:08:f7-01-0006",
         "state": "buttonevent",
         "output": "always",
         "outputAtStartup": false,
@@ -2152,10 +2156,11 @@
         "type": "deconz-input",
         "z": "1b14ec1b.20ab54",
         "name": "",
-        "server": "12895ae7.9c6bf5",
-        "device": "00:15:8d:00:01:9d:e5:2c-01-0006",
-        "device_name": "Happy vil ut : ZHASwitch",
         "topic": "",
+        "server": "12895ae7.9c6bf5",
+        "device_name": "Happy vil ut : ZHASwitch",
+        "outputs": 2,
+        "device": "00:15:8d:00:01:9d:e5:2c-01-0006",
         "state": "buttonevent",
         "output": "always",
         "outputAtStartup": false,
@@ -4159,7 +4164,7 @@
         "y": 200,
         "wires": [
             [
-                "45a078fc.952f68"
+                "fe7d3938.a5fd88"
             ]
         ]
     },
@@ -4175,7 +4180,7 @@
         "y": 240,
         "wires": [
             [
-                "e9824990.fac3a8"
+                "f4cc46fb.79d698"
             ]
         ]
     },
@@ -4314,35 +4319,6 @@
         "x": 140,
         "y": 400,
         "wires": []
-    },
-    {
-        "id": "b670eaa0.8e6998",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "topic",
-                "pt": "msg",
-                "from": "presence/",
-                "fromt": "str",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 830,
-        "y": 220,
-        "wires": [
-            [
-                "19836afb.acbac5"
-            ]
-        ]
     },
     {
         "id": "f2e0b439.cfe148",
@@ -4696,44 +4672,6 @@
         ]
     },
     {
-        "id": "45a078fc.952f68",
-        "type": "rbe",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 590,
-        "y": 200,
-        "wires": [
-            [
-                "b670eaa0.8e6998",
-                "fe7d3938.a5fd88"
-            ]
-        ]
-    },
-    {
-        "id": "e9824990.fac3a8",
-        "type": "rbe",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 590,
-        "y": 240,
-        "wires": [
-            [
-                "b670eaa0.8e6998",
-                "f4cc46fb.79d698"
-            ]
-        ]
-    },
-    {
         "id": "f08e4592.a992e8",
         "type": "catch",
         "z": "e3737c94.fd59f",
@@ -4929,10 +4867,11 @@
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
         "name": "Bevegelse StueVtoalett",
-        "server": "12895ae7.9c6bf5",
-        "device": "ec:1b:bd:ff:fe:3f:85:d8-01-0006",
-        "device_name": "1etg: Stue-Gang : ZHAPresence",
         "topic": "StueVtoalett",
+        "server": "12895ae7.9c6bf5",
+        "device_name": "1etg: Stue-Gang : ZHAPresence",
+        "outputs": 2,
+        "device": "ec:1b:bd:ff:fe:3f:85:d8-01-0006",
         "state": "0",
         "output": "always",
         "outputAtStartup": true,
@@ -4963,10 +4902,11 @@
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
         "name": "Bevegelse Gangen",
-        "server": "12895ae7.9c6bf5",
-        "device": "ec:1b:bd:ff:fe:a2:fd:03-01-0006",
-        "device_name": "Gangen : ZHAPresence",
         "topic": "",
+        "server": "12895ae7.9c6bf5",
+        "device_name": "Gangen : ZHAPresence",
+        "outputs": 2,
+        "device": "ec:1b:bd:ff:fe:a2:fd:03-01-0006",
         "state": 0,
         "output": "always",
         "outputAtStartup": true,
@@ -5093,8 +5033,8 @@
         "z": "a7af161f.d5ece8",
         "name": "",
         "server": "12895ae7.9c6bf5",
-        "device": "cc:cc:cc:ff:fe:02:96:c6-01",
         "device_name": "Window covering device 5 : Window covering device",
+        "device": "cc:cc:cc:ff:fe:02:96:c6-01",
         "command": "bri",
         "commandType": "deconz_cmd",
         "payload": "payload",
@@ -5103,17 +5043,20 @@
         "transitionTimeType": "num",
         "x": 880,
         "y": 660,
-        "wires": []
+        "wires": [
+            []
+        ]
     },
     {
         "id": "36aeb8a0.824178",
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
         "name": "",
-        "server": "12895ae7.9c6bf5",
-        "device": "cc:cc:cc:ff:fe:02:96:c6-01",
-        "device_name": "Window covering device 5 : Window covering device",
         "topic": "",
+        "server": "12895ae7.9c6bf5",
+        "device_name": "Window covering device 5 : Window covering device",
+        "outputs": 2,
+        "device": "cc:cc:cc:ff:fe:02:96:c6-01",
         "state": 0,
         "output": "always",
         "outputAtStartup": true,
@@ -6882,7 +6825,6 @@
         "y": 240,
         "wires": [
             [
-                "77b78689.5eac68",
                 "f0615fd.9f26ba",
                 "15e4457d.ab633b"
             ]
@@ -7070,10 +7012,11 @@
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
         "name": "",
-        "server": "12895ae7.9c6bf5",
-        "device": "bc:33:ac:ff:fe:18:65:a7-01-0006",
-        "device_name": "Soverom : ZHAPresence",
         "topic": "Bedroom",
+        "server": "12895ae7.9c6bf5",
+        "device_name": "Soverom : ZHAPresence",
+        "outputs": 2,
+        "device": "bc:33:ac:ff:fe:18:65:a7-01-0006",
         "state": 0,
         "output": "always",
         "outputAtStartup": true,
@@ -8034,13 +7977,35 @@
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
         "name": "",
-        "server": "12895ae7.9c6bf5",
-        "device": "bc:33:ac:ff:fe:16:8f:b1-01-0006",
-        "device_name": "Kjøkken : ZHAPresence",
         "topic": "",
-        "state": 0,
-        "output": "always",
-        "outputAtStartup": true,
+        "config_version": 1,
+        "server": "12895ae7.9c6bf5",
+        "statustext": "",
+        "statustext_type": "auto",
+        "search_type": "device",
+        "device_list": [
+            "sensors/uniqueid/bc:33:ac:ff:fe:16:8f:b1-01-0006"
+        ],
+        "device_name": "Kjøkken : ZHAPresence",
+        "query": "",
+        "outputs": 2,
+        "output_rules": [
+            {
+                "type": "state",
+                "format": "single",
+                "output": "always",
+                "onstart": true,
+                "payload": [
+                    "__complete__"
+                ]
+            },
+            {
+                "type": "homekit",
+                "format": "single",
+                "onstart": true,
+                "onerror": true
+            }
+        ],
         "x": 280,
         "y": 280,
         "wires": [
@@ -10289,33 +10254,6 @@
         "wires": []
     },
     {
-        "id": "34c79095.990bc",
-        "type": "inject",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1250,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "e50ad656.8b7128",
         "type": "bt-presence",
         "z": "46a055ec.5e8edc",
@@ -10952,10 +10890,11 @@
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
         "name": "Bryter",
-        "server": "12895ae7.9c6bf5",
-        "device": "60:a4:23:ff:fe:28:37:14-01-1000",
-        "device_name": "Kjeller Bryter : ZHASwitch",
         "topic": "",
+        "server": "12895ae7.9c6bf5",
+        "device_name": "Kjeller Bryter : ZHASwitch",
+        "outputs": 2,
+        "device": "60:a4:23:ff:fe:28:37:14-01-1000",
         "state": "buttonevent",
         "output": "onupdate",
         "outputAtStartup": false,
@@ -12700,10 +12639,11 @@
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
         "name": "Bevegelse BAD",
-        "server": "12895ae7.9c6bf5",
-        "device": "00:15:8d:00:05:4a:78:00-01-0406",
-        "device_name": "Presence 16 : ZHAPresence",
         "topic": "",
+        "server": "12895ae7.9c6bf5",
+        "device_name": "Presence 16 : ZHAPresence",
+        "outputs": 2,
+        "device": "00:15:8d:00:05:4a:78:00-01-0406",
         "state": "presence",
         "output": "always",
         "outputAtStartup": true,
@@ -12721,10 +12661,11 @@
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
         "name": "Dør BAD",
-        "server": "12895ae7.9c6bf5",
-        "device": "00:15:8d:00:02:8d:6d:2d-01-0006",
-        "device_name": "Window / Door Sensor : ZHAOpenClose",
         "topic": "",
+        "server": "12895ae7.9c6bf5",
+        "device_name": "Window / Door Sensor : ZHAOpenClose",
+        "outputs": 2,
+        "device": "00:15:8d:00:02:8d:6d:2d-01-0006",
         "state": "0",
         "output": "always",
         "outputAtStartup": true,
@@ -16548,6 +16489,139 @@
             ],
             [
                 "04d0c0d3ead85731"
+            ]
+        ]
+    },
+    {
+        "id": "c684d24da108c725",
+        "type": "debug",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e51241c57ff762ab",
+        "type": "debug",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "eabe9d09ac5494a3",
+        "type": "function",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Determine device presence",
+        "func": "const lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\nfor (let device in msg.payload[0]){\n    \n    let name = msg.payload[0][device].name\n    let lastseen = msg.payload[0][device].last_seen\n\n    switch (name) {\n        case \"heggland\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"karina\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n        //noonehome\n         break;\n    } \n\n}\n\n\nreturn data",
+        "outputs": 1,
+        "noerr": 3,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 400,
+        "wires": [
+            [
+                "854ae8bbbaf6b54b",
+                "1e1f56fa524173df"
+            ]
+        ],
+        "outputLabels": [
+            "oivheg "
+        ]
+    },
+    {
+        "id": "854ae8bbbaf6b54b",
+        "type": "debug",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "e4100251f361afd8",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1570,
+        "y": 100,
+        "wires": [
+            [
+                "a5d3065e.5a0698"
+            ]
+        ]
+    },
+    {
+        "id": "1e1f56fa524173df",
+        "type": "switch",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1280,
+        "y": 360,
+        "wires": [
+            [
+                "77b78689.5eac68",
+                "a5d3065e.5a0698"
+            ],
+            [
+                "77b78689.5eac68"
             ]
         ]
     }
