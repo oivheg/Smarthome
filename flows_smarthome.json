@@ -129,14 +129,6 @@
         "env": []
     },
     {
-        "id": "f863506c078d57d8",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "a9a601907d96eb09",
         "type": "tab",
         "label": "Bathroom",
@@ -698,7 +690,7 @@
         "id": "6708f2f6.06829c",
         "type": "miio-roborock-server",
         "name": "Mr Robot",
-        "ip": "192.168.1.90",
+        "ip": "192.168.1.118",
         "token": "4e765244557a37537139316f77595245",
         "polling": "30"
     },
@@ -5465,7 +5457,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "5",
+        "repeat": "60",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -6007,9 +5999,7 @@
         "x": 900,
         "y": 860,
         "wires": [
-            [
-                "60b024d7edbba372"
-            ]
+            []
         ]
     },
     {
@@ -6268,19 +6258,6 @@
                 "78982c54d7cfed47"
             ]
         ]
-    },
-    {
-        "id": "60b024d7edbba372",
-        "type": "link out",
-        "z": "34fc4e1d.243ef2",
-        "name": "ST-presence",
-        "mode": "link",
-        "links": [
-            "bd21ef7a287c668e"
-        ],
-        "x": 1065,
-        "y": 860,
-        "wires": []
     },
     {
         "id": "6e1a0143.f51f8",
@@ -6678,9 +6655,7 @@
         "x": 450,
         "y": 920,
         "wires": [
-            [
-                "18e793bb.41ccac"
-            ]
+            []
         ]
     },
     {
@@ -7667,8 +7642,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1200,
-        "y": 960,
+        "x": 1080,
+        "y": 920,
         "wires": [
             [
                 "63829c6f.8662b4"
@@ -7712,18 +7687,19 @@
         "duration": "5",
         "extend": false,
         "overrideDelay": true,
-        "units": "s",
+        "units": "min",
         "reset": "true",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1440,
+        "x": 1450,
         "y": 1080,
         "wires": [
             [
                 "4ba0f0b753e194b7",
                 "f5aec9fe.06b5b8",
-                "2543e4c5.28612c"
+                "2543e4c5.28612c",
+                "c487f1023e87b1ca"
             ]
         ]
     },
@@ -8152,8 +8128,7 @@
         "y": 880,
         "wires": [
             [
-                "63829c6f.8662b4",
-                "8b1a5d59.7fc6e"
+                "63829c6f.8662b4"
             ]
         ]
     },
@@ -8478,7 +8453,8 @@
         "wires": [
             [
                 "af91d33b.a8943",
-                "b9c35cbbc847c80d"
+                "b9c35cbbc847c80d",
+                "8b1a5d59.7fc6e"
             ],
             []
         ]
@@ -8860,8 +8836,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2060,
-        "y": 1100,
+        "x": 1720,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -8955,11 +8931,89 @@
         "links": [
             "60b024d7edbba372"
         ],
-        "x": 1025,
-        "y": 1060,
+        "x": 795,
+        "y": 1080,
+        "wires": [
+            [
+                "90449e75e8b6c5a2"
+            ]
+        ]
+    },
+    {
+        "id": "1d0274467a873b73",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "180",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 610,
+        "y": 1080,
+        "wires": [
+            [
+                "90449e75e8b6c5a2"
+            ]
+        ]
+    },
+    {
+        "id": "90449e75e8b6c5a2",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "ST-presence:F",
+        "property": "ST-presence",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 1000,
+        "y": 1080,
         "wires": [
             [
                 "ad1d50aa.cbb4"
+            ]
+        ]
+    },
+    {
+        "id": "e578725c1a2aec32",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "STARTUP",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "ondimm",
+                "v": "100",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "20",
+        "topic": "",
+        "payload": "900000",
+        "payloadType": "num",
+        "x": 390,
+        "y": 580,
+        "wires": [
+            [
+                "69f4a103.cfabb"
             ]
         ]
     },
@@ -10764,6 +10818,35 @@
         "wires": [
             [
                 "1e1f56fa524173df"
+            ]
+        ]
+    },
+    {
+        "id": "4e1ae4de2e5879cf",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2529,
+        "y": 346,
+        "wires": [
+            [
+                "8ea3f755.e68d88"
             ]
         ]
     },
