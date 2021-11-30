@@ -10676,11 +10676,11 @@
         "y": 240,
         "wires": [
             [
-                "77b78689.5eac68",
-                "a5d3065e.5a0698"
+                "a5d3065e.5a0698",
+                "77b78689.5eac68"
             ],
             [
-                "77b78689.5eac68"
+                "9ab9f797bec97d04"
             ]
         ]
     },
@@ -10847,6 +10847,31 @@
         "wires": [
             [
                 "8ea3f755.e68d88"
+            ]
+        ]
+    },
+    {
+        "id": "9ab9f797bec97d04",
+        "type": "switch",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Mode",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 1330,
+        "y": 280,
+        "wires": [
+            [
+                "77b78689.5eac68"
             ]
         ]
     },
