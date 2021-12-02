@@ -6294,7 +6294,7 @@
         "offvalueType": "bool",
         "officon": "remove_red_eye",
         "offcolor": "grey",
-        "x": 670,
+        "x": 590,
         "y": 1360,
         "wires": [
             [
@@ -6327,12 +6327,10 @@
         "officon": "remove_red_eye",
         "offcolor": "grey",
         "animate": true,
-        "x": 580,
-        "y": 980,
+        "x": 620,
+        "y": 920,
         "wires": [
-            [
-                "a9129b5.6367068"
-            ]
+            []
         ]
     },
     {
@@ -6360,7 +6358,7 @@
         "officon": "remove_red_eye",
         "offcolor": "grey",
         "animate": true,
-        "x": 680,
+        "x": 580,
         "y": 1180,
         "wires": [
             [
@@ -6377,7 +6375,7 @@
         "links": [
             "328ec247.9e5eee"
         ],
-        "x": 135,
+        "x": 255,
         "y": 1360,
         "wires": [
             [
@@ -6412,7 +6410,7 @@
         "links": [
             "b951c7f1.f25428"
         ],
-        "x": 155,
+        "x": 255,
         "y": 1180,
         "wires": [
             [
@@ -6582,12 +6580,6 @@
                 "t": "false",
                 "propertyType": "msg",
                 "property": "payload",
-                "topic": "Kjøkken"
-            },
-            {
-                "t": "false",
-                "propertyType": "msg",
-                "property": "payload",
                 "topic": "Gangen"
             }
         ],
@@ -6621,8 +6613,9 @@
         "y": 980,
         "wires": [
             [
-                "18e793bb.41ccac",
-                "f7159548.1fcb68"
+                "f7159548.1fcb68",
+                "a9129b5.6367068",
+                "18e793bb.41ccac"
             ]
         ]
     },
@@ -6655,7 +6648,9 @@
         "x": 450,
         "y": 920,
         "wires": [
-            []
+            [
+                "18e793bb.41ccac"
+            ]
         ]
     },
     {
