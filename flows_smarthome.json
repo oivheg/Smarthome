@@ -155,11 +155,11 @@
         ],
         "out": [
             {
-                "x": 720,
+                "x": 1120,
                 "y": 200,
                 "wires": [
                     {
-                        "id": "e5f5aa31.81fff8",
+                        "id": "4b3b19cb6cd314e6",
                         "port": 0
                     }
                 ]
@@ -1160,7 +1160,55 @@
         "x": 560,
         "y": 200,
         "wires": [
+            [
+                "92a5af52a7d9680d"
+            ]
+        ]
+    },
+    {
+        "id": "4b3b19cb6cd314e6",
+        "type": "switch",
+        "z": "94ff8f0f.02c5a",
+        "name": "Gusetmode",
+        "property": "guestmode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": true,
+        "outputs": 1,
+        "x": 990,
+        "y": 200,
+        "wires": [
             []
+        ]
+    },
+    {
+        "id": "92a5af52a7d9680d",
+        "type": "switch",
+        "z": "94ff8f0f.02c5a",
+        "name": "",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 200,
+        "wires": [
+            [
+                "4b3b19cb6cd314e6"
+            ]
         ]
     },
     {
@@ -6327,6 +6375,7 @@
         "officon": "remove_red_eye",
         "offcolor": "grey",
         "animate": true,
+        "className": "",
         "x": 620,
         "y": 920,
         "wires": [
@@ -6613,7 +6662,6 @@
         "y": 980,
         "wires": [
             [
-                "f7159548.1fcb68",
                 "a9129b5.6367068",
                 "18e793bb.41ccac"
             ]
@@ -7613,8 +7661,8 @@
         "wires": [
             [
                 "aa371fd5.55fc7",
-                "8b1a5d59.7fc6e",
-                "b9c35cbbc847c80d"
+                "b9c35cbbc847c80d",
+                "71174e9464d3c56c"
             ],
             []
         ]
@@ -8472,16 +8520,22 @@
         "rules": [
             {
                 "t": "true"
+            },
+            {
+                "t": "false"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 1,
+        "outputs": 2,
         "x": 650,
         "y": 1240,
         "wires": [
             [
                 "2ec07ac4a1fb75e1"
+            ],
+            [
+                "fd826e389a5fda36"
             ]
         ]
     },
@@ -8740,17 +8794,23 @@
         "rules": [
             {
                 "t": "false"
+            },
+            {
+                "t": "true"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 1,
+        "outputs": 2,
         "x": 1000,
         "y": 1080,
         "wires": [
             [
                 "ad1d50aa.cbb4",
-                "8b1a5d59.7fc6e"
+                "71174e9464d3c56c"
+            ],
+            [
+                "99ad2c14771340d0"
             ]
         ]
     },
@@ -8781,35 +8841,6 @@
         "wires": [
             [
                 "69f4a103.cfabb"
-            ]
-        ]
-    },
-    {
-        "id": "73b9320d1b8f9923",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 910,
-        "y": 760,
-        "wires": [
-            [
-                "f7159548.1fcb68"
             ]
         ]
     },
@@ -8891,8 +8922,78 @@
             [
                 "d308a6c406df9fa1"
             ],
+            []
+        ]
+    },
+    {
+        "id": "99ad2c14771340d0",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 1140,
+        "wires": [
             [
-                "1d184ca0.1f8693"
+                "8b1a5d59.7fc6e"
+            ]
+        ]
+    },
+    {
+        "id": "fd826e389a5fda36",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "B-Presence:F",
+        "rules": [
+            {
+                "t": "set",
+                "p": "B-Presence",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71174e9464d3c56c",
+        "type": "rbe",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1240,
+        "y": 1040,
+        "wires": [
+            [
+                "8b1a5d59.7fc6e"
             ]
         ]
     },
@@ -13009,11 +13110,12 @@
         "type": "link out",
         "z": "a7af161f.d5ece8",
         "name": "Bevegelse Trapp",
+        "mode": "link",
         "links": [
-            "be2ad471.d9c448",
-            "1329b56.bea634b"
+            "1329b56.bea634b",
+            "be2ad471.d9c448"
         ],
-        "x": 700,
+        "x": 975,
         "y": 100,
         "wires": []
     },
@@ -13294,7 +13396,7 @@
             "be2ad471.d9c448",
             "1329b56.bea634b"
         ],
-        "x": 695,
+        "x": 755,
         "y": 280,
         "wires": []
     },
@@ -17771,31 +17873,6 @@
         ]
     },
     {
-        "id": "6acb9b6fd7cf5976",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 220,
-        "y": 440,
-        "wires": [
-            [
-                "430bcf57af3f447c"
-            ]
-        ]
-    },
-    {
         "id": "717734401acbc303",
         "type": "inject",
         "z": "a9a601907d96eb09",
@@ -17820,31 +17897,6 @@
         "wires": [
             [
                 "2ebf80ed57b96fc3"
-            ]
-        ]
-    },
-    {
-        "id": "e19da0c1107b6f59",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 190,
-        "y": 500,
-        "wires": [
-            [
-                "430bcf57af3f447c"
             ]
         ]
     }
