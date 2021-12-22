@@ -521,12 +521,13 @@
             "54d0eff0999dd2f8",
             "02046d58b1fac856",
             "b2659103b136eee6",
-            "80e36239586e7edc"
+            "80e36239586e7edc",
+            "b0dc3ddb928b3d38"
         ],
         "x": 754,
         "y": 239,
         "w": 1032,
-        "h": 222
+        "h": 202
     },
     {
         "id": "8cba373d8f4d3966",
@@ -5117,7 +5118,7 @@
         "topic": "KJØKKEN",
         "topicType": "str",
         "x": 1370,
-        "y": 280,
+        "y": 660,
         "wires": [
             [
                 "c2a6540cf2006146"
@@ -5224,7 +5225,7 @@
         "topic": "O-LYS",
         "topicType": "str",
         "x": 1350,
-        "y": 240,
+        "y": 340,
         "wires": [
             [
                 "c2a6540cf2006146"
@@ -5525,7 +5526,7 @@
         "topic": "K-LYS",
         "topicType": "str",
         "x": 1350,
-        "y": 460,
+        "y": 500,
         "wires": [
             [
                 "c2a6540cf2006146"
@@ -5553,7 +5554,7 @@
         "topic": "S-LYS",
         "topicType": "str",
         "x": 1350,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "c2a6540cf2006146"
@@ -5664,7 +5665,7 @@
         "topic": "G-LYS",
         "topicType": "str",
         "x": 1350,
-        "y": 320,
+        "y": 380,
         "wires": [
             [
                 "c2a6540cf2006146"
@@ -6227,7 +6228,7 @@
         "topic": "BA-LYS",
         "topicType": "str",
         "x": 1360,
-        "y": 620,
+        "y": 540,
         "wires": [
             [
                 "c2a6540cf2006146"
@@ -6505,7 +6506,7 @@
         "type": "switch",
         "z": "34fc4e1d.243ef2",
         "name": "",
-        "property": "power",
+        "property": "payload.power",
         "propertyType": "msg",
         "rules": [
             {
@@ -6518,8 +6519,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1350,
-        "y": 540,
+        "x": 1610,
+        "y": 580,
         "wires": [
             [
                 "d7f5cfb64ad22ad0"
@@ -6548,8 +6549,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1600,
-        "y": 520,
+        "x": 1800,
+        "y": 560,
         "wires": [
             []
         ]
@@ -6573,8 +6574,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1600,
-        "y": 560,
+        "x": 1800,
+        "y": 600,
         "wires": [
             []
         ]
@@ -6775,7 +6776,7 @@
         "topic": "Closet",
         "topicType": "str",
         "x": 1350,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "c2a6540cf2006146"
@@ -6803,7 +6804,7 @@
         "topic": "vaskerom",
         "topicType": "str",
         "x": 1360,
-        "y": 400,
+        "y": 620,
         "wires": [
             [
                 "c2a6540cf2006146"
@@ -6855,12 +6856,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "closet",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "kjøkken",
+                "v": "Office_Light",
                 "vt": "str"
             },
             {
@@ -6870,12 +6866,12 @@
             },
             {
                 "t": "eq",
-                "v": "bedroom",
+                "v": "closet",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "BA-LYS",
+                "v": "bedroom",
                 "vt": "str"
             },
             {
@@ -6885,17 +6881,22 @@
             },
             {
                 "t": "eq",
-                "v": "laundry",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Office_Light",
+                "v": "bathroom",
                 "vt": "str"
             },
             {
                 "t": "eq",
                 "v": "K-O-LYS",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "laundry",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "kjøkken",
                 "vt": "str"
             }
         ],
@@ -6906,31 +6907,32 @@
         "y": 560,
         "wires": [
             [
-                "3e07a9b8db351d48"
-            ],
-            [
-                "95811a33.4d7d18"
+                "c6724f39.53f47"
             ],
             [
                 "92091a2e.df6988"
             ],
             [
-                "3e444ebc.b3a102"
+                "3e07a9b8db351d48"
             ],
             [
-                "539565975c8a6a54"
+                "3e444ebc.b3a102"
             ],
             [
                 "a19e493b.49cd68"
             ],
             [
+                "539565975c8a6a54"
+            ],
+            [
+                "a88b9898.287c38",
+                "4647316808d78355"
+            ],
+            [
                 "b5b4e683f02ca9f3"
             ],
             [
-                "c6724f39.53f47"
-            ],
-            [
-                "a88b9898.287c38"
+                "95811a33.4d7d18"
             ]
         ]
     },
@@ -17103,7 +17105,7 @@
         "wires": [
             [
                 "1e4e617e.247a5f",
-                "80e36239586e7edc"
+                "b0dc3ddb928b3d38"
             ]
         ]
     },
@@ -17894,9 +17896,35 @@
             "d8c7329f354642ba",
             "ee3e825fcad82993"
         ],
-        "x": 1565,
-        "y": 420,
+        "x": 1555,
+        "y": 400,
         "wires": []
+    },
+    {
+        "id": "b0dc3ddb928b3d38",
+        "type": "delay",
+        "z": "4edd86b6.331768",
+        "g": "b01d69bb34a09e41",
+        "name": "",
+        "pauseType": "timed",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1190,
+        "y": 400,
+        "wires": [
+            [
+                "80e36239586e7edc"
+            ]
+        ]
     },
     {
         "id": "4c1858d290c94d44",
