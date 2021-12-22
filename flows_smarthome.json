@@ -17963,7 +17963,7 @@
         "op2": "false",
         "op1type": "nul",
         "op2type": "bool",
-        "duration": "10",
+        "duration": "3",
         "extend": false,
         "overrideDelay": true,
         "units": "min",
@@ -18004,6 +18004,7 @@
         "officon": "remove_red_eye",
         "offcolor": "grey",
         "animate": true,
+        "className": "",
         "x": 330,
         "y": 360,
         "wires": [
@@ -18094,7 +18095,8 @@
         "y": 400,
         "wires": [
             [
-                "e1e3a6e5d53d0bbb"
+                "e1e3a6e5d53d0bbb",
+                "e362a8900a8120ae"
             ]
         ]
     },
@@ -18148,11 +18150,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 230,
-        "y": 180,
+        "x": 310,
+        "y": 300,
         "wires": [
             [
-                "7a8e7fdc0cb811ee"
+                "047237403aaab33f"
             ]
         ]
     },
@@ -18403,7 +18405,9 @@
         "x": 600,
         "y": 500,
         "wires": [
-            []
+            [
+                "e362a8900a8120ae"
+            ]
         ]
     },
     {
@@ -18431,6 +18435,65 @@
         "wires": [
             [
                 "2ebf80ed57b96fc3"
+            ]
+        ]
+    },
+    {
+        "id": "047237403aaab33f",
+        "type": "ui_switch",
+        "z": "a9a601907d96eb09",
+        "name": "BAD",
+        "label": "DOOR",
+        "tooltip": "",
+        "group": "9f7c23e0bf86f5c3",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-unlock",
+        "oncolor": "red",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-lock",
+        "offcolor": "green",
+        "animate": true,
+        "className": "",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "7a8e7fdc0cb811ee"
+            ]
+        ]
+    },
+    {
+        "id": "e362a8900a8120ae",
+        "type": "trigger",
+        "z": "a9a601907d96eb09",
+        "name": "OFF",
+        "op1": "",
+        "op2": "false",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "hr",
+        "reset": "true",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 870,
+        "y": 460,
+        "wires": [
+            [
+                "27499465def8b21b"
             ]
         ]
     }
