@@ -607,9 +607,7 @@
             "6e1a0143.f51f8"
         ],
         "x": 194,
-        "y": 1559,
-        "w": 1562,
-        "h": 182
+        "y": 1559
     },
     {
         "id": "a7b26502af3b65e3",
@@ -631,9 +629,7 @@
             "87d1ce3c19202d34"
         ],
         "x": 194,
-        "y": 1339,
-        "w": 1562,
-        "h": 202
+        "y": 1339
     },
     {
         "id": "172b4292bafc68a7",
@@ -663,9 +659,7 @@
             "64836e55479f085c"
         ],
         "x": 194,
-        "y": 1039,
-        "w": 1562,
-        "h": 289.5
+        "y": 1039
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -702,9 +696,7 @@
             "1d0274467a873b73"
         ],
         "x": 194,
-        "y": 739,
-        "w": 1562,
-        "h": 282
+        "y": 739
     },
     {
         "id": "dccbff74.2769",
@@ -10148,7 +10140,7 @@
         "type": "function",
         "z": "8b99f8fe.7b27b8",
         "name": "Home",
-        "func": "msg.payload = {\"mode\":\"home\"};\n// global.set(\"Mode\", \"home\")\nreturn msg;",
+        "func": "// msg.payload = {\"mode\":\"home\"};\n// global.set(\"Mode\", \"home\")\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10169,7 +10161,7 @@
         "type": "function",
         "z": "8b99f8fe.7b27b8",
         "name": "Away",
-        "func": "msg.payload = {\"mode\":\"away\"};\n// global.set(\"Mode\", \"away\")\nreturn msg;",
+        "func": "// msg.payload = {\"mode\":\"away\"};\n// global.set(\"Mode\", \"away\")\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -11419,7 +11411,9 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
+                "p": "reset",
+                "v": "true",
+                "vt": "bool"
             },
             {
                 "p": "topic",
@@ -11431,12 +11425,12 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1170,
+        "x": 1160,
         "y": 160,
         "wires": [
-            []
+            [
+                "a5d3065e.5a0698"
+            ]
         ]
     },
     {
@@ -11468,6 +11462,64 @@
             ],
             [
                 "7cc0632f36592083",
+                "e4c32eed.12537"
+            ]
+        ]
+    },
+    {
+        "id": "1ed940e00d07f59c",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2020,
+        "y": 80,
+        "wires": [
+            [
+                "f0615fd.9f26ba"
+            ]
+        ]
+    },
+    {
+        "id": "412bcdd297a850ad",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2030,
+        "y": 400,
+        "wires": [
+            [
                 "e4c32eed.12537"
             ]
         ]
@@ -17975,7 +18027,8 @@
         "y": 400,
         "wires": [
             [
-                "27499465def8b21b"
+                "27499465def8b21b",
+                "5ba4b6c089aaea41"
             ]
         ]
     },
