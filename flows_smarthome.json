@@ -712,7 +712,6 @@
             "50b0d259.df502c",
             "551be057.65bed",
             "18b93929.bea567",
-            "939d1d44.2632e",
             "876c799e.859a08",
             "6e1a0143.f51f8",
             "a4afb1bbd79c5da6",
@@ -720,7 +719,7 @@
             "c0a924816dea4ee8"
         ],
         "x": 434,
-        "y": 1159,
+        "y": 1259,
         "w": 1062,
         "h": 202
     },
@@ -737,12 +736,15 @@
             "dcf434ce.e89888",
             "b05e450967f5da8d",
             "87d1ce3c19202d34",
-            "4ce3539c5f7a0ca7"
+            "4ce3539c5f7a0ca7",
+            "f9450bda48f83deb",
+            "f539323231f77776",
+            "b9eed7dde8000c3e"
         ],
         "x": 434,
         "y": 1059,
         "w": 1062,
-        "h": 82
+        "h": 142
     },
     {
         "id": "172b4292bafc68a7",
@@ -1098,28 +1100,6 @@
         "port": "8009"
     },
     {
-        "id": "eca6af44.5297b",
-        "type": "mqtt-broker",
-        "name": "MQTT",
-        "broker": "dockerpi.local",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": 4,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
         "id": "c070ecdb.6d5ce",
         "type": "ui_group",
         "z": "1c11632f.f206fd",
@@ -1262,8 +1242,10 @@
         "broker": "localhost",
         "port": "1883",
         "clientid": "",
+        "autoConnect": true,
         "usetls": false,
         "compatmode": false,
+        "protocolVersion": 4,
         "keepalive": "60",
         "cleansession": true,
         "birthTopic": "",
@@ -1472,27 +1454,6 @@
         "disp": true,
         "width": "24",
         "collapse": false
-    },
-    {
-        "id": "84b34dd8.319a2",
-        "type": "mqtt-broker",
-        "name": "MQTT_Broker",
-        "broker": "192.168.16.76",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
     },
     {
         "id": "c390d8f.7bd6628",
@@ -7754,7 +7715,7 @@
             "64bc6db.9a90194"
         ],
         "x": 1455,
-        "y": 1200,
+        "y": 1300,
         "wires": []
     },
     {
@@ -7836,7 +7797,8 @@
         "y": 1100,
         "wires": [
             [
-                "b5c52e38.5a0b5"
+                "b5c52e38.5a0b5",
+                "f539323231f77776"
             ]
         ]
     },
@@ -8158,7 +8120,7 @@
         "animate": true,
         "className": "",
         "x": 600,
-        "y": 1200,
+        "y": 1300,
         "wires": [
             [
                 "551be057.65bed"
@@ -8175,7 +8137,7 @@
             "9ace10c4.4ce8f"
         ],
         "x": 475,
-        "y": 1200,
+        "y": 1300,
         "wires": [
             [
                 "af18fdf6.83584"
@@ -8587,7 +8549,7 @@
         "repair": false,
         "outputs": 1,
         "x": 830,
-        "y": 1200,
+        "y": 1300,
         "wires": [
             [
                 "876c799e.859a08"
@@ -8664,8 +8626,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1150,
-        "y": 1260,
+        "x": 1130,
+        "y": 1380,
         "wires": [
             [
                 "a4afb1bbd79c5da6"
@@ -8685,10 +8647,11 @@
         "startOffset": 0,
         "endOffset": 0,
         "x": 970,
-        "y": 1200,
+        "y": 1300,
         "wires": [
             [
-                "a4afb1bbd79c5da6"
+                "a4afb1bbd79c5da6",
+                "c0a924816dea4ee8"
             ],
             [
                 "d3daac16ab6cdf92"
@@ -8994,24 +8957,6 @@
         "wires": []
     },
     {
-        "id": "939d1d44.2632e",
-        "type": "link in",
-        "z": "aa0ae7ae.75d228",
-        "g": "4764ba70f833e4a9",
-        "name": "Block Bedroom",
-        "links": [
-            "f7029354.44404"
-        ],
-        "x": 1185,
-        "y": 1320,
-        "wires": [
-            [
-                "a4afb1bbd79c5da6",
-                "c0a924816dea4ee8"
-            ]
-        ]
-    },
-    {
         "id": "579bb856c24442fe",
         "type": "inject",
         "z": "aa0ae7ae.75d228",
@@ -9057,7 +9002,7 @@
         "to": "",
         "reg": false,
         "x": 1020,
-        "y": 960,
+        "y": 880,
         "wires": [
             []
         ]
@@ -9284,7 +9229,8 @@
         "links": [
             "63e9f9b.1d13608",
             "d4cd1de.82711e",
-            "e92f253c.11b9b8"
+            "e92f253c.11b9b8",
+            "b9eed7dde8000c3e"
         ],
         "x": 475,
         "y": 740,
@@ -9602,7 +9548,7 @@
             }
         ],
         "x": 1250,
-        "y": 1200,
+        "y": 1300,
         "wires": [
             [
                 "6e1a0143.f51f8"
@@ -9628,7 +9574,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 970,
-        "y": 1260,
+        "y": 1360,
         "wires": [
             [
                 "18b93929.bea567",
@@ -9657,7 +9603,7 @@
         "to": "",
         "reg": false,
         "x": 970,
-        "y": 1320,
+        "y": 1420,
         "wires": [
             [
                 "d3daac16ab6cdf92"
@@ -9697,6 +9643,70 @@
                 "882dbe4f.06e99"
             ]
         ]
+    },
+    {
+        "id": "f9450bda48f83deb",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "g": "a7b26502af3b65e3",
+        "name": "home",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "away",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 730,
+        "y": 1160,
+        "wires": [
+            [
+                "b9eed7dde8000c3e"
+            ]
+        ]
+    },
+    {
+        "id": "f539323231f77776",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "g": "a7b26502af3b65e3",
+        "name": "Movement",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 1160,
+        "wires": [
+            [
+                "f9450bda48f83deb"
+            ]
+        ]
+    },
+    {
+        "id": "b9eed7dde8000c3e",
+        "type": "link out",
+        "z": "aa0ae7ae.75d228",
+        "g": "a7b26502af3b65e3",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "be2ad471.d9c448"
+        ],
+        "x": 845,
+        "y": 1160,
+        "wires": []
     },
     {
         "id": "9c18ec5f.f9594",
@@ -11494,7 +11504,7 @@
         "oauthClient": "4ec8324b.b2dc1c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
-        "value": "18",
+        "value": "20",
         "x": 2630,
         "y": 320,
         "wires": []
@@ -11538,6 +11548,66 @@
                 "d1ebc40657a5f26c"
             ]
         ]
+    },
+    {
+        "id": "ccbb6a685833dc60",
+        "type": "Unifi",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Heggland",
+        "ip": "178.128.169.181",
+        "port": 8443,
+        "site": "7vyhbfa5",
+        "command": "20",
+        "unifios": false,
+        "x": 800,
+        "y": 1040,
+        "wires": [
+            [
+                "0a35c796e2ac3dba"
+            ]
+        ]
+    },
+    {
+        "id": "0d95f81c907bb18f",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "SiteStats",
+                "v": "SiteStats",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 480,
+        "y": 1020,
+        "wires": [
+            [
+                "ccbb6a685833dc60"
+            ]
+        ]
+    },
+    {
+        "id": "0a35c796e2ac3dba",
+        "type": "debug",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 960,
+        "wires": []
     },
     {
         "id": "ddc8b687.374538",
@@ -18432,7 +18502,7 @@
             [
                 "5ba4b6c089aaea41",
                 "a3f0cad940b47aa1",
-                "2ebf80ed57b96fc3"
+                "38557f4408523618"
             ],
             [
                 "2cd7beb6601eb278"
@@ -19587,6 +19657,60 @@
             [
                 "99e9e6f31ceca4c4",
                 "83665e5eeb0c9dd4"
+            ]
+        ]
+    },
+    {
+        "id": "2b2b6a034a9b1aef",
+        "type": "mqtt in",
+        "z": "021cd6ea3e90db93",
+        "name": "",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "5d47569e31e42f22",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 320,
+        "y": 620,
+        "wires": [
+            [
+                "06cc8221613adb70"
+            ]
+        ]
+    },
+    {
+        "id": "f3d3a422e568d316",
+        "type": "debug",
+        "z": "021cd6ea3e90db93",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "06cc8221613adb70",
+        "type": "json",
+        "z": "021cd6ea3e90db93",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 470,
+        "y": 720,
+        "wires": [
+            [
+                "f3d3a422e568d316"
             ]
         ]
     }
