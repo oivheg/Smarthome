@@ -757,18 +757,15 @@
         "nodes": [
             "a3713cf3.b331a",
             "f66e7e24.aca9d",
-            "f279d186572f03a7",
             "7a4a01ee.c97e",
-            "2ec07ac4a1fb75e1",
             "21c80566.d9201a",
-            "b627678e38af939c",
             "183c95c7745f2ea4",
-            "715b85efeb923e24"
+            "bc57e78aaf68965d"
         ],
         "x": 434,
         "y": 839,
         "w": 1062,
-        "h": 202
+        "h": 142
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -7780,7 +7777,7 @@
         "y": 940,
         "wires": [
             [
-                "f279d186572f03a7"
+                "bc57e78aaf68965d"
             ]
         ]
     },
@@ -8982,63 +8979,6 @@
         ]
     },
     {
-        "id": "2ec07ac4a1fb75e1",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "g": "172b4292bafc68a7",
-        "name": "B-Presence:T",
-        "rules": [
-            {
-                "t": "set",
-                "p": "B-Presence",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1020,
-        "y": 880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f279d186572f03a7",
-        "type": "switch",
-        "z": "aa0ae7ae.75d228",
-        "g": "172b4292bafc68a7",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 790,
-        "y": 940,
-        "wires": [
-            [
-                "2ec07ac4a1fb75e1",
-                "183c95c7745f2ea4"
-            ],
-            [
-                "715b85efeb923e24"
-            ]
-        ]
-    },
-    {
         "id": "b05e450967f5da8d",
         "type": "change",
         "z": "aa0ae7ae.75d228",
@@ -9133,32 +9073,6 @@
         "x": 1455,
         "y": 1100,
         "wires": []
-    },
-    {
-        "id": "b627678e38af939c",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "g": "172b4292bafc68a7",
-        "name": "B-Presence:F",
-        "rules": [
-            {
-                "t": "set",
-                "p": "B-Presence",
-                "pt": "global",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1240,
-        "y": 1000,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "2cc83436.3fa25c",
@@ -9462,38 +9376,6 @@
         ]
     },
     {
-        "id": "715b85efeb923e24",
-        "type": "switch",
-        "z": "aa0ae7ae.75d228",
-        "g": "172b4292bafc68a7",
-        "name": "TV IS OFF ? ",
-        "property": "isStandBy",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "null"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1010,
-        "y": 1000,
-        "wires": [
-            [
-                "183c95c7745f2ea4",
-                "b627678e38af939c"
-            ],
-            [
-                "183c95c7745f2ea4",
-                "b627678e38af939c"
-            ]
-        ]
-    },
-    {
         "id": "4ce3539c5f7a0ca7",
         "type": "subflow:c15399232bac2ca3",
         "z": "aa0ae7ae.75d228",
@@ -9707,6 +9589,50 @@
         "x": 845,
         "y": 1160,
         "wires": []
+    },
+    {
+        "id": "bc57e78aaf68965d",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "g": "172b4292bafc68a7",
+        "name": "B-Presence",
+        "rules": [
+            {
+                "t": "set",
+                "p": "B-Presence",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 940,
+        "wires": [
+            [
+                "183c95c7745f2ea4"
+            ]
+        ]
+    },
+    {
+        "id": "7c376eb857a4e46f",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "BasementBlock",
+        "links": [
+            "8a0ab10e55653060"
+        ],
+        "x": 695,
+        "y": 240,
+        "wires": [
+            [
+                "d3c43c4.fea9bc"
+            ]
+        ]
     },
     {
         "id": "9c18ec5f.f9594",
@@ -15553,11 +15479,13 @@
         "y": 580,
         "wires": [
             [
-                "a1111ae.032f9e8"
+                "a1111ae.032f9e8",
+                "e926d9379abd724f"
             ],
             [
                 "352c4db3.c00bc2",
-                "7207e65ef67dab2d"
+                "7207e65ef67dab2d",
+                "9d2af7af886c38df"
             ]
         ]
     },
@@ -15899,6 +15827,73 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "e926d9379abd724f",
+        "type": "change",
+        "z": "1c88039c.df631c",
+        "name": "GO",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "GO",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 520,
+        "wires": [
+            [
+                "8a0ab10e55653060"
+            ]
+        ]
+    },
+    {
+        "id": "9d2af7af886c38df",
+        "type": "change",
+        "z": "1c88039c.df631c",
+        "name": "STOP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "STOP",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1030,
+        "y": 680,
+        "wires": [
+            [
+                "8a0ab10e55653060"
+            ]
+        ]
+    },
+    {
+        "id": "8a0ab10e55653060",
+        "type": "link out",
+        "z": "1c88039c.df631c",
+        "name": "block light",
+        "mode": "link",
+        "links": [
+            "7c376eb857a4e46f"
+        ],
+        "x": 1245,
+        "y": 560,
+        "wires": []
     },
     {
         "id": "e821612e.e3cf4",
