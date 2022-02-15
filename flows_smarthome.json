@@ -600,7 +600,9 @@
             "1e397062fcfbb0e9"
         ],
         "x": 774,
-        "y": 19
+        "y": 19,
+        "w": 682,
+        "h": 82
     },
     {
         "id": "88b8cd3b91daf3ae",
@@ -621,7 +623,9 @@
             "ad0eef5605ed22c5"
         ],
         "x": 1494,
-        "y": 19
+        "y": 19,
+        "w": 552,
+        "h": 162
     },
     {
         "id": "b01d69bb34a09e41",
@@ -647,7 +651,9 @@
             "b0dc3ddb928b3d38"
         ],
         "x": 754,
-        "y": 239
+        "y": 239,
+        "w": 1032,
+        "h": 242
     },
     {
         "id": "8cba373d8f4d3966",
@@ -669,7 +675,9 @@
             "c8ca9cb76832f227"
         ],
         "x": 154,
-        "y": 159
+        "y": 159,
+        "w": 482,
+        "h": 142
     },
     {
         "id": "c4cf42bd22da0e90",
@@ -697,7 +705,9 @@
             "76142807ba013dd5"
         ],
         "x": 754,
-        "y": 459
+        "y": 459,
+        "w": 1072,
+        "h": 442
     },
     {
         "id": "4764ba70f833e4a9",
@@ -719,9 +729,7 @@
             "c0a924816dea4ee8"
         ],
         "x": 434,
-        "y": 1259,
-        "w": 1062,
-        "h": 202
+        "y": 1259
     },
     {
         "id": "a7b26502af3b65e3",
@@ -742,9 +750,7 @@
             "b9eed7dde8000c3e"
         ],
         "x": 434,
-        "y": 1059,
-        "w": 1062,
-        "h": 142
+        "y": 1059
     },
     {
         "id": "172b4292bafc68a7",
@@ -763,9 +769,7 @@
             "bc57e78aaf68965d"
         ],
         "x": 434,
-        "y": 839,
-        "w": 1062,
-        "h": 142
+        "y": 839
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -788,17 +792,7 @@
             "ba9ff3900f74a170"
         ],
         "x": 434,
-        "y": 619,
-        "w": 1062,
-        "h": 202
-    },
-    {
-        "id": "dccbff74.2769",
-        "type": "node-hue-bridge",
-        "name": "Hue Bridge",
-        "address": "192.168.1.53",
-        "key": "VBGb8l3baRWQyLpSQK2-GAB6H0UsRj37n3e51l3O",
-        "interval": "10000"
+        "y": 619
     },
     {
         "id": "c40d1711.7fd448",
@@ -3521,7 +3515,7 @@
         "type": "node-hue-out",
         "z": "1c11632f.f206fd",
         "d": true,
-        "server": "dccbff74.2769",
+        "server": "",
         "lightID": "light8",
         "name": "Karinas Office",
         "x": 170,
@@ -3537,7 +3531,7 @@
         "type": "node-hue-in",
         "z": "1c11632f.f206fd",
         "d": true,
-        "server": "dccbff74.2769",
+        "server": "",
         "lightID": "light8",
         "name": "Karinas Office",
         "x": 1980,
@@ -9087,7 +9081,6 @@
         "y": 660,
         "wires": [
             [
-                "d17d889454f3d3a1",
                 "d17d889454f3d3a1"
             ]
         ]
@@ -9112,8 +9105,6 @@
         "y": 740,
         "wires": [
             [
-                "18e793bb.41ccac",
-                "ed863371775575ab",
                 "18e793bb.41ccac",
                 "ed863371775575ab",
                 "ca9cda18826d54da"
@@ -9150,8 +9141,6 @@
         "y": 740,
         "wires": [
             [
-                "45e7346a.4285dc",
-                "167a965f.fa254a",
                 "45e7346a.4285dc",
                 "167a965f.fa254a"
             ]
@@ -9249,7 +9238,6 @@
         "y": 740,
         "wires": [
             [
-                "e2d7c57f5c31b977",
                 "e2d7c57f5c31b977"
             ]
         ]
@@ -9278,7 +9266,6 @@
         "y": 740,
         "wires": [
             [
-                "d17d889454f3d3a1",
                 "d17d889454f3d3a1"
             ]
         ]
@@ -11141,9 +11128,9 @@
         "wires": [
             [
                 "e4c32eed.12537",
-                "fde9f041.eb152",
                 "a5d3065e.5a0698",
-                "7cc0632f36592083"
+                "7cc0632f36592083",
+                "4241a94a84740929"
             ]
         ]
     },
@@ -11169,7 +11156,7 @@
         "wires": [
             [
                 "f0615fd.9f26ba",
-                "15e4457d.ab633b"
+                "8ebc2701b1ba1795"
             ]
         ]
     },
@@ -11213,43 +11200,6 @@
         "wires": [
             [
                 "e2460a6c.579118"
-            ]
-        ]
-    },
-    {
-        "id": "15e4457d.ab633b",
-        "type": "function",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Text: English",
-        "func": "  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: \"System is HOME\",\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\n\n\nreturn [msg];",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2030,
-        "y": 240,
-        "wires": [
-            [
-                "dc33a268.a0933"
-            ]
-        ]
-    },
-    {
-        "id": "fde9f041.eb152",
-        "type": "function",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Text: English",
-        "func": "  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: \"System is AWAY\",\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\n\n\nreturn [msg];",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 2030,
-        "y": 280,
-        "wires": [
-            [
-                "dc33a268.a0933"
             ]
         ]
     },
@@ -11534,6 +11484,87 @@
         "x": 1140,
         "y": 960,
         "wires": []
+    },
+    {
+        "id": "10da2dda5a4ff101",
+        "type": "inject",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1890,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4241a94a84740929",
+        "type": "change",
+        "z": "8b99f8fe.7b27b8",
+        "name": "System is AWAY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "System is AWAY",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2040,
+        "y": 280,
+        "wires": [
+            [
+                "dc33a268.a0933"
+            ]
+        ]
+    },
+    {
+        "id": "8ebc2701b1ba1795",
+        "type": "change",
+        "z": "8b99f8fe.7b27b8",
+        "name": "System is HOME",
+        "rules": [
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "System is HOME",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2050,
+        "y": 240,
+        "wires": [
+            [
+                "dc33a268.a0933"
+            ]
+        ]
     },
     {
         "id": "ddc8b687.374538",
