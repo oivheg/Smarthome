@@ -52,7 +52,7 @@
         "id": "f487aa99.386108",
         "type": "tab",
         "label": "Data",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -73,7 +73,7 @@
         "id": "bd342fd3.e926f",
         "type": "tab",
         "label": "FaceReq",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
@@ -600,9 +600,7 @@
             "1e397062fcfbb0e9"
         ],
         "x": 774,
-        "y": 19,
-        "w": 682,
-        "h": 82
+        "y": 19
     },
     {
         "id": "88b8cd3b91daf3ae",
@@ -623,9 +621,7 @@
             "ad0eef5605ed22c5"
         ],
         "x": 1494,
-        "y": 19,
-        "w": 552,
-        "h": 162
+        "y": 19
     },
     {
         "id": "b01d69bb34a09e41",
@@ -651,9 +647,7 @@
             "b0dc3ddb928b3d38"
         ],
         "x": 754,
-        "y": 239,
-        "w": 1032,
-        "h": 242
+        "y": 239
     },
     {
         "id": "8cba373d8f4d3966",
@@ -675,9 +669,7 @@
             "c8ca9cb76832f227"
         ],
         "x": 154,
-        "y": 159,
-        "w": 482,
-        "h": 142
+        "y": 159
     },
     {
         "id": "c4cf42bd22da0e90",
@@ -702,12 +694,11 @@
             "c39c0770f61b61c7",
             "462b887551d30bf4",
             "80b9f8ea0180e4ee",
-            "76142807ba013dd5"
+            "76142807ba013dd5",
+            "425645f554c1935f"
         ],
         "x": 754,
-        "y": 459,
-        "w": 1072,
-        "h": 442
+        "y": 459
     },
     {
         "id": "4764ba70f833e4a9",
@@ -729,7 +720,9 @@
             "c0a924816dea4ee8"
         ],
         "x": 434,
-        "y": 1259
+        "y": 1259,
+        "w": 1062,
+        "h": 202
     },
     {
         "id": "a7b26502af3b65e3",
@@ -750,7 +743,9 @@
             "b9eed7dde8000c3e"
         ],
         "x": 434,
-        "y": 1059
+        "y": 1059,
+        "w": 1062,
+        "h": 142
     },
     {
         "id": "172b4292bafc68a7",
@@ -769,7 +764,9 @@
             "bc57e78aaf68965d"
         ],
         "x": 434,
-        "y": 839
+        "y": 839,
+        "w": 1062,
+        "h": 142
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -792,7 +789,9 @@
             "ba9ff3900f74a170"
         ],
         "x": 434,
-        "y": 619
+        "y": 619,
+        "w": 1062,
+        "h": 202
     },
     {
         "id": "c40d1711.7fd448",
@@ -900,16 +899,6 @@
         "hidden": false
     },
     {
-        "id": "8a264f87.d9145",
-        "type": "ui_group",
-        "name": "1ETG",
-        "tab": "8d9ae12b.2a6f5",
-        "order": 5,
-        "disp": false,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "530528aa.2006c8",
         "type": "pushbullet-config",
         "name": "Øivind"
@@ -927,13 +916,6 @@
         "ipaddress": "192.168.1.89",
         "name": "Kjeller: RU",
         "language": "ru"
-    },
-    {
-        "id": "35cb409b.4a073",
-        "type": "googlehome-config-node",
-        "ipaddress": "192.168.1.89",
-        "name": "Kjeller: ENG",
-        "language": "en"
     },
     {
         "id": "5ee6b185.35f2d",
@@ -967,16 +949,6 @@
         "order": 1,
         "disp": true,
         "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "efd0ae.1a06bf5",
-        "type": "ui_group",
-        "name": "1 Etg",
-        "tab": "8d9ae12b.2a6f5",
-        "order": 3,
-        "disp": true,
-        "width": 3,
         "collapse": false
     },
     {
@@ -1061,20 +1033,6 @@
         "collapse": false
     },
     {
-        "id": "74ecc7dd.ae2238",
-        "type": "googlehome-config-node",
-        "ipaddress": "192.168.1.44",
-        "name": "Stude: ENG",
-        "language": "en"
-    },
-    {
-        "id": "8850956.8b49b68",
-        "type": "googlehome-config-node",
-        "ipaddress": "192.168.1.67",
-        "name": "office",
-        "language": "en"
-    },
-    {
         "id": "862863a9.265f3",
         "type": "castv2-connection",
         "name": "",
@@ -1089,26 +1047,6 @@
         "target": "Music",
         "host": "",
         "port": "8009"
-    },
-    {
-        "id": "c070ecdb.6d5ce",
-        "type": "ui_group",
-        "z": "1c11632f.f206fd",
-        "name": "Click",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "5"
-    },
-    {
-        "id": "6f086c55.b8b294",
-        "type": "ui_group",
-        "name": "Basement",
-        "tab": "8d9ae12b.2a6f5",
-        "order": 6,
-        "disp": false,
-        "width": "6",
-        "collapse": false
     },
     {
         "id": "1744610e.18ab3f",
@@ -1299,50 +1237,12 @@
         "sessionExpiry": ""
     },
     {
-        "id": "1ebf33a2.f94f3c",
-        "type": "ui_group",
-        "name": "FIMP",
-        "tab": "4de6cf0d.5a88",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
         "id": "4de6cf0d.5a88",
         "type": "ui_tab",
         "name": "Home",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
-    },
-    {
-        "id": "6517c6a0.051018",
-        "type": "serial-port",
-        "serialport": "COM4",
-        "serialbaud": "9600",
-        "databits": "8",
-        "parity": "none",
-        "stopbits": "1",
-        "newline": "\\n",
-        "bin": "false",
-        "out": "char",
-        "addchar": false
-    },
-    {
-        "id": "1d707c49.07a204",
-        "type": "server",
-        "name": "Home Assistant [mine]"
-    },
-    {
-        "id": "5a16edf3.798c04",
-        "type": "ui_group",
-        "name": "Wipe all Graphs",
-        "tab": "cababfc5.7b2f6",
-        "order": 4,
-        "disp": true,
-        "width": "4",
-        "collapse": false
     },
     {
         "id": "cababfc5.7b2f6",
@@ -1427,33 +1327,6 @@
         "willPayload": "",
         "willMsg": {},
         "sessionExpiry": ""
-    },
-    {
-        "id": "f4fe921756746d7c",
-        "type": "castv2-connection",
-        "name": "",
-        "target": "",
-        "host": "",
-        "port": "8009"
-    },
-    {
-        "id": "206e9b0.9ab15e6",
-        "type": "ui_group",
-        "name": "Pers 77",
-        "tab": "6e6538b5.f114d8",
-        "order": 1,
-        "disp": true,
-        "width": "24",
-        "collapse": false
-    },
-    {
-        "id": "c390d8f.7bd6628",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "",
-        "disp": true,
-        "width": "6",
-        "collapse": false
     },
     {
         "id": "6e6538b5.f114d8",
@@ -3403,142 +3276,6 @@
         ]
     },
     {
-        "id": "c93d9ccb.30d74",
-        "type": "function",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "On\\Off",
-        "func": "msg.payload;\n//msg.payload.on =  msg.payload.power === \"on\" ? true : false \nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1350,
-        "y": 1220,
-        "wires": [
-            [
-                "2552d668.c01cea",
-                "8f119d5d.e9645",
-                "bb47679e.49ecb8"
-            ]
-        ]
-    },
-    {
-        "id": "b60e383f.f82dc8",
-        "type": "function",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Set Karinas Office",
-        "func": "let msg2 = {id: \"karina\",name:\"Karinas office\", power : msg.payload.on === true ? \"on\" : \"off\"}\nreturn msg2;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 370,
-        "y": 1060,
-        "wires": [
-            [
-                "66d9f1c.785941"
-            ]
-        ]
-    },
-    {
-        "id": "2552d668.c01cea",
-        "type": "switch",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Hue Lights",
-        "property": "payload.name",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Karinas office",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 1590,
-        "y": 1180,
-        "wires": [
-            [
-                "e0c331e3.e6648"
-            ]
-        ]
-    },
-    {
-        "id": "343547fd.e77fb8",
-        "type": "ui_template",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "group": "8a264f87.d9145",
-        "name": "1 ETG",
-        "order": 1,
-        "width": 6,
-        "height": 11,
-        "format": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n</head>\n<body style=\"margin: 0px;\">\n\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"318\" height=\"800\"  xml:space=\"preserve\" id=\"i02XXX\">\n    <!-- Generated by PaintCode - http://www.paintcodeapp.com -->\n    <defs>\n        <pattern id=\"i1floorPlan\" patternUnits=\"userSpaceOnUse\" width=\"318\" height=\"600\" align=\"middle\">\n            <image xlink:href=\"http://toyotacarina.net/SmartHome/1stFloor.jpg\" x=\"0\" y=\"0\" width=\"318\" height=\"600\" align=\"middle\"></image>\n        </pattern>\n    </defs>\n    <rect id=\"i02XXX-floorPlan\" stroke=\"none\" fill=\"url(#i1floorPlan)\" x=\"0\" y=\"0\" width=\"318\" height=\"600\" align=\"middle\"></rect>\n    <g id=\"i02XXX-allSensors\">\n        <g id=\"i02XXX-motionSensors\" opacity=\"0.5\">\n            \n            <g id=\"Livingroom\" transform=\"translate(430,408) rotate(90)\">\n                <svg class=\"svg-rect\" width=\"149\" height=\"67\">\n                    <rect id=\"Stue\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Lys i stue</text>\n                </svg>\n            </g>\n               <g id=\"KarinasOffice\" transform=\"translate(430,40) rotate(90)\">\n                <svg class=\"svg-rect\" width=\"149\" height=\"67\">\n                    <rect id=\"Karinas office\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Karinas office</text>\n                </svg>\n            </g>\n            <g id=\"Kitchen\" transform=\"translate(0,410)\">\n                <svg class=\"svg-rect\" width=\"140\" height=\"70\">\n                    <rect id=\"Kjøkken\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Kjøkken lys</text>\n                </svg>  \n            </g>\n             <g id=\"Gusetroom\" transform=\"translate(0,150)\">\n                <svg class=\"svg-rect\" width=\"120\" height=\"75\">\n                    <rect id=\"Kontor: Lys\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Guestroom lys</text>\n                </svg>                \n            </g>\n             <g id=\"Gang\" transform=\"translate(150,100)\">\n                <svg class=\"svg-rect\" width=\"50\" height=\"75\">\n                    <rect id=\"Gangen\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Gang</text>\n                </svg>                \n            </g>\n        </g>\n    </g>\n</svg>\n\n<script>\nvar light = \"on\";\nvar name = \"lys\";\nvar retur = \"mothing\";\nfunction myFunction(clicked_id) {\n    \n    //  document.getElementById(clicked_id).style.fill=\"yellow\";\n   var fill = document.getElementById(clicked_id).style.fill;\n    if (fill ==  \"yellow\")  {\n    document.getElementById(clicked_id).style.fill=\"white\";\n    light = \"off\";\n    name = clicked_id;\n  } else {\n    document.getElementById(clicked_id).style.fill=\"yellow\";\n    light = \"on\";\n     name = clicked_id;\n    \n  }\n \n}\n\nthis.scope.action = function() { return {\"power\" :light, \"name\": name }; }\n\n</script>\n<script>\n  (function(scope){ \n\tscope.$watch('msg', function(msg) {\n\t\tif (msg){\n\t\t    console.log(msg.payload.jquerySelector);\n\t\t    console.log(document.getElementById(String(msg.payload.jquerySelector)));\n\t\t\tif (msg.payload.status ==  \"off\")  {\n\t\t\t\tdocument.getElementById(String(msg.payload.jquerySelector)).style.fill=\"white\";\n\t\t\t} else {\n\t\t\t\tdocument.getElementById(String(msg.payload.jquerySelector)).style.fill=\"yellow\";\n\t\t\t}                     \n\t\t}\n\t});\n})(scope);\n</script>\n</body>\n</html>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": false,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1210,
-        "y": 1180,
-        "wires": [
-            [
-                "c93d9ccb.30d74"
-            ]
-        ]
-    },
-    {
-        "id": "db00bb8.82e0148",
-        "type": "ui_template",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "group": "6f086c55.b8b294",
-        "name": "Basement",
-        "order": 1,
-        "width": 6,
-        "height": 11,
-        "format": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>\n</head>\n<body style=\"margin: 0px;\">\n\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"318\" height=\"800\"  xml:space=\"preserve\" id=\"i01XXX\">\n    <!-- Generated by PaintCode - http://www.paintcodeapp.com -->\n    <defs>\n        <pattern id=\"basementPattern\" patternUnits=\"userSpaceOnUse\" width=\"318\" height=\"600\" align=\"middle\">\n            <image xlink:href=\"http://toyotacarina.net/SmartHome/Basement.jpg\" x=\"0\" y=\"0\" width=\"318\" height=\"600\" align=\"middle\"></image>\n        </pattern>\n    </defs>\n    <rect id=\"i01XXX-floorPlan\" stroke=\"none\" fill=\"url(#basementPattern)\" x=\"0\" y=\"0\" width=\"318\" height=\"600\" align=\"middle\"></rect>\n      <g id=\"i01XXX-allSensors\">\n        <g id=\"i01XXX-motionSensors\" opacity=\"0.5\">\n     <g id=\"Basement\" transform=\"translate(320,350) rotate(90)\">\n                <svg class=\"svg-rect\" width=\"150\" height=\"60\">\n                    <rect id=\"Kjeller Gang\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Kjeller Lys</text>\n                </svg>                \n            </g>\n\t <g id=\"Vaskerom1\" transform=\"translate(110,100)\">\n                <svg class=\"svg-rect\" width=\"100\" height=\"70\">\n                    <rect id=\"Vaskerom: Lys\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Vaskerom</text>\n                </svg>                \n            </g>\n\t<g id=\"Closet1\" transform=\"translate(210,120)\">\n                <svg class=\"svg-rect\" width=\"100\" height=\"100\">\n                    <rect id=\"Closet\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Garderobe</text>\n                </svg>                \n            </g>\n    <g id=\"Soverommet\" transform=\"translate(20,370)\">\n                <svg class=\"svg-rect\" width=\"110\" height=\"130\">\n                    <rect id=\"Karina\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Soverom</text>\n                </svg>                \n            </g>\n    <g id=\"Gardin\" transform=\"translate(60,550)\">\n                <svg class=\"svg-rect\" width=\"110\" height=\"40\">\n                    <rect id=\"Sov_Gardin\" onclick=\"myFunction(this.id)\" ng-click=\"send({payload: action()})\" width=\"100%\" height=\"100%\" stroke=\"none\" fill=\"white\" rx=\"13\" ></rect>\n                    <text x=\"50%\" y=\"50%\" text-anchor=\"middle\" stroke=\"black\" font-family=\"HelveticaNeue-Bold, 'Helvetica Neue', Helvetica, Arial, sans-serif\" font-weight=\"bold\" font-size=\"20\">Gardin</text>\n                </svg>                \n            </g>\n        </g>   \n    </g>  \n</svg>\n<script>\nvar light = \"on\";\nvar name = \"lys\";\nvar retur = \"mothing\";\nfunction myFunction(clicked_id) {\n    \n    //  document.getElementById(clicked_id).style.fill=\"yellow\";\n   var fill = document.getElementById(clicked_id).style.fill;\n    if (fill ==  \"yellow\")  {\n    document.getElementById(clicked_id).style.fill=\"white\";\n    light = \"off\";\n    name = clicked_id;\n  } else {\n    document.getElementById(clicked_id).style.fill=\"yellow\";\n    light = \"on\";\n     name = clicked_id;\n    \n  }\n \n}\n\nthis.scope.action = function() { return {\"power\" :light, \"name\": name }; }\n\n</script>\n<script>\n  (function(scope){ \n\tscope.$watch('msg', function(msg) {\n\t\tif (msg){\n\t\t    console.log(msg.payload.jquerySelector);\n\t\t    console.log(document.getElementById(String(msg.payload.jquerySelector)));\n\t\t\tif (msg.payload.status ==  \"off\")  {\n\t\t\t\tdocument.getElementById(String(msg.payload.jquerySelector)).style.fill=\"white\";\n\t\t\t} else {\n\t\t\t\tdocument.getElementById(String(msg.payload.jquerySelector)).style.fill=\"yellow\";\n\t\t\t}                     \n\t\t}\n\t});\n})(scope);\n</script>\n</body>\n</html>\n",
-        "storeOutMessages": true,
-        "fwdInMessages": false,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 1200,
-        "y": 1260,
-        "wires": [
-            [
-                "c93d9ccb.30d74"
-            ]
-        ]
-    },
-    {
-        "id": "c2c55e51.42bd2",
-        "type": "node-hue-out",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "server": "",
-        "lightID": "light8",
-        "name": "Karinas Office",
-        "x": 170,
-        "y": 1060,
-        "wires": [
-            [
-                "b60e383f.f82dc8"
-            ]
-        ]
-    },
-    {
-        "id": "d937e7f8.315d88",
-        "type": "node-hue-in",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "server": "",
-        "lightID": "light8",
-        "name": "Karinas Office",
-        "x": 1980,
-        "y": 1180,
-        "wires": []
-    },
-    {
         "id": "e239cc32.ce75b",
         "type": "link in",
         "z": "1c11632f.f206fd",
@@ -3646,204 +3383,6 @@
         ]
     },
     {
-        "id": "66d9f1c.785941",
-        "type": "function",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Update State_1_floor",
-        "func": "let systemState = global.get(\"State_1_floor\") || {};\n\n        let name = msg.name;\n        let power = msg.power ;\n        let pay = { name,power}\n        let id = msg.id;\n        systemState[id] = pay;\n    \n\nglobal.set(\"State_1_floor\", systemState);\n\n\nreturn msg;\n\n\n\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 680,
-        "y": 1180,
-        "wires": [
-            [
-                "389edf89.60cfe",
-                "230efc3d.2db2b4"
-            ]
-        ]
-    },
-    {
-        "id": "389edf89.60cfe",
-        "type": "function",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Set State_1_floor",
-        "func": "let systemState = global.get(\"State_1_floor\") || {};\n\n\n\n    for(var k in systemState)\n    {\n        name = systemState[k].name\n        status = systemState[k].power \n        pay = {jquerySelector: name, status}\n        msg.payload = pay\n        node.send(msg)\n    }\n\n\n\n\n\n\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 990,
-        "y": 1180,
-        "wires": [
-            [
-                "343547fd.e77fb8"
-            ]
-        ]
-    },
-    {
-        "id": "79007779.8a0088",
-        "type": "function",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Update State_basement",
-        "func": "let systemState = global.get(\"State_basement\") || {};\n\n     let name = msg.name;\n        let power = msg.power ;\n        let pay = { name,power}\n        let id = msg.id;\n        systemState[id] = pay;\nglobal.set(\"State_basement\", systemState);\n\nreturn msg;\n\n\n\n\n\n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 690,
-        "y": 1260,
-        "wires": [
-            [
-                "3054be45.205a62",
-                "230efc3d.2db2b4"
-            ]
-        ]
-    },
-    {
-        "id": "3054be45.205a62",
-        "type": "function",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Set State_basement",
-        "func": "let systemState = global.get(\"State_basement\") || {};\n\n\n\n    for(var k in systemState)\n    {\n        name = systemState[k].name\n        status = systemState[k].power \n        pay = {jquerySelector: name, status}\n        msg.payload = pay\n        node.send(msg)\n    }\n\n\n\n\n\n\n\n\n",
-        "outputs": 1,
-        "noerr": 6,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 980,
-        "y": 1260,
-        "wires": [
-            [
-                "db00bb8.82e0148",
-                "4a7f1e920d6851a8"
-            ]
-        ]
-    },
-    {
-        "id": "b1e4c558.fb5618",
-        "type": "ui_ui_control",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "events": "connect",
-        "x": 640,
-        "y": 1220,
-        "wires": [
-            [
-                "c316115f.3e237"
-            ]
-        ]
-    },
-    {
-        "id": "8f119d5d.e9645",
-        "type": "switch",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Gardiner",
-        "property": "payload.name",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Sov_Gardin",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 1580,
-        "y": 1260,
-        "wires": [
-            [
-                "e2e0325d.993a1"
-            ]
-        ]
-    },
-    {
-        "id": "e2e0325d.993a1",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.on",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1760,
-        "y": 1260,
-        "wires": [
-            [
-                "b630d8c.cb7f128"
-            ]
-        ]
-    },
-    {
-        "id": "b630d8c.cb7f128",
-        "type": "link out",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Ikea: Gardin SOV",
-        "links": [
-            "6c1d6758.428808"
-        ],
-        "x": 1875,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "7f15ef4a.ce4ca",
-        "type": "rbe",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload.devices.power",
-        "x": 410,
-        "y": 1320,
-        "wires": [
-            [
-                "79007779.8a0088"
-            ]
-        ]
-    },
-    {
-        "id": "d8a4e608.f39898",
-        "type": "link in",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Sm: Gardin",
-        "links": [
-            "bb45bf3b.5ab5f"
-        ],
-        "x": 215,
-        "y": 1320,
-        "wires": [
-            [
-                "7f15ef4a.ce4ca"
-            ]
-        ]
-    },
-    {
         "id": "817f1df1.c5f98",
         "type": "exec",
         "z": "1c11632f.f206fd",
@@ -3879,35 +3418,6 @@
         "wires": [
             [
                 "817f1df1.c5f98"
-            ]
-        ]
-    },
-    {
-        "id": "8a2b5b04.944b38",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "date"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1000,
-        "y": 1220,
-        "wires": [
-            [
-                "3054be45.205a62",
-                "389edf89.60cfe"
             ]
         ]
     },
@@ -3972,172 +3482,6 @@
                 "704455a7.c3d2ec"
             ]
         ]
-    },
-    {
-        "id": "babcae54.9d1a9",
-        "type": "link in",
-        "z": "1c11632f.f206fd",
-        "name": "Light IN",
-        "links": [
-            "8ad3e3c1.ae8ea"
-        ],
-        "x": 155,
-        "y": 1220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "598481d4.859ad",
-        "type": "switch",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Gangen",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Kjøkken",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Stue",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Kontor: Lys",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Kjeller Gang",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "karinas room",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Karina",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Closet",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Vaskerom: Lys",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "dimmer",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": true,
-        "outputs": 10,
-        "x": 410,
-        "y": 1220,
-        "wires": [
-            [
-                "66d9f1c.785941"
-            ],
-            [
-                "66d9f1c.785941"
-            ],
-            [
-                "66d9f1c.785941"
-            ],
-            [
-                "66d9f1c.785941",
-                "6f8ebf30d06d9bb2"
-            ],
-            [
-                "79007779.8a0088"
-            ],
-            [
-                "66d9f1c.785941"
-            ],
-            [
-                "79007779.8a0088"
-            ],
-            [
-                "79007779.8a0088"
-            ],
-            [
-                "79007779.8a0088"
-            ],
-            [
-                "79007779.8a0088"
-            ]
-        ]
-    },
-    {
-        "id": "bb47679e.49ecb8",
-        "type": "link out",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Lights_Out",
-        "links": [
-            "93258667.8e8568"
-        ],
-        "x": 1875,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "bb42f486.70c538",
-        "type": "comment",
-        "z": "1c11632f.f206fd",
-        "name": "Phillips Hue",
-        "info": "",
-        "x": 250,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "3fe65b32.abf894",
-        "type": "comment",
-        "z": "1c11632f.f206fd",
-        "name": "Futurehome",
-        "info": "",
-        "x": 250,
-        "y": 1160,
-        "wires": []
-    },
-    {
-        "id": "3224de96.1f5772",
-        "type": "comment",
-        "z": "1c11632f.f206fd",
-        "name": "Deconz",
-        "info": "",
-        "x": 230,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "316049d.5ab63b6",
-        "type": "comment",
-        "z": "1c11632f.f206fd",
-        "name": "FloorPlan",
-        "info": "",
-        "x": 180,
-        "y": 940,
-        "wires": []
     },
     {
         "id": "128705ae.2e87ba",
@@ -4422,6 +3766,7 @@
         "tooltip": "",
         "color": "red",
         "bgcolor": "{{background}}",
+        "className": "",
         "icon": "power_settings_new",
         "payload": "false",
         "payloadType": "bool",
@@ -4490,34 +3835,6 @@
         ]
     },
     {
-        "id": "e0c331e3.e6648",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.on",
-                "pt": "msg",
-                "to": "payload.power",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1790,
-        "y": 1180,
-        "wires": [
-            [
-                "d937e7f8.315d88"
-            ]
-        ]
-    },
-    {
         "id": "a9d1416e.a3b5b",
         "type": "comment",
         "z": "1c11632f.f206fd",
@@ -4548,31 +3865,6 @@
         "wires": [
             [
                 "9ae92a2b.99c9c8"
-            ]
-        ]
-    },
-    {
-        "id": "c316115f.3e237",
-        "type": "delay",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 820,
-        "y": 1220,
-        "wires": [
-            [
-                "8a2b5b04.944b38"
             ]
         ]
     },
@@ -4684,50 +3976,27 @@
         ]
     },
     {
-        "id": "2c60aaf7.c413a6",
-        "type": "function",
-        "z": "1c11632f.f206fd",
-        "name": "Text: English",
-        "func": "msg.payload = {\n  app: \"DefaultMediaReceiver\",\n  type: \"TTS\",\n  text: msg.text,\n  speed: 1, // optional to adjust TTS speed, defaults to 1\n  language: \"en\", // optional to set TTS language, default to en\n  metadata: { // optional unless desired, follows normal metadata rules noted above\n    title: \"Media title\"\n  }\n}\n\n\n\nreturn [msg];",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1590,
-        "y": 300,
-        "wires": [
-            [
-                "50a60792.19b3e8"
-            ]
-        ]
-    },
-    {
         "id": "5c7f0a8.bbb0af4",
         "type": "inject",
         "z": "1c11632f.f206fd",
         "name": "",
         "props": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
+                "p": "text",
+                "v": "node-red have started",
                 "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": "15",
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1390,
-        "y": 240,
+        "x": 1310,
+        "y": 280,
         "wires": [
             [
-                "2c60aaf7.c413a6"
+                "6231a20f24a2e3ca"
             ]
         ]
     },
@@ -5106,19 +4375,6 @@
         ]
     },
     {
-        "id": "230efc3d.2db2b4",
-        "type": "link out",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "Update_GUI",
-        "links": [
-            "e2e578d8.d9f948"
-        ],
-        "x": 855,
-        "y": 1120,
-        "wires": []
-    },
-    {
         "id": "c720f0cc.65429",
         "type": "link in",
         "z": "1c11632f.f206fd",
@@ -5133,22 +4389,6 @@
                 "ff979eb7.893f3"
             ]
         ]
-    },
-    {
-        "id": "1c014161.23628f",
-        "type": "debug",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1580,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "0259d792f5b75f52",
@@ -5280,177 +4520,6 @@
         ]
     },
     {
-        "id": "d8c7329f354642ba",
-        "type": "link in",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "FH_MQTT_LIGHT",
-        "links": [
-            "80e36239586e7edc"
-        ],
-        "x": 135,
-        "y": 1440,
-        "wires": [
-            [
-                "ab39aa980bb90fc7"
-            ]
-        ]
-    },
-    {
-        "id": "ab39aa980bb90fc7",
-        "type": "change",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "rules": [
-            {
-                "t": "change",
-                "p": "topic",
-                "pt": "msg",
-                "from": "Office_Light",
-                "fromt": "str",
-                "to": "Kontor: Lys",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "topic",
-                "pt": "msg",
-                "from": "Hallway",
-                "fromt": "str",
-                "to": "Gangen",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "topic",
-                "pt": "msg",
-                "from": "kjøkken",
-                "fromt": "str",
-                "to": "Kjøkken",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "topic",
-                "pt": "msg",
-                "from": "bedroom",
-                "fromt": "str",
-                "to": "Karina",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "topic",
-                "pt": "msg",
-                "from": "basement",
-                "fromt": "str",
-                "to": "Kjeller Gang",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "topic",
-                "pt": "msg",
-                "from": "laundry",
-                "fromt": "str",
-                "to": "Vaskerom: Lys",
-                "tot": "str"
-            },
-            {
-                "t": "change",
-                "p": "topic",
-                "pt": "msg",
-                "from": "closet",
-                "fromt": "str",
-                "to": "Closet",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "power",
-                "pt": "msg",
-                "to": "payload.power",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "id",
-                "pt": "msg",
-                "to": "topic",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 300,
-        "y": 1440,
-        "wires": [
-            [
-                "598481d4.859ad",
-                "6f8ebf30d06d9bb2",
-                "0bbd88a2ad714740"
-            ]
-        ]
-    },
-    {
-        "id": "6f8ebf30d06d9bb2",
-        "type": "debug",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "topic",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 630,
-        "y": 1420,
-        "wires": []
-    },
-    {
-        "id": "0bbd88a2ad714740",
-        "type": "debug",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 1500,
-        "wires": []
-    },
-    {
-        "id": "4a7f1e920d6851a8",
-        "type": "debug",
-        "z": "1c11632f.f206fd",
-        "d": true,
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1160,
-        "y": 1340,
-        "wires": []
-    },
-    {
         "id": "d09cfa06.b99e18",
         "type": "googlehome-notify",
         "z": "1c11632f.f206fd",
@@ -5580,14 +4649,14 @@
         "id": "6231a20f24a2e3ca",
         "type": "function",
         "z": "1c11632f.f206fd",
-        "name": "Connected",
+        "name": "converter",
         "func": "\n  \n  \n  \n  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: msg.text,\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1650,
+        "x": 1640,
         "y": 360,
         "wires": [
             [
@@ -9622,6 +8691,31 @@
         ]
     },
     {
+        "id": "5d980e14a31e5332",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 21 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "STOP",
+        "payloadType": "str",
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "d3c43c4.fea9bc"
+            ]
+        ]
+    },
+    {
         "id": "9c18ec5f.f9594",
         "type": "inject",
         "z": "bc3b2c68.b35f6",
@@ -11377,6 +10471,7 @@
         "id": "6f3c796296db2c0c",
         "type": "ambi-temp-mode",
         "z": "8b99f8fe.7b27b8",
+        "d": true,
         "oauthClient": "4ec8324b.b2dc1c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
@@ -11389,6 +10484,7 @@
         "id": "d1ebc40657a5f26c",
         "type": "ambi-temp-mode",
         "z": "8b99f8fe.7b27b8",
+        "d": true,
         "oauthClient": "4ec8324b.b2dc1c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
@@ -12963,43 +12059,6 @@
         ]
     },
     {
-        "id": "f530a672.6d7088",
-        "type": "mode",
-        "z": "e3737c94.fd59f",
-        "d": true,
-        "user": "fae123cb.bd4b2",
-        "name": "Home mode",
-        "mode": "home",
-        "x": 470,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "3072aa8d.fc3b66",
-        "type": "link in",
-        "z": "e3737c94.fd59f",
-        "d": true,
-        "name": "Home Mode",
-        "links": [],
-        "x": 135,
-        "y": 340,
-        "wires": [
-            [
-                "33127a60.00f3f6"
-            ]
-        ]
-    },
-    {
-        "id": "80fca135.106b7",
-        "type": "comment",
-        "z": "e3737c94.fd59f",
-        "name": "Change Mode",
-        "info": "",
-        "x": 130,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "f2e0b439.cfe148",
         "type": "link out",
         "z": "e3737c94.fd59f",
@@ -13425,83 +12484,6 @@
         ]
     },
     {
-        "id": "884604e4.6cfe58",
-        "type": "mode",
-        "z": "e3737c94.fd59f",
-        "d": true,
-        "user": "fae123cb.bd4b2",
-        "name": "Away mode",
-        "mode": "away",
-        "x": 470,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "1fd53d4.656cfc3",
-        "type": "link in",
-        "z": "e3737c94.fd59f",
-        "d": true,
-        "name": "AWAY Mode",
-        "links": [],
-        "x": 135,
-        "y": 380,
-        "wires": [
-            [
-                "794fbb2d.825084"
-            ]
-        ]
-    },
-    {
-        "id": "33127a60.00f3f6",
-        "type": "delay",
-        "z": "e3737c94.fd59f",
-        "d": true,
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "5",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "outputs": 1,
-        "x": 280,
-        "y": 340,
-        "wires": [
-            [
-                "f530a672.6d7088"
-            ]
-        ]
-    },
-    {
-        "id": "794fbb2d.825084",
-        "type": "delay",
-        "z": "e3737c94.fd59f",
-        "d": true,
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "5",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "outputs": 1,
-        "x": 280,
-        "y": 380,
-        "wires": [
-            [
-                "884604e4.6cfe58"
-            ]
-        ]
-    },
-    {
         "id": "30239893.0863c8",
         "type": "link in",
         "z": "e3737c94.fd59f",
@@ -13682,26 +12664,6 @@
         "wires": [
             [
                 "8e07c57f.92d158"
-            ]
-        ]
-    },
-    {
-        "id": "1c20a4d6ec9e5593",
-        "type": "function",
-        "z": "e3737c94.fd59f",
-        "name": "Away",
-        "func": "msg.payload = {\"mode\":\"away\"};\nglobal.set(\"Mode\", \"away\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 350,
-        "y": 240,
-        "wires": [
-            [
-                "794fbb2d.825084",
-                "884604e4.6cfe58"
             ]
         ]
     },
@@ -14120,7 +13082,8 @@
                 "onstart": true,
                 "payload": [
                     "__complete__"
-                ]
+                ],
+                "uniqueId": "ui-id-5"
             }
         ],
         "x": 280,
@@ -18193,7 +17156,8 @@
         "y": 660,
         "wires": [
             [
-                "76142807ba013dd5"
+                "76142807ba013dd5",
+                "425645f554c1935f"
             ]
         ]
     },
@@ -18328,6 +17292,23 @@
                 "80e36239586e7edc"
             ]
         ]
+    },
+    {
+        "id": "425645f554c1935f",
+        "type": "debug",
+        "z": "4edd86b6.331768",
+        "g": "c4cf42bd22da0e90",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 840,
+        "wires": []
     },
     {
         "id": "4c1858d290c94d44",
@@ -19209,60 +18190,6 @@
         ]
     },
     {
-        "id": "b7cae4186e887d19",
-        "type": "change",
-        "z": "021cd6ea3e90db93",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "up_count",
-                "pt": "flow",
-                "to": "2",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1790,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a1d7f615b671ac4d",
-        "type": "inject",
-        "z": "021cd6ea3e90db93",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1600,
-        "y": 340,
-        "wires": [
-            [
-                "b7cae4186e887d19"
-            ]
-        ]
-    },
-    {
         "id": "7678f144c5148af9",
         "type": "switch",
         "z": "021cd6ea3e90db93",
@@ -19292,104 +18219,6 @@
         ]
     },
     {
-        "id": "4b34abe0a4611149",
-        "type": "change",
-        "z": "021cd6ea3e90db93",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "up_count",
-                "pt": "flow",
-                "to": "1",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1800,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b9e501c4f7f1e14b",
-        "type": "inject",
-        "z": "021cd6ea3e90db93",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1610,
-        "y": 300,
-        "wires": [
-            [
-                "4b34abe0a4611149"
-            ]
-        ]
-    },
-    {
-        "id": "4f017fb74bc07757",
-        "type": "inject",
-        "z": "021cd6ea3e90db93",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 840,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d1daa67778ace472",
-        "type": "debug",
-        "z": "021cd6ea3e90db93",
-        "name": "After",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1370,
-        "y": 400,
-        "wires": []
-    },
-    {
         "id": "cc902c65355fc2a0",
         "type": "delay",
         "z": "021cd6ea3e90db93",
@@ -19410,27 +18239,9 @@
         "y": 300,
         "wires": [
             [
-                "ee83b8c410174440",
                 "af83160c4353fe50"
             ]
         ]
-    },
-    {
-        "id": "ee83b8c410174440",
-        "type": "debug",
-        "z": "021cd6ea3e90db93",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 830,
-        "y": 240,
-        "wires": []
     },
     {
         "id": "83665e5eeb0c9dd4",
@@ -19651,22 +18462,6 @@
         ]
     },
     {
-        "id": "99e9e6f31ceca4c4",
-        "type": "debug",
-        "z": "021cd6ea3e90db93",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 870,
-        "y": 600,
-        "wires": []
-    },
-    {
         "id": "1630e5498522a364",
         "type": "calculate",
         "z": "021cd6ea3e90db93",
@@ -19681,62 +18476,115 @@
         "y": 460,
         "wires": [
             [
-                "99e9e6f31ceca4c4",
                 "83665e5eeb0c9dd4"
             ]
         ]
     },
     {
-        "id": "2b2b6a034a9b1aef",
-        "type": "mqtt in",
+        "id": "b7cae4186e887d19",
+        "type": "change",
         "z": "021cd6ea3e90db93",
         "name": "",
-        "topic": "#",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "5d47569e31e42f22",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 320,
-        "y": 620,
+        "rules": [
+            {
+                "t": "set",
+                "p": "up_count",
+                "pt": "flow",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1790,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1d7f615b671ac4d",
+        "type": "inject",
+        "z": "021cd6ea3e90db93",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1600,
+        "y": 340,
         "wires": [
             [
-                "06cc8221613adb70"
+                "b7cae4186e887d19"
             ]
         ]
     },
     {
-        "id": "f3d3a422e568d316",
-        "type": "debug",
+        "id": "4b34abe0a4611149",
+        "type": "change",
         "z": "021cd6ea3e90db93",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 620,
-        "wires": []
+        "rules": [
+            {
+                "t": "set",
+                "p": "up_count",
+                "pt": "flow",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1800,
+        "y": 300,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "06cc8221613adb70",
-        "type": "json",
+        "id": "b9e501c4f7f1e14b",
+        "type": "inject",
         "z": "021cd6ea3e90db93",
         "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 470,
-        "y": 720,
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1610,
+        "y": 300,
         "wires": [
             [
-                "f3d3a422e568d316"
+                "4b34abe0a4611149"
             ]
         ]
     }
