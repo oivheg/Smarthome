@@ -971,18 +971,6 @@
         "icon": "dashboard"
     },
     {
-        "id": "99977a8c.c02588",
-        "type": "influxdb",
-        "hostname": "127.0.0.1",
-        "port": "8086",
-        "protocol": "http",
-        "database": "movement",
-        "name": "",
-        "usetls": false,
-        "tls": "",
-        "influxdbVersion": "1.x"
-    },
-    {
         "id": "583fffe9.e7d8f",
         "type": "ui_group",
         "name": "Bevegelse",
@@ -1348,12 +1336,6 @@
         "order": 3,
         "width": 1,
         "height": 1
-    },
-    {
-        "id": "64a83e1ec3b88745",
-        "type": "persist-store",
-        "filename": "persistence.json",
-        "interval": "60"
     },
     {
         "id": "e5f5aa31.81fff8",
@@ -8031,9 +8013,8 @@
         "name": "Movement oppe",
         "links": [
             "63e9f9b.1d13608",
-            "d4cd1de.82711e",
-            "e92f253c.11b9b8",
-            "b9eed7dde8000c3e"
+            "b9eed7dde8000c3e",
+            "e92f253c.11b9b8"
         ],
         "x": 485,
         "y": 720,
@@ -11221,7 +11202,7 @@
         "type": "influxdb in",
         "z": "f487aa99.386108",
         "d": true,
-        "influxdb": "99977a8c.c02588",
+        "influxdb": "",
         "name": "Get Motion ",
         "query": "select * from Motion ORDER BY time DESC limit 10 ",
         "rawOutput": false,
@@ -11302,7 +11283,7 @@
         "type": "influxdb in",
         "z": "f487aa99.386108",
         "d": true,
-        "influxdb": "99977a8c.c02588",
+        "influxdb": "",
         "name": "Get Mode",
         "query": "select * from Mode ORDER BY time DESC limit 10 ",
         "rawOutput": false,
@@ -11400,7 +11381,7 @@
         "type": "influxdb in",
         "z": "f487aa99.386108",
         "d": true,
-        "influxdb": "99977a8c.c02588",
+        "influxdb": "",
         "name": "Get UserState",
         "query": "select * from UserState ORDER BY time DESC limit 10 ",
         "rawOutput": false,
@@ -11460,7 +11441,7 @@
         "type": "influxdb out",
         "z": "f487aa99.386108",
         "d": true,
-        "influxdb": "99977a8c.c02588",
+        "influxdb": "",
         "name": "Motion",
         "measurement": "Motion",
         "precision": "",
@@ -11534,7 +11515,7 @@
         "type": "influxdb out",
         "z": "f487aa99.386108",
         "d": true,
-        "influxdb": "99977a8c.c02588",
+        "influxdb": "",
         "name": "Mode",
         "measurement": "Mode",
         "precision": "",
@@ -11566,7 +11547,7 @@
         "type": "influxdb out",
         "z": "f487aa99.386108",
         "d": true,
-        "influxdb": "99977a8c.c02588",
+        "influxdb": "",
         "name": "Users",
         "measurement": "UserState",
         "precision": "",
@@ -12035,7 +12016,6 @@
         "z": "e3737c94.fd59f",
         "name": "Movement oppe",
         "links": [
-            "be2ad471.d9c448",
             "1329b56.bea634b"
         ],
         "x": 1595,
