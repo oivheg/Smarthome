@@ -616,9 +616,7 @@
             "1e397062fcfbb0e9"
         ],
         "x": 774,
-        "y": 19,
-        "w": 682,
-        "h": 82
+        "y": 19
     },
     {
         "id": "88b8cd3b91daf3ae",
@@ -640,9 +638,7 @@
             "67977af33b66476a"
         ],
         "x": 1494,
-        "y": 19,
-        "w": 552,
-        "h": 182
+        "y": 19
     },
     {
         "id": "b01d69bb34a09e41",
@@ -668,9 +664,7 @@
             "b0dc3ddb928b3d38"
         ],
         "x": 754,
-        "y": 239,
-        "w": 1032,
-        "h": 242
+        "y": 239
     },
     {
         "id": "8cba373d8f4d3966",
@@ -695,9 +689,7 @@
             "2998be5081486cc3"
         ],
         "x": 154,
-        "y": 159,
-        "w": 492,
-        "h": 242
+        "y": 159
     },
     {
         "id": "c4cf42bd22da0e90",
@@ -727,9 +719,7 @@
             "e7a1a9e1e22065c4"
         ],
         "x": 754,
-        "y": 459,
-        "w": 1272,
-        "h": 442
+        "y": 459
     },
     {
         "id": "4764ba70f833e4a9",
@@ -838,9 +828,7 @@
             "277f89239aa44fc7"
         ],
         "x": 294,
-        "y": 979,
-        "w": 1112,
-        "h": 242
+        "y": 979
     },
     {
         "id": "c40d1711.7fd448",
@@ -1072,8 +1060,8 @@
     {
         "id": "862863a9.265f3",
         "type": "castv2-connection",
-        "name": "",
-        "target": "Office speaker",
+        "name": "Entry",
+        "target": "Entryway speaker",
         "host": "",
         "port": "8009"
     },
@@ -1379,6 +1367,14 @@
         "order": 3,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "36091c060c8a72d5",
+        "type": "castv2-connection",
+        "name": "Office",
+        "target": "Office speaker",
+        "host": "",
+        "port": "8009"
     },
     {
         "id": "4b3b19cb6cd314e6",
@@ -3392,7 +3388,7 @@
         "title": "",
         "chan": "",
         "name": "Notification",
-        "x": 2010,
+        "x": 1910,
         "y": 460,
         "wires": []
     },
@@ -3401,13 +3397,8 @@
         "type": "link in",
         "z": "1c11632f.f206fd",
         "name": "Pushbullet",
-        "links": [
-            "e7746f47.54cbc",
-            "c0005e0c.a1014",
-            "976db23e.1f8ba",
-            "c0909415.c77af8"
-        ],
-        "x": 1755,
+        "links": [],
+        "x": 1675,
         "y": 460,
         "wires": [
             [
@@ -4293,8 +4284,7 @@
         "name": "Heggland",
         "mode": "link",
         "links": [
-            "6864b7fa.51f528",
-            "7af2ddb53f4a4443"
+            "6864b7fa.51f528"
         ],
         "x": 955,
         "y": 180,
@@ -4307,7 +4297,6 @@
         "name": "Karina",
         "mode": "link",
         "links": [
-            "7af2ddb53f4a4443",
             "ae3ebfe2.54e44"
         ],
         "x": 955,
@@ -4319,7 +4308,7 @@
         "type": "castv2-sender",
         "z": "1c11632f.f206fd",
         "name": "OFFICE",
-        "connection": "862863a9.265f3",
+        "connection": "36091c060c8a72d5",
         "x": 2040,
         "y": 360,
         "wires": [
@@ -4341,7 +4330,7 @@
             "19242790ba73e3ef",
             "f803dc8c9371fd5f"
         ],
-        "x": 1515,
+        "x": 1455,
         "y": 360,
         "wires": [
             [
@@ -4951,6 +4940,78 @@
         "wires": [
             [
                 "fe7d3938.a5fd88"
+            ]
+        ]
+    },
+    {
+        "id": "d3abaa0d9a3b75d3",
+        "type": "castv2-sender",
+        "z": "1c11632f.f206fd",
+        "name": "ENTRY",
+        "connection": "862863a9.265f3",
+        "x": 2100,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "278706f49dd302bf",
+        "type": "link in",
+        "z": "1c11632f.f206fd",
+        "name": "Entry",
+        "links": [
+            "357cd3912cb4b9bf"
+        ],
+        "x": 1575,
+        "y": 940,
+        "wires": [
+            [
+                "f7fe14d272d91f1a"
+            ]
+        ]
+    },
+    {
+        "id": "4424107cc2fddffc",
+        "type": "delay",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1930,
+        "y": 940,
+        "wires": [
+            [
+                "d3abaa0d9a3b75d3"
+            ]
+        ]
+    },
+    {
+        "id": "f7fe14d272d91f1a",
+        "type": "function",
+        "z": "1c11632f.f206fd",
+        "name": "converter",
+        "func": "\n  \n  \n  \n  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: msg.text,\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 940,
+        "wires": [
+            [
+                "4424107cc2fddffc"
             ]
         ]
     },
@@ -8561,7 +8622,7 @@
             },
             {
                 "name": "LightTreshold",
-                "value": "300",
+                "value": "120",
                 "type": "num"
             },
             {
@@ -9243,6 +9304,9 @@
         "func": "msg.payload = \"Please Remember to Take out the TRASH\";\nmsg.topic = \"Remember Garbage\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 970,
         "y": 100,
         "wires": [
@@ -9352,10 +9416,12 @@
         "tooltip": "Trykk når søppel tatt ut",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
         "payload": "STOP",
         "payloadType": "str",
         "topic": "FALSE",
+        "topicType": "str",
         "x": 230,
         "y": 20,
         "wires": [
@@ -9415,7 +9481,7 @@
         "jan": true,
         "feb": false,
         "mar": false,
-        "apr": false,
+        "apr": true,
         "may": true,
         "jun": false,
         "jul": false,
@@ -9472,6 +9538,18 @@
         "xmonth5": 0,
         "xday6": 0,
         "xmonth6": 0,
+        "xday7": "",
+        "xmonth7": "",
+        "xday8": "",
+        "xmonth8": "",
+        "xday9": "",
+        "xmonth9": "",
+        "xday10": "",
+        "xmonth10": "",
+        "xday11": "",
+        "xmonth11": "",
+        "xday12": "",
+        "xmonth12": "",
         "xd1": 0,
         "xw1": 0,
         "xd2": 0,
@@ -9486,6 +9564,10 @@
         "xw6": 0,
         "suspend": false,
         "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
         "repeat": false,
         "atstart": true,
         "odd": false,
@@ -9549,9 +9631,7 @@
         "type": "link out",
         "z": "bc3b2c68.b35f6",
         "name": "SÃ¸ppel_Push",
-        "links": [
-            "9d6f976b.5d59f8"
-        ],
+        "links": [],
         "x": 1095,
         "y": 100,
         "wires": []
@@ -10029,8 +10109,8 @@
                 "t": "false"
             }
         ],
-        "checkall": "true",
-        "repair": true,
+        "checkall": "false",
+        "repair": false,
         "outputs": 1,
         "x": 410,
         "y": 240,
@@ -10195,6 +10275,7 @@
         "id": "c7ee4eb5.5141c",
         "type": "pushbullet",
         "z": "8b99f8fe.7b27b8",
+        "d": true,
         "config": "530528aa.2006c8",
         "pushtype": "note",
         "title": "Nattmodus",
@@ -10623,7 +10704,6 @@
             [
                 "e4c32eed.12537",
                 "a5d3065e.5a0698",
-                "7cc0632f36592083",
                 "4241a94a84740929"
             ]
         ]
@@ -10765,48 +10845,20 @@
         "id": "f471eaf5a8b7a9c1",
         "type": "function",
         "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "func": "msg.people.forEach(function(element) {\n    msg.payload =true;\n    if (element == \"heggland\"){\n        node.send(msg);\n        \n    }\n    if (element == \"karina\") {\n        node.send([null,msg]);\n\n    }\n});",
+        "name": "Check Phones",
+        "func": "\nlet home = [{ payload: false }, { payload: false }];\nmsg.people.forEach(function(element) {\n    msg.payload =true;\n    if (element == \"heggland\"){\n       home[0].payload = true;\n        \n    }\n    if (element == \"karina\") {\n        home[1].payload = true;\n\n\n    }\n});\n\nreturn home;",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1320,
-        "y": 420,
+        "x": 1380,
+        "y": 380,
         "wires": [
             [
                 "d6d8cf38.1794d"
             ],
             [
-                "3d692d1e.98b022"
-            ]
-        ]
-    },
-    {
-        "id": "7cc0632f36592083",
-        "type": "change",
-        "z": "8b99f8fe.7b27b8",
-        "name": "home = false",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1550,
-        "y": 360,
-        "wires": [
-            [
-                "d6d8cf38.1794d",
                 "3d692d1e.98b022"
             ]
         ]
@@ -10838,7 +10890,6 @@
                 "77b78689.5eac68"
             ],
             [
-                "7cc0632f36592083",
                 "e4c32eed.12537"
             ]
         ]
@@ -11058,7 +11109,6 @@
         "z": "1b14ec1b.20ab54",
         "name": "",
         "links": [
-            "9d6f976b.5d59f8",
             "fee9f406.ef48d8",
             "15d28c99.680783"
         ],
@@ -11121,8 +11171,8 @@
         "allowHTML": false,
         "outputs": 0,
         "topic": "Happy",
-        "x": 910,
-        "y": 100,
+        "x": 930,
+        "y": 60,
         "wires": []
     },
     {
@@ -11204,6 +11254,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 520,
         "y": 40,
         "wires": [
@@ -13185,7 +13236,8 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "dcf434ce.e89888"
+            "dcf434ce.e89888",
+            "e22089f94174d570"
         ],
         "x": 695,
         "y": 160,
@@ -14084,7 +14136,7 @@
         "statustext_type": "auto",
         "search_type": "device",
         "device_list": [
-            "sensors/uniqueid/00:15:8d:00:07:00:29:61-01-0400"
+            "sensors/uniqueid/00:15:8d:00:07:8e:b1:4d-01-0400"
         ],
         "device_name": "1etg: Stue-Gang : ZHAPresence",
         "query": "",
@@ -14101,7 +14153,7 @@
             }
         ],
         "x": 180,
-        "y": 500,
+        "y": 480,
         "wires": [
             [
                 "3bb8b86054a6a31d"
@@ -14181,11 +14233,12 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 600,
+        "x": 180,
+        "y": 720,
         "wires": [
             [
-                "7be6d3bce0f65a19"
+                "7be6d3bce0f65a19",
+                "76be70cd39633cd1"
             ]
         ]
     },
@@ -14230,9 +14283,7 @@
         "x": 230,
         "y": 560,
         "wires": [
-            [
-                "3bb8b86054a6a31d"
-            ]
+            []
         ]
     },
     {
@@ -14257,6 +14308,56 @@
         "wires": [
             [
                 "6fd91fe30a14cff0"
+            ]
+        ]
+    },
+    {
+        "id": "8cdf4efcc691f9e6",
+        "type": "debug",
+        "z": "a7af161f.d5ece8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "76be70cd39633cd1",
+        "type": "deconz-get",
+        "z": "a7af161f.d5ece8",
+        "name": "",
+        "config_version": 1,
+        "server": "12895ae7.9c6bf5",
+        "statustext": "",
+        "statustext_type": "default",
+        "search_type": "device",
+        "device_list": [
+            "sensors/uniqueid/00:15:8d:00:07:8e:b1:4d-01-0400"
+        ],
+        "device_name": "",
+        "query": "{}",
+        "outputs": 1,
+        "output_rules": [
+            {
+                "type": "state",
+                "format": "single",
+                "payload": [
+                    "__complete__"
+                ]
+            }
+        ],
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "8cdf4efcc691f9e6",
+                "3bb8b86054a6a31d"
             ]
         ]
     },
@@ -18964,9 +19065,7 @@
             [
                 "cc902c65355fc2a0"
             ],
-            [
-                "cdfb9cdf81f8fd6c"
-            ]
+            []
         ]
     },
     {
@@ -19195,8 +19294,7 @@
         "y": 300,
         "wires": [
             [
-                "af83160c4353fe50",
-                "cdfb9cdf81f8fd6c"
+                "af83160c4353fe50"
             ]
         ]
     },
@@ -19851,7 +19949,7 @@
         "type": "debug",
         "z": "021cd6ea3e90db93",
         "name": "DEBUG",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -19934,7 +20032,7 @@
         "type": "debug",
         "z": "021cd6ea3e90db93",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -19995,23 +20093,6 @@
         "wires": []
     },
     {
-        "id": "cdfb9cdf81f8fd6c",
-        "type": "debug",
-        "z": "021cd6ea3e90db93",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 180,
-        "wires": []
-    },
-    {
         "id": "7410ca5f5aabab86",
         "type": "ui_button",
         "z": "6df0226504208616",
@@ -20031,8 +20112,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 890,
-        "y": 80,
+        "x": 850,
+        "y": 60,
         "wires": [
             [
                 "c55928ec8bab12af"
@@ -20046,8 +20127,8 @@
         "oauthClient": "4ec8324b.b2dc1c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
-        "value": "23",
-        "x": 1290,
+        "value": "21",
+        "x": 1350,
         "y": 180,
         "wires": []
     },
@@ -20058,7 +20139,7 @@
         "oauthClient": "4ec8324b.b2dc1c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
-        "value": "18",
+        "value": "20",
         "x": 1290,
         "y": 280,
         "wires": []
@@ -20080,8 +20161,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 570,
-        "y": 140,
+        "x": 470,
+        "y": 120,
         "wires": [
             [
                 "3f24f1034c760819",
@@ -20105,7 +20186,7 @@
         "z": "6df0226504208616",
         "name": "Home",
         "info": "",
-        "x": 1230,
+        "x": 1330,
         "y": 140,
         "wires": []
     },
@@ -20156,7 +20237,7 @@
         "wires": [
             [
                 "78e7acfd3508b0ab",
-                "c55928ec8bab12af"
+                "33695432083288c6"
             ],
             [
                 "baee7524731f77ba"
@@ -20214,8 +20295,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 890,
-        "y": 140,
+        "x": 790,
+        "y": 120,
         "wires": [
             [
                 "c55928ec8bab12af"
@@ -20239,8 +20320,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 590,
-        "y": 180,
+        "x": 490,
+        "y": 160,
         "wires": [
             [
                 "3f24f1034c760819",
@@ -20267,8 +20348,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
-        "y": 180,
+        "x": 780,
+        "y": 160,
         "wires": [
             []
         ]
@@ -20409,6 +20490,152 @@
         ]
     },
     {
+        "id": "33695432083288c6",
+        "type": "change",
+        "z": "6df0226504208616",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"value\": $flowContext(\"temperature\")\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 180,
+        "wires": [
+            [
+                "c55928ec8bab12af"
+            ]
+        ]
+    },
+    {
+        "id": "7ce9530bbab43ce3",
+        "type": "ui_text_input",
+        "z": "6df0226504208616",
+        "name": "",
+        "label": "Temp",
+        "tooltip": "",
+        "group": "69a63d21.a935c4",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1410,
+        "y": 40,
+        "wires": [
+            [
+                "38b3f8ab5235eae5"
+            ]
+        ]
+    },
+    {
+        "id": "f3b8ba3285e47a53",
+        "type": "ui_ui_control",
+        "z": "6df0226504208616",
+        "name": "",
+        "events": "change",
+        "x": 1010,
+        "y": 40,
+        "wires": [
+            [
+                "bc2016b761b16427"
+            ]
+        ]
+    },
+    {
+        "id": "bc2016b761b16427",
+        "type": "change",
+        "z": "6df0226504208616",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "temperature",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 40,
+        "wires": [
+            [
+                "7ce9530bbab43ce3"
+            ]
+        ]
+    },
+    {
+        "id": "38b3f8ab5235eae5",
+        "type": "change",
+        "z": "6df0226504208616",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temperature",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 40,
+        "wires": [
+            [
+                "32e7feb162f2df0c"
+            ]
+        ]
+    },
+    {
+        "id": "32e7feb162f2df0c",
+        "type": "delay",
+        "z": "6df0226504208616",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1320,
+        "y": 100,
+        "wires": [
+            [
+                "33695432083288c6"
+            ]
+        ]
+    },
+    {
         "id": "6521603b2e19525f",
         "type": "aedes broker",
         "z": "c83f14cc3d9b8395",
@@ -20501,10 +20728,7 @@
         "type": "link in",
         "z": "c83f14cc3d9b8395",
         "name": "PeopleCount",
-        "links": [
-            "feeff268.c217c",
-            "67492538.8a508c"
-        ],
+        "links": [],
         "x": 245,
         "y": 700,
         "wires": [
@@ -20590,6 +20814,7 @@
         "id": "f803dc8c9371fd5f",
         "type": "link out",
         "z": "c83f14cc3d9b8395",
+        "d": true,
         "name": "",
         "mode": "link",
         "links": [
@@ -20667,35 +20892,6 @@
             [
                 "85874d19114f788d",
                 "8b8de74c0d733b0d"
-            ]
-        ]
-    },
-    {
-        "id": "f4886f27b991ffa4",
-        "type": "inject",
-        "z": "c83f14cc3d9b8395",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 940,
-        "y": 820,
-        "wires": [
-            [
-                "c7221f2791289568"
             ]
         ]
     },
@@ -20778,7 +20974,7 @@
         "type": "debug",
         "z": "c83f14cc3d9b8395",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -20824,8 +21020,8 @@
         "type": "function",
         "z": "c83f14cc3d9b8395",
         "name": "",
-        "func": "let down = global.get(\"peopleDownstairs\");\nlet up = global.get(\"peopleUpstairs\");\nlet total = down + up;\n\n\nmsg.payload = down;\nmsg.topic = \"mirror/downstairs\";\nnode.send(msg);\n\nmsg.payload = up;\nmsg.topic = \"mirror/upstairs\";\nnode.send(msg);\n\nmsg.payload = total;\nmsg.topic = \"mirror/persons\";\nnode.send(msg);\n\nif(total >2){\n    msg.payload = total -2;\n    msg.topic = \"mirror/guests\";\n    node.send(msg);\n}else{\n    msg.payload = 0;\n    msg.topic = \"mirror/guests\";\n    node.send(msg);\n}\n\n",
-        "outputs": 1,
+        "func": "let down = global.get(\"peopleDownstairs\");\nlet up = global.get(\"peopleUpstairs\");\nlet total = down + up;\n\n\nmsg.payload = down;\nmsg.topic = \"mirror/downstairs\";\nnode.send(msg);\n\nmsg.payload = up;\nmsg.topic = \"mirror/upstairs\";\nnode.send(msg);\n\nmsg.payload = total;\nmsg.topic = \"mirror/persons\";\nnode.send(msg);\nvar message = {};\nif(total >2){\n    msg.payload = total -2;\n    msg.topic = \"mirror/guests\";\n    node.send(msg);\n    // message.text = \"There are \" + msg.payload + \" Guests \";\n    if(msg.payload == 1 ){\n        message.text = \"There are \" + msg.payload + \" Guest \";\n    }\n   \n    node.send([null, message]);\n}else{\n    msg.payload = 0;\n    msg.topic = \"mirror/guests\";\n    node.send(msg);\n \n    // message.text = \"There are NO Guests \"\n    // node.send([null, message]);\n}\n\n",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -20834,8 +21030,10 @@
         "y": 820,
         "wires": [
             [
-                "1ecabd0cc915225b",
                 "9732e4475cdba75e"
+            ],
+            [
+                "357cd3912cb4b9bf"
             ]
         ]
     },
@@ -20858,23 +21056,6 @@
         "wires": []
     },
     {
-        "id": "1ecabd0cc915225b",
-        "type": "debug",
-        "z": "c83f14cc3d9b8395",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1440,
-        "y": 760,
-        "wires": []
-    },
-    {
         "id": "9732e4475cdba75e",
         "type": "json",
         "z": "c83f14cc3d9b8395",
@@ -20887,6 +21068,94 @@
         "wires": [
             [
                 "3947729dea97def1"
+            ]
+        ]
+    },
+    {
+        "id": "e22089f94174d570",
+        "type": "link in",
+        "z": "c83f14cc3d9b8395",
+        "name": "Update Mirror",
+        "links": [
+            "328ec247.9e5eee"
+        ],
+        "x": 865,
+        "y": 820,
+        "wires": [
+            [
+                "c7221f2791289568"
+            ]
+        ]
+    },
+    {
+        "id": "ea9d7d477baa619d",
+        "type": "inject",
+        "z": "c83f14cc3d9b8395",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 990,
+        "y": 880,
+        "wires": [
+            [
+                "c7221f2791289568"
+            ]
+        ]
+    },
+    {
+        "id": "357cd3912cb4b9bf",
+        "type": "link out",
+        "z": "c83f14cc3d9b8395",
+        "d": true,
+        "name": "",
+        "mode": "link",
+        "links": [
+            "278706f49dd302bf"
+        ],
+        "x": 1325,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "f5f60b4fd0cd5dbd",
+        "type": "inject",
+        "z": "c83f14cc3d9b8395",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 750,
+        "y": 960,
+        "wires": [
+            [
+                "56bf4cc3c2d5ab0f"
             ]
         ]
     }
