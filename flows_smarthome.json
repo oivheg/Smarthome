@@ -759,7 +759,9 @@
             "4b0510cde2a3bfff"
         ],
         "x": 434,
-        "y": 1259
+        "y": 1259,
+        "w": 1062,
+        "h": 142
     },
     {
         "id": "a7b26502af3b65e3",
@@ -780,7 +782,9 @@
             "b9eed7dde8000c3e"
         ],
         "x": 434,
-        "y": 1059
+        "y": 1059,
+        "w": 1062,
+        "h": 142
     },
     {
         "id": "172b4292bafc68a7",
@@ -797,10 +801,14 @@
             "21c80566.d9201a",
             "183c95c7745f2ea4",
             "bc57e78aaf68965d",
-            "6fb6663e779c4bed"
+            "6fb6663e779c4bed",
+            "3e69ad5e63b7988a",
+            "098952d685a6d25d"
         ],
         "x": 264,
-        "y": 839
+        "y": 839,
+        "w": 1232,
+        "h": 222
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -821,7 +829,9 @@
             "ed863371775575ab"
         ],
         "x": 234,
-        "y": 599
+        "y": 599,
+        "w": 1262,
+        "h": 202
     },
     {
         "id": "9bb3180dbbe92370",
@@ -894,7 +904,9 @@
             "1b1b701f2f4d7455"
         ],
         "x": 404,
-        "y": 1559
+        "y": 1559,
+        "w": 982,
+        "h": 182
     },
     {
         "id": "2e7006b6bbb0568e",
@@ -7211,7 +7223,8 @@
         "y": 940,
         "wires": [
             [
-                "bc57e78aaf68965d"
+                "bc57e78aaf68965d",
+                "098952d685a6d25d"
             ]
         ]
     },
@@ -9249,7 +9262,7 @@
         "type": "switch",
         "z": "aa0ae7ae.75d228",
         "g": "172b4292bafc68a7",
-        "name": "is m_basement",
+        "name": "is basement",
         "property": "topic",
         "propertyType": "msg",
         "rules": [
@@ -9257,16 +9270,78 @@
                 "t": "eq",
                 "v": "m_basement",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "m_basement_stairs",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
-        "x": 430,
+        "outputs": 2,
+        "x": 420,
         "y": 940,
         "wires": [
             [
                 "a3713cf3.b331a"
+            ],
+            [
+                "3e69ad5e63b7988a"
+            ]
+        ]
+    },
+    {
+        "id": "3e69ad5e63b7988a",
+        "type": "trigger",
+        "z": "aa0ae7ae.75d228",
+        "g": "172b4292bafc68a7",
+        "name": "",
+        "op1": "",
+        "op2": "false",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "3",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 430,
+        "y": 980,
+        "wires": [
+            [
+                "a3713cf3.b331a"
+            ]
+        ]
+    },
+    {
+        "id": "098952d685a6d25d",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "g": "172b4292bafc68a7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 1020,
+        "wires": [
+            [
+                "3e69ad5e63b7988a"
             ]
         ]
     },
@@ -18642,6 +18717,14 @@
             {
                 "name": "m_basement",
                 "id": "20",
+                "props": {},
+                "state": [],
+                "commands": [],
+                "children": []
+            },
+            {
+                "name": "m_basement_stairs",
+                "id": "36",
                 "props": {},
                 "state": [],
                 "commands": [],
