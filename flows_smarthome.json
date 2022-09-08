@@ -616,9 +616,7 @@
             "1e397062fcfbb0e9"
         ],
         "x": 774,
-        "y": 19,
-        "w": 682,
-        "h": 82
+        "y": 19
     },
     {
         "id": "88b8cd3b91daf3ae",
@@ -640,9 +638,7 @@
             "67977af33b66476a"
         ],
         "x": 1494,
-        "y": 19,
-        "w": 552,
-        "h": 182
+        "y": 19
     },
     {
         "id": "b01d69bb34a09e41",
@@ -668,9 +664,7 @@
             "b0dc3ddb928b3d38"
         ],
         "x": 574,
-        "y": 899,
-        "w": 1032,
-        "h": 242
+        "y": 899
     },
     {
         "id": "8cba373d8f4d3966",
@@ -698,9 +692,7 @@
             "b6c9204cfd51e226"
         ],
         "x": 234,
-        "y": 159,
-        "w": 872,
-        "h": 262
+        "y": 159
     },
     {
         "id": "c4cf42bd22da0e90",
@@ -734,9 +726,7 @@
             "13a252ff538d8be3"
         ],
         "x": 404,
-        "y": 1299,
-        "w": 1582,
-        "h": 442
+        "y": 1299
     },
     {
         "id": "4764ba70f833e4a9",
@@ -759,9 +749,7 @@
             "4b0510cde2a3bfff"
         ],
         "x": 434,
-        "y": 1259,
-        "w": 1062,
-        "h": 142
+        "y": 1259
     },
     {
         "id": "a7b26502af3b65e3",
@@ -782,9 +770,7 @@
             "b9eed7dde8000c3e"
         ],
         "x": 434,
-        "y": 1059,
-        "w": 1062,
-        "h": 142
+        "y": 1059
     },
     {
         "id": "172b4292bafc68a7",
@@ -806,9 +792,7 @@
             "098952d685a6d25d"
         ],
         "x": 264,
-        "y": 839,
-        "w": 1232,
-        "h": 222
+        "y": 839
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -829,9 +813,7 @@
             "ed863371775575ab"
         ],
         "x": 234,
-        "y": 599,
-        "w": 1262,
-        "h": 202
+        "y": 599
     },
     {
         "id": "9bb3180dbbe92370",
@@ -877,9 +859,7 @@
             "dc179d3a7d67d467"
         ],
         "x": 574,
-        "y": 639,
-        "w": 792,
-        "h": 162
+        "y": 639
     },
     {
         "id": "e91b0b088ffed19b",
@@ -904,9 +884,7 @@
             "1b1b701f2f4d7455"
         ],
         "x": 404,
-        "y": 1559,
-        "w": 982,
-        "h": 182
+        "y": 1559
     },
     {
         "id": "2e7006b6bbb0568e",
@@ -1490,6 +1468,16 @@
                 "py": 0
             }
         }
+    },
+    {
+        "id": "6a2bc5b7041e7034",
+        "type": "unificonfig",
+        "name": "Heggland",
+        "ip": "178.128.169.181",
+        "port": "8443",
+        "site": "7vyhbfa5",
+        "unifios": false,
+        "ssl": false
     },
     {
         "id": "4b3b19cb6cd314e6",
@@ -9946,11 +9934,8 @@
         "type": "Unifi",
         "z": "8b99f8fe.7b27b8",
         "name": "Heggland",
-        "ip": "178.128.169.181",
-        "port": 8443,
-        "site": "7vyhbfa5",
+        "server": "6a2bc5b7041e7034",
         "command": "20",
-        "unifios": false,
         "x": 860,
         "y": 240,
         "wires": [
@@ -10944,7 +10929,7 @@
         "type": "function",
         "z": "8b99f8fe.7b27b8",
         "name": "Determine device presence",
-        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\nfor (let device in msg.payload[0]){\n    \n    let name = msg.payload[0][device].name\n    let lastseen = msg.payload[0][device].last_seen\n\n    switch (name) {\n        case \"heggland\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"karina\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
+        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\nfor (let device in msg.payload) {\n    \n   \n    let name = msg.payload[device].name\n    let lastseen = msg.payload[device].last_seen\n   \n    switch (name) {\n        case \"heggland\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"karina\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -11073,11 +11058,7 @@
         "type": "Unifi",
         "z": "8b99f8fe.7b27b8",
         "name": "Heggland",
-        "ip": "178.128.169.181",
-        "port": 8443,
-        "site": "7vyhbfa5",
         "command": "20",
-        "unifios": false,
         "x": 800,
         "y": 1040,
         "wires": [
