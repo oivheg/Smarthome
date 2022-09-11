@@ -132,6 +132,21 @@
         "env": []
     },
     {
+        "id": "eaa437319dcd2409",
+        "type": "tab",
+        "label": "Tibber Integrasjon",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "15652aa.fd5c4d5",
+        "type": "tab",
+        "label": "Tibber Test Flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -1477,6 +1492,21 @@
         "site": "7vyhbfa5",
         "unifios": false,
         "ssl": false
+    },
+    {
+        "id": "fe217e47.760b6",
+        "type": "tibber-api-endpoint",
+        "feedUrl": "wss://api.tibber.com/v1-beta/gql/subscriptions",
+        "queryUrl": "https://api.tibber.com/v1-beta/gql",
+        "name": "Demo"
+    },
+    {
+        "id": "3d2f09b6c7faaec7",
+        "type": "tibber-api-endpoint",
+        "feedUrl": "wss://api.tibber.com/v1-beta/gql/subscriptions",
+        "queryUrl": "https://api.tibber.com/v1-beta/gql",
+        "feedTimeout": "60",
+        "name": "Heggland"
     },
     {
         "id": "4b3b19cb6cd314e6",
@@ -4714,8 +4744,10 @@
         "id": "5cfbdbd83670143c",
         "type": "link in",
         "z": "1c11632f.f206fd",
-        "name": "GH-STUE",
-        "links": [],
+        "name": "GH-STUE-EN",
+        "links": [
+            "858b8605826bec63"
+        ],
         "x": 1475,
         "y": 440,
         "wires": [
@@ -22165,6 +22197,264 @@
         "wires": [
             [
                 "56bf4cc3c2d5ab0f"
+            ]
+        ]
+    },
+    {
+        "id": "3a621e1.6c980e2",
+        "type": "inject",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{viewer{homes{id size appNickname appAvatar address{address1 address2 address3 postalCode city country latitude longitude}}}}",
+        "payloadType": "str",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "4d90c0d9.a283f"
+            ]
+        ]
+    },
+    {
+        "id": "d98c9051.ec2cb",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 570,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "1f5b698b.c40ec6",
+        "type": "tibber-feed",
+        "z": "15652aa.fd5c4d5",
+        "name": "Heggland",
+        "active": true,
+        "apiEndpointRef": "3d2f09b6c7faaec7",
+        "homeId": "50c631b0-94da-4fd9-ac4c-f767e223de07",
+        "timestamp": false,
+        "power": "1",
+        "lastMeterConsumption": false,
+        "accumulatedConsumption": false,
+        "accumulatedProduction": false,
+        "accumulatedConsumptionLastHour": false,
+        "accumulatedProductionLastHour": false,
+        "accumulatedCost": false,
+        "accumulatedReward": false,
+        "currency": false,
+        "minPower": false,
+        "averagePower": false,
+        "maxPower": false,
+        "powerProduction": false,
+        "minPowerProduction": false,
+        "maxPowerProduction": false,
+        "lastMeterProduction": false,
+        "powerFactor": false,
+        "voltagePhase1": false,
+        "voltagePhase2": false,
+        "voltagePhase3": false,
+        "currentL1": false,
+        "currentL2": false,
+        "currentL3": false,
+        "signalStrength": false,
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "0911a3e961c90766"
+            ]
+        ]
+    },
+    {
+        "id": "4d90c0d9.a283f",
+        "type": "tibber-query",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "active": true,
+        "apiEndpointRef": "3d2f09b6c7faaec7",
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "d98c9051.ec2cb"
+            ]
+        ]
+    },
+    {
+        "id": "fb875b11.4c9c18",
+        "type": "tibber-notify",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "active": true,
+        "apiEndpointRef": "fe217e47.760b6",
+        "notifyTitle": "",
+        "notifyMessage": "",
+        "notifyScreen": "",
+        "x": 330,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1f3d8f53.3561c1",
+        "type": "inject",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"title\":\"Test\",\"message\":\"This is a simple test\",\"screen\":\"HOME\"}",
+        "payloadType": "json",
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "fb875b11.4c9c18"
+            ]
+        ]
+    },
+    {
+        "id": "0911a3e961c90766",
+        "type": "switch",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "property": "payload.power",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "4500",
+                "vt": "num"
+            },
+            {
+                "t": "lte",
+                "v": "3500",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "052f3d28a092f444"
+            ],
+            [
+                "7543444ed89d60f0"
+            ]
+        ]
+    },
+    {
+        "id": "fe09f6b01a7587a0",
+        "type": "change",
+        "z": "15652aa.fd5c4d5",
+        "name": "Power HIGH",
+        "rules": [
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "Power Usage is HIGH",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 180,
+        "wires": [
+            [
+                "858b8605826bec63"
+            ]
+        ]
+    },
+    {
+        "id": "858b8605826bec63",
+        "type": "link out",
+        "z": "15652aa.fd5c4d5",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "5cfbdbd83670143c"
+        ],
+        "x": 1085,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "052f3d28a092f444",
+        "type": "trigger",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "op1": "true",
+        "op2": "0",
+        "op1type": "bool",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 790,
+        "y": 180,
+        "wires": [
+            [
+                "fe09f6b01a7587a0"
+            ]
+        ]
+    },
+    {
+        "id": "7543444ed89d60f0",
+        "type": "change",
+        "z": "15652aa.fd5c4d5",
+        "name": "Reset Warning",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 240,
+        "wires": [
+            [
+                "052f3d28a092f444"
             ]
         ]
     }
