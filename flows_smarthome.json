@@ -21126,7 +21126,7 @@
         "wires": [
             [
                 "bbacb2d852e8838e",
-                "838b14dabc71a002"
+                "c4d9e0754c0f8049"
             ],
             [
                 "baee7524731f77ba"
@@ -21776,7 +21776,7 @@
         "wires": [
             [
                 "a6a13c9ef2209206",
-                "838b14dabc71a002"
+                "c4d9e0754c0f8049"
             ]
         ]
     },
@@ -21823,8 +21823,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1020,
-        "y": 620,
+        "x": 1000,
+        "y": 640,
         "wires": [
             [
                 "c23cd06b03dfc214"
@@ -21987,6 +21987,117 @@
         "wires": [
             [
                 "e5900fb71b890322"
+            ]
+        ]
+    },
+    {
+        "id": "3ade5de96d20c60a",
+        "type": "ui_switch",
+        "z": "6df0226504208616",
+        "name": "",
+        "label": "SummerTime",
+        "tooltip": "",
+        "group": "56a8be2a.9b9eb",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 700,
+        "y": 840,
+        "wires": [
+            [
+                "4445d551c97a8c33"
+            ]
+        ]
+    },
+    {
+        "id": "4445d551c97a8c33",
+        "type": "change",
+        "z": "6df0226504208616",
+        "name": "SummerTime",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SummerTime",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 840,
+        "wires": [
+            [
+                "3ade5de96d20c60a"
+            ]
+        ]
+    },
+    {
+        "id": "f401193199a5d246",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 280,
+        "y": 840,
+        "wires": [
+            [
+                "4445d551c97a8c33"
+            ]
+        ]
+    },
+    {
+        "id": "c4d9e0754c0f8049",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "name": "SummerTime",
+        "property": "SummerTime",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "22.5",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 1000,
+        "y": 600,
+        "wires": [
+            [
+                "838b14dabc71a002"
             ]
         ]
     },
