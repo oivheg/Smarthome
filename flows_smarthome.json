@@ -680,11 +680,14 @@
             "02046d58b1fac856",
             "b2659103b136eee6",
             "80e36239586e7edc",
-            "b0dc3ddb928b3d38"
+            "b0dc3ddb928b3d38",
+            "2091a313ede5bc95",
+            "b189a430d4359acd",
+            "5a67b8ee13fb7983"
         ],
-        "x": 574,
+        "x": 464,
         "y": 899,
-        "w": 1032,
+        "w": 1172,
         "h": 242
     },
     {
@@ -710,7 +713,8 @@
             "2998be5081486cc3",
             "7ea8c689e0d25009",
             "12866398155563a5",
-            "b6c9204cfd51e226"
+            "b6c9204cfd51e226",
+            "998d9ed730956a93"
         ],
         "x": 234,
         "y": 159,
@@ -728,7 +732,6 @@
         "nodes": [
             "29c85b88.abdbe4",
             "647921f4d9a2d950",
-            "e540ebb37b986b6f",
             "5361f5befcd5a5d7",
             "8dba580b98a6ed90",
             "d483447b72658a37",
@@ -741,16 +744,19 @@
             "462b887551d30bf4",
             "80b9f8ea0180e4ee",
             "76142807ba013dd5",
-            "e7a1a9e1e22065c4",
             "cd50f90b06a6709f",
             "3b3de3175ed44aa8",
-            "d825ed4998f16052",
             "a51ca0b20d32143c",
-            "13a252ff538d8be3"
+            "13a252ff538d8be3",
+            "c446fcab5b684e27",
+            "aecda74e6fdd1ac0",
+            "5fa8d333e469765d",
+            "26861d65835672ce",
+            "37c6b0b1b13744b0"
         ],
-        "x": 404,
+        "x": 244,
         "y": 1299,
-        "w": 1582,
+        "w": 1782,
         "h": 442
     },
     {
@@ -775,7 +781,7 @@
         ],
         "x": 454,
         "y": 1259,
-        "w": 1062,
+        "w": 1192,
         "h": 182
     },
     {
@@ -794,11 +800,13 @@
             "4ce3539c5f7a0ca7",
             "f9450bda48f83deb",
             "f539323231f77776",
-            "b9eed7dde8000c3e"
+            "b9eed7dde8000c3e",
+            "bbfe293f4b17443b",
+            "a04e6739528f2eab"
         ],
-        "x": 434,
+        "x": 264,
         "y": 1059,
-        "w": 1062,
+        "w": 1452,
         "h": 142
     },
     {
@@ -816,11 +824,12 @@
             "21c80566.d9201a",
             "183c95c7745f2ea4",
             "bc57e78aaf68965d",
-            "6fb6663e779c4bed"
+            "6fb6663e779c4bed",
+            "7f4dd2f1e5bb0824"
         ],
         "x": 264,
-        "y": 839,
-        "w": 1232,
+        "y": 859,
+        "w": 1482,
         "h": 142
     },
     {
@@ -839,11 +848,12 @@
             "167a965f.fa254a",
             "d17d889454f3d3a1",
             "ca9cda18826d54da",
-            "ed863371775575ab"
+            "ed863371775575ab",
+            "3a9ba9acdd4546e6"
         ],
-        "x": 234,
+        "x": 254,
         "y": 599,
-        "w": 1262,
+        "w": 1522,
         "h": 202
     },
     {
@@ -887,13 +897,12 @@
             "cde6e0729ad1a4e1",
             "09e0db159eb1f162",
             "9d532b5d4b314b22",
-            "dc179d3a7d67d467",
-            "97183ba4bdf4cd01"
+            "dc179d3a7d67d467"
         ],
         "x": 574,
-        "y": 519,
+        "y": 639,
         "w": 792,
-        "h": 282
+        "h": 162
     },
     {
         "id": "e91b0b088ffed19b",
@@ -919,7 +928,7 @@
         ],
         "x": 404,
         "y": 1559,
-        "w": 982,
+        "w": 1112,
         "h": 182
     },
     {
@@ -1418,7 +1427,8 @@
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
@@ -4644,30 +4654,6 @@
         ]
     },
     {
-        "id": "41c183996b5493bd",
-        "type": "inject",
-        "z": "1c11632f.f206fd",
-        "name": "",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "20",
-        "topic": "Auto",
-        "x": 1090,
-        "y": 400,
-        "wires": [
-            [
-                "f8670f96ca7cf391"
-            ]
-        ]
-    },
-    {
         "id": "ea100c04.f677b",
         "type": "googlehome-notify",
         "z": "1c11632f.f206fd",
@@ -7191,10 +7177,11 @@
         "z": "aa0ae7ae.75d228",
         "g": "4764ba70f833e4a9",
         "name": "",
+        "mode": "link",
         "links": [
-            "64bc6db.9a90194"
+            "80b9f8ea0180e4ee"
         ],
-        "x": 1475,
+        "x": 1605,
         "y": 1300,
         "wires": []
     },
@@ -7261,7 +7248,7 @@
         "animate": true,
         "className": "",
         "x": 620,
-        "y": 940,
+        "y": 960,
         "wires": [
             [
                 "bc57e78aaf68965d"
@@ -7296,7 +7283,7 @@
             "dc179d3a7d67d467"
         ],
         "x": 305,
-        "y": 940,
+        "y": 960,
         "wires": [
             [
                 "6fb6663e779c4bed"
@@ -7341,7 +7328,8 @@
         "z": "aa0ae7ae.75d228",
         "name": "Basemet Reset",
         "links": [
-            "7a4a01ee.c97e"
+            "7a4a01ee.c97e",
+            "0a13e388cbc5a023"
         ],
         "x": 1135,
         "y": 300,
@@ -8183,11 +8171,12 @@
         "z": "aa0ae7ae.75d228",
         "g": "172b4292bafc68a7",
         "name": "",
+        "mode": "link",
         "links": [
-            "64bc6db.9a90194"
+            "80b9f8ea0180e4ee"
         ],
-        "x": 1455,
-        "y": 940,
+        "x": 1705,
+        "y": 960,
         "wires": []
     },
     {
@@ -8421,7 +8410,7 @@
             "7c9078bb.3bd958"
         ],
         "x": 1135,
-        "y": 880,
+        "y": 900,
         "wires": [
             [
                 "183c95c7745f2ea4"
@@ -8489,7 +8478,7 @@
         "y": 1100,
         "wires": [
             [
-                "4ce3539c5f7a0ca7"
+                "a04e6739528f2eab"
             ]
         ]
     },
@@ -8554,11 +8543,12 @@
         "z": "aa0ae7ae.75d228",
         "g": "a7b26502af3b65e3",
         "name": "",
+        "mode": "link",
         "links": [
-            "64bc6db.9a90194"
+            "80b9f8ea0180e4ee"
         ],
-        "x": 1455,
-        "y": 1100,
+        "x": 1675,
+        "y": 1120,
         "wires": []
     },
     {
@@ -8570,7 +8560,7 @@
         "links": [
             "641555a3.3a90ec"
         ],
-        "x": 985,
+        "x": 1005,
         "y": 640,
         "wires": [
             [
@@ -8586,9 +8576,9 @@
         "name": "",
         "mode": "link",
         "links": [
-            "64bc6db.9a90194"
+            "80b9f8ea0180e4ee"
         ],
-        "x": 1455,
+        "x": 1735,
         "y": 720,
         "wires": []
     },
@@ -8603,7 +8593,7 @@
             "b9eed7dde8000c3e",
             "e92f253c.11b9b8"
         ],
-        "x": 275,
+        "x": 295,
         "y": 720,
         "wires": [
             [
@@ -8639,12 +8629,12 @@
         "offcolor": "grey",
         "animate": true,
         "className": "",
-        "x": 670,
+        "x": 690,
         "y": 720,
         "wires": [
             [
-                "ca9cda18826d54da",
-                "ed863371775575ab"
+                "ed863371775575ab",
+                "ca9cda18826d54da"
             ]
         ]
     },
@@ -8672,7 +8662,7 @@
         "outputTopic": "",
         "gateType": "and",
         "emitOnlyIfTrue": true,
-        "x": 620,
+        "x": 640,
         "y": 760,
         "wires": [
             []
@@ -8687,12 +8677,12 @@
         "env": [
             {
                 "name": "room",
-                "value": "upstairs",
+                "value": "KJØKKEN",
                 "type": "str"
             },
             {
                 "name": "LightTreshold",
-                "value": "55",
+                "value": "50",
                 "type": "num"
             },
             {
@@ -8701,7 +8691,7 @@
                 "type": "num"
             }
         ],
-        "x": 1250,
+        "x": 1270,
         "y": 720,
         "wires": [
             [
@@ -8729,7 +8719,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1030,
+        "x": 1050,
         "y": 720,
         "wires": [
             [
@@ -8757,7 +8747,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 840,
         "y": 640,
         "wires": [
             []
@@ -8772,7 +8762,7 @@
         "env": [
             {
                 "name": "room",
-                "value": "basement",
+                "value": "K-LYS",
                 "type": "str"
             },
             {
@@ -8787,7 +8777,7 @@
             }
         ],
         "x": 1250,
-        "y": 940,
+        "y": 960,
         "wires": [
             [
                 "21c80566.d9201a"
@@ -8803,7 +8793,7 @@
         "env": [
             {
                 "name": "room",
-                "value": "gangen",
+                "value": "G-LYS",
                 "type": "str"
             },
             {
@@ -8834,7 +8824,7 @@
         "env": [
             {
                 "name": "room",
-                "value": "bedroom",
+                "value": "S-LYS",
                 "type": "str"
             },
             {
@@ -9038,10 +9028,10 @@
         "to": "",
         "reg": false,
         "x": 910,
-        "y": 940,
+        "y": 960,
         "wires": [
             [
-                "183c95c7745f2ea4"
+                "7f4dd2f1e5bb0824"
             ]
         ]
     },
@@ -9198,7 +9188,7 @@
         "links": [
             "80b9f8ea0180e4ee"
         ],
-        "x": 1345,
+        "x": 1475,
         "y": 1600,
         "wires": []
     },
@@ -9329,13 +9319,123 @@
         "repair": false,
         "outputs": 2,
         "x": 420,
-        "y": 940,
+        "y": 960,
         "wires": [
             [
                 "a3713cf3.b331a"
             ],
             [
                 "a3713cf3.b331a"
+            ]
+        ]
+    },
+    {
+        "id": "0a13e388cbc5a023",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "btn:block D",
+        "links": [
+            "7c9078bb.3bd958"
+        ],
+        "x": 1125,
+        "y": 1020,
+        "wires": [
+            [
+                "4ce3539c5f7a0ca7"
+            ]
+        ]
+    },
+    {
+        "id": "bbfe293f4b17443b",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "g": "a7b26502af3b65e3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 360,
+        "y": 1160,
+        "wires": [
+            [
+                "b5c52e38.5a0b5"
+            ]
+        ]
+    },
+    {
+        "id": "a04e6739528f2eab",
+        "type": "rbe",
+        "z": "aa0ae7ae.75d228",
+        "g": "a7b26502af3b65e3",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1030,
+        "y": 1100,
+        "wires": [
+            [
+                "4ce3539c5f7a0ca7"
+            ]
+        ]
+    },
+    {
+        "id": "7f4dd2f1e5bb0824",
+        "type": "rbe",
+        "z": "aa0ae7ae.75d228",
+        "g": "172b4292bafc68a7",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1070,
+        "y": 960,
+        "wires": [
+            [
+                "183c95c7745f2ea4"
+            ]
+        ]
+    },
+    {
+        "id": "3a9ba9acdd4546e6",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "g": "ff7ca7f8980ed0b1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 460,
+        "y": 680,
+        "wires": [
+            [
+                "18e793bb.41ccac"
             ]
         ]
     },
@@ -9879,7 +9979,7 @@
         "finalize": "",
         "libs": [],
         "x": 2010,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "fc4fe81e.444628",
@@ -12731,12 +12831,8 @@
         "z": "e3737c94.fd59f",
         "name": "FH Room Lights",
         "links": [
-            "21c80566.d9201a",
-            "6e1a0143.f51f8",
             "9262c612.43a058",
             "99bb192c.9613d8",
-            "87d1ce3c19202d34",
-            "e2d7c57f5c31b977",
             "1c14b9ff65b3fffd"
         ],
         "x": 134,
@@ -12758,7 +12854,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
+        "x": 240,
         "y": 520,
         "wires": [
             [
@@ -13126,7 +13222,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 3,
-        "x": 630,
+        "x": 650,
         "y": 440,
         "wires": [
             [
@@ -13270,6 +13366,36 @@
         "y": 260,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "2243b4aff0704ede",
+        "type": "inject",
+        "z": "e3737c94.fd59f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "room",
+                "v": "bathroom",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 220,
+        "y": 400,
+        "wires": [
+            [
+                "5da7627f.49119c"
+            ]
         ]
     },
     {
@@ -17215,7 +17341,7 @@
         "command": "",
         "commandType": "msg",
         "debug": false,
-        "x": 1900,
+        "x": 1940,
         "y": 1560,
         "wires": []
     },
@@ -17264,11 +17390,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
+        "x": 620,
         "y": 1000,
         "wires": [
             [
-                "7d505bde.df4254"
+                "2091a313ede5bc95"
             ]
         ]
     },
@@ -17278,12 +17404,12 @@
         "z": "4edd86b6.331768",
         "g": "b01d69bb34a09e41",
         "name": "TO FH HUB",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1490,
@@ -17392,7 +17518,8 @@
         "y": 260,
         "wires": [
             [
-                "c8ca9cb76832f227"
+                "c8ca9cb76832f227",
+                "998d9ed730956a93"
             ],
             [
                 "12866398155563a5",
@@ -17414,7 +17541,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
+        "x": 680,
         "y": 960,
         "wires": []
     },
@@ -17752,7 +17879,7 @@
         "links": [
             "c8ca9cb76832f227"
         ],
-        "x": 615,
+        "x": 505,
         "y": 980,
         "wires": [
             [
@@ -17789,50 +17916,11 @@
                 "path": "power"
             }
         ],
-        "x": 1220,
+        "x": 1160,
         "y": 1560,
         "wires": [
             [
-                "cd50f90b06a6709f"
-            ]
-        ]
-    },
-    {
-        "id": "e540ebb37b986b6f",
-        "type": "change",
-        "z": "4edd86b6.331768",
-        "g": "c4cf42bd22da0e90",
-        "name": "Set State",
-        "rules": [
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "on",
-                "fromt": "str",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "off",
-                "fromt": "str",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1720,
-        "y": 1560,
-        "wires": [
-            [
-                "29c85b88.abdbe4"
+                "aecda74e6fdd1ac0"
             ]
         ]
     },
@@ -17972,7 +18060,8 @@
         "y": 1540,
         "wires": [
             [
-                "647921f4d9a2d950"
+                "647921f4d9a2d950",
+                "26861d65835672ce"
             ]
         ]
     },
@@ -18125,13 +18214,17 @@
         "links": [
             "c2a6540cf2006146",
             "d3afa1ea39895105",
+            "87d1ce3c19202d34",
+            "21c80566.d9201a",
+            "e2d7c57f5c31b977",
+            "6e1a0143.f51f8",
             "4c1858d290c94d44"
         ],
-        "x": 445,
+        "x": 285,
         "y": 1500,
         "wires": [
             [
-                "13a252ff538d8be3"
+                "c446fcab5b684e27"
             ]
         ]
     },
@@ -18141,7 +18234,7 @@
         "z": "4edd86b6.331768",
         "g": "c4cf42bd22da0e90",
         "name": "",
-        "property": "topic",
+        "property": "room",
         "propertyType": "msg",
         "rules": [
             {
@@ -18193,7 +18286,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 9,
-        "x": 730,
+        "x": 690,
         "y": 1500,
         "wires": [
             [
@@ -18264,32 +18357,6 @@
         "wires": [
             [
                 "80e36239586e7edc"
-            ]
-        ]
-    },
-    {
-        "id": "e7a1a9e1e22065c4",
-        "type": "switch",
-        "z": "4edd86b6.331768",
-        "g": "c4cf42bd22da0e90",
-        "name": "",
-        "property": "movement",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "payload",
-                "vt": "msg"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1530,
-        "y": 1560,
-        "wires": [
-            [
-                "e540ebb37b986b6f"
             ]
         ]
     },
@@ -18388,18 +18455,16 @@
                 "t": "null"
             },
             {
-                "t": "nempty"
+                "t": "nnull"
             }
         ],
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1390,
+        "x": 1480,
         "y": 1560,
         "wires": [
-            [
-                "e7a1a9e1e22065c4"
-            ],
+            [],
             [
                 "3b3de3175ed44aa8"
             ]
@@ -18417,38 +18482,19 @@
             {
                 "t": "neq",
                 "v": "state",
-                "vt": "str"
+                "vt": "msg"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1530,
-        "y": 1600,
+        "x": 1610,
+        "y": 1560,
         "wires": [
             [
-                "a51ca0b20d32143c",
-                "d825ed4998f16052"
+                "a51ca0b20d32143c"
             ]
         ]
-    },
-    {
-        "id": "d825ed4998f16052",
-        "type": "debug",
-        "z": "4edd86b6.331768",
-        "g": "c4cf42bd22da0e90",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1730,
-        "y": 1640,
-        "wires": []
     },
     {
         "id": "a51ca0b20d32143c",
@@ -18457,24 +18503,6 @@
         "g": "c4cf42bd22da0e90",
         "name": "Set State",
         "rules": [
-            {
-                "t": "change",
-                "p": "state",
-                "pt": "msg",
-                "from": "on",
-                "fromt": "str",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "change",
-                "p": "state",
-                "pt": "msg",
-                "from": "off",
-                "fromt": "str",
-                "to": "false",
-                "tot": "bool"
-            },
             {
                 "t": "set",
                 "p": "payload",
@@ -18488,12 +18516,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1720,
-        "y": 1600,
+        "x": 1760,
+        "y": 1560,
         "wires": [
             [
                 "29c85b88.abdbe4",
-                "d825ed4998f16052"
+                "5fa8d333e469765d"
             ]
         ]
     },
@@ -18503,7 +18531,7 @@
         "z": "4edd86b6.331768",
         "g": "8cba373d8f4d3966",
         "name": "debug 3",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -18547,7 +18575,7 @@
         "z": "4edd86b6.331768",
         "g": "8cba373d8f4d3966",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -18634,8 +18662,7 @@
         "y": 680,
         "wires": [
             [
-                "ff1fc7e44a6ee4fb",
-                "97183ba4bdf4cd01"
+                "ff1fc7e44a6ee4fb"
             ]
         ]
     },
@@ -18657,6 +18684,14 @@
             {
                 "name": "m_basement_stairs",
                 "id": "36",
+                "props": {},
+                "state": [],
+                "commands": [],
+                "children": []
+            },
+            {
+                "name": "m_wardrobe",
+                "id": "4",
                 "props": {},
                 "state": [],
                 "commands": [],
@@ -18732,7 +18767,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 570,
+        "x": 550,
         "y": 1500,
         "wires": [
             [
@@ -18741,11 +18776,121 @@
         ]
     },
     {
-        "id": "97183ba4bdf4cd01",
+        "id": "c446fcab5b684e27",
+        "type": "change",
+        "z": "4edd86b6.331768",
+        "g": "c4cf42bd22da0e90",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "state",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 1500,
+        "wires": [
+            [
+                "13a252ff538d8be3"
+            ]
+        ]
+    },
+    {
+        "id": "aecda74e6fdd1ac0",
+        "type": "change",
+        "z": "4edd86b6.331768",
+        "g": "c4cf42bd22da0e90",
+        "name": "cnvrt",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "on",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "off",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1320,
+        "y": 1560,
+        "wires": [
+            [
+                "cd50f90b06a6709f"
+            ]
+        ]
+    },
+    {
+        "id": "2091a313ede5bc95",
+        "type": "delay",
+        "z": "4edd86b6.331768",
+        "g": "b01d69bb34a09e41",
+        "name": "lim",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "3",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 1000,
+        "wires": [
+            [
+                "7d505bde.df4254"
+            ]
+        ]
+    },
+    {
+        "id": "5fa8d333e469765d",
         "type": "debug",
         "z": "4edd86b6.331768",
-        "g": "c9556be6f9a1107c",
+        "g": "c4cf42bd22da0e90",
         "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1850,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "26861d65835672ce",
+        "type": "debug",
+        "z": "4edd86b6.331768",
+        "g": "c4cf42bd22da0e90",
+        "name": "debug 11",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -18754,9 +18899,108 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 970,
-        "y": 560,
+        "x": 690,
+        "y": 1360,
         "wires": []
+    },
+    {
+        "id": "b189a430d4359acd",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "g": "b01d69bb34a09e41",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1450,
+        "y": 1080,
+        "wires": [
+            [
+                "5a67b8ee13fb7983"
+            ]
+        ]
+    },
+    {
+        "id": "5a67b8ee13fb7983",
+        "type": "function",
+        "z": "4edd86b6.331768",
+        "g": "b01d69bb34a09e41",
+        "name": "function 2",
+        "func": "\n\nmsg = { \"topic\": \"pt:j1/mt:cmd/rt:dev/rn:zw/ad:1/sv:out_lvl_switch/ad:37_0\", \"payload\": { \"type\": \"cmd.binary.set\", \"serv\": \"out_lvl_switch\", \"val_t\": \"bool\", \"val\": \"off\", \"tags\": null, \"props\": {}, \"ver\": \"1\", \"corid\": \"\", \"src\": \"node-red\", \"ctime\": \"\", \"uid\": \"\" }, \"thing\": { \"config\": { \"name\": \"bathroom\", \"id\": \"46\", \"props\": { \"address\": \"37\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, \"typeConfig\": { \"id\": \"ed876b6c.e43528\", \"type\": \"Thing Setup\", \"z\": \"4edd86b6.331768\", \"g\": \"b01d69bb34a09e41\", \"thingType\": \"FH_Light\", \"things\": [{ \"name\": \"Hallway\", \"id\": \"21\", \"props\": { \"address\": 2, \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"Office_Light\", \"id\": \"5\", \"props\": { \"address\": 6, \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"kjøkken\", \"id\": \"10\", \"props\": { \"address\": \"3\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"stue\", \"id\": \"11\", \"props\": { \"address\": \"14\", \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"bathroom\", \"id\": \"46\", \"props\": { \"address\": \"37\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"closet\", \"id\": \"9\", \"props\": { \"address\": \"12\", \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"laundry\", \"id\": \"15\", \"props\": { \"address\": 9, \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"basement\", \"id\": \"17\", \"props\": { \"address\": \"18\", \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"bedroom\", \"id\": \"20\", \"props\": { \"address\": \"22\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"karinaoffice\", \"id\": \"27\", \"props\": { \"adress\": \"27\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"office\", \"id\": \"26\", \"props\": { \"address\": \"l4\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }], \"state\": [{ \"key\": \"power\", \"value\": false }], \"commands\": [], \"statusFunction\": \"if (state.power === undefined) return null\\nlet text = state.power == \\\"on\\\" ? 'On' : 'Off'\\nif (state.hasOwnProperty('brightness') && state.on){\\n     text += ` ${state.brightness < 1 ? state.brightness * 100 : state.brightness}%`\\n}\\n   \\n    \\nreturn {\\n    fill: state.power == \\\"on\\\" ? 'yellow' : 'grey',\\n    shape: 'dot',\\n    text\\n}\", \"debug\": false, \"x\": 1260, \"y\": 940, \"wires\": [] }, \"name\": \"bathroom\", \"type\": \"FH_Light\", \"id\": 46, \"props\": { \"address\": \"37\", \"sv\": \"out_lvl_switch\" }, \"children\": [], \"state\": { \"power\": \"0\" }, \"status\": { \"fill\": \"grey\", \"shape\": \"dot\", \"text\": \"Off\" } }, \"_msgid\": \"03a295a634cc2d28\" }\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1550,
+        "y": 1060,
+        "wires": [
+            [
+                "626ca02b.796b9"
+            ]
+        ]
+    },
+    {
+        "id": "998d9ed730956a93",
+        "type": "debug",
+        "z": "4edd86b6.331768",
+        "g": "8cba373d8f4d3966",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "37c6b0b1b13744b0",
+        "type": "inject",
+        "z": "4edd86b6.331768",
+        "g": "c4cf42bd22da0e90",
+        "name": "",
+        "props": [
+            {
+                "p": "room",
+                "v": "KJØKKEN",
+                "vt": "str"
+            },
+            {
+                "p": "state",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 410,
+        "y": 1420,
+        "wires": [
+            [
+                "76142807ba013dd5"
+            ]
+        ]
     },
     {
         "id": "4c1858d290c94d44",
@@ -19468,22 +19712,15 @@
                 "t": "set",
                 "p": "room",
                 "pt": "msg",
-                "to": "bathroom",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
                 "to": "BA-LYS",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "state",
+                "p": "payload",
                 "pt": "msg",
-                "to": "on",
-                "tot": "str"
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -19509,22 +19746,15 @@
                 "t": "set",
                 "p": "room",
                 "pt": "msg",
-                "to": "bathroom",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
                 "to": "BA-LYS",
                 "tot": "str"
             },
             {
                 "t": "set",
-                "p": "state",
+                "p": "payload",
                 "pt": "msg",
-                "to": "off",
-                "tot": "str"
+                "to": "false",
+                "tot": "bool"
             }
         ],
         "action": "",
