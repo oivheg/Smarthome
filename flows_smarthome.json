@@ -673,13 +673,11 @@
             "b2659103b136eee6",
             "80e36239586e7edc",
             "b0dc3ddb928b3d38",
-            "2091a313ede5bc95",
-            "b189a430d4359acd",
-            "5a67b8ee13fb7983"
+            "2091a313ede5bc95"
         ],
         "x": 464,
         "y": 899,
-        "w": 1172,
+        "w": 1142,
         "h": 242
     },
     {
@@ -739,13 +737,13 @@
             "13a252ff538d8be3",
             "c446fcab5b684e27",
             "aecda74e6fdd1ac0",
-            "5fa8d333e469765d",
-            "26861d65835672ce",
-            "37c6b0b1b13744b0"
+            "042f81d8d844995b",
+            "0342c455be2f1e29",
+            "61261982c883c502"
         ],
         "x": 244,
         "y": 1299,
-        "w": 1782,
+        "w": 1742,
         "h": 442
     },
     {
@@ -6396,7 +6394,7 @@
         "name": "O-Light",
         "mode": "link",
         "links": [
-            "80b9f8ea0180e4ee"
+            "0342c455be2f1e29"
         ],
         "x": 1715,
         "y": 340,
@@ -17330,8 +17328,8 @@
         "command": "",
         "commandType": "msg",
         "debug": false,
-        "x": 1940,
-        "y": 1560,
+        "x": 1900,
+        "y": 1520,
         "wires": []
     },
     {
@@ -18047,8 +18045,7 @@
         "y": 1540,
         "wires": [
             [
-                "647921f4d9a2d950",
-                "26861d65835672ce"
+                "647921f4d9a2d950"
             ]
         ]
     },
@@ -18199,7 +18196,6 @@
         "g": "c4cf42bd22da0e90",
         "name": "Set_Lights",
         "links": [
-            "c2a6540cf2006146",
             "d3afa1ea39895105",
             "87d1ce3c19202d34",
             "21c80566.d9201a",
@@ -18451,7 +18447,9 @@
         "x": 1480,
         "y": 1560,
         "wires": [
-            [],
+            [
+                "042f81d8d844995b"
+            ],
             [
                 "3b3de3175ed44aa8"
             ]
@@ -18507,8 +18505,7 @@
         "y": 1560,
         "wires": [
             [
-                "29c85b88.abdbe4",
-                "5fa8d333e469765d"
+                "29c85b88.abdbe4"
             ]
         ]
     },
@@ -18818,114 +18815,63 @@
         ]
     },
     {
-        "id": "5fa8d333e469765d",
-        "type": "debug",
-        "z": "4edd86b6.331768",
-        "g": "c4cf42bd22da0e90",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1850,
-        "y": 1460,
-        "wires": []
-    },
-    {
-        "id": "26861d65835672ce",
-        "type": "debug",
-        "z": "4edd86b6.331768",
-        "g": "c4cf42bd22da0e90",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 690,
-        "y": 1360,
-        "wires": []
-    },
-    {
-        "id": "b189a430d4359acd",
-        "type": "inject",
-        "z": "4edd86b6.331768",
-        "g": "b01d69bb34a09e41",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1450,
-        "y": 1080,
-        "wires": [
-            [
-                "5a67b8ee13fb7983"
-            ]
-        ]
-    },
-    {
-        "id": "5a67b8ee13fb7983",
+        "id": "042f81d8d844995b",
         "type": "function",
         "z": "4edd86b6.331768",
-        "g": "b01d69bb34a09e41",
-        "name": "function 2",
-        "func": "\n\nmsg = { \"topic\": \"pt:j1/mt:cmd/rt:dev/rn:zw/ad:1/sv:out_lvl_switch/ad:37_0\", \"payload\": { \"type\": \"cmd.binary.set\", \"serv\": \"out_lvl_switch\", \"val_t\": \"bool\", \"val\": \"off\", \"tags\": null, \"props\": {}, \"ver\": \"1\", \"corid\": \"\", \"src\": \"node-red\", \"ctime\": \"\", \"uid\": \"\" }, \"thing\": { \"config\": { \"name\": \"bathroom\", \"id\": \"46\", \"props\": { \"address\": \"37\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, \"typeConfig\": { \"id\": \"ed876b6c.e43528\", \"type\": \"Thing Setup\", \"z\": \"4edd86b6.331768\", \"g\": \"b01d69bb34a09e41\", \"thingType\": \"FH_Light\", \"things\": [{ \"name\": \"Hallway\", \"id\": \"21\", \"props\": { \"address\": 2, \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"Office_Light\", \"id\": \"5\", \"props\": { \"address\": 6, \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"kjøkken\", \"id\": \"10\", \"props\": { \"address\": \"3\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"stue\", \"id\": \"11\", \"props\": { \"address\": \"14\", \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"bathroom\", \"id\": \"46\", \"props\": { \"address\": \"37\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"closet\", \"id\": \"9\", \"props\": { \"address\": \"12\", \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"laundry\", \"id\": \"15\", \"props\": { \"address\": 9, \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"basement\", \"id\": \"17\", \"props\": { \"address\": \"18\", \"sv\": \"out_bin_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"bedroom\", \"id\": \"20\", \"props\": { \"address\": \"22\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"karinaoffice\", \"id\": \"27\", \"props\": { \"adress\": \"27\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }, { \"name\": \"office\", \"id\": \"26\", \"props\": { \"address\": \"l4\", \"sv\": \"out_lvl_switch\" }, \"state\": [], \"commands\": [], \"children\": [] }], \"state\": [{ \"key\": \"power\", \"value\": false }], \"commands\": [], \"statusFunction\": \"if (state.power === undefined) return null\\nlet text = state.power == \\\"on\\\" ? 'On' : 'Off'\\nif (state.hasOwnProperty('brightness') && state.on){\\n     text += ` ${state.brightness < 1 ? state.brightness * 100 : state.brightness}%`\\n}\\n   \\n    \\nreturn {\\n    fill: state.power == \\\"on\\\" ? 'yellow' : 'grey',\\n    shape: 'dot',\\n    text\\n}\", \"debug\": false, \"x\": 1260, \"y\": 940, \"wires\": [] }, \"name\": \"bathroom\", \"type\": \"FH_Light\", \"id\": 46, \"props\": { \"address\": \"37\", \"sv\": \"out_lvl_switch\" }, \"children\": [], \"state\": { \"power\": \"0\" }, \"status\": { \"fill\": \"grey\", \"shape\": \"dot\", \"text\": \"Off\" } }, \"_msgid\": \"03a295a634cc2d28\" }\n\n\nreturn msg;",
+        "g": "c4cf42bd22da0e90",
+        "name": "invert",
+        "func": "msg.payload = !msg.payload;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1550,
-        "y": 1060,
+        "x": 1610,
+        "y": 1520,
         "wires": [
             [
-                "626ca02b.796b9"
+                "29c85b88.abdbe4"
             ]
         ]
     },
     {
-        "id": "37c6b0b1b13744b0",
-        "type": "inject",
+        "id": "0342c455be2f1e29",
+        "type": "link in",
+        "z": "4edd86b6.331768",
+        "g": "c4cf42bd22da0e90",
+        "name": "set_Lights_buypass",
+        "links": [
+            "c2a6540cf2006146"
+        ],
+        "x": 305,
+        "y": 1420,
+        "wires": [
+            [
+                "61261982c883c502"
+            ]
+        ]
+    },
+    {
+        "id": "61261982c883c502",
+        "type": "change",
         "z": "4edd86b6.331768",
         "g": "c4cf42bd22da0e90",
         "name": "",
-        "props": [
+        "rules": [
             {
+                "t": "set",
                 "p": "room",
-                "v": "KJØKKEN",
-                "vt": "str"
-            },
-            {
-                "p": "state",
-                "v": "true",
-                "vt": "bool"
+                "pt": "msg",
+                "to": "topic",
+                "tot": "msg"
             }
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 410,
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
         "y": 1420,
         "wires": [
             [
