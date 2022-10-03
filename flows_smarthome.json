@@ -673,8 +673,7 @@
             "b2659103b136eee6",
             "80e36239586e7edc",
             "b0dc3ddb928b3d38",
-            "2091a313ede5bc95",
-            "7513cb736bf12bc3"
+            "2091a313ede5bc95"
         ],
         "x": 364,
         "y": 899,
@@ -8661,7 +8660,7 @@
             },
             {
                 "name": "LightTreshold",
-                "value": "50",
+                "value": "44",
                 "type": "num"
             },
             {
@@ -14351,7 +14350,7 @@
             {
                 "type": "state",
                 "format": "single",
-                "output": "always",
+                "output": "onupdate",
                 "onstart": true,
                 "payload": [
                     "__complete__"
@@ -17369,11 +17368,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 520,
+        "x": 540,
         "y": 1000,
         "wires": [
             [
-                "7513cb736bf12bc3"
+                "2091a313ede5bc95"
             ]
         ]
     },
@@ -18643,7 +18642,7 @@
             }
         ],
         "commands": [],
-        "statusFunction": "if (state.power === undefined) return null\r\nlet text = state.power == \"on\" ? 'On' : 'Off'\r\nif (state.hasOwnProperty('brightness') && state.on) {\r\n    text += ` ${state.brightness < 1 ? state.brightness * 100 : state.brightness}%`\r\n}\r\n\r\n\r\nreturn {\r\n    fill: state.power == \"on\" ? 'yellow' : 'grey',\r\n    shape: 'dot',\r\n    text\r\n}",
+        "statusFunction": "if (state.movement === undefined) return null\r\n\r\n\r\nreturn {\r\n    fill: state.movement == true ? 'blue' : 'grey',\r\n    shape: 'dot'\r\n}",
         "debug": false,
         "x": 1240,
         "y": 680,
@@ -18786,7 +18785,7 @@
         "z": "4edd86b6.331768",
         "g": "b01d69bb34a09e41",
         "name": "lim",
-        "pauseType": "timed",
+        "pauseType": "rate",
         "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
@@ -18889,30 +18888,6 @@
         "x": 730,
         "y": 220,
         "wires": []
-    },
-    {
-        "id": "7513cb736bf12bc3",
-        "type": "switch",
-        "z": "4edd86b6.331768",
-        "g": "b01d69bb34a09e41",
-        "name": "",
-        "property": "payload.val.changes.wattage",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 620,
-        "y": 1000,
-        "wires": [
-            [
-                "2091a313ede5bc95"
-            ]
-        ]
     },
     {
         "id": "4c1858d290c94d44",
@@ -19699,6 +19674,35 @@
         "wires": [
             [
                 "047237403aaab33f"
+            ]
+        ]
+    },
+    {
+        "id": "7c9c66cc7e526a29",
+        "type": "inject",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1500,
+        "y": 560,
+        "wires": [
+            [
+                "694353d781c790bc"
             ]
         ]
     },
@@ -20872,7 +20876,8 @@
         "y": 840,
         "wires": [
             [
-                "c7221f2791289568"
+                "c7221f2791289568",
+                "07d84cf87b0653b3"
             ]
         ]
     },
@@ -21152,6 +21157,22 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "07d84cf87b0653b3",
+        "type": "debug",
+        "z": "021cd6ea3e90db93",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 660,
+        "wires": []
     },
     {
         "id": "7410ca5f5aabab86",
@@ -22680,6 +22701,7 @@
         "id": "858b8605826bec63",
         "type": "link out",
         "z": "15652aa.fd5c4d5",
+        "d": true,
         "name": "link out 1",
         "mode": "link",
         "links": [
