@@ -954,12 +954,11 @@
             "c55928ec8bab12af",
             "bdbfb41970724bbc",
             "0e867a2e21130f1a",
-            "33695432083288c6",
-            "86693c04e2424cd2"
+            "33695432083288c6"
         ],
-        "x": 1924,
+        "x": 1934,
         "y": 419,
-        "w": 262,
+        "w": 252,
         "h": 402
     },
     {
@@ -1014,7 +1013,7 @@
             "7410ca5f5aabab86"
         ],
         "x": 1074,
-        "y": 1019,
+        "y": 459,
         "w": 152,
         "h": 82
     },
@@ -21215,9 +21214,11 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 1150,
-        "y": 1060,
+        "y": 500,
         "wires": [
-            []
+            [
+                "2a4c81b9f29cdd45"
+            ]
         ]
     },
     {
@@ -21489,8 +21490,7 @@
         "y": 500,
         "wires": [
             [
-                "c55928ec8bab12af",
-                "86693c04e2424cd2"
+                "c55928ec8bab12af"
             ]
         ]
     },
@@ -22096,8 +22096,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1700,
-        "y": 660,
+        "x": 1740,
+        "y": 680,
         "wires": [
             [
                 "33695432083288c6"
@@ -22106,24 +22106,6 @@
                 "0e867a2e21130f1a"
             ]
         ]
-    },
-    {
-        "id": "86693c04e2424cd2",
-        "type": "debug",
-        "z": "6df0226504208616",
-        "g": "87ad358dad6d615f",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2010,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "cdda54c1c95885b5",
