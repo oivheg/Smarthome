@@ -756,9 +756,7 @@
             "4b0510cde2a3bfff"
         ],
         "x": 454,
-        "y": 1259,
-        "w": 1192,
-        "h": 182
+        "y": 1259
     },
     {
         "id": "a7b26502af3b65e3",
@@ -781,9 +779,7 @@
             "a04e6739528f2eab"
         ],
         "x": 264,
-        "y": 1059,
-        "w": 1452,
-        "h": 142
+        "y": 1059
     },
     {
         "id": "172b4292bafc68a7",
@@ -804,9 +800,7 @@
             "7f4dd2f1e5bb0824"
         ],
         "x": 264,
-        "y": 859,
-        "w": 1482,
-        "h": 142
+        "y": 859
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -828,9 +822,7 @@
             "3a9ba9acdd4546e6"
         ],
         "x": 254,
-        "y": 599,
-        "w": 1522,
-        "h": 202
+        "y": 599
     },
     {
         "id": "9bb3180dbbe92370",
@@ -856,9 +848,7 @@
             "277f89239aa44fc7"
         ],
         "x": 474,
-        "y": 1339,
-        "w": 1112,
-        "h": 242
+        "y": 1339
     },
     {
         "id": "c9556be6f9a1107c",
@@ -903,9 +893,130 @@
             "1b1b701f2f4d7455"
         ],
         "x": 404,
-        "y": 1559,
-        "w": 1112,
-        "h": 182
+        "y": 1559
+    },
+    {
+        "id": "de17e98102477bde",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "Parameters",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "67361b1114c0fdfe",
+            "e97e2897e23ddfe6",
+            "46c0e8dd5c1bc8aa",
+            "3ade5de96d20c60a",
+            "4445d551c97a8c33",
+            "f401193199a5d246",
+            "7ce9530bbab43ce3",
+            "bc2016b761b16427",
+            "f3b8ba3285e47a53",
+            "38b3f8ab5235eae5"
+        ],
+        "x": 214,
+        "y": 879,
+        "w": 812,
+        "h": 202
+    },
+    {
+        "id": "1bd93d309e63194e",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "Modes",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "2bf80c0dd1a3633a",
+            "469534ab7d1a6e67",
+            "e5900fb71b890322",
+            "ce1254daf9ef9715"
+        ],
+        "x": 224,
+        "y": 584,
+        "w": 542,
+        "h": 112
+    },
+    {
+        "id": "87ad358dad6d615f",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "Heat Pump",
+        "style": {
+            "fill": "#ffcf3f",
+            "label": true
+        },
+        "nodes": [
+            "c55928ec8bab12af",
+            "bdbfb41970724bbc",
+            "0e867a2e21130f1a",
+            "33695432083288c6",
+            "86693c04e2424cd2"
+        ],
+        "x": 1924,
+        "y": 419,
+        "w": 262,
+        "h": 402
+    },
+    {
+        "id": "c10ebffd064adbf1",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "HeatPump current Temp",
+        "style": {
+            "fill": "#ffdf7f",
+            "label": true
+        },
+        "nodes": [
+            "3cbaca3214520fac",
+            "d00e4981b1602e83",
+            "326ebb822b97e7c9"
+        ],
+        "x": 234,
+        "y": 759,
+        "w": 752,
+        "h": 82
+    },
+    {
+        "id": "1525f01c13bb1d72",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "Schedule",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "e4533adb51b5c363",
+            "3f24f1034c760819",
+            "1998fd1676fdbd20",
+            "d819b5d04aef9a18"
+        ],
+        "x": 234,
+        "y": 219,
+        "w": 592,
+        "h": 122
+    },
+    {
+        "id": "76afa4ece7428050",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "Inputs",
+        "style": {
+            "fill": "#c8e7a7",
+            "label": true
+        },
+        "nodes": [
+            "7410ca5f5aabab86"
+        ],
+        "x": 1074,
+        "y": 1019,
+        "w": 152,
+        "h": 82
     },
     {
         "id": "2e7006b6bbb0568e",
@@ -1481,6 +1592,13 @@
         "queryUrl": "https://api.tibber.com/v1-beta/gql",
         "feedTimeout": "60",
         "name": "Heggland"
+    },
+    {
+        "id": "b257c3b61872d5b6",
+        "type": "light-scheduler-settings",
+        "name": "Home",
+        "latitude": "58.8713",
+        "longitude": " 5.7168"
     },
     {
         "id": "4b3b19cb6cd314e6",
@@ -21096,8 +21214,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1010,
-        "y": 1020,
+        "x": 1150,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -21371,7 +21489,8 @@
         "y": 500,
         "wires": [
             [
-                "c55928ec8bab12af"
+                "c55928ec8bab12af",
+                "86693c04e2424cd2"
             ]
         ]
     },
@@ -21397,7 +21516,9 @@
         "x": 710,
         "y": 1040,
         "wires": [
-            []
+            [
+                "38b3f8ab5235eae5"
+            ]
         ]
     },
     {
@@ -21447,7 +21568,7 @@
         "id": "38b3f8ab5235eae5",
         "type": "change",
         "z": "6df0226504208616",
-        "g": "76afa4ece7428050",
+        "g": "de17e98102477bde",
         "name": "",
         "rules": [
             {
@@ -21463,10 +21584,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1060,
-        "y": 1080,
+        "x": 900,
+        "y": 1040,
         "wires": [
-            []
+            [
+                "dcb046bbb6008951"
+            ]
         ]
     },
     {
@@ -21529,29 +21652,6 @@
         "wires": [
             [
                 "3cbaca3214520fac"
-            ]
-        ]
-    },
-    {
-        "id": "e9b27878137b3b84",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "name": "Is dog Home",
-        "property": "happyHome",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 1330,
-        "y": 780,
-        "wires": [
-            [
-                "2c334735e66bbfee"
             ]
         ]
     },
@@ -21649,56 +21749,6 @@
         ]
     },
     {
-        "id": "bf792e89b70d41d8",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "name": "is Temp High",
-        "property": "Cur_Temp",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "23",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 1330,
-        "y": 820,
-        "wires": [
-            [
-                "e9b27878137b3b84"
-            ]
-        ]
-    },
-    {
-        "id": "2c334735e66bbfee",
-        "type": "change",
-        "z": "6df0226504208616",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1360,
-        "y": 1060,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "326ebb822b97e7c9",
         "type": "change",
         "z": "6df0226504208616",
@@ -21724,54 +21774,6 @@
             [
                 "c4d9e0754c0f8049"
             ]
-        ]
-    },
-    {
-        "id": "838b14dabc71a002",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "name": "is Temp Under",
-        "property": "Cur_Temp",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "lt",
-                "v": "22.5",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 1340,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e94008a7e63793fa",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "name": "tempOn",
-        "property": "tempOn",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "null"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1360,
-        "y": 920,
-        "wires": [
-            [],
-            []
         ]
     },
     {
@@ -21891,8 +21893,8 @@
         "id": "c4d9e0754c0f8049",
         "type": "switch",
         "z": "6df0226504208616",
-        "name": "SummerTime",
-        "property": "SummerTime",
+        "name": "Cur_Temp",
+        "property": "Cur_Temp",
         "propertyType": "flow",
         "rules": [
             {
@@ -21904,12 +21906,294 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1140,
-        "y": 860,
+        "x": 1090,
+        "y": 800,
         "wires": [
             [
-                "838b14dabc71a002"
+                "b6a91a79ebe2ca38"
             ]
+        ]
+    },
+    {
+        "id": "88f762e6368aa7c0",
+        "type": "light-scheduler",
+        "z": "6df0226504208616",
+        "settings": "b257c3b61872d5b6",
+        "events": "[{\"start\":{\"dow\":4,\"mod\":390},\"end\":{\"dow\":4,\"mod\":480}},{\"start\":{\"dow\":3,\"mod\":390},\"end\":{\"dow\":3,\"mod\":480}},{\"start\":{\"dow\":1,\"mod\":390},\"end\":{\"dow\":1,\"mod\":480}},{\"start\":{\"dow\":5,\"mod\":390},\"end\":{\"dow\":5,\"mod\":480}},{\"start\":{\"dow\":2,\"mod\":390},\"end\":{\"dow\":2,\"mod\":480}},{\"start\":{\"dow\":0,\"mod\":540},\"end\":{\"dow\":0,\"mod\":1260}},{\"start\":{\"dow\":6,\"mod\":540},\"end\":{\"dow\":6,\"mod\":1260}},{\"start\":{\"dow\":1,\"mod\":840},\"end\":{\"dow\":1,\"mod\":1260}},{\"start\":{\"dow\":2,\"mod\":840},\"end\":{\"dow\":2,\"mod\":1260}},{\"start\":{\"dow\":3,\"mod\":840},\"end\":{\"dow\":3,\"mod\":1260}},{\"start\":{\"dow\":4,\"mod\":840},\"end\":{\"dow\":4,\"mod\":1260}},{\"start\":{\"dow\":5,\"mod\":840},\"end\":{\"dow\":5,\"mod\":1260}}]",
+        "topic": "",
+        "name": "",
+        "onPayload": "true",
+        "onPayloadType": "bool",
+        "offPayload": "false",
+        "offPayloadType": "bool",
+        "onlyWhenDark": false,
+        "scheduleRndMax": 0,
+        "sunElevationThreshold": 6,
+        "sunShowElevationInStatus": false,
+        "outputfreq": "output.statechange.startup",
+        "x": 1340,
+        "y": 680,
+        "wires": [
+            [
+                "cdda54c1c95885b5"
+            ]
+        ]
+    },
+    {
+        "id": "6bed44df9a96c7f5",
+        "type": "change",
+        "z": "6df0226504208616",
+        "name": "set OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 680,
+        "wires": [
+            [
+                "88f762e6368aa7c0"
+            ]
+        ]
+    },
+    {
+        "id": "1143fa19d1277481",
+        "type": "change",
+        "z": "6df0226504208616",
+        "name": "set Auto",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "auto",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 600,
+        "wires": [
+            [
+                "88f762e6368aa7c0"
+            ]
+        ]
+    },
+    {
+        "id": "9c802a5c40bcec2d",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "name": "SummerTime",
+        "property": "SummerTime",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 920,
+        "y": 640,
+        "wires": [
+            [
+                "e9b27878137b3b84"
+            ],
+            [
+                "1143fa19d1277481"
+            ]
+        ]
+    },
+    {
+        "id": "2a4c81b9f29cdd45",
+        "type": "change",
+        "z": "6df0226504208616",
+        "name": "set on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 640,
+        "wires": [
+            [
+                "88f762e6368aa7c0"
+            ]
+        ]
+    },
+    {
+        "id": "0cb0951007ee41bb",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "2bf80c0dd1a3633a"
+            ]
+        ]
+    },
+    {
+        "id": "dcb046bbb6008951",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "name": "On/OFF",
+        "property": "tempOn",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1700,
+        "y": 660,
+        "wires": [
+            [
+                "33695432083288c6"
+            ],
+            [
+                "0e867a2e21130f1a"
+            ]
+        ]
+    },
+    {
+        "id": "86693c04e2424cd2",
+        "type": "debug",
+        "z": "6df0226504208616",
+        "g": "87ad358dad6d615f",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2010,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "cdda54c1c95885b5",
+        "type": "change",
+        "z": "6df0226504208616",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tempOn",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 660,
+        "wires": [
+            [
+                "dcb046bbb6008951"
+            ]
+        ]
+    },
+    {
+        "id": "e9b27878137b3b84",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "name": "Is dog Home",
+        "property": "happyHome",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 1130,
+        "y": 640,
+        "wires": [
+            [
+                "2a4c81b9f29cdd45"
+            ]
+        ]
+    },
+    {
+        "id": "b6a91a79ebe2ca38",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "name": "SummerTime",
+        "property": "SummerTime",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1280,
+        "y": 800,
+        "wires": [
+            []
         ]
     },
     {
@@ -22378,353 +22662,6 @@
         "wires": [
             [
                 "052f3d28a092f444"
-            ]
-        ]
-    },
-    {
-        "id": "de17e98102477bde",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "Parameters",
-        "style": {
-            "fill": "#bfdbef",
-            "label": true
-        },
-        "nodes": [
-            "67361b1114c0fdfe",
-            "e97e2897e23ddfe6",
-            "46c0e8dd5c1bc8aa",
-            "3ade5de96d20c60a",
-            "4445d551c97a8c33",
-            "f401193199a5d246",
-            "7ce9530bbab43ce3",
-            "bc2016b761b16427",
-            "f3b8ba3285e47a53"
-        ],
-        "x": 214,
-        "y": 879,
-        "w": 632,
-        "h": 202
-    },
-    {
-        "id": "1bd93d309e63194e",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "Modes",
-        "style": {
-            "fill": "#bfdbef",
-            "label": true
-        },
-        "nodes": [
-            "2bf80c0dd1a3633a",
-            "469534ab7d1a6e67",
-            "e5900fb71b890322",
-            "ce1254daf9ef9715"
-        ],
-        "x": 224,
-        "y": 584,
-        "w": 542,
-        "h": 112
-    },
-    {
-        "id": "87ad358dad6d615f",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "Heat Pump",
-        "style": {
-            "fill": "#ffcf3f",
-            "label": true
-        },
-        "nodes": [
-            "c55928ec8bab12af",
-            "bdbfb41970724bbc",
-            "0e867a2e21130f1a",
-            "33695432083288c6"
-        ],
-        "x": 1934,
-        "y": 419,
-        "w": 252,
-        "h": 402
-    },
-    {
-        "id": "c10ebffd064adbf1",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "HeatPump current Temp",
-        "style": {
-            "fill": "#ffdf7f",
-            "label": true
-        },
-        "nodes": [
-            "3cbaca3214520fac",
-            "d00e4981b1602e83",
-            "326ebb822b97e7c9"
-        ],
-        "x": 234,
-        "y": 759,
-        "w": 752,
-        "h": 82
-    },
-    {
-        "id": "1525f01c13bb1d72",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "Schedule",
-        "style": {
-            "fill": "#dbcbe7",
-            "label": true
-        },
-        "nodes": [
-            "e4533adb51b5c363",
-            "3f24f1034c760819",
-            "1998fd1676fdbd20",
-            "d819b5d04aef9a18"
-        ],
-        "x": 234,
-        "y": 219,
-        "w": 592,
-        "h": 122
-    },
-    {
-        "id": "76afa4ece7428050",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "Inputs",
-        "style": {
-            "fill": "#c8e7a7",
-            "label": true
-        },
-        "nodes": [
-            "7410ca5f5aabab86",
-            "38b3f8ab5235eae5"
-        ],
-        "x": 934,
-        "y": 979,
-        "w": 252,
-        "h": 142
-    },
-    {
-        "id": "b257c3b61872d5b6",
-        "type": "light-scheduler-settings",
-        "name": "Home",
-        "latitude": "58.8713",
-        "longitude": " 5.7168"
-    },
-    {
-        "id": "88f762e6368aa7c0",
-        "type": "light-scheduler",
-        "z": "6df0226504208616",
-        "settings": "b257c3b61872d5b6",
-        "events": "[{\"start\":{\"dow\":4,\"mod\":390},\"end\":{\"dow\":4,\"mod\":480}},{\"start\":{\"dow\":3,\"mod\":390},\"end\":{\"dow\":3,\"mod\":480}},{\"start\":{\"dow\":1,\"mod\":390},\"end\":{\"dow\":1,\"mod\":480}},{\"start\":{\"dow\":5,\"mod\":390},\"end\":{\"dow\":5,\"mod\":480}},{\"start\":{\"dow\":2,\"mod\":390},\"end\":{\"dow\":2,\"mod\":480}},{\"start\":{\"dow\":0,\"mod\":540},\"end\":{\"dow\":0,\"mod\":1260}},{\"start\":{\"dow\":6,\"mod\":540},\"end\":{\"dow\":6,\"mod\":1260}},{\"start\":{\"dow\":1,\"mod\":840},\"end\":{\"dow\":1,\"mod\":1260}},{\"start\":{\"dow\":2,\"mod\":840},\"end\":{\"dow\":2,\"mod\":1260}},{\"start\":{\"dow\":3,\"mod\":840},\"end\":{\"dow\":3,\"mod\":1260}},{\"start\":{\"dow\":4,\"mod\":840},\"end\":{\"dow\":4,\"mod\":1260}},{\"start\":{\"dow\":5,\"mod\":840},\"end\":{\"dow\":5,\"mod\":1260}}]",
-        "topic": "",
-        "name": "",
-        "onPayload": "true",
-        "onPayloadType": "bool",
-        "offPayload": "false",
-        "offPayloadType": "bool",
-        "onlyWhenDark": false,
-        "scheduleRndMax": 0,
-        "sunElevationThreshold": 6,
-        "sunShowElevationInStatus": false,
-        "outputfreq": "output.statechange.startup",
-        "x": 1340,
-        "y": 680,
-        "wires": [
-            [
-                "dcb046bbb6008951"
-            ]
-        ]
-    },
-    {
-        "id": "6bed44df9a96c7f5",
-        "type": "change",
-        "z": "6df0226504208616",
-        "name": "set OFF",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 920,
-        "y": 680,
-        "wires": [
-            [
-                "88f762e6368aa7c0"
-            ]
-        ]
-    },
-    {
-        "id": "1143fa19d1277481",
-        "type": "change",
-        "z": "6df0226504208616",
-        "name": "set Auto",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "auto",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1140,
-        "y": 600,
-        "wires": [
-            [
-                "88f762e6368aa7c0"
-            ]
-        ]
-    },
-    {
-        "id": "9c802a5c40bcec2d",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "name": "SummerTime",
-        "property": "SummerTime",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 920,
-        "y": 640,
-        "wires": [
-            [
-                "2a4c81b9f29cdd45"
-            ],
-            [
-                "1143fa19d1277481"
-            ]
-        ]
-    },
-    {
-        "id": "2a4c81b9f29cdd45",
-        "type": "change",
-        "z": "6df0226504208616",
-        "name": "set on",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "on",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 640,
-        "wires": [
-            [
-                "88f762e6368aa7c0"
-            ]
-        ]
-    },
-    {
-        "id": "0cb0951007ee41bb",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 520,
-        "y": 500,
-        "wires": [
-            [
-                "2bf80c0dd1a3633a"
-            ]
-        ]
-    },
-    {
-        "id": "dcb046bbb6008951",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "name": "On/OFF",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1610,
-        "y": 620,
-        "wires": [
-            [
-                "33695432083288c6"
-            ],
-            [
-                "0e867a2e21130f1a"
-            ]
-        ]
-    },
-    {
-        "id": "a08aec99681dd673",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "trigger",
-        "payloadType": "str",
-        "x": 1240,
-        "y": 500,
-        "wires": [
-            [
-                "88f762e6368aa7c0"
             ]
         ]
     }
