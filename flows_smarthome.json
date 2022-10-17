@@ -914,12 +914,13 @@
             "7ce9530bbab43ce3",
             "bc2016b761b16427",
             "f3b8ba3285e47a53",
-            "38b3f8ab5235eae5"
+            "38b3f8ab5235eae5",
+            "425971ea4db9dc68"
         ],
         "x": 214,
         "y": 879,
         "w": 812,
-        "h": 202
+        "h": 262
     },
     {
         "id": "1bd93d309e63194e",
@@ -4813,7 +4814,8 @@
         "z": "1c11632f.f206fd",
         "name": "GH-STUE-EN",
         "links": [
-            "858b8605826bec63"
+            "858b8605826bec63",
+            "e0f4bc77f36c022a"
         ],
         "x": 1475,
         "y": 440,
@@ -5126,6 +5128,87 @@
         "wires": [
             [
                 "8230075b49008c5c"
+            ]
+        ]
+    },
+    {
+        "id": "88b87b059f621ec1",
+        "type": "change",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "Happy wants  to go INSIDE",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 300,
+        "wires": [
+            [
+                "01fff3d299a92f32"
+            ]
+        ]
+    },
+    {
+        "id": "e47ed05591a6d2af",
+        "type": "inject",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 990,
+        "y": 320,
+        "wires": [
+            [
+                "88b87b059f621ec1"
+            ]
+        ]
+    },
+    {
+        "id": "01fff3d299a92f32",
+        "type": "delay",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1350,
+        "y": 320,
+        "wires": [
+            [
+                "6231a20f24a2e3ca"
             ]
         ]
     },
@@ -8831,7 +8914,7 @@
             },
             {
                 "name": "delay",
-                "value": "5",
+                "value": "2",
                 "type": "num"
             }
         ],
@@ -11510,14 +11593,14 @@
         "id": "933b65ba.415558",
         "type": "function",
         "z": "1b14ec1b.20ab54",
-        "name": "Happy hungry",
+        "name": "Happy Inside",
         "func": "  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: \"Happy wants  to go INSIDE\",\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\n\n\n\n\n\n\nlet msg2 = {};\n\n\n\n\n\nmsg2.payload = [ {\n        \"title\": \"Outside\",\n        \"description\": msg.payload,\n        \"icon\": \"https://lh3.googleusercontent.com/F7dHEApWlOufIKF5NX7EHtx1VTPfKWRIN-bOMch2Mi5eixq7cASp-Jh4kr2T4u5l5OUwkhZgowOD6HSOvnnSDi14oaDkREKSmejYnyOujkuSUw5mkIr_AqgIkZro25qWezWl3jxMwv-yTNCzPGV_ABugX9malJX4ZMEumc0cz5wQHsJxfh334ayq_yAslDd7cRzVytebggUPZ7kzxiWYtNAPZLzuOhZLu831adN6OM91wD7glPQoticU3Lh97Hzi1bHI55CEsMuY0DI4jIGlHCkhziI7Xm3FoZCjqX467O5uqKxHzdsamQ9FLGPquo7xr5FBaFUlrwtYoliH1kfSLEVF5C2b_zwErbcjQPCmKyPWQiUthDLvtcatWZ-zC7XmZb3knlSdb_ecwFmbm5lyn0krvtDU123uynS_xLK2C8uXhUP_A3r2msHBEIqrQoDP3HCHlJl2rOQ77Mxgh1uqUCZTT2EUGs67B-beYgbVcd_8wydZfHl6Pn4LP04yilrP3yCZtPT9zC_j-XM4AH_5kunbXytenZHLteaI4ppe4u9lnRCjX5nq8vshrXfOJINr_XvBbUQRHb1uUxQ9N0R_a8i7McUanKl06SX967PMOl9mxSC4LrisMzTj4KoWATsVCU8oXeo6DEsx-l0ICLeLven98hfoAFZym6jPVhBbUmZF7c_IGuqEgUvDw0HI1jc5uATSRxz-7YDELuDpAz4DKQBMMToV-yZdpNQXsM3zpu1Je7j9nA=w563-h545-no\"\n    }];\n\nreturn [msg, msg2];",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
+        "x": 510,
         "y": 40,
         "wires": [
             [
@@ -22179,6 +22262,23 @@
         ]
     },
     {
+        "id": "425971ea4db9dc68",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "name": "Set Temperature",
+        "links": [
+            "32a0b9d95d5f01ed"
+        ],
+        "x": 685,
+        "y": 1100,
+        "wires": [
+            [
+                "38b3f8ab5235eae5"
+            ]
+        ]
+    },
+    {
         "id": "6521603b2e19525f",
         "type": "aedes broker",
         "z": "c83f14cc3d9b8395",
@@ -22402,18 +22502,18 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "3600",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "{viewer{homes{id size appNickname appAvatar address{address1 address2 address3 postalCode city country latitude longitude}}}}",
+        "payload": "{   viewer {     home(id: \"142c1670-ab43-2ab3-ba6d-723703a551e2\") {       currentSubscription{         priceInfo{           today {             total             energy             tax             startsAt           }           tomorrow {             total             energy             tax             startsAt           }         }       }     }   } }",
         "payloadType": "str",
         "x": 130,
         "y": 80,
         "wires": [
             [
-                "4d90c0d9.a283f"
+                "459349dfcd1788c8"
             ]
         ]
     },
@@ -22427,8 +22527,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 570,
-        "y": 80,
+        "x": 1390,
+        "y": 60,
         "wires": []
     },
     {
@@ -22464,8 +22564,8 @@
         "currentL2": false,
         "currentL3": false,
         "signalStrength": false,
-        "x": 120,
-        "y": 180,
+        "x": 210,
+        "y": 780,
         "wires": [
             [
                 "0911a3e961c90766"
@@ -22479,11 +22579,11 @@
         "name": "",
         "active": true,
         "apiEndpointRef": "3d2f09b6c7faaec7",
-        "x": 350,
+        "x": 470,
         "y": 80,
         "wires": [
             [
-                "d98c9051.ec2cb"
+                "48e83ca74d8bc7ba"
             ]
         ]
     },
@@ -22543,8 +22643,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 420,
-        "y": 180,
+        "x": 510,
+        "y": 780,
         "wires": [
             [
                 "052f3d28a092f444"
@@ -22573,8 +22673,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
-        "y": 180,
+        "x": 1060,
+        "y": 780,
         "wires": [
             [
                 "858b8605826bec63"
@@ -22591,8 +22691,8 @@
         "links": [
             "5cfbdbd83670143c"
         ],
-        "x": 1085,
-        "y": 180,
+        "x": 1175,
+        "y": 780,
         "wires": []
     },
     {
@@ -22612,8 +22712,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 790,
-        "y": 180,
+        "x": 880,
+        "y": 780,
         "wires": [
             [
                 "fe09f6b01a7587a0"
@@ -22639,12 +22739,327 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
-        "y": 240,
+        "x": 670,
+        "y": 840,
         "wires": [
             [
                 "052f3d28a092f444"
             ]
         ]
+    },
+    {
+        "id": "2d920ae161d2ae27",
+        "type": "power-saver",
+        "z": "15652aa.fd5c4d5",
+        "name": "Power Saver",
+        "maxHoursToSaveInSequence": 3,
+        "minHoursOnAfterMaxSequenceSaved": 2,
+        "minSaving": 0.01,
+        "sendCurrentValueWhenRescheduling": true,
+        "outputIfNoSchedule": "true",
+        "scheduleOnlyFromCurrentTime": "true",
+        "x": 1130,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "48e83ca74d8bc7ba",
+        "type": "ps-receive-price",
+        "z": "15652aa.fd5c4d5",
+        "name": "Price Receiver",
+        "x": 700,
+        "y": 80,
+        "wires": [
+            [
+                "df6f3b08f3e8b01c",
+                "9ba86ceb8e9ee185",
+                "9e05d9595d856561"
+            ]
+        ]
+    },
+    {
+        "id": "459349dfcd1788c8",
+        "type": "function",
+        "z": "15652aa.fd5c4d5",
+        "name": "Single Home",
+        "func": "msg.payload =\n    \"{   viewer {     home(id: \\\"50c631b0-94da-4fd9-ac4c-f767e223de07\\\") {       currentSubscription{         priceInfo{           today {             total             energy             tax             startsAt           }           tomorrow {             total             energy             tax             startsAt           }         }       }     }   } }\"\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "4d90c0d9.a283f"
+            ]
+        ]
+    },
+    {
+        "id": "ad1953067506fd9e",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1390,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3b95ccb3258c776a",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1330,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "df6f3b08f3e8b01c",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "9e05d9595d856561",
+        "type": "ps-strategy-best-save",
+        "z": "15652aa.fd5c4d5",
+        "name": "Best Save",
+        "maxHoursToSaveInSequence": "5",
+        "minHoursOnAfterMaxSequenceSaved": 2,
+        "minSaving": "0.05",
+        "sendCurrentValueWhenRescheduling": true,
+        "outputIfNoSchedule": "true",
+        "contextStorage": "default",
+        "x": 930,
+        "y": 340,
+        "wires": [
+            [
+                "d98c9051.ec2cb",
+                "207ec618a3073c3c"
+            ],
+            [
+                "ad1953067506fd9e",
+                "67c4b006c62d09d4"
+            ],
+            [
+                "3b95ccb3258c776a"
+            ]
+        ]
+    },
+    {
+        "id": "e0f4bc77f36c022a",
+        "type": "link out",
+        "z": "15652aa.fd5c4d5",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "5cfbdbd83670143c"
+        ],
+        "x": 1585,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "207ec618a3073c3c",
+        "type": "change",
+        "z": "15652aa.fd5c4d5",
+        "name": "Power HIGH",
+        "rules": [
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "Power schedule is on",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 300,
+        "wires": [
+            [
+                "f1d6ae4de07e3bdf"
+            ]
+        ]
+    },
+    {
+        "id": "67c4b006c62d09d4",
+        "type": "change",
+        "z": "15652aa.fd5c4d5",
+        "name": "Power HIGH",
+        "rules": [
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "Power cann not be used",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 340,
+        "wires": [
+            [
+                "f1d6ae4de07e3bdf"
+            ]
+        ]
+    },
+    {
+        "id": "9ba86ceb8e9ee185",
+        "type": "ps-strategy-heat-capacitor",
+        "z": "15652aa.fd5c4d5",
+        "name": "Heat capacitor",
+        "timeHeat1C": "75",
+        "timeCool1C": 50,
+        "maxTempAdjustment": "2",
+        "boostTempHeat": "2",
+        "boostTempCool": "1",
+        "minSavings": 0.08,
+        "setpoint": 23,
+        "x": 940,
+        "y": 440,
+        "wires": [
+            [
+                "b9924c1b2abdaa73",
+                "32a0b9d95d5f01ed"
+            ],
+            [
+                "9624ecef08221539"
+            ],
+            [
+                "edb42ec05bfb83b5"
+            ]
+        ]
+    },
+    {
+        "id": "b9924c1b2abdaa73",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9624ecef08221539",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "edb42ec05bfb83b5",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "f1d6ae4de07e3bdf",
+        "type": "rbe",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1430,
+        "y": 320,
+        "wires": [
+            [
+                "e0f4bc77f36c022a"
+            ]
+        ]
+    },
+    {
+        "id": "32a0b9d95d5f01ed",
+        "type": "link out",
+        "z": "15652aa.fd5c4d5",
+        "name": "set Temperature",
+        "mode": "link",
+        "links": [
+            "425971ea4db9dc68"
+        ],
+        "x": 1185,
+        "y": 420,
+        "wires": []
     }
 ]
