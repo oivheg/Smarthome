@@ -756,7 +756,9 @@
             "4b0510cde2a3bfff"
         ],
         "x": 454,
-        "y": 1259
+        "y": 1259,
+        "w": 1192,
+        "h": 182
     },
     {
         "id": "a7b26502af3b65e3",
@@ -779,7 +781,9 @@
             "a04e6739528f2eab"
         ],
         "x": 264,
-        "y": 1059
+        "y": 1059,
+        "w": 1452,
+        "h": 142
     },
     {
         "id": "172b4292bafc68a7",
@@ -800,7 +804,9 @@
             "7f4dd2f1e5bb0824"
         ],
         "x": 264,
-        "y": 859
+        "y": 859,
+        "w": 1482,
+        "h": 142
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -822,7 +828,9 @@
             "3a9ba9acdd4546e6"
         ],
         "x": 254,
-        "y": 599
+        "y": 599,
+        "w": 1522,
+        "h": 202
     },
     {
         "id": "9bb3180dbbe92370",
@@ -893,7 +901,9 @@
             "1b1b701f2f4d7455"
         ],
         "x": 404,
-        "y": 1559
+        "y": 1559,
+        "w": 1112,
+        "h": 182
     },
     {
         "id": "de17e98102477bde",
@@ -915,12 +925,14 @@
             "bc2016b761b16427",
             "f3b8ba3285e47a53",
             "38b3f8ab5235eae5",
-            "425971ea4db9dc68"
+            "425971ea4db9dc68",
+            "886304c986eee280",
+            "d61c8ff011a88dbc",
+            "30ea5fb10da29ec3",
+            "821b39103a91f616"
         ],
-        "x": 214,
-        "y": 879,
-        "w": 812,
-        "h": 262
+        "x": 234,
+        "y": 859
     },
     {
         "id": "1bd93d309e63194e",
@@ -938,9 +950,7 @@
             "ce1254daf9ef9715"
         ],
         "x": 224,
-        "y": 584,
-        "w": 542,
-        "h": 112
+        "y": 584
     },
     {
         "id": "87ad358dad6d615f",
@@ -957,10 +967,8 @@
             "0e867a2e21130f1a",
             "33695432083288c6"
         ],
-        "x": 1934,
-        "y": 419,
-        "w": 252,
-        "h": 402
+        "x": 1974,
+        "y": 439
     },
     {
         "id": "c10ebffd064adbf1",
@@ -977,9 +985,7 @@
             "326ebb822b97e7c9"
         ],
         "x": 234,
-        "y": 759,
-        "w": 752,
-        "h": 82
+        "y": 759
     },
     {
         "id": "1525f01c13bb1d72",
@@ -996,10 +1002,8 @@
             "1998fd1676fdbd20",
             "d819b5d04aef9a18"
         ],
-        "x": 234,
-        "y": 219,
-        "w": 592,
-        "h": 122
+        "x": 224,
+        "y": 219
     },
     {
         "id": "76afa4ece7428050",
@@ -1014,9 +1018,7 @@
             "7410ca5f5aabab86"
         ],
         "x": 1074,
-        "y": 459,
-        "w": 152,
-        "h": 82
+        "y": 459
     },
     {
         "id": "2e7006b6bbb0568e",
@@ -8824,7 +8826,7 @@
             },
             {
                 "name": "LightTreshold",
-                "value": "44",
+                "value": "41",
                 "type": "num"
             },
             {
@@ -21313,8 +21315,8 @@
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
         "value": "21",
-        "x": 2070,
-        "y": 460,
+        "x": 2090,
+        "y": 480,
         "wires": []
     },
     {
@@ -21326,8 +21328,8 @@
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
         "value": "21",
-        "x": 2070,
-        "y": 640,
+        "x": 2090,
+        "y": 660,
         "wires": []
     },
     {
@@ -21397,10 +21399,12 @@
                 "1143fa19d1277481"
             ],
             [
-                "9c802a5c40bcec2d"
+                "9c802a5c40bcec2d",
+                "e9a5c977e13d6b89"
             ],
             [
-                "9c802a5c40bcec2d"
+                "9c802a5c40bcec2d",
+                "e9a5c977e13d6b89"
             ],
             [
                 "6bed44df9a96c7f5"
@@ -21415,8 +21419,8 @@
         "oauthClient": "4ec8324b.b2dc1c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
-        "x": 2040,
-        "y": 780,
+        "x": 2060,
+        "y": 800,
         "wires": []
     },
     {
@@ -21569,8 +21573,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2050,
-        "y": 500,
+        "x": 2090,
+        "y": 540,
         "wires": [
             [
                 "c55928ec8bab12af"
@@ -21596,11 +21600,11 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 710,
-        "y": 1040,
+        "x": 730,
+        "y": 1020,
         "wires": [
             [
-                "38b3f8ab5235eae5"
+                "886304c986eee280"
             ]
         ]
     },
@@ -21611,8 +21615,8 @@
         "g": "de17e98102477bde",
         "name": "",
         "events": "change",
-        "x": 320,
-        "y": 1040,
+        "x": 340,
+        "y": 1020,
         "wires": [
             [
                 "bc2016b761b16427"
@@ -21639,8 +21643,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
-        "y": 1040,
+        "x": 530,
+        "y": 1020,
         "wires": [
             [
                 "7ce9530bbab43ce3"
@@ -21667,11 +21671,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
+        "x": 1060,
         "y": 1040,
         "wires": [
             [
-                "dcb046bbb6008951"
+                "94063986cb17af33"
             ]
         ]
     },
@@ -21760,8 +21764,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 310,
-        "y": 920,
+        "x": 330,
+        "y": 900,
         "wires": [
             [
                 "e97e2897e23ddfe6"
@@ -21788,8 +21792,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
-        "y": 920,
+        "x": 520,
+        "y": 900,
         "wires": [
             [
                 "46c0e8dd5c1bc8aa"
@@ -21823,8 +21827,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 720,
-        "y": 920,
+        "x": 740,
+        "y": 900,
         "wires": [
             [
                 "e97e2897e23ddfe6"
@@ -21910,8 +21914,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 740,
-        "y": 980,
+        "x": 760,
+        "y": 960,
         "wires": [
             [
                 "4445d551c97a8c33"
@@ -21938,8 +21942,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
-        "y": 980,
+        "x": 510,
+        "y": 960,
         "wires": [
             [
                 "3ade5de96d20c60a"
@@ -21964,8 +21968,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 320,
-        "y": 980,
+        "x": 340,
+        "y": 960,
         "wires": [
             [
                 "4445d551c97a8c33"
@@ -22042,7 +22046,7 @@
         "to": "",
         "reg": false,
         "x": 920,
-        "y": 680,
+        "y": 700,
         "wires": [
             [
                 "88f762e6368aa7c0"
@@ -22270,11 +22274,142 @@
         "links": [
             "32a0b9d95d5f01ed"
         ],
-        "x": 685,
-        "y": 1100,
+        "x": 705,
+        "y": 1080,
+        "wires": [
+            [
+                "d61c8ff011a88dbc"
+            ]
+        ]
+    },
+    {
+        "id": "886304c986eee280",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "name": "tempoverride",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tempoverride",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 1020,
         "wires": [
             [
                 "38b3f8ab5235eae5"
+            ]
+        ]
+    },
+    {
+        "id": "d61c8ff011a88dbc",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "name": "tempoverride",
+        "property": "tempoverride",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 1080,
+        "wires": [
+            [
+                "38b3f8ab5235eae5"
+            ]
+        ]
+    },
+    {
+        "id": "30ea5fb10da29ec3",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "name": "set tempoverride false",
+        "links": [
+            "e9a5c977e13d6b89"
+        ],
+        "x": 285,
+        "y": 1100,
+        "wires": [
+            [
+                "821b39103a91f616"
+            ]
+        ]
+    },
+    {
+        "id": "821b39103a91f616",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "name": "tempoverride",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tempoverride",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9a5c977e13d6b89",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "30ea5fb10da29ec3"
+        ],
+        "x": 845,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "94063986cb17af33",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "name": "On/OFF",
+        "property": "tempOn",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1680,
+        "y": 800,
+        "wires": [
+            [
+                "33695432083288c6"
             ]
         ]
     },
@@ -22502,7 +22637,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3600",
+        "repeat": "900",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -22583,7 +22718,8 @@
         "y": 80,
         "wires": [
             [
-                "48e83ca74d8bc7ba"
+                "48e83ca74d8bc7ba",
+                "df6f3b08f3e8b01c"
             ]
         ]
     },
@@ -22839,7 +22975,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
         "x": 930,
@@ -22877,12 +23014,13 @@
         "id": "e0f4bc77f36c022a",
         "type": "link out",
         "z": "15652aa.fd5c4d5",
+        "d": true,
         "name": "link out 2",
         "mode": "link",
         "links": [
             "5cfbdbd83670143c"
         ],
-        "x": 1585,
+        "x": 1595,
         "y": 320,
         "wires": []
     },
@@ -22965,7 +23103,7 @@
         "boostTempHeat": "2",
         "boostTempCool": "1",
         "minSavings": 0.08,
-        "setpoint": 23,
+        "setpoint": "21",
         "x": 940,
         "y": 440,
         "wires": [
