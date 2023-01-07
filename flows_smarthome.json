@@ -756,7 +756,9 @@
             "4b0510cde2a3bfff"
         ],
         "x": 454,
-        "y": 1259
+        "y": 1259,
+        "w": 1192,
+        "h": 182
     },
     {
         "id": "a7b26502af3b65e3",
@@ -779,7 +781,9 @@
             "a04e6739528f2eab"
         ],
         "x": 264,
-        "y": 1059
+        "y": 1059,
+        "w": 1452,
+        "h": 142
     },
     {
         "id": "172b4292bafc68a7",
@@ -802,7 +806,9 @@
             "4bc2bb26010ce09f"
         ],
         "x": 264,
-        "y": 859
+        "y": 859,
+        "w": 1482,
+        "h": 149.5
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -821,10 +827,13 @@
             "d17d889454f3d3a1",
             "ca9cda18826d54da",
             "ed863371775575ab",
-            "3a9ba9acdd4546e6"
+            "3a9ba9acdd4546e6",
+            "bc75f603ad1027db"
         ],
         "x": 254,
-        "y": 599
+        "y": 599,
+        "w": 1522,
+        "h": 202
     },
     {
         "id": "9bb3180dbbe92370",
@@ -896,7 +905,9 @@
             "bbb32c91fd67d03f"
         ],
         "x": 404,
-        "y": 1459
+        "y": 1459,
+        "w": 1112,
+        "h": 282
     },
     {
         "id": "de17e98102477bde",
@@ -7355,7 +7366,8 @@
         "name": "",
         "mode": "link",
         "links": [
-            "80b9f8ea0180e4ee"
+            "80b9f8ea0180e4ee",
+            "df8e9adb3c8eb378"
         ],
         "x": 1605,
         "y": 1300,
@@ -7517,7 +7529,8 @@
         "z": "aa0ae7ae.75d228",
         "name": "btn_upstairs",
         "links": [
-            "6987ca2e.892e94"
+            "6987ca2e.892e94",
+            "e006dbe1d20f09b1"
         ],
         "x": 155,
         "y": 260,
@@ -8349,7 +8362,8 @@
         "name": "",
         "mode": "link",
         "links": [
-            "80b9f8ea0180e4ee"
+            "80b9f8ea0180e4ee",
+            "df8e9adb3c8eb378"
         ],
         "x": 1705,
         "y": 960,
@@ -8723,7 +8737,8 @@
         "name": "",
         "mode": "link",
         "links": [
-            "80b9f8ea0180e4ee"
+            "80b9f8ea0180e4ee",
+            "df8e9adb3c8eb378"
         ],
         "x": 1675,
         "y": 1120,
@@ -8873,7 +8888,8 @@
         "y": 720,
         "wires": [
             [
-                "e2d7c57f5c31b977"
+                "e2d7c57f5c31b977",
+                "bc75f603ad1027db"
             ]
         ]
     },
@@ -9779,6 +9795,161 @@
         "wires": [
             [
                 "f2e0ac31e202a4e3"
+            ]
+        ]
+    },
+    {
+        "id": "bc75f603ad1027db",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "g": "ff7ca7f8980ed0b1",
+        "name": "True",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1440,
+        "y": 640,
+        "wires": [
+            [
+                "5f73d02a6b8a85e6"
+            ]
+        ]
+    },
+    {
+        "id": "d37dfc8b7c95236c",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1580,
+        "y": 500,
+        "wires": [
+            [
+                "17c5a7b3f229590b"
+            ]
+        ]
+    },
+    {
+        "id": "b6d05acd6b922f83",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "Upstairs_block:controll",
+        "links": [
+            "13197968d43b0e56"
+        ],
+        "x": 625,
+        "y": 220,
+        "wires": [
+            [
+                "af4303d0.15fad"
+            ]
+        ]
+    },
+    {
+        "id": "17c5a7b3f229590b",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "GO",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1710,
+        "y": 500,
+        "wires": [
+            [
+                "13197968d43b0e56"
+            ]
+        ]
+    },
+    {
+        "id": "5f73d02a6b8a85e6",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "name": "STOP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "STOP",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1730,
+        "y": 560,
+        "wires": [
+            [
+                "13197968d43b0e56"
+            ]
+        ]
+    },
+    {
+        "id": "13197968d43b0e56",
+        "type": "link out",
+        "z": "aa0ae7ae.75d228",
+        "name": "link out 5",
+        "mode": "link",
+        "links": [
+            "b6d05acd6b922f83"
+        ],
+        "x": 1805,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "df8e9adb3c8eb378",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "name": "Release_Usptairs",
+        "links": [
+            "21c80566.d9201a",
+            "87d1ce3c19202d34",
+            "6e1a0143.f51f8"
+        ],
+        "x": 1405,
+        "y": 500,
+        "wires": [
+            [
+                "d37dfc8b7c95236c"
             ]
         ]
     },
@@ -23445,6 +23616,10 @@
         "minHoursOnAfterMaxSequenceSaved": 2,
         "minSaving": "0.05",
         "sendCurrentValueWhenRescheduling": true,
+        "outputValueForOn": "true",
+        "outputValueForOff": "true",
+        "outputValueForOntype": "bool",
+        "outputValueForOfftype": "bool",
         "outputIfNoSchedule": "true",
         "contextStorage": "default",
         "x": 950,
@@ -23552,7 +23727,7 @@
         "boostTempHeat": "2",
         "boostTempCool": "0",
         "minSavings": 0.08,
-        "setpoint": "21",
+        "setpoint": "22",
         "x": 960,
         "y": 160,
         "wires": [
@@ -23694,7 +23869,8 @@
         "y": 180,
         "wires": [
             [
-                "48e83ca74d8bc7ba"
+                "48e83ca74d8bc7ba",
+                "c42f771f52fd9e7d"
             ]
         ]
     },
@@ -23981,5 +24157,21 @@
                 "6692caeafc9b13b0"
             ]
         ]
+    },
+    {
+        "id": "c42f771f52fd9e7d",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 320,
+        "wires": []
     }
 ]
