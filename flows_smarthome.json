@@ -141,6 +141,14 @@
         "env": []
     },
     {
+        "id": "6a77c00f79a19693",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -1937,21 +1945,9 @@
         "polling": "30"
     },
     {
-        "id": "05cbdf7b0fdd90d2",
-        "type": "global-config",
-        "name": "global-config",
-        "env": [
-            {
-                "name": "testVariabel",
-                "value": "dette er en test",
-                "type": "str"
-            }
-        ]
-    },
-    {
-        "id": "96b59b8029f139cd",
+        "id": "9feeb2998ddc8f7a",
         "type": "unificonfig",
-        "name": "Heggland",
+        "name": "Config",
         "ip": "178.128.169.181",
         "port": "8443",
         "site": "7vyhbfa5",
@@ -8923,7 +8919,7 @@
         "y": 220,
         "wires": [
             [
-                "9cc11a2ffbd5ac0f"
+                "3d4cdfc69d4dcb35"
             ]
         ]
     },
@@ -10071,35 +10067,17 @@
         ]
     },
     {
-        "id": "ac214dbb5175248d",
-        "type": "debug",
-        "z": "8b99f8fe.7b27b8",
-        "name": "debug 29",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 630,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "9cc11a2ffbd5ac0f",
+        "id": "3d4cdfc69d4dcb35",
         "type": "Unifi",
         "z": "8b99f8fe.7b27b8",
-        "name": "Heggland ",
-        "server": "96b59b8029f139cd",
+        "name": "",
+        "server": "9feeb2998ddc8f7a",
         "command": "20",
-        "x": 400,
+        "x": 470,
         "y": 260,
         "wires": [
             [
-                "eabe9d09ac5494a3",
-                "ac214dbb5175248d"
+                "eabe9d09ac5494a3"
             ]
         ]
     },
@@ -10702,51 +10680,6 @@
         ]
     },
     {
-        "id": "9cbb928e03a490ea",
-        "type": "inject",
-        "z": "605ae98f.8a9998",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "testVariabel",
-        "payloadType": "env",
-        "x": 520,
-        "y": 640,
-        "wires": [
-            [
-                "c48768a9fdf4a468"
-            ]
-        ]
-    },
-    {
-        "id": "c48768a9fdf4a468",
-        "type": "debug",
-        "z": "605ae98f.8a9998",
-        "name": "debug 23",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 640,
-        "wires": []
-    },
-    {
         "id": "6d8cd486.3ac49c",
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
@@ -11069,15 +11002,17 @@
                 "output": "always",
                 "onstart": true,
                 "payload": [
-                    "presence"
-                ]
+                    "__complete__"
+                ],
+                "uniqueId": "ui-id-8"
             }
         ],
         "x": 280,
         "y": 280,
         "wires": [
             [
-                "c993abab.7f54d8"
+                "d6f2abf4292b46cf",
+                "92b321794298fb6e"
             ]
         ]
     },
@@ -11093,7 +11028,7 @@
                 "type": "str"
             }
         ],
-        "x": 530,
+        "x": 690,
         "y": 280,
         "wires": [
             [
@@ -11111,7 +11046,7 @@
             "1329b56.bea634b",
             "be2ad471.d9c448"
         ],
-        "x": 755,
+        "x": 915,
         "y": 280,
         "wires": []
     },
@@ -11577,84 +11512,6 @@
         "wires": []
     },
     {
-        "id": "35e39765a7880666",
-        "type": "deconz-get",
-        "z": "a7af161f.d5ece8",
-        "name": "",
-        "config_version": 1,
-        "server": "12895ae7.9c6bf5",
-        "statustext": "",
-        "statustext_type": "auto",
-        "search_type": "device",
-        "device_list": [
-            "sensors/uniqueid/00:15:8d:00:02:8d:6d:2d-01-0006"
-        ],
-        "device_name": "",
-        "query": "{}",
-        "outputs": 1,
-        "output_rules": [
-            {
-                "type": "state",
-                "format": "single",
-                "payload": [
-                    "__complete__"
-                ]
-            }
-        ],
-        "x": 540,
-        "y": 1040,
-        "wires": [
-            [
-                "54b1a50f1019f313"
-            ]
-        ]
-    },
-    {
-        "id": "54b1a50f1019f313",
-        "type": "debug",
-        "z": "a7af161f.d5ece8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "41db4b9ea985084b",
-        "type": "inject",
-        "z": "a7af161f.d5ece8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 370,
-        "y": 1020,
-        "wires": [
-            [
-                "35e39765a7880666"
-            ]
-        ]
-    },
-    {
         "id": "72d4018db023f810",
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
@@ -11849,59 +11706,63 @@
                 ]
             }
         ],
-        "x": 190,
-        "y": 620,
+        "x": 330,
+        "y": 540,
         "wires": [
             [
-                "3bb8b86054a6a31d",
-                "005fb4c8d658fcd8"
+                "3bb8b86054a6a31d"
             ]
         ]
     },
     {
-        "id": "466e7bbb221ee8ed",
-        "type": "inject",
+        "id": "d6f2abf4292b46cf",
+        "type": "delay",
         "z": "a7af161f.d5ece8",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 580,
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "c993abab.7f54d8"
+            ]
+        ]
+    },
+    {
+        "id": "92b321794298fb6e",
+        "type": "trigger",
+        "z": "a7af161f.d5ece8",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "nul",
+        "duration": "15",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 340,
+        "y": 420,
         "wires": [
             [
                 "76be70cd39633cd1"
             ]
         ]
-    },
-    {
-        "id": "005fb4c8d658fcd8",
-        "type": "debug",
-        "z": "a7af161f.d5ece8",
-        "name": "debug 24",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 540,
-        "wires": []
     },
     {
         "id": "a64342af.a4b47",
@@ -14759,7 +14620,8 @@
         "g": "88b8cd3b91daf3ae",
         "name": "Set HOME",
         "links": [
-            "247260f.c82dca"
+            "247260f.c82dca",
+            "ed4c1dbd7e3c8218"
         ],
         "x": 1535,
         "y": 100,
@@ -15975,7 +15837,7 @@
         "op2": "false",
         "op1type": "nul",
         "op2type": "bool",
-        "duration": "15",
+        "duration": "30",
         "extend": true,
         "overrideDelay": true,
         "units": "min",
@@ -19789,7 +19651,7 @@
         "boostTempHeat": "0",
         "boostTempCool": "0",
         "minSavings": 0.08,
-        "setpoint": "22",
+        "setpoint": "21",
         "x": 960,
         "y": 160,
         "wires": [
@@ -21550,5 +21412,87 @@
                 "817f1df1.c5f98"
             ]
         ]
+    },
+    {
+        "id": "b0f298334b1bcc58",
+        "type": "mqtt in",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "topic": "pt:j1/mt:evt/rt:dev/rn:zw/ad:1/sv:door_lock/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "41e681f.e420d8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "06a40700c474d84f"
+            ]
+        ]
+    },
+    {
+        "id": "06a40700c474d84f",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "bolt_is_locked is False",
+        "property": "payload.val.bolt_is_locked",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 740,
+        "y": 260,
+        "wires": [
+            [
+                "38519274c0551bb7"
+            ]
+        ]
+    },
+    {
+        "id": "38519274c0551bb7",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "Mode",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "away",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 930,
+        "y": 260,
+        "wires": [
+            [
+                "ed4c1dbd7e3c8218"
+            ]
+        ]
+    },
+    {
+        "id": "ed4c1dbd7e3c8218",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [
+            "14ac8f4a0be280af"
+        ],
+        "x": 1045,
+        "y": 260,
+        "wires": []
     }
 ]
