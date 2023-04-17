@@ -1945,16 +1945,6 @@
         "polling": "30"
     },
     {
-        "id": "9feeb2998ddc8f7a",
-        "type": "unificonfig",
-        "name": "Config",
-        "ip": "178.128.169.181",
-        "port": "8443",
-        "site": "7vyhbfa5",
-        "unifios": false,
-        "ssl": false
-    },
-    {
         "id": "4b3b19cb6cd314e6",
         "type": "switch",
         "z": "94ff8f0f.02c5a",
@@ -8918,9 +8908,7 @@
         "x": 270,
         "y": 220,
         "wires": [
-            [
-                "3d4cdfc69d4dcb35"
-            ]
+            []
         ]
     },
     {
@@ -10063,21 +10051,6 @@
         "wires": [
             [
                 "1e1f56fa524173df"
-            ]
-        ]
-    },
-    {
-        "id": "3d4cdfc69d4dcb35",
-        "type": "Unifi",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "server": "9feeb2998ddc8f7a",
-        "command": "20",
-        "x": 470,
-        "y": 260,
-        "wires": [
-            [
-                "eabe9d09ac5494a3"
             ]
         ]
     },
@@ -19535,6 +19508,7 @@
         "id": "9e05d9595d856561",
         "type": "ps-strategy-best-save",
         "z": "15652aa.fd5c4d5",
+        "d": true,
         "name": "Best Save",
         "maxHoursToSaveInSequence": "5",
         "minHoursOnAfterMaxSequenceSaved": 2,
@@ -19651,7 +19625,7 @@
         "boostTempHeat": "0",
         "boostTempCool": "0",
         "minSavings": 0.08,
-        "setpoint": "21",
+        "setpoint": "23",
         "x": 960,
         "y": 160,
         "wires": [
