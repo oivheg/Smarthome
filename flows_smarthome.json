@@ -143,7 +143,7 @@
     {
         "id": "6a77c00f79a19693",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "FH_IdLock",
         "disabled": false,
         "info": "",
         "env": []
@@ -720,7 +720,9 @@
             "f3d2f0e8d93cd932"
         ],
         "x": 774,
-        "y": 39
+        "y": 39,
+        "w": 682,
+        "h": 142
     },
     {
         "id": "88b8cd3b91daf3ae",
@@ -742,7 +744,9 @@
             "67977af33b66476a"
         ],
         "x": 1494,
-        "y": 19
+        "y": 19,
+        "w": 552,
+        "h": 182
     },
     {
         "id": "b01d69bb34a09e41",
@@ -767,7 +771,9 @@
             "b0dc3ddb928b3d38"
         ],
         "x": 374,
-        "y": 899
+        "y": 899,
+        "w": 1232,
+        "h": 242
     },
     {
         "id": "8cba373d8f4d3966",
@@ -794,7 +800,9 @@
             "d43d955ee16c8bb6"
         ],
         "x": 234,
-        "y": 159
+        "y": 159,
+        "w": 672,
+        "h": 242
     },
     {
         "id": "c4cf42bd22da0e90",
@@ -830,7 +838,9 @@
             "c446fcab5b684e27"
         ],
         "x": 264,
-        "y": 1239
+        "y": 1239,
+        "w": 1742,
+        "h": 442
     },
     {
         "id": "4764ba70f833e4a9",
@@ -961,7 +971,9 @@
             "dc179d3a7d67d467"
         ],
         "x": 574,
-        "y": 639
+        "y": 639,
+        "w": 792,
+        "h": 162
     },
     {
         "id": "e91b0b088ffed19b",
@@ -1943,6 +1955,22 @@
         "ip": "192.168.1.188",
         "token": "6e4447635453797766334e624f597566",
         "polling": "30"
+    },
+    {
+        "id": "490ac6e2a74abc7d",
+        "type": "global-config",
+        "name": "global-config",
+        "env": []
+    },
+    {
+        "id": "1250bb9e4627e9bc",
+        "type": "unificonfig",
+        "name": "",
+        "ip": "178.128.169.181",
+        "port": "8443",
+        "site": "7vyhbfa5",
+        "unifios": false,
+        "ssl": true
     },
     {
         "id": "4b3b19cb6cd314e6",
@@ -8908,7 +8936,9 @@
         "x": 270,
         "y": 220,
         "wires": [
-            []
+            [
+                "59ba4dcb32d2e709"
+            ]
         ]
     },
     {
@@ -10055,6 +10085,21 @@
         ]
     },
     {
+        "id": "59ba4dcb32d2e709",
+        "type": "Unifi",
+        "z": "8b99f8fe.7b27b8",
+        "name": "",
+        "server": "1250bb9e4627e9bc",
+        "command": "20",
+        "x": 480,
+        "y": 280,
+        "wires": [
+            [
+                "eabe9d09ac5494a3"
+            ]
+        ]
+    },
+    {
         "id": "ddc8b687.374538",
         "type": "deconz-input",
         "z": "1b14ec1b.20ab54",
@@ -10696,7 +10741,8 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "be2ad471.d9c448"
+            "be2ad471.d9c448",
+            "77e202e1f7cb4c98"
         ],
         "x": 975,
         "y": 100,
@@ -10748,7 +10794,8 @@
             "1329b56.bea634b",
             "dcf434ce.e89888",
             "e22089f94174d570",
-            "be2ad471.d9c448"
+            "be2ad471.d9c448",
+            "77e202e1f7cb4c98"
         ],
         "x": 695,
         "y": 160,
@@ -10945,7 +10992,8 @@
         "name": "Bvegelse Soverom",
         "links": [
             "50b0d259.df502c",
-            "1329b56.bea634b"
+            "1329b56.bea634b",
+            "77e202e1f7cb4c98"
         ],
         "x": 695,
         "y": 220,
@@ -11017,7 +11065,8 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "be2ad471.d9c448"
+            "be2ad471.d9c448",
+            "77e202e1f7cb4c98"
         ],
         "x": 915,
         "y": 280,
@@ -11463,7 +11512,8 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "c840b6850a9f9370"
+            "c840b6850a9f9370",
+            "77e202e1f7cb4c98"
         ],
         "x": 755,
         "y": 820,
@@ -14576,7 +14626,8 @@
         "g": "88b8cd3b91daf3ae",
         "name": "Set AWAY",
         "links": [
-            "fc4fe81e.444628"
+            "fc4fe81e.444628",
+            "99e34fb7e0972e1e"
         ],
         "x": 1535,
         "y": 60,
@@ -21443,16 +21494,24 @@
                 "t": "eq",
                 "v": "away",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 1,
+        "outputs": 2,
         "x": 930,
         "y": 260,
         "wires": [
             [
                 "ed4c1dbd7e3c8218"
+            ],
+            [
+                "d8cc8d6cd6ac5ca8"
             ]
         ]
     },
@@ -21468,5 +21527,90 @@
         "x": 1045,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "d8cc8d6cd6ac5ca8",
+        "type": "trigger",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "op1": "",
+        "op2": "true",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "30",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1120,
+        "y": 360,
+        "wires": [
+            [
+                "99e34fb7e0972e1e"
+            ]
+        ]
+    },
+    {
+        "id": "77e202e1f7cb4c98",
+        "type": "link in",
+        "z": "6a77c00f79a19693",
+        "name": "Reset away mode",
+        "links": [
+            "328ec247.9e5eee",
+            "455faa8d.6c9aa4",
+            "63e9f9b.1d13608",
+            "9ace10c4.4ce8f",
+            "e92f253c.11b9b8"
+        ],
+        "x": 805,
+        "y": 360,
+        "wires": [
+            [
+                "a8de2316da7082ee"
+            ]
+        ]
+    },
+    {
+        "id": "99e34fb7e0972e1e",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "link out 12",
+        "mode": "link",
+        "links": [
+            "6626af8888151004"
+        ],
+        "x": 1285,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a8de2316da7082ee",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 360,
+        "wires": [
+            [
+                "d8cc8d6cd6ac5ca8"
+            ]
+        ]
     }
 ]
