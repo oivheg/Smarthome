@@ -10100,6 +10100,38 @@
         ]
     },
     {
+        "id": "60335bf328a8b516",
+        "type": "link in",
+        "z": "8b99f8fe.7b27b8",
+        "name": "set Home",
+        "links": [
+            "ed4c1dbd7e3c8218"
+        ],
+        "x": 1325,
+        "y": 160,
+        "wires": [
+            [
+                "a5d3065e.5a0698"
+            ]
+        ]
+    },
+    {
+        "id": "9e9814a999c69457",
+        "type": "link in",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Set Away",
+        "links": [
+            "99e34fb7e0972e1e"
+        ],
+        "x": 1325,
+        "y": 320,
+        "wires": [
+            [
+                "9ab9f797bec97d04"
+            ]
+        ]
+    },
+    {
         "id": "ddc8b687.374538",
         "type": "deconz-input",
         "z": "1b14ec1b.20ab54",
@@ -14626,8 +14658,7 @@
         "g": "88b8cd3b91daf3ae",
         "name": "Set AWAY",
         "links": [
-            "fc4fe81e.444628",
-            "99e34fb7e0972e1e"
+            "fc4fe81e.444628"
         ],
         "x": 1535,
         "y": 60,
@@ -14644,8 +14675,7 @@
         "g": "88b8cd3b91daf3ae",
         "name": "Set HOME",
         "links": [
-            "247260f.c82dca",
-            "ed4c1dbd7e3c8218"
+            "247260f.c82dca"
         ],
         "x": 1535,
         "y": 100,
@@ -15237,6 +15267,7 @@
         "name": "HUE PRESENCE",
         "mode": "link",
         "links": [
+            "77e202e1f7cb4c98",
             "885fc820467d8739"
         ],
         "x": 685,
@@ -21522,9 +21553,9 @@
         "name": "link out 11",
         "mode": "link",
         "links": [
-            "14ac8f4a0be280af"
+            "60335bf328a8b516"
         ],
-        "x": 1045,
+        "x": 1285,
         "y": 260,
         "wires": []
     },
@@ -21545,8 +21576,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1120,
-        "y": 360,
+        "x": 1110,
+        "y": 320,
         "wires": [
             [
                 "99e34fb7e0972e1e"
@@ -21563,10 +21594,11 @@
             "455faa8d.6c9aa4",
             "63e9f9b.1d13608",
             "9ace10c4.4ce8f",
-            "e92f253c.11b9b8"
+            "e92f253c.11b9b8",
+            "2998be5081486cc3"
         ],
-        "x": 805,
-        "y": 360,
+        "x": 795,
+        "y": 320,
         "wires": [
             [
                 "a8de2316da7082ee"
@@ -21580,10 +21612,10 @@
         "name": "link out 12",
         "mode": "link",
         "links": [
-            "6626af8888151004"
+            "9e9814a999c69457"
         ],
         "x": 1285,
-        "y": 360,
+        "y": 320,
         "wires": []
     },
     {
@@ -21605,8 +21637,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
-        "y": 360,
+        "x": 920,
+        "y": 320,
         "wires": [
             [
                 "d8cc8d6cd6ac5ca8"
