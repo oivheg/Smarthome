@@ -720,9 +720,7 @@
             "f3d2f0e8d93cd932"
         ],
         "x": 774,
-        "y": 39,
-        "w": 682,
-        "h": 142
+        "y": 39
     },
     {
         "id": "88b8cd3b91daf3ae",
@@ -744,9 +742,7 @@
             "67977af33b66476a"
         ],
         "x": 1494,
-        "y": 19,
-        "w": 552,
-        "h": 182
+        "y": 19
     },
     {
         "id": "b01d69bb34a09e41",
@@ -771,9 +767,7 @@
             "b0dc3ddb928b3d38"
         ],
         "x": 374,
-        "y": 899,
-        "w": 1232,
-        "h": 242
+        "y": 899
     },
     {
         "id": "8cba373d8f4d3966",
@@ -800,9 +794,7 @@
             "d43d955ee16c8bb6"
         ],
         "x": 234,
-        "y": 159,
-        "w": 672,
-        "h": 242
+        "y": 159
     },
     {
         "id": "c4cf42bd22da0e90",
@@ -838,9 +830,7 @@
             "c446fcab5b684e27"
         ],
         "x": 264,
-        "y": 1239,
-        "w": 1742,
-        "h": 442
+        "y": 1239
     },
     {
         "id": "4764ba70f833e4a9",
@@ -971,9 +961,7 @@
             "dc179d3a7d67d467"
         ],
         "x": 574,
-        "y": 639,
-        "w": 792,
-        "h": 162
+        "y": 639
     },
     {
         "id": "e91b0b088ffed19b",
@@ -1019,10 +1007,13 @@
             "886304c986eee280",
             "d61c8ff011a88dbc",
             "30ea5fb10da29ec3",
-            "821b39103a91f616"
+            "821b39103a91f616",
+            "896aa735a80611d5"
         ],
         "x": 234,
-        "y": 859
+        "y": 859,
+        "w": 1062,
+        "h": 282
     },
     {
         "id": "1bd93d309e63194e",
@@ -1040,7 +1031,9 @@
             "ce1254daf9ef9715"
         ],
         "x": 224,
-        "y": 584
+        "y": 424,
+        "w": 542,
+        "h": 112
     },
     {
         "id": "87ad358dad6d615f",
@@ -1053,34 +1046,18 @@
         },
         "nodes": [
             "c55928ec8bab12af",
-            "bdbfb41970724bbc",
             "0e867a2e21130f1a",
             "33695432083288c6",
-            "6ae7cf9a89666d0c"
+            "31b68c075ef8bdbb",
+            "7967bdfee59e23a4",
+            "39643417b5f03fe4",
+            "08a19fb984a9102a",
+            "0d94ac7c3d6fa234"
         ],
-        "x": 1974,
-        "y": 419
-    },
-    {
-        "id": "c10ebffd064adbf1",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "HeatPump current Temp",
-        "style": {
-            "fill": "#ffdf7f",
-            "label": true
-        },
-        "nodes": [
-            "d00e4981b1602e83",
-            "326ebb822b97e7c9",
-            "d7affdd1d4929436",
-            "abfcbc469748df7a",
-            "c4d9e0754c0f8049",
-            "b6a91a79ebe2ca38",
-            "96641c205e20d6bd"
-        ],
-        "x": 234,
-        "y": 719
+        "x": 2054,
+        "y": 419,
+        "w": 232,
+        "h": 442
     },
     {
         "id": "1525f01c13bb1d72",
@@ -1098,7 +1075,9 @@
             "d819b5d04aef9a18"
         ],
         "x": 234,
-        "y": 219
+        "y": 219,
+        "w": 592,
+        "h": 122
     },
     {
         "id": "76afa4ece7428050",
@@ -1112,8 +1091,10 @@
         "nodes": [
             "7410ca5f5aabab86"
         ],
-        "x": 914,
-        "y": 419
+        "x": 894,
+        "y": 319,
+        "w": 152,
+        "h": 82
     },
     {
         "id": "21fab955d3f1b60e",
@@ -1144,9 +1125,7 @@
             "2018f76d019e4576"
         ],
         "x": 134,
-        "y": 99,
-        "w": 712,
-        "h": 382
+        "y": 99
     },
     {
         "id": "53115130f657b882",
@@ -1424,6 +1403,34 @@
         "y": 299
     },
     {
+        "id": "c10ebffd064adbf1",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "HeatPump current Temp",
+        "style": {
+            "fill": "#ffdf7f",
+            "label": true
+        },
+        "nodes": [
+            "d00e4981b1602e83",
+            "326ebb822b97e7c9",
+            "abfcbc469748df7a",
+            "b6a91a79ebe2ca38",
+            "96641c205e20d6bd",
+            "847b679456e779b9",
+            "8e0903d37c41bf0e",
+            "26e40d73162656c1",
+            "0085aa5b7ff9cc46",
+            "c4d9e0754c0f8049",
+            "86da7f4cca9fd763",
+            "fc50ae84c99bcba5"
+        ],
+        "x": 234,
+        "y": 679,
+        "w": 1202,
+        "h": 162
+    },
+    {
         "id": "2e7006b6bbb0568e",
         "type": "junction",
         "z": "a9a601907d96eb09",
@@ -1445,6 +1452,30 @@
         "wires": [
             [
                 "ff979eb7.893f3"
+            ]
+        ]
+    },
+    {
+        "id": "3d5b775ff4f2f150",
+        "type": "junction",
+        "z": "6df0226504208616",
+        "x": 1680,
+        "y": 740,
+        "wires": [
+            [
+                "0e867a2e21130f1a"
+            ]
+        ]
+    },
+    {
+        "id": "6e32bf19c51ed3a4",
+        "type": "junction",
+        "z": "6df0226504208616",
+        "x": 1280,
+        "y": 500,
+        "wires": [
+            [
+                "88f762e6368aa7c0"
             ]
         ]
     },
@@ -17980,8 +18011,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 990,
-        "y": 460,
+        "x": 970,
+        "y": 360,
         "wires": [
             [
                 "2a4c81b9f29cdd45"
@@ -17997,21 +18028,8 @@
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
         "value": "21",
-        "x": 2110,
+        "x": 2170,
         "y": 460,
-        "wires": []
-    },
-    {
-        "id": "bdbfb41970724bbc",
-        "type": "ambi-temp-mode",
-        "z": "6df0226504208616",
-        "g": "87ad358dad6d615f",
-        "oauthClient": "4ec8324b.b2dc1c",
-        "room_name": "varmepumpe",
-        "location_name": "Gravarsveien 57 A",
-        "value": "21",
-        "x": 2090,
-        "y": 660,
         "wires": []
     },
     {
@@ -18075,7 +18093,7 @@
         "repair": false,
         "outputs": 4,
         "x": 690,
-        "y": 640,
+        "y": 480,
         "wires": [
             [
                 "1143fa19d1277481"
@@ -18101,8 +18119,8 @@
         "oauthClient": "4ec8324b.b2dc1c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
-        "x": 2080,
-        "y": 780,
+        "x": 2140,
+        "y": 740,
         "wires": []
     },
     {
@@ -18116,7 +18134,7 @@
             "67977af33b66476a"
         ],
         "x": 265,
-        "y": 640,
+        "y": 480,
         "wires": [
             [
                 "ce1254daf9ef9715"
@@ -18221,7 +18239,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 530,
-        "y": 640,
+        "y": 480,
         "wires": [
             [
                 "2bf80c0dd1a3633a"
@@ -18255,12 +18273,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2110,
+        "x": 2170,
         "y": 520,
         "wires": [
             [
-                "c55928ec8bab12af",
-                "6ae7cf9a89666d0c"
+                "c55928ec8bab12af"
             ]
         ]
     },
@@ -18358,7 +18375,7 @@
         "y": 1020,
         "wires": [
             [
-                "94063986cb17af33"
+                "896aa735a80611d5"
             ]
         ]
     },
@@ -18402,10 +18419,11 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 330,
-        "y": 760,
+        "y": 720,
         "wires": [
             [
-                "d7affdd1d4929436"
+                "847b679456e779b9",
+                "8e0903d37c41bf0e"
             ]
         ]
     },
@@ -18522,11 +18540,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 890,
+        "x": 770,
         "y": 760,
         "wires": [
             [
-                "c4d9e0754c0f8049"
+                "b6a91a79ebe2ca38"
             ]
         ]
     },
@@ -18547,7 +18565,7 @@
         "repair": false,
         "outputs": 1,
         "x": 370,
-        "y": 640,
+        "y": 480,
         "wires": [
             [
                 "e5900fb71b890322"
@@ -18633,39 +18651,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "false",
+        "payload": "true",
         "payloadType": "bool",
         "x": 340,
         "y": 960,
         "wires": [
             [
                 "4445d551c97a8c33"
-            ]
-        ]
-    },
-    {
-        "id": "c4d9e0754c0f8049",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "Cur_Temp",
-        "property": "Cur_Temp",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "lt",
-                "v": "22.5",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 1090,
-        "y": 760,
-        "wires": [
-            [
-                "b6a91a79ebe2ca38"
             ]
         ]
     },
@@ -18686,11 +18678,11 @@
         "sunElevationThreshold": 6,
         "sunShowElevationInStatus": false,
         "outputfreq": "output.statechange.startup",
-        "x": 1160,
-        "y": 680,
+        "x": 1360,
+        "y": 580,
         "wires": [
             [
-                "e67ac47057175c2a"
+                "cdda54c1c95885b5"
             ]
         ]
     },
@@ -18713,8 +18705,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
-        "y": 680,
+        "x": 910,
+        "y": 560,
         "wires": [
             [
                 "88f762e6368aa7c0"
@@ -18741,10 +18733,10 @@
         "to": "",
         "reg": false,
         "x": 1140,
-        "y": 600,
+        "y": 460,
         "wires": [
             [
-                "88f762e6368aa7c0"
+                "6e32bf19c51ed3a4"
             ]
         ]
     },
@@ -18766,8 +18758,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
-        "y": 640,
+        "x": 930,
+        "y": 520,
         "wires": [
             [
                 "e9b27878137b3b84"
@@ -18797,39 +18789,10 @@
         "to": "",
         "reg": false,
         "x": 1130,
-        "y": 560,
-        "wires": [
-            [
-                "88f762e6368aa7c0"
-            ]
-        ]
-    },
-    {
-        "id": "0cb0951007ee41bb",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 520,
         "y": 500,
         "wires": [
             [
-                "2bf80c0dd1a3633a"
+                "6e32bf19c51ed3a4"
             ]
         ]
     },
@@ -18851,14 +18814,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1760,
-        "y": 660,
+        "x": 1560,
+        "y": 640,
         "wires": [
             [
-                "33695432083288c6"
+                "f6b80f1b0a2fcf79"
             ],
             [
-                "0e867a2e21130f1a"
+                "3d5b775ff4f2f150"
             ]
         ]
     },
@@ -18881,11 +18844,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1560,
-        "y": 680,
+        "x": 1380,
+        "y": 640,
         "wires": [
             [
-                "dcb046bbb6008951"
+                "a513664a1a988e92"
             ]
         ]
     },
@@ -18904,8 +18867,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 1130,
-        "y": 640,
+        "x": 1150,
+        "y": 540,
         "wires": [
             [
                 "2a4c81b9f29cdd45"
@@ -18922,16 +18885,18 @@
         "propertyType": "global",
         "rules": [
             {
-                "t": "false"
+                "t": "true"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1280,
+        "x": 940,
         "y": 760,
         "wires": [
-            []
+            [
+                "c4d9e0754c0f8049"
+            ]
         ]
     },
     {
@@ -19055,66 +19020,9 @@
         "links": [
             "30ea5fb10da29ec3"
         ],
-        "x": 855,
-        "y": 600,
+        "x": 875,
+        "y": 480,
         "wires": []
-    },
-    {
-        "id": "94063986cb17af33",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "name": "On/OFF",
-        "property": "tempOn",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1760,
-        "y": 720,
-        "wires": [
-            [
-                "33695432083288c6"
-            ]
-        ]
-    },
-    {
-        "id": "6ae7cf9a89666d0c",
-        "type": "debug",
-        "z": "6df0226504208616",
-        "g": "87ad358dad6d615f",
-        "name": "debug 14",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2310,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "d7affdd1d4929436",
-        "type": "ambi-mode",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "oauthClient": "4ec8324b.b2dc1c",
-        "room_name": "varmepumpe",
-        "location_name": "Gravarsveien 57 A",
-        "x": 560,
-        "y": 760,
-        "wires": [
-            [
-                "326ebb822b97e7c9",
-                "96641c205e20d6bd"
-            ]
-        ]
     },
     {
         "id": "abfcbc469748df7a",
@@ -19136,7 +19044,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1070,
+        "x": 910,
         "y": 800,
         "wires": [
             []
@@ -19155,17 +19063,21 @@
                 "t": "eq",
                 "v": "Manual",
                 "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
-        "x": 900,
+        "outputs": 2,
+        "x": 740,
         "y": 800,
         "wires": [
             [
                 "abfcbc469748df7a"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -19179,8 +19091,8 @@
         "endTime": "14:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 1570,
-        "y": 640,
+        "x": 1730,
+        "y": 660,
         "wires": [
             [
                 "2ab6024a291dc92f"
@@ -19210,43 +19122,14 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1400,
-        "y": 600,
+        "x": 1720,
+        "y": 620,
         "wires": [
+            [
+                "7967bdfee59e23a4"
+            ],
             [
                 "81e7305665155a7e"
-            ],
-            [
-                "cdda54c1c95885b5"
-            ]
-        ]
-    },
-    {
-        "id": "e67ac47057175c2a",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "name": "is turn off",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1340,
-        "y": 680,
-        "wires": [
-            [
-                "f6b80f1b0a2fcf79"
-            ],
-            [
-                "cdda54c1c95885b5"
             ]
         ]
     },
@@ -19267,7 +19150,7 @@
                 "t": "set",
                 "p": "temperature",
                 "pt": "flow",
-                "to": "$flowContext(\"temperature\") - 5\t",
+                "to": "16\t",
                 "tot": "jsonata"
             }
         ],
@@ -19276,11 +19159,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1750,
-        "y": 540,
+        "x": 1950,
+        "y": 640,
         "wires": [
             [
-                "33695432083288c6"
+                "7967bdfee59e23a4"
             ]
         ]
     },
@@ -19303,11 +19186,333 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1750,
-        "y": 580,
+        "x": 1950,
+        "y": 680,
         "wires": [
             [
-                "cdda54c1c95885b5"
+                "7967bdfee59e23a4"
+            ]
+        ]
+    },
+    {
+        "id": "39643417b5f03fe4",
+        "type": "ambi-ir-feature",
+        "z": "6df0226504208616",
+        "g": "87ad358dad6d615f",
+        "oauthClient": "4ec8324b.b2dc1c",
+        "room_name": "varmepumpe",
+        "location_name": "Gravarsveien 57 A",
+        "x": 2150,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d94ac7c3d6fa234",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "g": "87ad358dad6d615f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2160,
+        "y": 780,
+        "wires": [
+            [
+                "39643417b5f03fe4"
+            ]
+        ]
+    },
+    {
+        "id": "31b68c075ef8bdbb",
+        "type": "ambi-deployment",
+        "z": "6df0226504208616",
+        "g": "87ad358dad6d615f",
+        "oauthClient": "4ec8324b.b2dc1c",
+        "room_name": "varmepumpe",
+        "location_name": "Gravarsveien 57 A",
+        "mode": "",
+        "power": "",
+        "feature": "",
+        "x": 2190,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "7967bdfee59e23a4",
+        "type": "function",
+        "z": "6df0226504208616",
+        "g": "87ad358dad6d615f",
+        "name": "function 2",
+        "func": "let temperature = flow.get(\"temperature\");\nlet mode = flow.get(\"mode\") || \"heat\";\nlet  louver = \"down\";\n\nif (mode <= \"cool\"){\nlouver = \"up\";\n}\n\nmsg.payload = {\n  \"room_name\": \"varmepumpe\",\n  \"location_name\": \"Gravarsveien 57 A\",\n  \"mode\": mode,\n  \"power\": \"on\",\n  \"feature\": {\n    \"temperature\": \"18\",\n    \"fan\": \"auto\",\n    \"louver\": louver,\n    \"swing\": \"auto\"\n  }\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2180,
+        "y": 600,
+        "wires": [
+            [
+                "31b68c075ef8bdbb",
+                "08a19fb984a9102a"
+            ]
+        ]
+    },
+    {
+        "id": "847b679456e779b9",
+        "type": "ambi-sensor-temp",
+        "z": "6df0226504208616",
+        "g": "c10ebffd064adbf1",
+        "oauthClient": "4ec8324b.b2dc1c",
+        "room_name": "varmepumpe",
+        "location_name": "Gravarsveien 57 A",
+        "x": 440,
+        "y": 760,
+        "wires": [
+            [
+                "fc50ae84c99bcba5"
+            ]
+        ]
+    },
+    {
+        "id": "8e0903d37c41bf0e",
+        "type": "ambi-mode",
+        "z": "6df0226504208616",
+        "g": "c10ebffd064adbf1",
+        "oauthClient": "4ec8324b.b2dc1c",
+        "room_name": "varmepumpe",
+        "location_name": "Gravarsveien 57 A",
+        "x": 500,
+        "y": 800,
+        "wires": [
+            [
+                "96641c205e20d6bd"
+            ]
+        ]
+    },
+    {
+        "id": "08a19fb984a9102a",
+        "type": "delay",
+        "z": "6df0226504208616",
+        "g": "87ad358dad6d615f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 2180,
+        "y": 560,
+        "wires": [
+            [
+                "33695432083288c6"
+            ]
+        ]
+    },
+    {
+        "id": "26e40d73162656c1",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "c10ebffd064adbf1",
+        "name": "Triggger Temperature",
+        "mode": "link",
+        "links": [
+            "c42fa5da6c4de1b3"
+        ],
+        "x": 1395,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c42fa5da6c4de1b3",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "name": "Set Temperature",
+        "links": [
+            "896aa735a80611d5",
+            "26e40d73162656c1"
+        ],
+        "x": 1465,
+        "y": 480,
+        "wires": [
+            [
+                "a513664a1a988e92"
+            ]
+        ]
+    },
+    {
+        "id": "896aa735a80611d5",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "c42fa5da6c4de1b3"
+        ],
+        "x": 1255,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "0085aa5b7ff9cc46",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "c10ebffd064adbf1",
+        "name": "Cool",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mode",
+                "pt": "flow",
+                "to": "cool",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 740,
+        "wires": [
+            [
+                "26e40d73162656c1"
+            ]
+        ]
+    },
+    {
+        "id": "c4d9e0754c0f8049",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "c10ebffd064adbf1",
+        "name": "Cur_Temp",
+        "property": "Cur_Temp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "22.5",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "21",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1130,
+        "y": 740,
+        "wires": [
+            [
+                "0085aa5b7ff9cc46"
+            ],
+            [
+                "86da7f4cca9fd763"
+            ]
+        ]
+    },
+    {
+        "id": "86da7f4cca9fd763",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "c10ebffd064adbf1",
+        "name": "Heat",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mode",
+                "pt": "flow",
+                "to": "heat",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1290,
+        "y": 780,
+        "wires": [
+            [
+                "26e40d73162656c1"
+            ]
+        ]
+    },
+    {
+        "id": "fc50ae84c99bcba5",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "c10ebffd064adbf1",
+        "name": "not empty ",
+        "property": "payload.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 760,
+        "wires": [
+            [
+                "326ebb822b97e7c9"
+            ]
+        ]
+    },
+    {
+        "id": "a513664a1a988e92",
+        "type": "delay",
+        "z": "6df0226504208616",
+        "name": "limit",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1550,
+        "y": 600,
+        "wires": [
+            [
+                "dcb046bbb6008951"
             ]
         ]
     },
@@ -20330,7 +20535,7 @@
         "type": "debug",
         "z": "15652aa.fd5c4d5",
         "name": "debug 22",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -21590,18 +21795,18 @@
         "z": "6a77c00f79a19693",
         "name": "Reset away mode",
         "links": [
+            "2998be5081486cc3",
             "328ec247.9e5eee",
             "455faa8d.6c9aa4",
             "63e9f9b.1d13608",
             "9ace10c4.4ce8f",
-            "e92f253c.11b9b8",
-            "2998be5081486cc3"
+            "e92f253c.11b9b8"
         ],
         "x": 795,
         "y": 320,
         "wires": [
             [
-                "a8de2316da7082ee"
+                "e4188f47293e43df"
             ]
         ]
     },
@@ -21643,6 +21848,56 @@
             [
                 "d8cc8d6cd6ac5ca8"
             ]
+        ]
+    },
+    {
+        "id": "e4188f47293e43df",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 300,
+        "wires": [
+            [
+                "a8de2316da7082ee"
+            ]
+        ]
+    },
+    {
+        "id": "68a96edffae6a679",
+        "type": "inject",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1230,
+        "y": 360,
+        "wires": [
+            []
         ]
     }
 ]
