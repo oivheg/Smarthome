@@ -143,7 +143,7 @@
     {
         "id": "6a77c00f79a19693",
         "type": "tab",
-        "label": "FH_IdLock",
+        "label": "Presence Detection",
         "disabled": false,
         "info": "",
         "env": []
@@ -720,9 +720,7 @@
             "f3d2f0e8d93cd932"
         ],
         "x": 774,
-        "y": 39,
-        "w": 682,
-        "h": 142
+        "y": 39
     },
     {
         "id": "88b8cd3b91daf3ae",
@@ -744,9 +742,7 @@
             "67977af33b66476a"
         ],
         "x": 1494,
-        "y": 19,
-        "w": 552,
-        "h": 182
+        "y": 19
     },
     {
         "id": "b01d69bb34a09e41",
@@ -768,12 +764,13 @@
             "02046d58b1fac856",
             "b2659103b136eee6",
             "80e36239586e7edc",
-            "b0dc3ddb928b3d38"
+            "b0dc3ddb928b3d38",
+            "3ddec9a5bae9d4d3",
+            "55bae98b4d5dea93",
+            "2fbbab333e453c76"
         ],
         "x": 374,
-        "y": 899,
-        "w": 1232,
-        "h": 242
+        "y": 879
     },
     {
         "id": "8cba373d8f4d3966",
@@ -799,10 +796,8 @@
             "12866398155563a5",
             "d43d955ee16c8bb6"
         ],
-        "x": 234,
-        "y": 159,
-        "w": 672,
-        "h": 242
+        "x": 174,
+        "y": 219
     },
     {
         "id": "c4cf42bd22da0e90",
@@ -835,13 +830,10 @@
             "042f81d8d844995b",
             "0342c455be2f1e29",
             "61261982c883c502",
-            "c446fcab5b684e27",
-            "91d27d7f95a13718"
+            "c446fcab5b684e27"
         ],
         "x": 264,
-        "y": 1239,
-        "w": 1742,
-        "h": 442
+        "y": 1239
     },
     {
         "id": "4764ba70f833e4a9",
@@ -863,9 +855,7 @@
             "4b0510cde2a3bfff"
         ],
         "x": 224,
-        "y": 1119,
-        "w": 1002,
-        "h": 162
+        "y": 1119
     },
     {
         "id": "a7b26502af3b65e3",
@@ -887,9 +877,7 @@
             "0a13e388cbc5a023"
         ],
         "x": 894,
-        "y": 559,
-        "w": 682,
-        "h": 182
+        "y": 559
     },
     {
         "id": "172b4292bafc68a7",
@@ -910,9 +898,7 @@
             "0e2324ffdb10fe80"
         ],
         "x": 244,
-        "y": 939,
-        "w": 822,
-        "h": 149.5
+        "y": 939
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -932,9 +918,7 @@
             "99fed52c6143c053"
         ],
         "x": 224,
-        "y": 779,
-        "w": 842,
-        "h": 142
+        "y": 779
     },
     {
         "id": "9bb3180dbbe92370",
@@ -960,9 +944,7 @@
             "277f89239aa44fc7"
         ],
         "x": 474,
-        "y": 1339,
-        "w": 1112,
-        "h": 242
+        "y": 1339
     },
     {
         "id": "c9556be6f9a1107c",
@@ -983,9 +965,7 @@
             "fe2026718ea2802c"
         ],
         "x": 534,
-        "y": 639,
-        "w": 832,
-        "h": 162
+        "y": 639
     },
     {
         "id": "e91b0b088ffed19b",
@@ -1005,9 +985,7 @@
             "1b1b701f2f4d7455"
         ],
         "x": 224,
-        "y": 559,
-        "w": 622,
-        "h": 182
+        "y": 559
     },
     {
         "id": "de17e98102477bde",
@@ -1323,9 +1301,7 @@
             "a0e66a252b3dae2e"
         ],
         "x": 254,
-        "y": 19,
-        "w": 472,
-        "h": 202
+        "y": 19
     },
     {
         "id": "750228718f0f7746",
@@ -1351,9 +1327,7 @@
             "56a9a0de058b39ee"
         ],
         "x": 764,
-        "y": 19,
-        "w": 432,
-        "h": 202
+        "y": 19
     },
     {
         "id": "dabbbe0f6cfeecac",
@@ -1373,9 +1347,7 @@
             "885fc820467d8739"
         ],
         "x": 254,
-        "y": 299,
-        "w": 352,
-        "h": 162
+        "y": 299
     },
     {
         "id": "8da8f3a9a56fc7ee",
@@ -1405,9 +1377,7 @@
             "b6d05acd6b922f83"
         ],
         "x": 764,
-        "y": 299,
-        "w": 882,
-        "h": 202
+        "y": 299
     },
     {
         "id": "c10ebffd064adbf1",
@@ -1436,6 +1406,36 @@
         ],
         "x": 264,
         "y": 679
+    },
+    {
+        "id": "58a01d02b4619b46",
+        "type": "group",
+        "z": "6a77c00f79a19693",
+        "name": "ID Lock",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "b0f298334b1bcc58",
+            "06a40700c474d84f",
+            "38519274c0551bb7",
+            "ed4c1dbd7e3c8218",
+            "d8cc8d6cd6ac5ca8",
+            "77e202e1f7cb4c98",
+            "99e34fb7e0972e1e",
+            "e4188f47293e43df",
+            "6504b75c810f8995",
+            "9ab71bb708f19c1b",
+            "79de92216dfa5568",
+            "3fc79d5f33bafedc",
+            "9ca94a94ccdaf724"
+        ],
+        "x": 134,
+        "y": 219,
+        "w": 1372,
+        "h": 282
     },
     {
         "id": "2e7006b6bbb0568e",
@@ -5056,7 +5056,8 @@
         "g": "cb50c720a3cedf84",
         "name": "",
         "links": [
-            "80e36239586e7edc"
+            "80e36239586e7edc",
+            "39e1e44e6fdf312b"
         ],
         "x": 1175,
         "y": 280,
@@ -8518,8 +8519,7 @@
         "y": 1340,
         "wires": [
             [
-                "8144b7c822b84b76",
-                "3a4fd90b5543689f"
+                "8144b7c822b84b76"
             ]
         ]
     },
@@ -8549,8 +8549,7 @@
         "y": 1340,
         "wires": [
             [
-                "8bc1a1a00cecc7a6",
-                "e81a63c88d5bf18b"
+                "8bc1a1a00cecc7a6"
             ]
         ]
     },
@@ -8626,38 +8625,6 @@
         ],
         "x": 525,
         "y": 1400,
-        "wires": []
-    },
-    {
-        "id": "3a4fd90b5543689f",
-        "type": "debug",
-        "z": "aa0ae7ae.75d228",
-        "name": "debug 30",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 310,
-        "y": 1300,
-        "wires": []
-    },
-    {
-        "id": "e81a63c88d5bf18b",
-        "type": "debug",
-        "z": "aa0ae7ae.75d228",
-        "name": "debug 31",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 1320,
         "wires": []
     },
     {
@@ -9138,31 +9105,6 @@
         "wires": []
     },
     {
-        "id": "7c348293.52162c",
-        "type": "inject",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Every 10 seconds",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 270,
-        "y": 220,
-        "wires": [
-            [
-                "9b3f87757f6b8afa"
-            ]
-        ]
-    },
-    {
         "id": "1329b56.bea634b",
         "type": "link in",
         "z": "8b99f8fe.7b27b8",
@@ -9289,10 +9231,11 @@
         "links": [
             "14ac8f4a0be280af",
             "bb323297a8af6244",
+            "dd907ae5e8f3fab4",
             "e17d0a43.b0e048"
         ],
         "x": 1925,
-        "y": 160,
+        "y": 100,
         "wires": []
     },
     {
@@ -9308,7 +9251,7 @@
             "e17d0a43.b0e048"
         ],
         "x": 1935,
-        "y": 320,
+        "y": 440,
         "wires": []
     },
     {
@@ -9391,31 +9334,6 @@
         ]
     },
     {
-        "id": "772b0560.6b8bcc",
-        "type": "link out",
-        "z": "8b99f8fe.7b27b8",
-        "name": "heggland",
-        "links": [
-            "d871d736.d19838"
-        ],
-        "x": 1145,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "47763aff.5ff334",
-        "type": "link out",
-        "z": "8b99f8fe.7b27b8",
-        "name": "karina",
-        "links": [
-            "b9ab5a15.2f2aa8",
-            "84abded8.462ac"
-        ],
-        "x": 1145,
-        "y": 340,
-        "wires": []
-    },
-    {
         "id": "d1068875.e54d18",
         "type": "function",
         "z": "8b99f8fe.7b27b8",
@@ -9458,44 +9376,6 @@
         "x": 140,
         "y": 400,
         "wires": []
-    },
-    {
-        "id": "d6d8cf38.1794d",
-        "type": "rbe",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 980,
-        "y": 300,
-        "wires": [
-            [
-                "772b0560.6b8bcc"
-            ]
-        ]
-    },
-    {
-        "id": "3d692d1e.98b022",
-        "type": "rbe",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 980,
-        "y": 340,
-        "wires": [
-            [
-                "47763aff.5ff334"
-            ]
-        ]
     },
     {
         "id": "c7ee4eb5.5141c",
@@ -9909,29 +9789,6 @@
         "wires": []
     },
     {
-        "id": "eabe9d09ac5494a3",
-        "type": "function",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Determine device presence",
-        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n\nfor (let device in msg.payload) {\n    \n   \n    let name = msg.payload[device].name\n    let lastseen = msg.payload[device].last_seen\n   \n    switch (name) {\n        case \"heggland\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"karina\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 240,
-        "wires": [
-            [
-                "f471eaf5a8b7a9c1",
-                "f44e1823.867bc8"
-            ]
-        ],
-        "outputLabels": [
-            "oivheg "
-        ]
-    },
-    {
         "id": "1e1f56fa524173df",
         "type": "switch",
         "z": "8b99f8fe.7b27b8",
@@ -9958,28 +9815,6 @@
             ],
             [
                 "9ab9f797bec97d04"
-            ]
-        ]
-    },
-    {
-        "id": "f471eaf5a8b7a9c1",
-        "type": "function",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Check Phones",
-        "func": "\nlet home = [{ payload: false }, { payload: false }];\nmsg.people.forEach(function(element) {\n    msg.payload =true;\n    if (element == \"heggland\"){\n       home[0].payload = true;\n        \n    }\n    if (element == \"karina\") {\n        home[1].payload = true;\n\n\n    }\n});\n\nreturn home;",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 720,
-        "y": 300,
-        "wires": [
-            [
-                "d6d8cf38.1794d"
-            ],
-            [
-                "3d692d1e.98b022"
             ]
         ]
     },
@@ -10241,7 +10076,8 @@
         "z": "8b99f8fe.7b27b8",
         "name": "set Home",
         "links": [
-            "ed4c1dbd7e3c8218"
+            "ed4c1dbd7e3c8218",
+            "5ad46aeb74ed6636"
         ],
         "x": 1325,
         "y": 160,
@@ -10257,10 +10093,11 @@
         "z": "8b99f8fe.7b27b8",
         "name": "Set Away",
         "links": [
-            "99e34fb7e0972e1e"
+            "99e34fb7e0972e1e",
+            "6b9eeab08f2cdd54"
         ],
         "x": 845,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
                 "f44e1823.867bc8"
@@ -10321,21 +10158,6 @@
         "wires": [
             [
                 "dc33a268.a0933"
-            ]
-        ]
-    },
-    {
-        "id": "9b3f87757f6b8afa",
-        "type": "Unifi",
-        "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "server": "a7edf1bed0da450a",
-        "command": 1,
-        "x": 440,
-        "y": 260,
-        "wires": [
-            [
-                "eabe9d09ac5494a3"
             ]
         ]
     },
@@ -14384,7 +14206,8 @@
                 "id": "46",
                 "props": {
                     "address": "37",
-                    "sv": "out_lvl_switch"
+                    "sv": "out_lvl_switch",
+                    "dimable": true
                 },
                 "state": [],
                 "commands": [],
@@ -14486,7 +14309,7 @@
                 "val": "payload.val.changes.power"
             }
         ],
-        "x": 940,
+        "x": 760,
         "y": 1000,
         "wires": []
     },
@@ -14499,11 +14322,11 @@
         "thingType": "FH_Light",
         "topic": "$id",
         "debug": false,
-        "x": 1100,
-        "y": 1000,
+        "x": 780,
+        "y": 940,
         "wires": [
             [
-                "1b735eb2.af9271"
+                "3ddec9a5bae9d4d3"
             ]
         ]
     },
@@ -14546,8 +14369,8 @@
         "g": "8cba373d8f4d3966",
         "name": "Futurehome MQTT communication ",
         "info": "This example uses the Lifx platform. The Lifx node works well with the thing nodes, as it requires no initization to receive inbound messages. And the Lifx node already uses the MAC address as the message topic, so the Lifx Things are setup with the MAC address as their ID.",
-        "x": 400,
-        "y": 200,
+        "x": 340,
+        "y": 260,
         "wires": []
     },
     {
@@ -14602,8 +14425,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
         "x": 1490,
@@ -14628,7 +14451,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\t    \"type\": \"cmd.binary.set\",\t    \"serv\": thing.props.sv,\t    \"val_t\": \"bool\",\t    \"val\": payload,\t    \"tags\": null,\t    \"props\": {},\t    \"ver\": \"1\",\t    \"corid\": \"\",\t    \"src\": \"node-red\",\t    \"ctime\": \"\",\t    \"uid\": \"\"\t}",
+                "to": "{\t    \"type\": thing.props.type,\t    \"serv\": thing.props.sv,\t    \"val_t\": thing.props.val_t,\t    \"val\": payload,\t    \"tags\": null,\t    \"props\": {},\t    \"ver\": \"1\",\t    \"corid\": \"\",\t    \"src\": \"node-red\",\t    \"ctime\": \"\",\t    \"uid\": \"\"\t}",
                 "tot": "jsonata"
             }
         ],
@@ -14678,8 +14501,8 @@
         "nl": false,
         "rap": false,
         "inputs": 0,
-        "x": 340,
-        "y": 260,
+        "x": 280,
+        "y": 320,
         "wires": [
             [
                 "8386f04b.e927a",
@@ -14708,8 +14531,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 540,
-        "y": 260,
+        "x": 480,
+        "y": 320,
         "wires": [
             [
                 "d43d955ee16c8bb6",
@@ -15040,10 +14863,11 @@
         "name": "FH_Lights",
         "mode": "link",
         "links": [
-            "b2659103b136eee6"
+            "b2659103b136eee6",
+            "067ea8171678abb3"
         ],
-        "x": 865,
-        "y": 260,
+        "x": 805,
+        "y": 320,
         "wires": []
     },
     {
@@ -15555,8 +15379,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 540,
-        "y": 320,
+        "x": 480,
+        "y": 380,
         "wires": [
             [
                 "e7fd9780fcb41f6a"
@@ -15583,8 +15407,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 360,
+        "x": 500,
+        "y": 420,
         "wires": [
             [
                 "2998be5081486cc3"
@@ -15602,8 +15426,8 @@
             "77e202e1f7cb4c98",
             "885fc820467d8739"
         ],
-        "x": 685,
-        "y": 360,
+        "x": 625,
+        "y": 420,
         "wires": []
     },
     {
@@ -15721,8 +15545,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 790,
-        "y": 300,
+        "x": 730,
+        "y": 360,
         "wires": [
             []
         ]
@@ -16043,8 +15867,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 730,
-        "y": 220,
+        "x": 670,
+        "y": 280,
         "wires": []
     },
     {
@@ -16071,8 +15895,7 @@
         "y": 1440,
         "wires": [
             [
-                "76142807ba013dd5",
-                "91d27d7f95a13718"
+                "76142807ba013dd5"
             ]
         ]
     },
@@ -16219,21 +16042,158 @@
         ]
     },
     {
-        "id": "91d27d7f95a13718",
+        "id": "170b32ac93df9d1d",
+        "type": "mqtt in",
+        "z": "4edd86b6.331768",
+        "name": "FH_MQTT",
+        "topic": "pt:j1/mt:cmd/rt:dev/rn:zw/ad:1/#",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "fa370de0.93e89",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 1520,
+        "y": 320,
+        "wires": [
+            [
+                "8e03b187d7d7eacc"
+            ]
+        ]
+    },
+    {
+        "id": "8e03b187d7d7eacc",
         "type": "debug",
         "z": "4edd86b6.331768",
-        "g": "c4cf42bd22da0e90",
-        "name": "debug 29",
-        "active": true,
+        "name": "debug 33",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
-        "y": 1600,
+        "x": 1750,
+        "y": 300,
         "wires": []
+    },
+    {
+        "id": "3ddec9a5bae9d4d3",
+        "type": "switch",
+        "z": "4edd86b6.331768",
+        "g": "b01d69bb34a09e41",
+        "name": "is val_t !null",
+        "property": "thing.props.dimable",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 970,
+        "y": 940,
+        "wires": [
+            [
+                "2fbbab333e453c76"
+            ],
+            [
+                "55bae98b4d5dea93"
+            ]
+        ]
+    },
+    {
+        "id": "55bae98b4d5dea93",
+        "type": "change",
+        "z": "4edd86b6.331768",
+        "g": "b01d69bb34a09e41",
+        "name": "set bool",
+        "rules": [
+            {
+                "t": "set",
+                "p": "thing.props.val_t",
+                "pt": "msg",
+                "to": "bool",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "thing.props.type",
+                "pt": "msg",
+                "to": "cmd.binary.set",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 980,
+        "wires": [
+            [
+                "1b735eb2.af9271"
+            ]
+        ]
+    },
+    {
+        "id": "2fbbab333e453c76",
+        "type": "change",
+        "z": "4edd86b6.331768",
+        "g": "b01d69bb34a09e41",
+        "name": "set int",
+        "rules": [
+            {
+                "t": "set",
+                "p": "thing.props.val_t",
+                "pt": "msg",
+                "to": "int",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "thing.props.type",
+                "pt": "msg",
+                "to": "cmd.lvl.set",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1110,
+        "y": 920,
+        "wires": [
+            [
+                "1b735eb2.af9271"
+            ]
+        ]
+    },
+    {
+        "id": "33023509d0315b45",
+        "type": "function",
+        "z": "4edd86b6.331768",
+        "name": "function 3",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 540,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "4c1858d290c94d44",
@@ -16821,8 +16781,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "true",
-                "tot": "bool"
+                "to": "percent_bathroom",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -16869,6 +16829,35 @@
         "wires": [
             [
                 "4c1858d290c94d44"
+            ]
+        ]
+    },
+    {
+        "id": "3c9fa09a91e97b50",
+        "type": "inject",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1060,
+        "y": 140,
+        "wires": [
+            [
+                "431b24da5c1cf8a9"
             ]
         ]
     },
@@ -21643,7 +21632,7 @@
         "name": "",
         "lat": "58.851468",
         "lon": "5.748852",
-        "startTime": "07:00",
+        "startTime": "10:00",
         "endTime": "16:00",
         "startOffset": 0,
         "endOffset": 0,
@@ -21653,7 +21642,9 @@
             [
                 "accd6d3d.10c09"
             ],
-            []
+            [
+                "855d3e8b975470b7"
+            ]
         ]
     },
     {
@@ -21726,40 +21717,11 @@
         "links": [
             "fc4fe81e.444628"
         ],
-        "x": 505,
+        "x": 415,
         "y": 300,
         "wires": [
             [
                 "77d1d4b3.4641ec"
-            ]
-        ]
-    },
-    {
-        "id": "6019a8e497c0eaa7",
-        "type": "inject",
-        "z": "daf28d0f20b236a4",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 340,
-        "y": 240,
-        "wires": [
-            [
-                "3572fdf5.48cc62"
             ]
         ]
     },
@@ -21853,31 +21815,70 @@
         ]
     },
     {
-        "id": "8825a01922d0fa05",
-        "type": "inject",
+        "id": "855d3e8b975470b7",
+        "type": "trigger",
         "z": "daf28d0f20b236a4",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 550,
-        "y": 100,
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "15",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 730,
+        "y": 360,
         "wires": [
             [
-                "5e0f66ea.3848a8"
+                "77d1d4b3.4641ec"
+            ]
+        ]
+    },
+    {
+        "id": "bb0350d09c07a742",
+        "type": "change",
+        "z": "daf28d0f20b236a4",
+        "name": "reset trigger",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "855d3e8b975470b7"
+            ]
+        ]
+    },
+    {
+        "id": "dd907ae5e8f3fab4",
+        "type": "link in",
+        "z": "daf28d0f20b236a4",
+        "name": "Reset Vacum Trigger",
+        "links": [
+            "247260f.c82dca"
+        ],
+        "x": 415,
+        "y": 360,
+        "wires": [
+            [
+                "bb0350d09c07a742"
             ]
         ]
     },
@@ -21938,6 +21939,7 @@
         "id": "b0f298334b1bcc58",
         "type": "mqtt in",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "",
         "topic": "pt:j1/mt:evt/rt:dev/rn:zw/ad:1/sv:door_lock/#",
         "qos": "2",
@@ -21959,6 +21961,7 @@
         "id": "06a40700c474d84f",
         "type": "switch",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "bolt_is_locked is False",
         "property": "payload.val.bolt_is_locked",
         "propertyType": "msg",
@@ -21982,6 +21985,7 @@
         "id": "38519274c0551bb7",
         "type": "switch",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "Mode",
         "property": "Mode",
         "propertyType": "global",
@@ -22015,6 +22019,7 @@
         "id": "ed4c1dbd7e3c8218",
         "type": "link out",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "link out 11",
         "mode": "link",
         "links": [
@@ -22028,6 +22033,7 @@
         "id": "d8cc8d6cd6ac5ca8",
         "type": "trigger",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "",
         "op1": "",
         "op2": "false",
@@ -22053,6 +22059,7 @@
         "id": "77e202e1f7cb4c98",
         "type": "link in",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "Reset away mode",
         "links": [
             "2998be5081486cc3",
@@ -22074,6 +22081,7 @@
         "id": "99e34fb7e0972e1e",
         "type": "link out",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "link out 12",
         "mode": "link",
         "links": [
@@ -22087,6 +22095,7 @@
         "id": "e4188f47293e43df",
         "type": "switch",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "Is Movement",
         "property": "payload",
         "propertyType": "msg",
@@ -22110,6 +22119,7 @@
         "id": "6504b75c810f8995",
         "type": "delay",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "",
         "pauseType": "rate",
         "timeout": "5",
@@ -22135,6 +22145,7 @@
         "id": "9ab71bb708f19c1b",
         "type": "change",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "",
         "rules": [
             {
@@ -22167,6 +22178,7 @@
         "id": "79de92216dfa5568",
         "type": "switch",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "Gusetmode",
         "property": "guestmode",
         "propertyType": "global",
@@ -22190,6 +22202,7 @@
         "id": "3fc79d5f33bafedc",
         "type": "change",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "",
         "rules": [
             {
@@ -22218,6 +22231,7 @@
         "id": "9ca94a94ccdaf724",
         "type": "inject",
         "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
         "name": "",
         "props": [
             {
@@ -22242,5 +22256,226 @@
                 "3fc79d5f33bafedc"
             ]
         ]
+    },
+    {
+        "id": "eabe9d09ac5494a3",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "name": "Determine device presence",
+        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n\nfor (let device in msg.payload) {\n    \n   \n    let macadress = msg.payload[device].mac\n   \n    switch (macadress) {\n        case \"52:9c:f0:c9:7a:bd\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"karina\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 660,
+        "wires": [
+            [
+                "f471eaf5a8b7a9c1",
+                "1a2c615b814153af",
+                "37ecb2352d8f3ddc"
+            ]
+        ],
+        "outputLabels": [
+            "oivheg "
+        ]
+    },
+    {
+        "id": "f471eaf5a8b7a9c1",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "name": "Check Phones",
+        "func": "\nlet home = [{ payload: false }, { payload: false }];\nmsg.people.forEach(function(element) {\n    msg.payload =true;\n    if (element == \"heggland\"){\n       home[0].payload = true;\n        \n    }\n    if (element == \"karina\") {\n        home[1].payload = true;\n\n\n    }\n});\n\nreturn home;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 720,
+        "wires": [
+            [
+                "d6d8cf38.1794d"
+            ],
+            [
+                "3d692d1e.98b022"
+            ]
+        ]
+    },
+    {
+        "id": "d6d8cf38.1794d",
+        "type": "rbe",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1070,
+        "y": 720,
+        "wires": [
+            [
+                "772b0560.6b8bcc"
+            ]
+        ]
+    },
+    {
+        "id": "3d692d1e.98b022",
+        "type": "rbe",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1070,
+        "y": 760,
+        "wires": [
+            [
+                "47763aff.5ff334"
+            ]
+        ]
+    },
+    {
+        "id": "772b0560.6b8bcc",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "heggland",
+        "links": [
+            "d871d736.d19838"
+        ],
+        "x": 1235,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "47763aff.5ff334",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "karina",
+        "links": [
+            "b9ab5a15.2f2aa8",
+            "84abded8.462ac"
+        ],
+        "x": 1235,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "05d9e9467b811a09",
+        "type": "arp",
+        "z": "6a77c00f79a19693",
+        "name": "ARP",
+        "ips": "",
+        "x": 510,
+        "y": 660,
+        "wires": [
+            [
+                "eabe9d09ac5494a3"
+            ]
+        ]
+    },
+    {
+        "id": "71e547f174525c61",
+        "type": "inject",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "30",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "05d9e9467b811a09"
+            ]
+        ]
+    },
+    {
+        "id": "1a2c615b814153af",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "name": "debug 34",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "37ecb2352d8f3ddc",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1100,
+        "y": 620,
+        "wires": [
+            [
+                "5ad46aeb74ed6636"
+            ],
+            [
+                "6b9eeab08f2cdd54"
+            ]
+        ]
+    },
+    {
+        "id": "5ad46aeb74ed6636",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "link out 14",
+        "mode": "link",
+        "links": [
+            "60335bf328a8b516"
+        ],
+        "x": 1225,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "6b9eeab08f2cdd54",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "link out 15",
+        "mode": "link",
+        "links": [
+            "9e9814a999c69457"
+        ],
+        "x": 1225,
+        "y": 640,
+        "wires": []
     }
 ]
