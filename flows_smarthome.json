@@ -1100,9 +1100,7 @@
             "2018f76d019e4576"
         ],
         "x": 134,
-        "y": 99,
-        "w": 712,
-        "h": 382
+        "y": 99
     },
     {
         "id": "53115130f657b882",
@@ -2026,16 +2024,6 @@
         "type": "global-config",
         "name": "global-config",
         "env": []
-    },
-    {
-        "id": "a7edf1bed0da450a",
-        "type": "unificonfig",
-        "name": "",
-        "ip": "178.128.169.181",
-        "port": "8443",
-        "site": "default",
-        "unifios": false,
-        "ssl": false
     },
     {
         "id": "4b3b19cb6cd314e6",
@@ -22262,7 +22250,7 @@
         "type": "function",
         "z": "6a77c00f79a19693",
         "name": "Determine device presence",
-        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n\nfor (let device in msg.payload) {\n    \n   \n    let macadress = msg.payload[device].mac\n   \n    switch (macadress) {\n        case \"52:9c:f0:c9:7a:bd\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"karina\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
+        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n\nfor (let device in msg.payload) {\n    \n   \n    let macadress = msg.payload[device].mac\n   \n    switch (macadress) {\n        case \"52:9c:f0:c9:7a:bd\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"d6:05:24:1f:de:7a\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -22377,7 +22365,8 @@
         "y": 660,
         "wires": [
             [
-                "eabe9d09ac5494a3"
+                "eabe9d09ac5494a3",
+                "923123cf470fc3e4"
             ]
         ]
     },
@@ -22477,5 +22466,65 @@
         "x": 1225,
         "y": 640,
         "wires": []
+    },
+    {
+        "id": "7fa20e6124b85c12",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "name": "debug 35",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "f76dc950e201b13c",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "property": "payload.ip",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "192.168.1.179",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 550,
+        "y": 760,
+        "wires": [
+            [
+                "7fa20e6124b85c12"
+            ]
+        ]
+    },
+    {
+        "id": "923123cf470fc3e4",
+        "type": "split",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 540,
+        "y": 720,
+        "wires": [
+            [
+                "f76dc950e201b13c"
+            ]
+        ]
     }
 ]
