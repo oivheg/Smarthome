@@ -4,14 +4,14 @@
         "type": "tab",
         "label": "Google Home",
         "disabled": false,
-        "info": ""
+        "info": "# Node-RED Flow Description\r\n\r\nThis document provides a textual representation of a Node-RED flow for converting text to Google Format and sending it to various Google Home devices using the Castv2 protocol.\r\n\r\n## Flow Overview\r\n\r\nThe Node-RED flow consists of multiple components, including subflows, functions, and Castv2 sender nodes. The primary purpose of this flow is to convert text into a format suitable for Google Home devices and then send it to specific devices.\r\n\r\n### Subflow: Convert Text to GoogleFormat\r\n\r\nThis subflow converts text into a format compatible with Google Home devices. It takes an input message containing text and transforms it into a message with the required format. The resulting message includes information such as the application, type, text content, speed, language, and metadata.\r\n\r\n### Main Flow\r\n\r\nThe main flow involves several Castv2 sender nodes connected to different Google Home devices. Each Castv2 sender node is associated with a specific Google Home device and is responsible for sending the formatted text to that device.\r\n\r\n## Flow Diagram\r\n\r\nThe following sequence diagram illustrates the flow of messages in this Node-RED flow:\r\n\r\n```mermaid\r\nsequenceDiagram\r\n    participant User\r\n    participant ConvertText\r\n    participant GoogleHomeDevice\r\n\r\n    User->>ConvertText: Input Text Message\r\n    ConvertText->>ConvertText: Convert Text to GoogleFormat\r\n    ConvertText-->>GoogleHomeDevice: Send Formatted Message"
     },
     {
         "id": "34fc4e1d.243ef2",
         "type": "tab",
         "label": "Dashboard GUI",
         "disabled": false,
-        "info": ""
+        "info": "Error: Request failed with status code 401"
     },
     {
         "id": "aa0ae7ae.75d228",
@@ -144,6 +144,14 @@
         "id": "6a77c00f79a19693",
         "type": "tab",
         "label": "Presence Detection",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6b670b241559f268",
+        "type": "tab",
+        "label": "Flow 1",
         "disabled": false,
         "info": "",
         "env": []
@@ -1015,7 +1023,9 @@
             "896aa735a80611d5"
         ],
         "x": 274,
-        "y": 979
+        "y": 979,
+        "w": 1062,
+        "h": 282
     },
     {
         "id": "1bd93d309e63194e",
@@ -1034,7 +1044,9 @@
             "7fdee88ae96f836f"
         ],
         "x": 204,
-        "y": 399
+        "y": 399,
+        "w": 562,
+        "h": 137
     },
     {
         "id": "1525f01c13bb1d72",
@@ -1052,7 +1064,9 @@
             "d819b5d04aef9a18"
         ],
         "x": 234,
-        "y": 219
+        "y": 219,
+        "w": 592,
+        "h": 122
     },
     {
         "id": "76afa4ece7428050",
@@ -1069,7 +1083,9 @@
             "8a7c196d53d4237a"
         ],
         "x": 894,
-        "y": 299
+        "y": 299,
+        "w": 352,
+        "h": 122
     },
     {
         "id": "21fab955d3f1b60e",
@@ -1403,7 +1419,9 @@
             "d7b5c9af4c98242d"
         ],
         "x": 264,
-        "y": 679
+        "y": 679,
+        "w": 1262,
+        "h": 282
     },
     {
         "id": "58a01d02b4619b46",
@@ -1430,10 +1448,8 @@
             "3fc79d5f33bafedc",
             "9ca94a94ccdaf724"
         ],
-        "x": 134,
-        "y": 219,
-        "w": 1372,
-        "h": 282
+        "x": 124,
+        "y": 219
     },
     {
         "id": "2e7006b6bbb0568e",
@@ -4140,6 +4156,7 @@
         "id": "50a60792.19b3e8",
         "type": "castv2-sender",
         "z": "1c11632f.f206fd",
+        "d": true,
         "g": "21fab955d3f1b60e",
         "name": "OFFICE",
         "connection": "36091c060c8a72d5",
@@ -4350,6 +4367,16 @@
                 "a0b5830a5e5ee232"
             ]
         ]
+    },
+    {
+        "id": "caf6dfc4d944251a",
+        "type": "comment",
+        "z": "1c11632f.f206fd",
+        "name": "",
+        "info": "# Node-RED Flow Description\n\nThis document provides a textual representation of a Node-RED flow for converting text to Google Format and sending it to various Google Home devices using the Castv2 protocol.\n\n## Flow Overview\n\nThe Node-RED flow consists of multiple components, including subflows, functions, and Castv2 sender nodes. The primary purpose of this flow is to convert text into a format suitable for Google Home devices and then send it to specific devices.\n\n### Subflow: Convert Text to GoogleFormat\n\nThis subflow converts text into a format compatible with Google Home devices. It takes an input message containing text and transforms it into a message with the required format. The resulting message includes information such as the application, type, text content, speed, language, and metadata.\n\n### Main Flow\n\nThe main flow involves several Castv2 sender nodes connected to different Google Home devices. Each Castv2 sender node is associated with a specific Google Home device and is responsible for sending the formatted text to that device.\n\n## Flow Diagram\n\nThe following sequence diagram illustrates the flow of messages in this Node-RED flow:\n\n```mermaid\nsequenceDiagram\n    participant User\n    participant ConvertText\n    participant GoogleHomeDevice\n\n    User->>ConvertText: Input Text Message\n    ConvertText->>ConvertText: Convert Text to GoogleFormat\n    ConvertText-->>GoogleHomeDevice: Send Formatted Message",
+        "x": 550,
+        "y": 780,
+        "wires": []
     },
     {
         "id": "95811a33.4d7d18",
@@ -12507,7 +12534,7 @@
         "y": 520,
         "wires": [
             [
-                "8a0ab10e55653060"
+                "9a7761d2480db8ae"
             ]
         ]
     },
@@ -12534,7 +12561,7 @@
         "y": 680,
         "wires": [
             [
-                "8a0ab10e55653060"
+                "9a7761d2480db8ae"
             ]
         ]
     },
@@ -12547,8 +12574,8 @@
         "links": [
             "7c376eb857a4e46f"
         ],
-        "x": 1245,
-        "y": 560,
+        "x": 1395,
+        "y": 600,
         "wires": []
     },
     {
@@ -12627,6 +12654,31 @@
         "wires": [
             [
                 "3ecbdbdc32d7e425"
+            ]
+        ]
+    },
+    {
+        "id": "9a7761d2480db8ae",
+        "type": "switch",
+        "z": "1c88039c.df631c",
+        "name": "",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "sleep",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1290,
+        "y": 600,
+        "wires": [
+            [
+                "8a0ab10e55653060"
             ]
         ]
     },
@@ -14295,6 +14347,11 @@
                 "key": "power",
                 "type": "msg",
                 "val": "payload.val.changes.power"
+            },
+            {
+                "key": "dimlevel",
+                "type": "msg",
+                "val": "payload.val.param.param.dimValue"
             }
         ],
         "x": 760,
@@ -14324,7 +14381,7 @@
         "z": "4edd86b6.331768",
         "g": "b01d69bb34a09e41",
         "name": "TO FLOWS: FH_LIght Changed ",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -16354,8 +16411,8 @@
         "y": 380,
         "wires": [
             [
-                "38557f4408523618",
-                "2e7006b6bbb0568e"
+                "2e7006b6bbb0568e",
+                "38557f4408523618"
             ],
             [
                 "a11e5cfbb5aa73a3"
@@ -16373,8 +16430,8 @@
         "endTime": "21:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 1050,
-        "y": 220,
+        "x": 1190,
+        "y": 140,
         "wires": [
             [
                 "e06c1ce2758c7f85"
@@ -16395,8 +16452,8 @@
         "endTime": "23:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 1050,
-        "y": 180,
+        "x": 1190,
+        "y": 100,
         "wires": [
             [
                 "431b24da5c1cf8a9"
@@ -16425,8 +16482,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1210,
-        "y": 240,
+        "x": 1350,
+        "y": 160,
         "wires": [
             [
                 "dd476929bdbf7621"
@@ -16452,8 +16509,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
-        "y": 160,
+        "x": 1360,
+        "y": 80,
         "wires": [
             [
                 "dd476929bdbf7621"
@@ -16470,7 +16527,7 @@
                 "t": "set",
                 "p": "percent_bathroom",
                 "pt": "flow",
-                "to": "15",
+                "to": "20",
                 "tot": "num"
             }
         ],
@@ -16479,8 +16536,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1210,
-        "y": 200,
+        "x": 1350,
+        "y": 120,
         "wires": [
             [
                 "dd476929bdbf7621"
@@ -16625,7 +16682,7 @@
         "y": 298,
         "wires": [
             [
-                "2ebf80ed57b96fc3"
+                "8f0dc47beeedb402"
             ],
             [
                 "e383b1b84bc9dbd0",
@@ -16655,7 +16712,7 @@
         "y": 260,
         "wires": [
             [
-                "2ebf80ed57b96fc3"
+                "8f0dc47beeedb402"
             ],
             [
                 "dd476929bdbf7621"
@@ -16681,8 +16738,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1090,
-        "y": 98,
+        "x": 690,
+        "y": 180,
         "wires": [
             []
         ]
@@ -16841,11 +16898,135 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1060,
-        "y": 140,
+        "x": 1200,
+        "y": 60,
         "wires": [
             [
                 "431b24da5c1cf8a9"
+            ]
+        ]
+    },
+    {
+        "id": "cd274e19cc986be4",
+        "type": "Thing List",
+        "z": "a9a601907d96eb09",
+        "nodeName": "Basement",
+        "outputType": "individual",
+        "outputValue": "thing",
+        "property": "payload",
+        "discardInput": false,
+        "rules": [
+            {
+                "compare": "eq",
+                "thingProp": "name",
+                "value": "bathroom",
+                "type": "str"
+            }
+        ],
+        "x": 940,
+        "y": 120,
+        "wires": [
+            [
+                "3b6d53496769a8fe"
+            ]
+        ]
+    },
+    {
+        "id": "3b6d53496769a8fe",
+        "type": "change",
+        "z": "a9a601907d96eb09",
+        "name": "percent_bathroom",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "payload.state.dimlevel",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "isOn",
+                "pt": "msg",
+                "to": "payload.state.power",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "storeState",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 160,
+        "wires": [
+            [
+                "86fd75a304fb4b9a"
+            ]
+        ]
+    },
+    {
+        "id": "86fd75a304fb4b9a",
+        "type": "switch",
+        "z": "a9a601907d96eb09",
+        "name": "isOn",
+        "property": "isOn",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1150,
+        "y": 200,
+        "wires": [
+            [
+                "dd476929bdbf7621"
+            ],
+            [
+                "2ebf80ed57b96fc3"
+            ]
+        ]
+    },
+    {
+        "id": "8f0dc47beeedb402",
+        "type": "change",
+        "z": "a9a601907d96eb09",
+        "name": "storeState",
+        "rules": [
+            {
+                "t": "set",
+                "p": "storeState",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 80,
+        "wires": [
+            [
+                "cd274e19cc986be4"
             ]
         ]
     },
@@ -18470,7 +18651,7 @@
             }
         ],
         "repeat": "",
-        "crontab": "00 08 * * 6,0",
+        "crontab": "00 07 * * 6,0",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
@@ -18521,7 +18702,7 @@
         "op2": "true",
         "op1type": "nul",
         "op2type": "bool",
-        "duration": "10",
+        "duration": "5",
         "extend": true,
         "overrideDelay": false,
         "units": "s",
@@ -18529,7 +18710,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 530,
+        "x": 520,
         "y": 480,
         "wires": [
             [
@@ -18554,7 +18735,7 @@
                 "t": "set",
                 "p": "payload.value",
                 "pt": "msg",
-                "to": "temperature",
+                "to": "desired_temperature",
                 "tot": "flow"
             }
         ],
@@ -19028,7 +19209,8 @@
                 "e9b27878137b3b84"
             ],
             [
-                "1143fa19d1277481"
+                "1143fa19d1277481",
+                "f890c69938335731"
             ]
         ]
     },
@@ -19361,8 +19543,9 @@
         "type": "function",
         "z": "6df0226504208616",
         "name": "function 2",
-        "func": "let temperature = msg.temp;\nlet mode = flow.get(\"mode\") || \"heat\";\nlet  louver = \"down\";\nlet SummerTime = global.get(\"SummerTime\");\nlet homeMode = global.get(\"Mode\");\nif(SummerTime && homeMode == \"away\"){\ntemperature = 20;\n}\n\n\nif (mode <= \"cool\"){\nlouver = \"up\";\n}\n\nmsg.payload = {\n  \"room_name\": \"varmepumpe\",\n  \"location_name\": \"Gravarsveien 57 A\",\n  \"mode\": mode,\n  \"power\": \"on\",\n  \"feature\": {\n    \"temperature\": \"18\",\n    \"fan\": \"auto\",\n    \"louver\": louver,\n    \"swing\": \"auto\"\n  }\n}\n\nreturn msg;\n",
+        "func": "let temperature = flow.get(\"temperature\")\nlet desired_temperature = flow.get(\"desired_temperature\") || 20\nlet mode = flow.get(\"mode\") || \"heat\";\nlet  louver = \"down\";\nlet SummerTime = global.get(\"SummerTime\");\nlet homeMode = global.get(\"Mode\");\nif( homeMode == \"away\"){\ndesired_temperature = 20;\n}else{\n  desired_temperature = temperature\n}\n\n\nif (mode == \"cool\"){\nlouver = \"up\";\n}\n\nmsg.payload = {\n  \"room_name\": \"varmepumpe\",\n  \"location_name\": \"Gravarsveien 57 A\",\n  \"mode\": mode,\n  \"power\": \"on\",\n  \"feature\": {\n    \"temperature\": desired_temperature.toString(),\n    \"fan\": \"auto\",\n    \"louver\": louver,\n    \"swing\": \"auto\"\n  }\n}\n\nreturn msg;\n",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -19372,7 +19555,8 @@
         "wires": [
             [
                 "31b68c075ef8bdbb",
-                "08a19fb984a9102a"
+                "08a19fb984a9102a",
+                "e46853084eb3424b"
             ]
         ]
     },
@@ -19969,6 +20153,76 @@
         ]
     },
     {
+        "id": "f890c69938335731",
+        "type": "trigger",
+        "z": "6df0226504208616",
+        "name": "",
+        "op1": "",
+        "op2": "true",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "3",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1130,
+        "y": 640,
+        "wires": [
+            [
+                "cdda54c1c95885b5"
+            ]
+        ]
+    },
+    {
+        "id": "e46853084eb3424b",
+        "type": "debug",
+        "z": "6df0226504208616",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2490,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "4f4ca574f71151b2",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2070,
+        "y": 340,
+        "wires": [
+            [
+                "7967bdfee59e23a4"
+            ]
+        ]
+    },
+    {
         "id": "3a621e1.6c980e2",
         "type": "inject",
         "z": "15652aa.fd5c4d5",
@@ -20231,6 +20485,7 @@
         "name": "Single Home",
         "func": "msg.payload =\n\"{   viewer { home(id: \\\"50c631b0-94da-4fd9-ac4c-f767e223de07\\\") {currentSubscription{  priceInfo{today {  total  energy  tax  startsAt}tomorrow {  total  energy  tax  startsAt}  }} }   } }\"\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -20239,7 +20494,8 @@
         "y": 80,
         "wires": [
             [
-                "4d90c0d9.a283f"
+                "4d90c0d9.a283f",
+                "fb75dffd884b3b42"
             ]
         ]
     },
@@ -20790,21 +21046,8 @@
         "wires": [
             [
                 "0911a3e961c90766",
-                "6692caeafc9b13b0"
-            ]
-        ]
-    },
-    {
-        "id": "511728e290c1e498",
-        "type": "ps-receive-price",
-        "z": "15652aa.fd5c4d5",
-        "name": "Price Receiver",
-        "x": 980,
-        "y": 420,
-        "wires": [
-            [
-                "5e6b0a7ee326d21d",
-                "61b2c94eaf1714be"
+                "6692caeafc9b13b0",
+                "e43222e154fd142b"
             ]
         ]
     },
@@ -20812,120 +21055,16 @@
         "id": "42e0f1732e38e1ca",
         "type": "nordpool-api-plus",
         "z": "15652aa.fd5c4d5",
-        "name": "",
+        "name": "NorPool Today",
         "area": "Kr.sand",
         "currency": "NOK",
+        "action": "todayOrOverride",
         "x": 580,
-        "y": 400,
+        "y": 460,
         "wires": [
             [
-                "d65518fbd05c6077"
+                "7910721b5bb4194c"
             ]
-        ]
-    },
-    {
-        "id": "723c8b500e04a5df",
-        "type": "inject",
-        "z": "15652aa.fd5c4d5",
-        "name": "Query NordPool api",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 370,
-        "y": 400,
-        "wires": [
-            [
-                "42e0f1732e38e1ca"
-            ]
-        ]
-    },
-    {
-        "id": "5e6b0a7ee326d21d",
-        "type": "debug",
-        "z": "15652aa.fd5c4d5",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1220,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "ab04affdb6a903ec",
-        "type": "debug",
-        "z": "15652aa.fd5c4d5",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1210,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "d65518fbd05c6077",
-        "type": "function",
-        "z": "15652aa.fd5c4d5",
-        "name": "function 1",
-        "func": "let nordPool = msg.payload;\nlet toPS = { \"payload\": { \"today\": [] } };\n\nnordPool.forEach(function (hour) {\n\n    let dateTime = new Date(hour.timestamp)\n    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds\n    var localISOTime = (new Date( dateTime.getTime() - tzoffset)).toISOString().slice(0, -1);\n    toPS.payload.today.push({ \"start\": localISOTime , \"value\": hour.price });\n \n});\n\n\nreturn toPS;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 900,
-        "y": 620,
-        "wires": [
-            [
-                "ab04affdb6a903ec",
-                "511728e290c1e498"
-            ]
-        ]
-    },
-    {
-        "id": "61b2c94eaf1714be",
-        "type": "ps-strategy-best-save",
-        "z": "15652aa.fd5c4d5",
-        "name": "Best Save",
-        "maxHoursToSaveInSequence": "5",
-        "minHoursOnAfterMaxSequenceSaved": 2,
-        "minSaving": "0.05",
-        "sendCurrentValueWhenRescheduling": true,
-        "outputValueForOn": "true",
-        "outputValueForOff": "true",
-        "outputValueForOntype": "bool",
-        "outputValueForOfftype": "bool",
-        "outputIfNoSchedule": "true",
-        "contextStorage": "default",
-        "x": 1290,
-        "y": 380,
-        "wires": [
-            [],
-            [],
-            []
         ]
     },
     {
@@ -20948,6 +21087,275 @@
         "wires": [
             [
                 "9ba86ceb8e9ee185"
+            ]
+        ]
+    },
+    {
+        "id": "e43222e154fd142b",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "debug 37",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "fb75dffd884b3b42",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f149bfebe7926479",
+        "type": "tibber-data",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "active": true,
+        "apiEndpointRef": "3d2f09b6c7faaec7",
+        "queryName": "getConsumption",
+        "homeId": "50c631b0-94da-4fd9-ac4c-f767e223de07",
+        "energyResolution": "HOURLY",
+        "lastCount": 10,
+        "x": 680,
+        "y": 1380,
+        "wires": [
+            [
+                "b5b385242b1f7af9"
+            ]
+        ]
+    },
+    {
+        "id": "5380cad09511f7cb",
+        "type": "inject",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 430,
+        "y": 1360,
+        "wires": [
+            [
+                "f149bfebe7926479"
+            ]
+        ]
+    },
+    {
+        "id": "b5b385242b1f7af9",
+        "type": "debug",
+        "z": "15652aa.fd5c4d5",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "d43e85f68dfee5e5",
+        "type": "nordpool-api-plus",
+        "z": "15652aa.fd5c4d5",
+        "name": "NordPool Tomorrow",
+        "area": "Kr.sand",
+        "currency": "NOK",
+        "action": "dayAhead",
+        "x": 590,
+        "y": 500,
+        "wires": [
+            [
+                "e1b14da5eea0779a"
+            ]
+        ]
+    },
+    {
+        "id": "8453f98ada13ded4",
+        "type": "inject",
+        "z": "15652aa.fd5c4d5",
+        "name": "Query NordPool api",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 500,
+        "wires": [
+            [
+                "d43e85f68dfee5e5",
+                "42e0f1732e38e1ca"
+            ]
+        ]
+    },
+    {
+        "id": "7ee4100906a8c237",
+        "type": "ps-receive-price",
+        "z": "15652aa.fd5c4d5",
+        "name": "Price Receiver",
+        "x": 1280,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "44e14c5eefd982a7",
+        "type": "function",
+        "z": "15652aa.fd5c4d5",
+        "name": "Combining 2 days",
+        "func": "let nordPoolToday = msg.today;\nlet nordPoolTomorrow = msg.tomorrow\nlet toPS = { \"payload\": { \"today\": [], \"tomorrow\": [] } };\n\nnordPoolToday.forEach(function (hour) {\n\n    let dateTime = new Date(hour.timestamp)\n    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds\n    var localISOTime = (new Date(dateTime.getTime() - tzoffset)).toISOString().slice(0, -1);\n    toPS.payload.today.push({ \"start\": localISOTime, \"value\": hour.price });\n\n});\n\nnordPoolTomorrow.forEach(function (hour) {\n\n    let dateTime = new Date(hour.timestamp)\n\n\n\n    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds\n    var localISOTime = (new Date(dateTime.getTime() - tzoffset)).toISOString().slice(0, -1);\n\n    if (new Date(localISOTime).getDate() == new Date().getDate() ) {\n        // to prevent the api error where data for tomorrow does not exsist and data returned are today\n        node.warn(\"No data for Tomorrow\")\n        return;\n    }\n    toPS.payload.tomorrow.push({ \"start\": localISOTime, \"value\": hour.price });\n\n});\n\n\n\n\n\n\nreturn toPS;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 500,
+        "wires": [
+            [
+                "f77dd8cc6f7f8b87"
+            ]
+        ]
+    },
+    {
+        "id": "043d15719169dbd2",
+        "type": "join",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "3",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 990,
+        "y": 500,
+        "wires": [
+            [
+                "44e14c5eefd982a7"
+            ]
+        ]
+    },
+    {
+        "id": "f77dd8cc6f7f8b87",
+        "type": "ps-receive-price",
+        "z": "15652aa.fd5c4d5",
+        "name": "Price Receiver",
+        "x": 1360,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1b14da5eea0779a",
+        "type": "change",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tomorrow",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 500,
+        "wires": [
+            [
+                "043d15719169dbd2"
+            ]
+        ]
+    },
+    {
+        "id": "7910721b5bb4194c",
+        "type": "change",
+        "z": "15652aa.fd5c4d5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "today",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 460,
+        "wires": [
+            [
+                "043d15719169dbd2"
             ]
         ]
     },
@@ -22250,7 +22658,7 @@
         "type": "function",
         "z": "6a77c00f79a19693",
         "name": "Determine device presence",
-        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n\nfor (let device in msg.payload) {\n    \n   \n    let macadress = msg.payload[device].mac\n   \n    switch (macadress) {\n        case \"52:9c:f0:c9:7a:bd\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"d6:05:24:1f:de:7a\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
+        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n\nfor (let device in msg.payload) {\n    \n   \n    let macadress = msg.payload[device].mac\n   \n    switch (macadress) {\n        case \"fa:9b:7e:5a:6c:6e\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"d6:05:24:1f:de:7a\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -22262,8 +22670,7 @@
         "wires": [
             [
                 "f471eaf5a8b7a9c1",
-                "1a2c615b814153af",
-                "37ecb2352d8f3ddc"
+                "c193846ba140e27e"
             ]
         ],
         "outputLabels": [
@@ -22277,6 +22684,7 @@
         "name": "Check Phones",
         "func": "\nlet home = [{ payload: false }, { payload: false }];\nmsg.people.forEach(function(element) {\n    msg.payload =true;\n    if (element == \"heggland\"){\n       home[0].payload = true;\n        \n    }\n    if (element == \"karina\") {\n        home[1].payload = true;\n\n\n    }\n});\n\nreturn home;",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -22380,37 +22788,20 @@
                 "p": "payload"
             }
         ],
-        "repeat": "",
+        "repeat": "30",
         "crontab": "",
         "once": true,
         "onceDelay": "30",
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 330,
+        "x": 310,
         "y": 660,
         "wires": [
             [
                 "05d9e9467b811a09"
             ]
         ]
-    },
-    {
-        "id": "1a2c615b814153af",
-        "type": "debug",
-        "z": "6a77c00f79a19693",
-        "name": "debug 34",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 880,
-        "wires": []
     },
     {
         "id": "37ecb2352d8f3ddc",
@@ -22493,7 +22884,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "192.168.1.179",
+                "v": "192.168.1.131",
                 "vt": "str"
             }
         ],
@@ -22524,6 +22915,201 @@
         "wires": [
             [
                 "f76dc950e201b13c"
+            ]
+        ]
+    },
+    {
+        "id": "c193846ba140e27e",
+        "type": "rbe",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 950,
+        "y": 620,
+        "wires": [
+            [
+                "37ecb2352d8f3ddc"
+            ]
+        ]
+    },
+    {
+        "id": "6eed14b9cb72a2c9",
+        "type": "nordpool-api-plus",
+        "z": "6b670b241559f268",
+        "name": "NorPool Today",
+        "area": "Kr.sand",
+        "currency": "NOK",
+        "action": "todayOrOverride",
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "95a73159c338a673"
+            ]
+        ]
+    },
+    {
+        "id": "38f00b57cc688d88",
+        "type": "nordpool-api-plus",
+        "z": "6b670b241559f268",
+        "name": "NordPool Tomorrow",
+        "area": "Kr.sand",
+        "currency": "NOK",
+        "action": "dayAhead",
+        "x": 650,
+        "y": 300,
+        "wires": [
+            [
+                "9b03850e6ef3d1e0"
+            ]
+        ]
+    },
+    {
+        "id": "a487554e76b488b0",
+        "type": "inject",
+        "z": "6b670b241559f268",
+        "name": "Query NordPool api",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 430,
+        "y": 300,
+        "wires": [
+            [
+                "38f00b57cc688d88",
+                "6eed14b9cb72a2c9"
+            ]
+        ]
+    },
+    {
+        "id": "92a783f888527d77",
+        "type": "function",
+        "z": "6b670b241559f268",
+        "name": "Combining 2 days",
+        "func": "let nordPoolToday = msg.today;\nlet nordPoolTomorrow = msg.tomorrow\nlet toPS = { \"payload\": { \"today\": [], \"tomorrow\": [] } };\n\nnordPoolToday.forEach(function (hour) {\n\n    let dateTime = new Date(hour.timestamp)\n    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds\n    var localISOTime = (new Date(dateTime.getTime() - tzoffset)).toISOString().slice(0, -1);\n    toPS.payload.today.push({ \"start\": localISOTime, \"value\": hour.price });\n\n});\n\nnordPoolTomorrow.forEach(function (hour) {\n\n    let dateTime = new Date(hour.timestamp)\n    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds\n    var localISOTime = (new Date(dateTime.getTime() - tzoffset)).toISOString().slice(0, -1);\n\n    if (new Date(localISOTime).getDate() == new Date().getDate()) {\n        // to prevent the api error where data for tomorrow does not exsist and data returned are today\n        node.warn(\"No data for Tomorrow\")\n        return;\n    }\n    toPS.payload.tomorrow.push({ \"start\": localISOTime, \"value\": hour.price });\n\n});\n\n\nreturn toPS;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 300,
+        "wires": [
+            [
+                "dfbb586785fee8e9"
+            ]
+        ]
+    },
+    {
+        "id": "842ea56a4a9def98",
+        "type": "join",
+        "z": "6b670b241559f268",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "3",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1050,
+        "y": 300,
+        "wires": [
+            [
+                "92a783f888527d77"
+            ]
+        ]
+    },
+    {
+        "id": "dfbb586785fee8e9",
+        "type": "ps-receive-price",
+        "z": "6b670b241559f268",
+        "name": "Price Receiver",
+        "x": 1420,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b03850e6ef3d1e0",
+        "type": "change",
+        "z": "6b670b241559f268",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tomorrow",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 300,
+        "wires": [
+            [
+                "842ea56a4a9def98"
+            ]
+        ]
+    },
+    {
+        "id": "95a73159c338a673",
+        "type": "change",
+        "z": "6b670b241559f268",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "today",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 260,
+        "wires": [
+            [
+                "842ea56a4a9def98"
             ]
         ]
     }
