@@ -863,9 +863,7 @@
             "4b0510cde2a3bfff"
         ],
         "x": 224,
-        "y": 1119,
-        "w": 1002,
-        "h": 162
+        "y": 1119
     },
     {
         "id": "a7b26502af3b65e3",
@@ -887,9 +885,7 @@
             "0a13e388cbc5a023"
         ],
         "x": 894,
-        "y": 559,
-        "w": 682,
-        "h": 182
+        "y": 559
     },
     {
         "id": "172b4292bafc68a7",
@@ -910,9 +906,7 @@
             "0e2324ffdb10fe80"
         ],
         "x": 244,
-        "y": 939,
-        "w": 822,
-        "h": 149.5
+        "y": 939
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -932,9 +926,7 @@
             "99fed52c6143c053"
         ],
         "x": 224,
-        "y": 779,
-        "w": 842,
-        "h": 142
+        "y": 779
     },
     {
         "id": "9bb3180dbbe92370",
@@ -1001,9 +993,7 @@
             "1b1b701f2f4d7455"
         ],
         "x": 224,
-        "y": 559,
-        "w": 622,
-        "h": 182
+        "y": 559
     },
     {
         "id": "de17e98102477bde",
@@ -1126,7 +1116,9 @@
             "2018f76d019e4576"
         ],
         "x": 134,
-        "y": 99
+        "y": 99,
+        "w": 712,
+        "h": 382
     },
     {
         "id": "53115130f657b882",
@@ -1325,9 +1317,7 @@
             "a0e66a252b3dae2e"
         ],
         "x": 254,
-        "y": 19,
-        "w": 472,
-        "h": 202
+        "y": 19
     },
     {
         "id": "750228718f0f7746",
@@ -1353,9 +1343,7 @@
             "56a9a0de058b39ee"
         ],
         "x": 764,
-        "y": 19,
-        "w": 432,
-        "h": 202
+        "y": 19
     },
     {
         "id": "dabbbe0f6cfeecac",
@@ -1375,9 +1363,7 @@
             "885fc820467d8739"
         ],
         "x": 254,
-        "y": 299,
-        "w": 352,
-        "h": 162
+        "y": 299
     },
     {
         "id": "8da8f3a9a56fc7ee",
@@ -1407,9 +1393,7 @@
             "b6d05acd6b922f83"
         ],
         "x": 764,
-        "y": 299,
-        "w": 882,
-        "h": 202
+        "y": 299
     },
     {
         "id": "c10ebffd064adbf1",
@@ -18588,7 +18572,8 @@
         "y": 480,
         "wires": [
             [
-                "1143fa19d1277481"
+                "1143fa19d1277481",
+                "96eb452a3a0e0ab2"
             ],
             [
                 "9c802a5c40bcec2d",
@@ -19515,7 +19500,7 @@
         "type": "function",
         "z": "6df0226504208616",
         "name": "function 2",
-        "func": "let temperature = flow.get(\"temperature\")\nlet desired_temperature;\nlet mode = flow.get(\"mode\") || \"heat\";\nlet  louver = \"down\";\nlet SummerTime = global.get(\"SummerTime\");\nlet homeMode = global.get(\"Mode\");\nif( homeMode == \"away\"){\ndesired_temperature = 20;\n}else{\n  desired_temperature = temperature\n}\n\nflow.set(\"desired_temperature\", desired_temperature.toString());\nif (mode == \"cool\"){\nlouver = \"up\";\n}\n\nmsg.payload = {\n  \"room_name\": \"varmepumpe\",\n  \"location_name\": \"Gravarsveien 57 A\",\n  \"mode\": mode,\n  \"power\": \"on\",\n  \"feature\": {\n    \"temperature\": desired_temperature.toString(),\n    \"fan\": \"auto\",\n    \"louver\": louver,\n    \"swing\": \"auto\"\n  }\n}\n\nreturn msg;\n",
+        "func": "let temperature = flow.get(\"temperature\")\nlet desired_temperature;\nlet mode = flow.get(\"mode\") || \"heat\";\nlet  louver = \"down\";\nlet SummerTime = global.get(\"SummerTime\");\nlet homeMode = global.get(\"Mode\");\nif( homeMode == \"away\"){\ndesired_temperature = 21;\n}else{\n  desired_temperature = temperature\n}\n\nflow.set(\"desired_temperature\", desired_temperature.toString());\nif (mode == \"cool\"){\nlouver = \"up\";\n}\n\nmsg.payload = {\n  \"room_name\": \"varmepumpe\",\n  \"location_name\": \"Gravarsveien 57 A\",\n  \"mode\": mode,\n  \"power\": \"on\",\n  \"feature\": {\n    \"temperature\": desired_temperature.toString(),\n    \"fan\": \"auto\",\n    \"louver\": louver,\n    \"swing\": \"auto\"\n  }\n}\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -20144,7 +20129,53 @@
                 "08a19fb984a9102a"
             ],
             [
-                "33695432083288c6"
+                "33695432083288c6",
+                "c8ceb1e3bfe6c30d"
+            ]
+        ]
+    },
+    {
+        "id": "c8ceb1e3bfe6c30d",
+        "type": "debug",
+        "z": "6df0226504208616",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2570,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f2a5dfb809c6fd14",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1450,
+        "y": 460,
+        "wires": [
+            [
+                "96eb452a3a0e0ab2"
             ]
         ]
     },
