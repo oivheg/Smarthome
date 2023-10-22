@@ -149,14 +149,6 @@
         "env": []
     },
     {
-        "id": "6b670b241559f268",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -1023,9 +1015,7 @@
             "896aa735a80611d5"
         ],
         "x": 274,
-        "y": 979,
-        "w": 1062,
-        "h": 282
+        "y": 979
     },
     {
         "id": "1bd93d309e63194e",
@@ -1044,9 +1034,7 @@
             "7fdee88ae96f836f"
         ],
         "x": 204,
-        "y": 399,
-        "w": 562,
-        "h": 137
+        "y": 399
     },
     {
         "id": "1525f01c13bb1d72",
@@ -1064,9 +1052,7 @@
             "d819b5d04aef9a18"
         ],
         "x": 234,
-        "y": 219,
-        "w": 592,
-        "h": 122
+        "y": 219
     },
     {
         "id": "76afa4ece7428050",
@@ -1083,9 +1069,7 @@
             "8a7c196d53d4237a"
         ],
         "x": 894,
-        "y": 299,
-        "w": 352,
-        "h": 122
+        "y": 299
     },
     {
         "id": "21fab955d3f1b60e",
@@ -1133,11 +1117,14 @@
             "9eea7aeb43d074a3",
             "b8d1aea9ca80ad0d",
             "8456ad2c.7b492",
-            "1ecef1db.323e0e",
-            "2b18f71498965dd7"
+            "2b18f71498965dd7",
+            "42dcb01a8a2dd3b0",
+            "631efbfdf57fe8fc"
         ],
-        "x": 694,
-        "y": 119
+        "x": 664,
+        "y": 119,
+        "w": 462,
+        "h": 242
     },
     {
         "id": "10af9586a4a889ef",
@@ -1164,8 +1151,6 @@
             "label": true
         },
         "nodes": [
-            "94eb7140.f691d",
-            "cbd47089.141c8",
             "8c8af9368e8f41fc",
             "74c6f834be0eaf96",
             "fb53dc37e43697dd",
@@ -1173,10 +1158,14 @@
             "d871d736.d19838",
             "84abded8.462ac",
             "f4cc46fb.79d698",
-            "fe7d3938.a5fd88"
+            "fe7d3938.a5fd88",
+            "5f74b04523ff3784",
+            "d80abf17ba04b0a2"
         ],
         "x": 214,
-        "y": 119
+        "y": 139,
+        "w": 432,
+        "h": 222
     },
     {
         "id": "cb50c720a3cedf84",
@@ -1203,7 +1192,9 @@
             "c8d35c2375c9aeee"
         ],
         "x": 1134,
-        "y": 119
+        "y": 119,
+        "w": 952,
+        "h": 402
     },
     {
         "id": "f7a1eb10d62e848e",
@@ -1222,7 +1213,9 @@
             "6075171d.f0db08"
         ],
         "x": 214,
-        "y": 379
+        "y": 379,
+        "w": 512,
+        "h": 122
     },
     {
         "id": "56ae36d1f333f9cc",
@@ -1254,7 +1247,9 @@
             "10c0dda10a619e6f"
         ],
         "x": 214,
-        "y": 539
+        "y": 539,
+        "w": 632,
+        "h": 362
     },
     {
         "id": "f51f78b911174f21",
@@ -1297,7 +1292,9 @@
             "bb0314f944be1623"
         ],
         "x": 1134,
-        "y": 539
+        "y": 539,
+        "w": 912,
+        "h": 582
     },
     {
         "id": "5e9ef91ad1457c49",
@@ -1421,9 +1418,7 @@
             "d7b5c9af4c98242d"
         ],
         "x": 264,
-        "y": 679,
-        "w": 1262,
-        "h": 282
+        "y": 679
     },
     {
         "id": "58a01d02b4619b46",
@@ -1450,8 +1445,10 @@
             "3fc79d5f33bafedc",
             "9ca94a94ccdaf724"
         ],
-        "x": 124,
-        "y": 219
+        "x": 134,
+        "y": 219,
+        "w": 1372,
+        "h": 282
     },
     {
         "id": "2e7006b6bbb0568e",
@@ -1530,37 +1527,9 @@
         ]
     },
     {
-        "id": "8d9ae12b.2a6f5",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "530528aa.2006c8",
         "type": "pushbullet-config",
         "name": "Øivind"
-    },
-    {
-        "id": "ca3eef.3da5b11",
-        "type": "ui_group",
-        "name": "Kjeller",
-        "tab": "8d9ae12b.2a6f5",
-        "order": 2,
-        "disp": true,
-        "width": 3,
-        "collapse": false
-    },
-    {
-        "id": "56a8be2a.9b9eb",
-        "type": "ui_group",
-        "name": "House",
-        "tab": "8d9ae12b.2a6f5",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
     },
     {
         "id": "12895ae7.9c6bf5",
@@ -1593,8 +1562,8 @@
         "id": "374dd77b.cadc38",
         "type": "ui_group",
         "name": "Happy",
-        "tab": "8d9ae12b.2a6f5",
-        "order": 4,
+        "tab": "98e325c0.ffee08",
+        "order": 11,
         "disp": true,
         "width": "6",
         "collapse": false
@@ -1639,8 +1608,9 @@
         "tab": "98e325c0.ffee08",
         "order": 1,
         "disp": true,
-        "width": 4,
-        "collapse": false
+        "width": 8,
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "927bb6cc.493638",
@@ -1808,24 +1778,6 @@
         "sessionExpiry": ""
     },
     {
-        "id": "357d373a.2d1478",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "40d8b907.a41218",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "40d8b907.a41218",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "9f7c23e0bf86f5c3",
         "type": "ui_group",
         "name": "Bathroom",
@@ -1889,26 +1841,6 @@
         "type": "spotify-auth",
         "name": "Spotify acces",
         "scope": "user-read-playback-state\nuser-modify-playback-state\nuser-read-currently-playing\nstreaming\napp-remote-control"
-    },
-    {
-        "id": "989e53faeb7649cf",
-        "type": "ui_spacer",
-        "z": "34fc4e1d.243ef2",
-        "name": "spacer",
-        "group": "69a63d21.a935c4",
-        "order": 4,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "d8d02af18de9ab13",
-        "type": "ui_spacer",
-        "z": "34fc4e1d.243ef2",
-        "name": "spacer",
-        "group": "927bb6cc.493638",
-        "order": 3,
-        "width": 1,
-        "height": 1
     },
     {
         "id": "36091c060c8a72d5",
@@ -2042,6 +1974,104 @@
         "type": "global-config",
         "name": "global-config",
         "env": []
+    },
+    {
+        "id": "0852d48c6486f04f",
+        "type": "ui_spacer",
+        "z": "34fc4e1d.243ef2",
+        "name": "spacer",
+        "group": "69a63d21.a935c4",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f6d0c8c1702cd064",
+        "type": "ui_spacer",
+        "z": "34fc4e1d.243ef2",
+        "name": "spacer",
+        "group": "69a63d21.a935c4",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b3a25f8ace38f987",
+        "type": "ui_spacer",
+        "z": "34fc4e1d.243ef2",
+        "name": "spacer",
+        "group": "69a63d21.a935c4",
+        "order": 15,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e0fd2291d1090242",
+        "type": "ui_spacer",
+        "z": "34fc4e1d.243ef2",
+        "name": "spacer",
+        "group": "927bb6cc.493638",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7cadb723b6a0f823",
+        "type": "ui_spacer",
+        "z": "34fc4e1d.243ef2",
+        "name": "spacer",
+        "group": "231b0632.0e84ca",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a02eb0dcdc56571a",
+        "type": "ui_spacer",
+        "z": "34fc4e1d.243ef2",
+        "name": "spacer",
+        "group": "a8deaee7.c8dff",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "7f0c45a9432dc256",
+        "type": "ui-base",
+        "name": "UI Base",
+        "path": "/dashboard"
+    },
+    {
+        "id": "1553eff60e2d48b2",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        }
+    },
+    {
+        "id": "e923f74a24d7782a",
+        "type": "ui-page",
+        "name": "Dashboard",
+        "ui": "7f0c45a9432dc256",
+        "path": "/",
+        "layout": "grid",
+        "theme": "1553eff60e2d48b2",
+        "order": -1
+    },
+    {
+        "id": "3f286b473c9966df",
+        "type": "ui-group",
+        "name": "House",
+        "page": "e923f74a24d7782a",
+        "width": "7",
+        "height": "5",
+        "order": -1,
+        "disp": true
     },
     {
         "id": "4b3b19cb6cd314e6",
@@ -4416,7 +4446,7 @@
         "g": "f7a1eb10d62e848e",
         "name": "TV",
         "group": "231b0632.0e84ca",
-        "order": 3,
+        "order": 4,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -4461,69 +4491,6 @@
             [
                 "c2a6540cf2006146"
             ]
-        ]
-    },
-    {
-        "id": "94eb7140.f691d",
-        "type": "ui_switch",
-        "z": "34fc4e1d.243ef2",
-        "g": "1f543c3859db0ffb",
-        "name": "heggland",
-        "label": "Øivind",
-        "tooltip": "",
-        "group": "69a63d21.a935c4",
-        "order": 1,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-user",
-        "oncolor": "Green",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-user",
-        "offcolor": "orange",
-        "x": 540,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cbd47089.141c8",
-        "type": "ui_switch",
-        "z": "34fc4e1d.243ef2",
-        "g": "1f543c3859db0ffb",
-        "name": "karina",
-        "label": "Karina",
-        "tooltip": "",
-        "group": "69a63d21.a935c4",
-        "order": 2,
-        "width": 2,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-user",
-        "oncolor": "Green",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-user",
-        "offcolor": "orange",
-        "animate": true,
-        "className": "",
-        "x": 530,
-        "y": 160,
-        "wires": [
-            []
         ]
     },
     {
@@ -4752,7 +4719,7 @@
         "g": "56ae36d1f333f9cc",
         "name": "B-PRES",
         "group": "231b0632.0e84ca",
-        "order": 2,
+        "order": 3,
         "width": 1,
         "height": 1,
         "passthru": true,
@@ -4776,7 +4743,7 @@
         "id": "d1dd0b4c718650f7",
         "type": "ui_template",
         "z": "34fc4e1d.243ef2",
-        "group": "357d373a.2d1478",
+        "group": "",
         "name": "icon style",
         "order": 1,
         "width": 0,
@@ -5252,10 +5219,11 @@
         "id": "8c8af9368e8f41fc",
         "type": "ui_button",
         "z": "34fc4e1d.243ef2",
+        "d": true,
         "g": "1f543c3859db0ffb",
         "name": "Upstairs",
         "group": "69a63d21.a935c4",
-        "order": 5,
+        "order": 9,
         "width": 4,
         "height": 1,
         "passthru": false,
@@ -5279,10 +5247,11 @@
         "id": "74c6f834be0eaf96",
         "type": "ui_button",
         "z": "34fc4e1d.243ef2",
+        "d": true,
         "g": "1f543c3859db0ffb",
         "name": "Downstairs",
         "group": "69a63d21.a935c4",
-        "order": 6,
+        "order": 8,
         "width": 4,
         "height": 1,
         "passthru": false,
@@ -5356,39 +5325,6 @@
             [
                 "8c8af9368e8f41fc"
             ]
-        ]
-    },
-    {
-        "id": "1ecef1db.323e0e",
-        "type": "ui_switch",
-        "z": "34fc4e1d.243ef2",
-        "g": "53115130f657b882",
-        "name": "Status",
-        "label": "{{label}}",
-        "tooltip": "",
-        "group": "69a63d21.a935c4",
-        "order": 2,
-        "width": "2",
-        "height": 1,
-        "passthru": false,
-        "decouple": "true",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "home",
-        "onvalueType": "str",
-        "onicon": "fa-home",
-        "oncolor": "Green",
-        "offvalue": "away",
-        "offvalueType": "str",
-        "officon": "fa-sign-out",
-        "offcolor": "red",
-        "animate": true,
-        "className": "",
-        "x": 1030,
-        "y": 280,
-        "wires": [
-            []
         ]
     },
     {
@@ -5466,7 +5402,7 @@
         "y": 220,
         "wires": [
             [
-                "94eb7140.f691d"
+                "5f74b04523ff3784"
             ]
         ]
     },
@@ -5494,7 +5430,7 @@
         "y": 180,
         "wires": [
             [
-                "cbd47089.141c8"
+                "d80abf17ba04b0a2"
             ]
         ]
     },
@@ -5614,7 +5550,7 @@
         "g": "f51f78b911174f21",
         "name": "Off",
         "group": "231b0632.0e84ca",
-        "order": 6,
+        "order": 7,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -5643,7 +5579,7 @@
         "g": "f51f78b911174f21",
         "name": "On",
         "group": "231b0632.0e84ca",
-        "order": 4,
+        "order": 5,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -5671,7 +5607,7 @@
         "g": "f51f78b911174f21",
         "name": "Auto",
         "group": "231b0632.0e84ca",
-        "order": 5,
+        "order": 6,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -5724,10 +5660,11 @@
         "id": "2899fe6e.4401a2",
         "type": "ui_button",
         "z": "34fc4e1d.243ef2",
+        "d": true,
         "g": "f51f78b911174f21",
         "name": "FILM",
-        "group": "ca3eef.3da5b11",
-        "order": 1,
+        "group": "231b0632.0e84ca",
+        "order": 2,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5735,6 +5672,7 @@
         "tooltip": "",
         "color": "",
         "bgcolor": "{{background}}",
+        "className": "",
         "icon": "",
         "payload": "true",
         "payloadType": "bool",
@@ -5755,7 +5693,7 @@
         "g": "f51f78b911174f21",
         "name": "S-Off",
         "group": "a8deaee7.c8dff",
-        "order": 6,
+        "order": 5,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -5783,7 +5721,7 @@
         "g": "f51f78b911174f21",
         "name": "S-On",
         "group": "a8deaee7.c8dff",
-        "order": 4,
+        "order": 3,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -5825,7 +5763,7 @@
         "g": "f51f78b911174f21",
         "name": "S-Auto",
         "group": "a8deaee7.c8dff",
-        "order": 5,
+        "order": 4,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -6393,8 +6331,124 @@
         "y": 280,
         "wires": [
             [
-                "1ecef1db.323e0e"
+                "631efbfdf57fe8fc"
             ]
+        ]
+    },
+    {
+        "id": "42dcb01a8a2dd3b0",
+        "type": "inject",
+        "z": "34fc4e1d.243ef2",
+        "g": "53115130f657b882",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 780,
+        "y": 320,
+        "wires": [
+            [
+                "2b18f71498965dd7"
+            ]
+        ]
+    },
+    {
+        "id": "5f74b04523ff3784",
+        "type": "ui-switch",
+        "z": "34fc4e1d.243ef2",
+        "g": "1f543c3859db0ffb",
+        "name": "Karina",
+        "label": "Karina",
+        "group": "3f286b473c9966df",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "account",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "account",
+        "offcolor": "orange",
+        "x": 530,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d80abf17ba04b0a2",
+        "type": "ui-switch",
+        "z": "34fc4e1d.243ef2",
+        "g": "1f543c3859db0ffb",
+        "name": "Øivind",
+        "label": "Øivind",
+        "group": "3f286b473c9966df",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "account",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "account",
+        "offcolor": "orange",
+        "x": 530,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "631efbfdf57fe8fc",
+        "type": "ui-switch",
+        "z": "34fc4e1d.243ef2",
+        "g": "53115130f657b882",
+        "name": "Home Status",
+        "label": "Home Status",
+        "group": "3f286b473c9966df",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "onvalue": "home",
+        "onvalueType": "str",
+        "onicon": "home",
+        "oncolor": "green",
+        "offvalue": "away",
+        "offvalueType": "str",
+        "officon": "home-off",
+        "offcolor": "red",
+        "x": 1030,
+        "y": 280,
+        "wires": [
+            []
         ]
     },
     {
@@ -8852,8 +8906,8 @@
         "type": "ui_button",
         "z": "bc3b2c68.b35f6",
         "name": "Søppel",
-        "group": "56a8be2a.9b9eb",
-        "order": 4,
+        "group": "69a63d21.a935c4",
+        "order": 14,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -9578,40 +9632,6 @@
         ]
     },
     {
-        "id": "8f0e361a.88e718",
-        "type": "ui_switch",
-        "z": "8b99f8fe.7b27b8",
-        "name": "Status",
-        "label": "Guestmode",
-        "tooltip": "",
-        "group": "56a8be2a.9b9eb",
-        "order": 3,
-        "width": 3,
-        "height": 1,
-        "passthru": false,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "false",
-        "onvalueType": "bool",
-        "onicon": "fa-home",
-        "oncolor": "Green",
-        "offvalue": "true",
-        "offvalueType": "bool",
-        "officon": "fa-sign-out",
-        "offcolor": "red",
-        "animate": true,
-        "className": "",
-        "x": 510,
-        "y": 100,
-        "wires": [
-            [
-                "e67e0c77.93b2c"
-            ]
-        ]
-    },
-    {
         "id": "e67e0c77.93b2c",
         "type": "change",
         "z": "8b99f8fe.7b27b8",
@@ -9630,8 +9650,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 100,
+        "x": 700,
+        "y": 120,
         "wires": [
             []
         ]
@@ -9987,7 +10007,7 @@
         "y": 120,
         "wires": [
             [
-                "8f0e361a.88e718"
+                "07c3245eb0c7f6a4"
             ]
         ]
     },
@@ -10179,6 +10199,37 @@
         ]
     },
     {
+        "id": "07c3245eb0c7f6a4",
+        "type": "ui-switch",
+        "z": "8b99f8fe.7b27b8",
+        "name": "Guestmode",
+        "label": "Guestmode",
+        "group": "3f286b473c9966df",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "onvalue": "false",
+        "onvalueType": "bool",
+        "onicon": "account-plus",
+        "oncolor": "red",
+        "offvalue": "true",
+        "offvalueType": "bool",
+        "officon": "account-plus",
+        "offcolor": "green",
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "e67e0c77.93b2c"
+            ]
+        ]
+    },
+    {
         "id": "ddc8b687.374538",
         "type": "deconz-input",
         "z": "1b14ec1b.20ab54",
@@ -10204,12 +10255,13 @@
         "id": "976db23e.1f8ba",
         "type": "link out",
         "z": "1b14ec1b.20ab54",
+        "d": true,
         "name": "",
+        "mode": "link",
         "links": [
-            "fee9f406.ef48d8",
             "15d28c99.680783"
         ],
-        "x": 815,
+        "x": 795,
         "y": 80,
         "wires": []
     },
@@ -10262,7 +10314,7 @@
         "name": "Happy",
         "order": 1,
         "width": 6,
-        "height": 5,
+        "height": 2,
         "lineType": "three",
         "actionType": "none",
         "allowHTML": false,
@@ -10346,13 +10398,14 @@
         "type": "function",
         "z": "1b14ec1b.20ab54",
         "name": "Happy Inside",
-        "func": "  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: \"Happy wants  to go INSIDE\",\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\n\n\n\n\n\n\nlet msg2 = {};\n\n\n\n\n\nmsg2.payload = [ {\n        \"title\": \"Outside\",\n        \"description\": msg.payload,\n        \"icon\": \"https://lh3.googleusercontent.com/F7dHEApWlOufIKF5NX7EHtx1VTPfKWRIN-bOMch2Mi5eixq7cASp-Jh4kr2T4u5l5OUwkhZgowOD6HSOvnnSDi14oaDkREKSmejYnyOujkuSUw5mkIr_AqgIkZro25qWezWl3jxMwv-yTNCzPGV_ABugX9malJX4ZMEumc0cz5wQHsJxfh334ayq_yAslDd7cRzVytebggUPZ7kzxiWYtNAPZLzuOhZLu831adN6OM91wD7glPQoticU3Lh97Hzi1bHI55CEsMuY0DI4jIGlHCkhziI7Xm3FoZCjqX467O5uqKxHzdsamQ9FLGPquo7xr5FBaFUlrwtYoliH1kfSLEVF5C2b_zwErbcjQPCmKyPWQiUthDLvtcatWZ-zC7XmZb3knlSdb_ecwFmbm5lyn0krvtDU123uynS_xLK2C8uXhUP_A3r2msHBEIqrQoDP3HCHlJl2rOQ77Mxgh1uqUCZTT2EUGs67B-beYgbVcd_8wydZfHl6Pn4LP04yilrP3yCZtPT9zC_j-XM4AH_5kunbXytenZHLteaI4ppe4u9lnRCjX5nq8vshrXfOJINr_XvBbUQRHb1uUxQ9N0R_a8i7McUanKl06SX967PMOl9mxSC4LrisMzTj4KoWATsVCU8oXeo6DEsx-l0ICLeLven98hfoAFZym6jPVhBbUmZF7c_IGuqEgUvDw0HI1jc5uATSRxz-7YDELuDpAz4DKQBMMToV-yZdpNQXsM3zpu1Je7j9nA=w563-h545-no\"\n    }];\n\nreturn [msg, msg2];",
+        "func": "  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: \"Happy wants  to go INSIDE\",\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\n\n\n\n\n\n\nlet msg2 = {};\n\n\n\n\n\nmsg2.payload = [ {\n        \"title\": \"Outside\",\n        \"description\": msg.payload.text,\n        \"icon\": \"https://lh3.googleusercontent.com/F7dHEApWlOufIKF5NX7EHtx1VTPfKWRIN-bOMch2Mi5eixq7cASp-Jh4kr2T4u5l5OUwkhZgowOD6HSOvnnSDi14oaDkREKSmejYnyOujkuSUw5mkIr_AqgIkZro25qWezWl3jxMwv-yTNCzPGV_ABugX9malJX4ZMEumc0cz5wQHsJxfh334ayq_yAslDd7cRzVytebggUPZ7kzxiWYtNAPZLzuOhZLu831adN6OM91wD7glPQoticU3Lh97Hzi1bHI55CEsMuY0DI4jIGlHCkhziI7Xm3FoZCjqX467O5uqKxHzdsamQ9FLGPquo7xr5FBaFUlrwtYoliH1kfSLEVF5C2b_zwErbcjQPCmKyPWQiUthDLvtcatWZ-zC7XmZb3knlSdb_ecwFmbm5lyn0krvtDU123uynS_xLK2C8uXhUP_A3r2msHBEIqrQoDP3HCHlJl2rOQ77Mxgh1uqUCZTT2EUGs67B-beYgbVcd_8wydZfHl6Pn4LP04yilrP3yCZtPT9zC_j-XM4AH_5kunbXytenZHLteaI4ppe4u9lnRCjX5nq8vshrXfOJINr_XvBbUQRHb1uUxQ9N0R_a8i7McUanKl06SX967PMOl9mxSC4LrisMzTj4KoWATsVCU8oXeo6DEsx-l0ICLeLven98hfoAFZym6jPVhBbUmZF7c_IGuqEgUvDw0HI1jc5uATSRxz-7YDELuDpAz4DKQBMMToV-yZdpNQXsM3zpu1Je7j9nA=w563-h545-no\"\n    }];\n\nreturn [msg, msg2];",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
+        "x": 490,
         "y": 80,
         "wires": [
             [
@@ -10360,6 +10413,35 @@
             ],
             [
                 "9ab1a383.0f88b"
+            ]
+        ]
+    },
+    {
+        "id": "e938238ab245c876",
+        "type": "inject",
+        "z": "1b14ec1b.20ab54",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 20,
+        "wires": [
+            [
+                "933b65ba.415558"
             ]
         ]
     },
@@ -16299,38 +16381,6 @@
         ]
     },
     {
-        "id": "430bcf57af3f447c",
-        "type": "ui_switch",
-        "z": "a9a601907d96eb09",
-        "name": "BAD",
-        "label": "Bevegelse Bad",
-        "tooltip": "",
-        "group": "56a8be2a.9b9eb",
-        "order": 5,
-        "width": 3,
-        "height": 1,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "remove_red_eye",
-        "oncolor": "orange",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "remove_red_eye",
-        "offcolor": "grey",
-        "animate": true,
-        "className": "",
-        "x": 610,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "c840b6850a9f9370",
         "type": "link in",
         "z": "a9a601907d96eb09",
@@ -16342,7 +16392,6 @@
         "y": 460,
         "wires": [
             [
-                "430bcf57af3f447c",
                 "2cd7beb6601eb278"
             ]
         ]
@@ -18474,7 +18523,7 @@
         "g": "76afa4ece7428050",
         "name": "",
         "group": "69a63d21.a935c4",
-        "order": 3,
+        "order": 11,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -18764,9 +18813,9 @@
         "label": "Temp",
         "tooltip": "",
         "group": "69a63d21.a935c4",
-        "order": 9,
-        "width": 0,
-        "height": 0,
+        "order": 10,
+        "width": 2,
+        "height": 1,
         "passthru": false,
         "mode": "number",
         "delay": 300,
@@ -18940,10 +18989,10 @@
         "name": "",
         "label": "happyHome",
         "tooltip": "",
-        "group": "56a8be2a.9b9eb",
-        "order": 9,
-        "width": 0,
-        "height": 0,
+        "group": "69a63d21.a935c4",
+        "order": 16,
+        "width": 4,
+        "height": 1,
         "passthru": false,
         "decouple": "true",
         "topic": "topic",
@@ -19027,10 +19076,10 @@
         "name": "",
         "label": "SummerTime",
         "tooltip": "",
-        "group": "56a8be2a.9b9eb",
-        "order": 9,
-        "width": 0,
-        "height": 0,
+        "group": "69a63d21.a935c4",
+        "order": 13,
+        "width": 4,
+        "height": 1,
         "passthru": false,
         "decouple": "true",
         "topic": "topic",
@@ -19992,7 +20041,7 @@
         "g": "76afa4ece7428050",
         "name": "",
         "group": "69a63d21.a935c4",
-        "order": 3,
+        "order": 12,
         "width": 1,
         "height": 1,
         "passthru": false,
@@ -20149,35 +20198,6 @@
         "x": 2570,
         "y": 700,
         "wires": []
-    },
-    {
-        "id": "f2a5dfb809c6fd14",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1450,
-        "y": 460,
-        "wires": [
-            [
-                "96eb452a3a0e0ab2"
-            ]
-        ]
     },
     {
         "id": "3a621e1.6c980e2",
@@ -22094,38 +22114,6 @@
         ]
     },
     {
-        "id": "704455a7.c3d2ec",
-        "type": "ui_switch",
-        "z": "daf28d0f20b236a4",
-        "name": "Status Roborock",
-        "label": "{{label}}",
-        "tooltip": "",
-        "group": "56a8be2a.9b9eb",
-        "order": 1,
-        "width": 3,
-        "height": 1,
-        "passthru": false,
-        "decouple": "true",
-        "topic": "",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "fa-bolt",
-        "oncolor": "orange",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "fa-sign-out",
-        "offcolor": "red",
-        "animate": true,
-        "className": "",
-        "x": 1130,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "9ae92a2b.99c9c8",
         "type": "function",
         "z": "daf28d0f20b236a4",
@@ -22139,7 +22127,7 @@
         "y": 240,
         "wires": [
             [
-                "704455a7.c3d2ec"
+                "cfc5a1d05fe8095b"
             ]
         ]
     },
@@ -22232,6 +22220,64 @@
         "wires": [
             [
                 "bb0350d09c07a742"
+            ]
+        ]
+    },
+    {
+        "id": "cfc5a1d05fe8095b",
+        "type": "ui-switch",
+        "z": "daf28d0f20b236a4",
+        "name": "Home Status",
+        "label": "Mr Robot Status",
+        "group": "3f286b473c9966df",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "lightning-bolt",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "sign-out",
+        "offcolor": "red",
+        "x": 1110,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0a746840de428715",
+        "type": "inject",
+        "z": "daf28d0f20b236a4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "3572fdf5.48cc62"
             ]
         ]
     },
@@ -22896,49 +22942,15 @@
         ]
     },
     {
-        "id": "6eed14b9cb72a2c9",
-        "type": "nordpool-api-plus",
-        "z": "6b670b241559f268",
-        "name": "NorPool Today",
-        "area": "Kr.sand",
-        "currency": "NOK",
-        "action": "todayOrOverride",
-        "x": 640,
-        "y": 260,
-        "wires": [
-            [
-                "95a73159c338a673"
-            ]
-        ]
-    },
-    {
-        "id": "38f00b57cc688d88",
-        "type": "nordpool-api-plus",
-        "z": "6b670b241559f268",
-        "name": "NordPool Tomorrow",
-        "area": "Kr.sand",
-        "currency": "NOK",
-        "action": "dayAhead",
-        "x": 650,
-        "y": 300,
-        "wires": [
-            [
-                "9b03850e6ef3d1e0"
-            ]
-        ]
-    },
-    {
-        "id": "a487554e76b488b0",
+        "id": "ae81d2dc712da204",
         "type": "inject",
-        "z": "6b670b241559f268",
-        "name": "Query NordPool api",
+        "z": "6a77c00f79a19693",
+        "name": "",
         "props": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
+                "p": "reset",
+                "v": "true",
+                "vt": "bool"
             }
         ],
         "repeat": "",
@@ -22946,127 +22958,12 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 430,
-        "y": 300,
+        "x": 800,
+        "y": 820,
         "wires": [
             [
-                "38f00b57cc688d88",
-                "6eed14b9cb72a2c9"
-            ]
-        ]
-    },
-    {
-        "id": "92a783f888527d77",
-        "type": "function",
-        "z": "6b670b241559f268",
-        "name": "Combining 2 days",
-        "func": "let nordPoolToday = msg.today;\nlet nordPoolTomorrow = msg.tomorrow\nlet toPS = { \"payload\": { \"today\": [], \"tomorrow\": [] } };\n\nnordPoolToday.forEach(function (hour) {\n\n    let dateTime = new Date(hour.timestamp)\n    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds\n    var localISOTime = (new Date(dateTime.getTime() - tzoffset)).toISOString().slice(0, -1);\n    toPS.payload.today.push({ \"start\": localISOTime, \"value\": hour.price });\n\n});\n\nnordPoolTomorrow.forEach(function (hour) {\n\n    let dateTime = new Date(hour.timestamp)\n    var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds\n    var localISOTime = (new Date(dateTime.getTime() - tzoffset)).toISOString().slice(0, -1);\n\n    if (new Date(localISOTime).getDate() == new Date().getDate()) {\n        // to prevent the api error where data for tomorrow does not exsist and data returned are today\n        node.warn(\"No data for Tomorrow\")\n        return;\n    }\n    toPS.payload.tomorrow.push({ \"start\": localISOTime, \"value\": hour.price });\n\n});\n\n\nreturn toPS;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1230,
-        "y": 300,
-        "wires": [
-            [
-                "dfbb586785fee8e9"
-            ]
-        ]
-    },
-    {
-        "id": "842ea56a4a9def98",
-        "type": "join",
-        "z": "6b670b241559f268",
-        "name": "",
-        "mode": "custom",
-        "build": "merged",
-        "property": "",
-        "propertyType": "full",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "3",
-        "count": "",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 1050,
-        "y": 300,
-        "wires": [
-            [
-                "92a783f888527d77"
-            ]
-        ]
-    },
-    {
-        "id": "dfbb586785fee8e9",
-        "type": "ps-receive-price",
-        "z": "6b670b241559f268",
-        "name": "Price Receiver",
-        "x": 1420,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9b03850e6ef3d1e0",
-        "type": "change",
-        "z": "6b670b241559f268",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "tomorrow",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 850,
-        "y": 300,
-        "wires": [
-            [
-                "842ea56a4a9def98"
-            ]
-        ]
-    },
-    {
-        "id": "95a73159c338a673",
-        "type": "change",
-        "z": "6b670b241559f268",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "today",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 840,
-        "y": 260,
-        "wires": [
-            [
-                "842ea56a4a9def98"
+                "d6d8cf38.1794d",
+                "3d692d1e.98b022"
             ]
         ]
     }
