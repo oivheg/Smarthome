@@ -855,7 +855,9 @@
             "4b0510cde2a3bfff"
         ],
         "x": 224,
-        "y": 1119
+        "y": 1119,
+        "w": 1002,
+        "h": 162
     },
     {
         "id": "a7b26502af3b65e3",
@@ -877,7 +879,9 @@
             "0a13e388cbc5a023"
         ],
         "x": 894,
-        "y": 559
+        "y": 559,
+        "w": 682,
+        "h": 182
     },
     {
         "id": "172b4292bafc68a7",
@@ -898,7 +902,9 @@
             "0e2324ffdb10fe80"
         ],
         "x": 244,
-        "y": 939
+        "y": 939,
+        "w": 822,
+        "h": 149.5
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -918,7 +924,9 @@
             "99fed52c6143c053"
         ],
         "x": 224,
-        "y": 779
+        "y": 779,
+        "w": 842,
+        "h": 142
     },
     {
         "id": "9bb3180dbbe92370",
@@ -985,7 +993,9 @@
             "1b1b701f2f4d7455"
         ],
         "x": 224,
-        "y": 559
+        "y": 559,
+        "w": 622,
+        "h": 182
     },
     {
         "id": "de17e98102477bde",
@@ -1122,9 +1132,7 @@
             "631efbfdf57fe8fc"
         ],
         "x": 664,
-        "y": 119,
-        "w": 462,
-        "h": 242
+        "y": 119
     },
     {
         "id": "10af9586a4a889ef",
@@ -1163,9 +1171,7 @@
             "d80abf17ba04b0a2"
         ],
         "x": 214,
-        "y": 139,
-        "w": 432,
-        "h": 222
+        "y": 139
     },
     {
         "id": "cb50c720a3cedf84",
@@ -1192,9 +1198,7 @@
             "c8d35c2375c9aeee"
         ],
         "x": 1134,
-        "y": 119,
-        "w": 952,
-        "h": 402
+        "y": 119
     },
     {
         "id": "f7a1eb10d62e848e",
@@ -1213,9 +1217,7 @@
             "6075171d.f0db08"
         ],
         "x": 214,
-        "y": 379,
-        "w": 512,
-        "h": 122
+        "y": 379
     },
     {
         "id": "56ae36d1f333f9cc",
@@ -1247,9 +1249,7 @@
             "10c0dda10a619e6f"
         ],
         "x": 214,
-        "y": 539,
-        "w": 632,
-        "h": 362
+        "y": 539
     },
     {
         "id": "f51f78b911174f21",
@@ -1292,9 +1292,7 @@
             "bb0314f944be1623"
         ],
         "x": 1134,
-        "y": 539,
-        "w": 912,
-        "h": 582
+        "y": 539
     },
     {
         "id": "5e9ef91ad1457c49",
@@ -1314,7 +1312,9 @@
             "a0e66a252b3dae2e"
         ],
         "x": 254,
-        "y": 19
+        "y": 19,
+        "w": 472,
+        "h": 202
     },
     {
         "id": "750228718f0f7746",
@@ -1340,7 +1340,9 @@
             "56a9a0de058b39ee"
         ],
         "x": 764,
-        "y": 19
+        "y": 19,
+        "w": 432,
+        "h": 202
     },
     {
         "id": "dabbbe0f6cfeecac",
@@ -1360,7 +1362,9 @@
             "885fc820467d8739"
         ],
         "x": 254,
-        "y": 299
+        "y": 299,
+        "w": 352,
+        "h": 162
     },
     {
         "id": "8da8f3a9a56fc7ee",
@@ -1390,7 +1394,9 @@
             "b6d05acd6b922f83"
         ],
         "x": 764,
-        "y": 299
+        "y": 299,
+        "w": 882,
+        "h": 202
     },
     {
         "id": "c10ebffd064adbf1",
@@ -1446,9 +1452,7 @@
             "9ca94a94ccdaf724"
         ],
         "x": 134,
-        "y": 219,
-        "w": 1372,
-        "h": 282
+        "y": 219
     },
     {
         "id": "2e7006b6bbb0568e",
@@ -1549,14 +1553,6 @@
         "clientSecret": "8046ff33-2c02-4aa7-95d5-cb71848032dd",
         "username": "oivheg@gmail.com",
         "password": "y4mHub&PcsW0%p!I"
-    },
-    {
-        "id": "3587f56e.3de5ba",
-        "type": "castv2-connection",
-        "name": "",
-        "target": "SHIELD",
-        "host": "192.168.1.61",
-        "port": "8009"
     },
     {
         "id": "374dd77b.cadc38",
@@ -2072,6 +2068,14 @@
         "height": "5",
         "order": -1,
         "disp": true
+    },
+    {
+        "id": "4d021bd33834978e",
+        "type": "castv2-connection",
+        "name": "SHIELD",
+        "target": "",
+        "host": "192.168.1.61",
+        "port": "8009"
     },
     {
         "id": "4b3b19cb6cd314e6",
@@ -12071,22 +12075,6 @@
         "wires": []
     },
     {
-        "id": "a64342af.a4b47",
-        "type": "castv2-sender",
-        "z": "1c88039c.df631c",
-        "name": "SHIELD",
-        "connection": "3587f56e.3de5ba",
-        "x": 220,
-        "y": 240,
-        "wires": [
-            [
-                "81af6cca.e9c66",
-                "89d0b2b7.ea426",
-                "dfb84673.fd6598"
-            ]
-        ]
-    },
-    {
         "id": "81af6cca.e9c66",
         "type": "switch",
         "z": "1c88039c.df631c",
@@ -12214,12 +12202,13 @@
         "type": "castv2-sender",
         "z": "1c88039c.df631c",
         "name": "SHIELD",
-        "connection": "3587f56e.3de5ba",
+        "connection": "4d021bd33834978e",
         "x": 300,
         "y": 580,
         "wires": [
             [
-                "d624c1d2209e996f"
+                "81af6cca.e9c66",
+                "5206dfdb12e6a2dc"
             ]
         ]
     },
@@ -12717,31 +12706,6 @@
         ]
     },
     {
-        "id": "d624c1d2209e996f",
-        "type": "delay",
-        "z": "1c88039c.df631c",
-        "name": "Limit",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "3",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 450,
-        "y": 580,
-        "wires": [
-            [
-                "3ecbdbdc32d7e425"
-            ]
-        ]
-    },
-    {
         "id": "9a7761d2480db8ae",
         "type": "switch",
         "z": "1c88039c.df631c",
@@ -12763,6 +12727,44 @@
         "wires": [
             [
                 "8a0ab10e55653060"
+            ]
+        ]
+    },
+    {
+        "id": "db9dfe061ca64dcb",
+        "type": "debug",
+        "z": "1c88039c.df631c",
+        "name": "debug 41",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5206dfdb12e6a2dc",
+        "type": "rbe",
+        "z": "1c88039c.df631c",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "platform.isActiveInput",
+        "topi": "topic",
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "3ecbdbdc32d7e425",
+                "db9dfe061ca64dcb"
             ]
         ]
     },
