@@ -855,9 +855,7 @@
             "4b0510cde2a3bfff"
         ],
         "x": 224,
-        "y": 1119,
-        "w": 1002,
-        "h": 162
+        "y": 1119
     },
     {
         "id": "a7b26502af3b65e3",
@@ -879,9 +877,7 @@
             "0a13e388cbc5a023"
         ],
         "x": 894,
-        "y": 559,
-        "w": 682,
-        "h": 182
+        "y": 559
     },
     {
         "id": "172b4292bafc68a7",
@@ -902,9 +898,7 @@
             "0e2324ffdb10fe80"
         ],
         "x": 244,
-        "y": 939,
-        "w": 822,
-        "h": 149.5
+        "y": 939
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -924,9 +918,7 @@
             "99fed52c6143c053"
         ],
         "x": 224,
-        "y": 779,
-        "w": 842,
-        "h": 142
+        "y": 779
     },
     {
         "id": "9bb3180dbbe92370",
@@ -993,9 +985,7 @@
             "1b1b701f2f4d7455"
         ],
         "x": 224,
-        "y": 559,
-        "w": 622,
-        "h": 182
+        "y": 559
     },
     {
         "id": "de17e98102477bde",
@@ -1009,11 +999,8 @@
         "nodes": [
             "67361b1114c0fdfe",
             "e97e2897e23ddfe6",
-            "46c0e8dd5c1bc8aa",
-            "3ade5de96d20c60a",
             "4445d551c97a8c33",
             "f401193199a5d246",
-            "7ce9530bbab43ce3",
             "bc2016b761b16427",
             "f3b8ba3285e47a53",
             "38b3f8ab5235eae5",
@@ -1022,7 +1009,10 @@
             "d61c8ff011a88dbc",
             "30ea5fb10da29ec3",
             "821b39103a91f616",
-            "896aa735a80611d5"
+            "896aa735a80611d5",
+            "3b21f19e91b9979f",
+            "9a193a329c78ad67",
+            "020e359865b706b7"
         ],
         "x": 274,
         "y": 979
@@ -1129,7 +1119,8 @@
             "8456ad2c.7b492",
             "2b18f71498965dd7",
             "42dcb01a8a2dd3b0",
-            "631efbfdf57fe8fc"
+            "631efbfdf57fe8fc",
+            "4f54a064b422c37c"
         ],
         "x": 664,
         "y": 119
@@ -1312,9 +1303,7 @@
             "a0e66a252b3dae2e"
         ],
         "x": 254,
-        "y": 19,
-        "w": 472,
-        "h": 202
+        "y": 19
     },
     {
         "id": "750228718f0f7746",
@@ -1340,9 +1329,7 @@
             "56a9a0de058b39ee"
         ],
         "x": 764,
-        "y": 19,
-        "w": 432,
-        "h": 202
+        "y": 19
     },
     {
         "id": "dabbbe0f6cfeecac",
@@ -1362,9 +1349,7 @@
             "885fc820467d8739"
         ],
         "x": 254,
-        "y": 299,
-        "w": 352,
-        "h": 162
+        "y": 299
     },
     {
         "id": "8da8f3a9a56fc7ee",
@@ -1394,9 +1379,7 @@
             "b6d05acd6b922f83"
         ],
         "x": 764,
-        "y": 299,
-        "w": 882,
-        "h": 202
+        "y": 299
     },
     {
         "id": "c10ebffd064adbf1",
@@ -1545,14 +1528,6 @@
         "ws_port": "8088",
         "secure": false,
         "polling": "15"
-    },
-    {
-        "id": "4ec8324b.b2dc1c",
-        "type": "ambi-config",
-        "clientId": "c52c175d-8388-4974-be6e-2db7abf90818",
-        "clientSecret": "8046ff33-2c02-4aa7-95d5-cb71848032dd",
-        "username": "oivheg@gmail.com",
-        "password": "y4mHub&PcsW0%p!I"
     },
     {
         "id": "374dd77b.cadc38",
@@ -2057,17 +2032,19 @@
         "path": "/",
         "layout": "grid",
         "theme": "1553eff60e2d48b2",
-        "order": -1
+        "order": -1,
+        "className": ""
     },
     {
         "id": "3f286b473c9966df",
         "type": "ui-group",
         "name": "House",
         "page": "e923f74a24d7782a",
-        "width": "7",
-        "height": "5",
+        "width": "6",
+        "height": "1",
         "order": -1,
-        "disp": true
+        "disp": true,
+        "className": ""
     },
     {
         "id": "4d021bd33834978e",
@@ -2076,6 +2053,27 @@
         "target": "",
         "host": "192.168.1.61",
         "port": "8009"
+    },
+    {
+        "id": "4fc724fc06c8dc88",
+        "type": "noraf-config",
+        "name": "nora config",
+        "group": "",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "localexecution": true,
+        "structure": "Hegglunds",
+        "storeStateInContext": true,
+        "disableValidationErrors": false,
+        "sendDeviceNameAndLocation": false
+    },
+    {
+        "id": "0b617d79931e935c",
+        "type": "ambi-config",
+        "clientId": "c52c175d-8388-4974-be6e-2db7abf90818",
+        "clientSecret": "8046ff33-2c02-4aa7-95d5-cb71848032dd",
+        "username": "oivheg@gmail.com",
+        "password": "y4mHub&PcsW0%p!I"
     },
     {
         "id": "4b3b19cb6cd314e6",
@@ -4065,6 +4063,7 @@
         "name": "converter",
         "func": "\n  \n  \n  \n  msg.payload = {\n    app: \"DefaultMediaReceiver\",\n    type: \"TTS\",\n    text: msg.text,\n    speed: 1, // optional to adjust TTS speed, defaults to 1\n    language: \"en\", // optional to set TTS language, default to en\n    metadata: { // optional unless desired, follows normal metadata rules noted above\n      title: \"Media title\"\n    }\n  }\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -4247,7 +4246,8 @@
         "name": "GH-STUE-EN",
         "links": [
             "858b8605826bec63",
-            "e0f4bc77f36c022a"
+            "e0f4bc77f36c022a",
+            "4cf9b6efdbba67fa"
         ],
         "x": 175,
         "y": 380,
@@ -6313,10 +6313,11 @@
         "rules": [
             {
                 "t": "set",
-                "p": "label",
+                "p": "topic",
                 "pt": "msg",
-                "to": "Mode",
-                "tot": "global"
+                "to": "{\"topic\":\"ui-property:<property>\",\"payload\":\"value\"}",
+                "tot": "json",
+                "dc": true
             },
             {
                 "t": "set",
@@ -6454,6 +6455,24 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "4f54a064b422c37c",
+        "type": "debug",
+        "z": "34fc4e1d.243ef2",
+        "g": "53115130f657b882",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 220,
+        "wires": []
     },
     {
         "id": "6e1a0143.f51f8",
@@ -7205,9 +7224,11 @@
         "id": "be2ad471.d9c448",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
+        "d": true,
         "g": "ff7ca7f8980ed0b1",
         "name": "Movement oppe",
         "links": [
+            "328ec247.9e5eee",
             "63e9f9b.1d13608",
             "b9eed7dde8000c3e",
             "e92f253c.11b9b8"
@@ -7239,7 +7260,7 @@
             },
             {
                 "name": "delay",
-                "value": "15",
+                "value": "5",
                 "type": "num"
             }
         ],
@@ -8701,6 +8722,70 @@
         "x": 525,
         "y": 1400,
         "wires": []
+    },
+    {
+        "id": "d361da10e85d524e",
+        "type": "noraf-light",
+        "z": "aa0ae7ae.75d228",
+        "devicename": "FP2 Movement",
+        "lightcolor": false,
+        "brightnesscontrol": false,
+        "commandonlycolor": false,
+        "turnonwhenbrightnesschanges": false,
+        "passthru": false,
+        "errorifstateunchaged": false,
+        "statepayload": true,
+        "brightnessoverride": "",
+        "roomhint": "Kitchen/Livingroom",
+        "name": "",
+        "colortype": "hsv",
+        "nora": "4fc724fc06c8dc88",
+        "topic": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "temperaturemin": "2700",
+        "temperaturemax": "5500",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "x": 230,
+        "y": 760,
+        "wires": [
+            [
+                "ed863371775575ab"
+            ]
+        ]
+    },
+    {
+        "id": "57e811c66ab8f49f",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 60,
+        "y": 760,
+        "wires": [
+            [
+                "d361da10e85d524e"
+            ]
+        ]
     },
     {
         "id": "9c18ec5f.f9594",
@@ -10259,7 +10344,6 @@
         "id": "976db23e.1f8ba",
         "type": "link out",
         "z": "1b14ec1b.20ab54",
-        "d": true,
         "name": "",
         "mode": "link",
         "links": [
@@ -10337,15 +10421,15 @@
         "op2": "",
         "op1type": "pay",
         "op2type": "nul",
-        "duration": "10",
-        "extend": false,
+        "duration": "2",
+        "extend": true,
         "overrideDelay": false,
         "units": "s",
         "reset": "",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 690,
+        "x": 680,
         "y": 60,
         "wires": [
             [
@@ -11799,7 +11883,8 @@
         "y": 480,
         "wires": [
             [
-                "3bb8b86054a6a31d"
+                "3bb8b86054a6a31d",
+                "223ac6ee70ce6b7c"
             ]
         ]
     },
@@ -11826,7 +11911,8 @@
         "y": 480,
         "wires": [
             [
-                "39e053b3d2fb7ed8"
+                "39e053b3d2fb7ed8",
+                "aab97842d83bf3b5"
             ]
         ]
     },
@@ -12075,6 +12161,38 @@
         "wires": []
     },
     {
+        "id": "223ac6ee70ce6b7c",
+        "type": "debug",
+        "z": "a7af161f.d5ece8",
+        "name": "debug 43",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "aab97842d83bf3b5",
+        "type": "debug",
+        "z": "a7af161f.d5ece8",
+        "name": "debug 44",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 400,
+        "wires": []
+    },
+    {
         "id": "81af6cca.e9c66",
         "type": "switch",
         "z": "1c88039c.df631c",
@@ -12203,12 +12321,13 @@
         "z": "1c88039c.df631c",
         "name": "SHIELD",
         "connection": "4d021bd33834978e",
-        "x": 300,
+        "x": 320,
         "y": 580,
         "wires": [
             [
                 "81af6cca.e9c66",
-                "5206dfdb12e6a2dc"
+                "5206dfdb12e6a2dc",
+                "3ecbdbdc32d7e425"
             ]
         ]
     },
@@ -12760,7 +12879,7 @@
         "property": "platform.isActiveInput",
         "topi": "topic",
         "x": 450,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "3ecbdbdc32d7e425",
@@ -12798,7 +12917,7 @@
         "type": "debug",
         "z": "bd80cf37.f9982",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -14020,7 +14139,7 @@
         "z": "bd80cf37.f9982",
         "name": "",
         "auth": "090451f5a0dc1c5c",
-        "api": "getMyDevices",
+        "api": "getUserPlaylists",
         "x": 1460,
         "y": 560,
         "wires": [
@@ -14273,6 +14392,47 @@
         "wires": [
             [
                 "c561b2e7944121c0"
+            ]
+        ]
+    },
+    {
+        "id": "5f1a0c4f2601d7fb",
+        "type": "castv2-sender",
+        "z": "bd80cf37.f9982",
+        "name": "",
+        "connection": "4dd42f71.91823",
+        "x": 1610,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea82c33770946271",
+        "type": "inject",
+        "z": "bd80cf37.f9982",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1290,
+        "y": 280,
+        "wires": [
+            [
+                "5f1a0c4f2601d7fb"
             ]
         ]
     },
@@ -16365,10 +16525,10 @@
         "op2": "false",
         "op1type": "nul",
         "op2type": "bool",
-        "duration": "30",
+        "duration": "10",
         "extend": true,
         "overrideDelay": true,
-        "units": "min",
+        "units": "s",
         "reset": "true",
         "bytopic": "all",
         "topic": "topic",
@@ -16406,8 +16566,8 @@
         "links": [
             "dc7a9dbe.e7065"
         ],
-        "x": 425,
-        "y": 200,
+        "x": 445,
+        "y": 240,
         "wires": [
             [
                 "047237403aaab33f"
@@ -16467,9 +16627,7 @@
                 "2e7006b6bbb0568e",
                 "38557f4408523618"
             ],
-            [
-                "a11e5cfbb5aa73a3"
-            ]
+            []
         ]
     },
     {
@@ -16680,12 +16838,12 @@
         "offcolor": "green",
         "animate": true,
         "className": "",
-        "x": 730,
+        "x": 610,
         "y": 240,
         "wires": [
             [
                 "b18f28142ec94046",
-                "38557f4408523618"
+                "857363e3950966cd"
             ]
         ]
     },
@@ -16795,30 +16953,6 @@
         "y": 180,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "a11e5cfbb5aa73a3",
-        "type": "switch",
-        "z": "a9a601907d96eb09",
-        "d": true,
-        "name": "IsOPen",
-        "property": "dor_open",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1180,
-        "y": 480,
-        "wires": [
-            [
-                "e362a8900a8120ae"
-            ]
         ]
     },
     {
@@ -17080,6 +17214,183 @@
         "wires": [
             [
                 "cd274e19cc986be4"
+            ]
+        ]
+    },
+    {
+        "id": "89f7ec8935c421e9",
+        "type": "noraf-light",
+        "z": "a9a601907d96eb09",
+        "devicename": "FP2 Bathroom",
+        "lightcolor": false,
+        "brightnesscontrol": false,
+        "commandonlycolor": false,
+        "turnonwhenbrightnesschanges": false,
+        "passthru": false,
+        "errorifstateunchaged": false,
+        "statepayload": true,
+        "brightnessoverride": "",
+        "roomhint": "Bathroom",
+        "name": "",
+        "colortype": "hsv",
+        "nora": "4fc724fc06c8dc88",
+        "topic": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "temperaturemin": "2700",
+        "temperaturemax": "5500",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "x": 640,
+        "y": 500,
+        "wires": [
+            [
+                "b9871d60b2403b80"
+            ]
+        ]
+    },
+    {
+        "id": "8bc54f2204919c5d",
+        "type": "switch",
+        "z": "a9a601907d96eb09",
+        "name": "!B-Presence\t",
+        "property": "BA-Presence",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1050,
+        "y": 500,
+        "wires": [
+            [
+                "38557f4408523618"
+            ],
+            [
+                "746a150af438e496"
+            ]
+        ]
+    },
+    {
+        "id": "746a150af438e496",
+        "type": "trigger",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "op1": "",
+        "op2": "false",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "true",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1050,
+        "y": 560,
+        "wires": [
+            [
+                "8bc54f2204919c5d"
+            ]
+        ]
+    },
+    {
+        "id": "b9871d60b2403b80",
+        "type": "switch",
+        "z": "a9a601907d96eb09",
+        "name": "ON/OFF",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 820,
+        "y": 500,
+        "wires": [
+            [
+                "746a150af438e496",
+                "857363e3950966cd"
+            ],
+            [
+                "8bc54f2204919c5d"
+            ]
+        ]
+    },
+    {
+        "id": "1b9c3b1cd9cc95a7",
+        "type": "inject",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 680,
+        "y": 600,
+        "wires": [
+            [
+                "b9871d60b2403b80"
+            ]
+        ]
+    },
+    {
+        "id": "312a63bb802d17ba",
+        "type": "inject",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 670,
+        "y": 660,
+        "wires": [
+            [
+                "b9871d60b2403b80"
             ]
         ]
     },
@@ -18551,7 +18862,7 @@
         "id": "c55928ec8bab12af",
         "type": "ambi-temp-mode",
         "z": "6df0226504208616",
-        "oauthClient": "4ec8324b.b2dc1c",
+        "oauthClient": "0b617d79931e935c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
         "value": "22",
@@ -18642,7 +18953,7 @@
         "id": "0e867a2e21130f1a",
         "type": "ambi-power-off",
         "z": "6df0226504208616",
-        "oauthClient": "4ec8324b.b2dc1c",
+        "oauthClient": "0b617d79931e935c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
         "x": 2400,
@@ -18807,41 +19118,14 @@
         ]
     },
     {
-        "id": "7ce9530bbab43ce3",
-        "type": "ui_text_input",
-        "z": "6df0226504208616",
-        "g": "de17e98102477bde",
-        "name": "",
-        "label": "Temp",
-        "tooltip": "",
-        "group": "69a63d21.a935c4",
-        "order": 10,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "mode": "number",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 790,
-        "y": 1120,
-        "wires": [
-            [
-                "886304c986eee280"
-            ]
-        ]
-    },
-    {
         "id": "f3b8ba3285e47a53",
         "type": "ui_ui_control",
         "z": "6df0226504208616",
         "g": "de17e98102477bde",
         "name": "",
         "events": "change",
-        "x": 400,
-        "y": 1120,
+        "x": 360,
+        "y": 1140,
         "wires": [
             [
                 "bc2016b761b16427"
@@ -18868,11 +19152,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 590,
-        "y": 1120,
+        "x": 550,
+        "y": 1140,
         "wires": [
             [
-                "7ce9530bbab43ce3"
+                "020e359865b706b7"
             ]
         ]
     },
@@ -18896,7 +19180,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1120,
+        "x": 1140,
         "y": 1140,
         "wires": [
             [
@@ -18979,42 +19263,7 @@
         "y": 1020,
         "wires": [
             [
-                "46c0e8dd5c1bc8aa"
-            ]
-        ]
-    },
-    {
-        "id": "46c0e8dd5c1bc8aa",
-        "type": "ui_switch",
-        "z": "6df0226504208616",
-        "g": "de17e98102477bde",
-        "name": "",
-        "label": "happyHome",
-        "tooltip": "",
-        "group": "69a63d21.a935c4",
-        "order": 16,
-        "width": 4,
-        "height": 1,
-        "passthru": false,
-        "decouple": "true",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 780,
-        "y": 1020,
-        "wires": [
-            [
-                "e97e2897e23ddfe6"
+                "9a193a329c78ad67"
             ]
         ]
     },
@@ -19071,41 +19320,6 @@
         ]
     },
     {
-        "id": "3ade5de96d20c60a",
-        "type": "ui_switch",
-        "z": "6df0226504208616",
-        "g": "de17e98102477bde",
-        "name": "",
-        "label": "SummerTime",
-        "tooltip": "",
-        "group": "69a63d21.a935c4",
-        "order": 13,
-        "width": 4,
-        "height": 1,
-        "passthru": false,
-        "decouple": "true",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 800,
-        "y": 1080,
-        "wires": [
-            [
-                "4445d551c97a8c33"
-            ]
-        ]
-    },
-    {
         "id": "4445d551c97a8c33",
         "type": "change",
         "z": "6df0226504208616",
@@ -19129,7 +19343,7 @@
         "y": 1080,
         "wires": [
             [
-                "3ade5de96d20c60a"
+                "3b21f19e91b9979f"
             ]
         ]
     },
@@ -19445,7 +19659,7 @@
         "to": "",
         "reg": false,
         "x": 930,
-        "y": 1120,
+        "y": 1140,
         "wires": [
             [
                 "38b3f8ab5235eae5"
@@ -19468,7 +19682,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 910,
+        "x": 930,
         "y": 1180,
         "wires": [
             [
@@ -19536,7 +19750,7 @@
         "id": "31b68c075ef8bdbb",
         "type": "ambi-deployment",
         "z": "6df0226504208616",
-        "oauthClient": "4ec8324b.b2dc1c",
+        "oauthClient": "0b617d79931e935c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
         "mode": "",
@@ -19571,7 +19785,7 @@
         "type": "ambi-sensor-temp",
         "z": "6df0226504208616",
         "g": "c10ebffd064adbf1",
-        "oauthClient": "4ec8324b.b2dc1c",
+        "oauthClient": "0b617d79931e935c",
         "room_name": "varmepumpe",
         "location_name": "Gravarsveien 57 A",
         "x": 480,
@@ -20006,7 +20220,8 @@
         "y": 620,
         "wires": [
             [
-                "dcb046bbb6008951"
+                "dcb046bbb6008951",
+                "9f7bf8093c59820c"
             ]
         ]
     },
@@ -20180,16 +20395,103 @@
                 "08a19fb984a9102a"
             ],
             [
-                "33695432083288c6",
-                "c8ceb1e3bfe6c30d"
+                "33695432083288c6"
             ]
         ]
     },
     {
-        "id": "c8ceb1e3bfe6c30d",
+        "id": "3b21f19e91b9979f",
+        "type": "ui-switch",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "name": "SummerTime",
+        "label": "SummerTime",
+        "group": "3f286b473c9966df",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 820,
+        "y": 1080,
+        "wires": [
+            [
+                "4445d551c97a8c33"
+            ]
+        ]
+    },
+    {
+        "id": "9a193a329c78ad67",
+        "type": "ui-switch",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "name": "HappyHome",
+        "label": "HappyHome",
+        "group": "3f286b473c9966df",
+        "order": 0,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 810,
+        "y": 1020,
+        "wires": [
+            [
+                "e97e2897e23ddfe6"
+            ]
+        ]
+    },
+    {
+        "id": "020e359865b706b7",
+        "type": "ui-text-input",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "group": "3f286b473c9966df",
+        "name": "",
+        "label": "Temperature",
+        "order": 0,
+        "width": "1",
+        "height": "1",
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "number",
+        "passthru": true,
+        "className": "",
+        "x": 750,
+        "y": 1140,
+        "wires": [
+            [
+                "886304c986eee280"
+            ]
+        ]
+    },
+    {
+        "id": "9f7bf8093c59820c",
         "type": "debug",
         "z": "6df0226504208616",
-        "name": "debug 40",
+        "name": "debug 47",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -20197,8 +20499,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2570,
-        "y": 700,
+        "x": 1870,
+        "y": 760,
         "wires": []
     },
     {
@@ -22120,11 +22422,13 @@
         "type": "function",
         "z": "daf28d0f20b236a4",
         "name": "Convert Data",
-        "func": "     msg.label = msg.status.state_text;\n     //msg.payload = global.get(\"Mode\");\n     msg.payload = false;\n     if(msg.label === \"charging\"){\n         msg.payload = true;\n     }\n     \n     \n     msg.label = \"Mr Robot is \" + msg.label; \n     \n \nreturn msg;\n",
+        "func": "     msg.label = msg.payload.state_text;\n     //msg.payload = global.get(\"Mode\");\n     msg.payload = false;\n     if(msg.label === \"charging\"){\n         msg.payload = true;\n     }\n     \n     \n     msg.label = \"Mr Robot is \" + msg.label; \n     \n \nreturn msg;\n",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 910,
         "y": 240,
         "wires": [
@@ -22153,7 +22457,9 @@
         "y": 240,
         "wires": [
             [
-                "9ae92a2b.99c9c8"
+                "9ae92a2b.99c9c8",
+                "307b4558816d5bfa",
+                "abbe05a0ae493686"
             ]
         ]
     },
@@ -22280,6 +22586,135 @@
         "wires": [
             [
                 "3572fdf5.48cc62"
+            ]
+        ]
+    },
+    {
+        "id": "307b4558816d5bfa",
+        "type": "debug",
+        "z": "daf28d0f20b236a4",
+        "name": "debug 45",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "dd80e399de57df56",
+        "type": "switch",
+        "z": "daf28d0f20b236a4",
+        "name": "",
+        "property": "payload.error_code_text",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1270,
+        "y": 180,
+        "wires": [
+            [
+                "c62c40a16f3026c9"
+            ]
+        ]
+    },
+    {
+        "id": "c62c40a16f3026c9",
+        "type": "change",
+        "z": "daf28d0f20b236a4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "payload.error_code_text",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 180,
+        "wires": [
+            [
+                "4cf9b6efdbba67fa"
+            ]
+        ]
+    },
+    {
+        "id": "4cf9b6efdbba67fa",
+        "type": "link out",
+        "z": "daf28d0f20b236a4",
+        "name": "link out 16",
+        "mode": "link",
+        "links": [
+            "5cfbdbd83670143c"
+        ],
+        "x": 1555,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "abbe05a0ae493686",
+        "type": "switch",
+        "z": "daf28d0f20b236a4",
+        "name": "",
+        "property": "d",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 990,
+        "y": 180,
+        "wires": [
+            [
+                "548c2b48a07ce159"
+            ]
+        ]
+    },
+    {
+        "id": "548c2b48a07ce159",
+        "type": "delay",
+        "z": "daf28d0f20b236a4",
+        "name": "rate limiter",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1130,
+        "y": 180,
+        "wires": [
+            [
+                "dd80e399de57df56"
             ]
         ]
     },
@@ -22663,7 +23098,7 @@
         "type": "function",
         "z": "6a77c00f79a19693",
         "name": "Determine device presence",
-        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n\nfor (let device in msg.payload) {\n    \n   \n    let macadress = msg.payload[device].mac\n   \n    switch (macadress) {\n        case \"fa:9b:7e:5a:6c:6e\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"d6:05:24:1f:de:7a\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
+        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n\nfor (let device in msg.payload) {\n    \n   \n    let macadress = msg.payload[device].mac\n   \n    switch (macadress) {\n        case \"fa:9b:7e:5a:6c:6e\":\n     \n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"52:9c:f0:c9:7a:bd\":\n\n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"d6:05:24:1f:de:7a\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -22889,7 +23324,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "192.168.1.131",
+                "v": "192.168.1.126",
                 "vt": "str"
             }
         ],
