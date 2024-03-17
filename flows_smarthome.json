@@ -9458,9 +9458,9 @@
             "455faa8d.6c9aa4",
             "63e9f9b.1d13608",
             "9ace10c4.4ce8f",
-            "dc179d3a7d67d467",
-            "e92f253c.11b9b8",
-            "cf3797c1e0b5c101"
+            "cf3797c1e0b5c101",
+            "dc7a9dbe.e7065",
+            "e92f253c.11b9b8"
         ],
         "x": 255,
         "y": 620,
@@ -9574,10 +9574,10 @@
         "name": "SH: HOME",
         "mode": "link",
         "links": [
-            "14ac8f4a0be280af",
             "bb323297a8af6244",
             "dd907ae5e8f3fab4",
-            "e17d0a43.b0e048"
+            "e17d0a43.b0e048",
+            "f27df5b9f6840243"
         ],
         "x": 1925,
         "y": 100,
@@ -9590,10 +9590,9 @@
         "name": "SH: Away",
         "mode": "link",
         "links": [
-            "408c1fba98d7124c",
-            "6626af8888151004",
             "6c1d6758.428808",
             "810548cd17705360",
+            "b3f9adc55b666094",
             "e17d0a43.b0e048"
         ],
         "x": 1935,
@@ -10072,6 +10071,7 @@
         "type": "link out",
         "z": "8b99f8fe.7b27b8",
         "name": "",
+        "mode": "link",
         "links": [
             "e1a25373.858cb"
         ],
@@ -10859,7 +10859,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "100",
+                "to": "0",
                 "tot": "num"
             }
         ],
@@ -10888,7 +10888,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "0",
+                "to": "100",
                 "tot": "num"
             }
         ],
@@ -10917,7 +10917,7 @@
             "b630d8c.cb7f128",
             "fc4fe81e.444628"
         ],
-        "x": 355,
+        "x": 305,
         "y": 360,
         "wires": [
             [
@@ -10971,11 +10971,11 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 280,
+        "x": 420,
         "y": 300,
         "wires": [
             [
-                "cec0f8cb.33f1b8"
+                "a558759b2c3edc1a"
             ]
         ]
     },
@@ -11074,7 +11074,7 @@
         "id": "6bb5ecbc.1d0e04",
         "type": "switch",
         "z": "605ae98f.8a9998",
-        "name": "",
+        "name": "away",
         "property": "Mode",
         "propertyType": "global",
         "rules": [
@@ -11130,7 +11130,7 @@
         "links": [
             "1b253553.66750b"
         ],
-        "x": 355,
+        "x": 305,
         "y": 400,
         "wires": [
             [
@@ -11149,6 +11149,31 @@
         "x": 1175,
         "y": 360,
         "wires": []
+    },
+    {
+        "id": "a558759b2c3edc1a",
+        "type": "switch",
+        "z": "605ae98f.8a9998",
+        "name": "! Sleep",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "sleep",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 600,
+        "y": 300,
+        "wires": [
+            [
+                "cec0f8cb.33f1b8"
+            ]
+        ]
     },
     {
         "id": "e92f253c.11b9b8",
@@ -11649,8 +11674,8 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "c840b6850a9f9370",
-            "77e202e1f7cb4c98"
+            "77e202e1f7cb4c98",
+            "c840b6850a9f9370"
         ],
         "x": 595,
         "y": 820,
@@ -11665,7 +11690,7 @@
         "links": [
             "ea645748ca3e406e",
             "f66e7e24.aca9d",
-            "598da3c7e27395f1"
+            "1329b56.bea634b"
         ],
         "x": 615,
         "y": 880,
@@ -11910,23 +11935,6 @@
         ]
     },
     {
-        "id": "ea630904bde9896c",
-        "type": "debug",
-        "z": "a7af161f.d5ece8",
-        "name": "debug 76",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 590,
-        "y": 720,
-        "wires": []
-    },
-    {
         "id": "6d8cd486.3ac49c",
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
@@ -12036,9 +12044,7 @@
         "x": 310,
         "y": 660,
         "wires": [
-            [
-                "ea630904bde9896c"
-            ],
+            [],
             []
         ]
     },
@@ -12518,9 +12524,7 @@
         "x": 900,
         "y": 660,
         "wires": [
-            [
-                "ea630904bde9896c"
-            ]
+            []
         ]
     },
     {
@@ -22119,7 +22123,8 @@
         "g": "12605644788902fd",
         "name": "Set AWAY",
         "links": [
-            "859ba6feb26f04c8"
+            "859ba6feb26f04c8",
+            "fc4fe81e.444628"
         ],
         "x": 1535,
         "y": 60,
@@ -22136,7 +22141,8 @@
         "g": "12605644788902fd",
         "name": "Set HOME",
         "links": [
-            "806980be8d0500b3"
+            "806980be8d0500b3",
+            "247260f.c82dca"
         ],
         "x": 1535,
         "y": 100,
