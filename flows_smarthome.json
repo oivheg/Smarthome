@@ -923,11 +923,12 @@
             "9a193a329c78ad67",
             "020e359865b706b7",
             "a06c0bc8635acb75",
-            "8b7b2563069281bc"
+            "8b7b2563069281bc",
+            "aa1a44d6b92e5327"
         ],
-        "x": 274,
+        "x": 244,
         "y": 979,
-        "w": 1062,
+        "w": 1092,
         "h": 282
     },
     {
@@ -943,12 +944,13 @@
             "2bf80c0dd1a3633a",
             "469534ab7d1a6e67",
             "e5900fb71b890322",
-            "454183b20762b1c6"
+            "454183b20762b1c6",
+            "5346ecce7ddb6882"
         ],
         "x": 224,
-        "y": 399,
-        "w": 542,
-        "h": 137
+        "y": 379,
+        "w": 582,
+        "h": 157
     },
     {
         "id": "1525f01c13bb1d72",
@@ -1340,7 +1342,8 @@
             "6966249f29d70d2e",
             "a112b0b45b20197a",
             "d7b5c9af4c98242d",
-            "a4c4757f465e4957"
+            "a4c4757f465e4957",
+            "2e3e20cb98f55646"
         ],
         "x": 684,
         "y": 679,
@@ -1734,11 +1737,12 @@
             "9254f6a1e7f54470",
             "98d92f1c27fbc17d",
             "73e81edd21f659c2",
-            "f5b364a64579517b"
+            "f5b364a64579517b",
+            "74b25828ae3bf670"
         ],
-        "x": 1774,
+        "x": 1764,
         "y": 729,
-        "w": 1332,
+        "w": 1342,
         "h": 412
     },
     {
@@ -17233,7 +17237,8 @@
         "wires": [
             [
                 "1143fa19d1277481",
-                "63aae3d5e0e9fbe3"
+                "63aae3d5e0e9fbe3",
+                "5346ecce7ddb6882"
             ],
             [
                 "9c802a5c40bcec2d",
@@ -17408,8 +17413,8 @@
                 "t": "set",
                 "p": "desiredTemp",
                 "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
+                "to": "$number(payload)",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -17860,6 +17865,13 @@
                 "pt": "flow",
                 "to": "false",
                 "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "maxTemp",
+                "pt": "flow",
+                "to": "20",
+                "tot": "num"
             }
         ],
         "action": "",
@@ -17956,12 +17968,12 @@
         "rules": [
             {
                 "t": "gt",
-                "v": "22",
+                "v": "23",
                 "vt": "num"
             },
             {
                 "t": "lt",
-                "v": "19",
+                "v": "20",
                 "vt": "num"
             }
         ],
@@ -18328,7 +18340,7 @@
         "topicType": "msg",
         "mode": "number",
         "delay": "500",
-        "passthru": true,
+        "passthru": false,
         "sendOnDelay": true,
         "sendOnBlur": true,
         "sendOnEnter": true,
@@ -18426,7 +18438,8 @@
         "y": 300,
         "wires": [
             [
-                "4ae1351675ad51d9"
+                "4ae1351675ad51d9",
+                "b4efc369d136e03a"
             ]
         ]
     },
@@ -18670,14 +18683,14 @@
                 "t": "set",
                 "p": "currentTemp",
                 "pt": "flow",
-                "to": "temperature",
+                "to": "result.motionSensors[0].measurements.temperature",
                 "tot": "msg"
             },
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "temperature",
+                "to": "result.motionSensors[0].measurements.temperature",
                 "tot": "msg"
             }
         ],
@@ -18705,8 +18718,8 @@
                 "t": "set",
                 "p": "minTemp",
                 "pt": "flow",
-                "to": "18",
-                "tot": "num"
+                "to": "desiredTemp",
+                "tot": "flow"
             },
             {
                 "t": "set",
@@ -18721,8 +18734,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2430,
-        "y": 920,
+        "x": 2450,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -18857,7 +18870,7 @@
         "sensiboAPI": "8500b44945f22748",
         "name": "",
         "pod": "VfTc6vFm",
-        "getconfig": "",
+        "getconfig": true,
         "getACState": false,
         "polltime": "0",
         "x": 2200,
@@ -18865,7 +18878,6 @@
         "wires": [
             [
                 "5b2c789b034fe308",
-                "0df6de6f87baf7f1",
                 "3d29453fc5dbcc29"
             ]
         ]
@@ -19226,13 +19238,13 @@
         "type": "change",
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
-        "name": "high",
+        "name": "Medium",
         "rules": [
             {
                 "t": "set",
                 "p": "fanlevel",
                 "pt": "flow",
-                "to": "high",
+                "to": "medium",
                 "tot": "str"
             }
         ],
@@ -19241,7 +19253,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2790,
+        "x": 2800,
         "y": 1100,
         "wires": [
             [
@@ -19274,6 +19286,139 @@
         "wires": [
             [
                 "72a5f9ae1af5f865"
+            ]
+        ]
+    },
+    {
+        "id": "74b25828ae3bf670",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "Default MinMax Temp",
+        "links": [
+            "5346ecce7ddb6882"
+        ],
+        "x": 2145,
+        "y": 1040,
+        "wires": [
+            [
+                "0df6de6f87baf7f1"
+            ]
+        ]
+    },
+    {
+        "id": "5346ecce7ddb6882",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "1bd93d309e63194e",
+        "name": "Home",
+        "mode": "link",
+        "links": [
+            "74b25828ae3bf670"
+        ],
+        "x": 765,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "aa1a44d6b92e5327",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "g": "de17e98102477bde",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 1200,
+        "wires": [
+            [
+                "821b39103a91f616"
+            ]
+        ]
+    },
+    {
+        "id": "890a5ac75228dfab",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2190,
+        "y": 1100,
+        "wires": [
+            [
+                "0df6de6f87baf7f1"
+            ]
+        ]
+    },
+    {
+        "id": "b4efc369d136e03a",
+        "type": "debug",
+        "z": "6df0226504208616",
+        "name": "result.measurements.temperature",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "result",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2627.34033203125,
+        "y": 236.90277099609375,
+        "wires": []
+    },
+    {
+        "id": "2e3e20cb98f55646",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "g": "c10ebffd064adbf1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1040,
+        "y": 860,
+        "wires": [
+            [
+                "86da7f4cca9fd763"
             ]
         ]
     },
