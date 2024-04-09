@@ -1738,7 +1738,12 @@
             "98d92f1c27fbc17d",
             "73e81edd21f659c2",
             "f5b364a64579517b",
-            "74b25828ae3bf670"
+            "74b25828ae3bf670",
+            "14150d9b72d86dd6",
+            "d7af4025808c3d41",
+            "2192e8a53bea623d",
+            "d9c7c8acd004af0b",
+            "b9845ab333b2c4c5"
         ],
         "x": 1764,
         "y": 729,
@@ -18561,8 +18566,8 @@
                 "t": "set",
                 "p": "swing",
                 "pt": "msg",
-                "to": "rangeFull",
-                "tot": "str"
+                "to": "swing",
+                "tot": "flow"
             },
             {
                 "t": "set",
@@ -18670,7 +18675,7 @@
         "type": "change",
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
-        "name": "Set Temp",
+        "name": "Sent to PID ",
         "rules": [
             {
                 "t": "set",
@@ -18678,13 +18683,6 @@
                 "pt": "msg",
                 "to": "desiredTemp",
                 "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "currentTemp",
-                "pt": "flow",
-                "to": "result.motionSensors[0].measurements.temperature",
-                "tot": "msg"
             },
             {
                 "t": "set",
@@ -18699,7 +18697,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2460,
+        "x": 2470,
         "y": 880,
         "wires": [
             [
@@ -18873,12 +18871,12 @@
         "getconfig": true,
         "getACState": false,
         "polltime": "0",
-        "x": 2200,
+        "x": 2140,
         "y": 880,
         "wires": [
             [
-                "5b2c789b034fe308",
-                "3d29453fc5dbcc29"
+                "3d29453fc5dbcc29",
+                "14150d9b72d86dd6"
             ]
         ]
     },
@@ -18908,7 +18906,7 @@
             "a4c4757f465e4957"
         ],
         "x": 2305,
-        "y": 980,
+        "y": 780,
         "wires": []
     },
     {
@@ -19133,7 +19131,7 @@
         "y": 960,
         "wires": [
             [
-                "f5b364a64579517b"
+                "5c32cf97fac8c5fe"
             ],
             [
                 "5c32cf97fac8c5fe"
@@ -19142,7 +19140,7 @@
                 "9254f6a1e7f54470"
             ],
             [
-                "98d92f1c27fbc17d"
+                "9254f6a1e7f54470"
             ],
             [
                 "73e81edd21f659c2"
@@ -19210,13 +19208,13 @@
         "type": "change",
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
-        "name": "medium",
+        "name": "high",
         "rules": [
             {
                 "t": "set",
                 "p": "fanlevel",
                 "pt": "flow",
-                "to": "medium",
+                "to": "high",
                 "tot": "str"
             }
         ],
@@ -19225,7 +19223,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2800,
+        "x": 2790,
         "y": 1060,
         "wires": [
             [
@@ -19238,13 +19236,13 @@
         "type": "change",
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
-        "name": "Medium",
+        "name": "strong",
         "rules": [
             {
                 "t": "set",
                 "p": "fanlevel",
                 "pt": "flow",
-                "to": "medium",
+                "to": "strong",
                 "tot": "str"
             }
         ],
@@ -19253,7 +19251,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2800,
+        "x": 2790,
         "y": 1100,
         "wires": [
             [
@@ -19420,6 +19418,159 @@
             [
                 "86da7f4cca9fd763"
             ]
+        ]
+    },
+    {
+        "id": "14150d9b72d86dd6",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "Set Temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "upstairsCurrentTemp",
+                "pt": "flow",
+                "to": "result.measurements.temperature",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "downstairsCurrentTemp",
+                "pt": "flow",
+                "to": "result.motionSensors[0].measurements.temperature",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2280,
+        "y": 900,
+        "wires": [
+            [
+                "d7af4025808c3d41"
+            ]
+        ]
+    },
+    {
+        "id": "d7af4025808c3d41",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "UpstairsOrDownstairs",
+        "property": "upstairsCurrentTemp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "downstairsCurrentTemp",
+                "vt": "flow"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2180,
+        "y": 940,
+        "wires": [
+            [
+                "2192e8a53bea623d"
+            ],
+            [
+                "d9c7c8acd004af0b"
+            ]
+        ],
+        "outputLabels": [
+            "Heat Downstairs",
+            "Heat Upstairs"
+        ]
+    },
+    {
+        "id": "2192e8a53bea623d",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "swing Bottom",
+        "rules": [
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "flow",
+                "to": "fixedBottom",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2420,
+        "y": 940,
+        "wires": [
+            [
+                "5b2c789b034fe308"
+            ]
+        ]
+    },
+    {
+        "id": "d9c7c8acd004af0b",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "swing Top",
+        "rules": [
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "flow",
+                "to": "fixedTop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2400,
+        "y": 980,
+        "wires": [
+            [
+                "5b2c789b034fe308"
+            ]
+        ]
+    },
+    {
+        "id": "b9845ab333b2c4c5",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "Fan and swing levels",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[[\"stopped\",\"fixedTop\",\"fixedMiddleTop\",\"fixedMiddle\",\"fixedMiddleBottom\",\"fixedBottom\",\"rangeFull\"],[\"quiet\",\"low\",\"medium\",\"medium_high\",\"high\",\"auto\",\"strong\"]]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1980,
+        "y": 1020,
+        "wires": [
+            []
         ]
     },
     {
