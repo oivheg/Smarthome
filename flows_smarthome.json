@@ -18688,7 +18688,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "result.motionSensors[0].measurements.temperature",
+                "to": "pidTemp",
                 "tot": "msg"
             }
         ],
@@ -19504,6 +19504,13 @@
                 "pt": "flow",
                 "to": "fixedBottom",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "pidTemp",
+                "pt": "msg",
+                "to": "downstairsCurrentTemp",
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -19532,6 +19539,13 @@
                 "pt": "flow",
                 "to": "fixedTop",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "pidTemp",
+                "pt": "msg",
+                "to": "upstairsCurrentTemp",
+                "tot": "flow"
             }
         ],
         "action": "",
