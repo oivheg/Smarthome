@@ -1776,12 +1776,13 @@
             "dcb046bbb6008951",
             "bd97166136852100",
             "c65b05ecba8d2a14",
-            "48e94d16bcba20da"
+            "48e94d16bcba20da",
+            "19ec33ed3c32d424"
         ],
         "x": 1734,
-        "y": 459,
+        "y": 439,
         "w": 592,
-        "h": 122
+        "h": 142
     },
     {
         "id": "bb0314f944be1623",
@@ -18030,7 +18031,6 @@
         "links": [
             "896aa735a80611d5",
             "26e40d73162656c1",
-            "3d29453fc5dbcc29",
             "4f8a2adbb41ccd36"
         ],
         "x": 1465,
@@ -18394,7 +18394,8 @@
         "y": 500,
         "wires": [
             [
-                "bd97166136852100"
+                "bd97166136852100",
+                "19ec33ed3c32d424"
             ]
         ]
     },
@@ -19294,8 +19295,7 @@
         "name": "Temperature",
         "mode": "link",
         "links": [
-            "a4c4757f465e4957",
-            "576f7a8170f57d38"
+            "a4c4757f465e4957"
         ],
         "x": 3115,
         "y": 1000,
@@ -19313,6 +19313,24 @@
         ],
         "x": 2145,
         "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "19ec33ed3c32d424",
+        "type": "debug",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "name": "debug 84",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2190,
+        "y": 480,
         "wires": []
     },
     {
