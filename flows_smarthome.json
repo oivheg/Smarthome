@@ -19144,8 +19144,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 2960,
-        "y": 1700,
+        "x": 3080,
+        "y": 1720,
         "wires": [
             [
                 "3d29453fc5dbcc29"
@@ -19893,7 +19893,7 @@
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
         "name": "Split Heat/Cool",
-        "func": "/* A function designed to be used with node-red-contrib-pid in applications where both\n * heating and cooling are available to control the system.\n * The node is given a power value in msg.payload in the range 0 to 1, such as is produced by \n * node-red-contrib-pid and splits this into a heat power (o/p 1) and cool power (o/p 2) where\n * each is in the range 0 to 1.  These can then be fed directly into an output device, if this\n * is continuously variable, or they may be passed to node-red-contrib-timeprop nodes to generate\n * time proportioned on/off outputs.\n * There are two particular issues to be dealt with in a heat/cool application. Firstly is the fact\n * that the cooling device may be more or less powerful than the heating device. It is necessary\n * therefore to be able to adjust the gain of the system separately for heating and cooling. Secondly\n * is the highly non-linear response of some devices, notably refrigerant systems, that can have a\n * large effect initially, then this tails off. To compensate for this it is useful to have an \n * overlap range where both heat and cool are slightly on.\n *\n * To allow for these requirements two variables can be set below. The value of the power input value\n * where the heating starts to come on is determined by the variable heatMin.  Above this value the\n * heating will rise till it is fully on with an input of 1.\n * The cooling is fully on when value of the power input is 0, and falls till the cooling is fully\n * off at an input of coolMin.\n *\n * If the heating and cooling systems are of similar power then set heatMin and coolMin both to 0.5\n * in which case input values of 0.5 to 1.0 will map to heating outputs of 0.0 to 1.0,\n * and 0.5 down to 0.0 will map to cooling 0.0 to 1.0.\n * If, for example, the cooling system is more powerful than heating then they can both be set\n * to something like 0.7 which increases the gain in the heating region and reduces it\n * in the cooling region, to compensate for the different powers in the heating/cooling systems.\n * If some overlap is desired (so that both heat and cool are on slightly near the crossover\n * point) then overlap the two settings so that, for example, heatMin might be 0.45 and coolMin\n * might be 0.55\n */\n\n// set these as described above\nvar heatMin = 0.4;          // the value of input corresponding to 0 heat o/p\nvar coolMin = 0.6;          // the value of input corresponding to 0 cool o/p\n    \nvar power = msg.payload;\nvar heat = (power - heatMin)/(1 - heatMin);\n// limit to range 0 to 1\n\nheat = Math.min(Math.max(heat, 0), 1);\nvar cool = (coolMin - power) / coolMin;\n// limit to range 0 to 1\n\ncool = Math.min(Math.max(cool, 0), 1);\nreturn [{payload: heat}, {payload: cool}];\n",
+        "func": "/* A function designed to be used with node-red-contrib-pid in applications where both\n * heating and cooling are available to control the system.\n * The node is given a power value in msg.payload in the range 0 to 1, such as is produced by \n * node-red-contrib-pid and splits this into a heat power (o/p 1) and cool power (o/p 2) where\n * each is in the range 0 to 1.  These can then be fed directly into an output device, if this\n * is continuously variable, or they may be passed to node-red-contrib-timeprop nodes to generate\n * time proportioned on/off outputs.\n * There are two particular issues to be dealt with in a heat/cool application. Firstly is the fact\n * that the cooling device may be more or less powerful than the heating device. It is necessary\n * therefore to be able to adjust the gain of the system separately for heating and cooling. Secondly\n * is the highly non-linear response of some devices, notably refrigerant systems, that can have a\n * large effect initially, then this tails off. To compensate for this it is useful to have an \n * overlap range where both heat and cool are slightly on.\n *\n * To allow for these requirements two variables can be set below. The value of the power input value\n * where the heating starts to come on is determined by the variable heatMin.  Above this value the\n * heating will rise till it is fully on with an input of 1.\n * The cooling is fully on when value of the power input is 0, and falls till the cooling is fully\n * off at an input of coolMin.\n *\n * If the heating and cooling systems are of similar power then set heatMin and coolMin both to 0.5\n * in which case input values of 0.5 to 1.0 will map to heating outputs of 0.0 to 1.0,\n * and 0.5 down to 0.0 will map to cooling 0.0 to 1.0.\n * If, for example, the cooling system is more powerful than heating then they can both be set\n * to something like 0.7 which increases the gain in the heating region and reduces it\n * in the cooling region, to compensate for the different powers in the heating/cooling systems.\n * If some overlap is desired (so that both heat and cool are on slightly near the crossover\n * point) then overlap the two settings so that, for example, heatMin might be 0.45 and coolMin\n * might be 0.55\n */\n\n// set these as described above\nvar heatMin = 0.6;          // the value of input corresponding to 0 heat o/p\nvar coolMin = 0.6;          // the value of input corresponding to 0 cool o/p\n    \nvar power = msg.payload;\nvar heat = (power - heatMin)/(1 - heatMin);\n// limit to range 0 to 1\n\nheat = Math.min(Math.max(heat, 0), 1);\nvar cool = (coolMin - power) / coolMin;\n// limit to range 0 to 1\n\ncool = Math.min(Math.max(cool, 0), 1);\nreturn [{payload: heat}, {payload: cool}];\n",
         "outputs": "2",
         "timeout": "",
         "noerr": 0,
@@ -20271,7 +20271,7 @@
         "g": "30b092e53a6e3512",
         "name": "",
         "setpoint": "",
-        "pb": "1.5",
+        "pb": "1",
         "ti": "1800",
         "td": "600",
         "integral_default": "0.4",
@@ -20655,8 +20655,7 @@
             [
                 "af9043e8051782fd",
                 "6001e2a3c26183f7",
-                "5fc837c35b05b1aa",
-                "92f10938a2c302d0"
+                "5fc837c35b05b1aa"
             ]
         ]
     },
@@ -20745,13 +20744,6 @@
                 "pt": "flow",
                 "to": "$ceil(\t   payload * ($flowContext('maxTemp') -  $flowContext('minTemp')) + $flowContext('minTemp')\t)\t",
                 "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "correctedTemp",
-                "tot": "flow"
             }
         ],
         "action": "",
@@ -20794,22 +20786,6 @@
                 "d0e0f0b0881bd5a8"
             ]
         ]
-    },
-    {
-        "id": "92f10938a2c302d0",
-        "type": "debug",
-        "z": "6df0226504208616",
-        "name": "debug 88",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1890,
-        "y": 140,
-        "wires": []
     },
     {
         "id": "3a621e1.6c980e2",
