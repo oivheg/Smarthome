@@ -1367,13 +1367,13 @@
             "c4d9e0754c0f8049",
             "86da7f4cca9fd763",
             "d7b5c9af4c98242d",
-            "a4c4757f465e4957",
             "4f8a2adbb41ccd36",
-            "f47773cda8bbfc21"
+            "c580d09bb8a3989e",
+            "1016f6c176103dd1"
         ],
-        "x": 1614,
-        "y": 1119,
-        "w": 752,
+        "x": 1794,
+        "y": 1159,
+        "w": 922,
         "h": 162
     },
     {
@@ -1790,18 +1790,12 @@
             "f69bbf05.bdd49",
             "143523b2.2f165c",
             "7654ddd39adf0de2",
-            "39f6a65e9b06bb76",
-            "c580d09bb8a3989e",
             "d0e0f0b0881bd5a8",
             "5c32cf97fac8c5fe",
             "9254f6a1e7f54470",
             "73e81edd21f659c2",
             "f5b364a64579517b",
             "74b25828ae3bf670",
-            "14150d9b72d86dd6",
-            "d7af4025808c3d41",
-            "2192e8a53bea623d",
-            "d9c7c8acd004af0b",
             "b9845ab333b2c4c5",
             "0f6a9f8584b543f2",
             "3d29453fc5dbcc29",
@@ -1811,22 +1805,47 @@
             "622314307835baf3",
             "5c17644693ebd710",
             "71e428c071db755f",
-            "55353968fceb16af",
             "85c9d2c917a42563",
             "9db00b34b2fd1a72",
             "0c401bc0a9f39846",
-            "7915323fa9c1ad8e",
             "3b207069e1580f91",
             "042bce84e84e5685",
-            "18ca09779efe7f71",
-            "1016f6c176103dd1",
             "29b7553056896fdc",
-            "60aa7e258c6d1791"
+            "60aa7e258c6d1791",
+            "13fcc87ac38916bc",
+            "2192e8a53bea623d",
+            "d9c7c8acd004af0b",
+            "18ca09779efe7f71",
+            "7915323fa9c1ad8e",
+            "d7af4025808c3d41"
         ],
-        "x": 1834,
+        "x": 1734,
         "y": 1509,
-        "w": 1702,
+        "w": 1802,
         "h": 432
+    },
+    {
+        "id": "618f8f538592ecef",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "Sensibo",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#c8e7a7",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "14150d9b72d86dd6",
+            "f47773cda8bbfc21",
+            "39f6a65e9b06bb76",
+            "a4c4757f465e4957",
+            "4b93c7c7130630d3"
+        ],
+        "x": 934,
+        "y": 1159,
+        "w": 592,
+        "h": 142
     },
     {
         "id": "bb0314f944be1623",
@@ -15374,7 +15393,7 @@
         "wires": [
             [
                 "574aa3734542d7dc",
-                "3b6d53496769a8fe"
+                "cd274e19cc986be4"
             ]
         ]
     },
@@ -15627,7 +15646,7 @@
         "y": 780,
         "wires": [
             [
-                "cd274e19cc986be4"
+                "9a6c7e2adae19dbe"
             ]
         ]
     },
@@ -15907,33 +15926,6 @@
         ]
     },
     {
-        "id": "3b6d53496769a8fe",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "percent_bathroom",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "payload.state.dimlevel",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 800,
-        "wires": [
-            [
-                "42d0d4c9d2c9c72e"
-            ]
-        ]
-    },
-    {
         "id": "42d0d4c9d2c9c72e",
         "type": "switch",
         "z": "a9a601907d96eb09",
@@ -16035,64 +16027,12 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 70,
-        "y": 960,
+        "x": 530,
+        "y": 1000,
         "wires": [
             [
                 "cd274e19cc986be4"
             ]
-        ]
-    },
-    {
-        "id": "cd274e19cc986be4",
-        "type": "Thing List",
-        "z": "a9a601907d96eb09",
-        "nodeName": "bathroom",
-        "outputType": "individual",
-        "outputValue": "thing",
-        "property": "status",
-        "discardInput": false,
-        "rules": [
-            {
-                "compare": "eq",
-                "thingProp": "name",
-                "value": "bathroom",
-                "type": "str"
-            }
-        ],
-        "x": 240,
-        "y": 1020,
-        "wires": [
-            [
-                "1ae95773d9e22406",
-                "3b0a22610baeaacf",
-                "0d76a80b287e9f32"
-            ]
-        ]
-    },
-    {
-        "id": "0d76a80b287e9f32",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "percent_bathroom",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "payload.state.dimlevel",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 530,
-        "y": 960,
-        "wires": [
-            []
         ]
     },
     {
@@ -16146,23 +16086,6 @@
                 "d641c0f83ea0d1fb"
             ]
         ]
-    },
-    {
-        "id": "1ae95773d9e22406",
-        "type": "debug",
-        "z": "a9a601907d96eb09",
-        "name": "debug 92",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 1000,
-        "wires": []
     },
     {
         "id": "e79b7c4b09c4ef29",
@@ -16275,6 +16198,48 @@
         "wires": []
     },
     {
+        "id": "0d76a80b287e9f32",
+        "type": "change",
+        "z": "a9a601907d96eb09",
+        "name": "percent_bathroom",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "status.state.dimlevel",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ae95773d9e22406",
+        "type": "debug",
+        "z": "a9a601907d96eb09",
+        "name": "debug 92",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 960,
+        "wires": []
+    },
+    {
         "id": "3b0a22610baeaacf",
         "type": "switch",
         "z": "a9a601907d96eb09",
@@ -16296,8 +16261,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 1040,
+        "x": 890,
+        "y": 1000,
         "wires": [
             [
                 "2ee3d5dc21337c04"
@@ -16326,11 +16291,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 590,
-        "y": 1040,
+        "x": 1110,
+        "y": 1000,
         "wires": [
             [
-                "9a6c7e2adae19dbe"
+                "42d0d4c9d2c9c72e"
             ]
         ]
     },
@@ -16353,11 +16318,38 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 590,
-        "y": 1080,
+        "x": 1110,
+        "y": 1040,
         "wires": [
             [
-                "9a6c7e2adae19dbe"
+                "42d0d4c9d2c9c72e"
+            ]
+        ]
+    },
+    {
+        "id": "cd274e19cc986be4",
+        "type": "Thing List",
+        "z": "a9a601907d96eb09",
+        "nodeName": "bathroom",
+        "outputType": "individual",
+        "outputValue": "thing",
+        "property": "status",
+        "discardInput": false,
+        "rules": [
+            {
+                "compare": "eq",
+                "thingProp": "name",
+                "value": "bathroom",
+                "type": "str"
+            }
+        ],
+        "x": 760,
+        "y": 980,
+        "wires": [
+            [
+                "1ae95773d9e22406",
+                "3b0a22610baeaacf",
+                "0d76a80b287e9f32"
             ]
         ]
     },
@@ -18331,7 +18323,7 @@
         "wires": [
             [
                 "dcb046bbb6008951",
-                "9db00b34b2fd1a72"
+                "ee28ca0f7cc9a27c"
             ]
         ]
     },
@@ -18377,8 +18369,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1820,
-        "y": 1160,
+        "x": 2040,
+        "y": 1200,
         "wires": [
             [
                 "c4d9e0754c0f8049"
@@ -18570,8 +18562,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2290,
-        "y": 1160,
+        "x": 2510,
+        "y": 1200,
         "wires": [
             [
                 "4f8a2adbb41ccd36"
@@ -18599,8 +18591,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 2020,
-        "y": 1160,
+        "x": 2240,
+        "y": 1200,
         "wires": [
             [
                 "0085aa5b7ff9cc46"
@@ -18630,8 +18622,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2290,
-        "y": 1240,
+        "x": 2510,
+        "y": 1280,
         "wires": [
             [
                 "4f8a2adbb41ccd36"
@@ -18740,8 +18732,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 3,
-        "x": 2010,
-        "y": 1220,
+        "x": 2230,
+        "y": 1260,
         "wires": [
             [
                 "0085aa5b7ff9cc46"
@@ -19180,15 +19172,15 @@
         "id": "39f6a65e9b06bb76",
         "type": "sensibo in",
         "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
+        "g": "618f8f538592ecef",
         "sensiboAPI": "8500b44945f22748",
         "name": "",
         "pod": "VfTc6vFm",
         "getconfig": true,
         "getACState": false,
         "polltime": "0",
-        "x": 2120,
-        "y": 1660,
+        "x": 1140,
+        "y": 1260,
         "wires": [
             [
                 "14150d9b72d86dd6"
@@ -19199,16 +19191,16 @@
         "id": "c580d09bb8a3989e",
         "type": "link in",
         "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
+        "g": "c10ebffd064adbf1",
         "name": "Calculate temperature",
         "links": [
-            "4f8a2adbb41ccd36"
+            "4b93c7c7130630d3"
         ],
-        "x": 1985,
-        "y": 1660,
+        "x": 1865,
+        "y": 1200,
         "wires": [
             [
-                "39f6a65e9b06bb76"
+                "b6a91a79ebe2ca38"
             ]
         ]
     },
@@ -19216,17 +19208,17 @@
         "id": "a4c4757f465e4957",
         "type": "link in",
         "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
+        "g": "618f8f538592ecef",
         "name": "Set Mode",
         "links": [
             "896aa735a80611d5",
             "5346ecce7ddb6882"
         ],
-        "x": 1685,
-        "y": 1160,
+        "x": 1005,
+        "y": 1260,
         "wires": [
             [
-                "b6a91a79ebe2ca38"
+                "39f6a65e9b06bb76"
             ]
         ]
     },
@@ -19608,7 +19600,7 @@
         "id": "14150d9b72d86dd6",
         "type": "change",
         "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
+        "g": "618f8f538592ecef",
         "name": "Set Temp",
         "rules": [
             {
@@ -19622,7 +19614,7 @@
                 "t": "set",
                 "p": "downstairsCurrentTemp",
                 "pt": "flow",
-                "to": "result.motionSensors[0].measurements.temperature - 1",
+                "to": "result.motionSensors[0].measurements.temperature - 2",
                 "tot": "jsonata"
             }
         ],
@@ -19631,117 +19623,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2260,
-        "y": 1680,
+        "x": 1320,
+        "y": 1260,
         "wires": [
             [
-                "d7af4025808c3d41"
-            ]
-        ]
-    },
-    {
-        "id": "d7af4025808c3d41",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "UpstairsOrDownstairs",
-        "property": "$flowContext(\"upstairsCurrentTemp\") ",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "downstairsCurrentTemp",
-                "vt": "flow"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1980,
-        "y": 1720,
-        "wires": [
-            [
-                "18ca09779efe7f71"
-            ],
-            [
-                "7915323fa9c1ad8e"
-            ]
-        ],
-        "outputLabels": [
-            "Heat Downstairs",
-            "Heat Upstairs"
-        ]
-    },
-    {
-        "id": "2192e8a53bea623d",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "swing Bottom",
-        "rules": [
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "fixedBottom",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "pidTemp",
-                "pt": "msg",
-                "to": "downstairsCurrentTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2400,
-        "y": 1720,
-        "wires": [
-            [
-                "5c17644693ebd710"
-            ]
-        ]
-    },
-    {
-        "id": "d9c7c8acd004af0b",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "swing Top",
-        "rules": [
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "fixedTop",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "pidTemp",
-                "pt": "msg",
-                "to": "upstairsCurrentTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2380,
-        "y": 1760,
-        "wires": [
-            [
-                "5c17644693ebd710"
+                "4b93c7c7130630d3"
             ]
         ]
     },
@@ -19765,8 +19651,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1960,
-        "y": 1800,
+        "x": 1860,
+        "y": 1820,
         "wires": [
             []
         ]
@@ -19793,12 +19679,12 @@
         "name": "link out 21",
         "mode": "link",
         "links": [
-            "c580d09bb8a3989e",
             "29a84269ec5b1703",
-            "a412463bae41c23e"
+            "a412463bae41c23e",
+            "13fcc87ac38916bc"
         ],
-        "x": 2265,
-        "y": 1200,
+        "x": 2675,
+        "y": 1240,
         "wires": []
     },
     {
@@ -19939,25 +19825,25 @@
         "id": "f47773cda8bbfc21",
         "type": "inject",
         "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "Chekc every  5 minutes",
+        "g": "618f8f538592ecef",
+        "name": "",
         "props": [
             {
                 "p": "payload"
             }
         ],
-        "repeat": "300",
+        "repeat": "120",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1770,
-        "y": 1240,
+        "x": 1050,
+        "y": 1200,
         "wires": [
             [
-                "b6a91a79ebe2ca38"
+                "39f6a65e9b06bb76"
             ]
         ]
     },
@@ -20033,7 +19919,7 @@
                 "p": "payload",
                 "pt": "msg",
                 "to": "pidTemp",
-                "tot": "msg"
+                "tot": "flow"
             }
         ],
         "action": "",
@@ -20041,188 +19927,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2450,
+        "x": 2370,
         "y": 1660,
         "wires": [
             [
                 "71e428c071db755f",
                 "85c9d2c917a42563"
-            ]
-        ]
-    },
-    {
-        "id": "e55b45db0ac0bb6f",
-        "type": "change",
-        "z": "6df0226504208616",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "op",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1990,
-        "y": 940,
-        "wires": [
-            [
-                "9a10cca10fe4a198"
-            ]
-        ]
-    },
-    {
-        "id": "96b38aa575cf6952",
-        "type": "change",
-        "z": "6df0226504208616",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "pv",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1994,
-        "y": 886,
-        "wires": [
-            [
-                "9a10cca10fe4a198"
-            ]
-        ]
-    },
-    {
-        "id": "1b1a0ed587fa11bb",
-        "type": "range",
-        "z": "6df0226504208616",
-        "minin": "0",
-        "maxin": "1",
-        "minout": "0",
-        "maxout": "25",
-        "action": "scale",
-        "round": false,
-        "property": "payload",
-        "name": "Scale power",
-        "x": 1830,
-        "y": 940,
-        "wires": [
-            [
-                "e55b45db0ac0bb6f"
-            ]
-        ]
-    },
-    {
-        "id": "9a10cca10fe4a198",
-        "type": "ui_chart",
-        "z": "6df0226504208616",
-        "name": "",
-        "group": "da55227f88759de7",
-        "order": 0,
-        "width": "10",
-        "height": "7",
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "35",
-        "removeOlder": "3",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#cf0005",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 2199,
-        "y": 960,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3fd895a29329df64",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "name": "Clear chart on deploy",
-        "props": [
-            {
-                "p": "payload",
-                "v": "{\"data\":[]}",
-                "vt": "json"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "topic": "",
-        "payload": "{\"data\":[]}",
-        "payloadType": "json",
-        "x": 1700,
-        "y": 1000,
-        "wires": [
-            [
-                "669844aaf5133d15"
-            ]
-        ]
-    },
-    {
-        "id": "669844aaf5133d15",
-        "type": "change",
-        "z": "6df0226504208616",
-        "name": "",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.data",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1950,
-        "y": 1000,
-        "wires": [
-            [
-                "9a10cca10fe4a198"
             ]
         ]
     },
@@ -20240,54 +19950,6 @@
         "x": 2585,
         "y": 1560,
         "wires": []
-    },
-    {
-        "id": "55353968fceb16af",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "To Chart PID values ",
-        "mode": "link",
-        "links": [
-            "30f369c8d463afe3"
-        ],
-        "x": 2685,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "a7dfbf2a7defb0fc",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "name": "link in 6",
-        "links": [
-            "71e428c071db755f",
-            "7a0c669c6c2a441c"
-        ],
-        "x": 1855,
-        "y": 880,
-        "wires": [
-            [
-                "96b38aa575cf6952"
-            ]
-        ]
-    },
-    {
-        "id": "30f369c8d463afe3",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "name": "link in 7",
-        "links": [
-            "55353968fceb16af",
-            "cb0dc3c351c9d4ec"
-        ],
-        "x": 1695,
-        "y": 940,
-        "wires": [
-            [
-                "1b1a0ed587fa11bb"
-            ]
-        ]
     },
     {
         "id": "85c9d2c917a42563",
@@ -20308,7 +19970,6 @@
         "y": 1660,
         "wires": [
             [
-                "55353968fceb16af",
                 "9585b22a.f41dd8"
             ]
         ]
@@ -20462,38 +20123,6 @@
         ]
     },
     {
-        "id": "18ca09779efe7f71",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "property": "mode",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "cool",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2210,
-        "y": 1720,
-        "wires": [
-            [
-                "d9c7c8acd004af0b"
-            ],
-            [
-                "2192e8a53bea623d"
-            ]
-        ]
-    },
-    {
         "id": "c551d6276c00e8b4",
         "type": "inject",
         "z": "6df0226504208616",
@@ -20520,38 +20149,6 @@
         "wires": [
             [
                 "06fb22866a0ba099"
-            ]
-        ]
-    },
-    {
-        "id": "7915323fa9c1ad8e",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "property": "downstairsCurrentTemp",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "lte",
-                "v": "20",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2210,
-        "y": 1780,
-        "wires": [
-            [
-                "2192e8a53bea623d"
-            ],
-            [
-                "d9c7c8acd004af0b"
             ]
         ]
     },
@@ -20853,7 +20450,7 @@
         "id": "1016f6c176103dd1",
         "type": "inject",
         "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
+        "g": "c10ebffd064adbf1",
         "name": "",
         "props": [
             {
@@ -20871,85 +20468,13 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1960,
-        "y": 1560,
+        "x": 1900,
+        "y": 1260,
         "wires": [
             [
-                "39f6a65e9b06bb76"
+                "b6a91a79ebe2ca38"
             ]
         ]
-    },
-    {
-        "id": "f2deee06fa324b63",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1310,
-        "y": 1580,
-        "wires": [
-            [
-                "f18e0669f545bf1e"
-            ]
-        ]
-    },
-    {
-        "id": "f18e0669f545bf1e",
-        "type": "change",
-        "z": "6df0226504208616",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$flowContext(\"upstairsCurrentTemp\")  - 3",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1490,
-        "y": 1560,
-        "wires": [
-            [
-                "822862c4cecf25e0"
-            ]
-        ]
-    },
-    {
-        "id": "822862c4cecf25e0",
-        "type": "debug",
-        "z": "6df0226504208616",
-        "name": "debug 91",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1610,
-        "y": 1680,
-        "wires": []
     },
     {
         "id": "29b7553056896fdc",
@@ -21029,6 +20554,236 @@
             [
                 "8ac7c090ba75fd00"
             ]
+        ]
+    },
+    {
+        "id": "4b93c7c7130630d3",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "618f8f538592ecef",
+        "name": "link out 23",
+        "mode": "link",
+        "links": [
+            "c580d09bb8a3989e"
+        ],
+        "x": 1485,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "13fcc87ac38916bc",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "link in 9",
+        "links": [
+            "4f8a2adbb41ccd36"
+        ],
+        "x": 1785,
+        "y": 1720,
+        "wires": [
+            [
+                "d7af4025808c3d41"
+            ]
+        ]
+    },
+    {
+        "id": "ee28ca0f7cc9a27c",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "name": "link out 24",
+        "mode": "link",
+        "links": [
+            "0c948d73c06bf659"
+        ],
+        "x": 1635,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "0c948d73c06bf659",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "name": "link in 10",
+        "links": [
+            "ee28ca0f7cc9a27c"
+        ],
+        "x": 2125,
+        "y": 1600,
+        "wires": [
+            [
+                "9db00b34b2fd1a72"
+            ]
+        ]
+    },
+    {
+        "id": "2192e8a53bea623d",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "swing Bottom",
+        "rules": [
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "flow",
+                "to": "fixedBottom",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "pidTemp",
+                "pt": "flow",
+                "to": "downstairsCurrentTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2320,
+        "y": 1720,
+        "wires": [
+            [
+                "5c17644693ebd710"
+            ]
+        ]
+    },
+    {
+        "id": "d9c7c8acd004af0b",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "swing Top",
+        "rules": [
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "flow",
+                "to": "fixedTop",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "pidTemp",
+                "pt": "flow",
+                "to": "upstairsCurrentTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2300,
+        "y": 1760,
+        "wires": [
+            [
+                "5c17644693ebd710"
+            ]
+        ]
+    },
+    {
+        "id": "18ca09779efe7f71",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "",
+        "property": "mode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "cool",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2150,
+        "y": 1720,
+        "wires": [
+            [
+                "d9c7c8acd004af0b"
+            ],
+            [
+                "2192e8a53bea623d"
+            ]
+        ]
+    },
+    {
+        "id": "7915323fa9c1ad8e",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "",
+        "property": "downstairsCurrentTemp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2150,
+        "y": 1760,
+        "wires": [
+            [
+                "2192e8a53bea623d"
+            ],
+            [
+                "d9c7c8acd004af0b"
+            ]
+        ]
+    },
+    {
+        "id": "d7af4025808c3d41",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "UpstairsOrDownstairs",
+        "property": "$flowContext(\"upstairsCurrentTemp\") ",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "downstairsCurrentTemp",
+                "vt": "flow"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1940,
+        "y": 1720,
+        "wires": [
+            [
+                "18ca09779efe7f71"
+            ],
+            [
+                "7915323fa9c1ad8e"
+            ]
+        ],
+        "outputLabels": [
+            "Heat Downstairs",
+            "Heat Upstairs"
         ]
     },
     {
