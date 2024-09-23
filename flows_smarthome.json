@@ -5023,9 +5023,7 @@
         "z": "aa0ae7ae.75d228",
         "g": "8da8f3a9a56fc7ee",
         "name": "btn_upstairs",
-        "links": [
-            "6987ca2e.892e94"
-        ],
+        "links": [],
         "x": 805,
         "y": 320,
         "wires": [
@@ -5074,7 +5072,6 @@
         "g": "8da8f3a9a56fc7ee",
         "name": "btn_downstairs",
         "links": [
-            "ff979eb7.893f3",
             "918c945a6df6d903"
         ],
         "x": 805,
@@ -5285,9 +5282,7 @@
         "z": "aa0ae7ae.75d228",
         "g": "8da8f3a9a56fc7ee",
         "name": "btn_Bedroom",
-        "links": [
-            "fb14610a.ba0cf"
-        ],
+        "links": [],
         "x": 805,
         "y": 400,
         "wires": [
@@ -9553,9 +9548,7 @@
         "type": "link out",
         "z": "a7af161f.d5ece8",
         "name": "Upstairs",
-        "links": [
-            "87af81c4.c910b"
-        ],
+        "links": [],
         "x": 1925,
         "y": 380,
         "wires": []
@@ -9694,9 +9687,7 @@
         "type": "link out",
         "z": "a7af161f.d5ece8",
         "name": "Downstairs",
-        "links": [
-            "c720f0cc.65429"
-        ],
+        "links": [],
         "x": 1805,
         "y": 480,
         "wires": []
@@ -10948,10 +10939,7 @@
         "type": "link out",
         "z": "1c88039c.df631c",
         "name": "SHIELD",
-        "links": [
-            "c71338d4.ce73c8",
-            "6075171d.f0db08"
-        ],
+        "links": [],
         "x": 1125,
         "y": 580,
         "wires": []
@@ -11927,7 +11915,7 @@
         "to": "",
         "reg": false,
         "x": 1370,
-        "y": 780,
+        "y": 660,
         "wires": [
             [
                 "759977ced6b96acf"
@@ -12065,39 +12053,10 @@
         "y": 740,
         "wires": [
             [
-                "759977ced6b96acf"
+                "2cd7beb6601eb278"
             ],
             [
                 "2ebf80ed57b96fc3"
-            ]
-        ]
-    },
-    {
-        "id": "70dae665737d3419",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1190,
-        "y": 560,
-        "wires": [
-            [
-                "759977ced6b96acf"
             ]
         ]
     },
@@ -12223,35 +12182,6 @@
         "wires": [
             [
                 "193ab5ab4960d3f3"
-            ]
-        ]
-    },
-    {
-        "id": "b8f8e4edaa7fc720",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 190,
-        "y": 460,
-        "wires": [
-            [
-                "b590b37dc0fbc282"
             ]
         ]
     },
@@ -12466,8 +12396,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1440,
-        "y": 620,
+        "x": 1610,
+        "y": 540,
         "wires": [
             [
                 "cd274e19cc986be4"
@@ -21328,9 +21258,7 @@
         "g": "a3172e532d882fe7",
         "name": "Light_Changed",
         "mode": "link",
-        "links": [
-            "ee3e825fcad82993"
-        ],
+        "links": [],
         "x": 1175,
         "y": 840,
         "wires": []
@@ -21687,9 +21615,7 @@
         "z": "2153cce4d74e8cba",
         "g": "833beeaf82e34801",
         "name": "set_Lights_buypass",
-        "links": [
-            "c2a6540cf2006146"
-        ],
+        "links": [],
         "x": 325,
         "y": 1360,
         "wires": [
