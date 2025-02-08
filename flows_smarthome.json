@@ -1,13 +1,5 @@
 [
     {
-        "id": "04468fffd52ae874",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "1c11632f.f206fd",
         "type": "tab",
         "label": "Google Home",
@@ -1316,9 +1308,7 @@
             "502f4e884cac3140",
             "2dc40524a1b11e11",
             "feaccb063046e633",
-            "cd4da3fcec8d2698",
             "e9c6b977279a9ace",
-            "61053bad34c46d8d",
             "36d041fc10d198e1",
             "39f321390ee435bd",
             "a70594b76501cf94",
@@ -1332,7 +1322,7 @@
         "x": 174,
         "y": 659,
         "w": 1352,
-        "h": 262
+        "h": 222
     },
     {
         "id": "90a2ae744f3f1a15",
@@ -1583,7 +1573,7 @@
         ],
         "x": 1734,
         "y": 399,
-        "w": 772,
+        "w": 792,
         "h": 182
     },
     {
@@ -2033,8 +2023,7 @@
         "y": 160,
         "wires": [
             [
-                "4c1858d290c94d44",
-                "80130e40238ed7d0"
+                "4c1858d290c94d44"
             ]
         ]
     },
@@ -2047,7 +2036,6 @@
         "y": 1420,
         "wires": [
             [
-                "84ab3be68fd51f98",
                 "c9f8d6dac8d4ba6d"
             ]
         ]
@@ -2175,19 +2163,6 @@
         "titleBarStyle": "default"
     },
     {
-        "id": "3f286b473c9966df",
-        "type": "ui-group",
-        "name": "House",
-        "page": "fa9cafe49c4e6dd3",
-        "width": "6",
-        "height": "1",
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
         "id": "4d021bd33834978e",
         "type": "castv2-connection",
         "name": "SHIELD",
@@ -2227,19 +2202,6 @@
         "polling": "30"
     },
     {
-        "id": "e63aca3c0dabe7de",
-        "type": "ui-group",
-        "name": "SøppelTømming",
-        "page": "fa9cafe49c4e6dd3",
-        "width": "3",
-        "height": "1",
-        "order": 3,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "true"
-    },
-    {
         "id": "028d12e70ba38637",
         "type": "ui-theme",
         "name": "Default Theme",
@@ -2256,6 +2218,95 @@
             "groupBorderRadius": "4px",
             "widgetGap": "12px"
         }
+    },
+    {
+        "id": "fa9cafe49c4e6dd3",
+        "type": "ui-page",
+        "name": "Dashboard",
+        "ui": "7f0c45a9432dc256",
+        "path": "/",
+        "icon": "dashboard",
+        "layout": "flex",
+        "theme": "028d12e70ba38637",
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "f9c985920afe1003",
+        "type": "ui-group",
+        "name": "Temperature",
+        "page": "fa9cafe49c4e6dd3",
+        "width": "4",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c8d8b6d992397cb8",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": false,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": "30",
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": ": ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "default",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": false
+    },
+    {
+        "id": "5fe53e8035ad1fab",
+        "type": "noraf-config",
+        "name": "nora config",
+        "group": "Bathroom",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "localexecution": true,
+        "structure": "",
+        "storeStateInContext": false,
+        "disableValidationErrors": false,
+        "sendDeviceNameAndLocation": false
+    },
+    {
+        "id": "3f286b473c9966df",
+        "type": "ui-group",
+        "name": "House",
+        "page": "fa9cafe49c4e6dd3",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "e63aca3c0dabe7de",
+        "type": "ui-group",
+        "name": "SøppelTømming",
+        "page": "fa9cafe49c4e6dd3",
+        "width": "3",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "true"
     },
     {
         "id": "205ec56154dae157",
@@ -2368,69 +2419,6 @@
         "className": "",
         "visible": true,
         "disabled": false
-    },
-    {
-        "id": "fa9cafe49c4e6dd3",
-        "type": "ui-page",
-        "name": "Dashboard",
-        "ui": "7f0c45a9432dc256",
-        "path": "/",
-        "icon": "dashboard",
-        "layout": "flex",
-        "theme": "028d12e70ba38637",
-        "order": 1,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "f9c985920afe1003",
-        "type": "ui-group",
-        "name": "Temperature",
-        "page": "fa9cafe49c4e6dd3",
-        "width": "4",
-        "height": "1",
-        "order": 2,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "c8d8b6d992397cb8",
-        "type": "server",
-        "name": "Home Assistant",
-        "version": 5,
-        "addon": false,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
-        "connectionDelay": true,
-        "cacheJson": true,
-        "heartbeat": false,
-        "heartbeatInterval": "30",
-        "areaSelector": "friendlyName",
-        "deviceSelector": "friendlyName",
-        "entitySelector": "friendlyName",
-        "statusSeparator": ": ",
-        "statusYear": "hidden",
-        "statusMonth": "short",
-        "statusDay": "numeric",
-        "statusHourCycle": "default",
-        "statusTimeFormat": "h:m",
-        "enableGlobalContextStore": false
-    },
-    {
-        "id": "5fe53e8035ad1fab",
-        "type": "noraf-config",
-        "name": "nora config",
-        "group": "Bathroom",
-        "twofactor": "off",
-        "twofactorpin": "",
-        "localexecution": true,
-        "structure": "",
-        "storeStateInContext": false,
-        "disableValidationErrors": false,
-        "sendDeviceNameAndLocation": false
     },
     {
         "id": "92a5af52a7d9680d",
@@ -4713,7 +4701,7 @@
         "id": "d34750618f80b518",
         "type": "switch",
         "z": "05933d2d8abb4be7",
-        "name": "gusetmode?",
+        "name": "manualmode?",
         "property": "manualmode",
         "propertyType": "global",
         "rules": [
@@ -4727,7 +4715,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 330,
+        "x": 340,
         "y": 120,
         "wires": [
             [],
@@ -8940,7 +8928,7 @@
         "name": "Visitor Mode",
         "label": "Visitor Mode",
         "group": "3f286b473c9966df",
-        "order": 1,
+        "order": 2,
         "width": "2",
         "height": "1",
         "passthru": false,
@@ -11987,8 +11975,7 @@
         "y": 220,
         "wires": [
             [
-                "b590b37dc0fbc282",
-                "a1bc26f048d2aa13"
+                "b590b37dc0fbc282"
             ]
         ]
     },
@@ -12849,40 +12836,6 @@
                 "759977ced6b96acf"
             ]
         ]
-    },
-    {
-        "id": "a1bc26f048d2aa13",
-        "type": "debug",
-        "z": "a9a601907d96eb09",
-        "name": "Bathroom FLOW START",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 380,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "80130e40238ed7d0",
-        "type": "debug",
-        "z": "a9a601907d96eb09",
-        "name": "Bathroom FLOW START",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1952,
-        "y": 159,
-        "wires": []
     },
     {
         "id": "4e6013de2aa5c07f",
@@ -14982,7 +14935,7 @@
         "type": "change",
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
-        "name": "set tempOn = false",
+        "name": "set tempOn ",
         "rules": [
             {
                 "t": "set",
@@ -14997,7 +14950,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1210,
+        "x": 1190,
         "y": 260,
         "wires": [
             [
@@ -15038,7 +14991,7 @@
         "name": "SummerTime",
         "label": "SummerTime",
         "group": "3f286b473c9966df",
-        "order": 3,
+        "order": 4,
         "width": "2",
         "height": "1",
         "passthru": false,
@@ -15070,7 +15023,7 @@
         "name": "HappyHome",
         "label": "HappyHome",
         "group": "3f286b473c9966df",
-        "order": 7,
+        "order": 8,
         "width": "2",
         "height": "1",
         "passthru": false,
@@ -16066,13 +16019,20 @@
         "className": "",
         "icon": "",
         "iconPosition": "left",
-        "payload": "false",
+        "payload": "true",
         "payloadType": "bool",
         "topic": "topic",
         "topicType": "msg",
         "buttonColor": "",
         "textColor": "",
         "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
         "x": 1010,
         "y": 300,
         "wires": [
@@ -16160,7 +16120,7 @@
         "type": "change",
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
-        "name": "set on",
+        "name": "set off",
         "rules": [
             {
                 "t": "set",
@@ -16207,8 +16167,8 @@
         "name": "",
         "pod": "VfTc6vFm",
         "podSelector": "",
-        "x": 2410,
-        "y": 500,
+        "x": 2430,
+        "y": 540,
         "wires": [
             []
         ]
@@ -16720,8 +16680,8 @@
             "6da268e8239c3766",
             "1b2e25245d3e1b82"
         ],
-        "x": 1925,
-        "y": 460,
+        "x": 1845,
+        "y": 480,
         "wires": [
             [
                 "48e94d16bcba20da"
@@ -16779,7 +16739,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 8,
+        "order": 9,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16801,7 +16761,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 7,
+        "order": 8,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16929,7 +16889,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 6,
+        "order": 7,
         "width": "2",
         "height": "1",
         "name": "",
@@ -17717,8 +17677,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2390,
-        "y": 460,
+        "x": 2210,
+        "y": 500,
         "wires": [
             [
                 "a41f36b66f32ca92"
@@ -17731,7 +17691,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 5,
+        "order": 10,
         "width": "2",
         "height": "1",
         "name": "",
@@ -17782,7 +17742,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 5,
+        "order": 6,
         "width": "2",
         "height": "1",
         "name": "",
@@ -17837,27 +17797,9 @@
         "y": 40,
         "wires": [
             [
-                "f25e7fed475c3fd6",
                 "b55f6548038bcf22"
             ]
         ]
-    },
-    {
-        "id": "f25e7fed475c3fd6",
-        "type": "debug",
-        "z": "6df0226504208616",
-        "name": "debug 84",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1430,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "d87207b4e0b530ac",
@@ -17865,7 +17807,7 @@
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
         "name": "function 6",
-        "func": "var currentTemp = msg.pidTemp;  // Current temperature\nvar desiredTemp = msg.desiredTemp;    // Desired temperature\nvar proportionalGain = 0.2;  // Proportional gain (adjust this value as needed)\n\n// Calculate the error\nvar error = desiredTemp - currentTemp;\n\n// Calculate the power intensity\nvar power = error * proportionalGain;\n\n// Limit the power intensity to the range 0 to 1\npower = Math.min(Math.max(power, 0), 1);\n\n// Function to determine fan level based on power intensity\nfunction getFanLevel(power) {\n    if (power === 0) {\n        return \"quiet\";\n    } else if (power > 0 && power <= 0.2) {\n        return \"low\";\n    } else if (power > 0.2 && power <= 0.4) {\n        return \"medium\";\n    } else if (power > 0.4 && power <= 0.6) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Get the fan level\nvar fanLevel = getFanLevel(power);\n\n// Determine if heating or cooling\nvar mode = power >= 0.5 ? \"heating\" : \"cooling\";\n\n// Calculate the heat pump temperature\nvar targetRange = 5;  // Define a narrower range around the desired temperature\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\n\nvar heatPumpTemp;\nif (mode === \"heating\") {\n    heatPumpTemp = Math.ceil(power * (maxTemp - minTemp) + minTemp);\n} else {\n    heatPumpTemp = Math.ceil(maxTemp - power * (maxTemp - minTemp));\n}\n\nreturn {payload: {mode: mode, fanLevel: fanLevel, heatPumpTemp: heatPumpTemp}};",
+        "func": "var currentTemp = msg.pidTemp;  // Current temperature\nvar desiredTemp = msg.desiredTemp;    // Desired temperature\nvar proportionalGain = 0.2;  // Proportional gain (adjust this value as needed)\n\n// Calculate the error\nvar error = desiredTemp - currentTemp;\n\n// Calculate the power intensity\nvar power = error * proportionalGain;\n\n// Limit the power intensity to the range 0 to 1\npower = Math.min(Math.max(power, 0), 1);\nflow.set(\"power\", power);\n// Function to determine fan level based on power intensity\nfunction getFanLevel(power) {\n    if (power === 0) {\n        return \"quiet\";\n    } else if (power > 0 && power <= 0.2) {\n        return \"low\";\n    } else if (power > 0.2 && power <= 0.4) {\n        return \"medium\";\n    } else if (power > 0.4 && power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Get the fan level\nvar fanLevel = getFanLevel(power);\n\n// Determine if heating or cooling\nvar mode = power >= 0.5 ? \"heating\" : \"cooling\";\n\n// Calculate the heat pump temperature\nvar targetRange = 5;  // Define a narrower range around the desired temperature\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\n\nvar heatPumpTemp;\nif (mode === \"heating\") {\n    heatPumpTemp = Math.ceil(power * (maxTemp - minTemp) + minTemp);\n} else {\n    heatPumpTemp = Math.ceil(maxTemp - power * (maxTemp - minTemp));\n}\n\nreturn { payload: { mode: mode, fanLevel: fanLevel, heatPumpTemp: heatPumpTemp } };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -19683,7 +19625,7 @@
         "name": "Mr Robot Status",
         "label": "Mr Robot Status",
         "group": "3f286b473c9966df",
-        "order": 6,
+        "order": 7,
         "width": "2",
         "height": "1",
         "passthru": false,
@@ -21364,24 +21306,6 @@
         ]
     },
     {
-        "id": "cd4da3fcec8d2698",
-        "type": "debug",
-        "z": "2153cce4d74e8cba",
-        "g": "a3172e532d882fe7",
-        "name": "TO FLOWS: FH_LIght Changed ",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1050,
-        "y": 880,
-        "wires": []
-    },
-    {
         "id": "0f1c18c6959cd496",
         "type": "Thing Command",
         "z": "2153cce4d74e8cba",
@@ -21449,24 +21373,6 @@
         ]
     },
     {
-        "id": "61053bad34c46d8d",
-        "type": "debug",
-        "z": "2153cce4d74e8cba",
-        "g": "a3172e532d882fe7",
-        "name": "TO FH HUB",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 740,
-        "wires": []
-    },
-    {
         "id": "36d041fc10d198e1",
         "type": "change",
         "z": "2153cce4d74e8cba",
@@ -21497,9 +21403,7 @@
         "y": 780,
         "wires": [
             [
-                "61053bad34c46d8d",
-                "39f321390ee435bd",
-                "6a035419c54669d5"
+                "39f321390ee435bd"
             ]
         ]
     },
@@ -21599,7 +21503,6 @@
         "y": 840,
         "wires": [
             [
-                "cd4da3fcec8d2698",
                 "69f22820e9552291"
             ]
         ]
@@ -22257,8 +22160,7 @@
         "y": 1440,
         "wires": [
             [
-                "de9051a59d1e60a8",
-                "b9448ef353a6f505"
+                "de9051a59d1e60a8"
             ]
         ]
     },
@@ -23636,57 +23538,6 @@
                 "04b5d65f2356f4ba"
             ]
         ]
-    },
-    {
-        "id": "b9448ef353a6f505",
-        "type": "debug",
-        "z": "2153cce4d74e8cba",
-        "name": "GH CHANGE LITE START",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 463,
-        "y": 1504,
-        "wires": []
-    },
-    {
-        "id": "84ab3be68fd51f98",
-        "type": "debug",
-        "z": "2153cce4d74e8cba",
-        "name": "FH BEFORE THING",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1253,
-        "y": 1401,
-        "wires": []
-    },
-    {
-        "id": "6a035419c54669d5",
-        "type": "debug",
-        "z": "2153cce4d74e8cba",
-        "name": "FH TO HUB",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1336,
-        "y": 696,
-        "wires": []
     },
     {
         "id": "ddc8b687.374538",
@@ -27204,7 +27055,7 @@
         "name": "Home Status",
         "label": "Home Status",
         "group": "3f286b473c9966df",
-        "order": 2,
+        "order": 3,
         "width": "2",
         "height": "1",
         "passthru": true,
@@ -27324,7 +27175,7 @@
         "name": "Karina",
         "label": "Karina",
         "group": "3f286b473c9966df",
-        "order": 5,
+        "order": 6,
         "width": "2",
         "height": "1",
         "passthru": true,
@@ -27354,7 +27205,7 @@
         "name": "Øivind",
         "label": "Øivind",
         "group": "3f286b473c9966df",
-        "order": 4,
+        "order": 5,
         "width": "2",
         "height": "1",
         "passthru": true,
