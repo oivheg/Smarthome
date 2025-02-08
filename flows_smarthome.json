@@ -858,13 +858,12 @@
             "21c80566.d9201a",
             "183c95c7745f2ea4",
             "6fb6663e779c4bed",
-            "7f4dd2f1e5bb0824",
             "bc57e78aaf68965d",
             "0e2324ffdb10fe80"
         ],
-        "x": 84,
+        "x": 154,
         "y": 979,
-        "w": 932,
+        "w": 862,
         "h": 157
     },
     {
@@ -1351,59 +1350,6 @@
         "y": 179,
         "w": 672,
         "h": 242
-    },
-    {
-        "id": "833beeaf82e34801",
-        "type": "group",
-        "z": "2153cce4d74e8cba",
-        "name": "Change Light State",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "0f1c18c6959cd496",
-            "c9f8d6dac8d4ba6d",
-            "04b5d65f2356f4ba",
-            "3f0facfb8ecb6309",
-            "7b748d84badce752",
-            "169eb382584dea9a",
-            "9b29720688f4f892",
-            "5581b9e705bd930b",
-            "32b87da33debbea7",
-            "fa9eb39dc8d1ab43",
-            "57f6d41542bec600",
-            "f5414ebf88c0dd29",
-            "e8a10173e53f4a16",
-            "3e5515ba1d6c857c",
-            "935ba8da4c403144",
-            "6635faf90a4a38ac",
-            "fb7b621287bb03dc",
-            "eae7f9bdc1f64e43",
-            "0cdeb110cc9cbe87",
-            "913fb4c226869e79",
-            "fa037bf9c192d1d3",
-            "1d5ad1bb7efafd0d",
-            "e580148cb6b2ecc0",
-            "cf4286d760897c48",
-            "56156f4a5dc995ed",
-            "9554f5c971a0df0e",
-            "8981429cc9d0e3c8",
-            "1a7dad7a9bee2cbb",
-            "e46130fd001328ba",
-            "33feae6a920e0c12",
-            "16df02f3eb3587ef",
-            "d1864239e50a53f6",
-            "910130f6c7a85723",
-            "701322a59ecb3a3d",
-            "de9051a59d1e60a8",
-            "34fedf56c6a998e5",
-            "c39baff84fab7603",
-            "5009a3c5bb74d022"
-        ],
-        "x": 34,
-        "y": 1219,
-        "w": 1972,
-        "h": 462
     },
     {
         "id": "a498e3e25a476808",
@@ -1921,6 +1867,58 @@
         "h": 424
     },
     {
+        "id": "833beeaf82e34801",
+        "type": "group",
+        "z": "2153cce4d74e8cba",
+        "name": "Change Light State",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "0f1c18c6959cd496",
+            "c9f8d6dac8d4ba6d",
+            "04b5d65f2356f4ba",
+            "3f0facfb8ecb6309",
+            "7b748d84badce752",
+            "169eb382584dea9a",
+            "9b29720688f4f892",
+            "5581b9e705bd930b",
+            "32b87da33debbea7",
+            "fa9eb39dc8d1ab43",
+            "57f6d41542bec600",
+            "f5414ebf88c0dd29",
+            "e8a10173e53f4a16",
+            "3e5515ba1d6c857c",
+            "935ba8da4c403144",
+            "6635faf90a4a38ac",
+            "fb7b621287bb03dc",
+            "eae7f9bdc1f64e43",
+            "0cdeb110cc9cbe87",
+            "913fb4c226869e79",
+            "fa037bf9c192d1d3",
+            "1d5ad1bb7efafd0d",
+            "e580148cb6b2ecc0",
+            "cf4286d760897c48",
+            "56156f4a5dc995ed",
+            "9554f5c971a0df0e",
+            "8981429cc9d0e3c8",
+            "1a7dad7a9bee2cbb",
+            "e46130fd001328ba",
+            "33feae6a920e0c12",
+            "16df02f3eb3587ef",
+            "d1864239e50a53f6",
+            "910130f6c7a85723",
+            "701322a59ecb3a3d",
+            "34fedf56c6a998e5",
+            "5009a3c5bb74d022",
+            "bebc806ff14f1c35"
+        ],
+        "x": 34,
+        "y": 1219,
+        "w": 1992,
+        "h": 462
+    },
+    {
         "id": "6e32bf19c51ed3a4",
         "type": "junction",
         "z": "6df0226504208616",
@@ -2104,7 +2102,7 @@
     {
         "id": "5d47569e31e42f22",
         "type": "mqtt-broker",
-        "name": "arduino",
+        "name": "localhost",
         "broker": "localhost",
         "port": "1884",
         "clientid": "",
@@ -2113,6 +2111,7 @@
         "protocolVersion": "4",
         "keepalive": "60",
         "cleansession": true,
+        "autoUnsubscribe": true,
         "birthTopic": "",
         "birthQos": "0",
         "birthPayload": "",
@@ -2125,6 +2124,7 @@
         "willQos": "0",
         "willPayload": "",
         "willMsg": {},
+        "userProps": "",
         "sessionExpiry": ""
     },
     {
@@ -2419,6 +2419,11 @@
         "className": "",
         "visible": true,
         "disabled": false
+    },
+    {
+        "id": "5236c9cbf34a8239",
+        "type": "pushbullet-config",
+        "name": "test"
     },
     {
         "id": "92a5af52a7d9680d",
@@ -5185,7 +5190,7 @@
             "dc7a9dbe.e7065",
             "e92f253c.11b9b8"
         ],
-        "x": 125,
+        "x": 195,
         "y": 1080,
         "wires": [
             [
@@ -6462,16 +6467,20 @@
         "y": 1080,
         "wires": [
             [
-                "7f4dd2f1e5bb0824"
+                "bc57e78aaf68965d",
+                "0e2324ffdb10fe80"
             ],
             [
-                "7f4dd2f1e5bb0824"
+                "bc57e78aaf68965d",
+                "0e2324ffdb10fe80"
             ],
             [
-                "7f4dd2f1e5bb0824"
+                "bc57e78aaf68965d",
+                "0e2324ffdb10fe80"
             ],
             [
-                "7f4dd2f1e5bb0824"
+                "bc57e78aaf68965d",
+                "0e2324ffdb10fe80"
             ]
         ]
     },
@@ -6487,28 +6496,6 @@
         "wires": [
             [
                 "4ce3539c5f7a0ca7"
-            ]
-        ]
-    },
-    {
-        "id": "7f4dd2f1e5bb0824",
-        "type": "rbe",
-        "z": "aa0ae7ae.75d228",
-        "g": "172b4292bafc68a7",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload",
-        "topi": "topic",
-        "x": 530,
-        "y": 1080,
-        "wires": [
-            [
-                "bc57e78aaf68965d",
-                "0e2324ffdb10fe80"
             ]
         ]
     },
@@ -11012,7 +10999,7 @@
         "to": "",
         "reg": false,
         "x": 540,
-        "y": 800,
+        "y": 840,
         "wires": [
             [
                 "f25990ae2ecc8f46"
@@ -11027,8 +11014,8 @@
         "links": [
             "d75a3fcd498a1213"
         ],
-        "x": 365,
-        "y": 820,
+        "x": 355,
+        "y": 860,
         "wires": [
             [
                 "31840a2653579e08"
@@ -11999,7 +11986,8 @@
         "wires": [
             [
                 "574aa3734542d7dc",
-                "cf0a8ed0cb450b72"
+                "2ebf80ed57b96fc3",
+                "dc59445212c92f7c"
             ]
         ]
     },
@@ -12053,8 +12041,7 @@
         "y": 280,
         "wires": [
             [
-                "bdc7a6b2a2bf8285",
-                "bdebbc330ddc5e63"
+                "bdc7a6b2a2bf8285"
             ]
         ]
     },
@@ -12246,7 +12233,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1360,
+        "x": 1380,
         "y": 220,
         "wires": [
             [
@@ -12566,7 +12553,7 @@
         "op2": "",
         "op1type": "nul",
         "op2type": "payl",
-        "duration": "10",
+        "duration": "12",
         "extend": false,
         "overrideDelay": false,
         "units": "s",
@@ -12728,59 +12715,6 @@
         ]
     },
     {
-        "id": "bdebbc330ddc5e63",
-        "type": "switch",
-        "z": "a9a601907d96eb09",
-        "d": true,
-        "name": "fp2_presence false",
-        "property": "fp2_presence",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 570,
-        "y": 280,
-        "wires": [
-            [
-                "0e5ecc0cc6d5191d"
-            ]
-        ]
-    },
-    {
-        "id": "cf0a8ed0cb450b72",
-        "type": "switch",
-        "z": "a9a601907d96eb09",
-        "name": "islight_on",
-        "property": "islight_off",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 740,
-        "y": 420,
-        "wires": [
-            [
-                "dc59445212c92f7c"
-            ],
-            [
-                "2ebf80ed57b96fc3"
-            ]
-        ]
-    },
-    {
         "id": "dc59445212c92f7c",
         "type": "switch",
         "z": "a9a601907d96eb09",
@@ -12795,7 +12729,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 800,
+        "x": 760,
         "y": 340,
         "wires": [
             [
@@ -12829,8 +12763,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1020,
-        "y": 320,
+        "x": 1000,
+        "y": 340,
         "wires": [
             [
                 "759977ced6b96acf"
@@ -20651,8 +20585,7 @@
         "wires": [
             [
                 "cf3797c1e0b5c101",
-                "c60c2aeb2a5f38b4",
-                "e9b2590018a63bdd"
+                "c60c2aeb2a5f38b4"
             ]
         ]
     },
@@ -20674,78 +20607,6 @@
             [
                 "cb809ab79e18fc86"
             ]
-        ]
-    },
-    {
-        "id": "2fad310909f8d7c2",
-        "type": "mqtt in",
-        "z": "6a77c00f79a19693",
-        "d": true,
-        "name": "FP2 Stue",
-        "topic": "home/aqara_fp/combined",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "5d47569e31e42f22",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 280,
-        "y": 1100,
-        "wires": [
-            [
-                "3bac38424b56920e"
-            ]
-        ]
-    },
-    {
-        "id": "3bac38424b56920e",
-        "type": "change",
-        "z": "6a77c00f79a19693",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "illuminance",
-                "pt": "msg",
-                "to": "$number(payload.illuminance)\t\t",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.presence",
-                "tot": "msg"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "on",
-                "fromt": "str",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "off",
-                "fromt": "str",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
-        "y": 1100,
-        "wires": [
-            []
         ]
     },
     {
@@ -20987,7 +20848,8 @@
                 "ca84a21742d3e0cd"
             ],
             [
-                "91a62c0970200190"
+                "91a62c0970200190",
+                "9477eebdba796559"
             ]
         ]
     },
@@ -21104,21 +20966,44 @@
         ]
     },
     {
-        "id": "e9b2590018a63bdd",
-        "type": "debug",
+        "id": "ba44bc3bd82367f6",
+        "type": "pushbullet",
         "z": "6a77c00f79a19693",
-        "name": "From MQTT BAD",
-        "active": true,
-        "tosidebar": false,
-        "console": true,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 760,
+        "config": "5236c9cbf34a8239",
+        "pushtype": "note",
+        "title": "",
+        "chan": "",
+        "name": "",
+        "x": 750,
+        "y": 800,
         "wires": []
+    },
+    {
+        "id": "9477eebdba796559",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "BAD: motatt",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 800,
+        "wires": [
+            [
+                "ba44bc3bd82367f6"
+            ]
+        ]
     },
     {
         "id": "502f4e884cac3140",
@@ -21315,7 +21200,7 @@
         "command": "",
         "commandType": "msg",
         "debug": false,
-        "x": 1920,
+        "x": 1940,
         "y": 1460,
         "wires": []
     },
@@ -22156,11 +22041,11 @@
             "e2d7c57f5c31b977",
             "4c1858d290c94d44"
         ],
-        "x": 275,
-        "y": 1440,
+        "x": 295,
+        "y": 1460,
         "wires": [
             [
-                "de9051a59d1e60a8"
+                "0cdeb110cc9cbe87"
             ]
         ]
     },
@@ -22404,7 +22289,7 @@
         "y": 1500,
         "wires": [
             [
-                "0f1c18c6959cd496"
+                "bebc806ff14f1c35"
             ]
         ]
     },
@@ -22669,8 +22554,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 1440,
+        "x": 500,
+        "y": 1460,
         "wires": [
             [
                 "3e5515ba1d6c857c"
@@ -23032,7 +22917,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1640,
+        "x": 1580,
         "y": 1560,
         "wires": [
             [
@@ -23437,21 +23322,6 @@
         ]
     },
     {
-        "id": "de9051a59d1e60a8",
-        "type": "subflow:05933d2d8abb4be7",
-        "z": "2153cce4d74e8cba",
-        "g": "833beeaf82e34801",
-        "name": "",
-        "x": 390,
-        "y": 1440,
-        "wires": [
-            [
-                "0cdeb110cc9cbe87"
-            ],
-            []
-        ]
-    },
-    {
         "id": "03af9b4d41bd40d1",
         "type": "subflow:05933d2d8abb4be7",
         "z": "2153cce4d74e8cba",
@@ -23483,7 +23353,7 @@
         "y": 1460,
         "wires": [
             [
-                "0f1c18c6959cd496"
+                "bebc806ff14f1c35"
             ]
         ]
     },
@@ -23514,28 +23384,28 @@
         ]
     },
     {
-        "id": "c39baff84fab7603",
-        "type": "inject",
+        "id": "bebc806ff14f1c35",
+        "type": "delay",
         "z": "2153cce4d74e8cba",
         "g": "833beeaf82e34801",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "on",
-        "payloadType": "str",
-        "x": 760,
-        "y": 1260,
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1880,
+        "y": 1340,
         "wires": [
             [
-                "04b5d65f2356f4ba"
+                "0f1c18c6959cd496"
             ]
         ]
     },
