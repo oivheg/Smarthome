@@ -1836,11 +1836,11 @@
             "61c4e98cb0f6766f",
             "d7abdadaaf244ae5",
             "4cac99ceaecbeb28",
-            "6cbcb17968c3591b",
             "d87207b4e0b530ac",
             "3ce821bbf65ef322",
             "9254f6a1e7f54470",
-            "0778bdfb7e4ffa70"
+            "0778bdfb7e4ffa70",
+            "6cbcb17968c3591b"
         ],
         "x": 1124,
         "y": 1399,
@@ -12135,7 +12135,8 @@
         "y": 400,
         "wires": [
             [
-                "bdc7a6b2a2bf8285"
+                "bdc7a6b2a2bf8285",
+                "703541eac38a33b4"
             ]
         ]
     },
@@ -12832,6 +12833,54 @@
         "y": 240,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "3053c643f596d69c",
+        "type": "inject",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 520,
+        "wires": [
+            [
+                "dc2a2ebf5212b35b"
+            ]
+        ]
+    },
+    {
+        "id": "703541eac38a33b4",
+        "type": "switch",
+        "z": "a9a601907d96eb09",
+        "name": "fp2_presence false",
+        "property": "fp2_presence",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 480,
+        "wires": [
+            [
+                "0e5ecc0cc6d5191d"
+            ]
         ]
     },
     {
@@ -17578,27 +17627,6 @@
         ]
     },
     {
-        "id": "6cbcb17968c3591b",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload",
-        "topi": "topic",
-        "x": 2890,
-        "y": 1500,
-        "wires": [
-            [
-                "3d29453fc5dbcc29"
-            ]
-        ]
-    },
-    {
         "id": "6e868c43e8f5b6fb",
         "type": "switch",
         "z": "6df0226504208616",
@@ -17778,7 +17806,7 @@
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
         "name": "function 6",
-        "func": "var currentTemp = msg.pidTemp;  // Current temperature\nvar desiredTemp = msg.desiredTemp;    // Desired temperature\nvar proportionalGain = 0.2;  // Proportional gain (adjust this value as needed)\n\n// Calculate the error\nvar error = desiredTemp - currentTemp;\n\n// Calculate the power intensity\nvar power = error * proportionalGain;\n\n// Limit the power intensity to the range 0 to 1\npower = Math.min(Math.max(power, 0), 1);\nflow.set(\"power\", power);\n// Function to determine fan level based on power intensity\nfunction getFanLevel(power) {\n    if (power === 0) {\n        return \"quiet\";\n    } else if (power > 0 && power <= 0.2) {\n        return \"low\";\n    } else if (power > 0.2 && power <= 0.4) {\n        return \"medium\";\n    } else if (power > 0.4 && power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Get the fan level\nvar fanLevel = getFanLevel(power);\n\n// Determine if heating or cooling\nvar mode = power >= 0.5 ? \"heating\" : \"cooling\";\n\n// Calculate the heat pump temperature\nvar targetRange = 5;  // Define a narrower range around the desired temperature\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\n\nvar heatPumpTemp;\nif (mode === \"heating\") {\n    heatPumpTemp = Math.ceil(power * (maxTemp - minTemp) + minTemp);\n} else {\n    heatPumpTemp = Math.ceil(maxTemp - power * (maxTemp - minTemp));\n}\n\nreturn { payload: { mode: mode, fanLevel: fanLevel, heatPumpTemp: heatPumpTemp } };",
+        "func": "var currentTemp = msg.pidTemp;  // Current temperature\nvar desiredTemp = msg.desiredTemp;    // Desired temperature\nvar upstairsCurrentTemp = flow.get(\"upstairsCurrentTemp\");  // Upstairs current temperature\nvar proportionalGain = 0.1;  // Proportional gain (adjust this value as needed)\n\n// Calculate the error\nvar error = desiredTemp - currentTemp;\n\n// Calculate the power intensity\nvar power = error * proportionalGain;\n\n// Limit the power intensity to the range 0 to 1\npower = Math.min(Math.max(power, 0), 1);\nflow.set(\"power\", power);\n\n// Function to determine fan level based on power intensity\nfunction getFanLevel(power) {\n    if (power === 0) {\n        return \"quiet\";\n    } else if (power > 0 && power <= 0.2) {\n        return \"low\";\n    } else if (power > 0.2 && power <= 0.4) {\n        return \"medium\";\n    } else if (power > 0.4 && power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Get the fan level\nvar fanLevel = getFanLevel(power);\n\n// Determine if heating or cooling\nvar mode = power >= 0.5 ? \"heating\" : \"cooling\";\nnode.warn(\"mode \" + mode);\n\n// Calculate the heat pump temperature\nvar targetRange = 5;  // Define a narrower range around the desired temperature\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\n\nvar heatPumpTemp;\nvar threshold = 1;  // Define the threshold for \"close\" temperature\n\nif (mode === \"heating\") {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(power * (maxTemp - minTemp) + minTemp);\n    }\n} else {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(maxTemp - power * (maxTemp - minTemp));\n    }\n}\n    node.warn(\"desiredTemp \" + desiredTemp);\n    node.warn(\"upstairsCurrentTemp \" + upstairsCurrentTemp);\n// Ensure heatPumpTemp is not higher than desiredTemp when mode is heating\nif (flow.get(\"mode\") === \"heat\" && desiredTemp <= upstairsCurrentTemp) {\n    node.warn(\"desiredTemp \" + desiredTemp);\n    node.warn(\"upstairsCurrentTemp \" + upstairsCurrentTemp);\n    heatPumpTemp = Math.floor(Math.min(currentTemp, desiredTemp));\n}\n\nreturn { payload: { mode: mode, fanLevel: fanLevel, heatPumpTemp: heatPumpTemp } };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -17883,6 +17911,27 @@
             ],
             [
                 "d7abdadaaf244ae5"
+            ]
+        ]
+    },
+    {
+        "id": "6cbcb17968c3591b",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2830,
+        "y": 1500,
+        "wires": [
+            [
+                "3d29453fc5dbcc29"
             ]
         ]
     },
