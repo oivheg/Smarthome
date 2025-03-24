@@ -1471,12 +1471,13 @@
             "951ce2575e8b9040",
             "deea3dba1b5f3d7f",
             "18dc28d60921e855",
-            "6c616d3766ede9ba"
+            "6c616d3766ede9ba",
+            "5040b207ded2701a"
         ],
         "x": 1754,
-        "y": 719,
+        "y": 699,
         "w": 1002,
-        "h": 202
+        "h": 222
     },
     {
         "id": "a1794e13fa3182f6",
@@ -11970,6 +11971,7 @@
         "id": "9aaac14aa0dcc552",
         "type": "link out",
         "z": "1c88039c.df631c",
+        "d": true,
         "name": "link out 13",
         "mode": "link",
         "links": [
@@ -15353,7 +15355,8 @@
         "wires": [
             [
                 "8561e54fb5b735ab",
-                "29e04a7490f5626d"
+                "29e04a7490f5626d",
+                "5040b207ded2701a"
             ]
         ]
     },
@@ -17933,6 +17936,38 @@
             [
                 "3d29453fc5dbcc29"
             ]
+        ]
+    },
+    {
+        "id": "5040b207ded2701a",
+        "type": "api-call-service",
+        "z": "6df0226504208616",
+        "g": "d72b39d80e2dd2d0",
+        "name": "",
+        "server": "c8d8b6d992397cb8",
+        "version": 7,
+        "debugenabled": false,
+        "action": "climate.turn_off",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [
+            "5a4e2f4e0df2023b5ff44b3687215459"
+        ],
+        "entityId": [],
+        "labelId": [],
+        "data": "20",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": true,
+        "domain": "climate",
+        "service": "turn_off",
+        "x": 2480,
+        "y": 740,
+        "wires": [
+            []
         ]
     },
     {
