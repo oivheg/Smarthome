@@ -863,13 +863,12 @@
             "183c95c7745f2ea4",
             "6fb6663e779c4bed",
             "bc57e78aaf68965d",
-            "0e2324ffdb10fe80",
-            "1720fca15a8f0467"
+            "0e2324ffdb10fe80"
         ],
         "x": 84,
-        "y": 939,
+        "y": 959,
         "w": 862,
-        "h": 177
+        "h": 157
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -894,10 +893,10 @@
             "a0287f6dea869c13",
             "d434dc021a16f48a"
         ],
-        "x": 74,
+        "x": 154,
         "y": 759,
-        "w": 1262,
-        "h": 182
+        "w": 1182,
+        "h": 162
     },
     {
         "id": "9bb3180dbbe92370",
@@ -1032,12 +1031,14 @@
             "bc0b0c418444a37e",
             "3284ba0e8d50790d",
             "2e7d3c28e8dd6ce8",
-            "5bbbf38857986bec"
+            "5bbbf38857986bec",
+            "9b8502b1ce76e630",
+            "a72f5b98031d67a1"
         ],
         "x": 934,
         "y": 139,
         "w": 792,
-        "h": 282
+        "h": 322
     },
     {
         "id": "21fab955d3f1b60e",
@@ -1472,11 +1473,14 @@
             "deea3dba1b5f3d7f",
             "18dc28d60921e855",
             "6c616d3766ede9ba",
-            "5040b207ded2701a"
+            "5040b207ded2701a",
+            "25aa2cb4d52de446",
+            "6e868c43e8f5b6fb",
+            "8155636edf38bff6"
         ],
         "x": 1754,
         "y": 699,
-        "w": 1002,
+        "w": 1132,
         "h": 222
     },
     {
@@ -1495,9 +1499,7 @@
             "a41f36b66f32ca92",
             "1d5369f2e93e8467",
             "1ed32b866d4461c8",
-            "da32744a0963ce5f",
-            "6e868c43e8f5b6fb",
-            "b4a5aff5a9020ebf"
+            "da32744a0963ce5f"
         ],
         "x": 1734,
         "y": 399,
@@ -1986,7 +1988,8 @@
         "y": 460,
         "wires": [
             [
-                "dcb046bbb6008951"
+                "dcb046bbb6008951",
+                "d4ea77e32be534e6"
             ]
         ]
     },
@@ -4349,7 +4352,8 @@
             ],
             [
                 "b7abb1c033a236e9",
-                "29f9c1a39ca382a2"
+                "29f9c1a39ca382a2",
+                "95696f9b07fde267"
             ]
         ]
     },
@@ -4614,6 +4618,23 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "95696f9b07fde267",
+        "type": "debug",
+        "z": "c15399232bac2ca3",
+        "name": "othervise",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 910,
+        "y": 580,
+        "wires": []
     },
     {
         "id": "949ef7eeffd33778",
@@ -5768,8 +5789,7 @@
         "y": 1000,
         "wires": [
             [
-                "183c95c7745f2ea4",
-                "1720fca15a8f0467"
+                "183c95c7745f2ea4"
             ]
         ]
     },
@@ -5897,8 +5917,8 @@
         "links": [
             "bc76c6da083bdd3b"
         ],
-        "x": 115,
-        "y": 900,
+        "x": 195,
+        "y": 880,
         "wires": [
             [
                 "c1cdd26489314e43",
@@ -7529,23 +7549,6 @@
                 "ed863371775575ab"
             ]
         ]
-    },
-    {
-        "id": "1720fca15a8f0467",
-        "type": "debug",
-        "z": "aa0ae7ae.75d228",
-        "g": "172b4292bafc68a7",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 980,
-        "wires": []
     },
     {
         "id": "9c18ec5f.f9594",
@@ -11405,7 +11408,8 @@
         "y": 560,
         "wires": [
             [
-                "5e8d3398.55375c"
+                "5e8d3398.55375c",
+                "4d769e70a92d266c"
             ]
         ]
     },
@@ -11442,8 +11446,7 @@
         "mode": "link",
         "links": [
             "77b0a7f7334d846a",
-            "cf21cfba7f910c8f",
-            "8155636edf38bff6"
+            "cf21cfba7f910c8f"
         ],
         "x": 1125,
         "y": 580,
@@ -11994,6 +11997,19 @@
             ],
             []
         ]
+    },
+    {
+        "id": "4d769e70a92d266c",
+        "type": "link out",
+        "z": "1c88039c.df631c",
+        "name": "SHIELD status",
+        "mode": "link",
+        "links": [
+            "8155636edf38bff6"
+        ],
+        "x": 1395,
+        "y": 560,
+        "wires": []
     },
     {
         "id": "0e5ecc0cc6d5191d",
@@ -15194,7 +15210,7 @@
         "wires": [
             [
                 "da32744a0963ce5f",
-                "6e868c43e8f5b6fb"
+                "a41f36b66f32ca92"
             ]
         ]
     },
@@ -15568,8 +15584,8 @@
         "propertyType": "global",
         "rules": [
             {
-                "t": "eq",
-                "v": "home",
+                "t": "neq",
+                "v": "away",
                 "vt": "str"
             }
         ],
@@ -16098,7 +16114,7 @@
         "name": "",
         "label": "AUTO",
         "order": 2,
-        "width": 1,
+        "width": 2,
         "height": 1,
         "emulateClick": false,
         "tooltip": "",
@@ -16762,7 +16778,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 9,
+        "order": 10,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16784,7 +16800,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 8,
+        "order": 9,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16806,7 +16822,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 5,
+        "order": 6,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16912,7 +16928,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 7,
+        "order": 8,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16985,7 +17001,8 @@
         "y": 220,
         "wires": [
             [
-                "b55f6548038bcf22"
+                "b55f6548038bcf22",
+                "a72f5b98031d67a1"
             ]
         ]
     },
@@ -17094,8 +17111,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 2500,
-        "y": 780,
+        "x": 2540,
+        "y": 800,
         "wires": [
             [
                 "951ce2575e8b9040"
@@ -17125,7 +17142,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2650,
+        "x": 2780,
         "y": 760,
         "wires": [
             [
@@ -17512,14 +17529,17 @@
         "id": "8155636edf38bff6",
         "type": "link in",
         "z": "6df0226504208616",
+        "g": "d72b39d80e2dd2d0",
         "name": "Bedtime temp",
         "links": [
-            "5e8d3398.55375c"
+            "4d769e70a92d266c"
         ],
-        "x": 1945,
+        "x": 1865,
         "y": 820,
         "wires": [
-            []
+            [
+                "6e868c43e8f5b6fb"
+            ]
         ]
     },
     {
@@ -17630,70 +17650,12 @@
         ]
     },
     {
-        "id": "6e868c43e8f5b6fb",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "a1794e13fa3182f6",
-        "name": "",
-        "property": "bedTimeMode",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2210,
-        "y": 460,
-        "wires": [
-            [
-                "a41f36b66f32ca92"
-            ],
-            [
-                "b4a5aff5a9020ebf"
-            ]
-        ]
-    },
-    {
-        "id": "b4a5aff5a9020ebf",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "a1794e13fa3182f6",
-        "name": "low",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "flow",
-                "to": "low",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2210,
-        "y": 500,
-        "wires": [
-            [
-                "a41f36b66f32ca92"
-            ]
-        ]
-    },
-    {
         "id": "bc0b0c418444a37e",
         "type": "ui-text",
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 10,
+        "order": 11,
         "width": "2",
         "height": "1",
         "name": "",
@@ -17744,7 +17706,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 6,
+        "order": 7,
         "width": "2",
         "height": "1",
         "name": "",
@@ -17809,7 +17771,7 @@
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
         "name": "function 6",
-        "func": "var currentTemp = msg.pidTemp;  // Current temperature\nvar desiredTemp = msg.desiredTemp;    // Desired temperature\nvar upstairsCurrentTemp = flow.get(\"upstairsCurrentTemp\");  // Upstairs current temperature\nvar proportionalGain = 0.1;  // Proportional gain (adjust this value as needed)\n\n// Calculate the error\nvar error = desiredTemp - currentTemp;\n\n// Calculate the power intensity\nvar power = error * proportionalGain;\n\n// Limit the power intensity to the range 0 to 1\npower = Math.min(Math.max(power, 0), 1);\nflow.set(\"power\", power);\n\n// Function to determine fan level based on power intensity\nfunction getFanLevel(power) {\n    if (power === 0) {\n        return \"quiet\";\n    } else if (power > 0 && power <= 0.2) {\n        return \"low\";\n    } else if (power > 0.2 && power <= 0.4) {\n        return \"medium\";\n    } else if (power > 0.4 && power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Get the fan level\nvar fanLevel = getFanLevel(power);\n\n// Determine if heating or cooling\nvar mode = power >= 0.5 ? \"heating\" : \"cooling\";\nnode.warn(\"mode \" + mode);\n\n// Calculate the heat pump temperature\nvar targetRange = 5;  // Define a narrower range around the desired temperature\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\n\nvar heatPumpTemp;\nvar threshold = 1;  // Define the threshold for \"close\" temperature\n\nif (mode === \"heating\") {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(power * (maxTemp - minTemp) + minTemp);\n    }\n} else {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(maxTemp - power * (maxTemp - minTemp));\n    }\n}\n    node.warn(\"desiredTemp \" + desiredTemp);\n    node.warn(\"upstairsCurrentTemp \" + upstairsCurrentTemp);\n// Ensure heatPumpTemp is not higher than desiredTemp when mode is heating\nif (flow.get(\"mode\") === \"heat\" && desiredTemp <= upstairsCurrentTemp) {\n    node.warn(\"desiredTemp \" + desiredTemp);\n    node.warn(\"upstairsCurrentTemp \" + upstairsCurrentTemp);\n    heatPumpTemp = Math.floor(Math.min(currentTemp, desiredTemp));\n}\n\nreturn { payload: { mode: mode, fanLevel: fanLevel, heatPumpTemp: heatPumpTemp } };",
+        "func": "var currentTemp = msg.pidTemp;  // Current temperature\nvar desiredTemp = msg.desiredTemp;    // Desired temperature\nvar upstairsCurrentTemp = flow.get(\"upstairsCurrentTemp\");  // Upstairs current temperature\nvar proportionalGain = 0.1;  // Proportional gain (adjust this value as needed)\n\n// Calculate the error\nvar error = desiredTemp - currentTemp;\n\n// Calculate the power intensity\nvar power = error * proportionalGain;\n\n// Limit the power intensity to the range 0 to 1\npower = Math.min(Math.max(power, 0), 1);\nflow.set(\"power\", power);\n\n// Function to determine fan level based on power intensity\nfunction getFanLevel(power) {\n    if (power >= 0 && power <= 0.2) {\n        if (mode = \"cool\"){\n             return \"medium\";\n        }\n        return \"low\";\n    } else if (power > 0.2 && power <= 0.4) {\n        return \"medium\";\n    } else if (power > 0.4 && power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Get the fan level\nvar fanLevel = getFanLevel(power);\n\n// Determine if heating or cooling\nvar mode = flow.get(\"mode\");\nnode.warn(\"mode \" + mode);\n\n// Calculate the heat pump temperature\nvar targetRange = 5;  // Define a narrower range around the desired temperature\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\n\nvar heatPumpTemp;\nvar threshold = 1;  // Define the threshold for \"close\" temperature\n\nif (mode === \"heat\") {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(power * (maxTemp - minTemp) + minTemp);\n    }\n} else {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(minTemp - power * (maxTemp - minTemp));\n          node.warn(\"desiredTemp \" + desiredTemp);\n    node.warn(\"upstairsCurrentTemp \" + upstairsCurrentTemp);\n    node.warn(\"heatPumpTemp \" + heatPumpTemp);\n    }\n}\n  \n// Ensure heatPumpTemp is not higher than desiredTemp when mode is heating\nif (flow.get(\"mode\") === \"heat\" && desiredTemp <= upstairsCurrentTemp) {\n \n    heatPumpTemp = Math.floor(Math.max(currentTemp, desiredTemp));\n}\n\nreturn { payload: { mode: mode, fanLevel: fanLevel, heatPumpTemp: heatPumpTemp } };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -17967,6 +17929,125 @@
         "x": 2480,
         "y": 740,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b8502b1ce76e630",
+        "type": "ui-text",
+        "z": "6df0226504208616",
+        "g": "76afa4ece7428050",
+        "group": "f9c985920afe1003",
+        "order": 12,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Swing",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1630,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a72f5b98031d67a1",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "76afa4ece7428050",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "swing",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1440,
+        "y": 420,
+        "wires": [
+            [
+                "9b8502b1ce76e630"
+            ]
+        ]
+    },
+    {
+        "id": "25aa2cb4d52de446",
+        "type": "ui-button",
+        "z": "6df0226504208616",
+        "g": "d72b39d80e2dd2d0",
+        "group": "f9c985920afe1003",
+        "name": "",
+        "label": "BEDTIME COOL",
+        "order": 5,
+        "width": 2,
+        "height": 1,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1950,
+        "y": 740,
+        "wires": [
+            [
+                "a370a97cd6cd7b85"
+            ]
+        ]
+    },
+    {
+        "id": "6e868c43e8f5b6fb",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "d72b39d80e2dd2d0",
+        "name": "",
+        "property": "bedTimeMode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1950,
+        "y": 820,
+        "wires": [
+            [
+                "e6218962b047afb4"
+            ],
             []
         ]
     },
@@ -20865,9 +20946,9 @@
         "server": "c8d8b6d992397cb8",
         "version": 3,
         "exposeAsEntityConfig": "",
-        "updateInterval": "1",
+        "updateInterval": "15",
         "updateIntervalType": "num",
-        "updateIntervalUnits": "hours",
+        "updateIntervalUnits": "minutes",
         "outputInitially": false,
         "outputOnChanged": true,
         "entityId": "sensor.aqara_fp_combined",
@@ -24243,8 +24324,8 @@
         "z": "19a61e2a.75f152",
         "group": "e63aca3c0dabe7de",
         "order": 2,
-        "width": "0",
-        "height": "0",
+        "width": 3,
+        "height": null,
         "name": "",
         "label": "Tømmedag",
         "format": "{{msg.payload}}",
