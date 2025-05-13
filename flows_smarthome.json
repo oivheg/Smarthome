@@ -997,9 +997,9 @@
             "1998fd1676fdbd20",
             "d819b5d04aef9a18"
         ],
-        "x": 234,
+        "x": 224,
         "y": 219,
-        "w": 592,
+        "w": 602,
         "h": 122
     },
     {
@@ -10080,7 +10080,8 @@
         "links": [
             "1329b56.bea634b",
             "77e202e1f7cb4c98",
-            "c840b6850a9f9370"
+            "c840b6850a9f9370",
+            "af49b833db346f34"
         ],
         "x": 695,
         "y": 520,
@@ -10095,7 +10096,8 @@
         "links": [
             "ea645748ca3e406e",
             "f66e7e24.aca9d",
-            "1329b56.bea634b"
+            "1329b56.bea634b",
+            "35e1ec988614f4d4"
         ],
         "x": 795,
         "y": 580,
@@ -12030,7 +12032,7 @@
         "y": 240,
         "wires": [
             [
-                "16e069953bd59735"
+                "74fdfd605b080f6e"
             ]
         ]
     },
@@ -12057,8 +12059,8 @@
         "y": 240,
         "wires": [
             [
-                "0e5ecc0cc6d5191d",
-                "bdc7a6b2a2bf8285"
+                "bdc7a6b2a2bf8285",
+                "0e5ecc0cc6d5191d"
             ]
         ]
     },
@@ -12123,7 +12125,7 @@
         "to": "",
         "reg": false,
         "x": 740,
-        "y": 300,
+        "y": 440,
         "wires": [
             [
                 "12daafe786835f3a"
@@ -12150,7 +12152,7 @@
         "to": "",
         "reg": false,
         "x": 390,
-        "y": 400,
+        "y": 320,
         "wires": [
             [
                 "bdc7a6b2a2bf8285",
@@ -12177,7 +12179,7 @@
         "repair": false,
         "outputs": 2,
         "x": 410,
-        "y": 340,
+        "y": 440,
         "wires": [
             [
                 "bdc7a6b2a2bf8285"
@@ -12241,7 +12243,7 @@
             "455faa8d.6c9aa4"
         ],
         "x": 255,
-        "y": 400,
+        "y": 320,
         "wires": [
             [
                 "dc2a2ebf5212b35b"
@@ -12257,7 +12259,7 @@
             "dc7a9dbe.e7065"
         ],
         "x": 255,
-        "y": 320,
+        "y": 400,
         "wires": [
             [
                 "6381072ee0756353"
@@ -12287,7 +12289,7 @@
         "y": 400,
         "wires": [
             [
-                "759977ced6b96acf"
+                "9a055681e2b48e5d"
             ]
         ]
     },
@@ -12406,7 +12408,7 @@
         "y": 440,
         "wires": [
             [
-                "759977ced6b96acf"
+                "9a055681e2b48e5d"
             ]
         ]
     },
@@ -12433,7 +12435,7 @@
         "y": 480,
         "wires": [
             [
-                "759977ced6b96acf"
+                "9a055681e2b48e5d"
             ]
         ]
     },
@@ -12489,7 +12491,7 @@
             [
                 "a9eef7ebd0b8a98e",
                 "2cd7beb6601eb278",
-                "4858e6b73f2e8454"
+                "d75a3fcd498a1213"
             ]
         ]
     },
@@ -12554,6 +12556,7 @@
         "width": "2",
         "height": "1",
         "passthru": true,
+        "decouple": false,
         "topic": "topic",
         "topicType": "msg",
         "style": "",
@@ -12567,7 +12570,7 @@
         "officon": "lock",
         "offcolor": "greed",
         "x": 410,
-        "y": 300,
+        "y": 400,
         "wires": [
             [
                 "9a6c7e2adae19dbe"
@@ -12608,8 +12611,8 @@
         "links": [
             "b68b07285e615789"
         ],
-        "x": 1545,
-        "y": 400,
+        "x": 1615,
+        "y": 380,
         "wires": []
     },
     {
@@ -12630,7 +12633,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 720,
+        "x": 820,
         "y": 240,
         "wires": [
             [],
@@ -12733,7 +12736,7 @@
         "repair": false,
         "outputs": 1,
         "x": 740,
-        "y": 340,
+        "y": 360,
         "wires": [
             [
                 "b20ce97136a7c3a4"
@@ -12802,33 +12805,6 @@
         ]
     },
     {
-        "id": "4858e6b73f2e8454",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "islight_on",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1370,
-        "y": 400,
-        "wires": [
-            [
-                "d75a3fcd498a1213"
-            ]
-        ]
-    },
-    {
         "id": "489a70e46708be19",
         "type": "change",
         "z": "a9a601907d96eb09",
@@ -12854,31 +12830,6 @@
         ]
     },
     {
-        "id": "3053c643f596d69c",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 210,
-        "y": 520,
-        "wires": [
-            [
-                "dc2a2ebf5212b35b"
-            ]
-        ]
-    },
-    {
         "id": "703541eac38a33b4",
         "type": "switch",
         "z": "a9a601907d96eb09",
@@ -12893,11 +12844,61 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 520,
-        "y": 480,
+        "x": 630,
+        "y": 320,
         "wires": [
             [
                 "0e5ecc0cc6d5191d"
+            ]
+        ]
+    },
+    {
+        "id": "9a055681e2b48e5d",
+        "type": "change",
+        "z": "a9a601907d96eb09",
+        "name": "bathroom Dimm OFF close",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tmp_percent_bathroom",
+                "pt": "flow",
+                "to": "percent_bathroom",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1360,
+        "y": 400,
+        "wires": [
+            [
+                "759977ced6b96acf"
+            ]
+        ]
+    },
+    {
+        "id": "74fdfd605b080f6e",
+        "type": "switch",
+        "z": "a9a601907d96eb09",
+        "name": "movement false",
+        "property": "movement",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 200,
+        "wires": [
+            [
+                "16e069953bd59735"
             ]
         ]
     },
@@ -18052,6 +18053,51 @@
         ]
     },
     {
+        "id": "f86d8d1030fd25cc",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "$flowContext('desiredTemp') - 1\t",
+        "payloadType": "jsonata",
+        "x": 1990,
+        "y": 1000,
+        "wires": [
+            [
+                "4544cbf5f8f6aaa4"
+            ]
+        ]
+    },
+    {
+        "id": "4544cbf5f8f6aaa4",
+        "type": "debug",
+        "z": "6df0226504208616",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2140,
+        "y": 1000,
+        "wires": []
+    },
+    {
         "id": "3a621e1.6c980e2",
         "type": "inject",
         "z": "15652aa.fd5c4d5",
@@ -20554,7 +20600,8 @@
         "mode": "link",
         "links": [
             "d9f59e6e05f7c5b4",
-            "77e202e1f7cb4c98"
+            "77e202e1f7cb4c98",
+            "e5fde7fe7c1a3f4b"
         ],
         "x": 735,
         "y": 900,
