@@ -997,9 +997,9 @@
             "1998fd1676fdbd20",
             "d819b5d04aef9a18"
         ],
-        "x": 224,
+        "x": 234,
         "y": 219,
-        "w": 602,
+        "w": 592,
         "h": 122
     },
     {
@@ -1475,8 +1475,7 @@
             "6c616d3766ede9ba",
             "5040b207ded2701a",
             "25aa2cb4d52de446",
-            "6e868c43e8f5b6fb",
-            "8155636edf38bff6"
+            "3b1382973584f78e"
         ],
         "x": 1754,
         "y": 699,
@@ -1926,6 +1925,29 @@
         "y": 19,
         "w": 1002,
         "h": 142
+    },
+    {
+        "id": "ea997eda982fbbb3",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "TV CONTROLL/Shield",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "8155636edf38bff6",
+            "6e868c43e8f5b6fb",
+            "c92c6d509c408791",
+            "f6faa65839b654ee",
+            "688745863bbb178c",
+            "0b24ddda49c585b6",
+            "5ddd1fd71f99bc4a",
+            "ad27e97c7a1ec83f"
+        ],
+        "x": 1404,
+        "y": 799,
+        "w": 382,
+        "h": 262
     },
     {
         "id": "6e32bf19c51ed3a4",
@@ -15367,7 +15389,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2360,
+        "x": 2320,
         "y": 820,
         "wires": [
             [
@@ -15593,7 +15615,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 2180,
+        "x": 2100,
         "y": 780,
         "wires": [
             [
@@ -15628,8 +15650,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2180,
-        "y": 820,
+        "x": 2320,
+        "y": 780,
         "wires": [
             [
                 "e6218962b047afb4"
@@ -17530,13 +17552,13 @@
         "id": "8155636edf38bff6",
         "type": "link in",
         "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
+        "g": "ea997eda982fbbb3",
         "name": "Bedtime temp",
         "links": [
             "4d769e70a92d266c"
         ],
-        "x": 1865,
-        "y": 820,
+        "x": 1445,
+        "y": 860,
         "wires": [
             [
                 "6e868c43e8f5b6fb"
@@ -17772,7 +17794,7 @@
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
         "name": "function 6",
-        "func": "var currentTemp = msg.pidTemp;  // Current temperature\nvar desiredTemp = msg.desiredTemp;    // Desired temperature\nvar upstairsCurrentTemp = flow.get(\"upstairsCurrentTemp\");  // Upstairs current temperature\nvar proportionalGain = 0.1;  // Proportional gain (adjust this value as needed)\n\n// Calculate the error\nvar error = desiredTemp - currentTemp;\n\n// Calculate the power intensity\nvar power = error * proportionalGain;\n\n// Limit the power intensity to the range 0 to 1\npower = Math.min(Math.max(power, 0), 1);\nflow.set(\"power\", power);\n\n// Function to determine fan level based on power intensity\nfunction getFanLevel(power) {\n    if (power >= 0 && power <= 0.2) {\n        if (mode = \"cool\"){\n             return \"medium\";\n        }\n        return \"low\";\n    } else if (power > 0.2 && power <= 0.4) {\n        return \"medium\";\n    } else if (power > 0.4 && power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Get the fan level\nvar fanLevel = getFanLevel(power);\n\n// Determine if heating or cooling\nvar mode = flow.get(\"mode\");\nnode.warn(\"mode \" + mode);\n\n// Calculate the heat pump temperature\nvar targetRange = 5;  // Define a narrower range around the desired temperature\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\n\nvar heatPumpTemp;\nvar threshold = 1;  // Define the threshold for \"close\" temperature\n\nif (mode === \"heat\") {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(power * (maxTemp - minTemp) + minTemp);\n    }\n} else {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(minTemp - power * (maxTemp - minTemp));\n          node.warn(\"desiredTemp \" + desiredTemp);\n    node.warn(\"upstairsCurrentTemp \" + upstairsCurrentTemp);\n    node.warn(\"heatPumpTemp \" + heatPumpTemp);\n    }\n}\n  \n// Ensure heatPumpTemp is not higher than desiredTemp when mode is heating\nif (flow.get(\"mode\") === \"heat\" && desiredTemp <= upstairsCurrentTemp) {\n \n    heatPumpTemp = Math.floor(Math.max(currentTemp, desiredTemp));\n}\n\nreturn { payload: { mode: mode, fanLevel: fanLevel, heatPumpTemp: heatPumpTemp } };",
+        "func": "var currentTemp = msg.pidTemp;  // Current temperature\nvar desiredTemp = msg.desiredTemp;    // Desired temperature\nvar upstairsCurrentTemp = flow.get(\"upstairsCurrentTemp\");  // Upstairs current temperature\nvar proportionalGain = 0.1;  // Proportional gain (adjust this value as needed)\n\n// Calculate the error\nvar error = desiredTemp - currentTemp;\n\n// Calculate the power intensity\nvar power = error * proportionalGain;\n\n// Limit the power intensity to the range 0 to 1\npower = Math.min(Math.max(power, 0), 1);\nflow.set(\"power\", power);\n\n// Function to determine fan level based on power intensity\nfunction getFanLevel(power) {\n    if (power >= 0 && power <= 0.2) {\n        if (mode = \"cool\"){\n             return \"medium\";\n        }\n        return \"low\";\n    } else if (power > 0.2 && power <= 0.4) {\n        return \"medium\";\n    } else if (power > 0.4 && power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Get the fan level\nvar fanLevel = getFanLevel(power);\n\n// Determine if heating or cooling\nvar mode = flow.get(\"mode\");\n\n\n// Calculate the heat pump temperature\nvar targetRange = 5;  // Define a narrower range around the desired temperature\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\n\nvar heatPumpTemp;\nvar threshold = 1;  // Define the threshold for \"close\" temperature\n\nif (mode === \"heat\") {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        // node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(power * (maxTemp - minTemp) + minTemp);\n    }\n} else {\n    if (Math.abs(error) <= threshold) {\n        heatPumpTemp = desiredTemp;  // Set heatPumpTemp to desiredTemp if close\n        // node.warn(\"threshold desiredTemp \" + heatPumpTemp);\n    } else {\n        heatPumpTemp = Math.ceil(minTemp - power * (maxTemp - minTemp));\n          node.warn(\"desiredTemp \" + desiredTemp);\n    // node.warn(\"upstairsCurrentTemp \" + upstairsCurrentTemp);\n    // node.warn(\"heatPumpTemp \" + heatPumpTemp);\n    }\n}\n  \n// Ensure heatPumpTemp is not higher than desiredTemp when mode is heating\nif (flow.get(\"mode\") === \"heat\" && desiredTemp <= upstairsCurrentTemp) {\n \n    heatPumpTemp = Math.floor(Math.max(currentTemp, desiredTemp));\n}\n\nreturn { payload: { mode: mode, fanLevel: fanLevel, heatPumpTemp: heatPumpTemp } };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18028,7 +18050,7 @@
         "id": "6e868c43e8f5b6fb",
         "type": "switch",
         "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
+        "g": "ea997eda982fbbb3",
         "name": "",
         "property": "bedTimeMode",
         "propertyType": "flow",
@@ -18043,13 +18065,16 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1950,
-        "y": 820,
+        "x": 1530,
+        "y": 860,
         "wires": [
             [
-                "e6218962b047afb4"
+                "c92c6d509c408791",
+                "5ddd1fd71f99bc4a"
             ],
-            []
+            [
+                "f6faa65839b654ee"
+            ]
         ]
     },
     {
@@ -18096,6 +18121,178 @@
         "x": 2140,
         "y": 1000,
         "wires": []
+    },
+    {
+        "id": "c92c6d509c408791",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "link out 14",
+        "mode": "link",
+        "links": [
+            "3b1382973584f78e"
+        ],
+        "x": 1645,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "3b1382973584f78e",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "d72b39d80e2dd2d0",
+        "name": "link in 5",
+        "links": [
+            "c92c6d509c408791"
+        ],
+        "x": 2125,
+        "y": 820,
+        "wires": [
+            [
+                "e6218962b047afb4"
+            ]
+        ]
+    },
+    {
+        "id": "688745863bbb178c",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tempOn",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "wasTempOn",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 980,
+        "wires": [
+            [
+                "96ae312dcb197748"
+            ]
+        ]
+    },
+    {
+        "id": "f6faa65839b654ee",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "On/OFF",
+        "property": "tempOn",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1500,
+        "y": 920,
+        "wires": [
+            [
+                "688745863bbb178c"
+            ],
+            [
+                "0b24ddda49c585b6"
+            ]
+        ]
+    },
+    {
+        "id": "ad27e97c7a1ec83f",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tempOn",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1680,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b24ddda49c585b6",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "wasTempOn",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1620,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ddd1fd71f99bc4a",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "On/OFF",
+        "property": "wasTempOn",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1640,
+        "y": 900,
+        "wires": [
+            [
+                "ad27e97c7a1ec83f"
+            ]
+        ]
     },
     {
         "id": "3a621e1.6c980e2",
