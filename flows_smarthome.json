@@ -1501,9 +1501,9 @@
             "da32744a0963ce5f"
         ],
         "x": 1734,
-        "y": 399,
+        "y": 439,
         "w": 792,
-        "h": 182
+        "h": 142
     },
     {
         "id": "07a89de28d307ce8",
@@ -1938,16 +1938,15 @@
             "8155636edf38bff6",
             "6e868c43e8f5b6fb",
             "c92c6d509c408791",
-            "f6faa65839b654ee",
-            "688745863bbb178c",
-            "0b24ddda49c585b6",
-            "5ddd1fd71f99bc4a",
-            "ad27e97c7a1ec83f"
+            "5b70c98e8ec7f13c",
+            "65244f1a97e864d4",
+            "2485a40220025bb6",
+            "b07ed583f09164ef"
         ],
-        "x": 1404,
-        "y": 799,
+        "x": 1364,
+        "y": 779,
         "w": 382,
-        "h": 262
+        "h": 162
     },
     {
         "id": "6e32bf19c51ed3a4",
@@ -10102,8 +10101,7 @@
         "links": [
             "1329b56.bea634b",
             "77e202e1f7cb4c98",
-            "c840b6850a9f9370",
-            "af49b833db346f34"
+            "c840b6850a9f9370"
         ],
         "x": 695,
         "y": 520,
@@ -10118,8 +10116,7 @@
         "links": [
             "ea645748ca3e406e",
             "f66e7e24.aca9d",
-            "1329b56.bea634b",
-            "35e1ec988614f4d4"
+            "1329b56.bea634b"
         ],
         "x": 795,
         "y": 580,
@@ -11398,7 +11395,8 @@
         "y": 600,
         "wires": [
             [
-                "5e8d3398.55375c"
+                "5e8d3398.55375c",
+                "c4c2684c239161a6"
             ]
         ]
     },
@@ -11742,7 +11740,7 @@
             "7c376eb857a4e46f"
         ],
         "x": 1395,
-        "y": 600,
+        "y": 660,
         "wires": []
     },
     {
@@ -12026,13 +12024,26 @@
         "id": "4d769e70a92d266c",
         "type": "link out",
         "z": "1c88039c.df631c",
-        "name": "SHIELD status",
+        "name": "SHIELD OFF",
         "mode": "link",
         "links": [
             "8155636edf38bff6"
         ],
-        "x": 1395,
+        "x": 1385,
         "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c4c2684c239161a6",
+        "type": "link out",
+        "z": "1c88039c.df631c",
+        "name": "SHIELD ON",
+        "mode": "link",
+        "links": [
+            "5b70c98e8ec7f13c"
+        ],
+        "x": 1385,
+        "y": 600,
         "wires": []
     },
     {
@@ -15228,7 +15239,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1970,
+        "x": 2030,
         "y": 480,
         "wires": [
             [
@@ -16074,7 +16085,7 @@
         "order": 1,
         "width": 1,
         "height": 1,
-        "emulateClick": false,
+        "emulateClick": true,
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -16139,7 +16150,7 @@
         "order": 2,
         "width": 2,
         "height": 1,
-        "emulateClick": false,
+        "emulateClick": true,
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -16153,6 +16164,13 @@
         "buttonColor": "",
         "textColor": "",
         "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
         "x": 1010,
         "y": 340,
         "wires": [
@@ -16742,7 +16760,7 @@
             "6da268e8239c3766",
             "1b2e25245d3e1b82"
         ],
-        "x": 1845,
+        "x": 1865,
         "y": 480,
         "wires": [
             [
@@ -17006,8 +17024,8 @@
         "links": [
             "39299ac6d24a9150"
         ],
-        "x": 2105,
-        "y": 440,
+        "x": 2175,
+        "y": 480,
         "wires": []
     },
     {
@@ -17557,8 +17575,8 @@
         "links": [
             "4d769e70a92d266c"
         ],
-        "x": 1445,
-        "y": 860,
+        "x": 1405,
+        "y": 840,
         "wires": [
             [
                 "6e868c43e8f5b6fb"
@@ -18051,7 +18069,7 @@
         "type": "switch",
         "z": "6df0226504208616",
         "g": "ea997eda982fbbb3",
-        "name": "",
+        "name": "bedTimeMode",
         "property": "bedTimeMode",
         "propertyType": "flow",
         "rules": [
@@ -18065,44 +18083,14 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1530,
-        "y": 860,
+        "x": 1560,
+        "y": 840,
         "wires": [
             [
-                "c92c6d509c408791",
-                "5ddd1fd71f99bc4a"
+                "c92c6d509c408791"
             ],
             [
-                "f6faa65839b654ee"
-            ]
-        ]
-    },
-    {
-        "id": "f86d8d1030fd25cc",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "$flowContext('desiredTemp') - 1\t",
-        "payloadType": "jsonata",
-        "x": 1990,
-        "y": 1000,
-        "wires": [
-            [
-                "4544cbf5f8f6aaa4"
+                "b07ed583f09164ef"
             ]
         ]
     },
@@ -18132,8 +18120,8 @@
         "links": [
             "3b1382973584f78e"
         ],
-        "x": 1645,
-        "y": 840,
+        "x": 1705,
+        "y": 820,
         "wires": []
     },
     {
@@ -18154,143 +18142,121 @@
         ]
     },
     {
-        "id": "688745863bbb178c",
-        "type": "change",
+        "id": "5b70c98e8ec7f13c",
+        "type": "link in",
         "z": "6df0226504208616",
         "g": "ea997eda982fbbb3",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "tempOn",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "wasTempOn",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
+        "name": "Pause Cool",
+        "links": [
+            "c4c2684c239161a6"
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1600,
-        "y": 980,
-        "wires": [
-            [
-                "96ae312dcb197748"
-            ]
-        ]
-    },
-    {
-        "id": "f6faa65839b654ee",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "ea997eda982fbbb3",
-        "name": "On/OFF",
-        "property": "tempOn",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1500,
-        "y": 920,
-        "wires": [
-            [
-                "688745863bbb178c"
-            ],
-            [
-                "0b24ddda49c585b6"
-            ]
-        ]
-    },
-    {
-        "id": "ad27e97c7a1ec83f",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "ea997eda982fbbb3",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "tempOn",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1680,
-        "y": 940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0b24ddda49c585b6",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "ea997eda982fbbb3",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "wasTempOn",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1620,
-        "y": 1020,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5ddd1fd71f99bc4a",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "ea997eda982fbbb3",
-        "name": "On/OFF",
-        "property": "wasTempOn",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1640,
+        "x": 1405,
         "y": 900,
         "wires": [
             [
-                "ad27e97c7a1ec83f"
+                "65244f1a97e864d4"
+            ]
+        ]
+    },
+    {
+        "id": "65244f1a97e864d4",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "Override settings",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mode",
+                "pt": "flow",
+                "to": "heat",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "fanlevel",
+                "pt": "flow",
+                "to": "medium",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "flow",
+                "to": "fixedBottom",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 900,
+        "wires": [
+            [
+                "2485a40220025bb6"
+            ]
+        ]
+    },
+    {
+        "id": "2485a40220025bb6",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "link out 15",
+        "mode": "link",
+        "links": [
+            "18b9904a7b6ed063"
+        ],
+        "x": 1705,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "18b9904a7b6ed063",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "name": "link in 6",
+        "links": [
+            "2485a40220025bb6"
+        ],
+        "x": 925,
+        "y": 300,
+        "wires": [
+            [
+                "ba1166a8a3592f19"
+            ]
+        ]
+    },
+    {
+        "id": "b07ed583f09164ef",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "link out 17",
+        "mode": "link",
+        "links": [
+            "2022ebc8aabd4e7b"
+        ],
+        "x": 1705,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "2022ebc8aabd4e7b",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "name": "link in 7",
+        "links": [
+            "b07ed583f09164ef"
+        ],
+        "x": 925,
+        "y": 340,
+        "wires": [
+            [
+                "40c41a90bc123561"
             ]
         ]
     },
@@ -20797,8 +20763,7 @@
         "mode": "link",
         "links": [
             "d9f59e6e05f7c5b4",
-            "77e202e1f7cb4c98",
-            "e5fde7fe7c1a3f4b"
+            "77e202e1f7cb4c98"
         ],
         "x": 735,
         "y": 900,
