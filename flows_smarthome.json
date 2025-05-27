@@ -1500,12 +1500,16 @@
             "1ed32b866d4461c8",
             "da32744a0963ce5f",
             "b6c4b310a066b151",
-            "22ab4947cecf7315"
+            "78a1a1f57b1f88fc",
+            "40891376e4d12769",
+            "3145f5d55a3b13dc",
+            "24344c5731ab554f",
+            "d37e09db5119549c"
         ],
         "x": 1734,
-        "y": 419,
+        "y": 399,
         "w": 792,
-        "h": 202
+        "h": 222
     },
     {
         "id": "07a89de28d307ce8",
@@ -1735,12 +1739,13 @@
             "4272a2176b1df070",
             "96ae312dcb197748",
             "c762107e23c09087",
-            "dc14d56767de92d4"
+            "dc14d56767de92d4",
+            "9ee964af3a5c9145"
         ],
         "x": 1824,
-        "y": 1159,
-        "w": 582,
-        "h": 162
+        "y": 1151.5,
+        "w": 612,
+        "h": 169.5
     },
     {
         "id": "5681b942a0c850d1",
@@ -1845,12 +1850,13 @@
             "9254f6a1e7f54470",
             "0778bdfb7e4ffa70",
             "6cbcb17968c3591b",
-            "90fd7b64bf7a8c3b"
+            "90fd7b64bf7a8c3b",
+            "d7626ca954b4fa48"
         ],
         "x": 1124,
-        "y": 1439,
+        "y": 1419,
         "w": 1702,
-        "h": 384
+        "h": 404
     },
     {
         "id": "833beeaf82e34801",
@@ -1942,18 +1948,18 @@
             "6e868c43e8f5b6fb",
             "c92c6d509c408791",
             "5b70c98e8ec7f13c",
-            "65244f1a97e864d4",
             "2485a40220025bb6",
             "b07ed583f09164ef",
             "7cd6dfaf3b3a6ac6",
             "2f1025ec5e42de60",
             "2b0494dc83f08075",
             "f96846a3223ab71c",
-            "3d3ca528918b2cf8"
+            "3d3ca528918b2cf8",
+            "65244f1a97e864d4"
         ],
-        "x": 1214,
+        "x": 1114,
         "y": 739,
-        "w": 542,
+        "w": 642,
         "h": 262
     },
     {
@@ -2062,6 +2068,20 @@
             [
                 "c9f8d6dac8d4ba6d",
                 "0f1c18c6959cd496"
+            ]
+        ]
+    },
+    {
+        "id": "d37e09db5119549c",
+        "type": "junction",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "x": 2280,
+        "y": 480,
+        "wires": [
+            [
+                "da32744a0963ce5f",
+                "a41f36b66f32ca92"
             ]
         ]
     },
@@ -4380,8 +4400,7 @@
             ],
             [
                 "b7abb1c033a236e9",
-                "29f9c1a39ca382a2",
-                "95696f9b07fde267"
+                "29f9c1a39ca382a2"
             ]
         ]
     },
@@ -4646,23 +4665,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "95696f9b07fde267",
-        "type": "debug",
-        "z": "c15399232bac2ca3",
-        "name": "othervise",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 910,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "949ef7eeffd33778",
@@ -11774,8 +11776,7 @@
         "wires": [
             [
                 "e9bb9204.50585",
-                "f93ecd35785e6032",
-                "a407cd946d544531"
+                "f93ecd35785e6032"
             ]
         ]
     },
@@ -12052,22 +12053,6 @@
         ],
         "x": 1385,
         "y": 600,
-        "wires": []
-    },
-    {
-        "id": "a407cd946d544531",
-        "type": "debug",
-        "z": "1c88039c.df631c",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 540,
         "wires": []
     },
     {
@@ -14815,8 +14800,7 @@
         "y": 480,
         "wires": [
             [
-                "6e32bf19c51ed3a4",
-                "dcb046bbb6008951"
+                "6e32bf19c51ed3a4"
             ]
         ]
     },
@@ -14873,8 +14857,7 @@
         "y": 620,
         "wires": [
             [
-                "3f8cb11deb8ce864",
-                "dcb046bbb6008951"
+                "3f8cb11deb8ce864"
             ]
         ]
     },
@@ -15236,7 +15219,7 @@
         "y": 560,
         "wires": [
             [
-                "a41f36b66f32ca92"
+                "78a1a1f57b1f88fc"
             ]
         ]
     },
@@ -15288,12 +15271,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2030,
+        "x": 1970,
         "y": 480,
         "wires": [
             [
-                "da32744a0963ce5f",
-                "a41f36b66f32ca92"
+                "40891376e4d12769",
+                "3145f5d55a3b13dc"
             ]
         ]
     },
@@ -15398,7 +15381,9 @@
         "links": [
             "896aa735a80611d5",
             "5346ecce7ddb6882",
-            "b4d557df3e42313a"
+            "b4d557df3e42313a",
+            "b07ed583f09164ef",
+            "2485a40220025bb6"
         ],
         "x": 1065,
         "y": 1280,
@@ -16278,12 +16263,11 @@
         "z": "6df0226504208616",
         "g": "a1794e13fa3182f6",
         "name": "",
-        "x": 2230,
-        "y": 540,
+        "x": 2430,
+        "y": 500,
         "wires": [
             [
-                "1d5369f2e93e8467",
-                "22ab4947cecf7315"
+                "1d5369f2e93e8467"
             ],
             []
         ]
@@ -16750,8 +16734,7 @@
         "y": 660,
         "wires": [
             [
-                "74510ae80a9b4f16",
-                "d4ea77e32be534e6"
+                "74510ae80a9b4f16"
             ]
         ]
     },
@@ -16836,9 +16819,10 @@
         "id": "8990cd086ea9bbb7",
         "type": "link in",
         "z": "6df0226504208616",
-        "name": "link in 14",
+        "name": "Turn OFF",
         "links": [
-            "deea3dba1b5f3d7f"
+            "deea3dba1b5f3d7f",
+            "9ee964af3a5c9145"
         ],
         "x": 1945,
         "y": 540,
@@ -16859,8 +16843,8 @@
             "1ed32b866d4461c8",
             "209d6f954532c595"
         ],
-        "x": 2695,
-        "y": 820,
+        "x": 2845,
+        "y": 800,
         "wires": []
     },
     {
@@ -17074,8 +17058,8 @@
         "links": [
             "39299ac6d24a9150"
         ],
-        "x": 2175,
-        "y": 480,
+        "x": 2415,
+        "y": 440,
         "wires": []
     },
     {
@@ -17209,7 +17193,7 @@
                 "951ce2575e8b9040"
             ],
             [
-                "1b2e25245d3e1b82"
+                "951ce2575e8b9040"
             ]
         ]
     },
@@ -17233,8 +17217,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2780,
-        "y": 760,
+        "x": 2720,
+        "y": 800,
         "wires": [
             [
                 "1b2e25245d3e1b82"
@@ -17314,12 +17298,17 @@
                 "vt": "flow"
             },
             {
+                "t": "lt",
+                "v": " $flowContext(\"desiredTemp\") - 2",
+                "vt": "jsonata"
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 2040,
         "y": 1200,
         "wires": [
@@ -17328,6 +17317,9 @@
             ],
             [
                 "96ae312dcb197748"
+            ],
+            [
+                "9ee964af3a5c9145"
             ]
         ]
     },
@@ -17625,7 +17617,7 @@
         "links": [
             "4d769e70a92d266c"
         ],
-        "x": 1275,
+        "x": 1175,
         "y": 800,
         "wires": [
             [
@@ -17837,7 +17829,7 @@
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
         "name": "function 6",
-        "func": "\n// Inputs\nvar currentTemp = msg.pidTemp;\nvar desiredTemp = msg.desiredTemp;\nvar upstairsCurrentTemp = flow.get(\"upstairsCurrentTemp\");\nvar mode = flow.get(\"mode\");\nvar proportionalGain = 0.1;\n\n// Calculate error and power\nvar error = desiredTemp - currentTemp;\nvar power = Math.min(Math.max(error * proportionalGain, 0), 1);\nflow.set(\"power\", power);\n\n// Determine fan level\nfunction getFanLevel(power, mode) {\n    if (power <= 0.2) {\n        return mode === \"cool\" ? \"medium\" : \"low\";\n    } else if (power <= 0.4) {\n        return \"medium\";\n    } else if (power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\nvar fanLevel = getFanLevel(power, mode);\n\n// Heat pump temperature logic\nvar targetRange = 5;\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\nvar threshold = 1;\nvar heatPumpTemp;\n\nif (Math.abs(error) <= threshold) {\n    heatPumpTemp = desiredTemp;\n} else {\n    if (mode === \"heat\") {\n        heatPumpTemp = Math.min(desiredTemp, Math.ceil(power * (maxTemp - minTemp) + minTemp));\n    } else if (mode === \"cool\") {\n        heatPumpTemp = Math.ceil(minTemp - power * (maxTemp - minTemp));\n    }\n}\n\n// Additional safety check for heating mode\nif (mode === \"heat\" && desiredTemp <= upstairsCurrentTemp) {\n    heatPumpTemp = Math.floor(Math.max(currentTemp, desiredTemp));\n}\n\n// Output\nreturn {\n    payload: {\n        mode: mode,\n        fanLevel: fanLevel,\n        heatPumpTemp: heatPumpTemp\n    }\n};\n",
+        "func": "// Inputs\nvar currentTemp = msg.pidTemp;\nvar desiredTemp = msg.desiredTemp;\nvar upstairsCurrentTemp = flow.get(\"upstairsCurrentTemp\");\nvar mode = flow.get(\"mode\");\nvar proportionalGain = 0.1;\n\n// Calculate error and power\nvar error = desiredTemp - currentTemp;\nvar power = Math.min(Math.max(error * proportionalGain, 0), 1);\nflow.set(\"power\", power);\n\n// Determine fan level\nfunction getFanLevel(power, mode) {\n    if (power <= 0.2) {\n        return mode === \"cool\" ? \"medium\" : \"low\";\n    } else if (power <= 0.4) {\n        return \"medium\";\n    } else if (power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Special case: fan should be \"low\" if no active heating or cooling is needed\nvar fanLevel;\nif ((mode === \"cool\" && currentTemp <= desiredTemp) ||\n    (mode === \"heat\" && currentTemp >= desiredTemp)) {\n    fanLevel = \"low\";\n    flow.set(\"swing\", \"fixedTop\")\n} else {\n    fanLevel = getFanLevel(power, mode);\n}\n\n// Heat pump temperature logic\nvar targetRange = 5;\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\nvar threshold = 1;\nvar heatPumpTemp;\n\nif (Math.abs(error) <= threshold) {\n    heatPumpTemp = desiredTemp;\n} else {\n    if (mode === \"heat\") {\n        heatPumpTemp = Math.min(desiredTemp, Math.ceil(power * (maxTemp - minTemp) + minTemp));\n    } else if (mode === \"cool\") {\n        heatPumpTemp = Math.ceil(minTemp - power * (maxTemp - minTemp));\n    }\n}\n\n// Additional safety check for heating mode\nif (mode === \"heat\" && desiredTemp <= upstairsCurrentTemp) {\n    heatPumpTemp = Math.floor(Math.max(currentTemp, desiredTemp));\n}\n\n// Output\nreturn {\n    payload: {\n        mode: mode,\n        fanLevel: fanLevel,\n        heatPumpTemp: heatPumpTemp\n    }\n};\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -17938,7 +17930,8 @@
         "y": 1480,
         "wires": [
             [
-                "85f8fe87dd4b61fc"
+                "85f8fe87dd4b61fc",
+                "d7626ca954b4fa48"
             ],
             [
                 "d7abdadaaf244ae5"
@@ -18108,7 +18101,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1400,
+        "x": 1300,
         "y": 800,
         "wires": [
             [
@@ -18155,60 +18148,17 @@
         "id": "5b70c98e8ec7f13c",
         "type": "link in",
         "z": "6df0226504208616",
-        "d": true,
         "g": "ea997eda982fbbb3",
         "name": "Pause Cool",
         "links": [
             "c4c2684c239161a6"
         ],
-        "x": 1255,
+        "x": 1155,
         "y": 900,
         "wires": [
             [
-                "2f1025ec5e42de60",
-                "3d3ca528918b2cf8"
-            ]
-        ]
-    },
-    {
-        "id": "65244f1a97e864d4",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "ea997eda982fbbb3",
-        "name": "Override settings",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "flow",
-                "to": "medium",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "BlockTemp",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "tempOn",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1490,
-        "y": 940,
-        "wires": [
-            [
-                "2485a40220025bb6"
+                "3d3ca528918b2cf8",
+                "2f1025ec5e42de60"
             ]
         ]
     },
@@ -18220,7 +18170,7 @@
         "name": "link out 15",
         "mode": "link",
         "links": [
-            "3ddd3e5ead4e3a08"
+            "a4c4757f465e4957"
         ],
         "x": 1705,
         "y": 900,
@@ -18234,7 +18184,7 @@
         "name": "link out 17",
         "mode": "link",
         "links": [
-            "2022ebc8aabd4e7b"
+            "a4c4757f465e4957"
         ],
         "x": 1705,
         "y": 860,
@@ -18245,9 +18195,7 @@
         "type": "link in",
         "z": "6df0226504208616",
         "name": "link in 7",
-        "links": [
-            "b07ed583f09164ef"
-        ],
+        "links": [],
         "x": 925,
         "y": 340,
         "wires": [
@@ -18272,7 +18220,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1580,
+        "x": 1540,
         "y": 900,
         "wires": [
             [
@@ -18286,7 +18234,7 @@
         "z": "6df0226504208616",
         "g": "ea997eda982fbbb3",
         "name": "",
-        "property": "BlockTemp",
+        "property": "ovverideFanLevel",
         "propertyType": "flow",
         "rules": [
             {
@@ -18296,7 +18244,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1450,
+        "x": 1250,
         "y": 900,
         "wires": [
             [
@@ -18309,11 +18257,11 @@
         "type": "change",
         "z": "6df0226504208616",
         "g": "ea997eda982fbbb3",
-        "name": "BlockTemp",
+        "name": "revert ovveride",
         "rules": [
             {
                 "t": "set",
-                "p": "BlockTemp",
+                "p": "ovverideFanLevel",
                 "pt": "flow",
                 "to": "false",
                 "tot": "bool"
@@ -18324,8 +18272,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1630,
-        "y": 840,
+        "x": 1560,
+        "y": 860,
         "wires": [
             [
                 "b07ed583f09164ef"
@@ -18336,14 +18284,13 @@
         "id": "2b0494dc83f08075",
         "type": "trigger",
         "z": "6df0226504208616",
-        "d": true,
         "g": "ea997eda982fbbb3",
         "name": "",
         "op1": "",
         "op2": "",
         "op1type": "nul",
         "op2type": "payl",
-        "duration": "4",
+        "duration": "2",
         "extend": false,
         "overrideDelay": false,
         "units": "min",
@@ -18351,7 +18298,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1470,
+        "x": 1370,
         "y": 860,
         "wires": [
             [
@@ -18364,9 +18311,7 @@
         "type": "link in",
         "z": "6df0226504208616",
         "name": "link in 6",
-        "links": [
-            "2485a40220025bb6"
-        ],
+        "links": [],
         "x": 1847.5506591796875,
         "y": 308.1953125,
         "wires": [
@@ -18395,7 +18340,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1360,
+        "x": 1260,
         "y": 960,
         "wires": [
             [
@@ -18413,40 +18358,19 @@
         "propertyType": "flow",
         "rules": [
             {
-                "t": "true"
-            },
-            {
                 "t": "false"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 2,
+        "outputs": 1,
         "x": 1880,
         "y": 580,
         "wires": [
             [
                 "c65b05ecba8d2a14"
-            ],
-            []
+            ]
         ]
-    },
-    {
-        "id": "22ab4947cecf7315",
-        "type": "debug",
-        "z": "6df0226504208616",
-        "g": "a1794e13fa3182f6",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2410,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "90fd7b64bf7a8c3b",
@@ -18493,10 +18417,206 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1760,
+        "x": 1920,
         "y": 660,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "d7626ca954b4fa48",
+        "type": "debug",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2270,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "9ee964af3a5c9145",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "fcd205bb0abc7676",
+        "name": "turn off",
+        "mode": "link",
+        "links": [
+            "8990cd086ea9bbb7"
+        ],
+        "x": 2395,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "53e997fa7afcf406",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "name": "Bedtime",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 04 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1720,
+        "y": 660,
+        "wires": [
+            [
+                "d4ea77e32be534e6"
+            ]
+        ]
+    },
+    {
+        "id": "78a1a1f57b1f88fc",
+        "type": "trigger",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 2220,
+        "y": 560,
+        "wires": [
+            [
+                "a41f36b66f32ca92"
+            ]
+        ]
+    },
+    {
+        "id": "40891376e4d12769",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2130,
+        "y": 520,
+        "wires": [
+            [
+                "78a1a1f57b1f88fc"
+            ]
+        ]
+    },
+    {
+        "id": "65244f1a97e864d4",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "ea997eda982fbbb3",
+        "name": "Override settings",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ovverideFanLevel",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 960,
+        "wires": [
+            [
+                "2485a40220025bb6"
+            ]
+        ]
+    },
+    {
+        "id": "3145f5d55a3b13dc",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "name": "",
+        "property": "ovverideFanLevel",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2110,
+        "y": 480,
+        "wires": [
+            [
+                "24344c5731ab554f"
+            ],
+            [
+                "d37e09db5119549c"
+            ]
+        ]
+    },
+    {
+        "id": "24344c5731ab554f",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "name": "Override settings",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fanlevel",
+                "pt": "flow",
+                "to": "medium",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2150,
+        "y": 440,
+        "wires": [
+            [
+                "d37e09db5119549c"
+            ]
         ]
     },
     {
