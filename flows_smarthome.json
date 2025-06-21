@@ -871,9 +871,9 @@
             "bc57e78aaf68965d",
             "0e2324ffdb10fe80"
         ],
-        "x": 84,
-        "y": 959,
-        "w": 862,
+        "x": 124,
+        "y": 939,
+        "w": 972,
         "h": 157
     },
     {
@@ -900,10 +900,10 @@
             "d434dc021a16f48a",
             "ab9505f554d8de4d"
         ],
-        "x": 154,
-        "y": 759,
+        "x": 124,
+        "y": 719,
         "w": 1182,
-        "h": 162
+        "h": 182
     },
     {
         "id": "9bb3180dbbe92370",
@@ -950,8 +950,8 @@
             "8360c95b413918e1",
             "1b1b701f2f4d7455"
         ],
-        "x": 204,
-        "y": 539,
+        "x": 144,
+        "y": 479,
         "w": 622,
         "h": 182
     },
@@ -1040,12 +1040,14 @@
             "2e7d3c28e8dd6ce8",
             "5bbbf38857986bec",
             "9b8502b1ce76e630",
-            "a72f5b98031d67a1"
+            "a72f5b98031d67a1",
+            "09fbdecbd38947c2",
+            "27a5f3eabc0c6aaa"
         ],
         "x": 934,
-        "y": 139,
-        "w": 792,
-        "h": 322
+        "y": 99,
+        "w": 832,
+        "h": 362
     },
     {
         "id": "21fab955d3f1b60e",
@@ -1305,8 +1307,7 @@
             "69f22820e9552291",
             "fc74b8e441ba36bb",
             "da8d02b690681002",
-            "3586e46bbd0e53af",
-            "2ae3801ae6b8b4c2"
+            "3586e46bbd0e53af"
         ],
         "x": 174,
         "y": 659,
@@ -1459,38 +1460,6 @@
         "h": 382
     },
     {
-        "id": "d72b39d80e2dd2d0",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "BEDTIME",
-        "style": {
-            "fill": "#dbcbe7",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "53138175bc43b551",
-            "a370a97cd6cd7b85",
-            "631cd00203fc49b0",
-            "e6218962b047afb4",
-            "8561e54fb5b735ab",
-            "c7bf60847ee216be",
-            "1b2e25245d3e1b82",
-            "29e04a7490f5626d",
-            "951ce2575e8b9040",
-            "deea3dba1b5f3d7f",
-            "18dc28d60921e855",
-            "6c616d3766ede9ba",
-            "5040b207ded2701a",
-            "25aa2cb4d52de446",
-            "3b1382973584f78e"
-        ],
-        "x": 1794,
-        "y": 739,
-        "w": 1132,
-        "h": 222
-    },
-    {
         "id": "a1794e13fa3182f6",
         "type": "group",
         "z": "6df0226504208616",
@@ -1512,11 +1481,12 @@
             "3145f5d55a3b13dc",
             "24344c5731ab554f",
             "d37e09db5119549c",
-            "8990cd086ea9bbb7"
+            "8990cd086ea9bbb7",
+            "83bcfcebd44e2401"
         ],
         "x": 1684,
         "y": 399,
-        "w": 842,
+        "w": 1002,
         "h": 202
     },
     {
@@ -1704,8 +1674,8 @@
         "nodes": [
             "869095c34955f071"
         ],
-        "x": 174,
-        "y": 1179,
+        "x": 74,
+        "y": 1159,
         "w": 292,
         "h": 82
     },
@@ -1734,29 +1704,6 @@
         "h": 202
     },
     {
-        "id": "fcd205bb0abc7676",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "Set Heat/Cool Mode",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "0d52269664c39451",
-            "5f453d6a949f2831",
-            "4272a2176b1df070",
-            "96ae312dcb197748",
-            "c762107e23c09087",
-            "dc14d56767de92d4",
-            "9ee964af3a5c9145",
-            "3a89b08db9eae344"
-        ],
-        "x": 1824,
-        "y": 1139,
-        "w": 612,
-        "h": 182
-    },
-    {
         "id": "5681b942a0c850d1",
         "type": "group",
         "z": "6df0226504208616",
@@ -1780,55 +1727,6 @@
         "h": 162
     },
     {
-        "id": "c10ebffd064adbf1",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "Set HeatPump MODE",
-        "style": {
-            "fill": "#ffdf7f",
-            "label": true
-        },
-        "nodes": [
-            "a02daa6ef78eada1",
-            "d402cbeefa79b5d0",
-            "6da268e8239c3766",
-            "7139a169a49d2a6c",
-            "f2a2caf2aef22299",
-            "474e25e6afa208da",
-            "82e1c9c0131715b8",
-            "a36e52e642c7856e",
-            "b6c4b310a066b151"
-        ],
-        "x": 2424,
-        "y": 1139,
-        "w": 1262,
-        "h": 162
-    },
-    {
-        "id": "618f8f538592ecef",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "Sensibo",
-        "style": {
-            "stroke": "#000000",
-            "fill": "#c8e7a7",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "14150d9b72d86dd6",
-            "f47773cda8bbfc21",
-            "39f6a65e9b06bb76",
-            "a4c4757f465e4957",
-            "4b93c7c7130630d3",
-            "7654ddd39adf0de2"
-        ],
-        "x": 954,
-        "y": 1199,
-        "w": 852,
-        "h": 122
-    },
-    {
         "id": "30b092e53a6e3512",
         "type": "group",
         "z": "6df0226504208616",
@@ -1842,30 +1740,32 @@
             "0df6de6f87baf7f1",
             "74b25828ae3bf670",
             "b9845ab333b2c4c5",
-            "3d29453fc5dbcc29",
-            "5c17644693ebd710",
-            "0c401bc0a9f39846",
-            "29b7553056896fdc",
-            "13fcc87ac38916bc",
-            "d9c7c8acd004af0b",
-            "d7af4025808c3d41",
-            "8337481f80b5b7f4",
-            "293afdcbdd3ac975",
-            "85f8fe87dd4b61fc",
-            "61c4e98cb0f6766f",
-            "d7abdadaaf244ae5",
-            "4cac99ceaecbeb28",
-            "d87207b4e0b530ac",
-            "3ce821bbf65ef322",
-            "9254f6a1e7f54470",
-            "0778bdfb7e4ffa70",
-            "6cbcb17968c3591b",
-            "90fd7b64bf7a8c3b"
+            "235757cb3f5cb203",
+            "91c878ac8b89338c",
+            "0b9cab46726b77ed",
+            "eb723f50ef3f066c",
+            "8bbb01079cd387ff",
+            "dd7354193e4b9a2d",
+            "cc8c82a34cbe38eb",
+            "156e236d65ab3593",
+            "c8d8c110042e173e",
+            "18cf395cfea1ee5a",
+            "e991a5da563b2c9b",
+            "3ee68da92f9af892",
+            "2be3e472f4b8e24c",
+            "b35c9e7e255ecca3",
+            "4112236757354b77",
+            "10beb07c22f1063a",
+            "35b9493f9139341f",
+            "bd9043bf7015d3c3",
+            "5b114758e77198ab",
+            "924f634f9205d2f3",
+            "60f9c2fc64183c18"
         ],
-        "x": 1124,
-        "y": 1439,
-        "w": 1702,
-        "h": 384
+        "x": 1174,
+        "y": 1059,
+        "w": 1972,
+        "h": 322
     },
     {
         "id": "833beeaf82e34801",
@@ -1966,9 +1866,88 @@
             "3d3ca528918b2cf8",
             "65244f1a97e864d4"
         ],
-        "x": 1144,
-        "y": 819,
+        "x": 464,
+        "y": 1119,
         "w": 642,
+        "h": 262
+    },
+    {
+        "id": "618f8f538592ecef",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "Sensibo",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#c8e7a7",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "f47773cda8bbfc21",
+            "39f6a65e9b06bb76",
+            "a4c4757f465e4957",
+            "4b93c7c7130630d3",
+            "7654ddd39adf0de2",
+            "b6c4b310a066b151",
+            "4d21b4b2e117d0fa",
+            "c1c5b503b878fba0",
+            "ce0f2d7178f4c313"
+        ],
+        "x": 1154,
+        "y": 839,
+        "w": 832,
+        "h": 142
+    },
+    {
+        "id": "8ef0badba538fdb1",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "Set HeatPump MODE",
+        "style": {
+            "fill": "#ffdf7f",
+            "label": true
+        },
+        "nodes": [
+            "7423b10c5f30be4d",
+            "519f2b14b4593494",
+            "3d6f25ffda1e34c4",
+            "b893cefa0ddb6da8",
+            "b1f2a591dd7652af",
+            "8d75e26ffcc08d92",
+            "0e5e83df1228bec9",
+            "a0261e00a4ebdb5a"
+        ],
+        "x": 2784,
+        "y": 419,
+        "w": 972,
+        "h": 182
+    },
+    {
+        "id": "ad60efdef8e2798a",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "BEDTIME",
+        "style": {
+            "fill": "#0070c0",
+            "label": true
+        },
+        "nodes": [
+            "c5b59b445ba166f3",
+            "535c8e7c992bae6f",
+            "7e80e61863ac84bb",
+            "5f39912065e39f2b",
+            "2f34542ab25a2b78",
+            "53b6e2c165133960",
+            "9250ad4749cf1604",
+            "59450958ab89d7e0",
+            "c3ccca0733150645",
+            "09adc927bc6496fb",
+            "230a2b494efecd7d",
+            "b05a48bd1b6d3165"
+        ],
+        "x": 2414,
+        "y": 719,
+        "w": 1272,
         "h": 262
     },
     {
@@ -2062,7 +2041,8 @@
                 "bc84f37c53642d5e",
                 "7607289d293a6729",
                 "3284ba0e8d50790d",
-                "5bbbf38857986bec"
+                "5bbbf38857986bec",
+                "09fbdecbd38947c2"
             ]
         ]
     },
@@ -2215,8 +2195,13 @@
             "ui-notification"
         ],
         "showPathInSidebar": false,
+        "headerContent": "page",
         "navigationStyle": "default",
-        "titleBarStyle": "default"
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 5,
+        "showDisconnectNotification": true,
+        "allowInstall": true
     },
     {
         "id": "4d021bd33834978e",
@@ -4332,14 +4317,14 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 530,
-        "y": 300,
+        "x": 550,
+        "y": 280,
         "wires": [
             [
-                "096fc2a5f95b7fe3"
+                "51d2182642492deb"
             ],
             [
-                "096fc2a5f95b7fe3"
+                "51d2182642492deb"
             ]
         ]
     },
@@ -4396,8 +4381,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 3,
-        "x": 640,
-        "y": 80,
+        "x": 580,
+        "y": 60,
         "wires": [
             [
                 "4b6cb34a2d363e76",
@@ -4698,6 +4683,33 @@
         "y": 420,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "51d2182642492deb",
+        "type": "change",
+        "z": "c15399232bac2ca3",
+        "name": "reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "b7abb1c033a236e9"
+            ]
         ]
     },
     {
@@ -5309,8 +5321,8 @@
             "dc7a9dbe.e7065",
             "e92f253c.11b9b8"
         ],
-        "x": 125,
-        "y": 1060,
+        "x": 165,
+        "y": 1040,
         "wires": [
             [
                 "6fb6663e779c4bed"
@@ -5835,8 +5847,8 @@
             "09acdfabbb87d227",
             "e8a10173e53f4a16"
         ],
-        "x": 905,
-        "y": 1060,
+        "x": 1055,
+        "y": 1040,
         "wires": []
     },
     {
@@ -5848,8 +5860,8 @@
         "links": [
             "7c9078bb.3bd958"
         ],
-        "x": 675,
-        "y": 1000,
+        "x": 715,
+        "y": 980,
         "wires": [
             [
                 "183c95c7745f2ea4"
@@ -5947,8 +5959,8 @@
         "links": [
             "641555a3.3a90ec"
         ],
-        "x": 1035,
-        "y": 820,
+        "x": 1005,
+        "y": 800,
         "wires": [
             [
                 "d17d889454f3d3a1"
@@ -5967,8 +5979,8 @@
             "c5997d499b14048a",
             "e8a10173e53f4a16"
         ],
-        "x": 1295,
-        "y": 880,
+        "x": 1265,
+        "y": 860,
         "wires": []
     },
     {
@@ -5980,8 +5992,8 @@
         "links": [
             "bc76c6da083bdd3b"
         ],
-        "x": 195,
-        "y": 880,
+        "x": 165,
+        "y": 860,
         "wires": [
             [
                 "c1cdd26489314e43",
@@ -6005,15 +6017,10 @@
                 "name": "LightTreshold",
                 "value": "150",
                 "type": "num"
-            },
-            {
-                "name": "delay",
-                "value": "5",
-                "type": "num"
             }
         ],
-        "x": 1160,
-        "y": 880,
+        "x": 1130,
+        "y": 860,
         "wires": [
             [
                 "e2d7c57f5c31b977"
@@ -6040,8 +6047,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
-        "y": 880,
+        "x": 790,
+        "y": 860,
         "wires": [
             [
                 "99fed52c6143c053"
@@ -6068,8 +6075,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 880,
+        "x": 630,
+        "y": 860,
         "wires": [
             [
                 "ca9cda18826d54da"
@@ -6114,8 +6121,8 @@
                 "type": "str"
             }
         ],
-        "x": 800,
-        "y": 1060,
+        "x": 910,
+        "y": 1040,
         "wires": [
             [
                 "21c80566.d9201a"
@@ -6375,8 +6382,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 580,
+        "x": 560,
+        "y": 520,
         "wires": [
             [
                 "d3afa1ea39895105"
@@ -6406,8 +6413,8 @@
                 "type": "num"
             }
         ],
-        "x": 390,
-        "y": 580,
+        "x": 330,
+        "y": 520,
         "wires": [
             [
                 "28f356670a5a6dc9"
@@ -6423,8 +6430,8 @@
         "links": [
             "b526ea173bec8f67"
         ],
-        "x": 245,
-        "y": 580,
+        "x": 185,
+        "y": 520,
         "wires": [
             [
                 "f2e0ac31e202a4e3",
@@ -6442,8 +6449,8 @@
         "links": [
             "e8a10173e53f4a16"
         ],
-        "x": 785,
-        "y": 580,
+        "x": 725,
+        "y": 520,
         "wires": []
     },
     {
@@ -6465,8 +6472,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 390,
-        "y": 660,
+        "x": 330,
+        "y": 600,
         "wires": [
             [
                 "8360c95b413918e1"
@@ -6496,8 +6503,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 640,
+        "x": 560,
+        "y": 580,
         "wires": [
             []
         ]
@@ -6522,8 +6529,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 680,
+        "x": 560,
+        "y": 620,
         "wires": [
             []
         ]
@@ -6582,8 +6589,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 280,
-        "y": 1060,
+        "x": 320,
+        "y": 1040,
         "wires": [
             [
                 "bc57e78aaf68965d",
@@ -7048,8 +7055,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 1060,
+        "x": 660,
+        "y": 1040,
         "wires": [
             [
                 "183c95c7745f2ea4"
@@ -7212,8 +7219,8 @@
         "links": [
             "df8e9adb3c8eb378"
         ],
-        "x": 585,
-        "y": 1000,
+        "x": 625,
+        "y": 980,
         "wires": []
     },
     {
@@ -7229,8 +7236,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 880,
+        "x": 960,
+        "y": 860,
         "wires": [
             [
                 "d17d889454f3d3a1"
@@ -7462,8 +7469,8 @@
             "63e9f9b.1d13608",
             "b9eed7dde8000c3e"
         ],
-        "x": 285,
-        "y": 840,
+        "x": 255,
+        "y": 820,
         "wires": [
             [
                 "7b175354f8d58739"
@@ -7497,8 +7504,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
-        "y": 800,
+        "x": 310,
+        "y": 780,
         "wires": [
             [
                 "d434dc021a16f48a"
@@ -7525,8 +7532,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
-        "y": 880,
+        "x": 400,
+        "y": 860,
         "wires": [
             [
                 "ed863371775575ab"
@@ -7552,8 +7559,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 460,
-        "y": 840,
+        "x": 430,
+        "y": 820,
         "wires": [
             [
                 "a0287f6dea869c13"
@@ -7579,8 +7586,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 650,
-        "y": 840,
+        "x": 620,
+        "y": 820,
         "wires": [
             [
                 "d434dc021a16f48a"
@@ -7605,8 +7612,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 810,
-        "y": 800,
+        "x": 610,
+        "y": 760,
         "wires": [
             [
                 "ed863371775575ab"
@@ -7631,8 +7638,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1160,
-        "y": 820,
+        "x": 1130,
+        "y": 800,
         "wires": [
             []
         ]
@@ -10320,8 +10327,7 @@
                 "onstart": true,
                 "payload": [
                     "presence"
-                ],
-                "uniqueId": "ui-id-8"
+                ]
             }
         ],
         "x": 270,
@@ -10626,7 +10632,7 @@
         "statustext_type": "auto",
         "search_type": "device",
         "device_list": [
-            "sensors/uniqueid/ec:1b:bd:ff:fe:3f:85:d8-01-0006"
+            "sensors/uniqueid/bc:33:ac:ff:fe:18:65:a7-01-0006"
         ],
         "device_name": "Kjøkken : ZHAPresence",
         "query": "",
@@ -10675,8 +10681,7 @@
                 "onstart": true,
                 "payload": [
                     "presence"
-                ],
-                "uniqueId": "ui-id-5"
+                ]
             }
         ],
         "x": 240,
@@ -11316,8 +11321,7 @@
         "y": 540,
         "wires": [
             [
-                "81af6cca.e9c66",
-                "81c8eb59e480cca2"
+                "878bb69c925c5374"
             ]
         ]
     },
@@ -12035,26 +12039,22 @@
         "wires": []
     },
     {
-        "id": "81c8eb59e480cca2",
-        "type": "trigger",
+        "id": "878bb69c925c5374",
+        "type": "rbe",
         "z": "1c88039c.df631c",
         "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 500,
-        "y": 560,
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.playerState",
+        "topi": "topic",
+        "x": 590,
+        "y": 540,
         "wires": [
             [
+                "81af6cca.e9c66",
                 "13862cdd3cdbbc65"
             ]
         ]
@@ -15138,7 +15138,7 @@
         "group": "f9c985920afe1003",
         "name": "",
         "label": "Temperature",
-        "order": 4,
+        "order": 5,
         "width": "2",
         "height": "1",
         "topic": "topic",
@@ -15243,6 +15243,11 @@
                 "pt": "msg",
                 "to": "fanlevel",
                 "tot": "flow"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
             }
         ],
         "action": "",
@@ -15326,101 +15331,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1370,
-        "y": 1780,
+        "x": 1390,
+        "y": 1300,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "39f6a65e9b06bb76",
-        "type": "sensibo in",
-        "z": "6df0226504208616",
-        "g": "618f8f538592ecef",
-        "sensiboAPI": "8500b44945f22748",
-        "name": "",
-        "pod": "VfTc6vFm",
-        "getconfig": true,
-        "getACState": false,
-        "polltime": "0",
-        "x": 1240,
-        "y": 1280,
-        "wires": [
-            [
-                "14150d9b72d86dd6"
-            ]
-        ]
-    },
-    {
-        "id": "a4c4757f465e4957",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "g": "618f8f538592ecef",
-        "name": "Set Mode",
-        "links": [
-            "896aa735a80611d5",
-            "5346ecce7ddb6882",
-            "b4d557df3e42313a",
-            "b07ed583f09164ef",
-            "2485a40220025bb6"
-        ],
-        "x": 1065,
-        "y": 1280,
-        "wires": [
-            [
-                "39f6a65e9b06bb76"
-            ]
-        ]
-    },
-    {
-        "id": "e6218962b047afb4",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "Cool Bedtime",
-        "rules": [
-            {
-                "t": "set",
-                "p": "mode",
-                "pt": "flow",
-                "to": "cool",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "fixedBottom",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "correctedTemp",
-                "pt": "flow",
-                "to": "16",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "flow",
-                "to": "high",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2360,
-        "y": 860,
-        "wires": [
-            [
-                "8561e54fb5b735ab",
-                "29e04a7490f5626d",
-                "5040b207ded2701a"
-            ]
         ]
     },
     {
@@ -15488,32 +15402,6 @@
         "wires": []
     },
     {
-        "id": "53138175bc43b551",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "Bedtime",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "32 20 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1900,
-        "y": 820,
-        "wires": [
-            [
-                "a370a97cd6cd7b85"
-            ]
-        ]
-    },
-    {
         "id": "74b25828ae3bf670",
         "type": "link in",
         "z": "6df0226504208616",
@@ -15522,8 +15410,8 @@
         "links": [
             "5346ecce7ddb6882"
         ],
-        "x": 1211,
-        "y": 1782,
+        "x": 1225,
+        "y": 1300,
         "wires": [
             [
                 "0df6de6f87baf7f1"
@@ -15547,41 +15435,6 @@
         "wires": []
     },
     {
-        "id": "14150d9b72d86dd6",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "618f8f538592ecef",
-        "name": "Set Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "upstairsCurrentTemp",
-                "pt": "flow",
-                "to": "result.measurements.temperature ",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "downstairsCurrentTemp",
-                "pt": "flow",
-                "to": "result.motionSensors[0].measurements.temperature - 1",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1400,
-        "y": 1280,
-        "wires": [
-            [
-                "7654ddd39adf0de2"
-            ]
-        ]
-    },
-    {
         "id": "b9845ab333b2c4c5",
         "type": "change",
         "z": "6df0226504208616",
@@ -15602,84 +15455,9 @@
         "to": "",
         "reg": false,
         "x": 1300,
-        "y": 1680,
+        "y": 1200,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "3d29453fc5dbcc29",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Temperature",
-        "mode": "link",
-        "links": [
-            "474e25e6afa208da"
-        ],
-        "x": 2785,
-        "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "a370a97cd6cd7b85",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "Mode = HOME",
-        "property": "Mode",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "away",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 2140,
-        "y": 820,
-        "wires": [
-            [
-                "631cd00203fc49b0"
-            ]
-        ]
-    },
-    {
-        "id": "631cd00203fc49b0",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "tempOn",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "bedTimeMode",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2360,
-        "y": 820,
-        "wires": [
-            [
-                "e6218962b047afb4"
-            ]
         ]
     },
     {
@@ -15705,67 +15483,6 @@
         "wires": [
             [
                 "896aa735a80611d5"
-            ]
-        ]
-    },
-    {
-        "id": "f47773cda8bbfc21",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "g": "618f8f538592ecef",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "120",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1070,
-        "y": 1240,
-        "wires": [
-            [
-                "39f6a65e9b06bb76"
-            ]
-        ]
-    },
-    {
-        "id": "5c17644693ebd710",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Sent to PID ",
-        "rules": [
-            {
-                "t": "set",
-                "p": "desiredTemp",
-                "pt": "msg",
-                "to": "desiredTemp",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "pidTemp",
-                "pt": "msg",
-                "to": "pidTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1990,
-        "y": 1540,
-        "wires": [
-            [
-                "d87207b4e0b530ac"
             ]
         ]
     },
@@ -15830,29 +15547,6 @@
         ]
     },
     {
-        "id": "0c401bc0a9f39846",
-        "type": "time-range-switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "05:55",
-        "endTime": "07:30",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 2190,
-        "y": 1620,
-        "wires": [
-            [
-                "4cac99ceaecbeb28"
-            ],
-            [
-                "29b7553056896fdc"
-            ]
-        ]
-    },
-    {
         "id": "06fb22866a0ba099",
         "type": "switch",
         "z": "6df0226504208616",
@@ -15879,181 +15573,6 @@
         ]
     },
     {
-        "id": "a02daa6ef78eada1",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "mode",
-                "pt": "msg",
-                "to": "mode",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "msg",
-                "to": "swing",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "correctedTemp",
-                "pt": "msg",
-                "to": "correctedTemp",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "msg",
-                "to": "fanlevel",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2600,
-        "y": 1220,
-        "wires": [
-            [
-                "f2a2caf2aef22299"
-            ]
-        ]
-    },
-    {
-        "id": "29b7553056896fdc",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "isStandBy",
-        "property": "isStandBy",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2340,
-        "y": 1680,
-        "wires": [
-            [
-                "9254f6a1e7f54470"
-            ],
-            [
-                "6cbcb17968c3591b"
-            ]
-        ]
-    },
-    {
-        "id": "4b93c7c7130630d3",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "618f8f538592ecef",
-        "name": "link out 23",
-        "mode": "link",
-        "links": [
-            "c762107e23c09087",
-            "39299ac6d24a9150"
-        ],
-        "x": 1765,
-        "y": 1280,
-        "wires": []
-    },
-    {
-        "id": "13fcc87ac38916bc",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "link in 9",
-        "links": [
-            "dc14d56767de92d4"
-        ],
-        "x": 1165,
-        "y": 1560,
-        "wires": [
-            [
-                "61c4e98cb0f6766f"
-            ]
-        ]
-    },
-    {
-        "id": "d9c7c8acd004af0b",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "set downstairsCurrentTemp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "pidTemp",
-                "pt": "flow",
-                "to": "downstairsCurrentTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1760,
-        "y": 1540,
-        "wires": [
-            [
-                "5c17644693ebd710"
-            ]
-        ]
-    },
-    {
-        "id": "d7af4025808c3d41",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "C UpstairsOrDownstairs",
-        "property": "$flowContext(\"upstairsCurrentTemp\") ",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "downstairsCurrentTemp",
-                "vt": "flow"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1410,
-        "y": 1620,
-        "wires": [
-            [
-                "293afdcbdd3ac975"
-            ],
-            [
-                "293afdcbdd3ac975"
-            ]
-        ],
-        "outputLabels": [
-            "Cool Upstairs",
-            "Cool Downstairs"
-        ]
-    },
-    {
         "id": "a784afbb4c38fb77",
         "type": "ui-button",
         "z": "6df0226504208616",
@@ -16061,7 +15580,7 @@
         "group": "f9c985920afe1003",
         "name": "",
         "label": "OFF",
-        "order": 3,
+        "order": 4,
         "width": 1,
         "height": 1,
         "emulateClick": false,
@@ -16095,7 +15614,7 @@
         "group": "f9c985920afe1003",
         "name": "",
         "label": "ON",
-        "order": 1,
+        "order": 2,
         "width": 1,
         "height": 1,
         "emulateClick": true,
@@ -16129,30 +15648,6 @@
         ]
     },
     {
-        "id": "7654ddd39adf0de2",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "618f8f538592ecef",
-        "name": "On/OFF",
-        "property": "tempOn",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1560,
-        "y": 1280,
-        "wires": [
-            [
-                "4b93c7c7130630d3"
-            ]
-        ]
-    },
-    {
         "id": "40c41a90bc123561",
         "type": "ui-button",
         "z": "6df0226504208616",
@@ -16160,7 +15655,7 @@
         "group": "f9c985920afe1003",
         "name": "",
         "label": "AUTO",
-        "order": 2,
+        "order": 3,
         "width": 2,
         "height": 1,
         "emulateClick": true,
@@ -16260,36 +15755,10 @@
         "name": "",
         "pod": "VfTc6vFm",
         "podSelector": "",
-        "x": 2430,
+        "x": 2590,
         "y": 540,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "d402cbeefa79b5d0",
-        "type": "trigger",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "1",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 3340,
-        "y": 1240,
-        "wires": [
-            [
-                "b6c4b310a066b151"
-            ]
         ]
     },
     {
@@ -16333,229 +15802,10 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 320,
-        "y": 1220,
+        "x": 220,
+        "y": 1200,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "8337481f80b5b7f4",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "set upstairsCurrentTemp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "pidTemp",
-                "pt": "flow",
-                "to": "upstairsCurrentTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1750,
-        "y": 1580,
-        "wires": [
-            [
-                "5c17644693ebd710"
-            ]
-        ]
-    },
-    {
-        "id": "293afdcbdd3ac975",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "swing Top",
-        "rules": [
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "fixedTop",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "pidTemp",
-                "pt": "flow",
-                "to": "upstairsCurrentTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1640,
-        "wires": [
-            [
-                "8337481f80b5b7f4"
-            ]
-        ]
-    },
-    {
-        "id": "85f8fe87dd4b61fc",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "swing Bottom",
-        "rules": [
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "fixedBottom",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 1480,
-        "wires": [
-            [
-                "d9c7c8acd004af0b"
-            ]
-        ]
-    },
-    {
-        "id": "8561e54fb5b735ab",
-        "type": "trigger",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "Turn off ",
-        "op1": "",
-        "op2": "false",
-        "op1type": "nul",
-        "op2type": "bool",
-        "duration": "2",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 2390,
-        "y": 920,
-        "wires": [
-            [
-                "c7bf60847ee216be"
-            ]
-        ]
-    },
-    {
-        "id": "c7bf60847ee216be",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "",
-        "property": "downstairsCurrentTemp",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "lte",
-                "v": "19",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2530,
-        "y": 920,
-        "wires": [
-            [
-                "deea3dba1b5f3d7f"
-            ],
-            [
-                "8561e54fb5b735ab"
-            ]
-        ]
-    },
-    {
-        "id": "61c4e98cb0f6766f",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "mode",
-        "property": "mode",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "heat",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "cool",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1230,
-        "y": 1500,
-        "wires": [
-            [
-                "0778bdfb7e4ffa70"
-            ],
-            [
-                "d7af4025808c3d41"
-            ]
-        ]
-    },
-    {
-        "id": "d7abdadaaf244ae5",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "H UpstairsOrDownstairs",
-        "property": "$flowContext(\"upstairsCurrentTemp\")  + 1",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "downstairsCurrentTemp",
-                "vt": "flow"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1430,
-        "y": 1540,
-        "wires": [
-            [
-                "85f8fe87dd4b61fc"
-            ],
-            [
-                "293afdcbdd3ac975"
-            ]
-        ],
-        "outputLabels": [
-            "Heat Downstairs",
-            "Heat Upstairs"
         ]
     },
     {
@@ -16749,20 +15999,6 @@
         ]
     },
     {
-        "id": "6da268e8239c3766",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "link out 26",
-        "mode": "link",
-        "links": [
-            "1ed32b866d4461c8"
-        ],
-        "x": 3645,
-        "y": 1240,
-        "wires": []
-    },
-    {
         "id": "1ed32b866d4461c8",
         "type": "link in",
         "z": "6df0226504208616",
@@ -16770,7 +16006,11 @@
         "name": "link in 13",
         "links": [
             "6da268e8239c3766",
-            "1b2e25245d3e1b82"
+            "1b2e25245d3e1b82",
+            "a0261e00a4ebdb5a",
+            "call_heatpump_on",
+            "fe5ae7e2df7d407f",
+            "53b6e2c165133960"
         ],
         "x": 1725,
         "y": 480,
@@ -16781,20 +16021,6 @@
         ]
     },
     {
-        "id": "deea3dba1b5f3d7f",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "link out 27",
-        "mode": "link",
-        "links": [
-            "8990cd086ea9bbb7"
-        ],
-        "x": 2685,
-        "y": 920,
-        "wires": []
-    },
-    {
         "id": "8990cd086ea9bbb7",
         "type": "link in",
         "z": "6df0226504208616",
@@ -16802,7 +16028,9 @@
         "name": "Turn OFF",
         "links": [
             "deea3dba1b5f3d7f",
-            "9ee964af3a5c9145"
+            "9ee964af3a5c9145",
+            "60f9c2fc64183c18",
+            "b05a48bd1b6d3165"
         ],
         "x": 1875,
         "y": 560,
@@ -16813,27 +16041,12 @@
         ]
     },
     {
-        "id": "1b2e25245d3e1b82",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "link out 28",
-        "mode": "link",
-        "links": [
-            "1ed32b866d4461c8",
-            "209d6f954532c595"
-        ],
-        "x": 2885,
-        "y": 840,
-        "wires": []
-    },
-    {
         "id": "3bc62f2f29b3b4f8",
         "type": "ui-text",
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 10,
+        "order": 11,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16855,7 +16068,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 9,
+        "order": 10,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16877,7 +16090,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 6,
+        "order": 7,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16983,7 +16196,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 8,
+        "order": 9,
         "width": "2",
         "height": "1",
         "name": "",
@@ -17058,406 +16271,6 @@
             [
                 "b55f6548038bcf22",
                 "a72f5b98031d67a1"
-            ]
-        ]
-    },
-    {
-        "id": "f2a2caf2aef22299",
-        "type": "time-range-switch",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "20:00",
-        "endTime": "21:30",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 2610,
-        "y": 1260,
-        "wires": [
-            [
-                "7139a169a49d2a6c"
-            ],
-            [
-                "d402cbeefa79b5d0"
-            ]
-        ]
-    },
-    {
-        "id": "7139a169a49d2a6c",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "Ready for Night",
-        "rules": [
-            {
-                "t": "set",
-                "p": "correctedTemp",
-                "pt": "flow",
-                "to": "19",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "correctedTemp",
-                "pt": "msg",
-                "to": "correctedTemp",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "mode",
-                "pt": "msg",
-                "to": "cool",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "msg",
-                "to": "fixedBottom",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "msg",
-                "to": "fanlevel",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "desiredTemp",
-                "pt": "flow",
-                "to": "correctedTemp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2880,
-        "y": 1200,
-        "wires": [
-            [
-                "82e1c9c0131715b8"
-            ]
-        ]
-    },
-    {
-        "id": "29e04a7490f5626d",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "isStandBy",
-        "property": "isStandBy",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2580,
-        "y": 840,
-        "wires": [
-            [
-                "951ce2575e8b9040"
-            ],
-            [
-                "951ce2575e8b9040"
-            ]
-        ]
-    },
-    {
-        "id": "951ce2575e8b9040",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "set medium fan",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "flow",
-                "to": "medium",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2760,
-        "y": 840,
-        "wires": [
-            [
-                "1b2e25245d3e1b82"
-            ]
-        ]
-    },
-    {
-        "id": "0d52269664c39451",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "fcd205bb0abc7676",
-        "name": "SummerTime",
-        "property": "SummerTime",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2020,
-        "y": 1260,
-        "wires": [
-            [
-                "4272a2176b1df070"
-            ],
-            [
-                "96ae312dcb197748"
-            ]
-        ]
-    },
-    {
-        "id": "5f453d6a949f2831",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "fcd205bb0abc7676",
-        "name": "Cool",
-        "rules": [
-            {
-                "t": "set",
-                "p": "mode",
-                "pt": "flow",
-                "to": "cool",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2270,
-        "y": 1240,
-        "wires": [
-            [
-                "dc14d56767de92d4"
-            ]
-        ]
-    },
-    {
-        "id": "4272a2176b1df070",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "fcd205bb0abc7676",
-        "name": "SummerTemp",
-        "property": "upstairsCurrentTemp",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "desiredTemp",
-                "vt": "flow"
-            },
-            {
-                "t": "lt",
-                "v": " $flowContext(\"desiredTemp\") - 2",
-                "vt": "jsonata"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 3,
-        "x": 2040,
-        "y": 1200,
-        "wires": [
-            [
-                "5f453d6a949f2831"
-            ],
-            [
-                "3a89b08db9eae344"
-            ],
-            [
-                "9ee964af3a5c9145",
-                "3a89b08db9eae344"
-            ]
-        ]
-    },
-    {
-        "id": "96ae312dcb197748",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "fcd205bb0abc7676",
-        "name": "Heat",
-        "rules": [
-            {
-                "t": "set",
-                "p": "mode",
-                "pt": "flow",
-                "to": "heat",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2270,
-        "y": 1280,
-        "wires": [
-            [
-                "dc14d56767de92d4"
-            ]
-        ]
-    },
-    {
-        "id": "c762107e23c09087",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "g": "fcd205bb0abc7676",
-        "name": "Calculate temperature",
-        "links": [
-            "4b93c7c7130630d3"
-        ],
-        "x": 1865,
-        "y": 1200,
-        "wires": [
-            [
-                "0d52269664c39451"
-            ]
-        ]
-    },
-    {
-        "id": "dc14d56767de92d4",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "fcd205bb0abc7676",
-        "name": "link out 29",
-        "mode": "link",
-        "links": [
-            "13fcc87ac38916bc"
-        ],
-        "x": 2365,
-        "y": 1260,
-        "wires": []
-    },
-    {
-        "id": "474e25e6afa208da",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "link in 16",
-        "links": [
-            "3d29453fc5dbcc29"
-        ],
-        "x": 2465,
-        "y": 1220,
-        "wires": [
-            [
-                "a02daa6ef78eada1"
-            ]
-        ]
-    },
-    {
-        "id": "4cac99ceaecbeb28",
-        "type": "time-range-switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "06:30",
-        "endTime": "07:30",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 2370,
-        "y": 1580,
-        "wires": [
-            [
-                "9254f6a1e7f54470"
-            ],
-            [
-                "29b7553056896fdc"
-            ]
-        ]
-    },
-    {
-        "id": "18dc28d60921e855",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2170,
-        "y": 920,
-        "wires": [
-            [
-                "8561e54fb5b735ab"
-            ]
-        ]
-    },
-    {
-        "id": "6c616d3766ede9ba",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1930,
-        "y": 920,
-        "wires": [
-            [
-                "18dc28d60921e855"
             ]
         ]
     },
@@ -17598,62 +16411,11 @@
         "links": [
             "4d769e70a92d266c"
         ],
-        "x": 1205,
-        "y": 880,
-        "wires": [
-            [
-                "6e868c43e8f5b6fb"
-            ]
-        ]
-    },
-    {
-        "id": "82e1c9c0131715b8",
-        "type": "time-range-switch",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "21:15",
-        "endTime": "21:30",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 3050,
-        "y": 1200,
-        "wires": [
-            [
-                "a36e52e642c7856e"
-            ],
-            [
-                "d402cbeefa79b5d0"
-            ]
-        ]
-    },
-    {
-        "id": "a36e52e642c7856e",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
-        "name": "set medium fan",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "flow",
-                "to": "medium",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3260,
+        "x": 525,
         "y": 1180,
         "wires": [
             [
-                "d402cbeefa79b5d0"
+                "6e868c43e8f5b6fb"
             ]
         ]
     },
@@ -17694,7 +16456,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 11,
+        "order": 12,
         "width": "2",
         "height": "1",
         "name": "",
@@ -17745,7 +16507,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 7,
+        "order": 8,
         "width": "2",
         "height": "1",
         "name": "",
@@ -17773,7 +16535,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "mode",
+                "to": "finalMode",
                 "tot": "flow"
             }
         ],
@@ -17805,179 +16567,12 @@
         ]
     },
     {
-        "id": "d87207b4e0b530ac",
-        "type": "function",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "function 6",
-        "func": "// Inputs\nvar currentTemp = msg.pidTemp;\nvar desiredTemp = msg.desiredTemp;\nvar upstairsCurrentTemp = flow.get(\"upstairsCurrentTemp\");\nvar mode = flow.get(\"mode\");\nvar proportionalGain = 0.1;\n\n// Calculate error and power\nvar error = desiredTemp - currentTemp;\nvar power = Math.min(Math.max(error * proportionalGain, 0), 1);\nflow.set(\"power\", power);\n\n// Determine fan level\nfunction getFanLevel(power, mode) {\n    if (power <= 0.2) {\n        return mode === \"cool\" ? \"medium\" : \"low\";\n    } else if (power <= 0.4) {\n        return \"medium\";\n    } else if (power <= 0.78) {\n        return \"medium_high\";\n    } else {\n        return \"high\";\n    }\n}\n\n// Special case: fan should be \"low\" if no active heating or cooling is needed\nvar fanLevel;\nif ((mode === \"cool\" && currentTemp <= desiredTemp) ||\n    (mode === \"heat\" && currentTemp >= desiredTemp)) {\n    fanLevel = \"low\";\n    flow.set(\"swing\", \"fixedTop\")\n} else {\n    fanLevel = getFanLevel(power, mode);\n}\n\n// Heat pump temperature logic\nvar targetRange = 5;\nvar minTemp = desiredTemp - targetRange / 2;\nvar maxTemp = desiredTemp + targetRange / 2;\nvar threshold = 1;\nvar heatPumpTemp;\n\nif (Math.abs(error) <= threshold) {\n    heatPumpTemp = desiredTemp;\n} else {\n    if (mode === \"heat\") {\n        heatPumpTemp = Math.min(desiredTemp, Math.ceil(power * (maxTemp - minTemp) + minTemp));\n    } else if (mode === \"cool\") {\n        heatPumpTemp = Math.ceil(minTemp - power * (maxTemp - minTemp));\n    }\n}\n\n// Additional safety check for heating mode\nif (mode === \"heat\" && desiredTemp <= upstairsCurrentTemp) {\n    heatPumpTemp = Math.floor(Math.max(currentTemp, desiredTemp));\n}\n\n// Output\nreturn {\n    payload: {\n        mode: mode,\n        fanLevel: fanLevel,\n        heatPumpTemp: heatPumpTemp\n    }\n};\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2000,
-        "y": 1580,
-        "wires": [
-            [
-                "3ce821bbf65ef322"
-            ]
-        ]
-    },
-    {
-        "id": "3ce821bbf65ef322",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Fanlevel",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "flow",
-                "to": "payload.fanLevel",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "correctedTemp",
-                "pt": "flow",
-                "to": "payload.heatPumpTemp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2000,
-        "y": 1620,
-        "wires": [
-            [
-                "0c401bc0a9f39846"
-            ]
-        ]
-    },
-    {
-        "id": "9254f6a1e7f54470",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "medium",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "flow",
-                "to": "medium",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2680,
-        "y": 1640,
-        "wires": [
-            [
-                "3d29453fc5dbcc29"
-            ]
-        ]
-    },
-    {
-        "id": "0778bdfb7e4ffa70",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "property": "B-Presence",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1370,
-        "y": 1480,
-        "wires": [
-            [
-                "85f8fe87dd4b61fc"
-            ],
-            [
-                "d7abdadaaf244ae5"
-            ]
-        ]
-    },
-    {
-        "id": "6cbcb17968c3591b",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload",
-        "topi": "topic",
-        "x": 2670,
-        "y": 1680,
-        "wires": [
-            [
-                "3d29453fc5dbcc29"
-            ]
-        ]
-    },
-    {
-        "id": "5040b207ded2701a",
-        "type": "api-call-service",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "",
-        "server": "c8d8b6d992397cb8",
-        "version": 7,
-        "debugenabled": false,
-        "action": "climate.turn_off",
-        "floorId": [],
-        "areaId": [],
-        "deviceId": [
-            "5a4e2f4e0df2023b5ff44b3687215459"
-        ],
-        "entityId": [],
-        "labelId": [],
-        "data": "20",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "blockInputOverrides": true,
-        "domain": "climate",
-        "service": "turn_off",
-        "x": 2520,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "9b8502b1ce76e630",
         "type": "ui-text",
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 12,
+        "order": 13,
         "width": "2",
         "height": "1",
         "name": "",
@@ -18023,46 +16618,6 @@
         ]
     },
     {
-        "id": "25aa2cb4d52de446",
-        "type": "ui-button",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "group": "f9c985920afe1003",
-        "name": "",
-        "label": "BEDTIME COOL",
-        "order": 5,
-        "width": 2,
-        "height": 1,
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "msg",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 1990,
-        "y": 780,
-        "wires": [
-            [
-                "a370a97cd6cd7b85"
-            ]
-        ]
-    },
-    {
         "id": "6e868c43e8f5b6fb",
         "type": "switch",
         "z": "6df0226504208616",
@@ -18081,8 +16636,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1330,
-        "y": 880,
+        "x": 650,
+        "y": 1180,
         "wires": [
             [
                 "c92c6d509c408791",
@@ -18103,26 +16658,9 @@
         "links": [
             "3b1382973584f78e"
         ],
-        "x": 1745,
-        "y": 860,
+        "x": 1065,
+        "y": 1160,
         "wires": []
-    },
-    {
-        "id": "3b1382973584f78e",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "g": "d72b39d80e2dd2d0",
-        "name": "link in 5",
-        "links": [
-            "c92c6d509c408791"
-        ],
-        "x": 2165,
-        "y": 860,
-        "wires": [
-            [
-                "e6218962b047afb4"
-            ]
-        ]
     },
     {
         "id": "5b70c98e8ec7f13c",
@@ -18133,8 +16671,8 @@
         "links": [
             "c4c2684c239161a6"
         ],
-        "x": 1185,
-        "y": 980,
+        "x": 505,
+        "y": 1280,
         "wires": [
             [
                 "3d3ca528918b2cf8",
@@ -18152,8 +16690,8 @@
         "links": [
             "a4c4757f465e4957"
         ],
-        "x": 1735,
-        "y": 980,
+        "x": 1055,
+        "y": 1280,
         "wires": []
     },
     {
@@ -18166,8 +16704,8 @@
         "links": [
             "a4c4757f465e4957"
         ],
-        "x": 1735,
-        "y": 940,
+        "x": 1055,
+        "y": 1240,
         "wires": []
     },
     {
@@ -18200,8 +16738,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1570,
-        "y": 980,
+        "x": 890,
+        "y": 1280,
         "wires": [
             [
                 "65244f1a97e864d4"
@@ -18224,8 +16762,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1280,
-        "y": 980,
+        "x": 600,
+        "y": 1280,
         "wires": [
             [
                 "7cd6dfaf3b3a6ac6"
@@ -18252,8 +16790,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1590,
-        "y": 940,
+        "x": 910,
+        "y": 1240,
         "wires": [
             [
                 "b07ed583f09164ef"
@@ -18278,8 +16816,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1400,
-        "y": 940,
+        "x": 720,
+        "y": 1240,
         "wires": [
             [
                 "f96846a3223ab71c"
@@ -18320,37 +16858,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1290,
-        "y": 1040,
+        "x": 610,
+        "y": 1340,
         "wires": [
             [
                 "2b0494dc83f08075"
-            ]
-        ]
-    },
-    {
-        "id": "90fd7b64bf7a8c3b",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "props": [
-            {
-                "p": "reset",
-                "v": "true",
-                "vt": "bool"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 2500,
-        "y": 1720,
-        "wires": [
-            [
-                "6cbcb17968c3591b"
             ]
         ]
     },
@@ -18378,21 +16890,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "9ee964af3a5c9145",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "d": true,
-        "g": "fcd205bb0abc7676",
-        "name": "turn off",
-        "mode": "link",
-        "links": [
-            "8990cd086ea9bbb7"
-        ],
-        "x": 2395,
-        "y": 1200,
-        "wires": []
     },
     {
         "id": "53e997fa7afcf406",
@@ -18493,8 +16990,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1640,
-        "y": 1040,
+        "x": 960,
+        "y": 1340,
         "wires": [
             [
                 "2485a40220025bb6"
@@ -18560,10 +17057,828 @@
         ]
     },
     {
+        "id": "ec0e1a7b3b4cbacc",
+        "type": "function",
+        "z": "6df0226504208616",
+        "name": "Enhanced Seasonal Detection",
+        "func": "// === ENHANCED SEASONAL DETECTION ===\n// Automatically detects season and sets appropriate defaults\n\nvar currentMonth = new Date().getMonth() + 1; // 1-12\nvar currentDate = new Date();\nvar manualSummer = global.get('SummerTime');\n\n// Auto-detect season based on date\nvar autoSummer = false;\nif (currentMonth >= 5 && currentMonth <= 9) {\n    autoSummer = true;\n}\n\n// Use manual setting if available, otherwise auto-detect\nvar isSummer = (manualSummer !== undefined) ? manualSummer : autoSummer;\n\n// Set seasonal parameters\nvar seasonName = isSummer ? 'Summer' : 'Winter';\nvar focusArea = isSummer ? 'Upstairs' : 'Downstairs';\nvar primaryMode = isSummer ? 'cool' : 'heat';\nvar defaultSwing = isSummer ? 'fixedTop' : 'fixedBottom';\n\n// Temperature safety ranges\nvar safetyMin = isSummer ? 18 : 16;\nvar safetyMax = isSummer ? 28 : 25;\nvar comfortRange = isSummer ? '18-28°C' : '16-25°C';\n\n// Store in global context\nglobal.set('SummerTime', isSummer);\nglobal.set('seasonName', seasonName);\nglobal.set('focusArea', focusArea);\nglobal.set('primaryMode', primaryMode);\nglobal.set('defaultSwing', defaultSwing);\nglobal.set('safetyMin', safetyMin);\nglobal.set('safetyMax', safetyMax);\n\n// Enhanced logging\nnode.status({\n    fill: isSummer ? 'yellow' : 'blue',\n    shape: 'dot',\n    text: `${seasonName} Mode - Focus: ${focusArea} (${comfortRange})`\n});\n\nreturn {\n    payload: {\n        season: seasonName,\n        isSummer: isSummer,\n        focusArea: focusArea,\n        primaryMode: primaryMode,\n        defaultSwing: defaultSwing,\n        safetyRange: comfortRange,\n        autoDetected: manualSummer === undefined,\n        timestamp: currentDate.toISOString()\n    }\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2210,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca36feb0e9257681",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "name": "Update Season",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 5,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1890,
+        "y": 780,
+        "wires": [
+            [
+                "ec0e1a7b3b4cbacc"
+            ]
+        ]
+    },
+    {
+        "id": "882b25e10c1b9f7b",
+        "type": "function",
+        "z": "6df0226504208616",
+        "name": "Temperature Monitor & Alerts",
+        "func": "// === TEMPERATURE MONITORING & ALERTS ===\n// Monitors temperature trends and provides alerts\n\nvar upstairsTemp = flow.get('upstairsCurrentTemp') || 20;\nvar downstairsTemp = flow.get('downstairsCurrentTemp') || 20;\nvar desiredTemp = flow.get('desiredTemp') || 21;\nvar isSummer = global.get('SummerTime') || false;\n\n// Calculate temperature differences\nvar upstairsDiff = upstairsTemp - desiredTemp;\nvar downstairsDiff = downstairsTemp - desiredTemp;\nvar floorDiff = Math.abs(upstairsTemp - downstairsTemp);\n\n// Alert conditions\nvar alerts = [];\nvar warnings = [];\n\n// Extreme temperature alerts\nif (upstairsTemp > 29) alerts.push('🔥 Upstairs critically hot!');\nif (downstairsTemp < 15) alerts.push('🧊 Downstairs critically cold!');\nif (upstairsTemp < 15) alerts.push('🧊 Upstairs critically cold!');\nif (downstairsTemp > 29) alerts.push('🔥 Downstairs critically hot!');\n\n// Large temperature difference warnings\nif (floorDiff > 6) {\n    warnings.push(`⚠️ Large floor temp difference: ${floorDiff.toFixed(1)}°C`);\n}\n\n// Seasonal comfort warnings\nif (isSummer) {\n    if (upstairsDiff > 3) warnings.push('☀️ Upstairs too hot for summer comfort');\n    if (downstairsTemp < 19) warnings.push('❄️ Downstairs getting too cold');\n} else {\n    if (downstairsDiff < -3) warnings.push('❄️ Downstairs too cold for winter comfort');\n    if (upstairsTemp > 24) warnings.push('☀️ Upstairs getting too hot');\n}\n\n// Store monitoring data\nflow.set('temperatureAlerts', alerts);\nflow.set('temperatureWarnings', warnings);\nflow.set('floorTempDiff', floorDiff);\n\n// Update node status\nvar statusText = `${upstairsTemp}°C↕${downstairsTemp}°C`;\nvar statusColor = 'green';\n\nif (alerts.length > 0) {\n    statusColor = 'red';\n    statusText += ` ${alerts.length} ALERTS`;\n} else if (warnings.length > 0) {\n    statusColor = 'yellow';\n    statusText += ` ${warnings.length} warnings`;\n}\n\nnode.status({\n    fill: statusColor,\n    shape: 'dot',\n    text: statusText\n});\n\nreturn {\n    payload: {\n        upstairsTemp: upstairsTemp,\n        downstairsTemp: downstairsTemp,\n        desiredTemp: desiredTemp,\n        floorDiff: floorDiff,\n        alerts: alerts,\n        warnings: warnings,\n        isSummer: isSummer,\n        timestamp: new Date().toISOString()\n    }\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2220,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "235757cb3f5cb203",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "set downstairsCurrentTemp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pidTemp",
+                "pt": "flow",
+                "to": "downstairsCurrentTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1920,
+        "y": 1160,
+        "wires": [
+            [
+                "0b9cab46726b77ed"
+            ]
+        ]
+    },
+    {
+        "id": "91c878ac8b89338c",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "swing Bottom",
+        "rules": [
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "flow",
+                "to": "fixedBottom",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1780,
+        "y": 1100,
+        "wires": [
+            [
+                "235757cb3f5cb203"
+            ]
+        ]
+    },
+    {
+        "id": "0b9cab46726b77ed",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "Sent to PID ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "desiredTemp",
+                "pt": "msg",
+                "to": "desiredTemp",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "pidTemp",
+                "pt": "msg",
+                "to": "pidTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2150,
+        "y": 1160,
+        "wires": [
+            [
+                "cc8c82a34cbe38eb"
+            ]
+        ]
+    },
+    {
+        "id": "eb723f50ef3f066c",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "H UpstairsOrDownstairs",
+        "property": "$flowContext(\"upstairsCurrentTemp\")  + 1",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "downstairsCurrentTemp",
+                "vt": "flow"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1590,
+        "y": 1160,
+        "wires": [
+            [
+                "91c878ac8b89338c"
+            ],
+            [
+                "156e236d65ab3593"
+            ]
+        ],
+        "outputLabels": [
+            "Heat Downstairs",
+            "Heat Upstairs"
+        ]
+    },
+    {
+        "id": "8bbb01079cd387ff",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "",
+        "property": "B-Presence",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1530,
+        "y": 1100,
+        "wires": [
+            [
+                "91c878ac8b89338c"
+            ],
+            [
+                "eb723f50ef3f066c"
+            ]
+        ]
+    },
+    {
+        "id": "dd7354193e4b9a2d",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "set upstairsCurrentTemp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pidTemp",
+                "pt": "flow",
+                "to": "upstairsCurrentTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1910,
+        "y": 1200,
+        "wires": [
+            [
+                "0b9cab46726b77ed"
+            ]
+        ]
+    },
+    {
+        "id": "cc8c82a34cbe38eb",
+        "type": "function",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "Improved Temperature Control",
+        "func": "// === IMPROVED TEMPERATURE CONTROL with STRICT COMFORT ZONE & HYSTERESIS ===\n\n// --- CONFIGURATION ---\nconst COMFORT_TOLERANCE = flow.get('comfortTolerance') || 1.0; // ±1°C comfort zone, easily adjustable\nconst SUMMER_MIN_TEMP = 18;\nconst SUMMER_MAX_TEMP = 28;\nconst WINTER_MIN_TEMP = 16;\nconst WINTER_MAX_TEMP = 25;\nconst COOL_BLOCK_BELOW = 19; // Don’t cool if downstairs is colder\nconst HEAT_BLOCK_ABOVE = 24; // Don’t heat if upstairs is warmer\n\n// (Optional) Minimum On/Off time in seconds\nconst MIN_ON_OFF_TIME_SEC = 600; // 10 minutes\n\n// --- INPUTS ---\nconst currentTemp = msg.pidTemp || 20;\nconst desiredTemp = msg.desiredTemp || 21;\nconst upstairsCurrentTemp = flow.get('upstairsCurrentTemp') || 20;\nconst downstairsCurrentTemp = flow.get('downstairsCurrentTemp') || 20;\nconst mode = flow.get('mode') || 'auto';\nconst isSummer = global.get('SummerTime') || false;\nconst lastModeChange = flow.get('lastModeChange') || 0;\n\n// --- SEASON DETECTION ---\nconst currentMonth = new Date().getMonth() + 1;\nconst season = (isSummer || (currentMonth >= 5 && currentMonth <= 9)) ? 'summer' : 'winter';\n\n// --- TIME LOGIC ---\nconst now = Date.now();\nconst secondsSinceLastChange = (now - lastModeChange) / 1000;\n\n// --- DECISION LOGIC ---\nlet controlMode = 'off';\nlet targetTemp = desiredTemp;\nlet swing = 'fixedTop';\nlet fanLevel = 'medium';\nlet reason = '';\nlet shouldTurnOn = false;\n\n// --- STRICT COMFORT ZONE ENFORCEMENT ---\nif (season === 'summer') {\n    // SUMMER: Only cool if upstairs is above comfort zone.\n    if (upstairsCurrentTemp > desiredTemp + COMFORT_TOLERANCE) {\n        // Only cool if downstairs is safe\n        if (downstairsCurrentTemp > COOL_BLOCK_BELOW) {\n            controlMode = 'cool';\n            swing = 'fixedTop';\n            shouldTurnOn = true;\n\n            let tempDiff = upstairsCurrentTemp - desiredTemp;\n            if (tempDiff > 3) { fanLevel = 'high'; targetTemp = Math.max(SUMMER_MIN_TEMP, desiredTemp - 1); }\n            else if (tempDiff > 2) { fanLevel = 'medium_high'; }\n            else if (tempDiff > 1) { fanLevel = 'medium'; }\n            else { fanLevel = 'low'; }\n\n            reason = `Cooling: Upstairs ${upstairsCurrentTemp}°C > target ${desiredTemp}°C (downstairs safe at ${downstairsCurrentTemp}°C)`;\n        } else {\n            reason = `COOL BLOCKED: Downstairs ${downstairsCurrentTemp}°C < ${COOL_BLOCK_BELOW}°C`;\n        }\n    } else if (upstairsCurrentTemp > SUMMER_MAX_TEMP) {\n        controlMode = 'cool';\n        swing = 'fixedTop';\n        targetTemp = SUMMER_MAX_TEMP - 2;\n        fanLevel = 'high';\n        shouldTurnOn = true;\n        reason = `EMERGENCY: Upstairs ${upstairsCurrentTemp}°C > ${SUMMER_MAX_TEMP}°C`;\n    } else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `No cooling: Upstairs ${upstairsCurrentTemp}°C within comfort zone (≤${desiredTemp + COMFORT_TOLERANCE}°C)`;\n    }\n} else {\n    // WINTER: Only heat if downstairs is below comfort zone.\n    if (downstairsCurrentTemp < desiredTemp - COMFORT_TOLERANCE) {\n        if (upstairsCurrentTemp < HEAT_BLOCK_ABOVE) {\n            controlMode = 'heat';\n            swing = 'fixedBottom';\n            shouldTurnOn = true;\n\n            let tempDiff = desiredTemp - downstairsCurrentTemp;\n            if (tempDiff > 3) { fanLevel = 'high'; targetTemp = Math.min(WINTER_MAX_TEMP, desiredTemp + 1); }\n            else if (tempDiff > 2) { fanLevel = 'medium_high'; }\n            else if (tempDiff > 1) { fanLevel = 'medium'; }\n            else { fanLevel = 'low'; }\n\n            reason = `Heating: Downstairs ${downstairsCurrentTemp}°C < target ${desiredTemp}°C (upstairs safe at ${upstairsCurrentTemp}°C)`;\n        } else {\n            reason = `HEAT BLOCKED: Upstairs ${upstairsCurrentTemp}°C > ${HEAT_BLOCK_ABOVE}°C`;\n        }\n    } else if (downstairsCurrentTemp < WINTER_MIN_TEMP) {\n        controlMode = 'heat';\n        swing = 'fixedBottom';\n        targetTemp = Math.min(WINTER_MAX_TEMP, WINTER_MIN_TEMP + 3);\n        fanLevel = 'high';\n        shouldTurnOn = true;\n        reason = `EMERGENCY: Downstairs ${downstairsCurrentTemp}°C < ${WINTER_MIN_TEMP}°C`;\n    } else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `No heating: Downstairs ${downstairsCurrentTemp}°C within comfort zone (≥${desiredTemp - COMFORT_TOLERANCE}°C)`;\n    }\n}\n\n// --- SAFETY LIMITS ---\nif (controlMode === 'cool' && targetTemp < SUMMER_MIN_TEMP) {\n    targetTemp = SUMMER_MIN_TEMP;\n    reason += ` [Limited to min ${SUMMER_MIN_TEMP}°C]`;\n}\nif (controlMode === 'heat' && targetTemp > WINTER_MAX_TEMP) {\n    targetTemp = WINTER_MAX_TEMP;\n    reason += ` [Limited to max ${WINTER_MAX_TEMP}°C]`;\n}\n\n// --- (OPTIONAL) MINIMUM ON/OFF TIME ---\nif (flow.get('lastControlMode') !== controlMode) {\n    if (secondsSinceLastChange < MIN_ON_OFF_TIME_SEC && controlMode !== 'off') {\n        // Block mode change due to min on/off time\n        shouldTurnOn = false;\n        controlMode = 'off';\n        reason += ` [Blocked: min ON/OFF time not elapsed (${Math.round(secondsSinceLastChange)}s < ${MIN_ON_OFF_TIME_SEC}s)]`;\n    } else {\n        // Mode change allowed, update timestamp\n        flow.set('lastModeChange', now);\n        flow.set('lastControlMode', controlMode);\n    }\n}\n\n// --- OUTPUT & CONTEXT ---\nflow.set('calculatedMode', controlMode);\nflow.set('season', season);\nflow.set('shouldTurnOn', shouldTurnOn);\nflow.set('controlReason', reason);\nflow.set('swing', swing);\nflow.set('fanlevel', fanLevel);\nflow.set('correctedTemp', Math.round(targetTemp));\n\n// --- OUTPUT ---\nreturn {\n    payload: {\n        mode: controlMode,\n        fanLevel: fanLevel,\n        heatPumpTemp: Math.round(targetTemp),\n        swing: swing,\n        shouldTurnOn: shouldTurnOn,\n        season: season,\n        upstairsTemp: upstairsCurrentTemp,\n        downstairsTemp: downstairsCurrentTemp,\n        desiredTemp: desiredTemp,\n        reason: reason,\n        timestamp: new Date().toISOString()\n    }\n};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2160,
+        "y": 1200,
+        "wires": [
+            [
+                "18cf395cfea1ee5a"
+            ]
+        ]
+    },
+    {
+        "id": "18cf395cfea1ee5a",
+        "type": "function",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "Safety Validator",
+        "func": "// === FINAL SAFETY VALIDATION ===\n// This function provides a final safety check before sending commands to heat pump\n\nvar upstairsTemp = flow.get('upstairsCurrentTemp') || 20;\nvar downstairsTemp = flow.get('downstairsCurrentTemp') || 20;\nvar mode = msg.payload.mode;\nvar targetTemp = msg.payload.heatPumpTemp;\nvar shouldTurnOn = msg.payload.shouldTurnOn;\nvar reason = msg.payload.reason;\n\n// Absolute safety limits - these should never be exceeded\nconst ABSOLUTE_MIN_TEMP = 15;\nconst ABSOLUTE_MAX_TEMP = 30;\nconst CROSS_FLOOR_LIMIT = 5; // Max temp difference between floors\n\nvar safetyBlock = false;\nvar safetyReason = '';\n\n// Check absolute temperature limits\nif (targetTemp < ABSOLUTE_MIN_TEMP) {\n    targetTemp = ABSOLUTE_MIN_TEMP;\n    safetyReason += `[Target raised to absolute min ${ABSOLUTE_MIN_TEMP}°C] `;\n}\nif (targetTemp > ABSOLUTE_MAX_TEMP) {\n    targetTemp = ABSOLUTE_MAX_TEMP;\n    safetyReason += `[Target lowered to absolute max ${ABSOLUTE_MAX_TEMP}°C] `;\n}\n\n// Check for extreme cross-floor temperature differences\nvar tempDiff = Math.abs(upstairsTemp - downstairsTemp);\nif (tempDiff > CROSS_FLOOR_LIMIT) {\n    // Large temperature difference - be more conservative\n    if (mode === 'cool' && upstairsTemp - downstairsTemp > CROSS_FLOOR_LIMIT) {\n        // Upstairs much hotter than downstairs - reduce cooling intensity\n        if (targetTemp < 20) {\n            targetTemp = 20;\n            safetyReason += `[Cooling limited: large temp diff ${tempDiff.toFixed(1)}°C] `;\n        }\n    } else if (mode === 'heat' && downstairsTemp - upstairsTemp > CROSS_FLOOR_LIMIT) {\n        // Downstairs much colder than upstairs - reduce heating intensity\n        if (targetTemp > 23) {\n            targetTemp = 23;\n            safetyReason += `[Heating limited: large temp diff ${tempDiff.toFixed(1)}°C] `;\n        }\n    }\n}\n\n// Check for potential comfort issues\nif (mode === 'cool') {\n    // Cooling mode safety checks\n    if (downstairsTemp < 18) {\n        safetyBlock = true;\n        safetyReason += `[BLOCKED: Downstairs too cold ${downstairsTemp}°C] `;\n    } else if (downstairsTemp < 19 && targetTemp < 21) {\n        targetTemp = 21;\n        safetyReason += `[Cooling moderated: protecting downstairs] `;\n    }\n} else if (mode === 'heat') {\n    // Heating mode safety checks\n    if (upstairsTemp > 25) {\n        safetyBlock = true;\n        safetyReason += `[BLOCKED: Upstairs too hot ${upstairsTemp}°C] `;\n    } else if (upstairsTemp > 23 && targetTemp > 22) {\n        targetTemp = 22;\n        safetyReason += `[Heating moderated: protecting upstairs] `;\n    }\n}\n\n// Apply safety blocks\nif (safetyBlock) {\n    shouldTurnOn = false;\n    mode = 'off';\n}\n\n// Update the message with safety-validated values\nmsg.payload.mode = mode;\nmsg.payload.heatPumpTemp = targetTemp;\nmsg.payload.shouldTurnOn = shouldTurnOn;\nmsg.payload.reason = reason + safetyReason;\nmsg.payload.safetyValidated = true;\nmsg.payload.safetyReason = safetyReason;\n\n// Store final validated values in flow context\nflow.set('finalMode', mode);\nflow.set('finalTargetTemp', targetTemp);\nflow.set('finalShouldTurnOn', shouldTurnOn);\nflow.set('safetyReason', safetyReason);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2420,
+        "y": 1200,
+        "wires": [
+            [
+                "2be3e472f4b8e24c"
+            ]
+        ]
+    },
+    {
+        "id": "156e236d65ab3593",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "swing Top",
+        "rules": [
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "flow",
+                "to": "fixedTop",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "pidTemp",
+                "pt": "flow",
+                "to": "upstairsCurrentTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1800,
+        "y": 1260,
+        "wires": [
+            [
+                "dd7354193e4b9a2d"
+            ]
+        ]
+    },
+    {
+        "id": "c8d8c110042e173e",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "mode",
+        "property": "mode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "heat",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "cool",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1390,
+        "y": 1120,
+        "wires": [
+            [
+                "8bbb01079cd387ff"
+            ],
+            [
+                "e991a5da563b2c9b"
+            ]
+        ]
+    },
+    {
+        "id": "2be3e472f4b8e24c",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "Fanlevel",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fanlevel",
+                "pt": "flow",
+                "to": "payload.fanLevel",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "correctedTemp",
+                "pt": "flow",
+                "to": "payload.heatPumpTemp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2160,
+        "y": 1240,
+        "wires": [
+            [
+                "b35c9e7e255ecca3"
+            ]
+        ]
+    },
+    {
+        "id": "e991a5da563b2c9b",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "C UpstairsOrDownstairs",
+        "property": "$flowContext(\"upstairsCurrentTemp\") ",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "downstairsCurrentTemp",
+                "vt": "flow"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1570,
+        "y": 1240,
+        "wires": [
+            [
+                "156e236d65ab3593"
+            ],
+            [
+                "156e236d65ab3593"
+            ]
+        ],
+        "outputLabels": [
+            "Cool Upstairs",
+            "Cool Downstairs"
+        ]
+    },
+    {
+        "id": "3ee68da92f9af892",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "link in 9",
+        "links": [
+            "4b93c7c7130630d3"
+        ],
+        "x": 1235,
+        "y": 1120,
+        "wires": [
+            [
+                "c8d8c110042e173e"
+            ]
+        ]
+    },
+    {
+        "id": "b35c9e7e255ecca3",
+        "type": "time-range-switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "05:55",
+        "endTime": "07:30",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 2350,
+        "y": 1240,
+        "wires": [
+            [
+                "4112236757354b77"
+            ],
+            [
+                "10beb07c22f1063a"
+            ]
+        ]
+    },
+    {
+        "id": "4112236757354b77",
+        "type": "time-range-switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "06:30",
+        "endTime": "07:30",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 2690,
+        "y": 1200,
+        "wires": [
+            [
+                "35b9493f9139341f"
+            ],
+            [
+                "10beb07c22f1063a"
+            ]
+        ]
+    },
+    {
+        "id": "10beb07c22f1063a",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "isStandBy",
+        "property": "isStandBy",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2500,
+        "y": 1300,
+        "wires": [
+            [
+                "35b9493f9139341f"
+            ],
+            [
+                "bd9043bf7015d3c3"
+            ]
+        ]
+    },
+    {
+        "id": "35b9493f9139341f",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "medium",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fanlevel",
+                "pt": "flow",
+                "to": "medium",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2840,
+        "y": 1260,
+        "wires": [
+            [
+                "5b114758e77198ab"
+            ]
+        ]
+    },
+    {
+        "id": "bd9043bf7015d3c3",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 2830,
+        "y": 1300,
+        "wires": [
+            [
+                "924f634f9205d2f3"
+            ]
+        ]
+    },
+    {
+        "id": "5b114758e77198ab",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "Temperature",
+        "mode": "link",
+        "links": [
+            "474e25e6afa208da",
+            "7423b10c5f30be4d"
+        ],
+        "x": 3105,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "09fbdecbd38947c2",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "76afa4ece7428050",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "controlReason",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1440,
+        "y": 140,
+        "wires": [
+            [
+                "27a5f3eabc0c6aaa"
+            ]
+        ]
+    },
+    {
+        "id": "27a5f3eabc0c6aaa",
+        "type": "ui-text",
+        "z": "6df0226504208616",
+        "g": "76afa4ece7428050",
+        "group": "f9c985920afe1003",
+        "order": 1,
+        "width": "4",
+        "height": 1,
+        "name": "controlReason",
+        "label": "controlReason",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "x": 1660,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "924f634f9205d2f3",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "",
+        "property": "finalMode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2970,
+        "y": 1300,
+        "wires": [
+            [
+                "60f9c2fc64183c18"
+            ],
+            [
+                "5b114758e77198ab"
+            ]
+        ]
+    },
+    {
+        "id": "60f9c2fc64183c18",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "link out 20",
+        "mode": "link",
+        "links": [
+            "8990cd086ea9bbb7"
+        ],
+        "x": 3095,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "83bcfcebd44e2401",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1850,
+        "y": 460,
+        "wires": [
+            [
+                "48e94d16bcba20da"
+            ]
+        ]
+    },
+    {
+        "id": "f47773cda8bbfc21",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "g": "618f8f538592ecef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "120",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1270,
+        "y": 880,
+        "wires": [
+            [
+                "39f6a65e9b06bb76"
+            ]
+        ]
+    },
+    {
+        "id": "39f6a65e9b06bb76",
+        "type": "sensibo in",
+        "z": "6df0226504208616",
+        "g": "618f8f538592ecef",
+        "sensiboAPI": "8500b44945f22748",
+        "name": "",
+        "pod": "VfTc6vFm",
+        "getconfig": true,
+        "getACState": false,
+        "polltime": "0",
+        "x": 1460,
+        "y": 900,
+        "wires": [
+            [
+                "ce0f2d7178f4c313"
+            ]
+        ]
+    },
+    {
+        "id": "a4c4757f465e4957",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "618f8f538592ecef",
+        "name": "Set Mode",
+        "links": [
+            "896aa735a80611d5",
+            "5346ecce7ddb6882",
+            "b4d557df3e42313a",
+            "b07ed583f09164ef",
+            "2485a40220025bb6"
+        ],
+        "x": 1275,
+        "y": 920,
+        "wires": [
+            [
+                "39f6a65e9b06bb76"
+            ]
+        ]
+    },
+    {
+        "id": "4b93c7c7130630d3",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "618f8f538592ecef",
+        "name": "link out 23",
+        "mode": "link",
+        "links": [
+            "c762107e23c09087",
+            "39299ac6d24a9150",
+            "3ee68da92f9af892"
+        ],
+        "x": 1945,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "7654ddd39adf0de2",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "618f8f538592ecef",
+        "name": "On/OFF",
+        "property": "tempOn",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1860,
+        "y": 940,
+        "wires": [
+            [
+                "4b93c7c7130630d3"
+            ]
+        ]
+    },
+    {
         "id": "b6c4b310a066b151",
         "type": "switch",
         "z": "6df0226504208616",
-        "g": "c10ebffd064adbf1",
+        "g": "618f8f538592ecef",
         "name": "bedTimeMode",
         "property": "bedTimeMode",
         "propertyType": "flow",
@@ -18575,36 +17890,647 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 3520,
-        "y": 1240,
+        "x": 1860,
+        "y": 900,
         "wires": [
             [
-                "6da268e8239c3766"
+                "7654ddd39adf0de2"
             ]
         ]
     },
     {
-        "id": "3a89b08db9eae344",
-        "type": "time-range-switch",
+        "id": "4d21b4b2e117d0fa",
+        "type": "switch",
         "z": "6df0226504208616",
-        "g": "fcd205bb0abc7676",
+        "g": "618f8f538592ecef",
         "name": "",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "06:30",
-        "endTime": "08:30",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 2250,
-        "y": 1180,
+        "property": "upstairsCurrentTemp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "",
+                "vt": "prev"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1690,
+        "y": 900,
         "wires": [
             [
-                "96ae312dcb197748"
-            ],
-            [
-                "5f453d6a949f2831"
+                "b6c4b310a066b151"
             ]
         ]
+    },
+    {
+        "id": "c1c5b503b878fba0",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "618f8f538592ecef",
+        "name": "",
+        "property": "downstairsCurrentTemp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "",
+                "vt": "prev"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1690,
+        "y": 940,
+        "wires": [
+            [
+                "b6c4b310a066b151"
+            ]
+        ]
+    },
+    {
+        "id": "ce0f2d7178f4c313",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "618f8f538592ecef",
+        "name": "Set Temp (with offset & fallback)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "upstairsCurrentTemp",
+                "pt": "flow",
+                "to": "$number(result.measurements.temperature) ? result.measurements.temperature : $flowContext('lastUpstairs', 20)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "downstairsCurrentTemp",
+                "pt": "flow",
+                "to": "$number(result.motionSensors[0].measurements.temperature) ? result.motionSensors[0].measurements.temperature - $flowContext('downstairsOffset', 1) : $flowContext('lastDownstairs', 20)",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "lastUpstairs",
+                "pt": "flow",
+                "to": "flow.upstairsCurrentTemp",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "lastDownstairs",
+                "pt": "flow",
+                "to": "flow.downstairsCurrentTemp",
+                "tot": "flow"
+            }
+        ],
+        "x": 1490,
+        "y": 940,
+        "wires": [
+            [
+                "4d21b4b2e117d0fa",
+                "c1c5b503b878fba0"
+            ]
+        ]
+    },
+    {
+        "id": "7423b10c5f30be4d",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "8ef0badba538fdb1",
+        "name": "link in: HeatPump Params",
+        "links": [
+            "5b114758e77198ab"
+        ],
+        "x": 2825,
+        "y": 460,
+        "wires": [
+            [
+                "519f2b14b4593494"
+            ]
+        ]
+    },
+    {
+        "id": "519f2b14b4593494",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "8ef0badba538fdb1",
+        "name": "Set msg from flow vars",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mode",
+                "pt": "msg",
+                "to": "mode",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "msg",
+                "to": "swing",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "correctedTemp",
+                "pt": "msg",
+                "to": "correctedTemp",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "fanlevel",
+                "pt": "msg",
+                "to": "fanlevel",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "modeType",
+                "pt": "msg",
+                "to": "normal",
+                "tot": "str"
+            }
+        ],
+        "x": 2970,
+        "y": 460,
+        "wires": [
+            [
+                "3d6f25ffda1e34c4"
+            ]
+        ]
+    },
+    {
+        "id": "3d6f25ffda1e34c4",
+        "type": "time-range-switch",
+        "z": "6df0226504208616",
+        "g": "8ef0badba538fdb1",
+        "name": "Is Ready for Night? (20:00-21:30)",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "20:00",
+        "endTime": "21:30",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 3020,
+        "y": 500,
+        "wires": [
+            [
+                "b893cefa0ddb6da8"
+            ],
+            [
+                "0e5e83df1228bec9"
+            ]
+        ]
+    },
+    {
+        "id": "b893cefa0ddb6da8",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "8ef0badba538fdb1",
+        "name": "Set Night Mode Params",
+        "rules": [
+            {
+                "t": "set",
+                "p": "correctedTemp",
+                "pt": "msg",
+                "to": "19",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "mode",
+                "pt": "msg",
+                "to": "cool",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "msg",
+                "to": "fixedBottom",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "modeType",
+                "pt": "msg",
+                "to": "night",
+                "tot": "str"
+            }
+        ],
+        "x": 3240,
+        "y": 460,
+        "wires": [
+            [
+                "b1f2a591dd7652af"
+            ]
+        ]
+    },
+    {
+        "id": "b1f2a591dd7652af",
+        "type": "time-range-switch",
+        "z": "6df0226504208616",
+        "g": "8ef0badba538fdb1",
+        "name": "Is Night Fan Medium? (21:15-21:30)",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "21:15",
+        "endTime": "21:30",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 3560,
+        "y": 460,
+        "wires": [
+            [
+                "8d75e26ffcc08d92"
+            ],
+            [
+                "0e5e83df1228bec9"
+            ]
+        ]
+    },
+    {
+        "id": "8d75e26ffcc08d92",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "8ef0badba538fdb1",
+        "name": "Force Medium Fan",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fanlevel",
+                "pt": "msg",
+                "to": "medium",
+                "tot": "str"
+            }
+        ],
+        "x": 3520,
+        "y": 500,
+        "wires": [
+            [
+                "0e5e83df1228bec9"
+            ]
+        ]
+    },
+    {
+        "id": "0e5e83df1228bec9",
+        "type": "trigger",
+        "z": "6df0226504208616",
+        "g": "8ef0badba538fdb1",
+        "name": "Delay 1s to prevent rapid changes",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "1",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 3410,
+        "y": 560,
+        "wires": [
+            [
+                "a0261e00a4ebdb5a"
+            ]
+        ]
+    },
+    {
+        "id": "a0261e00a4ebdb5a",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "8ef0badba538fdb1",
+        "name": "link out: To HeatPump Device",
+        "mode": "link",
+        "links": [
+            "1ed32b866d4461c8"
+        ],
+        "x": 3715,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "7e80e61863ac84bb",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Bedtime (20:32 every day)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "32 20 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2580,
+        "y": 760,
+        "wires": [
+            [
+                "535c8e7c992bae6f"
+            ]
+        ]
+    },
+    {
+        "id": "c5b59b445ba166f3",
+        "type": "ui-button",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "group": "f9c985920afe1003",
+        "name": "BEDTIME COOL",
+        "label": "BEDTIME COOL",
+        "order": 6,
+        "width": 2,
+        "height": 1,
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "x": 2610,
+        "y": 800,
+        "wires": [
+            [
+                "535c8e7c992bae6f"
+            ]
+        ]
+    },
+    {
+        "id": "535c8e7c992bae6f",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Only if HOME",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "away",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 2820,
+        "y": 800,
+        "wires": [
+            [
+                "5f39912065e39f2b"
+            ]
+        ]
+    },
+    {
+        "id": "5f39912065e39f2b",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Set Bedtime Flags (block auto)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bedTimeMode",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "tempOn",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "bedtimeTries",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "x": 2870,
+        "y": 840,
+        "wires": [
+            [
+                "2f34542ab25a2b78"
+            ]
+        ]
+    },
+    {
+        "id": "2f34542ab25a2b78",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Set Cooling Params (Bedtime)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mode",
+                "pt": "flow",
+                "to": "cool",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "swing",
+                "pt": "flow",
+                "to": "fixedBottom",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "correctedTemp",
+                "pt": "flow",
+                "to": "16",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "fanlevel",
+                "pt": "flow",
+                "to": "high",
+                "tot": "str"
+            }
+        ],
+        "x": 3150,
+        "y": 800,
+        "wires": [
+            [
+                "53b6e2c165133960",
+                "9250ad4749cf1604"
+            ]
+        ]
+    },
+    {
+        "id": "53b6e2c165133960",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Send Bedtime Cool to Heatpump",
+        "mode": "link",
+        "links": [
+            "1ed32b866d4461c8"
+        ],
+        "x": 3395,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "9250ad4749cf1604",
+        "type": "delay",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Wait 10 min (cooling)",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 3160,
+        "y": 840,
+        "wires": [
+            [
+                "59450958ab89d7e0"
+            ]
+        ]
+    },
+    {
+        "id": "59450958ab89d7e0",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Temp ≤ 19?",
+        "property": "downstairsCurrentTemp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "19",
+                "vt": "num"
+            },
+            {
+                "t": "gt",
+                "v": "19",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 3170,
+        "y": 900,
+        "wires": [
+            [
+                "b05a48bd1b6d3165",
+                "230a2b494efecd7d"
+            ],
+            [
+                "09adc927bc6496fb"
+            ]
+        ]
+    },
+    {
+        "id": "09adc927bc6496fb",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Increment Retries",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bedtimeTries",
+                "pt": "flow",
+                "to": "$flowContext('bedtimeTries', 0) + 1",
+                "tot": "jsonata"
+            }
+        ],
+        "x": 3330,
+        "y": 940,
+        "wires": [
+            [
+                "c3ccca0733150645",
+                "230a2b494efecd7d"
+            ]
+        ]
+    },
+    {
+        "id": "c3ccca0733150645",
+        "type": "delay",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Wait 5 min, retry",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 3540,
+        "y": 940,
+        "wires": [
+            [
+                "59450958ab89d7e0"
+            ]
+        ]
+    },
+    {
+        "id": "230a2b494efecd7d",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Reset Bedtime Flags (resume auto)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "bedTimeMode",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "x": 3520,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b05a48bd1b6d3165",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "link out 21",
+        "mode": "link",
+        "links": [
+            "8990cd086ea9bbb7"
+        ],
+        "x": 3395,
+        "y": 840,
+        "wires": []
     },
     {
         "id": "3a621e1.6c980e2",
@@ -22045,8 +21971,7 @@
         "y": 780,
         "wires": [
             [
-                "39f321390ee435bd",
-                "2ae3801ae6b8b4c2"
+                "39f321390ee435bd"
             ]
         ]
     },
@@ -24110,23 +24035,6 @@
                 "7be94949b0599c5f"
             ]
         ]
-    },
-    {
-        "id": "2ae3801ae6b8b4c2",
-        "type": "debug",
-        "z": "2153cce4d74e8cba",
-        "g": "a3172e532d882fe7",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1230,
-        "y": 700,
-        "wires": []
     },
     {
         "id": "ddc8b687.374538",
