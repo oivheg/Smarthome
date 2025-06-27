@@ -1933,17 +1933,20 @@
             "5f39912065e39f2b",
             "2f34542ab25a2b78",
             "53b6e2c165133960",
-            "9250ad4749cf1604",
             "59450958ab89d7e0",
             "230a2b494efecd7d",
             "b05a48bd1b6d3165",
             "c04a717471583b69",
-            "de85e56cfab7f6c6"
+            "de85e56cfab7f6c6",
+            "a26a49517fb18ae3",
+            "6bc69d4b02521386",
+            "72943a870fbbb2c8",
+            "5215193faea2fd66"
         ],
-        "x": 2414,
+        "x": 2374,
         "y": 719,
-        "w": 1232,
-        "h": 262
+        "w": 1052,
+        "h": 282
     },
     {
         "id": "6e32bf19c51ed3a4",
@@ -11800,17 +11803,21 @@
                 "t": "eq",
                 "v": "PAUSED",
                 "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "false",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 570,
         "y": 720,
         "wires": [
             [
                 "e2ea86d61ab387e5"
             ],
+            [],
             [
                 "0eccc6337151cd8d"
             ]
@@ -17115,7 +17122,7 @@
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
         "name": "Improved Temperature Control",
-        "func": "// === IMPROVED TEMPERATURE CONTROL with MORNING HEATING & SPECIAL SUMMER CASE ===\n\n// --- CONFIGURATION ---\nconst COMFORT_TOLERANCE = flow.get('comfortTolerance') || 1.0;\nconst SUMMER_MIN_TEMP = 18;\nconst SUMMER_MAX_TEMP = 28;\nconst WINTER_MIN_TEMP = 16;\nconst WINTER_MAX_TEMP = 25;\nconst COOL_BLOCK_BELOW = 19;\nconst HEAT_BLOCK_ABOVE = 24;\nconst MIN_ON_OFF_TIME_SEC = 600;\n\n// --- INPUTS ---\nconst currentTemp = msg.pidTemp || 20;\nconst desiredTemp = msg.desiredTemp || 21;\nconst upstairsCurrentTemp = flow.get('upstairsCurrentTemp') || 20;\nconst downstairsCurrentTemp = flow.get('downstairsCurrentTemp') || 20;\nconst mode = flow.get('mode') || 'auto';\nconst isSummer = global.get('SummerTime') || false;\nconst lastModeChange = flow.get('lastModeChange') || 0;\nconst isMorning = msg.isMorning === true;\n\n// --- SEASON DETECTION ---\nconst currentMonth = new Date().getMonth() + 1;\nconst season = (isSummer || (currentMonth >= 5 && currentMonth <= 9)) ? 'summer' : 'winter';\n\n// --- TIME LOGIC ---\nconst now = Date.now();\nconst secondsSinceLastChange = (now - lastModeChange) / 1000;\n\n// --- DECISION LOGIC ---\nlet controlMode = 'off';\nlet targetTemp = desiredTemp;\nlet swing = 'fixedTop';\nlet fanLevel = 'low';\nlet reason = '';\nlet shouldTurnOn = false;\n\n// --- SPECIAL CONDITIONS ---\nconst allowLightSummerHeat = (season === 'summer') && (upstairsCurrentTemp === 22.5);\n\n// --- HEATING LOGIC ---\nfunction applyHeatingLogic(context) {\n    controlMode = 'heat';\n    swing = 'fixedBottom';\n    shouldTurnOn = true;\n\n    const tempDiff = desiredTemp - downstairsCurrentTemp;\n    if (tempDiff > 4) { fanLevel = 'high'; targetTemp = Math.min(WINTER_MAX_TEMP, desiredTemp + 1); }\n    else if (tempDiff > 3) { fanLevel = 'medium_high'; }\n    else if (tempDiff > 2) { fanLevel = 'medium'; }\n    else { fanLevel = 'low'; }\n\n    reason = context;\n}\n\n// --- MAIN LOGIC ---\nif (season === 'summer') {\n    if (allowLightSummerHeat) {\n        applyHeatingLogic(`Special Case: Light heating allowed in summer due to upstairs temp = 22.5°C`);\n    } else if (isMorning) {\n        applyHeatingLogic(`Morning Warm-Up: Light heating allowed between 6–8 AM`);\n    } else {\n        if (upstairsCurrentTemp > desiredTemp + COMFORT_TOLERANCE) {\n            if (downstairsCurrentTemp > COOL_BLOCK_BELOW) {\n                controlMode = 'cool';\n                swing = 'fixedTop';\n                shouldTurnOn = true;\n\n                const tempDiff = upstairsCurrentTemp - desiredTemp;\n                if (tempDiff > 4) { fanLevel = 'high'; targetTemp = Math.max(SUMMER_MIN_TEMP, desiredTemp - 1); }\n                else if (tempDiff > 3) { fanLevel = 'medium_high'; }\n                else if (tempDiff > 2) { fanLevel = 'medium'; }\n                else { fanLevel = 'low'; }\n\n                reason = `Cooling: Upstairs ${upstairsCurrentTemp}°C > target ${desiredTemp}°C (downstairs safe at ${downstairsCurrentTemp}°C)`;\n            } else {\n                reason = `COOL BLOCKED: Downstairs ${downstairsCurrentTemp}°C < ${COOL_BLOCK_BELOW}°C`;\n            }\n        } else if (upstairsCurrentTemp > SUMMER_MAX_TEMP) {\n            controlMode = 'cool';\n            swing = 'fixedTop';\n            targetTemp = SUMMER_MAX_TEMP - 2;\n            fanLevel = 'high';\n            shouldTurnOn = true;\n            reason = `EMERGENCY: Upstairs ${upstairsCurrentTemp}°C > ${SUMMER_MAX_TEMP}°C`;\n        } else {\n            controlMode = 'off';\n            shouldTurnOn = false;\n            reason = `No cooling: Upstairs ${upstairsCurrentTemp}°C within comfort zone (≤${desiredTemp + COMFORT_TOLERANCE}°C)`;\n        }\n    }\n} else {\n    if (downstairsCurrentTemp < desiredTemp - COMFORT_TOLERANCE) {\n        if (upstairsCurrentTemp < HEAT_BLOCK_ABOVE) {\n            applyHeatingLogic(`Heating: Downstairs ${downstairsCurrentTemp}°C < target ${desiredTemp}°C (upstairs safe at ${upstairsCurrentTemp}°C)`);\n        } else {\n            reason = `HEAT BLOCKED: Upstairs ${upstairsCurrentTemp}°C > ${HEAT_BLOCK_ABOVE}°C`;\n        }\n    } else if (downstairsCurrentTemp < WINTER_MIN_TEMP) {\n        controlMode = 'heat';\n        swing = 'fixedBottom';\n        targetTemp = Math.min(WINTER_MAX_TEMP, WINTER_MIN_TEMP + 3);\n        fanLevel = 'high';\n        shouldTurnOn = true;\n        reason = `EMERGENCY: Downstairs ${downstairsCurrentTemp}°C < ${WINTER_MIN_TEMP}°C`;\n    } else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `No heating: Downstairs ${downstairsCurrentTemp}°C within comfort zone (≥${desiredTemp - COMFORT_TOLERANCE}°C)`;\n    }\n}\n\n// --- OVERRIDE: Always heat if fan is low or swing is fixedBottom ---\nif ((fanLevel === 'low' || swing === 'fixedBottom') && controlMode !== 'heat') {\n    controlMode = 'heat';\n    swing = 'fixedBottom';\n    shouldTurnOn = true;\n    reason += ` [Override: Always heat if fan is low or swing is fixedBottom]`;\n}\n\n// --- SAFETY LIMITS ---\nif (controlMode === 'cool' && targetTemp < SUMMER_MIN_TEMP) {\n    targetTemp = SUMMER_MIN_TEMP;\n    reason += ` [Limited to min ${SUMMER_MIN_TEMP}°C]`;\n}\nif (controlMode === 'heat' && targetTemp > WINTER_MAX_TEMP) {\n    targetTemp = WINTER_MAX_TEMP;\n    reason += ` [Limited to max ${WINTER_MAX_TEMP}°C]`;\n}\n\n// --- MINIMUM ON/OFF TIME ---\nif (flow.get('lastControlMode') !== controlMode) {\n    if (secondsSinceLastChange < MIN_ON_OFF_TIME_SEC && controlMode !== 'off') {\n        shouldTurnOn = false;\n        controlMode = 'off';\n        reason += ` [Blocked: min ON/OFF time not elapsed (${Math.round(secondsSinceLastChange)}s < ${MIN_ON_OFF_TIME_SEC}s)]`;\n    } else {\n        flow.set('lastModeChange', now);\n        flow.set('lastControlMode', controlMode);\n    }\n}\n\n// --- OUTPUT & CONTEXT ---\nflow.set('mode', controlMode);\nflow.set('season', season);\nflow.set('shouldTurnOn', shouldTurnOn);\nflow.set('controlReason', reason);\nflow.set('swing', swing);\nflow.set('fanlevel', fanLevel);\nflow.set('correctedTemp', Math.round(targetTemp));\n\n// --- OUTPUT ---\nreturn {\n    payload: {\n        mode: controlMode,\n        fanLevel: fanLevel,\n        heatPumpTemp: Math.round(targetTemp),\n        swing: swing,\n        shouldTurnOn: shouldTurnOn,\n        season: season,\n        upstairsTemp: upstairsCurrentTemp,\n        downstairsTemp: downstairsCurrentTemp,\n        desiredTemp: desiredTemp,\n        reason: reason,\n        timestamp: new Date().toISOString()\n    }\n};\n",
+        "func": "// === ADVANCED TEMPERATURE CONTROL with EMERGENCY COOLING OVERRIDE ===\n\n// --- CONFIGURATION ---\nconst COMFORT_TOLERANCE = flow.get('comfortTolerance') || 1.0;\nconst SUMMER_MIN_TEMP = 18;\nconst SUMMER_MAX_TEMP = 28;\nconst WINTER_MIN_TEMP = 16;\nconst WINTER_MAX_TEMP = 25;\nconst COOL_BLOCK_BELOW = 19;\nconst HEAT_BLOCK_ABOVE = 24;\nconst MIN_ON_OFF_TIME_SEC = 600;\n\n// --- INPUTS ---\nconst desiredTemp = flow.get('desiredTemp') || 21;\nconst upstairsCurrentTemp = flow.get('upstairsCurrentTemp') || 20;\nconst downstairsCurrentTemp = flow.get('downstairsCurrentTemp') || 20;\nconst mode = flow.get('mode') || 'auto';\nconst isSummer = global.get('SummerTime') || false;\nconst lastModeChange = flow.get('lastModeChange') || 0;\nconst isMorning = msg.isMorning === true;\n\n// --- SEASON DETECTION ---\nconst currentMonth = new Date().getMonth() + 1;\nconst season = (isSummer || (currentMonth >= 5 && currentMonth <= 9)) ? 'summer' : 'winter';\n\n// --- TIME LOGIC ---\nconst now = Date.now();\nconst secondsSinceLastChange = (now - lastModeChange) / 1000;\n\n// --- DECISION LOGIC ---\nlet controlMode = 'off';\nlet targetTemp = desiredTemp;\nlet swing = 'fixedTop';\nlet fanLevel = 'low';\nlet reason = '';\nlet shouldTurnOn = false;\n\n// --- SPECIAL CONDITIONS ---\nconst allowLightSummerHeat = (season === 'summer') && (upstairsCurrentTemp === 22.5);\n\n// --- HEATING LOGIC ---\nfunction applyHeatingLogic(context, referenceTemp = downstairsCurrentTemp) {\n    controlMode = 'heat';\n    swing = 'fixedBottom';\n    shouldTurnOn = true;\n\n    const tempDiff = desiredTemp - referenceTemp;\n    if (tempDiff < -4) { fanLevel = 'high'; targetTemp = Math.min(WINTER_MAX_TEMP, desiredTemp + 1); }\n    else if (tempDiff < -3) { fanLevel = 'medium_high'; }\n    else if (tempDiff < -2) { fanLevel = 'medium'; }\n    else { fanLevel = 'low'; }\n\n    reason = context;\n}\n\n// --- MAIN LOGIC ---\nif (season === 'summer') {\n    if (allowLightSummerHeat) {\n        applyHeatingLogic(`Special Case: Light heating allowed in summer due to upstairs temp = 22.5°C`, upstairsCurrentTemp);\n    } else if (isMorning) {\n        applyHeatingLogic(`Morning Warm-Up: Light heating allowed between 6–8 AM`, upstairsCurrentTemp);\n    } else {\n        if (upstairsCurrentTemp > desiredTemp + COMFORT_TOLERANCE && downstairsCurrentTemp > COOL_BLOCK_BELOW) {\n            const tempDiff = upstairsCurrentTemp - desiredTemp;\n            if (tempDiff > 3.5) { fanLevel = 'high'; targetTemp = Math.max(SUMMER_MIN_TEMP, desiredTemp - 1); }\n            else if (tempDiff > 2.5) { fanLevel = 'medium_high'; }\n            else if (tempDiff > 1.5) { fanLevel = 'medium'; }\n            else { fanLevel = 'low'; }\n\n            controlMode = 'cool';\n            swing = 'fixedTop';\n            shouldTurnOn = true;\n            reason = `Cooling: Upstairs ${upstairsCurrentTemp}°C > target ${desiredTemp}°C (downstairs safe at ${downstairsCurrentTemp}°C)`;\n        } else if (upstairsCurrentTemp > SUMMER_MAX_TEMP) {\n            controlMode = 'cool';\n            swing = 'fixedTop';\n            targetTemp = SUMMER_MAX_TEMP - 2;\n            fanLevel = 'high';\n            shouldTurnOn = true;\n            reason = `EMERGENCY: Upstairs ${upstairsCurrentTemp}°C > ${SUMMER_MAX_TEMP}°C`;\n        } else {\n            controlMode = 'off';\n            shouldTurnOn = false;\n            reason = `No cooling: Upstairs ${upstairsCurrentTemp}°C within comfort zone (≤${desiredTemp + COMFORT_TOLERANCE}°C)`;\n        }\n    }\n} else {\n    if (downstairsCurrentTemp < desiredTemp - COMFORT_TOLERANCE) {\n        if (upstairsCurrentTemp < HEAT_BLOCK_ABOVE) {\n            applyHeatingLogic(`Heating: Downstairs ${downstairsCurrentTemp}°C < target ${desiredTemp}°C (upstairs safe at ${upstairsCurrentTemp}°C)`);\n        } else {\n            reason = `HEAT BLOCKED: Upstairs ${upstairsCurrentTemp}°C > ${HEAT_BLOCK_ABOVE}°C`;\n        }\n    } else if (downstairsCurrentTemp < WINTER_MIN_TEMP) {\n        controlMode = 'heat';\n        swing = 'fixedBottom';\n        targetTemp = Math.min(WINTER_MAX_TEMP, WINTER_MIN_TEMP + 3);\n        fanLevel = 'high';\n        shouldTurnOn = true;\n        reason = `EMERGENCY: Downstairs ${downstairsCurrentTemp}°C < ${WINTER_MIN_TEMP}°C`;\n    } else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `No heating: Downstairs ${downstairsCurrentTemp}°C within comfort zone (≥${desiredTemp - COMFORT_TOLERANCE}°C)`;\n    }\n}\n\n// --- EMERGENCY COOLING OVERRIDE ---\nconst emergencyCooling = (controlMode === 'cool' && upstairsCurrentTemp > 23.5);\n\n// --- SAFETY LIMITS ---\nif (controlMode === 'cool' && targetTemp < SUMMER_MIN_TEMP) {\n    targetTemp = SUMMER_MIN_TEMP;\n    reason += ` [Limited to min ${SUMMER_MIN_TEMP}°C]`;\n}\nif (controlMode === 'heat' && targetTemp > WINTER_MAX_TEMP) {\n    targetTemp = WINTER_MAX_TEMP;\n    reason += ` [Limited to max ${WINTER_MAX_TEMP}°C]`;\n}\n\n// --- MINIMUM ON/OFF TIME ---\nif (flow.get('lastControlMode') !== controlMode) {\n    if (secondsSinceLastChange < MIN_ON_OFF_TIME_SEC && controlMode !== 'off' && !emergencyCooling) {\n        shouldTurnOn = false;\n        controlMode = 'off';\n        reason += ` [Blocked: min ON/OFF time not elapsed (${Math.round(secondsSinceLastChange)}s < ${MIN_ON_OFF_TIME_SEC}s)]`;\n    } else {\n        flow.set('lastModeChange', now);\n        flow.set('lastControlMode', controlMode);\n    }\n}\n\n// --- OUTPUT & CONTEXT ---\nflow.set('mode', controlMode);\nflow.set('season', season);\nflow.set('shouldTurnOn', shouldTurnOn);\nflow.set('controlReason', reason);\nflow.set('swing', swing);\nflow.set('fanlevel', fanLevel);\nflow.set('correctedTemp', Math.round(targetTemp));\n\n// --- OUTPUT ---\nreturn {\n    payload: {\n        mode: controlMode,\n        fanLevel: fanLevel,\n        heatPumpTemp: Math.round(targetTemp),\n        swing: swing,\n        shouldTurnOn: shouldTurnOn,\n        season: season,\n        upstairsTemp: upstairsCurrentTemp,\n        downstairsTemp: downstairsCurrentTemp,\n        desiredTemp: desiredTemp,\n        reason: reason,\n        timestamp: new Date().toISOString()\n    }\n};\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -17764,8 +17771,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2580,
-        "y": 760,
+        "x": 2540,
+        "y": 800,
         "wires": [
             [
                 "535c8e7c992bae6f"
@@ -17801,8 +17808,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 2610,
-        "y": 800,
+        "x": 2530,
+        "y": 880,
         "wires": [
             [
                 "535c8e7c992bae6f"
@@ -17827,8 +17834,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 2820,
-        "y": 800,
+        "x": 2600,
+        "y": 840,
         "wires": [
             [
                 "5f39912065e39f2b"
@@ -17865,7 +17872,7 @@
             }
         ],
         "x": 2870,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "2f34542ab25a2b78"
@@ -17908,13 +17915,13 @@
                 "tot": "str"
             }
         ],
-        "x": 3150,
-        "y": 800,
+        "x": 2870,
+        "y": 840,
         "wires": [
             [
-                "53b6e2c165133960",
-                "9250ad4749cf1604",
-                "de85e56cfab7f6c6"
+                "de85e56cfab7f6c6",
+                "a26a49517fb18ae3",
+                "6bc69d4b02521386"
             ]
         ]
     },
@@ -17928,35 +17935,9 @@
         "links": [
             "1ed32b866d4461c8"
         ],
-        "x": 3395,
+        "x": 3385,
         "y": 800,
         "wires": []
-    },
-    {
-        "id": "9250ad4749cf1604",
-        "type": "delay",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "Wait 10 min (cooling)",
-        "pauseType": "delay",
-        "timeout": "10",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 3160,
-        "y": 840,
-        "wires": [
-            [
-                "59450958ab89d7e0"
-            ]
-        ]
     },
     {
         "id": "59450958ab89d7e0",
@@ -17981,8 +17962,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 3170,
-        "y": 900,
+        "x": 3150,
+        "y": 920,
         "wires": [
             [
                 "b05a48bd1b6d3165",
@@ -18008,8 +17989,8 @@
                 "tot": "bool"
             }
         ],
-        "x": 3480,
-        "y": 900,
+        "x": 3220,
+        "y": 960,
         "wires": [
             []
         ]
@@ -18024,8 +18005,8 @@
         "links": [
             "8990cd086ea9bbb7"
         ],
-        "x": 3395,
-        "y": 840,
+        "x": 3375,
+        "y": 900,
         "wires": []
     },
     {
@@ -18091,8 +18072,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 3170,
-        "y": 940,
+        "x": 3150,
+        "y": 880,
         "wires": [
             [
                 "59450958ab89d7e0"
@@ -18205,12 +18186,13 @@
         "id": "5215193faea2fd66",
         "type": "link in",
         "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
         "name": "link in 5",
         "links": [
             "916bd70aa0a07205"
         ],
-        "x": 3305,
-        "y": 900,
+        "x": 3005,
+        "y": 960,
         "wires": [
             [
                 "230a2b494efecd7d"
@@ -18352,10 +18334,92 @@
         "blockInputOverrides": true,
         "domain": "climate",
         "service": "turn_off",
-        "x": 3380,
+        "x": 3160,
         "y": 760,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "a26a49517fb18ae3",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "is_playing",
+        "property": "is_playing",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 3140,
+        "y": 800,
+        "wires": [
+            [
+                "53b6e2c165133960"
+            ],
+            [
+                "72943a870fbbb2c8"
+            ]
+        ]
+    },
+    {
+        "id": "6bc69d4b02521386",
+        "type": "trigger",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Wait 10 min (cooling)",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 2860,
+        "y": 900,
+        "wires": [
+            [
+                "59450958ab89d7e0"
+            ]
+        ]
+    },
+    {
+        "id": "72943a870fbbb2c8",
+        "type": "trigger",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Wait 10 min (cooling)",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 3180,
+        "y": 840,
+        "wires": [
+            [
+                "a26a49517fb18ae3"
+            ]
         ]
     },
     {
