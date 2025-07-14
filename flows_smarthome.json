@@ -1280,12 +1280,14 @@
             "8d9ebcf8551eea4b",
             "b3f9adc55b666094",
             "f27df5b9f6840243",
-            "9a51081d9dca2356"
+            "9a51081d9dca2356",
+            "1683544e57ff8fa9",
+            "06a76cb3da5742c4"
         ],
         "x": 1854,
-        "y": 39,
+        "y": -1,
         "w": 552,
-        "h": 162
+        "h": 202
     },
     {
         "id": "a3172e532d882fe7",
@@ -1391,12 +1393,14 @@
             "5ca10b6218e10f1a",
             "b3ea9a13d1f2b71d",
             "bba74b7af0063e94",
-            "6e2a6b2335a9dc23"
+            "6e2a6b2335a9dc23",
+            "772f9c1b8b6b7713",
+            "4cb805cbab89b41b"
         ],
         "x": 154,
-        "y": 499,
+        "y": 479,
         "w": 1382,
-        "h": 262
+        "h": 282
     },
     {
         "id": "0a0b0609692fe022",
@@ -1452,7 +1456,9 @@
             "9a32b6d26ea58f65",
             "0f11f6ab1cb7a7dc",
             "aaf5b9532af1fbac",
-            "d13df963babc7388"
+            "d13df963babc7388",
+            "d8ddcd9494c894c6",
+            "2d89c6f3277b5730"
         ],
         "x": 934,
         "y": -1,
@@ -1755,12 +1761,19 @@
             "b105d364dd632eb4",
             "4c63e198f3ed9e1a",
             "f3a3f2678d7010fc",
-            "7ea1e5abd9933cce"
+            "7ea1e5abd9933cce",
+            "de81f43ca21e1a84",
+            "fbfaad3f07d0a37f",
+            "2323851ca3bbf2bf",
+            "9188439f2a8ff0ef",
+            "f2b2dea39a0a4e98",
+            "b81032edf5296633",
+            "b1d89ae0747313ec"
         ],
         "x": 1564,
         "y": 1099,
         "w": 1432,
-        "h": 282
+        "h": 382
     },
     {
         "id": "833beeaf82e34801",
@@ -1885,8 +1898,6 @@
             "7654ddd39adf0de2",
             "b6c4b310a066b151",
             "ce0f2d7178f4c313",
-            "e0230d8d307915ef",
-            "204ea53f432f0a98",
             "3d6f25ffda1e34c4",
             "7390da7f15be3f75"
         ],
@@ -2069,6 +2080,36 @@
             [
                 "da32744a0963ce5f",
                 "a41f36b66f32ca92"
+            ]
+        ]
+    },
+    {
+        "id": "de81f43ca21e1a84",
+        "type": "junction",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "x": 1980,
+        "y": 1240,
+        "wires": [
+            [
+                "fbfaad3f07d0a37f",
+                "2323851ca3bbf2bf",
+                "9188439f2a8ff0ef",
+                "f2b2dea39a0a4e98",
+                "b81032edf5296633"
+            ]
+        ]
+    },
+    {
+        "id": "b1d89ae0747313ec",
+        "type": "junction",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "x": 2220,
+        "y": 1380,
+        "wires": [
+            [
+                "2be3e472f4b8e24c"
             ]
         ]
     },
@@ -8290,11 +8331,13 @@
         "y": 600,
         "wires": [
             [
-                "ebfc5adc.7672f8"
+                "ebfc5adc.7672f8",
+                "4cb805cbab89b41b"
             ],
             [
                 "fdbf838e.f9e58",
-                "b3ea9a13d1f2b71d"
+                "b3ea9a13d1f2b71d",
+                "772f9c1b8b6b7713"
             ]
         ]
     },
@@ -8435,7 +8478,8 @@
         "wires": [
             [
                 "a5d3065e.5a0698",
-                "77b78689.5eac68"
+                "77b78689.5eac68",
+                "d8ddcd9494c894c6"
             ],
             [
                 "9ab9f797bec97d04",
@@ -8536,7 +8580,7 @@
         "type": "switch",
         "z": "8b99f8fe.7b27b8",
         "g": "0dc9ec7306f46565",
-        "name": "! Sleep",
+        "name": "! Sleep / vacation ",
         "property": "Mode",
         "propertyType": "global",
         "rules": [
@@ -8549,7 +8593,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1260,
+        "x": 1290,
         "y": 100,
         "wires": [
             [
@@ -8603,7 +8647,8 @@
                 "aaf5b9532af1fbac"
             ],
             [
-                "c61133f02b5c38b9"
+                "c61133f02b5c38b9",
+                "d8ddcd9494c894c6"
             ]
         ]
     },
@@ -8804,7 +8849,8 @@
         "y": 220,
         "wires": [
             [
-                "77b78689.5eac68"
+                "77b78689.5eac68",
+                "d8ddcd9494c894c6"
             ]
         ]
     },
@@ -8966,7 +9012,7 @@
         "name": "",
         "lat": "58.851468",
         "lon": "5.748852",
-        "startTime": "08:30",
+        "startTime": "08:00",
         "endTime": "11:00",
         "startOffset": 0,
         "endOffset": 0,
@@ -9061,6 +9107,100 @@
                 "5ca10b6218e10f1a"
             ]
         ]
+    },
+    {
+        "id": "772f9c1b8b6b7713",
+        "type": "trigger",
+        "z": "8b99f8fe.7b27b8",
+        "g": "429d0786e75351cd",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 820,
+        "y": 640,
+        "wires": [
+            [
+                "b3ea9a13d1f2b71d"
+            ]
+        ]
+    },
+    {
+        "id": "4cb805cbab89b41b",
+        "type": "change",
+        "z": "8b99f8fe.7b27b8",
+        "g": "429d0786e75351cd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 520,
+        "wires": [
+            [
+                "772f9c1b8b6b7713"
+            ]
+        ]
+    },
+    {
+        "id": "d8ddcd9494c894c6",
+        "type": "trigger",
+        "z": "8b99f8fe.7b27b8",
+        "g": "0dc9ec7306f46565",
+        "name": "vacation",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "15",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "hr",
+        "reset": "true",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1600,
+        "y": 280,
+        "wires": [
+            [
+                "2d89c6f3277b5730"
+            ]
+        ]
+    },
+    {
+        "id": "2d89c6f3277b5730",
+        "type": "link out",
+        "z": "8b99f8fe.7b27b8",
+        "g": "0dc9ec7306f46565",
+        "name": "SH: Vacation",
+        "mode": "link",
+        "links": [
+            "06a76cb3da5742c4"
+        ],
+        "x": 1715,
+        "y": 300,
+        "wires": []
     },
     {
         "id": "976db23e.1f8ba",
@@ -10666,7 +10806,7 @@
         "statustext_type": "auto",
         "search_type": "device",
         "device_list": [
-            "sensors/uniqueid/bc:33:ac:ff:fe:16:8f:b1-01-0006"
+            "sensors/uniqueid/f8:44:77:ff:fe:7e:ce:7d-02-0406"
         ],
         "device_name": "Kjøkken : ZHAPresence",
         "query": "",
@@ -17154,7 +17294,7 @@
         "y": 1200,
         "wires": [
             [
-                "2be3e472f4b8e24c"
+                "de81f43ca21e1a84"
             ]
         ]
     },
@@ -17185,8 +17325,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2010,
-        "y": 1240,
+        "x": 2200,
+        "y": 1300,
         "wires": [
             [
                 "b35c9e7e255ecca3"
@@ -18049,8 +18189,7 @@
         "y": 960,
         "wires": [
             [
-                "e0230d8d307915ef",
-                "204ea53f432f0a98"
+                "b6c4b310a066b151"
             ]
         ]
     },
@@ -18077,58 +18216,6 @@
         "wires": [
             [
                 "59450958ab89d7e0"
-            ]
-        ]
-    },
-    {
-        "id": "e0230d8d307915ef",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "618f8f538592ecef",
-        "name": "",
-        "property": "lastDownstairs",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "",
-                "vt": "prev"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1650,
-        "y": 920,
-        "wires": [
-            [
-                "b6c4b310a066b151"
-            ]
-        ]
-    },
-    {
-        "id": "204ea53f432f0a98",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "618f8f538592ecef",
-        "name": "",
-        "property": "lastUpstairs",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "",
-                "vt": "prev"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1650,
-        "y": 1000,
-        "wires": [
-            [
-                "b6c4b310a066b151"
             ]
         ]
     },
@@ -18419,6 +18506,111 @@
         "wires": [
             [
                 "a26a49517fb18ae3"
+            ]
+        ]
+    },
+    {
+        "id": "fbfaad3f07d0a37f",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "mode",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.mode",
+        "topi": "topic",
+        "x": 1990,
+        "y": 1280,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "2323851ca3bbf2bf",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "fanLevel",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.fanLevel",
+        "topi": "topic",
+        "x": 2000,
+        "y": 1320,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "9188439f2a8ff0ef",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "heatPumpTemp",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.heatPumpTemp",
+        "topi": "topic",
+        "x": 2020,
+        "y": 1360,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "f2b2dea39a0a4e98",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "swing",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.swing",
+        "topi": "topic",
+        "x": 1990,
+        "y": 1400,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "b81032edf5296633",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "shouldTurnOn",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.shouldTurnOn",
+        "topi": "topic",
+        "x": 2020,
+        "y": 1440,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
             ]
         ]
     },
@@ -23923,6 +24115,51 @@
         "wires": [
             [
                 "7be94949b0599c5f"
+            ]
+        ]
+    },
+    {
+        "id": "1683544e57ff8fa9",
+        "type": "change",
+        "z": "2153cce4d74e8cba",
+        "g": "12605644788902fd",
+        "name": "vacation",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mode",
+                "pt": "msg",
+                "to": "vacation",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2020,
+        "y": 40,
+        "wires": [
+            [
+                "f7ac0d2fc376810c"
+            ]
+        ]
+    },
+    {
+        "id": "06a76cb3da5742c4",
+        "type": "link in",
+        "z": "2153cce4d74e8cba",
+        "g": "12605644788902fd",
+        "name": "Set Vacation",
+        "links": [
+            "2d89c6f3277b5730"
+        ],
+        "x": 1895,
+        "y": 40,
+        "wires": [
+            [
+                "1683544e57ff8fa9"
             ]
         ]
     },
