@@ -869,12 +869,13 @@
             "183c95c7745f2ea4",
             "6fb6663e779c4bed",
             "bc57e78aaf68965d",
-            "0e2324ffdb10fe80"
+            "2cb600ab1cf6c9f0",
+            "df0d0e357f912ecb"
         ],
         "x": 124,
         "y": 939,
-        "w": 972,
-        "h": 157
+        "w": 1012,
+        "h": 182
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -897,12 +898,11 @@
             "c1cdd26489314e43",
             "7b175354f8d58739",
             "a0287f6dea869c13",
-            "d434dc021a16f48a",
-            "ab9505f554d8de4d"
+            "d434dc021a16f48a"
         ],
         "x": 124,
         "y": 719,
-        "w": 1182,
+        "w": 1292,
         "h": 182
     },
     {
@@ -1130,13 +1130,6 @@
             "label": true
         },
         "nodes": [
-            "bc75f603ad1027db",
-            "d37dfc8b7c95236c",
-            "17c5a7b3f229590b",
-            "5f73d02a6b8a85e6",
-            "13197968d43b0e56",
-            "df8e9adb3c8eb378",
-            "5fc2b4ddf5b94b9e",
             "ac728ff70c911726",
             "7284606e.34aff",
             "0ab1d40d25d12428",
@@ -1144,9 +1137,9 @@
             "56a9a0de058b39ee"
         ],
         "x": 764,
-        "y": 19,
+        "y": 99,
         "w": 432,
-        "h": 202
+        "h": 122
     },
     {
         "id": "dabbbe0f6cfeecac",
@@ -1194,8 +1187,8 @@
             "641555a3.3a90ec",
             "3ceb6365.4b21bc",
             "99bb192c.9613d8",
-            "7c376eb857a4e46f",
-            "b6d05acd6b922f83"
+            "b6d05acd6b922f83",
+            "7c376eb857a4e46f"
         ],
         "x": 764,
         "y": 239,
@@ -1490,12 +1483,14 @@
             "2a08c14c11b63e19",
             "7b7668fba961576a",
             "2d266251b8e5b40a",
-            "e39310b1c9ed65de"
+            "e39310b1c9ed65de",
+            "160a422ee1bf7ddf",
+            "22235eefbba9ebae"
         ],
         "x": 1934,
-        "y": 339,
+        "y": 319,
         "w": 992,
-        "h": 322
+        "h": 342
     },
     {
         "id": "07a89de28d307ce8",
@@ -1760,18 +1755,21 @@
             "924f634f9205d2f3",
             "60f9c2fc64183c18",
             "b105d364dd632eb4",
-            "4c63e198f3ed9e1a",
-            "f3a3f2678d7010fc",
             "de81f43ca21e1a84",
+            "41fb45158ee99fca",
+            "dfae4a5833032626",
+            "b1d89ae0747313ec",
             "fbfaad3f07d0a37f",
             "2323851ca3bbf2bf",
             "9188439f2a8ff0ef",
             "f2b2dea39a0a4e98",
             "b81032edf5296633",
-            "b1d89ae0747313ec",
-            "41fb45158ee99fca",
             "56e90982a3f5be43",
-            "dfae4a5833032626"
+            "b825f8586aa4511a",
+            "92fee1bd3aae4f4f",
+            "4c63e198f3ed9e1a",
+            "f3a3f2678d7010fc",
+            "8284020181ca6e80"
         ],
         "x": 1424,
         "y": 1099,
@@ -4348,7 +4346,7 @@
         "id": "d672dd5902ab9ae0",
         "type": "switch",
         "z": "c15399232bac2ca3",
-        "name": "",
+        "name": "start/stop",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -4366,14 +4364,14 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 550,
-        "y": 280,
+        "x": 580,
+        "y": 320,
         "wires": [
             [
-                "51d2182642492deb"
+                "096fc2a5f95b7fe3"
             ],
             [
-                "51d2182642492deb"
+                "096fc2a5f95b7fe3"
             ]
         ]
     },
@@ -4396,8 +4394,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
-        "y": 140,
+        "x": 690,
+        "y": 240,
         "wires": [
             [
                 "b7abb1c033a236e9",
@@ -4513,8 +4511,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 180,
+        "x": 690,
+        "y": 200,
         "wires": [
             [
                 "b7abb1c033a236e9",
@@ -4661,7 +4659,7 @@
         "id": "426239f4d97d6c43",
         "type": "switch",
         "z": "c15399232bac2ca3",
-        "name": "",
+        "name": "useTime",
         "property": "useTime",
         "propertyType": "env",
         "rules": [
@@ -4675,7 +4673,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 110,
+        "x": 120,
         "y": 240,
         "wires": [
             [
@@ -4732,33 +4730,6 @@
         "y": 420,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "51d2182642492deb",
-        "type": "change",
-        "z": "c15399232bac2ca3",
-        "name": "reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 650,
-        "y": 340,
-        "wires": [
-            [
-                "b7abb1c033a236e9"
-            ]
         ]
     },
     {
@@ -5334,9 +5305,7 @@
         "g": "4764ba70f833e4a9",
         "name": "",
         "mode": "link",
-        "links": [
-            "df8e9adb3c8eb378"
-        ],
+        "links": [],
         "x": 1055,
         "y": 1180,
         "wires": []
@@ -5477,9 +5446,7 @@
         "z": "aa0ae7ae.75d228",
         "g": "8da8f3a9a56fc7ee",
         "name": "btn_downstairs",
-        "links": [
-            "918c945a6df6d903"
-        ],
+        "links": [],
         "x": 805,
         "y": 360,
         "wires": [
@@ -5892,11 +5859,9 @@
         "name": "",
         "mode": "link",
         "links": [
-            "df8e9adb3c8eb378",
-            "09acdfabbb87d227",
             "e8a10173e53f4a16"
         ],
-        "x": 1055,
+        "x": 1095,
         "y": 1040,
         "wires": []
     },
@@ -5992,7 +5957,6 @@
         "name": "",
         "mode": "link",
         "links": [
-            "df8e9adb3c8eb378",
             "e8a10173e53f4a16"
         ],
         "x": 1545,
@@ -6024,11 +5988,10 @@
         "name": "",
         "mode": "link",
         "links": [
-            "5fc2b4ddf5b94b9e",
             "c5997d499b14048a",
             "e8a10173e53f4a16"
         ],
-        "x": 1265,
+        "x": 1375,
         "y": 860,
         "wires": []
     },
@@ -6068,7 +6031,7 @@
                 "type": "num"
             }
         ],
-        "x": 1130,
+        "x": 1110,
         "y": 860,
         "wires": [
             [
@@ -6170,7 +6133,7 @@
                 "type": "str"
             }
         ],
-        "x": 910,
+        "x": 950,
         "y": 1040,
         "wires": [
             [
@@ -6367,24 +6330,6 @@
         "x": 1315,
         "y": 680,
         "wires": []
-    },
-    {
-        "id": "7c376eb857a4e46f",
-        "type": "link in",
-        "z": "aa0ae7ae.75d228",
-        "g": "8da8f3a9a56fc7ee",
-        "name": "BasementBlock",
-        "links": [
-            "8a0ab10e55653060",
-            "ac728ff70c911726"
-        ],
-        "x": 1455,
-        "y": 320,
-        "wires": [
-            [
-                "7c9078bb.3bd958"
-            ]
-        ]
     },
     {
         "id": "28f356670a5a6dc9",
@@ -6642,20 +6587,16 @@
         "y": 1040,
         "wires": [
             [
-                "bc57e78aaf68965d",
-                "0e2324ffdb10fe80"
+                "bc57e78aaf68965d"
             ],
             [
-                "bc57e78aaf68965d",
-                "0e2324ffdb10fe80"
+                "bc57e78aaf68965d"
             ],
             [
-                "bc57e78aaf68965d",
-                "0e2324ffdb10fe80"
+                "bc57e78aaf68965d"
             ],
             [
-                "bc57e78aaf68965d",
-                "0e2324ffdb10fe80"
+                "bc57e78aaf68965d"
             ]
         ]
     },
@@ -6719,61 +6660,12 @@
         ]
     },
     {
-        "id": "bc75f603ad1027db",
-        "type": "switch",
-        "z": "aa0ae7ae.75d228",
-        "g": "750228718f0f7746",
-        "name": "True",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 910,
-        "y": 100,
-        "wires": [
-            [
-                "5f73d02a6b8a85e6"
-            ]
-        ]
-    },
-    {
-        "id": "d37dfc8b7c95236c",
-        "type": "switch",
-        "z": "aa0ae7ae.75d228",
-        "g": "750228718f0f7746",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 910,
-        "y": 60,
-        "wires": [
-            [
-                "17c5a7b3f229590b"
-            ]
-        ]
-    },
-    {
         "id": "b6d05acd6b922f83",
         "type": "link in",
         "z": "aa0ae7ae.75d228",
         "g": "8da8f3a9a56fc7ee",
         "name": "Upstairs_block:controll",
         "links": [
-            "13197968d43b0e56",
             "ac728ff70c911726"
         ],
         "x": 1455,
@@ -6781,106 +6673,6 @@
         "wires": [
             [
                 "641555a3.3a90ec"
-            ]
-        ]
-    },
-    {
-        "id": "17c5a7b3f229590b",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "g": "750228718f0f7746",
-        "name": "Reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "GO",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 60,
-        "wires": [
-            [
-                "13197968d43b0e56"
-            ]
-        ]
-    },
-    {
-        "id": "5f73d02a6b8a85e6",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "g": "750228718f0f7746",
-        "name": "STOP",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STOP",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 100,
-        "wires": [
-            [
-                "13197968d43b0e56"
-            ]
-        ]
-    },
-    {
-        "id": "13197968d43b0e56",
-        "type": "link out",
-        "z": "aa0ae7ae.75d228",
-        "g": "750228718f0f7746",
-        "name": "link out 5",
-        "mode": "link",
-        "links": [
-            "b6d05acd6b922f83"
-        ],
-        "x": 1155,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "df8e9adb3c8eb378",
-        "type": "link in",
-        "z": "aa0ae7ae.75d228",
-        "d": true,
-        "g": "750228718f0f7746",
-        "name": "Release_Usptairs",
-        "links": [
-            "0e2324ffdb10fe80",
-            "21c80566.d9201a",
-            "6e1a0143.f51f8",
-            "87d1ce3c19202d34",
-            "8bc1a1a00cecc7a6",
-            "1deeab2413b7a99b"
-        ],
-        "x": 805,
-        "y": 60,
-        "wires": [
-            [
-                "d37dfc8b7c95236c"
             ]
         ]
     },
@@ -7108,25 +6900,7 @@
         "y": 1040,
         "wires": [
             [
-                "183c95c7745f2ea4"
-            ]
-        ]
-    },
-    {
-        "id": "5fc2b4ddf5b94b9e",
-        "type": "link in",
-        "z": "aa0ae7ae.75d228",
-        "d": true,
-        "g": "750228718f0f7746",
-        "name": "link in 2",
-        "links": [
-            "e2d7c57f5c31b977"
-        ],
-        "x": 805,
-        "y": 100,
-        "wires": [
-            [
-                "bc75f603ad1027db"
+                "2cb600ab1cf6c9f0"
             ]
         ]
     },
@@ -7157,120 +6931,6 @@
         ],
         "x": 1155,
         "y": 160,
-        "wires": []
-    },
-    {
-        "id": "09acdfabbb87d227",
-        "type": "link in",
-        "z": "aa0ae7ae.75d228",
-        "d": true,
-        "name": "link in 3",
-        "links": [
-            "21c80566.d9201a"
-        ],
-        "x": 1145,
-        "y": 1040,
-        "wires": [
-            [
-                "705a701972babe5b"
-            ]
-        ]
-    },
-    {
-        "id": "6ccd3c1606f4db37",
-        "type": "time-range-switch",
-        "z": "aa0ae7ae.75d228",
-        "name": "Dag",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "21:30",
-        "endTime": "06:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 1330,
-        "y": 1040,
-        "wires": [
-            [
-                "7f64c9cae71deb33"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "705a701972babe5b",
-        "type": "switch",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1220,
-        "y": 1040,
-        "wires": [
-            [
-                "6ccd3c1606f4db37"
-            ]
-        ]
-    },
-    {
-        "id": "7f64c9cae71deb33",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STOP",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1490,
-        "y": 1040,
-        "wires": [
-            [
-                "918c945a6df6d903"
-            ]
-        ]
-    },
-    {
-        "id": "918c945a6df6d903",
-        "type": "link out",
-        "z": "aa0ae7ae.75d228",
-        "name": "link out 10",
-        "mode": "link",
-        "links": [
-            "56d97603.6cdfe8"
-        ],
-        "x": 1545,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "0e2324ffdb10fe80",
-        "type": "link out",
-        "z": "aa0ae7ae.75d228",
-        "g": "172b4292bafc68a7",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "df8e9adb3c8eb378"
-        ],
-        "x": 625,
-        "y": 980,
         "wires": []
     },
     {
@@ -7442,7 +7102,6 @@
         "name": "",
         "mode": "link",
         "links": [
-            "df8e9adb3c8eb378",
             "e8a10173e53f4a16"
         ],
         "x": 525,
@@ -7502,7 +7161,6 @@
         "name": "",
         "mode": "link",
         "links": [
-            "df8e9adb3c8eb378",
             "e8a10173e53f4a16"
         ],
         "x": 525,
@@ -7671,27 +7329,78 @@
         ]
     },
     {
-        "id": "ab9505f554d8de4d",
+        "id": "7c376eb857a4e46f",
+        "type": "link in",
+        "z": "aa0ae7ae.75d228",
+        "g": "8da8f3a9a56fc7ee",
+        "name": "BasementBlock",
+        "links": [
+            "ac728ff70c911726"
+        ],
+        "x": 1455,
+        "y": 320,
+        "wires": [
+            [
+                "7c9078bb.3bd958"
+            ]
+        ]
+    },
+    {
+        "id": "2cb600ab1cf6c9f0",
         "type": "switch",
         "z": "aa0ae7ae.75d228",
-        "g": "ff7ca7f8980ed0b1",
+        "g": "172b4292bafc68a7",
         "name": "",
-        "property": "U_illumenance",
-        "propertyType": "flow",
+        "property": "is_playing",
+        "propertyType": "global",
         "rules": [
             {
-                "t": "gt",
-                "v": "150",
-                "vt": "str"
+                "t": "false"
+            },
+            {
+                "t": "true"
             }
         ],
-        "checkall": "true",
+        "checkall": "false",
         "repair": false,
-        "outputs": 1,
-        "x": 1130,
-        "y": 800,
+        "outputs": 2,
+        "x": 790,
+        "y": 1060,
         "wires": [
-            []
+            [
+                "183c95c7745f2ea4"
+            ],
+            [
+                "df0d0e357f912ecb"
+            ]
+        ]
+    },
+    {
+        "id": "df0d0e357f912ecb",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "g": "172b4292bafc68a7",
+        "name": "reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "GO",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 1080,
+        "wires": [
+            [
+                "183c95c7745f2ea4"
+            ]
         ]
     },
     {
@@ -11496,12 +11205,10 @@
         "y": 580,
         "wires": [
             [
-                "a1111ae.032f9e8",
-                "e926d9379abd724f"
+                "a1111ae.032f9e8"
             ],
             [
                 "352c4db3.c00bc2",
-                "9d2af7af886c38df",
                 "7207e65ef67dab2d"
             ]
         ]
@@ -11818,73 +11525,6 @@
         ]
     },
     {
-        "id": "e926d9379abd724f",
-        "type": "change",
-        "z": "1c88039c.df631c",
-        "name": "GO",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "GO",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 520,
-        "wires": [
-            [
-                "9a7761d2480db8ae"
-            ]
-        ]
-    },
-    {
-        "id": "9d2af7af886c38df",
-        "type": "change",
-        "z": "1c88039c.df631c",
-        "name": "STOP",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "STOP",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 680,
-        "wires": [
-            [
-                "9a7761d2480db8ae"
-            ]
-        ]
-    },
-    {
-        "id": "8a0ab10e55653060",
-        "type": "link out",
-        "z": "1c88039c.df631c",
-        "name": "block light",
-        "mode": "link",
-        "links": [
-            "7c376eb857a4e46f"
-        ],
-        "x": 1395,
-        "y": 660,
-        "wires": []
-    },
-    {
         "id": "3ecbdbdc32d7e425",
         "type": "change",
         "z": "1c88039c.df631c",
@@ -11909,31 +11549,6 @@
             [
                 "e9bb9204.50585",
                 "f93ecd35785e6032"
-            ]
-        ]
-    },
-    {
-        "id": "9a7761d2480db8ae",
-        "type": "switch",
-        "z": "1c88039c.df631c",
-        "name": "",
-        "property": "Mode",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "sleep",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1290,
-        "y": 660,
-        "wires": [
-            [
-                "8a0ab10e55653060"
             ]
         ]
     },
@@ -14994,8 +14609,7 @@
         "y": 620,
         "wires": [
             [
-                "3f8cb11deb8ce864",
-                "dcb046bbb6008951"
+                "3f8cb11deb8ce864"
             ]
         ]
     },
@@ -16371,7 +15985,7 @@
                 "t": "set",
                 "p": "payload.data.temperature",
                 "pt": "msg",
-                "to": "16",
+                "to": "20",
                 "tot": "num"
             }
         ],
@@ -17102,7 +16716,7 @@
         "z": "6df0226504208616",
         "g": "30b092e53a6e3512",
         "name": "Improved Temperature Control",
-        "func": "// === ADVANCED TEMPERATURE CONTROL with ENHANCED COMFORT LOGIC ===\n\n// --- CONFIGURATION ---\nconst COMFORT_TOLERANCE = flow.get('comfortTolerance') || 1.0;\nconst SUMMER_MIN_TEMP = 18;\nconst SUMMER_MAX_TEMP = 28;\nconst WINTER_MIN_TEMP = 16;\nconst WINTER_MAX_TEMP = 25;\nconst COOL_BLOCK_BELOW = 21;\nconst HEAT_BLOCK_ABOVE = 24;\nconst MIN_ON_OFF_TIME_SEC = 600;\n\n// --- INPUTS ---\nconst desiredTemp = flow.get('desiredTemp') || 21;\nconst upstairsCurrentTemp = flow.get('upstairsCurrentTemp') || 20;\nconst downstairsCurrentTemp = flow.get('downstairsCurrentTemp') || 20;\nconst outsideTemp = flow.get('outsideTemp') || 20;\nconst mode = flow.get('mode') || 'auto';\nconst lastModeChange = flow.get('lastModeChange') || 0;\nconst isMorning = msg.isMorning === true;\n\n// --- COMFORT CALCULATIONS ---\nconst insideOutsideDiff = outsideTemp - downstairsCurrentTemp;\nconst comfortOffset = Math.abs(insideOutsideDiff) > 3 ? 0.5 : 0;\nconst effectiveComfortTolerance = COMFORT_TOLERANCE + comfortOffset;\n\n// --- SEASON DETECTION ---\nconst currentMonth = new Date().getMonth() + 1;\nconst isSeasonalSummer = currentMonth >= 5 && currentMonth <= 9;\nconst isSummer = isSeasonalSummer && outsideTemp > 20;\n\n// --- TIME LOGIC ---\nconst now = Date.now();\nconst secondsSinceLastChange = (now - lastModeChange) / 1000;\n\n// --- DECISION LOGIC ---\nlet controlMode = 'off';\nlet targetTemp = desiredTemp;\nlet swing = 'fixedTop';\nlet fanLevel = 'low';\nlet reason = '';\nlet shouldTurnOn = false;\n\n// --- HEATING LOGIC ---\nfunction applyHeatingLogic(context, referenceTemp = downstairsCurrentTemp) {\n    controlMode = 'heat';\n    swing = outsideTemp < 20 ? 'fixedBottom' : 'fixedTop';\n    shouldTurnOn = true;\n\n    const tempDiff = desiredTemp - referenceTemp;\n    if (tempDiff < -4) {\n        fanLevel = 'high';\n        targetTemp = Math.min(WINTER_MAX_TEMP, desiredTemp + 1.5);\n    }\n    else if (tempDiff < -3) {\n        fanLevel = 'medium';\n        targetTemp = Math.min(WINTER_MAX_TEMP, desiredTemp + 1);\n    }\n    else if (tempDiff < -1.5) {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n    else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    reason = context;\n}\n\n// --- COOLING LOGIC ---\nfunction applyCoolingLogic(context) {\n    controlMode = 'cool';\n    swing = 'fixedTop';\n    shouldTurnOn = true;\n\n    const tempDiff = upstairsCurrentTemp - desiredTemp;\n    if (tempDiff > 3.0) {\n        fanLevel = 'high';\n        targetTemp = Math.max(SUMMER_MIN_TEMP, desiredTemp - 2);\n    } else if (tempDiff > 2.0) {\n        fanLevel = 'medium';\n        targetTemp = Math.max(SUMMER_MIN_TEMP, desiredTemp - 1);\n    } else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    reason = context;\n}\n\n// --- MAIN COMFORT LOGIC ---\nif (isSummer) {\n    // Comfort-based cooling logic\n    if (downstairsCurrentTemp < desiredTemp - effectiveComfortTolerance && outsideTemp < 24) {\n        applyHeatingLogic(`Comfort heating: Downstairs feels cold at ${downstairsCurrentTemp}°C (outside: ${outsideTemp}°C)`);\n    } else if (upstairsCurrentTemp >= desiredTemp + effectiveComfortTolerance) {\n        applyCoolingLogic(`Cooling needed: Upstairs ${upstairsCurrentTemp}°C > target ${desiredTemp}°C`);\n    } else if (upstairsCurrentTemp > SUMMER_MAX_TEMP) {\n        applyCoolingLogic(`EMERGENCY: Upstairs temperature too high ${upstairsCurrentTemp}°C`);\n    } else {\n        controlMode = 'off';\n        reason = `Temperature within comfort range`;\n    }\n} else {\n    // Winter comfort logic\n    if (downstairsCurrentTemp < desiredTemp - effectiveComfortTolerance) {\n        if (upstairsCurrentTemp < HEAT_BLOCK_ABOVE) {\n            applyHeatingLogic(`Heating: Downstairs ${downstairsCurrentTemp}°C < target ${desiredTemp}°C`);\n        } else {\n            reason = `HEAT BLOCKED: Upstairs too warm ${upstairsCurrentTemp}°C`;\n        }\n    } else if (downstairsCurrentTemp < WINTER_MIN_TEMP) {\n        applyHeatingLogic(`EMERGENCY: Downstairs temperature too low ${downstairsCurrentTemp}°C`);\n    } else {\n        controlMode = 'off';\n        reason = `Temperature within comfort range`;\n    }\n}\n\n// --- EMERGENCY CONDITIONS ---\nconst emergencyCooling = (controlMode === 'cool' && upstairsCurrentTemp > 23.5);\nconst emergencyHeating = (downstairsCurrentTemp < WINTER_MIN_TEMP);\nconst emergency = emergencyCooling || emergencyHeating;\n\n// --- SAFETY LIMITS ---\nif (controlMode === 'cool' && targetTemp < SUMMER_MIN_TEMP) {\n    targetTemp = SUMMER_MIN_TEMP;\n    reason += ` [Limited to min ${SUMMER_MIN_TEMP}°C]`;\n}\nif (controlMode === 'heat' && targetTemp > WINTER_MAX_TEMP) {\n    targetTemp = WINTER_MAX_TEMP;\n    reason += ` [Limited to max ${WINTER_MAX_TEMP}°C]`;\n}\n\n// --- MINIMUM ON/OFF TIME ---\nif (flow.get('lastControlMode') !== controlMode) {\n    if (secondsSinceLastChange < MIN_ON_OFF_TIME_SEC && !emergency) {\n        shouldTurnOn = false;\n        controlMode = 'off';\n        reason += ` [Min ON/OFF time not elapsed: ${Math.round(secondsSinceLastChange)}s]`;\n    } else {\n        flow.set('lastModeChange', now);\n        flow.set('lastControlMode', controlMode);\n    }\n}\n\n// --- OUTPUT & CONTEXT ---\nflow.set('mode', controlMode);\nflow.set('shouldTurnOn', shouldTurnOn);\nflow.set('controlReason', reason);\nflow.set('swing', swing);\nflow.set('fanlevel', fanLevel);\nflow.set('correctedTemp', Math.round(targetTemp));\n\n// --- OUTPUT ---\nreturn {\n    payload: {\n        mode: controlMode,\n        fanLevel: fanLevel,\n        heatPumpTemp: Math.round(targetTemp),\n        swing: swing,\n        shouldTurnOn: shouldTurnOn,\n        season: isSummer ? 'summer' : 'winter',\n        upstairsTemp: upstairsCurrentTemp,\n        downstairsTemp: downstairsCurrentTemp,\n        outsideTemp: outsideTemp,\n        desiredTemp: desiredTemp,\n        reason: reason,\n        timestamp: new Date().toISOString()\n    }\n};",
+        "func": "// === ADVANCED TEMPERATURE CONTROL with ENHANCED COMFORT & LEARNING LOGIC ===\n\n// --- CONFIGURATION ---\nconst COMFORT_TOLERANCE = flow.get('comfortTolerance') || 1.0;\nconst SUMMER_MIN_TEMP = 18;\nconst SUMMER_MAX_TEMP = 28;\nconst WINTER_MIN_TEMP = 16;\nconst WINTER_MAX_TEMP = 25;\nconst COOL_BLOCK_BELOW = 21;\nconst HEAT_BLOCK_ABOVE = 24;\nconst MIN_ON_OFF_TIME_SEC = 600;\nconst AIR_CIRCULATION_THRESHOLD = 23.0;\nconst CIRCULATION_INTERVAL_MIN = 15;\nconst LEARNING_RATE = 0.1;\nconst MAX_TEMP_HISTORY = 12; // Keep 1 hour of history (5-min intervals)\n\n// --- INPUTS ---\nconst desiredTemp = flow.get('desiredTemp') || 21;\nconst upstairsCurrentTemp = flow.get('upstairsCurrentTemp') || 20;\nconst downstairsCurrentTemp = flow.get('downstairsCurrentTemp') || 20;\nconst outsideTemp = flow.get('outsideTemp') || 20;\nconst mode = flow.get('mode') || 'auto';\nconst lastModeChange = flow.get('lastModeChange') || 0;\nconst isMorning = msg.isMorning === true;\n\n// --- LEARNING SYSTEM STATE ---\nconst tempHistory = flow.get('tempHistory') || [];\nconst lastTargetTemp = flow.get('lastTargetTemp');\nconst lastFanLevel = flow.get('lastFanLevel');\nconst performanceHistory = flow.get('performanceHistory') || {};\n\n// --- COMFORT CALCULATIONS ---\nconst insideOutsideDiff = outsideTemp - downstairsCurrentTemp;\nconst comfortOffset = Math.abs(insideOutsideDiff) > 3 ? 0.5 : 0;\nconst effectiveComfortTolerance = COMFORT_TOLERANCE + comfortOffset;\n\n// --- SEASON DETECTION ---\nconst currentMonth = new Date().getMonth() + 1;\nconst isSeasonalSummer = currentMonth >= 5 && currentMonth <= 9;\nconst isSummer = isSeasonalSummer || outsideTemp >= 20;\n\n// --- TIME LOGIC ---\nconst now = Date.now();\nconst secondsSinceLastChange = (now - lastModeChange) / 1000;\n\n// --- DECISION LOGIC ---\nlet controlMode = 'off';\nlet targetTemp = desiredTemp;\nlet swing = 'fixedTop';\nlet fanLevel = 'low';\nlet reason = '';\nlet shouldTurnOn = false;\n\n// --- PERFORMANCE TRACKING ---\nfunction updatePerformance() {\n    if (lastTargetTemp && lastFanLevel) {\n        const timeDiff = (Date.now() - lastModeChange) / 1000 / 60; // minutes\n        if (timeDiff > 5) {\n            const tempChange = upstairsCurrentTemp - tempHistory[0];\n            const performance = {\n                targetTemp: lastTargetTemp,\n                fanLevel: lastFanLevel,\n                tempChange: tempChange,\n                outsideTemp: outsideTemp,\n                duration: timeDiff\n            };\n\n            if (!performanceHistory[lastFanLevel]) {\n                performanceHistory[lastFanLevel] = [];\n            }\n            performanceHistory[lastFanLevel].push(performance);\n\n            if (performanceHistory[lastFanLevel].length > 10) {\n                performanceHistory[lastFanLevel].shift();\n            }\n\n            flow.set('performanceHistory', performanceHistory);\n        }\n    }\n}\n\n// --- CIRCULATION LOGIC ---\nfunction applyCirculationLogic(context) {\n    controlMode = 'fan';\n    swing = 'wide';\n    fanLevel = 'low';\n    shouldTurnOn = true;\n    reason = context;\n}\n\n// --- HEATING LOGIC ---\nfunction applyHeatingLogic(context, referenceTemp = downstairsCurrentTemp) {\n    controlMode = 'heat';\n    swing = isMorning ? 'fixedBottom' : (outsideTemp < 20 ? 'fixedBottom' : 'fixedTop');\n    shouldTurnOn = true;\n\n    const tempDiff = desiredTemp - referenceTemp;\n    let adjustedTempDiff = tempDiff;\n\n    // Apply learned adjustments\n    if (performanceHistory[fanLevel]) {\n        const avgPerformance = performanceHistory[fanLevel].reduce((sum, p) =>\n            sum + (p.tempChange / p.duration), 0) / performanceHistory[fanLevel].length;\n        if (avgPerformance < 0.1) {\n            adjustedTempDiff *= (1 + LEARNING_RATE);\n        }\n    }\n\n    if (adjustedTempDiff < -4) {\n        fanLevel = 'high';\n        targetTemp = Math.min(WINTER_MAX_TEMP, desiredTemp + 1.5);\n    } else if (adjustedTempDiff < -3) {\n        fanLevel = 'medium_high';\n        targetTemp = Math.min(WINTER_MAX_TEMP, desiredTemp + 1.2);\n    } else if (adjustedTempDiff < -2) {\n        fanLevel = 'medium';\n        targetTemp = Math.min(WINTER_MAX_TEMP, desiredTemp + 1);\n    } else if (adjustedTempDiff < -1.5) {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    } else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    reason = context;\n    flow.set('lastTargetTemp', targetTemp);\n    flow.set('lastFanLevel', fanLevel);\n}\n\n// --- COOLING LOGIC ---\nfunction applyCoolingLogic(context) {\n    controlMode = 'cool';\n    swing = 'fixedTop';\n    shouldTurnOn = true;\n\n    const tempDiff = upstairsCurrentTemp - desiredTemp;\n    if (tempDiff > 3.0) {\n        fanLevel = 'high';\n        targetTemp = Math.max(SUMMER_MIN_TEMP, desiredTemp - 2.5);\n    } else if (tempDiff > 2.0) {\n        fanLevel = 'medium_high';\n        targetTemp = Math.max(SUMMER_MIN_TEMP, desiredTemp - 2.0);\n    } else if (tempDiff > 1.0) {\n        fanLevel = 'medium';\n        targetTemp = Math.max(SUMMER_MIN_TEMP, desiredTemp - 1.5);\n    } else if (tempDiff > 0.5) {\n        fanLevel = 'medium';\n        targetTemp = Math.max(SUMMER_MIN_TEMP, desiredTemp - 1.0);\n    } else {\n        fanLevel = 'low';\n        controlMode = 'fan';\n        swing = 'fixedTop';\n        targetTemp = desiredTemp;\n    }\n\n    reason = context;\n}\n\n// --- MAIN COMFORT LOGIC ---\nif (isMorning) {\n    // Force heating mode in the morning with fixed bottom swing\n    applyHeatingLogic(`Morning heating cycle`, downstairsCurrentTemp);\n    swing = 'fixedBottom'; // Override swing setting for morning\n} else if (isSummer) {\n    if (upstairsCurrentTemp >= AIR_CIRCULATION_THRESHOLD) {\n        if (upstairsCurrentTemp >= desiredTemp + 1.0) {\n            applyCoolingLogic(`Cooling needed: Upstairs ${upstairsCurrentTemp}°C above target ${desiredTemp}°C`);\n        } else {\n            applyCirculationLogic(`Air circulation: Managing warm upstairs temp ${upstairsCurrentTemp}°C`);\n        }\n    } else if (downstairsCurrentTemp < desiredTemp - effectiveComfortTolerance) {\n        applyHeatingLogic(`Comfort heating: Downstairs feels cool at ${downstairsCurrentTemp}°C`);\n    } else if (upstairsCurrentTemp > SUMMER_MAX_TEMP) {\n        applyCoolingLogic(`EMERGENCY: Upstairs temperature too high ${upstairsCurrentTemp}°C`);\n    } else if (upstairsCurrentTemp >= 22.0) {\n        applyCoolingLogic(`Active cooling: Managing upstairs temp ${upstairsCurrentTemp}°C`);\n    } else {\n        controlMode = 'fan';\n        reason = `Temperature within comfort range`;\n    }\n}\n\n// --- EMERGENCY CONDITIONS ---\nconst emergencyCooling = (controlMode === 'cool' && upstairsCurrentTemp > 23.5);\nconst emergencyHeating = (downstairsCurrentTemp < WINTER_MIN_TEMP);\nconst emergency = emergencyCooling || emergencyHeating;\n\n// --- SAFETY LIMITS ---\nif (controlMode === 'cool' && targetTemp < SUMMER_MIN_TEMP) {\n    targetTemp = SUMMER_MIN_TEMP;\n    reason += ` [Limited to min ${SUMMER_MIN_TEMP}°C]`;\n}\nif (controlMode === 'heat' && targetTemp > WINTER_MAX_TEMP) {\n    targetTemp = WINTER_MAX_TEMP;\n    reason += ` [Limited to max ${WINTER_MAX_TEMP}°C]`;\n}\n\n// --- MINIMUM ON/OFF TIME ---\nif (flow.get('lastControlMode') !== controlMode) {\n    if (secondsSinceLastChange < MIN_ON_OFF_TIME_SEC && !emergency) {\n        shouldTurnOn = false;\n        controlMode = 'off';\n        reason += ` [Min ON/OFF time not elapsed: ${Math.round(secondsSinceLastChange)}s]`;\n    } else {\n        flow.set('lastModeChange', now);\n        flow.set('lastControlMode', controlMode);\n    }\n}\n\n// Update temperature history\ntempHistory.unshift(upstairsCurrentTemp);\nif (tempHistory.length > MAX_TEMP_HISTORY) {\n    tempHistory.pop();\n}\nflow.set('tempHistory', tempHistory);\n\n// Update performance metrics\nupdatePerformance();\n\n// --- OUTPUT & CONTEXT ---\nflow.set('mode', controlMode);\nflow.set('shouldTurnOn', shouldTurnOn);\nflow.set('controlReason', reason);\nflow.set('swing', swing);\nflow.set('fanlevel', fanLevel);\nflow.set('correctedTemp', Math.round(targetTemp));\n\n// --- OUTPUT ---\nreturn {\n    payload: {\n        mode: controlMode,\n        fanLevel: fanLevel,\n        heatPumpTemp: Math.round(targetTemp),\n        swing: swing,\n        shouldTurnOn: shouldTurnOn,\n        season: isSummer ? 'summer' : 'winter',\n        upstairsTemp: upstairsCurrentTemp,\n        downstairsTemp: downstairsCurrentTemp,\n        outsideTemp: outsideTemp,\n        desiredTemp: desiredTemp,\n        reason: reason,\n        timestamp: new Date().toISOString(),\n        performanceMetrics: performanceHistory[fanLevel] || []\n    }\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -17113,7 +16727,8 @@
         "y": 1160,
         "wires": [
             [
-                "18cf395cfea1ee5a"
+                "18cf395cfea1ee5a",
+                "8284020181ca6e80"
             ]
         ]
     },
@@ -17872,7 +17487,8 @@
         "name": "link out 21",
         "mode": "link",
         "links": [
-            "8990cd086ea9bbb7"
+            "8990cd086ea9bbb7",
+            "3b51d4daf94dd33e"
         ],
         "x": 3375,
         "y": 900,
@@ -17993,7 +17609,8 @@
         "name": "link out 24",
         "mode": "link",
         "links": [
-            "5215193faea2fd66"
+            "5215193faea2fd66",
+            "b825f8586aa4511a"
         ],
         "x": 1615,
         "y": 660,
@@ -18036,62 +17653,6 @@
             ],
             [
                 "f3a3f2678d7010fc"
-            ]
-        ]
-    },
-    {
-        "id": "4c63e198f3ed9e1a",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "MorningHeat",
-        "rules": [
-            {
-                "t": "set",
-                "p": "isMorning",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1910,
-        "y": 1140,
-        "wires": [
-            [
-                "cc8c82a34cbe38eb"
-            ]
-        ]
-    },
-    {
-        "id": "f3a3f2678d7010fc",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Not MOrning",
-        "rules": [
-            {
-                "t": "set",
-                "p": "isMorning",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1970,
-        "y": 1180,
-        "wires": [
-            [
-                "cc8c82a34cbe38eb"
             ]
         ]
     },
@@ -18150,111 +17711,6 @@
         "wires": [
             [
                 "59450958ab89d7e0"
-            ]
-        ]
-    },
-    {
-        "id": "fbfaad3f07d0a37f",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "mode",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.mode",
-        "topi": "topic",
-        "x": 1990,
-        "y": 1280,
-        "wires": [
-            [
-                "b1d89ae0747313ec"
-            ]
-        ]
-    },
-    {
-        "id": "2323851ca3bbf2bf",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "fanLevel",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.fanLevel",
-        "topi": "topic",
-        "x": 2000,
-        "y": 1320,
-        "wires": [
-            [
-                "b1d89ae0747313ec"
-            ]
-        ]
-    },
-    {
-        "id": "9188439f2a8ff0ef",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "heatPumpTemp",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.heatPumpTemp",
-        "topi": "topic",
-        "x": 2020,
-        "y": 1360,
-        "wires": [
-            [
-                "b1d89ae0747313ec"
-            ]
-        ]
-    },
-    {
-        "id": "f2b2dea39a0a4e98",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "swing",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.swing",
-        "topi": "topic",
-        "x": 1990,
-        "y": 1400,
-        "wires": [
-            [
-                "b1d89ae0747313ec"
-            ]
-        ]
-    },
-    {
-        "id": "b81032edf5296633",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "shouldTurnOn",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.shouldTurnOn",
-        "topi": "topic",
-        "x": 2020,
-        "y": 1440,
-        "wires": [
-            [
-                "b1d89ae0747313ec"
             ]
         ]
     },
@@ -18417,27 +17873,6 @@
         ]
     },
     {
-        "id": "56e90982a3f5be43",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "desiredTemp",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.desiredTemp",
-        "topi": "topic",
-        "x": 2010,
-        "y": 1480,
-        "wires": [
-            [
-                "b1d89ae0747313ec"
-            ]
-        ]
-    },
-    {
         "id": "d103c995936b4652",
         "type": "trigger",
         "z": "6df0226504208616",
@@ -18509,7 +17944,8 @@
         "g": "a1794e13fa3182f6",
         "name": "link in 6",
         "links": [
-            "a1373caec811ec40"
+            "a1373caec811ec40",
+            "b05a48bd1b6d3165"
         ],
         "x": 2055,
         "y": 460,
@@ -18569,7 +18005,7 @@
         "y": 380,
         "wires": [
             [
-                "a41f36b66f32ca92"
+                "160a422ee1bf7ddf"
             ]
         ]
     },
@@ -18679,8 +18115,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 480,
+        "x": 2490,
+        "y": 460,
         "wires": [
             [
                 "d37e09db5119549c"
@@ -18811,6 +18247,308 @@
         "statusType": "auto",
         "x": 1410,
         "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "160a422ee1bf7ddf",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "name": "",
+        "property": "isStandBy",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2550,
+        "y": 380,
+        "wires": [
+            [
+                "22235eefbba9ebae"
+            ],
+            [
+                "d37e09db5119549c"
+            ]
+        ]
+    },
+    {
+        "id": "22235eefbba9ebae",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fanlevel",
+                "pt": "msg",
+                "to": "medium",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2730,
+        "y": 360,
+        "wires": [
+            [
+                "d37e09db5119549c"
+            ]
+        ]
+    },
+    {
+        "id": "fbfaad3f07d0a37f",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "mode",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.mode",
+        "topi": "topic",
+        "x": 1990,
+        "y": 1280,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "2323851ca3bbf2bf",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "fanLevel",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.fanLevel",
+        "topi": "topic",
+        "x": 2000,
+        "y": 1320,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "9188439f2a8ff0ef",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "heatPumpTemp",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.heatPumpTemp",
+        "topi": "topic",
+        "x": 2020,
+        "y": 1360,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "f2b2dea39a0a4e98",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "swing",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.swing",
+        "topi": "topic",
+        "x": 1990,
+        "y": 1400,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "b81032edf5296633",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "shouldTurnOn",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.shouldTurnOn",
+        "topi": "topic",
+        "x": 2020,
+        "y": 1440,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "56e90982a3f5be43",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "desiredTemp",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.desiredTemp",
+        "topi": "topic",
+        "x": 2010,
+        "y": 1480,
+        "wires": [
+            [
+                "b1d89ae0747313ec"
+            ]
+        ]
+    },
+    {
+        "id": "b825f8586aa4511a",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "link in 2",
+        "links": [
+            "916bd70aa0a07205"
+        ],
+        "x": 1645,
+        "y": 1440,
+        "wires": [
+            [
+                "92fee1bd3aae4f4f"
+            ]
+        ]
+    },
+    {
+        "id": "92fee1bd3aae4f4f",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1790,
+        "y": 1440,
+        "wires": [
+            [
+                "de81f43ca21e1a84"
+            ]
+        ]
+    },
+    {
+        "id": "4c63e198f3ed9e1a",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "MorningHeat",
+        "rules": [
+            {
+                "t": "set",
+                "p": "isMorning",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1910,
+        "y": 1140,
+        "wires": [
+            [
+                "cc8c82a34cbe38eb"
+            ]
+        ]
+    },
+    {
+        "id": "f3a3f2678d7010fc",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "Not MOrning",
+        "rules": [
+            {
+                "t": "set",
+                "p": "isMorning",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1970,
+        "y": 1180,
+        "wires": [
+            [
+                "cc8c82a34cbe38eb"
+            ]
+        ]
+    },
+    {
+        "id": "8284020181ca6e80",
+        "type": "debug",
+        "z": "6df0226504208616",
+        "g": "30b092e53a6e3512",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2510,
+        "y": 1140,
         "wires": []
     },
     {
@@ -19572,27 +19310,9 @@
         "wires": [
             [
                 "0911a3e961c90766",
-                "6692caeafc9b13b0",
-                "e43222e154fd142b"
+                "6692caeafc9b13b0"
             ]
         ]
-    },
-    {
-        "id": "e43222e154fd142b",
-        "type": "debug",
-        "z": "15652aa.fd5c4d5",
-        "name": "debug 37",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 740,
-        "wires": []
     },
     {
         "id": "f149bfebe7926479",
@@ -19727,101 +19447,6 @@
         "y": 320,
         "wires": [],
         "icon": "font-awesome/fa-tachometer"
-    },
-    {
-        "id": "bcf2d0982042c8c2",
-        "type": "inject",
-        "z": "15652aa.fd5c4d5",
-        "name": "LESE FIKTIV Temperatursensor",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "22",
-        "payloadType": "num",
-        "x": 510,
-        "y": 500,
-        "wires": [
-            [
-                "14c4295ce64ff3ed",
-                "5b3afc4c1cfb1d84"
-            ]
-        ]
-    },
-    {
-        "id": "14c4295ce64ff3ed",
-        "type": "debug",
-        "z": "15652aa.fd5c4d5",
-        "name": "simple",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "90058c04f3ef628c",
-        "type": "inject",
-        "z": "15652aa.fd5c4d5",
-        "name": "LESE FIKTIV Temperatursensor",
-        "props": [
-            {
-                "p": "payload.temp",
-                "v": "22",
-                "vt": "num"
-            },
-            {
-                "p": "payload.time",
-                "v": "",
-                "vt": "date"
-            },
-            {
-                "p": "payload.powerusage",
-                "v": "2136",
-                "vt": "num"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 510,
-        "y": 560,
-        "wires": [
-            [
-                "3f2e98674a85e78b"
-            ]
-        ]
-    },
-    {
-        "id": "3f2e98674a85e78b",
-        "type": "debug",
-        "z": "15652aa.fd5c4d5",
-        "name": "array",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "de2b220d5addd99e",
@@ -20082,7 +19707,7 @@
         "type": "debug",
         "z": "15652aa.fd5c4d5",
         "name": "debug 63",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -20092,31 +19717,6 @@
         "x": 910,
         "y": 420,
         "wires": []
-    },
-    {
-        "id": "5b3afc4c1cfb1d84",
-        "type": "change",
-        "z": "15652aa.fd5c4d5",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "termostatTemp",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 460,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "2df958d99789518a",
