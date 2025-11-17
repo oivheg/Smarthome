@@ -136,14 +136,6 @@
         "env": []
     },
     {
-        "id": "028d1bd11337d512",
-        "type": "tab",
-        "label": "Time Tracker",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "19a61e2a.75f152",
         "type": "tab",
         "label": "Tømmekalender",
@@ -1321,7 +1313,7 @@
         ],
         "x": 174,
         "y": 659,
-        "w": 1342,
+        "w": 1352,
         "h": 222
     },
     {
@@ -1370,9 +1362,9 @@
             "87d84f08c959923a",
             "03af9b4d41bd40d1"
         ],
-        "x": 184,
+        "x": 174,
         "y": 459,
-        "w": 812,
+        "w": 832,
         "h": 162
     },
     {
@@ -2621,6 +2613,53 @@
         "type": "yr-config",
         "api": "https://api.met.no/weatherapi/locationforecast/2.0",
         "debug": false
+    },
+    {
+        "id": "ha_server",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 5,
+        "addon": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": 30,
+        "areaSelector": "friendlyName",
+        "deviceSelector": "friendlyName",
+        "entitySelector": "friendlyName",
+        "statusSeparator": "at: ",
+        "statusYear": "hidden",
+        "statusMonth": "short",
+        "statusDay": "numeric",
+        "statusHourCycle": "h23",
+        "statusTimeFormat": "h:m",
+        "enableGlobalContextStore": true
+    },
+    {
+        "id": "ui_page",
+        "type": "ui-page",
+        "name": "Home Climate",
+        "ui": "7f0c45a9432dc256",
+        "path": "/climate",
+        "icon": "thermometer",
+        "layout": "grid",
+        "theme": "theme_default",
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "ui_group",
+        "type": "ui-group",
+        "name": "Heat Pump Control",
+        "page": "ui_page",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "className": ""
     },
     {
         "id": "a2ca5e419e4f16a4",
@@ -6135,7 +6174,6 @@
         "name": "",
         "mode": "link",
         "links": [
-            "c5997d499b14048a",
             "e8a10173e53f4a16"
         ],
         "x": 1465,
@@ -6271,7 +6309,7 @@
             },
             {
                 "name": "startTime",
-                "value": "07:00",
+                "value": "08:00",
                 "type": "str"
             },
             {
@@ -8433,8 +8471,7 @@
         "g": "0a0b0609692fe022",
         "name": "Activate manualmode",
         "links": [
-            "2269200b466aa112",
-            "bb541191e0a8556a"
+            "2269200b466aa112"
         ],
         "x": 195,
         "y": 220,
@@ -8488,8 +8525,7 @@
         "g": "0a0b0609692fe022",
         "name": "Deactivate manualmode",
         "links": [
-            "7f851e060826def4",
-            "a91ad0b1f8b7fb8a"
+            "7f851e060826def4"
         ],
         "x": 195,
         "y": 260,
@@ -10866,8 +10902,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 840,
+        "x": 620,
+        "y": 860,
         "wires": [
             [
                 "f25990ae2ecc8f46"
@@ -10882,7 +10918,7 @@
         "links": [
             "d75a3fcd498a1213"
         ],
-        "x": 355,
+        "x": 335,
         "y": 860,
         "wires": [
             [
@@ -10894,7 +10930,7 @@
         "id": "654d9fb07d02046c",
         "type": "deconz-input",
         "z": "a7af161f.d5ece8",
-        "name": "Timer",
+        "name": "Button 1",
         "topic": "",
         "config_version": 2,
         "server": "12895ae7.9c6bf5",
@@ -10927,7 +10963,7 @@
                 ]
             }
         ],
-        "x": 230,
+        "x": 240,
         "y": 40,
         "wires": [
             [
@@ -10984,7 +11020,7 @@
         "name": "link out 30",
         "mode": "link",
         "links": [
-            "f2c61516d13e4a6a"
+            "86d4bc6ca1299e77"
         ],
         "x": 935,
         "y": 20,
@@ -10996,9 +11032,7 @@
         "z": "a7af161f.d5ece8",
         "name": "link out 31",
         "mode": "link",
-        "links": [
-            "137603dc312c04a3"
-        ],
+        "links": [],
         "x": 935,
         "y": 60,
         "wires": []
@@ -11067,31 +11101,49 @@
         ]
     },
     {
-        "id": "dabced6b354eeb1e",
-        "type": "inject",
+        "id": "45cb9cc4a62bb031",
+        "type": "api-call-service",
         "z": "a7af161f.d5ece8",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
+        "server": "c8d8b6d992397cb8",
+        "version": 7,
+        "debugenabled": false,
+        "action": "light.toggle",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [],
+        "entityId": [
+            "light.karina_office_2"
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 360,
-        "y": 760,
+        "labelId": [],
+        "data": "",
+        "dataType": "jsonata",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": true,
+        "domain": "light",
+        "service": "toggle",
+        "x": 1370,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86d4bc6ca1299e77",
+        "type": "link in",
+        "z": "a7af161f.d5ece8",
+        "name": "link in 3",
+        "links": [
+            "bb541191e0a8556a"
+        ],
+        "x": 1125,
+        "y": 40,
         "wires": [
             [
-                "31840a2653579e08"
+                "45cb9cc4a62bb031"
             ]
         ]
     },
@@ -12533,7 +12585,8 @@
                 "41e16a5e73288fc6"
             ],
             [
-                "694353d781c790bc"
+                "694353d781c790bc",
+                "d75a3fcd498a1213"
             ]
         ]
     },
@@ -25288,510 +25341,6 @@
         "wires": [
             [
                 "1683544e57ff8fa9"
-            ]
-        ]
-    },
-    {
-        "id": "ddc8b687.374538",
-        "type": "deconz-input",
-        "z": "028d1bd11337d512",
-        "name": "Timer",
-        "topic": "",
-        "config_version": 2,
-        "server": "12895ae7.9c6bf5",
-        "statustext": "",
-        "statustext_type": "auto",
-        "search_type": "device",
-        "device_list": [
-            "sensors/uniqueid/00:15:8d:00:01:9d:e5:2c-01-0006"
-        ],
-        "device_name": "Happy sulten : ZHASwitch",
-        "query": "",
-        "outputs": 2,
-        "output_rules": [
-            {
-                "type": "state",
-                "format": "single",
-                "output": "always",
-                "onstart": false,
-                "payload": [
-                    "__complete__"
-                ]
-            },
-            {
-                "type": "homekit",
-                "format": "single",
-                "onstart": true,
-                "onerror": true,
-                "payload": [
-                    "__auto__"
-                ]
-            }
-        ],
-        "x": 390,
-        "y": 180,
-        "wires": [
-            [
-                "36bb18ff63240b87",
-                "a491f5a74c848a8b"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "36bb18ff63240b87",
-        "type": "debug",
-        "z": "028d1bd11337d512",
-        "name": "debug 79",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 690,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "c53e3aec87c78d53",
-        "type": "comment",
-        "z": "028d1bd11337d512",
-        "name": "Starte en netelling",
-        "info": "",
-        "x": 1030,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "9eab2bba1ba6f836",
-        "type": "comment",
-        "z": "028d1bd11337d512",
-        "name": "Stoppe en nedtelling",
-        "info": "",
-        "x": 1030,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "80f9cb8c89946e65",
-        "type": "comment",
-        "z": "028d1bd11337d512",
-        "name": "Pause en nedtelling",
-        "info": "",
-        "x": 1030,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "5411059dbdcb9de3",
-        "type": "switch",
-        "z": "028d1bd11337d512",
-        "name": "",
-        "property": "payload.buttonevent",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1000",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "1002",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "1001",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "1003",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "1004",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "1005",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 6,
-        "x": 590,
-        "y": 280,
-        "wires": [
-            [
-                "64a0af84ae9a29ea",
-                "82b6b26fe29040e2"
-            ],
-            [
-                "faa88dcd37f69040"
-            ],
-            [
-                "0a9111d35bf4c83b"
-            ],
-            [
-                "02a9882228982b9d"
-            ],
-            [
-                "0541439d8d6bf8a4",
-                "f2cce7c4bdf0c7cb"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "64a0af84ae9a29ea",
-        "type": "debug",
-        "z": "028d1bd11337d512",
-        "name": "ENKELT",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "faa88dcd37f69040",
-        "type": "debug",
-        "z": "028d1bd11337d512",
-        "name": "tast opp",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "0a9111d35bf4c83b",
-        "type": "debug",
-        "z": "028d1bd11337d512",
-        "name": "trykk og hold ",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "02a9882228982b9d",
-        "type": "debug",
-        "z": "028d1bd11337d512",
-        "name": "Hold tast opp",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "0541439d8d6bf8a4",
-        "type": "debug",
-        "z": "028d1bd11337d512",
-        "name": "dobbeltklikk",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "a491f5a74c848a8b",
-        "type": "delay",
-        "z": "028d1bd11337d512",
-        "d": true,
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 2,
-        "x": 370,
-        "y": 280,
-        "wires": [
-            [
-                "5411059dbdcb9de3"
-            ],
-            [
-                "451d1a18e3d9d099"
-            ]
-        ]
-    },
-    {
-        "id": "451d1a18e3d9d099",
-        "type": "debug",
-        "z": "028d1bd11337d512",
-        "name": "debug 80",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "ac229b7748a3ee96",
-        "type": "hourglass",
-        "z": "028d1bd11337d512",
-        "name": "",
-        "persistId": "",
-        "humanizeLocale": "",
-        "x": 1140,
-        "y": 240,
-        "wires": [
-            [
-                "f9fd73b85742d361"
-            ]
-        ]
-    },
-    {
-        "id": "078b6c95bb2a597d",
-        "type": "change",
-        "z": "028d1bd11337d512",
-        "name": "start",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "start",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "started",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 870,
-        "y": 240,
-        "wires": [
-            [
-                "ac229b7748a3ee96"
-            ]
-        ]
-    },
-    {
-        "id": "71afa3f2f8e90231",
-        "type": "change",
-        "z": "028d1bd11337d512",
-        "name": "stop",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "stop",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "started",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 870,
-        "y": 280,
-        "wires": [
-            [
-                "ac229b7748a3ee96",
-                "8aa698857569b6de"
-            ]
-        ]
-    },
-    {
-        "id": "f2cce7c4bdf0c7cb",
-        "type": "change",
-        "z": "028d1bd11337d512",
-        "name": "reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "reset",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 850,
-        "y": 340,
-        "wires": [
-            [
-                "ac229b7748a3ee96"
-            ]
-        ]
-    },
-    {
-        "id": "82b6b26fe29040e2",
-        "type": "switch",
-        "z": "028d1bd11337d512",
-        "name": "",
-        "property": "started",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "false"
-            },
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 3,
-        "x": 740,
-        "y": 240,
-        "wires": [
-            [
-                "078b6c95bb2a597d"
-            ],
-            [
-                "078b6c95bb2a597d"
-            ],
-            [
-                "71afa3f2f8e90231"
-            ]
-        ]
-    },
-    {
-        "id": "f9fd73b85742d361",
-        "type": "debug",
-        "z": "028d1bd11337d512",
-        "name": "debug 81",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1370,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "8b1fa55a482c2e61",
-        "type": "change",
-        "z": "028d1bd11337d512",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "command",
-                "pt": "msg",
-                "to": "status",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1210,
-        "y": 300,
-        "wires": [
-            [
-                "ac229b7748a3ee96"
-            ]
-        ]
-    },
-    {
-        "id": "8aa698857569b6de",
-        "type": "trigger",
-        "z": "028d1bd11337d512",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "1",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1050,
-        "y": 300,
-        "wires": [
-            [
-                "8b1fa55a482c2e61"
             ]
         ]
     },
