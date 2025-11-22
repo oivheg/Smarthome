@@ -81,14 +81,6 @@
         "env": []
     },
     {
-        "id": "d7485635c81016a0",
-        "type": "tab",
-        "label": "TemperatureControllV2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "15652aa.fd5c4d5",
         "type": "tab",
         "label": "Strøm og Tibber ",
@@ -1493,11 +1485,12 @@
             "22235eefbba9ebae",
             "3c051d32eb2b0b36",
             "d09ba2c7abff45fc",
-            "725c0257fa35396f"
+            "725c0257fa35396f",
+            "7c35a5ac2241c5c4"
         ],
         "x": 2134,
         "y": 319,
-        "w": 992,
+        "w": 1062,
         "h": 342
     },
     {
@@ -1744,47 +1737,6 @@
         "h": 182
     },
     {
-        "id": "30b092e53a6e3512",
-        "type": "group",
-        "z": "6df0226504208616",
-        "name": "Calculating heatpump CONFIGURATION",
-        "style": {
-            "fill": "#3f93cf",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "0df6de6f87baf7f1",
-            "74b25828ae3bf670",
-            "b9845ab333b2c4c5",
-            "cc8c82a34cbe38eb",
-            "18cf395cfea1ee5a",
-            "3ee68da92f9af892",
-            "5b114758e77198ab",
-            "924f634f9205d2f3",
-            "60f9c2fc64183c18",
-            "b105d364dd632eb4",
-            "de81f43ca21e1a84",
-            "41fb45158ee99fca",
-            "fbfaad3f07d0a37f",
-            "2323851ca3bbf2bf",
-            "9188439f2a8ff0ef",
-            "f2b2dea39a0a4e98",
-            "b81032edf5296633",
-            "56e90982a3f5be43",
-            "b825f8586aa4511a",
-            "92fee1bd3aae4f4f",
-            "4c63e198f3ed9e1a",
-            "f3a3f2678d7010fc",
-            "ece44b0e3d535f54",
-            "bd3c355d688d6cf8"
-        ],
-        "x": 1184,
-        "y": 1079,
-        "w": 1462,
-        "h": 322
-    },
-    {
         "id": "833beeaf82e34801",
         "type": "group",
         "z": "2153cce4d74e8cba",
@@ -1915,7 +1867,7 @@
         ],
         "x": 1174,
         "y": 819,
-        "w": 1122,
+        "w": 1142,
         "h": 202
     },
     {
@@ -1932,7 +1884,8 @@
             "b893cefa0ddb6da8",
             "b1f2a591dd7652af",
             "8d75e26ffcc08d92",
-            "a0261e00a4ebdb5a"
+            "a0261e00a4ebdb5a",
+            "456f87a350700e15"
         ],
         "x": 1944,
         "y": 159,
@@ -1967,77 +1920,14 @@
             "62c48071ce1e806d",
             "568760e0e7d11122",
             "e81ff1e993240e56",
-            "2bea738a0f41eed4"
+            "2bea738a0f41eed4",
+            "a66daf205957a322",
+            "913b5253d73d993c"
         ],
-        "x": 2254,
-        "y": 779,
-        "w": 1092,
-        "h": 302
-    },
-    {
-        "id": "46db9e2eed594790",
-        "type": "group",
-        "z": "d7485635c81016a0",
-        "name": "Input Collection",
-        "style": {
-            "fill": "#92d04f",
-            "label": true
-        },
-        "nodes": [
-            "379883e63d0c8b76",
-            "f9a425800e388d72",
-            "ad304a911602b6b1",
-            "58412e30f75f8d2d",
-            "be183064f74d0f95",
-            "8fc813b5fee6e378",
-            "8c9cefda7a479d76",
-            "9f32c9e1f498134e",
-            "9b37149890cc8bcd",
-            "62711e76ecf00501",
-            "dab7d3b4d3aacfc7",
-            "a9a99e60698375a5",
-            "77bfe859d9d880ee",
-            "9c258f613c458d88",
-            "683ff88d1a5628c5",
-            "80a213bc1d308d3b",
-            "cabdd4f9e1c123c7",
-            "81e18d3d034d8d97"
-        ],
-        "x": 494,
-        "y": 159,
-        "w": 812,
-        "h": 522
-    },
-    {
-        "id": "ab9a44e59f7bd464",
-        "type": "group",
-        "z": "d7485635c81016a0",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "b3d05b631a2ef105",
-            "ac30ef1ebd099dab",
-            "d509c77f5decf279",
-            "ebf54b6670aeea3d",
-            "eb00d4e8e216ad0c",
-            "871140d54a3f13c8",
-            "21cf0b5c812e2676",
-            "029739c0aafb299e",
-            "a5243ea7e1b399c6",
-            "2b424fefa519f801",
-            "61793b3d790a703d"
-        ],
-        "x": 494,
-        "y": 719,
-        "w": 1582,
-        "h": 302
+        "x": 2324,
+        "y": 739,
+        "w": 1112,
+        "h": 322
     },
     {
         "id": "86f688737e807f3f",
@@ -2061,6 +1951,47 @@
         "y": 1419,
         "w": 892,
         "h": 202
+    },
+    {
+        "id": "81b3ee2115349953",
+        "type": "group",
+        "z": "6df0226504208616",
+        "name": "Calculating heatpump CONFIGURATION",
+        "style": {
+            "fill": "#3f93cf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "16c24ed3a979e44d",
+            "a205c33069f74780",
+            "fea508368fc7866c",
+            "647e34b2866d723e",
+            "7e87a39c51f83eb3",
+            "2870f0783bcf45ed",
+            "be460bbbe929129a",
+            "76fcd36e6a30654e",
+            "a35b67a3c28e4b2c",
+            "d0f6e607bfa2f492",
+            "28e080f48586ab28",
+            "2a1363e2ac53466c",
+            "fb78cb8091c10398",
+            "77c62f6f031e9bad",
+            "08c2b866e5d64e6c",
+            "bb4dc9aa42df91db",
+            "c7488c7e83ed8aba",
+            "1903f27bd3952352",
+            "cd76ad5bfd77052e",
+            "67be3e8f4b62aa68",
+            "c0c1ab8719682562",
+            "d295d5e765256047",
+            "da4f5fb8ea914251",
+            "93e3349ea442bdd7"
+        ],
+        "x": 1614,
+        "y": 1459,
+        "w": 1462,
+        "h": 322
     },
     {
         "id": "6e32bf19c51ed3a4",
@@ -2187,33 +2118,33 @@
         ]
     },
     {
-        "id": "de81f43ca21e1a84",
+        "id": "28e080f48586ab28",
         "type": "junction",
         "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "x": 2140,
-        "y": 1240,
+        "g": "81b3ee2115349953",
+        "x": 2570,
+        "y": 1620,
         "wires": [
             [
-                "fbfaad3f07d0a37f",
-                "2323851ca3bbf2bf",
-                "9188439f2a8ff0ef",
-                "f2b2dea39a0a4e98",
-                "b81032edf5296633",
-                "56e90982a3f5be43"
+                "fb78cb8091c10398",
+                "77c62f6f031e9bad",
+                "08c2b866e5d64e6c",
+                "bb4dc9aa42df91db",
+                "c7488c7e83ed8aba",
+                "1903f27bd3952352"
             ]
         ]
     },
     {
-        "id": "bd3c355d688d6cf8",
+        "id": "93e3349ea442bdd7",
         "type": "junction",
         "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "x": 2420,
-        "y": 1160,
+        "g": "81b3ee2115349953",
+        "x": 2850,
+        "y": 1540,
         "wires": [
             [
-                "924f634f9205d2f3"
+                "76fcd36e6a30654e"
             ]
         ]
     },
@@ -2433,10 +2364,17 @@
         "id": "c8d8b6d992397cb8",
         "type": "server",
         "name": "Home Assistant",
-        "version": 5,
+        "version": 6,
         "addon": false,
         "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
+        "ha_boolean": [
+            "y",
+            "yes",
+            "true",
+            "on",
+            "home",
+            "open"
+        ],
         "connectionDelay": true,
         "cacheJson": true,
         "heartbeat": false,
@@ -2615,29 +2553,6 @@
         "debug": false
     },
     {
-        "id": "ha_server",
-        "type": "server",
-        "name": "Home Assistant",
-        "version": 5,
-        "addon": true,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
-        "connectionDelay": true,
-        "cacheJson": true,
-        "heartbeat": false,
-        "heartbeatInterval": 30,
-        "areaSelector": "friendlyName",
-        "deviceSelector": "friendlyName",
-        "entitySelector": "friendlyName",
-        "statusSeparator": "at: ",
-        "statusYear": "hidden",
-        "statusMonth": "short",
-        "statusDay": "numeric",
-        "statusHourCycle": "h23",
-        "statusTimeFormat": "h:m",
-        "enableGlobalContextStore": true
-    },
-    {
         "id": "ui_page",
         "type": "ui-page",
         "name": "Home Climate",
@@ -2646,7 +2561,7 @@
         "icon": "thermometer",
         "layout": "grid",
         "theme": "theme_default",
-        "order": 1,
+        "order": 2,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -15200,39 +15115,6 @@
         ]
     },
     {
-        "id": "0df6de6f87baf7f1",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "set min&max Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "minTemp",
-                "pt": "flow",
-                "to": "20",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "maxTemp",
-                "pt": "flow",
-                "to": "30",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1530,
-        "y": 1280,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "634497fb082c9377",
         "type": "sensibo in",
         "z": "6df0226504208616",
@@ -15297,23 +15179,6 @@
         "wires": []
     },
     {
-        "id": "74b25828ae3bf670",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Default MinMax Temp",
-        "links": [
-            "5346ecce7ddb6882"
-        ],
-        "x": 1365,
-        "y": 1280,
-        "wires": [
-            [
-                "0df6de6f87baf7f1"
-            ]
-        ]
-    },
-    {
         "id": "5346ecce7ddb6882",
         "type": "link out",
         "z": "6df0226504208616",
@@ -15322,38 +15187,12 @@
         "mode": "link",
         "links": [
             "a4c4757f465e4957",
-            "74b25828ae3bf670",
-            "1b3f70fcc9f4ecb3"
+            "1b3f70fcc9f4ecb3",
+            "a205c33069f74780"
         ],
         "x": 925,
         "y": 300,
         "wires": []
-    },
-    {
-        "id": "b9845ab333b2c4c5",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Fan and swing levels",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "[[\"stopped\",\"fixedTop\",\"fixedMiddleTop\",\"fixedMiddle\",\"fixedMiddleBottom\",\"fixedBottom\",\"rangeFull\"],[\"quiet\",\"low\",\"medium\",\"medium_high\",\"high\",\"auto\",\"strong\"]]",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1470,
-        "y": 1220,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "fa8f500e932acb55",
@@ -15881,7 +15720,7 @@
         "name": "link in 13",
         "links": [
             "a0261e00a4ebdb5a",
-            "5b114758e77198ab"
+            "be460bbbe929129a"
         ],
         "x": 2235,
         "y": 380,
@@ -15898,8 +15737,8 @@
         "g": "a1794e13fa3182f6",
         "name": "Turn OFF",
         "links": [
-            "60f9c2fc64183c18",
-            "b05a48bd1b6d3165"
+            "b05a48bd1b6d3165",
+            "a35b67a3c28e4b2c"
         ],
         "x": 2315,
         "y": 580,
@@ -15915,7 +15754,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 12,
+        "order": 11,
         "width": "2",
         "height": "1",
         "name": "",
@@ -15937,7 +15776,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 11,
+        "order": 10,
         "width": "2",
         "height": "1",
         "name": "",
@@ -15959,7 +15798,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 8,
+        "order": 7,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16065,7 +15904,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 10,
+        "order": 9,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16187,7 +16026,8 @@
         "links": [
             "e9a5c977e13d6b89",
             "7390da7f15be3f75",
-            "53b6e2c165133960"
+            "53b6e2c165133960",
+            "913b5253d73d993c"
         ],
         "x": 505,
         "y": 720,
@@ -16263,7 +16103,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 13,
+        "order": 12,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16314,7 +16154,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 9,
+        "order": 8,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16380,7 +16220,7 @@
         "z": "6df0226504208616",
         "g": "76afa4ece7428050",
         "group": "f9c985920afe1003",
-        "order": 14,
+        "order": 13,
         "width": "2",
         "height": "1",
         "name": "",
@@ -16665,8 +16505,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2650,
-        "y": 1000,
+        "x": 2740,
+        "y": 980,
         "wires": [
             [
                 "62c48071ce1e806d"
@@ -16691,8 +16531,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2450,
-        "y": 1000,
+        "x": 2540,
+        "y": 980,
         "wires": [
             [
                 "d4ea77e32be534e6"
@@ -16844,80 +16684,6 @@
         ]
     },
     {
-        "id": "cc8c82a34cbe38eb",
-        "type": "function",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Improved Temperature Control",
-        "func": "// Advanced HeatPump control for Node-RED Function node\n// Uses global seasonal context set by separate seasonal detection node\n\nconst COMFORT_TOLERANCE = flow.get('comfortTolerance') || 0.5;\nconst MIN_ON_OFF_TIME_SEC = 600; // 10 minutes\nconst LEARNING_RATE = 0.08;\nconst MAX_TEMP_HISTORY = 12;\nconst SUMMER_MORNING_HEAT_THRESHOLD = 20;\nconst AIR_CIRCULATION_THRESHOLD = 23.0;\n\n// Seasonal context from global\nconst isSummer = global.get('SummerTime');\nconst seasonName = global.get('seasonName');\nconst focusArea = flow.get('focusArea');\nconst primaryMode = flow.get('primaryMode');\nconst defaultSwing = flow.get('defaultSwing');\nconst safetyMin = flow.get('safetyMin');\nconst safetyMax = flow.get('safetyMax');\n\n// Inputs\nconst desiredTemp = Number(flow.get('desiredTemp')) || Number(msg.desiredTemp) || 21;\nconst upstairsCurrentTemp = Number(flow.get('upstairsCurrentTemp')) || Number(msg.upstairsCurrentTemp) || 20;\nconst downstairsCurrentTemp = Number(flow.get('downstairsCurrentTemp')) || Number(msg.downstairsCurrentTemp) || 20;\nconst outsideTemp = Number(flow.get('OutsideTemp')) || Number(msg.OutsideTemp) || 20;\nconst lastModeChange = flow.get('lastModeChange') || 0;\nconst isMorning = msg.isMorning === true;\n\n// Tracking state\nconst tempHistory = Array.isArray(flow.get('tempHistory')) ? flow.get('tempHistory') : [];\nconst lastTargetTemp = flow.get('lastTargetTemp');\nconst lastFanLevel = flow.get('lastFanLevel');\nconst performanceHistory = flow.get('performanceHistory') || {};\n\nconst now = Date.now();\nconst secondsSinceLastChange = (now - lastModeChange) / 1000;\n\n// Control defaults\nlet controlMode = 'off';\nlet targetTemp = desiredTemp;\nlet swing = defaultSwing;\nlet fanLevel = 'low';\nlet reason = '';\nlet shouldTurnOn = false;\n\n// Helpers\nfunction weightedAverage(up, down, upWeight = isSummer ? 0.75 : 0.65) {\n    return up * upWeight + down * (1 - upWeight);\n}\nfunction clamp(v, lo, hi) {\n    return Math.max(lo, Math.min(hi, v));\n}\nfunction updatePerformance() {\n    if (!lastTargetTemp || !lastFanLevel || tempHistory.length < 1) return;\n    const recordedStartTemp = tempHistory[0];\n    const minutes = (Date.now() - lastModeChange) / 1000 / 60;\n    if (minutes < 5) return;\n\n    const tempChange = upstairsCurrentTemp - recordedStartTemp;\n    const perf = {\n        targetTemp: lastTargetTemp,\n        fanLevel: lastFanLevel,\n        tempChange,\n        outsideTemp,\n        durationMin: minutes,\n        timestamp: new Date().toISOString()\n    };\n\n    performanceHistory[lastFanLevel] = performanceHistory[lastFanLevel] || [];\n    performanceHistory[lastFanLevel].push(perf);\n    if (performanceHistory[lastFanLevel].length > 10) performanceHistory[lastFanLevel].shift();\n    flow.set('performanceHistory', performanceHistory);\n}\n\n// Logic functions\nfunction applyCirculationLogic(context) {\n    controlMode = 'fan';\n    swing = 'wide';\n    fanLevel = 'low';\n    shouldTurnOn = true;\n    reason = context;\n}\nfunction applyHeatingLogic(context, referenceTemp = downstairsCurrentTemp) {\n    controlMode = 'heat';\n    swing = 'fixedBottom';\n    shouldTurnOn = true;\n\n    const tempDiff = desiredTemp - referenceTemp;\n    if (tempDiff > 2.5) {\n        fanLevel = 'high';\n        targetTemp = clamp(desiredTemp + 1.5, -100, safetyMax);\n    } else if (tempDiff > 1.5) {\n        fanLevel = 'medium_high';\n        targetTemp = clamp(desiredTemp + 1.2, -100, safetyMax);\n    } else if (tempDiff > 0.7) {\n        fanLevel = 'medium';\n        targetTemp = clamp(desiredTemp + 0.8, -100, safetyMax);\n    } else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    const perfList = performanceHistory[lastFanLevel || fanLevel] || [];\n    if (perfList.length >= 3) {\n        const avgRate = perfList.reduce((s, p) => s + (p.tempChange / Math.max(0.1, p.durationMin)), 0) / perfList.length;\n        if (avgRate < 0.08) {\n            targetTemp = clamp(targetTemp + LEARNING_RATE * 2, -100, safetyMax);\n        }\n    }\n\n    reason = context;\n    flow.set('lastTargetTemp', targetTemp);\n    flow.set('lastFanLevel', fanLevel);\n}\nfunction applyCoolingLogic(context) {\n    controlMode = 'cool';\n    swing = 'fixedTop';\n    shouldTurnOn = true;\n\n    const tempDiff = upstairsCurrentTemp - desiredTemp;\n    if (tempDiff <= COMFORT_TOLERANCE) {\n        applyCirculationLogic(`Upstairs slightly above target (${upstairsCurrentTemp}°C), prefer circulation`);\n        return;\n    }\n\n    if (tempDiff > 3.5) {\n        fanLevel = 'high';\n        targetTemp = clamp(desiredTemp - 2.0, safetyMin, safetyMax);\n    } else if (tempDiff > 2.2) {\n        fanLevel = 'medium_high';\n        targetTemp = clamp(desiredTemp - 1.2, safetyMin, safetyMax);\n    } else if (tempDiff > 1.0) {\n        fanLevel = 'medium';\n        targetTemp = clamp(desiredTemp - 0.8, safetyMin, safetyMax);\n    } else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    reason = context;\n    flow.set('lastTargetTemp', targetTemp);\n    flow.set('lastFanLevel', fanLevel);\n}\n\n// Decision logic\nconst weighted = weightedAverage(upstairsCurrentTemp, downstairsCurrentTemp);\n\nif (isMorning) {\n    if (isSummer && downstairsCurrentTemp < SUMMER_MORNING_HEAT_THRESHOLD) {\n        applyHeatingLogic('Summer morning gentle heat');\n    } else {\n        applyHeatingLogic('Morning heating cycle');\n    }\n} else if (isSummer) {\n    if (upstairsCurrentTemp >= AIR_CIRCULATION_THRESHOLD) {\n        if (upstairsCurrentTemp >= desiredTemp + 1.0) {\n            applyCoolingLogic(`Cooling needed: Upstairs ${upstairsCurrentTemp}°C above target`);\n        } else {\n            applyCirculationLogic(`Air circulation: Managing warm upstairs temp`);\n        }\n    } else if (weighted < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(`Comfort heating: rooms feel cold`);\n    } else if (upstairsCurrentTemp > safetyMax) {\n        applyCoolingLogic(`EMERGENCY: Upstairs temperature too high`);\n    } else if (upstairsCurrentTemp >= desiredTemp + 0.8) {\n        applyCoolingLogic(`Active cooling: Managing upstairs temp`);\n    } else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `Temperature within comfort range`;\n    }\n} else {\n    if (weighted < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(`Heating: weighted below target`);\n    } else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `Within comfort range`;\n    }\n}\n\n// Enforce min on/off time\nif (flow.get('lastControlMode') !== controlMode) {\n    if (secondsSinceLastChange < MIN_ON_OFF_TIME_SEC) {\n        shouldTurnOn = false;\n        controlMode = 'off';\n        reason += ` [Min ON/OFF time not elapsed]`;\n    } else {\n        flow.set('lastModeChange', now);\n        flow.set('lastControlMode', controlMode);\n    }\n}\n\n// Update temp history\ntempHistory.unshift(upstairsCurrentTemp);\nif (tempHistory.length > MAX_TEMP_HISTORY) tempHistory.pop();\nflow.set('tempHistory', tempHistory);\n\n// Update performance\nupdatePerformance();\n\n// Final output\nflow.set('mode', controlMode);\nflow.set('shouldTurnOn', shouldTurnOn);\nflow.set('controlReason', reason);\nflow.set('swing', swing);\nflow.set('fanlevel', fanLevel);\nflow.set('correctedTemp', Math.round(targetTemp));\n\nreturn {\n    payload: {\n        mode: controlMode,\n        fanLevel: fanLevel,\n        heatPumpTemp: Math.round(targetTemp),\n        swing: swing,\n        shouldTurnOn: shouldTurnOn,\n        season: seasonName,\n        upstairsTemp: upstairsCurrentTemp,\n        downstairsTemp: downstairsCurrentTemp,\n        outsideTemp: outsideTemp,\n        desiredTemp: desiredTemp,\n        reason: reason,\n        timestamp: new Date().toISOString(),\n        performanceMetrics: performanceHistory[fanLevel] || []\n    }\n};\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2010,
-        "y": 1140,
-        "wires": [
-            [
-                "18cf395cfea1ee5a"
-            ]
-        ]
-    },
-    {
-        "id": "18cf395cfea1ee5a",
-        "type": "function",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Safety Validator",
-        "func": "// === FINAL SAFETY VALIDATION ===\n// This function provides a final safety check before sending commands to heat pump\n\nvar upstairsTemp = flow.get('upstairsCurrentTemp') || 20;\nvar downstairsTemp = flow.get('downstairsCurrentTemp') || 20;\nvar mode = msg.payload.mode;\nvar targetTemp = msg.payload.heatPumpTemp;\nvar shouldTurnOn = msg.payload.shouldTurnOn;\nvar reason = msg.payload.reason;\nvar swing = msg.payload.swing || '';\nvar fanLevel = msg.payload.fanLevel || 'low';\n\n// Absolute safety limits - these should never be exceeded\nconst ABSOLUTE_MIN_TEMP = 15;\nconst ABSOLUTE_MAX_TEMP = 30;\nconst CROSS_FLOOR_LIMIT = 5; // Max temp difference between floors\n\nvar safetyBlock = false;\nvar safetyReason = '';\n\n// --- Absolute temperature limits ---\nif (targetTemp < ABSOLUTE_MIN_TEMP) {\n    targetTemp = ABSOLUTE_MIN_TEMP;\n    safetyReason += `[Target raised to absolute min ${ABSOLUTE_MIN_TEMP}°C] `;\n}\nif (targetTemp > ABSOLUTE_MAX_TEMP) {\n    targetTemp = ABSOLUTE_MAX_TEMP;\n    safetyReason += `[Target lowered to absolute max ${ABSOLUTE_MAX_TEMP}°C] `;\n}\n\n// --- Cross-floor temperature difference ---\nvar tempDiff = Math.abs(upstairsTemp - downstairsTemp);\nif (tempDiff > CROSS_FLOOR_LIMIT) {\n    if (mode === 'cool' && upstairsTemp - downstairsTemp > CROSS_FLOOR_LIMIT) {\n        if (targetTemp < 20) {\n            targetTemp = 20;\n            safetyReason += `[Cooling limited: large temp diff ${tempDiff.toFixed(1)}°C] `;\n        }\n    } else if (mode === 'heat' && downstairsTemp - upstairsTemp > CROSS_FLOOR_LIMIT) {\n        if (targetTemp > 23) {\n            targetTemp = 23;\n            safetyReason += `[Heating limited: large temp diff ${tempDiff.toFixed(1)}°C] `;\n        }\n    }\n}\n\n// --- Comfort & safety checks ---\nif (mode === 'cool') {\n    if (downstairsTemp < 18) {\n        safetyBlock = true;\n        safetyReason += `[BLOCKED: Downstairs too cold ${downstairsTemp}°C] `;\n    } else if (downstairsTemp < 19 && targetTemp < 21) {\n        targetTemp = 21;\n        safetyReason += `[Cooling moderated: protecting downstairs] `;\n    }\n} else if (mode === 'heat') {\n    if (upstairsTemp > 25) {\n        safetyBlock = true;\n        safetyReason += `[BLOCKED: Upstairs too hot ${upstairsTemp}°C] `;\n    } else if (upstairsTemp > 23 && targetTemp > 22) {\n        targetTemp = 22;\n        safetyReason += `[Heating moderated: protecting upstairs] `;\n    }\n}\n\n// --- Override: Always allow heating if swing is fixedBottom or fan is low ---\nif ((swing === 'fixedBottom' || fanLevel === 'low') && mode === 'heat') {\n    safetyBlock = false; // override any block unless it's a hard limit\n    safetyReason += `[Override: Heating allowed due to swing/fanLevel] `;\n}\n\n// --- Apply safety block ---\nif (safetyBlock) {\n    shouldTurnOn = false;\n    mode = 'off';\n}\n\n// --- Update message ---\nmsg.payload.mode = mode;\nmsg.payload.heatPumpTemp = targetTemp;\nmsg.payload.shouldTurnOn = shouldTurnOn;\nmsg.payload.reason = reason + safetyReason;\nmsg.payload.safetyValidated = true;\nmsg.payload.safetyReason = safetyReason;\n\n// --- Store in context ---\nflow.set('finalMode', mode);\nflow.set('finalTargetTemp', targetTemp);\nflow.set('finalShouldTurnOn', shouldTurnOn);\nflow.set('safetyReason', safetyReason);\n\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2030,
-        "y": 1180,
-        "wires": [
-            [
-                "de81f43ca21e1a84"
-            ]
-        ]
-    },
-    {
-        "id": "3ee68da92f9af892",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "link in 9",
-        "links": [
-            "4b93c7c7130630d3"
-        ],
-        "x": 1225,
-        "y": 1180,
-        "wires": [
-            [
-                "41fb45158ee99fca"
-            ]
-        ]
-    },
-    {
-        "id": "5b114758e77198ab",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Temperature",
-        "mode": "link",
-        "links": [
-            "1ed32b866d4461c8",
-            "3b51d4daf94dd33e"
-        ],
-        "x": 2605,
-        "y": 1300,
-        "wires": []
-    },
-    {
         "id": "09fbdecbd38947c2",
         "type": "change",
         "z": "6df0226504208616",
@@ -16966,52 +16732,6 @@
         "className": "",
         "x": 1800,
         "y": 140,
-        "wires": []
-    },
-    {
-        "id": "924f634f9205d2f3",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "property": "mode",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 2510,
-        "y": 1260,
-        "wires": [
-            [
-                "60f9c2fc64183c18"
-            ],
-            [
-                "5b114758e77198ab"
-            ]
-        ]
-    },
-    {
-        "id": "60f9c2fc64183c18",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "link out 20",
-        "mode": "link",
-        "links": [
-            "8990cd086ea9bbb7"
-        ],
-        "x": 2595,
-        "y": 1200,
         "wires": []
     },
     {
@@ -17089,7 +16809,7 @@
         "mode": "link",
         "links": [
             "39299ac6d24a9150",
-            "3ee68da92f9af892"
+            "2870f0783bcf45ed"
         ],
         "x": 2025,
         "y": 980,
@@ -17138,7 +16858,7 @@
         "y": 200,
         "wires": [
             [
-                "b893cefa0ddb6da8"
+                "456f87a350700e15"
             ]
         ]
     },
@@ -17270,8 +16990,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2420,
-        "y": 840,
+        "x": 2490,
+        "y": 800,
         "wires": [
             [
                 "2bea738a0f41eed4"
@@ -17286,7 +17006,7 @@
         "group": "f9c985920afe1003",
         "name": "BEDTIME COOL",
         "label": "BEDTIME COOL",
-        "order": 7,
+        "order": 6,
         "width": 2,
         "height": 1,
         "emulateClick": false,
@@ -17307,8 +17027,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 2460,
-        "y": 940,
+        "x": 2550,
+        "y": 920,
         "wires": [
             [
                 "535c8e7c992bae6f"
@@ -17333,8 +17053,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 2530,
-        "y": 900,
+        "x": 2620,
+        "y": 880,
         "wires": [
             [
                 "5f39912065e39f2b"
@@ -17370,11 +17090,11 @@
                 "tot": "num"
             }
         ],
-        "x": 2800,
-        "y": 860,
+        "x": 2890,
+        "y": 840,
         "wires": [
             [
-                "2f34542ab25a2b78"
+                "a66daf205957a322"
             ]
         ]
     },
@@ -17421,8 +17141,8 @@
                 "tot": "bool"
             }
         ],
-        "x": 2800,
-        "y": 900,
+        "x": 2890,
+        "y": 880,
         "wires": [
             [
                 "6bc69d4b02521386",
@@ -17441,8 +17161,8 @@
             "209d6f954532c595",
             "3c051d32eb2b0b36"
         ],
-        "x": 3225,
-        "y": 880,
+        "x": 3315,
+        "y": 860,
         "wires": []
     },
     {
@@ -17468,8 +17188,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 3080,
-        "y": 980,
+        "x": 3170,
+        "y": 960,
         "wires": [
             [
                 "b05a48bd1b6d3165",
@@ -17495,8 +17215,8 @@
                 "tot": "bool"
             }
         ],
-        "x": 3150,
-        "y": 1020,
+        "x": 3240,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -17511,8 +17231,8 @@
         "links": [
             "8990cd086ea9bbb7"
         ],
-        "x": 3305,
-        "y": 960,
+        "x": 3395,
+        "y": 940,
         "wires": []
     },
     {
@@ -17577,8 +17297,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 3080,
-        "y": 940,
+        "x": 3170,
+        "y": 920,
         "wires": [
             [
                 "59450958ab89d7e0"
@@ -17596,8 +17316,8 @@
             "7423b10c5f30be4d",
             "209d6f954532c595"
         ],
-        "x": 2255,
-        "y": 960,
+        "x": 2275,
+        "y": 880,
         "wires": []
     },
     {
@@ -17632,8 +17352,8 @@
         "mode": "link",
         "links": [
             "5215193faea2fd66",
-            "b825f8586aa4511a",
-            "a4c4757f465e4957"
+            "a4c4757f465e4957",
+            "cd76ad5bfd77052e"
         ],
         "x": 1615,
         "y": 660,
@@ -17648,35 +17368,12 @@
         "links": [
             "916bd70aa0a07205"
         ],
-        "x": 2715,
-        "y": 1040,
+        "x": 2805,
+        "y": 1020,
         "wires": [
             [
                 "230a2b494efecd7d",
                 "62c48071ce1e806d"
-            ]
-        ]
-    },
-    {
-        "id": "b105d364dd632eb4",
-        "type": "time-range-switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "06:30",
-        "endTime": "08:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 1530,
-        "y": 1180,
-        "wires": [
-            [
-                "4c63e198f3ed9e1a"
-            ],
-            [
-                "f3a3f2678d7010fc"
             ]
         ]
     },
@@ -17698,8 +17395,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 2790,
-        "y": 960,
+        "x": 2880,
+        "y": 940,
         "wires": [
             [
                 "59450958ab89d7e0"
@@ -17715,35 +17412,11 @@
         "links": [
             "c92c6d509c408791"
         ],
-        "x": 2355,
-        "y": 900,
+        "x": 2445,
+        "y": 880,
         "wires": [
             [
                 "535c8e7c992bae6f"
-            ]
-        ]
-    },
-    {
-        "id": "41fb45158ee99fca",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "bedTimeMode",
-        "property": "bedTimeMode",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1340,
-        "y": 1180,
-        "wires": [
-            [
-                "b105d364dd632eb4"
             ]
         ]
     },
@@ -17767,8 +17440,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2860,
-        "y": 1000,
+        "x": 2950,
+        "y": 980,
         "wires": [
             [
                 "c04a717471583b69",
@@ -17876,7 +17549,7 @@
         "name": "link in 6",
         "links": [
             "a0261e00a4ebdb5a",
-            "5b114758e77198ab"
+            "be460bbbe929129a"
         ],
         "x": 2225,
         "y": 460,
@@ -17934,6 +17607,11 @@
             {
                 "t": "delete",
                 "p": "_msgid",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "_event",
                 "pt": "msg"
             }
         ],
@@ -18172,7 +17850,7 @@
         "z": "6df0226504208616",
         "g": "a1794e13fa3182f6",
         "name": "",
-        "property": "isStandBy",
+        "property": "is_playing",
         "propertyType": "global",
         "rules": [
             {
@@ -18209,6 +17887,13 @@
                 "pt": "msg",
                 "to": "medium",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "fanlevel",
+                "pt": "flow",
+                "to": "fanlevel",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -18221,233 +17906,6 @@
         "wires": [
             [
                 "d37e09db5119549c"
-            ]
-        ]
-    },
-    {
-        "id": "fbfaad3f07d0a37f",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "mode",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.mode",
-        "topi": "topic",
-        "x": 2270,
-        "y": 1160,
-        "wires": [
-            [
-                "bd3c355d688d6cf8"
-            ]
-        ]
-    },
-    {
-        "id": "2323851ca3bbf2bf",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "fanLevel",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.fanLevel",
-        "topi": "topic",
-        "x": 2280,
-        "y": 1200,
-        "wires": [
-            [
-                "bd3c355d688d6cf8"
-            ]
-        ]
-    },
-    {
-        "id": "9188439f2a8ff0ef",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "heatPumpTemp",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.heatPumpTemp",
-        "topi": "topic",
-        "x": 2300,
-        "y": 1240,
-        "wires": [
-            [
-                "bd3c355d688d6cf8"
-            ]
-        ]
-    },
-    {
-        "id": "f2b2dea39a0a4e98",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "swing",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.swing",
-        "topi": "topic",
-        "x": 2270,
-        "y": 1280,
-        "wires": [
-            [
-                "bd3c355d688d6cf8"
-            ]
-        ]
-    },
-    {
-        "id": "b81032edf5296633",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "shouldTurnOn",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.shouldTurnOn",
-        "topi": "topic",
-        "x": 2300,
-        "y": 1320,
-        "wires": [
-            [
-                "bd3c355d688d6cf8"
-            ]
-        ]
-    },
-    {
-        "id": "56e90982a3f5be43",
-        "type": "rbe",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "desiredTemp",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.desiredTemp",
-        "topi": "topic",
-        "x": 2290,
-        "y": 1360,
-        "wires": [
-            [
-                "bd3c355d688d6cf8"
-            ]
-        ]
-    },
-    {
-        "id": "b825f8586aa4511a",
-        "type": "link in",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "link in 2",
-        "links": [
-            "916bd70aa0a07205"
-        ],
-        "x": 1835,
-        "y": 1300,
-        "wires": [
-            [
-                "92fee1bd3aae4f4f"
-            ]
-        ]
-    },
-    {
-        "id": "92fee1bd3aae4f4f",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2020,
-        "y": 1300,
-        "wires": [
-            [
-                "de81f43ca21e1a84"
-            ]
-        ]
-    },
-    {
-        "id": "4c63e198f3ed9e1a",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "MorningHeat",
-        "rules": [
-            {
-                "t": "set",
-                "p": "isMorning",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1670,
-        "y": 1120,
-        "wires": [
-            [
-                "cc8c82a34cbe38eb"
-            ]
-        ]
-    },
-    {
-        "id": "f3a3f2678d7010fc",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "Not MOrning",
-        "rules": [
-            {
-                "t": "set",
-                "p": "isMorning",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1730,
-        "y": 1160,
-        "wires": [
-            [
-                "cc8c82a34cbe38eb"
             ]
         ]
     },
@@ -18472,8 +17930,8 @@
         "links": [
             "53b6e2c165133960"
         ],
-        "x": 2755,
-        "y": 540,
+        "x": 2875,
+        "y": 520,
         "wires": [
             [
                 "725c0257fa35396f"
@@ -18589,36 +18047,6 @@
         "wires": [
             [
                 "416a17803274e498"
-            ]
-        ]
-    },
-    {
-        "id": "ece44b0e3d535f54",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "g": "30b092e53a6e3512",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1880,
-        "y": 1260,
-        "wires": [
-            [
-                "92fee1bd3aae4f4f"
             ]
         ]
     },
@@ -18754,7 +18182,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 3080,
+        "x": 3190,
         "y": 880,
         "wires": [
             [
@@ -18784,7 +18212,8 @@
         "y": 560,
         "wires": [
             [
-                "1d5369f2e93e8467"
+                "1d5369f2e93e8467",
+                "7c35a5ac2241c5c4"
             ]
         ]
     },
@@ -18810,8 +18239,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2930,
-        "y": 1040,
+        "x": 3020,
+        "y": 1020,
         "wires": [
             [
                 "230a2b494efecd7d"
@@ -18824,8 +18253,8 @@
         "z": "6df0226504208616",
         "g": "ad60efdef8e2798a",
         "name": "",
-        "x": 2690,
-        "y": 820,
+        "x": 2780,
+        "y": 800,
         "wires": [
             [
                 "535c8e7c992bae6f"
@@ -18864,195 +18293,101 @@
         ]
     },
     {
-        "id": "379883e63d0c8b76",
-        "type": "sensibo in",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "sensiboAPI": "8500b44945f22748",
-        "name": "",
-        "pod": "VfTc6vFm",
-        "getconfig": true,
-        "getACState": false,
-        "polltime": "0",
-        "x": 820,
-        "y": 240,
-        "wires": [
-            [
-                "ad304a911602b6b1"
-            ]
-        ]
-    },
-    {
-        "id": "f9a425800e388d72",
-        "type": "inject",
-        "z": "d7485635c81016a0",
-        "d": true,
-        "g": "46db9e2eed594790",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "120",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 630,
-        "y": 240,
-        "wires": [
-            [
-                "379883e63d0c8b76"
-            ]
-        ]
-    },
-    {
-        "id": "ad304a911602b6b1",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "name": "Store Temperature Upstairs and Downstairs",
+        "id": "a66daf205957a322",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Is Winter",
+        "property": "seasonName",
+        "propertyType": "flow",
         "rules": [
             {
-                "t": "set",
-                "p": "upstairsCurrentTemp",
-                "pt": "flow",
-                "to": "result.measurements.temperature",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "downstairsCurrentTemp",
-                "pt": "flow",
-                "to": "result.motionSensors[0].measurements.temperature",
-                "tot": "msg"
-            }
-        ],
-        "x": 1110,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "58412e30f75f8d2d",
-        "type": "weather data",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "yrconfig": "5917da18bf053368",
-        "latitude": "58.87981",
-        "longitude": "5.7629",
-        "forecastType": "compact",
-        "name": "",
-        "x": 830,
-        "y": 300,
-        "wires": [
-            [
-                "be183064f74d0f95"
-            ]
-        ]
-    },
-    {
-        "id": "be183064f74d0f95",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "name": "Store Outside Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "OutsideTemp",
-                "pt": "flow",
-                "to": "payload.properties.timeseries[0].data.instant.details.air_temperature",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8fc813b5fee6e378",
-        "type": "inject",
-        "z": "d7485635c81016a0",
-        "d": true,
-        "g": "46db9e2eed594790",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
+                "t": "eq",
+                "v": "Winter",
                 "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
-        "repeat": "",
-        "crontab": "0 0-22 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 620,
-        "y": 300,
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 3110,
+        "y": 820,
         "wires": [
             [
-                "58412e30f75f8d2d"
+                "b05a48bd1b6d3165",
+                "913b5253d73d993c"
+            ],
+            [
+                "2f34542ab25a2b78"
             ]
         ]
     },
     {
-        "id": "8c9cefda7a479d76",
-        "type": "ui-text-input",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "group": "f9c985920afe1003",
-        "name": "",
-        "label": "Temperature",
-        "order": 6,
-        "width": "2",
-        "height": "1",
-        "topic": "topic",
-        "topicType": "msg",
-        "mode": "number",
-        "delay": "500",
-        "passthru": false,
-        "sendOnDelay": true,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "x": 830,
-        "y": 360,
+        "id": "913b5253d73d993c",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "link out 10",
+        "mode": "link",
+        "links": [
+            "209d6f954532c595"
+        ],
+        "x": 3235,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "16c24ed3a979e44d",
+        "type": "function",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "Initialize Configuration",
+        "func": "// ═══════════════════════════════════════════════════════════════════════\n// HEAT PUMP CONTROL CONFIGURATION\n// Initialize all constants and defaults for the heat pump control system\n// ═══════════════════════════════════════════════════════════════════════\n\n// Temperature limits\nflow.set('minTemp', 20);\nflow.set('maxTemp', 30);\nflow.set('safetyMin', 15);\nflow.set('safetyMax', 30);\n\n// Control parameters\nflow.set('comfortTolerance', 0.5);          // Degrees +/- for comfort range\nflow.set('minOnOffTimeSec', 600);           // 10 minutes minimum between mode changes\nflow.set('learningRate', 0.08);             // Performance adjustment factor\nflow.set('maxTempHistory', 12);             // History records to maintain\n\n// Zone balancing\nflow.set('maxZoneDifference', 2.5);         // Max acceptable temp diff between zones\nflow.set('upstairsComfortMin', 19.5);       // Minimum upstairs comfort in winter\nflow.set('circulationTempDiff', 1.8);       // Trigger circulation threshold\n\n// Seasonal thresholds\nflow.set('summerMorningHeatThreshold', 20); // Summer morning heat trigger\nflow.set('airCirculationThreshold', 23.0);  // Summer circulation trigger\n\n// Safety validation\nflow.set('absoluteMinTemp', 15);            // Hard minimum\nflow.set('absoluteMaxTemp', 30);            // Hard maximum\nflow.set('crossFloorLimit', 5);             // Max temp difference for safety\n\n// Default modes\nflow.set('defaultSwing', 'wide');\nflow.set('primaryMode', 'auto');\nflow.set('focusArea', 'downstairs');\nflow.set('seasonName', 'auto');\n\nnode.status({fill:\"green\", shape:\"dot\", text:\"Configuration loaded\"});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1980,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a205c33069f74780",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "Default MinMax Temp",
+        "links": [
+            "5346ecce7ddb6882"
+        ],
+        "x": 1795,
+        "y": 1660,
         "wires": [
             [
-                "9f32c9e1f498134e"
+                "16c24ed3a979e44d"
             ]
         ]
     },
     {
-        "id": "9f32c9e1f498134e",
+        "id": "fea508368fc7866c",
         "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "name": "",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "Fan and swing levels",
         "rules": [
             {
                 "t": "set",
-                "p": "desiredTemp",
-                "pt": "flow",
-                "to": "$number(payload)",
-                "tot": "jsonata"
+                "p": "payload",
+                "pt": "msg",
+                "to": "[[\"stopped\",\"fixedTop\",\"fixedMiddleTop\",\"fixedMiddle\",\"fixedMiddleBottom\",\"fixedBottom\",\"rangeFull\"],[\"quiet\",\"low\",\"medium\",\"medium_high\",\"high\",\"auto\",\"strong\"]]",
+                "tot": "json"
             }
         ],
         "action": "",
@@ -19060,17 +18395,137 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 360,
+        "x": 1900,
+        "y": 1600,
         "wires": [
             []
         ]
     },
     {
-        "id": "9b37149890cc8bcd",
+        "id": "647e34b2866d723e",
+        "type": "function",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "Improved Temperature Control",
+        "func": "// ═══════════════════════════════════════════════════════════════════════\n// INTELLIGENT HEAT PUMP TEMPERATURE CONTROL\n// Advanced control with zone balancing, adaptive learning, and safety\n// ═══════════════════════════════════════════════════════════════════════\n\n// Load configuration from flow context\nconst COMFORT_TOLERANCE = flow.get('comfortTolerance') || 0.5;\nconst MIN_ON_OFF_TIME_SEC = flow.get('minOnOffTimeSec') || 600;\nconst LEARNING_RATE = flow.get('learningRate') || 0.08;\nconst MAX_TEMP_HISTORY = flow.get('maxTempHistory') || 12;\nconst SUMMER_MORNING_HEAT_THRESHOLD = flow.get('summerMorningHeatThreshold') || 20;\nconst AIR_CIRCULATION_THRESHOLD = flow.get('airCirculationThreshold') || 23.0;\nconst MAX_ZONE_DIFFERENCE = flow.get('maxZoneDifference') || 2.5;\nconst UPSTAIRS_COMFORT_MIN = flow.get('upstairsComfortMin') || 19.5;\nconst CIRCULATION_TEMP_DIFF = flow.get('circulationTempDiff') || 1.8\n\n// ─────────────────────────────────────────────────────────────────────\n// SEASONAL & CONFIGURATION CONTEXT\n// ─────────────────────────────────────────────────────────────────────\nconst isSummer = global.get('SummerTime');\nconst seasonName = flow.get('seasonName');\nconst focusArea = flow.get('focusArea') || 'downstairs';\nconst primaryMode = flow.get('primaryMode');\nconst defaultSwing = flow.get('defaultSwing') || 'fixedBottom';\nconst safetyMin = flow.get('safetyMin') || 15;\nconst safetyMax = flow.get('safetyMax') || 30;\n\n// ─────────────────────────────────────────────────────────────────────\n// SENSOR INPUTS & CURRENT STATE\n// ─────────────────────────────────────────────────────────────────────\nconst desiredTemp = Number(flow.get('desiredTemp')) || Number(msg.desiredTemp) || 21;\nconst upstairsCurrentTemp = Number(flow.get('upstairsCurrentTemp')) || Number(msg.upstairsCurrentTemp) || 20;\nconst downstairsCurrentTemp = Number(flow.get('downstairsCurrentTemp')) || Number(msg.downstairsCurrentTemp) || 20;\nconst outsideTemp = Number(flow.get('OutsideTemp')) || Number(msg.OutsideTemp) || 20;\nconst lastModeChange = flow.get('lastModeChange') || 0;\nconst isMorning = msg.isMorning === true;\n\n// ─────────────────────────────────────────────────────────────────────\n// OCCUPANCY & TIME CONTEXT\n// ─────────────────────────────────────────────────────────────────────\nconst homeStatus = global.get('Mode') || 'home'; // 'home' or 'away'\nconst dayStatus = global.get('status') || 'day'; // 'day' or 'night'\nconst isHome = homeStatus === 'home';\nconst isDay = dayStatus === 'day';\nconst currentHour = new Date().getHours();\n\n// ─────────────────────────────────────────────────────────────────────\n// STATE TRACKING & PERFORMANCE HISTORY\n// ─────────────────────────────────────────────────────────────────────\nconst tempHistory = Array.isArray(flow.get('tempHistory')) ? flow.get('tempHistory') : [];\nconst lastTargetTemp = flow.get('lastTargetTemp');\nconst lastFanLevel = flow.get('lastFanLevel');\nconst performanceHistory = flow.get('performanceHistory') || {};\n\nconst now = Date.now();\nconst secondsSinceLastChange = (now - lastModeChange) / 1000;\n\n// ─────────────────────────────────────────────────────────────────────\n// CONTROL OUTPUT DEFAULTS\n// ─────────────────────────────────────────────────────────────────────\nlet controlMode = 'off';\nlet targetTemp = desiredTemp;\nlet swing = defaultSwing;\nlet fanLevel = 'low';\nlet reason = '';\nlet shouldTurnOn = false;\n\n// ─────────────────────────────────────────────────────────────────────\n// HELPER FUNCTIONS\n// ─────────────────────────────────────────────────────────────────────\n\n/** Calculate weighted average between upstairs and downstairs temps */\nfunction weightedAverage(up, down, upWeight = isSummer ? 0.75 : 0.65) {\n    return up * upWeight + down * (1 - upWeight);\n}\n\nfunction clamp(v, lo, hi) {\n    return Math.max(lo, Math.min(hi, v));\n}\n\n/** Determine which zone to prioritize based on occupancy and time */\nfunction getPriorityZone() {\n    // If focus area is explicitly set, use it\n    if (focusArea === 'upstairs' || focusArea === 'downstairs') {\n        return focusArea;\n    }\n    \n    // Smart detection: upstairs priority during home daytime\n    if (isHome && isDay && currentHour >= 9 && currentHour <= 21) {\n        return 'upstairs';\n    }\n    \n    // Otherwise prioritize downstairs (coldest area)\n    return 'downstairs';\n}\n\n/** Get reference temperature based on priority zone with weighted blending */\nfunction getReferenceTemp(priorityZone) {\n    if (priorityZone === 'upstairs') {\n        // Blend both zones when focusing upstairs, but weight upstairs more\n        return upstairsCurrentTemp * 0.6 + downstairsCurrentTemp * 0.4;\n    }\n    // Primarily downstairs, but don't ignore upstairs completely\n    return downstairsCurrentTemp * 0.75 + upstairsCurrentTemp * 0.25;\n}\n\n/** Check if temperature difference between zones requires balancing */\nfunction needsZoneBalancing() {\n    const zoneDiff = Math.abs(upstairsCurrentTemp - downstairsCurrentTemp);\n    return zoneDiff > CIRCULATION_TEMP_DIFF;\n}\n\n/** Update performance history for adaptive learning */\nfunction updatePerformance() {\n    if (!lastTargetTemp || !lastFanLevel || tempHistory.length < 1) return;\n    const recordedStartTemp = tempHistory[0];\n    const minutes = (Date.now() - lastModeChange) / 1000 / 60;\n    if (minutes < 5) return;\n\n    const tempChange = upstairsCurrentTemp - recordedStartTemp;\n    const perf = {\n        targetTemp: lastTargetTemp,\n        fanLevel: lastFanLevel,\n        tempChange,\n        outsideTemp,\n        durationMin: minutes,\n        timestamp: new Date().toISOString()\n    };\n\n    performanceHistory[lastFanLevel] = performanceHistory[lastFanLevel] || [];\n    performanceHistory[lastFanLevel].push(perf);\n    if (performanceHistory[lastFanLevel].length > 10) performanceHistory[lastFanLevel].shift();\n    flow.set('performanceHistory', performanceHistory);\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// CONTROL LOGIC APPLICATION FUNCTIONS\n// ─────────────────────────────────────────────────────────────────────\n\n/** Apply fan circulation mode for air distribution */\nfunction applyCirculationLogic(context) {\n    controlMode = 'fan';\n    swing = 'fixedTop';\n    fanLevel = 'low';\n    shouldTurnOn = true;\n    reason = context;\n}\n\n/** Apply heating mode with zone-aware temperature and fan control */\nfunction applyHeatingLogic(context, referenceTemp, priorityZone = 'downstairs') {\n    controlMode = 'heat';\n    \n    // IMPROVED: Adjust swing based on priority zone\n    if (priorityZone === 'upstairs') {\n        swing = 'fixedTop'; // Distribute heat to both zones\n    } else {\n        swing = 'fixedBottom'; // Focus on downstairs\n    }\n    \n    shouldTurnOn = true;\n\n    const tempDiff = desiredTemp - referenceTemp;\n    \n    // IMPROVED: More granular control with zone awareness\n    if (tempDiff > 2.5) {\n        fanLevel = 'high';\n        targetTemp = clamp(desiredTemp + 1.5, -100, safetyMax);\n    } else if (tempDiff > 1.5) {\n        fanLevel = 'medium_high';\n        targetTemp = clamp(desiredTemp + 1.2, -100, safetyMax);\n    } else if (tempDiff > 0.7) {\n        fanLevel = 'medium';\n        targetTemp = clamp(desiredTemp + 0.8, -100, safetyMax);\n    } else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    // Performance-based adjustment\n    const perfList = performanceHistory[lastFanLevel || fanLevel] || [];\n    if (perfList.length >= 3) {\n        const avgRate = perfList.reduce((s, p) => s + (p.tempChange / Math.max(0.1, p.durationMin)), 0) / perfList.length;\n        if (avgRate < 0.08) {\n            targetTemp = clamp(targetTemp + LEARNING_RATE * 2, -100, safetyMax);\n        }\n    }\n\n    reason = context;\n    flow.set('lastTargetTemp', targetTemp);\n    flow.set('lastFanLevel', fanLevel);\n}\n\n/** Apply cooling mode for summer temperature management */\nfunction applyCoolingLogic(context) {\n    controlMode = 'cool';\n    swing = 'fixedTop';\n    shouldTurnOn = true;\n\n    const tempDiff = upstairsCurrentTemp - desiredTemp;\n    if (tempDiff <= COMFORT_TOLERANCE) {\n        applyCirculationLogic(`Upstairs slightly above target (${upstairsCurrentTemp}°C), prefer circulation`);\n        return;\n    }\n\n    if (tempDiff > 3.5) {\n        fanLevel = 'high';\n        targetTemp = clamp(desiredTemp - 2.0, safetyMin, safetyMax);\n    } else if (tempDiff > 2.2) {\n        fanLevel = 'medium_high';\n        targetTemp = clamp(desiredTemp - 1.2, safetyMin, safetyMax);\n    } else if (tempDiff > 1.0) {\n        fanLevel = 'medium';\n        targetTemp = clamp(desiredTemp - 0.8, safetyMin, safetyMax);\n    } else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    reason = context;\n    flow.set('lastTargetTemp', targetTemp);\n    flow.set('lastFanLevel', fanLevel);\n}\n\n// ═══════════════════════════════════════════════════════════════════════\n// MAIN DECISION LOGIC\n// Determines heat pump operation based on all inputs and context\n// ═══════════════════════════════════════════════════════════════════════\n\nconst priorityZone = getPriorityZone();\nconst referenceTemp = getReferenceTemp(priorityZone);\nconst zoneDiff = Math.abs(upstairsCurrentTemp - downstairsCurrentTemp);\nconst weighted = weightedAverage(upstairsCurrentTemp, downstairsCurrentTemp);\n\n// ─────────────────────────────────────────────────────────────────────\n// MORNING HEATING CYCLE (All Seasons)\n// ─────────────────────────────────────────────────────────────────────\nif (isMorning) {\n    if (isSummer && downstairsCurrentTemp < SUMMER_MORNING_HEAT_THRESHOLD) {\n        applyHeatingLogic('Summer morning gentle heat', downstairsCurrentTemp, 'downstairs');\n    } else {\n        applyHeatingLogic(`Morning heating cycle (${priorityZone} focus)`, referenceTemp, priorityZone);\n    }\n}\n// ─────────────────────────────────────────────────────────────────────\n// SUMMER COOLING & CIRCULATION\n// ─────────────────────────────────────────────────────────────────────\nelse if (isSummer) {\n    if (upstairsCurrentTemp >= AIR_CIRCULATION_THRESHOLD) {\n        if (upstairsCurrentTemp >= desiredTemp + 1.0) {\n            applyCoolingLogic(`Cooling needed: Upstairs ${upstairsCurrentTemp}°C above target`);\n        } else {\n            applyCirculationLogic(`Air circulation: Managing warm upstairs temp`);\n        }\n    } else if (weighted < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(`Comfort heating: rooms feel cold`, weighted, priorityZone);\n    } else if (upstairsCurrentTemp > safetyMax) {\n        applyCoolingLogic(`EMERGENCY: Upstairs temperature too high`);\n    } else if (upstairsCurrentTemp >= desiredTemp + 0.8) {\n        applyCoolingLogic(`Active cooling: Managing upstairs temp`);\n    } else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `Temperature within comfort range`;\n    }\n}\n// ─────────────────────────────────────────────────────────────────────\n// WINTER HEATING & ZONE BALANCING\n// Advanced logic with upstairs comfort and multi-zone coordination\n// ─────────────────────────────────────────────────────────────────────\nelse {\n    // Critical: Check if upstairs is too cold for comfort (NEW)\n    if (upstairsCurrentTemp < UPSTAIRS_COMFORT_MIN && isHome && isDay) {\n        applyHeatingLogic(\n            `Winter upstairs comfort heating (${upstairsCurrentTemp}°C < ${UPSTAIRS_COMFORT_MIN}°C)`,\n            upstairsCurrentTemp,\n            'upstairs'\n        );\n    }\n    // Primary downstairs heating\n    else if (downstairsCurrentTemp < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(\n            `Primary heating: Downstairs below target (${downstairsCurrentTemp}°C)`,\n            downstairsCurrentTemp,\n            'downstairs'\n        );\n    }\n    // Zone balancing with circulation (NEW)\n    else if (needsZoneBalancing() && controlMode !== 'off') {\n        if (downstairsCurrentTemp < upstairsCurrentTemp - MAX_ZONE_DIFFERENCE) {\n            // Downstairs much colder - heat with bottom focus\n            applyHeatingLogic(\n                `Zone balancing: Downstairs ${zoneDiff.toFixed(1)}°C colder`,\n                downstairsCurrentTemp,\n                'downstairs'\n            );\n        } else if (upstairsCurrentTemp < downstairsCurrentTemp - CIRCULATION_TEMP_DIFF) {\n            // Upstairs colder - heat with circulation\n            applyHeatingLogic(\n                `Zone balancing: Upstairs ${zoneDiff.toFixed(1)}°C colder`,\n                upstairsCurrentTemp,\n                'upstairs'\n            );\n        } else {\n            // Just circulate to even out\n            applyCirculationLogic(`Zone circulation: ${zoneDiff.toFixed(1)}°C difference`);\n        }\n    }\n    // General reference-based heating\n    else if (referenceTemp < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(\n            `Heating: ${priorityZone} focus (${referenceTemp.toFixed(1)}°C < ${desiredTemp}°C)`,\n            referenceTemp,\n            priorityZone\n        );\n    }\n    // All comfortable\n    else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `Within comfort range (${priorityZone} ${referenceTemp.toFixed(1)}°C, zones balanced)`;\n    }\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// SAFETY CHECKS & STATE MANAGEMENT\n// ─────────────────────────────────────────────────────────────────────\n\n// Enforce minimum on/off time to prevent rapid cycling\nif (flow.get('lastControlMode') !== controlMode) {\n    if (secondsSinceLastChange < MIN_ON_OFF_TIME_SEC) {\n        shouldTurnOn = false;\n        controlMode = 'off';\n        reason += ` [Min ON/OFF time not elapsed]`;\n    } else {\n        flow.set('lastModeChange', now);\n        flow.set('lastControlMode', controlMode);\n    }\n}\n\n// Update temp history\ntempHistory.unshift(upstairsCurrentTemp);\nif (tempHistory.length > MAX_TEMP_HISTORY) tempHistory.pop();\nflow.set('tempHistory', tempHistory);\n\n// Update performance\nupdatePerformance();\n\n// Store priority zone for debugging\nflow.set('currentPriorityZone', priorityZone);\nflow.set('zoneTempDifference', zoneDiff);\n\n// ─────────────────────────────────────────────────────────────────────\n// FINAL OUTPUT & STATUS\n// ─────────────────────────────────────────────────────────────────────\nflow.set('mode', controlMode);\nflow.set('shouldTurnOn', shouldTurnOn);\nflow.set('controlReason', reason);\nflow.set('swing', swing);\nflow.set('fanlevel', fanLevel);\nflow.set('correctedTemp', Math.round(targetTemp));\n\nreturn {\n    payload: {\n        mode: controlMode,\n        fanLevel: fanLevel,\n        heatPumpTemp: Math.round(targetTemp),\n        swing: swing,\n        shouldTurnOn: shouldTurnOn,\n        season: seasonName,\n        priorityZone: priorityZone,\n        upstairsTemp: upstairsCurrentTemp,\n        downstairsTemp: downstairsCurrentTemp,\n        zoneDifference: zoneDiff.toFixed(1),\n        outsideTemp: outsideTemp,\n        desiredTemp: desiredTemp,\n        referenceTemp: referenceTemp.toFixed(1),\n        reason: reason,\n        timestamp: new Date().toISOString(),\n        performanceMetrics: performanceHistory[fanLevel] || []\n    }\n};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2440,
+        "y": 1520,
+        "wires": [
+            [
+                "7e87a39c51f83eb3"
+            ]
+        ]
+    },
+    {
+        "id": "7e87a39c51f83eb3",
+        "type": "function",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "Safety Validator",
+        "func": "// ═══════════════════════════════════════════════════════════════════════\n// SAFETY VALIDATOR\n// Final validation layer preventing unsafe heat pump operations\n// ═══════════════════════════════════════════════════════════════════════\n\n// ─────────────────────────────────────────────────────────────────────\n// INPUT VALIDATION\n// ─────────────────────────────────────────────────────────────────────\nvar upstairsTemp = flow.get('upstairsCurrentTemp') || 20;\nvar downstairsTemp = flow.get('downstairsCurrentTemp') || 20;\nvar mode = msg.payload.mode;\nvar targetTemp = msg.payload.heatPumpTemp;\nvar shouldTurnOn = msg.payload.shouldTurnOn;\nvar reason = msg.payload.reason;\nvar swing = msg.payload.swing || '';\nvar fanLevel = msg.payload.fanLevel || 'low';\n\n// Absolute safety limits - these should never be exceeded\nconst ABSOLUTE_MIN_TEMP = 15;\nconst ABSOLUTE_MAX_TEMP = 30;\nconst CROSS_FLOOR_LIMIT = 5; // Max temp difference between floors\n\nvar safetyBlock = false;\nvar safetyReason = '';\n\n// ─────────────────────────────────────────────────────────────────────\n// ABSOLUTE TEMPERATURE LIMITS\n// ─────────────────────────────────────────────────────────────────────\nif (targetTemp < ABSOLUTE_MIN_TEMP) {\n    targetTemp = ABSOLUTE_MIN_TEMP;\n    safetyReason += `[Target raised to absolute min ${ABSOLUTE_MIN_TEMP}°C] `;\n}\nif (targetTemp > ABSOLUTE_MAX_TEMP) {\n    targetTemp = ABSOLUTE_MAX_TEMP;\n    safetyReason += `[Target lowered to absolute max ${ABSOLUTE_MAX_TEMP}°C] `;\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// CROSS-FLOOR TEMPERATURE PROTECTION\n// ─────────────────────────────────────────────────────────────────────\nvar tempDiff = Math.abs(upstairsTemp - downstairsTemp);\nif (tempDiff > CROSS_FLOOR_LIMIT) {\n    if (mode === 'cool' && upstairsTemp - downstairsTemp > CROSS_FLOOR_LIMIT) {\n        if (targetTemp < 20) {\n            targetTemp = 20;\n            safetyReason += `[Cooling limited: large temp diff ${tempDiff.toFixed(1)}°C] `;\n        }\n    } else if (mode === 'heat' && downstairsTemp - upstairsTemp > CROSS_FLOOR_LIMIT) {\n        if (targetTemp > 23) {\n            targetTemp = 23;\n            safetyReason += `[Heating limited: large temp diff ${tempDiff.toFixed(1)}°C] `;\n        }\n    }\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// COMFORT & SAFETY BOUNDARY CHECKS\n// ─────────────────────────────────────────────────────────────────────\nif (mode === 'cool') {\n    if (downstairsTemp < 18) {\n        safetyBlock = true;\n        safetyReason += `[BLOCKED: Downstairs too cold ${downstairsTemp}°C] `;\n    } else if (downstairsTemp < 19 && targetTemp < 21) {\n        targetTemp = 21;\n        safetyReason += `[Cooling moderated: protecting downstairs] `;\n    }\n} else if (mode === 'heat') {\n    if (upstairsTemp > 25) {\n        safetyBlock = true;\n        safetyReason += `[BLOCKED: Upstairs too hot ${upstairsTemp}°C] `;\n    } else if (upstairsTemp > 23 && targetTemp > 22) {\n        targetTemp = 22;\n        safetyReason += `[Heating moderated: protecting upstairs] `;\n    }\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// OVERRIDE LOGIC\n// ─────────────────────────────────────────────────────────────────────\nif ((swing === 'fixedBottom' || fanLevel === 'low') && mode === 'heat') {\n    safetyBlock = false; // override any block unless it's a hard limit\n    safetyReason += `[Override: Heating allowed due to swing/fanLevel] `;\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// APPLY SAFETY DECISIONS\n// ─────────────────────────────────────────────────────────────────────\nif (safetyBlock) {\n    shouldTurnOn = false;\n    mode = 'off';\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// OUTPUT PREPARATION\n// ─────────────────────────────────────────────────────────────────────\nmsg.payload.mode = mode;\nmsg.payload.heatPumpTemp = targetTemp;\nmsg.payload.shouldTurnOn = shouldTurnOn;\nmsg.payload.reason = reason + safetyReason;\nmsg.payload.safetyValidated = true;\nmsg.payload.safetyReason = safetyReason;\n\n// --- Store in context ---\nflow.set('finalMode', mode);\nflow.set('finalTargetTemp', targetTemp);\nflow.set('finalShouldTurnOn', shouldTurnOn);\nflow.set('safetyReason', safetyReason);\nflow.set('fanlevel', fanLevel);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2460,
+        "y": 1560,
+        "wires": [
+            [
+                "28e080f48586ab28"
+            ]
+        ]
+    },
+    {
+        "id": "2870f0783bcf45ed",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "link in 9",
+        "links": [
+            "4b93c7c7130630d3"
+        ],
+        "x": 1655,
+        "y": 1560,
+        "wires": [
+            [
+                "2a1363e2ac53466c"
+            ]
+        ]
+    },
+    {
+        "id": "be460bbbe929129a",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "Temperature",
+        "mode": "link",
+        "links": [
+            "1ed32b866d4461c8",
+            "3b51d4daf94dd33e"
+        ],
+        "x": 3035,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "76fcd36e6a30654e",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "",
+        "property": "mode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2940,
+        "y": 1640,
+        "wires": [
+            [
+                "a35b67a3c28e4b2c"
+            ],
+            [
+                "be460bbbe929129a"
+            ]
+        ]
+    },
+    {
+        "id": "a35b67a3c28e4b2c",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "link out 20",
+        "mode": "link",
+        "links": [
+            "8990cd086ea9bbb7"
+        ],
+        "x": 3025,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "d0f6e607bfa2f492",
         "type": "time-range-switch",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
         "name": "",
         "lat": "58.851468",
         "lon": "5.748852",
@@ -19078,22 +18533,217 @@
         "endTime": "08:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 810,
-        "y": 440,
+        "x": 1960,
+        "y": 1560,
         "wires": [
             [
-                "62711e76ecf00501"
+                "c0c1ab8719682562"
             ],
             [
-                "dab7d3b4d3aacfc7"
+                "d295d5e765256047"
             ]
         ]
     },
     {
-        "id": "62711e76ecf00501",
+        "id": "2a1363e2ac53466c",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "bedTimeMode",
+        "property": "bedTimeMode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1770,
+        "y": 1560,
+        "wires": [
+            [
+                "d0f6e607bfa2f492"
+            ]
+        ]
+    },
+    {
+        "id": "fb78cb8091c10398",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "mode",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.mode",
+        "topi": "topic",
+        "x": 2700,
+        "y": 1540,
+        "wires": [
+            [
+                "93e3349ea442bdd7"
+            ]
+        ]
+    },
+    {
+        "id": "77c62f6f031e9bad",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "fanLevel",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.fanLevel",
+        "topi": "topic",
+        "x": 2710,
+        "y": 1580,
+        "wires": [
+            [
+                "93e3349ea442bdd7"
+            ]
+        ]
+    },
+    {
+        "id": "08c2b866e5d64e6c",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "heatPumpTemp",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.heatPumpTemp",
+        "topi": "topic",
+        "x": 2730,
+        "y": 1620,
+        "wires": [
+            [
+                "93e3349ea442bdd7"
+            ]
+        ]
+    },
+    {
+        "id": "bb4dc9aa42df91db",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "swing",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.swing",
+        "topi": "topic",
+        "x": 2700,
+        "y": 1660,
+        "wires": [
+            [
+                "93e3349ea442bdd7"
+            ]
+        ]
+    },
+    {
+        "id": "c7488c7e83ed8aba",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "shouldTurnOn",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.shouldTurnOn",
+        "topi": "topic",
+        "x": 2730,
+        "y": 1700,
+        "wires": [
+            [
+                "93e3349ea442bdd7"
+            ]
+        ]
+    },
+    {
+        "id": "1903f27bd3952352",
+        "type": "rbe",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "desiredTemp",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.desiredTemp",
+        "topi": "topic",
+        "x": 2720,
+        "y": 1740,
+        "wires": [
+            [
+                "93e3349ea442bdd7"
+            ]
+        ]
+    },
+    {
+        "id": "cd76ad5bfd77052e",
+        "type": "link in",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "link in 2",
+        "links": [
+            "916bd70aa0a07205"
+        ],
+        "x": 2265,
+        "y": 1680,
+        "wires": [
+            [
+                "67be3e8f4b62aa68"
+            ]
+        ]
+    },
+    {
+        "id": "67be3e8f4b62aa68",
         "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2450,
+        "y": 1680,
+        "wires": [
+            [
+                "28e080f48586ab28"
+            ]
+        ]
+    },
+    {
+        "id": "c0c1ab8719682562",
+        "type": "change",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
         "name": "MorningHeat",
         "rules": [
             {
@@ -19109,17 +18759,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1010,
-        "y": 420,
+        "x": 2100,
+        "y": 1500,
         "wires": [
-            []
+            [
+                "647e34b2866d723e"
+            ]
         ]
     },
     {
-        "id": "dab7d3b4d3aacfc7",
+        "id": "d295d5e765256047",
         "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
         "name": "Not MOrning",
         "rules": [
             {
@@ -19135,356 +18787,27 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1010,
-        "y": 460,
+        "x": 2160,
+        "y": 1540,
         "wires": [
-            []
+            [
+                "647e34b2866d723e"
+            ]
         ]
     },
     {
-        "id": "a9a99e60698375a5",
+        "id": "da4f5fb8ea914251",
         "type": "inject",
-        "z": "d7485635c81016a0",
-        "d": true,
-        "g": "46db9e2eed594790",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
         "name": "",
         "props": [
             {
                 "p": "payload"
-            }
-        ],
-        "repeat": "120",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 610,
-        "y": 440,
-        "wires": [
-            [
-                "9b37149890cc8bcd"
-            ]
-        ]
-    },
-    {
-        "id": "77bfe859d9d880ee",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "name": "isWeekend",
-        "rules": [
-            {
-                "t": "set",
-                "p": "isWeekend",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1010,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9c258f613c458d88",
-        "type": "inject",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "name": "Weekend",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "00 01 * * 6,0",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 630,
-        "y": 540,
-        "wires": [
-            [
-                "77bfe859d9d880ee"
-            ]
-        ]
-    },
-    {
-        "id": "683ff88d1a5628c5",
-        "type": "inject",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "name": "Week",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "00 01 * * 1,2,3,4,5",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 610,
-        "y": 500,
-        "wires": [
-            [
-                "77bfe859d9d880ee"
-            ]
-        ]
-    },
-    {
-        "id": "c722dc55efb75194",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "name": "Constants",
-        "rules": [
-            {
-                "t": "set",
-                "p": "COMFORT_TOLERANCE",
-                "pt": "flow",
-                "to": "1",
-                "tot": "num"
             },
             {
-                "t": "set",
-                "p": "SUMMER_MIN_TEMP",
-                "pt": "flow",
-                "to": "18",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "SUMMER_MAX_TEMP",
-                "pt": "flow",
-                "to": "24",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "WINTER_MIN_TEMP",
-                "pt": "flow",
-                "to": "20",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "WINTER_MAX_TEMP",
-                "pt": "flow",
-                "to": "25",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "COOL_BLOCK_BELOW",
-                "pt": "flow",
-                "to": "21",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "HEAT_BLOCK_ABOVE",
-                "pt": "flow",
-                "to": "25",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "AIR_CIRCULATION_THRESHOLD",
-                "pt": "flow",
-                "to": "23",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "MIN_ON_OFF_TIME_SEC",
-                "pt": "flow",
-                "to": "600",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "COOL_SUMMER_THRESHOLD",
-                "pt": "flow",
-                "to": "23",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "SUMMER_MORNING_HEAT_THRESHOLD",
-                "pt": "flow",
-                "to": "21",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1530,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "80a213bc1d308d3b",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "name": "forceSummer",
-        "rules": [
-            {
-                "t": "set",
-                "p": "forceSummer",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1020,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cabdd4f9e1c123c7",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "name": "comfortTolerance",
-        "rules": [
-            {
-                "t": "set",
-                "p": "comfortTolerance",
-                "pt": "flow",
-                "to": "",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 640,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "81e18d3d034d8d97",
-        "type": "inject",
-        "z": "d7485635c81016a0",
-        "g": "46db9e2eed594790",
-        "name": "Simulate",
-        "props": [
-            {
-                "p": "result.measurements.temperature",
-                "v": "22",
-                "vt": "num"
-            },
-            {
-                "p": "result.motionSensors[0].measurements.temperature",
-                "v": "20",
-                "vt": "num"
-            },
-            {
-                "p": "payload.properties.timeseries[0].data.instant.details.air_temperature",
-                "v": "18",
-                "vt": "num"
-            }
-        ],
-        "repeat": "120",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 760,
-        "y": 200,
-        "wires": [
-            [
-                "ad304a911602b6b1",
-                "be183064f74d0f95"
-            ]
-        ]
-    },
-    {
-        "id": "fdf2994542632f35",
-        "type": "inject",
-        "z": "d7485635c81016a0",
-        "name": "Init Constants",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1450,
-        "y": 160,
-        "wires": [
-            [
-                "c722dc55efb75194"
-            ]
-        ]
-    },
-    {
-        "id": "b3d05b631a2ef105",
-        "type": "function",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Calculate Temperature Difference",
-        "func": "// Get current temperatures\nconst upstairs = flow.get('upstairsCurrentTemp') || 22;\nconst downstairs = flow.get('downstairsCurrentTemp') || 20;\nconst outside = flow.get('OutsideTemp') || 15;\nconst desired = flow.get('desiredTemp') || 21;\n\n// Season detection (like your original code)\nconst currentMonth = new Date().getMonth() + 1;\nconst isSeasonalSummer = currentMonth >= 5 && currentMonth <= 9;\nconst isSummer = isSeasonalSummer || outside >= 20;\nconst isCoolOutsideSummer = isSummer && outside < 19;\n\n// Store season info\nflow.set('isSeasonalSummer', isSeasonalSummer);\nflow.set('isSummer', isSummer);\nflow.set('isCoolOutsideSummer', isCoolOutsideSummer);\n\n// Calculate differences\nmsg.upstairs = upstairs;\nmsg.downstairs = downstairs;\nmsg.outside = outside;\nmsg.desired = desired;\nmsg.isSummer = isSummer;\nmsg.isCoolOutsideSummer = isCoolOutsideSummer;\nmsg.upstairsDiff = upstairs - desired;\nmsg.downstairsDiff = desired - downstairs;\nmsg.outsideInsideDiff = outside - downstairs;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1040,
-        "y": 800,
-        "wires": [
-            [
-                "d509c77f5decf279"
-            ]
-        ]
-    },
-    {
-        "id": "ac30ef1ebd099dab",
-        "type": "inject",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Run Temperature Logic",
-        "props": [
-            {
-                "p": "payload"
+                "p": "topic",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -19494,421 +18817,20 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 640,
-        "y": 800,
+        "x": 2310,
+        "y": 1640,
         "wires": [
             [
-                "b3d05b631a2ef105"
+                "67be3e8f4b62aa68"
             ]
         ]
     },
     {
-        "id": "d509c77f5decf279",
-        "type": "switch",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Summer or Winter",
-        "property": "isSummer",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1320,
-        "y": 800,
-        "wires": [
-            [
-                "ebf54b6670aeea3d"
-            ],
-            [
-                "871140d54a3f13c8"
-            ]
-        ]
-    },
-    {
-        "id": "ebf54b6670aeea3d",
-        "type": "switch",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Summer: Need Cooling?",
-        "property": "upstairsDiff",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "lte",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1620,
-        "y": 780,
-        "wires": [
-            [
-                "21cf0b5c812e2676"
-            ],
-            [
-                "eb00d4e8e216ad0c"
-            ]
-        ]
-    },
-    {
-        "id": "eb00d4e8e216ad0c",
-        "type": "switch",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Cool Summer Day?",
-        "property": "isCoolOutsideSummer",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1900,
-        "y": 800,
-        "wires": [
-            [
-                "029739c0aafb299e"
-            ],
-            [
-                "2b424fefa519f801"
-            ]
-        ]
-    },
-    {
-        "id": "21cf0b5c812e2676",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Set Cooling Mode",
-        "rules": [
-            {
-                "t": "set",
-                "p": "controlMode",
-                "pt": "flow",
-                "to": "cool",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "fixedTop",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "shouldTurnOn",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "fanLevel",
-                "pt": "flow",
-                "to": "medium",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "controlReason",
-                "pt": "flow",
-                "to": "Cooling: Upstairs too hot",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1900,
-        "y": 760,
-        "wires": [
-            [
-                "760178fbd8f7d0fd"
-            ]
-        ]
-    },
-    {
-        "id": "029739c0aafb299e",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Set Summer Heating Mode",
-        "rules": [
-            {
-                "t": "set",
-                "p": "controlMode",
-                "pt": "flow",
-                "to": "heat",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "fixedBottom",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "shouldTurnOn",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "fanLevel",
-                "pt": "flow",
-                "to": "low",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "controlReason",
-                "pt": "flow",
-                "to": "Summer heating: Cool day",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1930,
-        "y": 860,
-        "wires": [
-            [
-                "760178fbd8f7d0fd"
-            ]
-        ]
-    },
-    {
-        "id": "a5243ea7e1b399c6",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Set Winter Heating Mode",
-        "rules": [
-            {
-                "t": "set",
-                "p": "controlMode",
-                "pt": "flow",
-                "to": "heat",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "fixedBottom",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "shouldTurnOn",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "fanLevel",
-                "pt": "flow",
-                "to": "medium",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "controlReason",
-                "pt": "flow",
-                "to": "Winter heating needed",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1920,
-        "y": 900,
-        "wires": [
-            [
-                "760178fbd8f7d0fd"
-            ]
-        ]
-    },
-    {
-        "id": "2b424fefa519f801",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Set Circulation Mode",
-        "rules": [
-            {
-                "t": "set",
-                "p": "controlMode",
-                "pt": "flow",
-                "to": "fan",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "wide",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "shouldTurnOn",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "fanLevel",
-                "pt": "flow",
-                "to": "low",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "controlReason",
-                "pt": "flow",
-                "to": "Air circulation",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1910,
-        "y": 940,
-        "wires": [
-            [
-                "760178fbd8f7d0fd"
-            ]
-        ]
-    },
-    {
-        "id": "61793b3d790a703d",
-        "type": "change",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Set Off Mode",
-        "rules": [
-            {
-                "t": "set",
-                "p": "controlMode",
-                "pt": "flow",
-                "to": "off",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "shouldTurnOn",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "controlReason",
-                "pt": "flow",
-                "to": "Temperature comfortable",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1880,
-        "y": 980,
-        "wires": [
-            [
-                "760178fbd8f7d0fd"
-            ]
-        ]
-    },
-    {
-        "id": "871140d54a3f13c8",
-        "type": "switch",
-        "z": "d7485635c81016a0",
-        "g": "ab9a44e59f7bd464",
-        "name": "Winter: How Cold?",
-        "property": "downstairsDiff",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "2",
-                "vt": "num"
-            },
-            {
-                "t": "gt",
-                "v": "0.5",
-                "vt": "num"
-            },
-            {
-                "t": "gte",
-                "v": "0.5",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 3,
-        "x": 1600,
-        "y": 820,
-        "wires": [
-            [
-                "a5243ea7e1b399c6"
-            ],
-            [
-                "a5243ea7e1b399c6"
-            ],
-            [
-                "61793b3d790a703d"
-            ]
-        ]
-    },
-    {
-        "id": "760178fbd8f7d0fd",
+        "id": "7c35a5ac2241c5c4",
         "type": "debug",
-        "z": "d7485635c81016a0",
-        "name": "debug 5",
+        "z": "6df0226504208616",
+        "g": "a1794e13fa3182f6",
+        "name": "debug 6",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -19917,9 +18839,68 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2360,
-        "y": 720,
+        "x": 3090,
+        "y": 480,
         "wires": []
+    },
+    {
+        "id": "4add93a053da25bb",
+        "type": "inject",
+        "z": "6df0226504208616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2050,
+        "y": 400,
+        "wires": [
+            [
+                "7b7668fba961576a"
+            ]
+        ]
+    },
+    {
+        "id": "456f87a350700e15",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "8ef0badba538fdb1",
+        "name": "Is Winter",
+        "property": "seasonName",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Winter",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2100,
+        "y": 240,
+        "wires": [
+            [],
+            [
+                "b893cefa0ddb6da8"
+            ]
+        ]
     },
     {
         "id": "3a621e1.6c980e2",
@@ -22188,7 +21169,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "30",
+        "repeat": "27",
         "crontab": "",
         "once": true,
         "onceDelay": "30",
