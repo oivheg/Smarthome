@@ -65,6 +65,14 @@
         "env": []
     },
     {
+        "id": "81eedfe27e202b5a",
+        "type": "tab",
+        "label": "Bathroom",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "021cd6ea3e90db93",
         "type": "tab",
         "label": "Stairs",
@@ -873,12 +881,14 @@
             "6fb6663e779c4bed",
             "bc57e78aaf68965d",
             "2cb600ab1cf6c9f0",
-            "df0d0e357f912ecb"
+            "df0d0e357f912ecb",
+            "f1188083d10481a8",
+            "53b8c66e905a41c3"
         ],
         "x": 124,
         "y": 939,
-        "w": 1012,
-        "h": 182
+        "w": 1202,
+        "h": 202
     },
     {
         "id": "ff7ca7f8980ed0b1",
@@ -1450,7 +1460,8 @@
             "aaf5b9532af1fbac",
             "d13df963babc7388",
             "d8ddcd9494c894c6",
-            "2d89c6f3277b5730"
+            "2d89c6f3277b5730",
+            "886397ee88c4a44f"
         ],
         "x": 934,
         "y": -1,
@@ -1921,7 +1932,8 @@
             "e81ff1e993240e56",
             "2bea738a0f41eed4",
             "a66daf205957a322",
-            "913b5253d73d993c"
+            "913b5253d73d993c",
+            "822e6585aec2835a"
         ],
         "x": 2324,
         "y": 739,
@@ -1985,7 +1997,10 @@
             "c0c1ab8719682562",
             "d295d5e765256047",
             "da4f5fb8ea914251",
-            "93e3349ea442bdd7"
+            "93e3349ea442bdd7",
+            "ca36feb0e9257681",
+            "ec0e1a7b3b4cbacc",
+            "882b25e10c1b9f7b"
         ],
         "x": 1614,
         "y": 1459,
@@ -5961,8 +5976,8 @@
         "links": [
             "e8a10173e53f4a16"
         ],
-        "x": 1095,
-        "y": 1040,
+        "x": 1285,
+        "y": 1020,
         "wires": []
     },
     {
@@ -6233,7 +6248,7 @@
             },
             {
                 "name": "startTimeWeekend",
-                "value": "09:30",
+                "value": "09:00",
                 "type": "str"
             },
             {
@@ -6247,7 +6262,7 @@
                 "type": "bool"
             }
         ],
-        "x": 970,
+        "x": 1110,
         "y": 1020,
         "wires": [
             [
@@ -7311,7 +7326,7 @@
         "y": 1060,
         "wires": [
             [
-                "183c95c7745f2ea4"
+                "53b8c66e905a41c3"
             ],
             [
                 "df0d0e357f912ecb"
@@ -7338,9 +7353,69 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 920,
-        "y": 1080,
+        "x": 930,
+        "y": 1100,
         "wires": [
+            [
+                "183c95c7745f2ea4"
+            ]
+        ]
+    },
+    {
+        "id": "f1188083d10481a8",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "g": "172b4292bafc68a7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 630,
+        "y": 1100,
+        "wires": [
+            [
+                "df0d0e357f912ecb"
+            ]
+        ]
+    },
+    {
+        "id": "53b8c66e905a41c3",
+        "type": "switch",
+        "z": "aa0ae7ae.75d228",
+        "g": "172b4292bafc68a7",
+        "name": "is_playing",
+        "property": "is_playing",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 920,
+        "y": 1040,
+        "wires": [
+            [
+                "df0d0e357f912ecb"
+            ],
             [
                 "183c95c7745f2ea4"
             ]
@@ -8864,6 +8939,23 @@
         "wires": []
     },
     {
+        "id": "886397ee88c4a44f",
+        "type": "link in",
+        "z": "8b99f8fe.7b27b8",
+        "g": "0dc9ec7306f46565",
+        "name": "link in 4",
+        "links": [
+            "328ec247.9e5eee"
+        ],
+        "x": 1005,
+        "y": 180,
+        "wires": [
+            [
+                "9a32b6d26ea58f65"
+            ]
+        ]
+    },
+    {
         "id": "976db23e.1f8ba",
         "type": "link out",
         "z": "1b14ec1b.20ab54",
@@ -9430,7 +9522,8 @@
         "links": [
             "1329b56.bea634b",
             "dcf434ce.e89888",
-            "e22089f94174d570"
+            "e22089f94174d570",
+            "886397ee88c4a44f"
         ],
         "x": 695,
         "y": 160,
@@ -9866,6 +9959,7 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
+            "2214d9cb038cf259",
             "77e202e1f7cb4c98",
             "c840b6850a9f9370"
         ],
@@ -9880,9 +9974,10 @@
         "name": "Bathroom_Door",
         "mode": "link",
         "links": [
+            "1329b56.bea634b",
+            "271f90f30bdc06b6",
             "ea645748ca3e406e",
-            "f66e7e24.aca9d",
-            "1329b56.bea634b"
+            "f66e7e24.aca9d"
         ],
         "x": 795,
         "y": 580,
@@ -12833,6 +12928,1107 @@
         "wires": [
             [
                 "5ae3babe85bed457"
+            ]
+        ]
+    },
+    {
+        "id": "ae311c4db6e56d39",
+        "type": "switch",
+        "z": "81eedfe27e202b5a",
+        "name": "OFF",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [
+                "37436e4d3a7713d2"
+            ]
+        ]
+    },
+    {
+        "id": "d063c7cde31095b8",
+        "type": "function",
+        "z": "81eedfe27e202b5a",
+        "name": "FP2 Presence",
+        "func": "// Store FP2 presence state\nflow.set('fp2_presence', msg.payload);\n\n// Update activity timestamp when presence detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "a3596ea4652f4781",
+                "ae311c4db6e56d39"
+            ]
+        ]
+    },
+    {
+        "id": "f627f6e01a47a3da",
+        "type": "link in",
+        "z": "81eedfe27e202b5a",
+        "name": "Aqara FP2",
+        "links": [
+            "ca84a21742d3e0cd"
+        ],
+        "x": 255,
+        "y": 240,
+        "wires": [
+            [
+                "d063c7cde31095b8"
+            ]
+        ]
+    },
+    {
+        "id": "a3596ea4652f4781",
+        "type": "switch",
+        "z": "81eedfe27e202b5a",
+        "name": "ON",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 400,
+        "wires": [
+            [
+                "a5298eebaa1406ae",
+                "f84aec200172692f",
+                "7a55227e73379517"
+            ]
+        ]
+    },
+    {
+        "id": "f84aec200172692f",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 440,
+        "wires": [
+            [
+                "b37f9344a44156eb"
+            ]
+        ]
+    },
+    {
+        "id": "3459e431fca4758f",
+        "type": "function",
+        "z": "81eedfe27e202b5a",
+        "name": "movement",
+        "func": "// Store movement state\nflow.set('movement', msg.payload);\n\n// Update activity timestamp when movement detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "a3596ea4652f4781",
+                "23796465c61d729a"
+            ]
+        ]
+    },
+    {
+        "id": "ff6e2c73d81400a7",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "Store Door State",
+        "rules": [
+            {
+                "t": "set",
+                "p": "door_open",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "21a6ec0a34f66ad0"
+            ]
+        ]
+    },
+    {
+        "id": "21a6ec0a34f66ad0",
+        "type": "switch",
+        "z": "81eedfe27e202b5a",
+        "name": "Door Action",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 440,
+        "wires": [
+            [
+                "a3596ea4652f4781"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "34160b8f67f08a13",
+        "type": "time-range-switch",
+        "z": "81eedfe27e202b5a",
+        "name": "Dag",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "06:00",
+        "endTime": "21:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1110,
+        "y": 400,
+        "wires": [
+            [
+                "130c8e606a7ae5f6"
+            ],
+            [
+                "d669c29570928ec8"
+            ]
+        ]
+    },
+    {
+        "id": "b37f9344a44156eb",
+        "type": "trigger",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "6",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1170,
+        "y": 300,
+        "wires": [
+            [
+                "5aa31dda5144330d"
+            ]
+        ]
+    },
+    {
+        "id": "2214d9cb038cf259",
+        "type": "link in",
+        "z": "81eedfe27e202b5a",
+        "name": "Batroom_Movement",
+        "links": [
+            "455faa8d.6c9aa4"
+        ],
+        "x": 255,
+        "y": 320,
+        "wires": [
+            [
+                "3459e431fca4758f"
+            ]
+        ]
+    },
+    {
+        "id": "271f90f30bdc06b6",
+        "type": "link in",
+        "z": "81eedfe27e202b5a",
+        "name": "Bathroom_Door",
+        "links": [
+            "dc7a9dbe.e7065"
+        ],
+        "x": 255,
+        "y": 400,
+        "wires": [
+            [
+                "520b112f818a4214"
+            ]
+        ]
+    },
+    {
+        "id": "130c8e606a7ae5f6",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "Day",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "100",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 400,
+        "wires": [
+            [
+                "a83e83d43e9fad9d"
+            ]
+        ]
+    },
+    {
+        "id": "d669c29570928ec8",
+        "type": "time-range-switch",
+        "z": "81eedfe27e202b5a",
+        "name": "Natt",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "21:00",
+        "endTime": "23:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1110,
+        "y": 460,
+        "wires": [
+            [
+                "a53e1683544a2527"
+            ],
+            [
+                "de1664c16f6c3ca3"
+            ]
+        ]
+    },
+    {
+        "id": "4219203ecedf6e85",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "bathroom OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "BA-LYS",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "islight_on",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 280,
+        "wires": [
+            [
+                "b495c2b0d9420e46",
+                "96746b4052bcd68d",
+                "b43b03308b3a32dc"
+            ]
+        ]
+    },
+    {
+        "id": "96746b4052bcd68d",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "BA-Presence",
+        "rules": [
+            {
+                "t": "set",
+                "p": "BA-Presence",
+                "pt": "global",
+                "to": "islight_on",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1750,
+        "y": 280,
+        "wires": [
+            [
+                "2acf2e9e39519966"
+            ]
+        ]
+    },
+    {
+        "id": "a53e1683544a2527",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "Evening",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "30",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1260,
+        "y": 440,
+        "wires": [
+            [
+                "a83e83d43e9fad9d"
+            ]
+        ]
+    },
+    {
+        "id": "de1664c16f6c3ca3",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "Night",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "15",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 480,
+        "wires": [
+            [
+                "a83e83d43e9fad9d"
+            ]
+        ]
+    },
+    {
+        "id": "2acf2e9e39519966",
+        "type": "link out",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "e8a10173e53f4a16"
+        ],
+        "x": 1885,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "fe4e6ca838d46c7d",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "bathroom ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "BA-LYS",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "percent_bathroom",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "islight_on",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 320,
+        "wires": [
+            [
+                "b495c2b0d9420e46",
+                "96746b4052bcd68d",
+                "94f167f5c3077859"
+            ]
+        ]
+    },
+    {
+        "id": "d96187e4c5a2f765",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "percent_bathroom",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "status.state.dimlevel",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2130,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "136c3dd86f0940f4",
+        "type": "Thing List",
+        "z": "81eedfe27e202b5a",
+        "nodeName": "bathroom",
+        "outputType": "individual",
+        "outputValue": "thing",
+        "property": "status",
+        "discardInput": false,
+        "rules": [
+            {
+                "compare": "eq",
+                "thingProp": "name",
+                "value": "bathroom",
+                "type": "str"
+            }
+        ],
+        "x": 1920,
+        "y": 320,
+        "wires": [
+            [
+                "d96187e4c5a2f765"
+            ]
+        ]
+    },
+    {
+        "id": "520b112f818a4214",
+        "type": "ui-switch",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "label": "DOOR",
+        "group": "1257d664fb2a5f32",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "lock-open",
+        "oncolor": "red",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "lock",
+        "offcolor": "greed",
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "ff6e2c73d81400a7"
+            ]
+        ]
+    },
+    {
+        "id": "b495c2b0d9420e46",
+        "type": "trigger",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1740,
+        "y": 320,
+        "wires": [
+            [
+                "136c3dd86f0940f4"
+            ]
+        ]
+    },
+    {
+        "id": "94f167f5c3077859",
+        "type": "link out",
+        "z": "81eedfe27e202b5a",
+        "name": "Reset mirror ",
+        "mode": "link",
+        "links": [
+            "b68b07285e615789"
+        ],
+        "x": 1735,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "957367a642a8f932",
+        "type": "switch",
+        "z": "81eedfe27e202b5a",
+        "name": "islight_on",
+        "property": "islight_on",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 820,
+        "y": 240,
+        "wires": [
+            [],
+            [
+                "2776a0c811928535"
+            ]
+        ]
+    },
+    {
+        "id": "2776a0c811928535",
+        "type": "function",
+        "z": "81eedfe27e202b5a",
+        "name": "Door-Closed Protection",
+        "func": "// Check if door is closed (false = closed, true = open)\nconst doorOpen = flow.get('door_open');\nconst fp2Presence = flow.get('fp2_presence');\nconst movement = flow.get('movement');\n\n// Get last activity time\nlet lastActivityTime = flow.get('lastActivityTime') || 0;\nconst now = Date.now();\n\n// Update activity timestamp if any sensor is active\nif (fp2Presence || movement) {\n    lastActivityTime = now;\n    flow.set('lastActivityTime', lastActivityTime);\n}\n\nconst timeSinceActivity = now - lastActivityTime;\nconst ACTIVITY_TIMEOUT = 5 * 60 * 1000; // 5 minutes\n\n// CRITICAL: Block turn-off if door is closed and recent activity\nif (!doorOpen && timeSinceActivity < ACTIVITY_TIMEOUT) {\n    node.status({\n        fill: \"yellow\",\n        shape: \"dot\",\n        text: `Door closed - blocking OFF (activity ${Math.round(timeSinceActivity/1000)}s ago)`\n    });\n    return null; // Block the message - don't start timer\n}\n\n// Allow timer to proceed\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: \"Door open or no recent activity - allowing timer\"\n});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 200,
+        "wires": [
+            [
+                "b37f9344a44156eb"
+            ]
+        ]
+    },
+    {
+        "id": "5aa31dda5144330d",
+        "type": "switch",
+        "z": "81eedfe27e202b5a",
+        "name": "paylaod False",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1180,
+        "y": 260,
+        "wires": [
+            [
+                "20441058ceaa89d2"
+            ],
+            [
+                "4219203ecedf6e85",
+                "94f167f5c3077859"
+            ]
+        ]
+    },
+    {
+        "id": "7b60170b73c4fe03",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "bathroom Dimm OFF close",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "BA-LYS",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "75",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "tmpDimmed",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "tmp_percent_bathroom",
+                "pt": "flow",
+                "to": "percent_bathroom",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1580,
+        "y": 140,
+        "wires": [
+            [
+                "b495c2b0d9420e46",
+                "2acf2e9e39519966"
+            ]
+        ]
+    },
+    {
+        "id": "7a55227e73379517",
+        "type": "switch",
+        "z": "81eedfe27e202b5a",
+        "name": "is tmpDimmed",
+        "property": "tmpDimmed",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 740,
+        "y": 360,
+        "wires": [
+            [
+                "adfcc1c9dc3626f2"
+            ]
+        ]
+    },
+    {
+        "id": "adfcc1c9dc3626f2",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "bathroom Dimm reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tmpDimmed",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "tmp_percent_bathroom",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 340,
+        "wires": [
+            [
+                "fe4e6ca838d46c7d"
+            ]
+        ]
+    },
+    {
+        "id": "a5298eebaa1406ae",
+        "type": "switch",
+        "z": "81eedfe27e202b5a",
+        "name": "islight_on",
+        "property": "islight_on",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 720,
+        "y": 400,
+        "wires": [
+            [],
+            [
+                "34160b8f67f08a13"
+            ]
+        ]
+    },
+    {
+        "id": "b43b03308b3a32dc",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "islight_on",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1490,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23796465c61d729a",
+        "type": "switch",
+        "z": "81eedfe27e202b5a",
+        "name": "fp2_presence false",
+        "property": "fp2_presence",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 320,
+        "wires": [
+            [
+                "ae311c4db6e56d39"
+            ]
+        ]
+    },
+    {
+        "id": "a83e83d43e9fad9d",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "bathroom Dimm OFF close",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tmp_percent_bathroom",
+                "pt": "flow",
+                "to": "percent_bathroom",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1480,
+        "y": 400,
+        "wires": [
+            [
+                "fe4e6ca838d46c7d"
+            ]
+        ]
+    },
+    {
+        "id": "37436e4d3a7713d2",
+        "type": "switch",
+        "z": "81eedfe27e202b5a",
+        "name": "movement false",
+        "property": "movement",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 200,
+        "wires": [
+            [
+                "957367a642a8f932"
+            ]
+        ]
+    },
+    {
+        "id": "b2431ebafdbafd5b",
+        "type": "inject",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 70,
+        "y": 100,
+        "wires": [
+            [
+                "d063c7cde31095b8"
+            ]
+        ]
+    },
+    {
+        "id": "20441058ceaa89d2",
+        "type": "time-range-switch",
+        "z": "81eedfe27e202b5a",
+        "name": "Dag",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "06:00",
+        "endTime": "21:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1330,
+        "y": 140,
+        "wires": [
+            [
+                "2d171009544cc13a"
+            ],
+            [
+                "5c58166e260ef9d6"
+            ]
+        ]
+    },
+    {
+        "id": "2d171009544cc13a",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "Set dim 75",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "75",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 100,
+        "wires": [
+            [
+                "7b60170b73c4fe03"
+            ]
+        ]
+    },
+    {
+        "id": "5c58166e260ef9d6",
+        "type": "change",
+        "z": "81eedfe27e202b5a",
+        "name": "Set dim 15",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "15",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1450,
+        "y": 180,
+        "wires": [
+            [
+                "7b60170b73c4fe03"
+            ]
+        ]
+    },
+    {
+        "id": "a06b8b8fe054a921",
+        "type": "inject",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 70,
+        "y": 160,
+        "wires": [
+            [
+                "d063c7cde31095b8",
+                "3459e431fca4758f",
+                "520b112f818a4214"
+            ]
+        ]
+    },
+    {
+        "id": "c048d104fd00f2fc",
+        "type": "inject",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 360,
+        "wires": [
+            [
+                "520b112f818a4214"
+            ]
+        ]
+    },
+    {
+        "id": "550ffc19d0f226cf",
+        "type": "inject",
+        "z": "81eedfe27e202b5a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 420,
+        "wires": [
+            [
+                "520b112f818a4214"
             ]
         ]
     },
@@ -16625,16 +17821,17 @@
         "id": "ec0e1a7b3b4cbacc",
         "type": "function",
         "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
         "name": "Enhanced Seasonal Detection",
-        "func": "// === ENHANCED SEASONAL DETECTION ===\n// Automatically detects season and sets appropriate defaults\n\nvar currentMonth = new Date().getMonth() + 1; // 1-12\nvar currentDate = new Date();\nvar manualSummer = global.get('SummerTime');\nnode.warn(\"currentMonth \" + currentMonth);\n// Auto-detect season based on date\nvar autoSummer = false;\nif (currentMonth >= 5 && currentMonth <= 9) {\n    autoSummer = true;\n}\n\n// Use manual setting if available, otherwise auto-detect\nvar isSummer = (manualSummer !== undefined) ? manualSummer : autoSummer;\n\n// Set seasonal parameters\nvar seasonName = isSummer ? 'Summer' : 'Winter';\nvar focusArea = isSummer ? 'Upstairs' : 'Downstairs';\nvar primaryMode = isSummer ? 'cool' : 'heat';\nvar defaultSwing = isSummer ? 'fixedTop' : 'fixedBottom';\n\n// Temperature safety ranges\nvar safetyMin = isSummer ? 18 : 20;\nvar safetyMax = isSummer ? 24 : 25;\nvar comfortRange = isSummer ? '18-24°C' : '20-25°C';\n\n// Store in global context\nglobal.set('SummerTime', isSummer);\nflow.set('seasonName', seasonName);\nflow.set('focusArea', focusArea);\nflow.set('primaryMode', primaryMode);\nflow.set('defaultSwing', defaultSwing);\nflow.set('safetyMin', safetyMin);\nflow.set('safetyMax', safetyMax);\n\n// Enhanced logging\nnode.status({\n    fill: isSummer ? 'yellow' : 'blue',\n    shape: 'dot',\n    text: `${seasonName} Mode - Focus: ${focusArea} (${comfortRange})`\n});\n\nreturn {\n    payload: {\n        season: seasonName,\n        isSummer: isSummer,\n        focusArea: focusArea,\n        primaryMode: primaryMode,\n        defaultSwing: defaultSwing,\n        safetyRange: comfortRange,\n        autoDetected: manualSummer === undefined,\n        timestamp: currentDate.toISOString()\n    }\n};",
+        "func": "// === ENHANCED SEASONAL DETECTION ===\n// Automatically detects season and sets appropriate defaults\n\nvar currentMonth = new Date().getMonth() + 1; // 1-12\nvar currentDate = new Date();\nvar manualSummer = flow.get('SummerTime');\nnode.warn(\"currentMonth \" + currentMonth);\n// Auto-detect season based on date\nvar autoSummer = false;\nif (currentMonth >= 5 && currentMonth <= 9) {\n    autoSummer = true;\n}\n\n// Use manual setting if available, otherwise auto-detect\nvar isSummer = (manualSummer !== undefined) ? manualSummer : autoSummer;\n\n// Set seasonal parameters\nvar seasonName = isSummer ? 'Summer' : 'Winter';\nvar focusArea = isSummer ? 'Upstairs' : 'Downstairs';\nvar primaryMode = isSummer ? 'cool' : 'heat';\nvar defaultSwing = isSummer ? 'fixedTop' : 'fixedBottom';\n\n// Temperature safety ranges\nvar safetyMin = isSummer ? 18 : 20;\nvar safetyMax = isSummer ? 24 : 25;\nvar comfortRange = isSummer ? '18-24°C' : '20-25°C';\n\n// Store in global context\nflow.set('SummerTime', isSummer);\nflow.set('seasonName', seasonName);\nflow.set('focusArea', focusArea);\nflow.set('primaryMode', primaryMode);\nflow.set('defaultSwing', defaultSwing);\nflow.set('safetyMin', safetyMin);\nflow.set('safetyMax', safetyMax);\n\n// Enhanced logging\nnode.status({\n    fill: isSummer ? 'yellow' : 'blue',\n    shape: 'dot',\n    text: `${seasonName} Mode - Focus: ${focusArea} (${comfortRange})`\n});\n\nreturn {\n    payload: {\n        season: seasonName,\n        isSummer: isSummer,\n        focusArea: focusArea,\n        primaryMode: primaryMode,\n        defaultSwing: defaultSwing,\n        safetyRange: comfortRange,\n        autoDetected: manualSummer === undefined,\n        timestamp: currentDate.toISOString()\n    }\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1830,
-        "y": 780,
+        "x": 2070,
+        "y": 1740,
         "wires": [
             []
         ]
@@ -16643,6 +17840,7 @@
         "id": "ca36feb0e9257681",
         "type": "inject",
         "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
         "name": "Update Season",
         "props": [
             {
@@ -16656,8 +17854,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1500,
-        "y": 780,
+        "x": 1740,
+        "y": 1740,
         "wires": [
             [
                 "ec0e1a7b3b4cbacc"
@@ -16668,6 +17866,7 @@
         "id": "882b25e10c1b9f7b",
         "type": "function",
         "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
         "name": "Temperature Monitor & Alerts",
         "func": "// === TEMPERATURE MONITORING & ALERTS ===\n// Monitors temperature trends and provides alerts\n\nvar upstairsTemp = flow.get('upstairsCurrentTemp') || 20;\nvar downstairsTemp = flow.get('downstairsCurrentTemp') || 20;\nvar desiredTemp = flow.get('desiredTemp') || 21;\nvar isSummer = global.get('SummerTime') || false;\n\n// Calculate temperature differences\nvar upstairsDiff = upstairsTemp - desiredTemp;\nvar downstairsDiff = downstairsTemp - desiredTemp;\nvar floorDiff = Math.abs(upstairsTemp - downstairsTemp);\n\n// Alert conditions\nvar alerts = [];\nvar warnings = [];\n\n// Extreme temperature alerts\nif (upstairsTemp > 29) alerts.push('🔥 Upstairs critically hot!');\nif (downstairsTemp < 15) alerts.push('🧊 Downstairs critically cold!');\nif (upstairsTemp < 15) alerts.push('🧊 Upstairs critically cold!');\nif (downstairsTemp > 29) alerts.push('🔥 Downstairs critically hot!');\n\n// Large temperature difference warnings\nif (floorDiff > 6) {\n    warnings.push(`⚠️ Large floor temp difference: ${floorDiff.toFixed(1)}°C`);\n}\n\n// Seasonal comfort warnings\nif (isSummer) {\n    if (upstairsDiff > 3) warnings.push('☀️ Upstairs too hot for summer comfort');\n    if (downstairsTemp < 19) warnings.push('❄️ Downstairs getting too cold');\n} else {\n    if (downstairsDiff < -3) warnings.push('❄️ Downstairs too cold for winter comfort');\n    if (upstairsTemp > 24) warnings.push('☀️ Upstairs getting too hot');\n}\n\n// Store monitoring data\nflow.set('temperatureAlerts', alerts);\nflow.set('temperatureWarnings', warnings);\nflow.set('floorTempDiff', floorDiff);\n\n// Update node status\nvar statusText = `${upstairsTemp}°C↕${downstairsTemp}°C`;\nvar statusColor = 'green';\n\nif (alerts.length > 0) {\n    statusColor = 'red';\n    statusText += ` ${alerts.length} ALERTS`;\n} else if (warnings.length > 0) {\n    statusColor = 'yellow';\n    statusText += ` ${warnings.length} warnings`;\n}\n\nnode.status({\n    fill: statusColor,\n    shape: 'dot',\n    text: statusText\n});\n\nreturn {\n    payload: {\n        upstairsTemp: upstairsTemp,\n        downstairsTemp: downstairsTemp,\n        desiredTemp: desiredTemp,\n        floorDiff: floorDiff,\n        alerts: alerts,\n        warnings: warnings,\n        isSummer: isSummer,\n        timestamp: new Date().toISOString()\n    }\n};",
         "outputs": 1,
@@ -16676,8 +17875,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1820,
-        "y": 740,
+        "x": 2060,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -18315,8 +19514,8 @@
         "y": 820,
         "wires": [
             [
-                "b05a48bd1b6d3165",
-                "913b5253d73d993c"
+                "913b5253d73d993c",
+                "822e6585aec2835a"
             ],
             [
                 "2f34542ab25a2b78"
@@ -18343,7 +19542,7 @@
         "z": "6df0226504208616",
         "g": "81b3ee2115349953",
         "name": "Initialize Configuration",
-        "func": "// ═══════════════════════════════════════════════════════════════════════\n// HEAT PUMP CONTROL CONFIGURATION\n// Initialize all constants and defaults for the heat pump control system\n// ═══════════════════════════════════════════════════════════════════════\n\n// Temperature limits\nflow.set('minTemp', 20);\nflow.set('maxTemp', 30);\nflow.set('safetyMin', 15);\nflow.set('safetyMax', 30);\n\n// Control parameters\nflow.set('comfortTolerance', 0.5);          // Degrees +/- for comfort range\nflow.set('minOnOffTimeSec', 600);           // 10 minutes minimum between mode changes\nflow.set('learningRate', 0.08);             // Performance adjustment factor\nflow.set('maxTempHistory', 12);             // History records to maintain\n\n// Zone balancing\nflow.set('maxZoneDifference', 2.5);         // Max acceptable temp diff between zones\nflow.set('upstairsComfortMin', 19.5);       // Minimum upstairs comfort in winter\nflow.set('circulationTempDiff', 1.8);       // Trigger circulation threshold\n\n// Seasonal thresholds\nflow.set('summerMorningHeatThreshold', 20); // Summer morning heat trigger\nflow.set('airCirculationThreshold', 23.0);  // Summer circulation trigger\n\n// Safety validation\nflow.set('absoluteMinTemp', 15);            // Hard minimum\nflow.set('absoluteMaxTemp', 30);            // Hard maximum\nflow.set('crossFloorLimit', 5);             // Max temp difference for safety\n\n// Default modes\nflow.set('defaultSwing', 'fixedBottom');\nflow.set('primaryMode', 'auto');\nflow.set('focusArea', 'downstairs');\nflow.set('seasonName', 'auto');\n\nnode.status({fill:\"green\", shape:\"dot\", text:\"Configuration loaded\"});\n\nreturn msg;",
+        "func": "// ═══════════════════════════════════════════════════════════════════════\n// HEAT PUMP CONTROL CONFIGURATION\n// Initialize all constants and defaults for the heat pump control system\n// ═══════════════════════════════════════════════════════════════════════\n\n// Temperature limits\nflow.set('minTemp', 20);\nflow.set('maxTemp', 30);\nflow.set('safetyMin', 15);\nflow.set('safetyMax', 30);\n\n// Control parameters\nflow.set('comfortTolerance', 0.5);          // Degrees +/- for comfort range\nflow.set('minOnOffTimeSec', 600);           // 10 minutes minimum between mode changes\nflow.set('learningRate', 0.08);             // Performance adjustment factor\nflow.set('maxTempHistory', 12);             // History records to maintain\n\n// Zone balancing\nflow.set('maxZoneDifference', 2.5);         // Max acceptable temp diff between zones\nflow.set('upstairsComfortMin', 19.5);       // Minimum upstairs comfort in winter\nflow.set('circulationTempDiff', 1.8);       // Trigger circulation threshold\n\n// Seasonal thresholds\nflow.set('summerMorningHeatThreshold', 20); // Summer morning heat trigger\nflow.set('airCirculationThreshold', 23.0);  // Summer circulation trigger\n\n// Safety validation\nflow.set('absoluteMinTemp', 15);            // Hard minimum\nflow.set('absoluteMaxTemp', 30);            // Hard maximum\nflow.set('crossFloorLimit', 5);             // Max temp difference for safety\n\n// Default modes\nflow.set('defaultSwing', 'fixedBottom');\nflow.set('primaryMode', 'auto');\nflow.set('focusArea', 'downstairs');\nflow.set('seasonName', 'Winter');\n\nnode.status({fill:\"green\", shape:\"dot\", text:\"Configuration loaded\"});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18369,7 +19568,8 @@
         "y": 1660,
         "wires": [
             [
-                "16c24ed3a979e44d"
+                "16c24ed3a979e44d",
+                "ec0e1a7b3b4cbacc"
             ]
         ]
     },
@@ -18405,7 +19605,7 @@
         "z": "6df0226504208616",
         "g": "81b3ee2115349953",
         "name": "Improved Temperature Control",
-        "func": "// ═══════════════════════════════════════════════════════════════════════\n// INTELLIGENT HEAT PUMP TEMPERATURE CONTROL\n// Advanced control with zone balancing, adaptive learning, and safety\n// ═══════════════════════════════════════════════════════════════════════\n\n// Load configuration from flow context\nconst COMFORT_TOLERANCE = flow.get('comfortTolerance') || 0.5;\nconst MIN_ON_OFF_TIME_SEC = flow.get('minOnOffTimeSec') || 600;\nconst LEARNING_RATE = flow.get('learningRate') || 0.08;\nconst MAX_TEMP_HISTORY = flow.get('maxTempHistory') || 12;\nconst SUMMER_MORNING_HEAT_THRESHOLD = flow.get('summerMorningHeatThreshold') || 20;\nconst AIR_CIRCULATION_THRESHOLD = flow.get('airCirculationThreshold') || 23.0;\nconst MAX_ZONE_DIFFERENCE = flow.get('maxZoneDifference') || 2.5;\nconst UPSTAIRS_COMFORT_MIN = flow.get('upstairsComfortMin') || 19.5;\nconst CIRCULATION_TEMP_DIFF = flow.get('circulationTempDiff') || 1.8\n\n// ─────────────────────────────────────────────────────────────────────\n// SEASONAL & CONFIGURATION CONTEXT\n// ─────────────────────────────────────────────────────────────────────\nconst isSummer = global.get('SummerTime');\nconst seasonName = flow.get('seasonName');\nconst focusArea = flow.get('focusArea') || 'downstairs';\nconst primaryMode = flow.get('primaryMode');\nconst defaultSwing = flow.get('defaultSwing') || 'fixedBottom';\nconst safetyMin = flow.get('safetyMin') || 15;\nconst safetyMax = flow.get('safetyMax') || 30;\n\n// ─────────────────────────────────────────────────────────────────────\n// SENSOR INPUTS & CURRENT STATE\n// ─────────────────────────────────────────────────────────────────────\nconst desiredTemp = Number(flow.get('desiredTemp')) || Number(msg.desiredTemp) || 21;\nconst upstairsCurrentTemp = Number(flow.get('upstairsCurrentTemp')) || Number(msg.upstairsCurrentTemp) || 20;\nconst downstairsCurrentTemp = Number(flow.get('downstairsCurrentTemp')) || Number(msg.downstairsCurrentTemp) || 20;\nconst outsideTemp = Number(flow.get('OutsideTemp')) || Number(msg.OutsideTemp) || 20;\nconst lastModeChange = flow.get('lastModeChange') || 0;\nconst isMorning = msg.isMorning === true;\n\n// ─────────────────────────────────────────────────────────────────────\n// OCCUPANCY & TIME CONTEXT\n// ─────────────────────────────────────────────────────────────────────\nconst homeStatus = global.get('Mode') || 'home'; // 'home' or 'away'\nconst dayStatus = global.get('status') || 'day'; // 'day' or 'night'\nconst isHome = homeStatus === 'home';\nconst isDay = dayStatus === 'day';\nconst currentHour = new Date().getHours();\n\n// ─────────────────────────────────────────────────────────────────────\n// STATE TRACKING & PERFORMANCE HISTORY\n// ─────────────────────────────────────────────────────────────────────\nconst tempHistory = Array.isArray(flow.get('tempHistory')) ? flow.get('tempHistory') : [];\nconst lastTargetTemp = flow.get('lastTargetTemp');\nconst lastFanLevel = flow.get('lastFanLevel');\nconst performanceHistory = flow.get('performanceHistory') || {};\n\nconst now = Date.now();\nconst secondsSinceLastChange = (now - lastModeChange) / 1000;\n\n// ─────────────────────────────────────────────────────────────────────\n// CONTROL OUTPUT DEFAULTS\n// ─────────────────────────────────────────────────────────────────────\nlet controlMode = 'off';\nlet targetTemp = desiredTemp;\nlet swing = defaultSwing;\nlet fanLevel = 'low';\nlet reason = '';\nlet shouldTurnOn = false;\n\n// ─────────────────────────────────────────────────────────────────────\n// HELPER FUNCTIONS\n// ─────────────────────────────────────────────────────────────────────\n\n/** Calculate weighted average between upstairs and downstairs temps */\nfunction weightedAverage(up, down, upWeight = isSummer ? 0.75 : 0.65) {\n    return up * upWeight + down * (1 - upWeight);\n}\n\nfunction clamp(v, lo, hi) {\n    return Math.max(lo, Math.min(hi, v));\n}\n\n/** Determine which zone to prioritize based on occupancy and time */\nfunction getPriorityZone() {\n    // If focus area is explicitly set, use it\n    if (focusArea === 'upstairs' || focusArea === 'downstairs') {\n        return focusArea;\n    }\n\n    // Smart detection: upstairs priority during home daytime\n    if (isHome && isDay && currentHour >= 9 && currentHour <= 21) {\n        return 'upstairs';\n    }\n\n    // Otherwise prioritize downstairs (coldest area)\n    return 'downstairs';\n}\n\n/** Get reference temperature based on priority zone with weighted blending */\nfunction getReferenceTemp(priorityZone) {\n    if (priorityZone === 'upstairs') {\n        // Blend both zones when focusing upstairs, but weight upstairs more\n        return upstairsCurrentTemp * 0.6 + downstairsCurrentTemp * 0.4;\n    }\n    // Primarily downstairs, but don't ignore upstairs completely\n    return downstairsCurrentTemp * 0.75 + upstairsCurrentTemp * 0.25;\n}\n\n/** Check if temperature difference between zones requires balancing */\nfunction needsZoneBalancing() {\n    const zoneDiff = Math.abs(upstairsCurrentTemp - downstairsCurrentTemp);\n    return zoneDiff > CIRCULATION_TEMP_DIFF;\n}\n\n/** Update performance history for adaptive learning */\nfunction updatePerformance() {\n    if (!lastTargetTemp || !lastFanLevel || tempHistory.length < 1) return;\n    const recordedStartTemp = tempHistory[0];\n    const minutes = (Date.now() - lastModeChange) / 1000 / 60;\n    if (minutes < 5) return;\n\n    const tempChange = upstairsCurrentTemp - recordedStartTemp;\n    const perf = {\n        targetTemp: lastTargetTemp,\n        fanLevel: lastFanLevel,\n        tempChange,\n        outsideTemp,\n        durationMin: minutes,\n        timestamp: new Date().toISOString()\n    };\n\n    performanceHistory[lastFanLevel] = performanceHistory[lastFanLevel] || [];\n    performanceHistory[lastFanLevel].push(perf);\n    if (performanceHistory[lastFanLevel].length > 10) performanceHistory[lastFanLevel].shift();\n    flow.set('performanceHistory', performanceHistory);\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// CONTROL LOGIC APPLICATION FUNCTIONS\n// ─────────────────────────────────────────────────────────────────────\n\n/** Apply fan circulation mode for air distribution */\nfunction applyCirculationLogic(context) {\n    controlMode = 'fan';\n    swing = 'rangeFull'; // rangeFull swing for better circulation\n    fanLevel = 'low';\n    shouldTurnOn = true;\n    reason = context;\n}\n\n/** Apply heating mode with zone-aware temperature and fan control */\nfunction applyHeatingLogic(context, referenceTemp, priorityZone = 'downstairs') {\n    controlMode = 'heat';\n\n    // IMPROVED: Adjust swing based on priority zone\n    // Hot air rises, so always use fixedBottom for heating (let physics work for us)\n    if (priorityZone === 'upstairs') {\n        swing = 'fixedBottom'; // Warm air rises naturally to upstairs\n    } else {\n        swing = 'fixedBottom'; // Direct heat to downstairs\n    }\n\n    shouldTurnOn = true;\n\n    const tempDiff = desiredTemp - referenceTemp;\n\n    // IMPROVED: More granular control with zone awareness\n    // Use gentler fan levels when heating upstairs (less noise, natural convection helps)\n    const isUpstairsFocus = priorityZone === 'upstairs';\n\n    if (tempDiff > 2.5) {\n        fanLevel = isUpstairsFocus ? 'medium' : 'high';\n        targetTemp = clamp(desiredTemp + 1.5, -100, safetyMax);\n    } else if (tempDiff > 1.5) {\n        fanLevel = isUpstairsFocus ? 'low' : 'medium_high';\n        targetTemp = clamp(desiredTemp + 1.2, -100, safetyMax);\n    } else if (tempDiff > 0.7) {\n        fanLevel = isUpstairsFocus ? 'low' : 'medium';\n        targetTemp = clamp(desiredTemp + 0.8, -100, safetyMax);\n    } else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    // Performance-based adjustment\n    const perfList = performanceHistory[lastFanLevel || fanLevel] || [];\n    if (perfList.length >= 3) {\n        const avgRate = perfList.reduce((s, p) => s + (p.tempChange / Math.max(0.1, p.durationMin)), 0) / perfList.length;\n        if (avgRate < 0.08) {\n            targetTemp = clamp(targetTemp + LEARNING_RATE * 2, -100, safetyMax);\n        }\n    }\n\n    reason = context;\n    flow.set('lastTargetTemp', targetTemp);\n    flow.set('lastFanLevel', fanLevel);\n}\n\n/** Apply cooling mode for summer temperature management */\nfunction applyCoolingLogic(context) {\n    controlMode = 'cool';\n    swing = 'fixedTop';\n    shouldTurnOn = true;\n\n    const tempDiff = upstairsCurrentTemp - desiredTemp;\n    if (tempDiff <= COMFORT_TOLERANCE) {\n        applyCirculationLogic(`Upstairs slightly above target (${upstairsCurrentTemp}°C), prefer circulation`);\n        return;\n    }\n\n    if (tempDiff > 3.5) {\n        fanLevel = 'high';\n        targetTemp = clamp(desiredTemp - 2.0, safetyMin, safetyMax);\n    } else if (tempDiff > 2.2) {\n        fanLevel = 'medium_high';\n        targetTemp = clamp(desiredTemp - 1.2, safetyMin, safetyMax);\n    } else if (tempDiff > 1.0) {\n        fanLevel = 'medium';\n        targetTemp = clamp(desiredTemp - 0.8, safetyMin, safetyMax);\n    } else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    reason = context;\n    flow.set('lastTargetTemp', targetTemp);\n    flow.set('lastFanLevel', fanLevel);\n}\n\n// ═══════════════════════════════════════════════════════════════════════\n// MAIN DECISION LOGIC\n// Determines heat pump operation based on all inputs and context\n// ═══════════════════════════════════════════════════════════════════════\n\nconst priorityZone = getPriorityZone();\nconst referenceTemp = getReferenceTemp(priorityZone);\nconst zoneDiff = Math.abs(upstairsCurrentTemp - downstairsCurrentTemp);\nconst weighted = weightedAverage(upstairsCurrentTemp, downstairsCurrentTemp);\n\n// ─────────────────────────────────────────────────────────────────────\n// MORNING HEATING CYCLE (All Seasons)\n// ─────────────────────────────────────────────────────────────────────\nif (isMorning) {\n    if (isSummer && downstairsCurrentTemp < SUMMER_MORNING_HEAT_THRESHOLD) {\n        applyHeatingLogic('Summer morning gentle heat', downstairsCurrentTemp, 'downstairs');\n    } else {\n        applyHeatingLogic(`Morning heating cycle (${priorityZone} focus)`, referenceTemp, priorityZone);\n    }\n}\n// ─────────────────────────────────────────────────────────────────────\n// SUMMER COOLING & CIRCULATION\n// ─────────────────────────────────────────────────────────────────────\nelse if (isSummer) {\n    if (upstairsCurrentTemp >= AIR_CIRCULATION_THRESHOLD) {\n        if (upstairsCurrentTemp >= desiredTemp + 1.0) {\n            applyCoolingLogic(`Cooling needed: Upstairs ${upstairsCurrentTemp}°C above target`);\n        } else {\n            applyCirculationLogic(`Air circulation: Managing warm upstairs temp`);\n        }\n    } else if (weighted < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(`Comfort heating: rooms feel cold`, weighted, priorityZone);\n    } else if (upstairsCurrentTemp > safetyMax) {\n        applyCoolingLogic(`EMERGENCY: Upstairs temperature too high`);\n    } else if (upstairsCurrentTemp >= desiredTemp + 0.8) {\n        applyCoolingLogic(`Active cooling: Managing upstairs temp`);\n    } else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `Temperature within comfort range`;\n    }\n}\n// ─────────────────────────────────────────────────────────────────────\n// WINTER HEATING & ZONE BALANCING\n// Advanced logic with upstairs comfort and multi-zone coordination\n// ─────────────────────────────────────────────────────────────────────\nelse {\n    // Critical: Check if upstairs is too cold for comfort\n    // But only if downstairs is not significantly warmer (avoid fighting natural heat rise)\n    if (upstairsCurrentTemp < UPSTAIRS_COMFORT_MIN && isHome && isDay &&\n        downstairsCurrentTemp - upstairsCurrentTemp < 3.0) {\n        applyHeatingLogic(\n            `Winter upstairs comfort heating (${upstairsCurrentTemp}°C < ${UPSTAIRS_COMFORT_MIN}°C)`,\n            upstairsCurrentTemp,\n            'upstairs'\n        );\n    }\n    // Primary downstairs heating\n    else if (downstairsCurrentTemp < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(\n            `Primary heating: Downstairs below target (${downstairsCurrentTemp}°C)`,\n            downstairsCurrentTemp,\n            'downstairs'\n        );\n    }\n    // Zone balancing with circulation (NEW)\n    else if (needsZoneBalancing() && controlMode !== 'off') {\n        if (downstairsCurrentTemp < upstairsCurrentTemp - MAX_ZONE_DIFFERENCE) {\n            // Downstairs much colder - heat with bottom focus\n            applyHeatingLogic(\n                `Zone balancing: Downstairs ${zoneDiff.toFixed(1)}°C colder`,\n                downstairsCurrentTemp,\n                'downstairs'\n            );\n        } else if (upstairsCurrentTemp < downstairsCurrentTemp - CIRCULATION_TEMP_DIFF) {\n            // Upstairs colder - heat with circulation\n            applyHeatingLogic(\n                `Zone balancing: Upstairs ${zoneDiff.toFixed(1)}°C colder`,\n                upstairsCurrentTemp,\n                'upstairs'\n            );\n        } else {\n            // Just circulate to even out\n            applyCirculationLogic(`Zone circulation: ${zoneDiff.toFixed(1)}°C difference`);\n        }\n    }\n    // General reference-based heating\n    else if (referenceTemp < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(\n            `Heating: ${priorityZone} focus (${referenceTemp.toFixed(1)}°C < ${desiredTemp}°C)`,\n            referenceTemp,\n            priorityZone\n        );\n    }\n    // All comfortable\n    else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `Within comfort range (${priorityZone} ${referenceTemp.toFixed(1)}°C, zones balanced)`;\n    }\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// SAFETY CHECKS & STATE MANAGEMENT\n// ─────────────────────────────────────────────────────────────────────\n\n// Enforce minimum on/off time to prevent rapid cycling\nif (flow.get('lastControlMode') !== controlMode) {\n    if (secondsSinceLastChange < MIN_ON_OFF_TIME_SEC) {\n        shouldTurnOn = false;\n        controlMode = 'off';\n        reason += ` [Min ON/OFF time not elapsed]`;\n    } else {\n        flow.set('lastModeChange', now);\n        flow.set('lastControlMode', controlMode);\n    }\n}\n\n// Update temp history\ntempHistory.unshift(upstairsCurrentTemp);\nif (tempHistory.length > MAX_TEMP_HISTORY) tempHistory.pop();\nflow.set('tempHistory', tempHistory);\n\n// Update performance\nupdatePerformance();\n\n// Store priority zone for debugging\nflow.set('currentPriorityZone', priorityZone);\nflow.set('zoneTempDifference', zoneDiff);\n\n// ─────────────────────────────────────────────────────────────────────\n// FINAL OUTPUT & STATUS\n// ─────────────────────────────────────────────────────────────────────\nflow.set('mode', controlMode);\nflow.set('shouldTurnOn', shouldTurnOn);\nflow.set('controlReason', reason);\nflow.set('swing', swing);\nflow.set('fanlevel', fanLevel);\nflow.set('correctedTemp', Math.round(targetTemp));\n\nreturn {\n    payload: {\n        mode: controlMode,\n        fanLevel: fanLevel,\n        heatPumpTemp: Math.round(targetTemp),\n        swing: swing,\n        shouldTurnOn: shouldTurnOn,\n        season: seasonName,\n        priorityZone: priorityZone,\n        upstairsTemp: upstairsCurrentTemp,\n        downstairsTemp: downstairsCurrentTemp,\n        zoneDifference: zoneDiff.toFixed(1),\n        outsideTemp: outsideTemp,\n        desiredTemp: desiredTemp,\n        referenceTemp: referenceTemp.toFixed(1),\n        reason: reason,\n        timestamp: new Date().toISOString(),\n        performanceMetrics: performanceHistory[fanLevel] || []\n    }\n};\n",
+        "func": "// ═══════════════════════════════════════════════════════════════════════\n// INTELLIGENT HEAT PUMP TEMPERATURE CONTROL\n// Advanced control with zone balancing, adaptive morning, learning, safety\n// Paste this entire block into a Node-RED Function node.\n// ═══════════════════════════════════════════════════════════════════════\n\n// ─────────────────────────────────────────────────────────────────────\n// CONFIGURATION (flow-configurable)\n// ─────────────────────────────────────────────────────────────────────\nconst COMFORT_TOLERANCE = flow.get('comfortTolerance') || 0.5;\nconst MIN_ON_OFF_TIME_SEC = flow.get('minOnOffTimeSec') || 600;\nconst LEARNING_RATE = flow.get('learningRate') || 0.08;\nconst MAX_TEMP_HISTORY = flow.get('maxTempHistory') || 12;\nconst SUMMER_MORNING_HEAT_THRESHOLD = flow.get('summerMorningHeatThreshold') || 20;\nconst AIR_CIRCULATION_THRESHOLD = flow.get('airCirculationThreshold') || 23.0;\nconst MAX_ZONE_DIFFERENCE = flow.get('maxZoneDifference') || 2.5;\nconst UPSTAIRS_COMFORT_MIN = flow.get('upstairsComfortMin') || 19.5;\nconst CIRCULATION_TEMP_DIFF = flow.get('circulationTempDiff') || 1.8;\n\n// Adaptive morning parameters\nconst MORNING_BASE = flow.get('morningBaseTarget') || 20.5;       // base when OutsideTemp >= 5°C\nconst MORNING_MAX = flow.get('morningMaxTarget') || 22.0;         // cap for cold mornings\nconst MORNING_SLOPE = flow.get('morningSlope') || 0.2;            // °C increase per °C below 5\nconst GENTLE_NEAR_THRESHOLD = flow.get('gentleNearThreshold') || 0.8; // fan low when within this of target\n\n// ─────────────────────────────────────────────────────────────────────\n// SEASONAL & CONFIGURATION CONTEXT\n// ─────────────────────────────────────────────────────────────────────\nconst isSummer = flow.get('SummerTime');\nconst seasonName = flow.get('seasonName');\nconst focusArea = flow.get('focusArea') || 'downstairs';\nconst primaryMode = flow.get('primaryMode');\nconst defaultSwing = flow.get('defaultSwing') || 'fixedBottom';\nconst safetyMin = flow.get('safetyMin') || 15;\nconst safetyMax = flow.get('safetyMax') || 30;\n\n// ─────────────────────────────────────────────────────────────────────\n// SENSOR INPUTS & CURRENT STATE\n// ─────────────────────────────────────────────────────────────────────\nconst desiredTemp = Number(flow.get('desiredTemp')) || Number(msg.desiredTemp) || 21;\nconst upstairsCurrentTemp = Number(flow.get('upstairsCurrentTemp')) || Number(msg.upstairsCurrentTemp) || 20;\nconst downstairsCurrentTemp = Number(flow.get('downstairsCurrentTemp')) || Number(msg.downstairsCurrentTemp) || 20;\nconst outsideTemp = Number(flow.get('OutsideTemp')) || Number(msg.OutsideTemp) || 20;\nconst lastModeChange = flow.get('lastModeChange') || 0;\nconst isMorning = msg.isMorning === true;\n\n// ─────────────────────────────────────────────────────────────────────\n// OCCUPANCY & TIME CONTEXT\n// ─────────────────────────────────────────────────────────────────────\nconst homeStatus = global.get('Mode') || 'home'; // 'home' or 'away'\nconst dayStatus = flow.get('status') || 'day'; // 'day' or 'night'\nconst isHome = homeStatus === 'home';\nconst isDay = dayStatus === 'day';\nconst currentHour = new Date().getHours();\n\n// ─────────────────────────────────────────────────────────────────────\n// STATE TRACKING & PERFORMANCE HISTORY\n// ─────────────────────────────────────────────────────────────────────\nconst tempHistory = Array.isArray(flow.get('tempHistory')) ? flow.get('tempHistory') : [];\nconst lastTargetTemp = flow.get('lastTargetTemp');\nconst lastFanLevel = flow.get('lastFanLevel');\nconst performanceHistory = flow.get('performanceHistory') || {};\n\nconst now = Date.now();\nconst secondsSinceLastChange = (now - lastModeChange) / 1000;\n\n// ─────────────────────────────────────────────────────────────────────\n// CONTROL OUTPUT DEFAULTS\n// ─────────────────────────────────────────────────────────────────────\nlet controlMode = 'off';\nlet targetTemp = desiredTemp;\nlet swing = defaultSwing;\nlet fanLevel = 'low';\nlet reason = '';\nlet shouldTurnOn = false;\n\n// ─────────────────────────────────────────────────────────────────────\n// HELPERS\n// ─────────────────────────────────────────────────────────────────────\nfunction weightedAverage(up, down, upWeight = isSummer ? 0.75 : 0.65) {\n    return up * upWeight + down * (1 - upWeight);\n}\nfunction clamp(v, lo, hi) {\n    return Math.max(lo, Math.min(hi, v));\n}\nfunction getPriorityZone() {\n    if (focusArea === 'upstairs' || focusArea === 'downstairs') return focusArea;\n    if (isHome && isDay && currentHour >= 9 && currentHour <= 21) return 'upstairs';\n    return 'downstairs';\n}\nfunction getReferenceTemp(priorityZone) {\n    if (priorityZone === 'upstairs') return upstairsCurrentTemp * 0.6 + downstairsCurrentTemp * 0.4;\n    return downstairsCurrentTemp * 0.75 + upstairsCurrentTemp * 0.25;\n}\nfunction needsZoneBalancing() {\n    const zoneDiff = Math.abs(upstairsCurrentTemp - downstairsCurrentTemp);\n    return zoneDiff > CIRCULATION_TEMP_DIFF;\n}\nfunction updatePerformance() {\n    if (!lastTargetTemp || !lastFanLevel || tempHistory.length < 1) return;\n    const recordedStartTemp = tempHistory[0];\n    const minutes = (Date.now() - lastModeChange) / 1000 / 60;\n    if (minutes < 5) return;\n\n    const tempChange = upstairsCurrentTemp - recordedStartTemp;\n    const perf = {\n        targetTemp: lastTargetTemp,\n        fanLevel: lastFanLevel,\n        tempChange,\n        outsideTemp,\n        durationMin: minutes,\n        timestamp: new Date().toISOString()\n    };\n\n    performanceHistory[lastFanLevel] = performanceHistory[lastFanLevel] || [];\n    performanceHistory[lastFanLevel].push(perf);\n    if (performanceHistory[lastFanLevel].length > 10) performanceHistory[lastFanLevel].shift();\n    flow.set('performanceHistory', performanceHistory);\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// ADAPTIVE MORNING: compute effective desired temp\n// ─────────────────────────────────────────────────────────────────────\nlet effectiveDesired = desiredTemp;\nconst isMildWinterMorning = !isSummer && isMorning;\n\nif (isMildWinterMorning) {\n    let mt = MORNING_BASE + MORNING_SLOPE * Math.max(0, 5 - outsideTemp);\n\n    // If upstairs is already cozy, keep downstairs gentle\n    if (upstairsCurrentTemp >= (UPSTAIRS_COMFORT_MIN + 0.2)) {\n        mt = Math.min(mt, MORNING_BASE);\n    }\n\n    // Big zone gradient? Don’t push hard\n    const zoneDiff = Math.abs(upstairsCurrentTemp - downstairsCurrentTemp);\n    if (zoneDiff > MAX_ZONE_DIFFERENCE) {\n        mt = Math.min(mt, MORNING_BASE + 0.3);\n    }\n\n    // Warm outside and downstairs already ~21°C? Keep it light\n    if (outsideTemp >= 8 && downstairsCurrentTemp >= 21.0) {\n        mt = Math.min(mt, MORNING_BASE);\n    }\n\n    effectiveDesired = clamp(mt, safetyMin, Math.min(safetyMax, MORNING_MAX));\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// CONTROL APPLICATION FUNCTIONS\n// ─────────────────────────────────────────────────────────────────────\nfunction applyCirculationLogic(context) {\n    controlMode = 'fan';\n    swing = 'rangeFull';\n    fanLevel = 'low';\n    shouldTurnOn = true;\n    reason = context;\n}\n\nfunction applyHeatingLogic(context, referenceTemp, priorityZone = 'downstairs', targetSetpoint = desiredTemp) {\n    controlMode = 'heat';\n    swing = 'fixedBottom';\n    shouldTurnOn = true;\n\n    const isUpstairsFocus = priorityZone === 'upstairs';\n    const tempDiff = targetSetpoint - referenceTemp;\n\n    // Less aggressive boosts on mild winter mornings\n    let aggression = 1.0;\n    if (!isSummer && isMorning && outsideTemp >= 5) aggression = 0.5;\n    if (!isSummer && isMorning && outsideTemp >= 8) aggression = 0.35;\n\n    if (tempDiff > 2.5) {\n        fanLevel = isUpstairsFocus ? 'medium' : (isMorning ? 'medium' : 'high');\n        targetTemp = clamp(targetSetpoint + 1.5 * aggression, -100, safetyMax);\n    } else if (tempDiff > 1.5) {\n        fanLevel = isUpstairsFocus ? 'low' : (isMorning ? 'medium' : 'medium_high');\n        targetTemp = clamp(targetSetpoint + 1.0 * aggression, -100, safetyMax);\n    } else if (tempDiff > 0.7) {\n        fanLevel = isUpstairsFocus ? 'low' : (isMorning ? 'low' : 'medium');\n        targetTemp = clamp(targetSetpoint + 0.6 * aggression, -100, safetyMax);\n    } else {\n        fanLevel = 'low';\n        targetTemp = targetSetpoint;\n    }\n\n    // Gentle approach near target in mornings\n    if (isMorning && tempDiff <= GENTLE_NEAR_THRESHOLD) {\n        fanLevel = 'low';\n    }\n\n    // Performance-based adjustment\n    const perfList = performanceHistory[lastFanLevel || fanLevel] || [];\n    if (perfList.length >= 3) {\n        const avgRate = perfList.reduce((s, p) => s + (p.tempChange / Math.max(0.1, p.durationMin)), 0) / perfList.length;\n        if (avgRate < 0.08) {\n            targetTemp = clamp(targetTemp + LEARNING_RATE * 2, -100, safetyMax);\n        }\n    }\n\n    reason = context;\n    flow.set('lastTargetTemp', targetTemp);\n    flow.set('lastFanLevel', fanLevel);\n}\n\nfunction applyCoolingLogic(context) {\n    controlMode = 'cool';\n    swing = 'fixedTop';\n    shouldTurnOn = true;\n\n    const tempDiff = upstairsCurrentTemp - desiredTemp;\n    if (tempDiff <= COMFORT_TOLERANCE) {\n        applyCirculationLogic(`Upstairs slightly above target (${upstairsCurrentTemp}°C), prefer circulation`);\n        return;\n    }\n\n    if (tempDiff > 3.5) {\n        fanLevel = 'high';\n        targetTemp = clamp(desiredTemp - 2.0, safetyMin, safetyMax);\n    } else if (tempDiff > 2.2) {\n        fanLevel = 'medium_high';\n        targetTemp = clamp(desiredTemp - 1.2, safetyMin, safetyMax);\n    } else if (tempDiff > 1.0) {\n        fanLevel = 'medium';\n        targetTemp = clamp(desiredTemp - 0.8, safetyMin, safetyMax);\n    } else {\n        fanLevel = 'low';\n        targetTemp = desiredTemp;\n    }\n\n    reason = context;\n    flow.set('lastTargetTemp', targetTemp);\n    flow.set('lastFanLevel', fanLevel);\n}\n\n// ═══════════════════════════════════════════════════════════════════════\n/** MAIN DECISION LOGIC */\n// ═══════════════════════════════════════════════════════════════════════\nconst priorityZone = getPriorityZone();\nconst referenceTemp = getReferenceTemp(priorityZone);\nconst zoneDiff = Math.abs(upstairsCurrentTemp - downstairsCurrentTemp);\nconst weighted = weightedAverage(upstairsCurrentTemp, downstairsCurrentTemp);\n\n// ─────────────────────────────────────────────────────────────────────\n// MORNING HEATING CYCLE (All Seasons, adaptive in mild winters)\n// ─────────────────────────────────────────────────────────────────────\nif (isMorning) {\n    if (isSummer && downstairsCurrentTemp < SUMMER_MORNING_HEAT_THRESHOLD) {\n        applyHeatingLogic('Summer morning gentle heat', downstairsCurrentTemp, 'downstairs', desiredTemp);\n    } else {\n        const contextText = !isSummer\n            ? `Adaptive Morning (downstairs focus), out ${outsideTemp}°C, up ${upstairsCurrentTemp.toFixed(1)}°C`\n            : `Morning heating cycle (${priorityZone} focus)`;\n        const ref = !isSummer ? downstairsCurrentTemp : referenceTemp; // avoid pulling heat upstairs\n        const prio = !isSummer ? 'downstairs' : priorityZone;\n        applyHeatingLogic(contextText, ref, prio, effectiveDesired);\n    }\n}\n// ─────────────────────────────────────────────────────────────────────\n// SUMMER COOLING & CIRCULATION\n// ─────────────────────────────────────────────────────────────────────\nelse if (isSummer) {\n    if (upstairsCurrentTemp >= AIR_CIRCULATION_THRESHOLD) {\n        if (upstairsCurrentTemp >= desiredTemp + 1.0) {\n            applyCoolingLogic(`Cooling needed: Upstairs ${upstairsCurrentTemp}°C above target`);\n        } else {\n            applyCirculationLogic(`Air circulation: Managing warm upstairs temp`);\n        }\n    } else if (weighted < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(`Comfort heating: rooms feel cold`, weighted, priorityZone, desiredTemp);\n    } else if (upstairsCurrentTemp > safetyMax) {\n        applyCoolingLogic(`EMERGENCY: Upstairs temperature too high`);\n    } else if (upstairsCurrentTemp >= desiredTemp + 0.8) {\n        applyCoolingLogic(`Active cooling: Managing upstairs temp`);\n    } else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `Temperature within comfort range`;\n    }\n}\n// ─────────────────────────────────────────────────────────────────────\n// WINTER HEATING & ZONE BALANCING\n// ─────────────────────────────────────────────────────────────────────\nelse {\n    if (upstairsCurrentTemp < UPSTAIRS_COMFORT_MIN && isHome && isDay &&\n        downstairsCurrentTemp - upstairsCurrentTemp < 3.0) {\n        applyHeatingLogic(\n            `Winter upstairs comfort heating (${upstairsCurrentTemp}°C < ${UPSTAIRS_COMFORT_MIN}°C)`,\n            upstairsCurrentTemp,\n            'upstairs',\n            desiredTemp\n        );\n    }\n    else if (downstairsCurrentTemp < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(\n            `Primary heating: Downstairs below target (${downstairsCurrentTemp}°C)`,\n            downstairsCurrentTemp,\n            'downstairs',\n            desiredTemp\n        );\n    }\n    else if (needsZoneBalancing() && controlMode !== 'off') {\n        if (downstairsCurrentTemp < upstairsCurrentTemp - MAX_ZONE_DIFFERENCE) {\n            applyHeatingLogic(\n                `Zone balancing: Downstairs ${zoneDiff.toFixed(1)}°C colder`,\n                downstairsCurrentTemp,\n                'downstairs',\n                desiredTemp\n            );\n        } else if (upstairsCurrentTemp < downstairsCurrentTemp - CIRCULATION_TEMP_DIFF) {\n            applyHeatingLogic(\n                `Zone balancing: Upstairs ${zoneDiff.toFixed(1)}°C colder`,\n                upstairsCurrentTemp,\n                'upstairs',\n                desiredTemp\n            );\n        } else {\n            applyCirculationLogic(`Zone circulation: ${zoneDiff.toFixed(1)}°C difference`);\n        }\n    }\n    else if (referenceTemp < desiredTemp - COMFORT_TOLERANCE) {\n        applyHeatingLogic(\n            `Heating: ${priorityZone} focus (${referenceTemp.toFixed(1)}°C < ${desiredTemp}°C)`,\n            referenceTemp,\n            priorityZone,\n            desiredTemp\n        );\n    }\n    else {\n        controlMode = 'off';\n        shouldTurnOn = false;\n        reason = `Within comfort range (${priorityZone} ${referenceTemp.toFixed(1)}°C, zones balanced)`;\n    }\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// SAFETY CHECKS & STATE MANAGEMENT\n// ─────────────────────────────────────────────────────────────────────\nif (flow.get('lastControlMode') !== controlMode) {\n    if (secondsSinceLastChange < MIN_ON_OFF_TIME_SEC) {\n        shouldTurnOn = false;\n        controlMode = 'off';\n        reason += ` [Min ON/OFF time not elapsed]`;\n    } else {\n        flow.set('lastModeChange', now);\n        flow.set('lastControlMode', controlMode);\n    }\n}\n\n// Update temp history\ntempHistory.unshift(upstairsCurrentTemp);\nif (tempHistory.length > MAX_TEMP_HISTORY) tempHistory.pop();\nflow.set('tempHistory', tempHistory);\n\n// Update performance learning\nupdatePerformance();\n\n// Store debug info\nflow.set('currentPriorityZone', getPriorityZone());\nflow.set('zoneTempDifference', zoneDiff);\n\n// ─────────────────────────────────────────────────────────────────────\n// FINAL OUTPUT & STATUS\n// ─────────────────────────────────────────────────────────────────────\nflow.set('mode', controlMode);\nflow.set('shouldTurnOn', shouldTurnOn);\nflow.set('controlReason', reason);\nflow.set('swing', swing);\nflow.set('fanlevel', fanLevel);\nflow.set('correctedTemp', Math.round(targetTemp));\n\nreturn {\n    payload: {\n        mode: controlMode,\n        fanLevel: fanLevel,\n        heatPumpTemp: Math.round(targetTemp),\n        swing: swing,\n        shouldTurnOn: shouldTurnOn,\n        season: seasonName,\n        priorityZone: getPriorityZone(),\n        upstairsTemp: upstairsCurrentTemp,\n        downstairsTemp: downstairsCurrentTemp,\n        zoneDifference: zoneDiff.toFixed(1),\n        outsideTemp: outsideTemp,\n        desiredTemp: desiredTemp,\n        referenceTemp: getReferenceTemp(getPriorityZone()).toFixed(1),\n        reason: reason,\n        timestamp: new Date().toISOString(),\n        performanceMetrics: performanceHistory[fanLevel] || []\n    }\n};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18879,6 +20079,38 @@
             [],
             [
                 "b893cefa0ddb6da8"
+            ]
+        ]
+    },
+    {
+        "id": "822e6585aec2835a",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "OutsideTemp",
+        "property": "OutsideTemp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 3310,
+        "y": 820,
+        "wires": [
+            [
+                "2f34542ab25a2b78"
+            ],
+            [
+                "b05a48bd1b6d3165"
             ]
         ]
     },
@@ -21244,8 +22476,9 @@
         "name": "FP2 Bathroom",
         "mode": "link",
         "links": [
+            "77e202e1f7cb4c98",
             "d9f59e6e05f7c5b4",
-            "77e202e1f7cb4c98"
+            "f627f6e01a47a3da"
         ],
         "x": 735,
         "y": 900,
@@ -26106,7 +27339,7 @@
         "group": "1257d664fb2a5f32",
         "name": "BA-PRES",
         "label": "",
-        "order": 3,
+        "order": 4,
         "width": 1,
         "height": 1,
         "emulateClick": true,
@@ -26137,7 +27370,7 @@
         "group": "1257d664fb2a5f32",
         "name": "BA-LYS",
         "label": "",
-        "order": 2,
+        "order": 3,
         "width": 1,
         "height": 1,
         "emulateClick": false,
