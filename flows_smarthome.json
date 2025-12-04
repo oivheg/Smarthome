@@ -150,6 +150,14 @@
         "info": "Error: Request failed with status code 401"
     },
     {
+        "id": "visitor_mode_tab",
+        "type": "tab",
+        "label": "Visitor Mode Scheduler",
+        "disabled": false,
+        "info": "Scheduled activation and deactivation of visitor mode for vacation house sitter scenario",
+        "env": []
+    },
+    {
         "id": "94ff8f0f.02c5a",
         "type": "subflow",
         "name": "Deconz  Movement",
@@ -4311,6 +4319,26 @@
         "y": 240,
         "wires": [
             [
+                "vm_area_check"
+            ]
+        ]
+    },
+    {
+        "id": "vm_area_check",
+        "type": "function",
+        "z": "c15399232bac2ca3",
+        "name": "Visitor Mode Area Check",
+        "func": "// Check if visitor mode is active and if this room should be restricted\nconst visitorMode = global.get('VisitorMode') || {};\nconst roomName = env.get('room');\n\nif (visitorMode.enabled === true && visitorMode.restrictedAreas) {\n    // Check if current room is in restricted areas\n    const isRestricted = visitorMode.restrictedAreas.some(area => {\n        return roomName.toLowerCase().includes(area.toLowerCase());\n    });\n    \n    if (isRestricted) {\n        // Block automation in restricted areas when visitor mode active\n        node.status({fill: \"yellow\", shape: \"ring\", text: \"Restricted: Visitor Mode\"});\n        return null; // Stop message flow\n    }\n}\n\n// Allow normal operation\nnode.status({});\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 300,
+        "wires": [
+            [
                 "426239f4d97d6c43"
             ]
         ]
@@ -8220,9 +8248,28 @@
                 "d8ddcd9494c894c6"
             ],
             [
-                "9ab9f797bec97d04",
+                "visitor_gate_check",
                 "a5d3065e.5a0698"
             ]
+        ]
+    },
+    {
+        "id": "visitor_gate_check",
+        "type": "function",
+        "z": "8b99f8fe.7b27b8",
+        "g": "0dc9ec7306f46565",
+        "name": "Visitor Mode Gate",
+        "func": "// Check if visitor mode is active\nconst visitorMode = global.get('VisitorMode') || {};\n\nif (visitorMode.enabled === true) {\n    // Visitor mode active - block away mode trigger\n    node.status({fill: \"yellow\", shape: \"ring\", text: \"Blocked: Visitor present\"});\n    return null; // Stop message flow\n}\n\n// No visitor mode - allow normal away mode logic\nnode.status({});\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 220,
+        "wires": [
+            ["9ab9f797bec97d04"]
         ]
     },
     {
@@ -8797,27 +8844,39 @@
     },
     {
         "id": "18e04638e536cf3d",
-        "type": "change",
+        "type": "function",
         "z": "8b99f8fe.7b27b8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "VisitorMode",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 500,
+        "name": "Set Visitor Mode",
+        "func": "// Initialize or update visitor mode object\nconst visitorMode = global.get('VisitorMode') || {};\n\nif (msg.payload === true) {\n    // Activate visitor mode with defaults\n    visitorMode.enabled = true;\n    visitorMode.type = visitorMode.type || 'day_visit'; // day_visit, house_sitter, overnight\n    visitorMode.startTime = visitorMode.startTime || Date.now();\n    visitorMode.expectedEndTime = visitorMode.expectedEndTime || null;\n    visitorMode.allowedAreas = visitorMode.allowedAreas || ['kitchen', 'living_room', 'bathroom', 'hallway', 'stairs'];\n    visitorMode.restrictedAreas = visitorMode.restrictedAreas || ['bedroom', 'office'];\n    visitorMode.autoLightsEnabled = true;\n    visitorMode.climateAdjusted = true;\n    \n    node.status({fill: \"red\", shape: \"dot\", text: \"Visitor Mode: \" + visitorMode.type});\n    msg.payload = \"Visitor Mode Activated\";\n} else {\n    // Deactivate visitor mode\n    visitorMode.enabled = false;\n    visitorMode.endTime = Date.now();\n    \n    node.status({fill: \"green\", shape: \"ring\", text: \"Visitor Mode OFF\"});\n    msg.payload = \"Visitor Mode Deactivated\";\n}\n\nglobal.set('VisitorMode', visitorMode);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
         "y": 400,
         "wires": [
-            []
+            ["vm_notify_01"]
+        ]
+    },
+    {
+        "id": "vm_notify_01",
+        "type": "ui-notification",
+        "z": "8b99f8fe.7b27b8",
+        "ui": "b2bd38e0f36524f6",
+        "position": "top right",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 0,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "raw": false,
+        "x": 730,
+        "y": 400,
+        "wires": []
         ]
     },
     {
@@ -22251,7 +22310,7 @@
         "type": "function",
         "z": "6a77c00f79a19693",
         "name": "Determine device presence",
-        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n\nfor (let device in msg.payload) {\n    \n   \n    let macadress = msg.payload[device].mac\n   \n    switch (macadress) {\n        case \"fa:9b:7e:5a:6c:6e\":\n        case \"52:9c:f0:c9:7a:bd\":\n        case \"aa:e4:74:26:ba:e3\":\n        case \"6a:a4:ac:02:44:19\":\n        case \"ce:4b:f9:34:9b:7d\":\n        case \"46:5f:50:69:f1:6a\":\n\n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"d6:05:24:1f:de:7a\":\n        case \"de:61:a8:7d:7f:6f\":\n           \n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n\n         break;\n    } \n\n}\n\n\nreturn data",
+        "func": "// @ts-nocheck\nconst lastSeenSeconds = 120;\nlet presenceCutoff = (new Date() - (lastSeenSeconds * 1000)) / 1000; \nconst people = {\n    \"presence/heggland\": \"heggland\",\n    \"presence/karina\": \"karina\",\n    \"presence/person3\": \"stian\"\n};\nlet data = {};\ndata.payload = false;\ndata.people = [];\n\n// Check for tracked phone presence\nfor (let device in msg.payload) {\n    let macadress = msg.payload[device].mac\n   \n    switch (macadress) {\n        case \"fa:9b:7e:5a:6c:6e\":\n        case \"52:9c:f0:c9:7a:bd\":\n        case \"aa:e4:74:26:ba:e3\":\n        case \"6a:a4:ac:02:44:19\":\n        case \"ce:4b:f9:34:9b:7d\":\n        case \"46:5f:50:69:f1:6a\":\n            data.people.push(\"heggland\");\n            data.payload = true;\n            break;\n        case \"d6:05:24:1f:de:7a\":\n        case \"de:61:a8:7d:7f:6f\":\n            data.people.push(\"karina\");\n            data.payload = true;\n            break;\n        default:\n            break;\n    } \n}\n\n// VISITOR MODE ENHANCEMENT\n// If visitor mode is active and no owner phones detected,\n// check FP2 sensors for visitor presence\nconst visitorMode = global.get('VisitorMode') || {};\nif (visitorMode.enabled === true && data.payload === false) {\n    // Check FP2 presence sensors\n    const fp2_presence = flow.get('fp2_presence');\n    const lastActivityTime = flow.get('lastActivityTime');\n    const baPresence = global.get('BA-Presence');\n    \n    // If FP2 detects presence within last 5 minutes, consider as visitor presence\n    const fiveMinutesAgo = Date.now() - (5 * 60 * 1000);\n    \n    if (fp2_presence === true || (lastActivityTime && lastActivityTime > fiveMinutesAgo) || baPresence === true) {\n        data.payload = true; // Treat as presence to prevent away mode\n        data.people.push(\"visitor\");\n        data.visitorDetected = true;\n    }\n}\n\nreturn data",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -28850,5 +28909,286 @@
                 "0f094dee2e4348c9"
             ]
         ]
+    },
+    {
+        "id": "vm_sched_start_inject",
+        "type": "inject",
+        "z": "visitor_mode_tab",
+        "name": "Vacation Start",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "vm_sched_activate"
+            ]
+        ]
+    },
+    {
+        "id": "vm_sched_end_inject",
+        "type": "inject",
+        "z": "visitor_mode_tab",
+        "name": "Vacation End",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "end",
+        "payloadType": "str",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "vm_sched_deactivate"
+            ]
+        ]
+    },
+    {
+        "id": "vm_sched_activate",
+        "type": "function",
+        "z": "visitor_mode_tab",
+        "name": "Activate House Sitter Mode",
+        "func": "// Get current visitor mode config or create new\nconst visitorMode = global.get('VisitorMode') || {};\n\n// Activate with house sitter configuration\nvisitorMode.enabled = true;\nvisitorMode.type = 'house_sitter';\nvisitorMode.startTime = Date.now();\nvisitorMode.expectedEndTime = null; // Set by schedule\nvisitorMode.allowedAreas = ['kitchen', 'living_room', 'bathroom', 'hallway', 'stairs', 'basement'];\nvisitorMode.restrictedAreas = ['bedroom', 'office'];\nvisitorMode.autoLightsEnabled = true;\nvisitorMode.climateAdjusted = true;\n\nglobal.set('VisitorMode', visitorMode);\n\nnode.status({fill: \"blue\", shape: \"dot\", text: \"House Sitter Mode Active\"});\n\nmsg.payload = \"House Sitter Mode Activated - Vacation started\";\nmsg.visitorMode = visitorMode;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 100,
+        "wires": [
+            [
+                "vm_sched_notify",
+                "vm_sched_announce"
+            ]
+        ]
+    },
+    {
+        "id": "vm_sched_deactivate",
+        "type": "function",
+        "z": "visitor_mode_tab",
+        "name": "Deactivate Visitor Mode",
+        "func": "// Get current visitor mode\nconst visitorMode = global.get('VisitorMode') || {};\n\n// Deactivate\nvisitorMode.enabled = false;\nvisitorMode.endTime = Date.now();\n\nglobal.set('VisitorMode', visitorMode);\n\nnode.status({fill: \"green\", shape: \"ring\", text: \"Visitor Mode OFF\"});\n\nmsg.payload = \"Visitor Mode Deactivated - Welcome home!\";\nmsg.visitorMode = visitorMode;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 200,
+        "wires": [
+            [
+                "vm_sched_notify",
+                "vm_sched_announce"
+            ]
+        ]
+    },
+    {
+        "id": "vm_sched_notify",
+        "type": "ui-notification",
+        "z": "visitor_mode_tab",
+        "ui": "b2bd38e0f36524f6",
+        "position": "top right",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "5",
+        "showCountdown": true,
+        "outputs": 0,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "raw": false,
+        "x": 660,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "vm_sched_announce",
+        "type": "link out",
+        "z": "visitor_mode_tab",
+        "name": "Announce Visitor Mode Change",
+        "mode": "link",
+        "links": [
+            "e1a25373.858cb"
+        ],
+        "x": 665,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "vm_config_type_dropdown",
+        "type": "ui-dropdown",
+        "z": "visitor_mode_tab",
+        "group": "3f286b473c9966df",
+        "name": "Visitor Type",
+        "label": "Visitor Type",
+        "tooltip": "",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Day Visit",
+                "value": "day_visit",
+                "type": "str"
+            },
+            {
+                "label": "Overnight Guest",
+                "value": "overnight",
+                "type": "str"
+            },
+            {
+                "label": "House Sitter",
+                "value": "house_sitter",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "visitor_type",
+        "topicType": "str",
+        "className": "",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "vm_config_set_type"
+            ]
+        ]
+    },
+    {
+        "id": "vm_config_set_type",
+        "type": "function",
+        "z": "visitor_mode_tab",
+        "name": "Update Visitor Type",
+        "func": "// Update visitor mode type\nconst visitorMode = global.get('VisitorMode') || { enabled: false };\nvisitorMode.type = msg.payload;\n\n// Adjust configuration based on type\nif (msg.payload === 'day_visit') {\n    visitorMode.allowedAreas = ['kitchen', 'living_room', 'bathroom', 'hallway'];\n    visitorMode.restrictedAreas = ['bedroom', 'office', 'basement'];\n} else if (msg.payload === 'overnight') {\n    visitorMode.allowedAreas = ['kitchen', 'living_room', 'bathroom', 'hallway', 'stairs'];\n    visitorMode.restrictedAreas = ['bedroom', 'office'];\n} else if (msg.payload === 'house_sitter') {\n    visitorMode.allowedAreas = ['kitchen', 'living_room', 'bathroom', 'hallway', 'stairs', 'basement'];\n    visitorMode.restrictedAreas = ['bedroom', 'office'];\n}\n\nglobal.set('VisitorMode', visitorMode);\nnode.status({fill: \"blue\", shape: \"dot\", text: \"Type: \" + msg.payload});\n\nmsg.payload = \"Visitor type updated to: \" + msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "vm_sched_notify"
+            ]
+        ]
+    },
+    {
+        "id": "vm_status_display",
+        "type": "ui-text",
+        "z": "visitor_mode_tab",
+        "group": "3f286b473c9966df",
+        "order": 4,
+        "width": "6",
+        "height": "2",
+        "name": "Visitor Mode Status",
+        "label": "Current Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 660,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "vm_status_update",
+        "type": "inject",
+        "z": "visitor_mode_tab",
+        "name": "Update Status Display",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "vm_status_format"
+            ]
+        ]
+    },
+    {
+        "id": "vm_status_format",
+        "type": "function",
+        "z": "visitor_mode_tab",
+        "name": "Format Status",
+        "func": "const visitorMode = global.get('VisitorMode') || { enabled: false };\n\nif (visitorMode.enabled) {\n    const startTime = visitorMode.startTime ? new Date(visitorMode.startTime).toLocaleString() : 'N/A';\n    const type = visitorMode.type || 'unknown';\n    const areas = visitorMode.allowedAreas ? visitorMode.allowedAreas.join(', ') : 'N/A';\n    \n    msg.payload = `<b>✓ ACTIVE</b><br>Type: ${type}<br>Started: ${startTime}<br>Allowed: ${areas}`;\n} else {\n    msg.payload = '<b>✗ INACTIVE</b><br>No visitor mode active';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "vm_status_display"
+            ]
+        ]
+    },
+    {
+        "id": "vm_comment_1",
+        "type": "comment",
+        "z": "visitor_mode_tab",
+        "name": "Scheduled Vacation Mode Triggers",
+        "info": "These inject nodes can be configured with specific dates/times\\nfor automatic visitor mode activation when going on vacation",
+        "x": 200,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "vm_comment_2",
+        "type": "comment",
+        "z": "visitor_mode_tab",
+        "name": "Manual Configuration",
+        "info": "Configure visitor type and settings manually via dashboard",
+        "x": 170,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "vm_comment_3",
+        "type": "comment",
+        "z": "visitor_mode_tab",
+        "name": "Live Status Display",
+        "info": "Updates every 30 seconds to show current visitor mode status",
+        "x": 170,
+        "y": 360,
+        "wires": []
     }
 ]
