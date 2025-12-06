@@ -12027,29 +12027,23 @@
     },
     {
         "id": "b590b37dc0fbc282",
-        "type": "change",
+        "type": "function",
         "z": "a9a601907d96eb09",
-        "name": "FP2 Presence",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fp2_presence",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
+        "name": "FP2 Presence + Activity Tracking",
+        "func": "// Store FP2 presence state\nflow.set('fp2_presence', msg.payload);\n\n// Track last activity time when presence detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    node.status({fill: \"green\", shape: \"dot\", text: \"Active: \" + new Date().toLocaleTimeString()});\n} else {\n    node.status({fill: \"grey\", shape: \"ring\", text: \"Inactive\"});\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
         "y": 240,
         "wires": [
             [
                 "bdc7a6b2a2bf8285",
-                "0e5ecc0cc6d5191d"
+                "0e5ecc0cc6d5191d",
+                "ba_ui_fp2_format"
             ]
         ]
     },
@@ -12123,57 +12117,49 @@
     },
     {
         "id": "dc2a2ebf5212b35b",
-        "type": "change",
+        "type": "function",
         "z": "a9a601907d96eb09",
-        "name": "movement",
-        "rules": [
-            {
-                "t": "set",
-                "p": "movement",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 390,
+        "name": "Movement + Activity Tracking",
+        "func": "// Store movement state\nflow.set('movement', msg.payload);\n\n// Track last activity time when movement detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    node.status({fill: \"blue\", shape: \"dot\", text: \"Motion: \" + new Date().toLocaleTimeString()});\n} else {\n    node.status({fill: \"grey\", shape: \"ring\", text: \"No motion\"});\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
         "y": 320,
         "wires": [
             [
                 "bdc7a6b2a2bf8285",
-                "703541eac38a33b4"
+                "703541eac38a33b4",
+                "ba_ui_movement_format"
             ]
         ]
     },
     {
         "id": "9a6c7e2adae19dbe",
-        "type": "switch",
+        "type": "function",
         "z": "a9a601907d96eb09",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 410,
+        "name": "Door State Tracker",
+        "func": "// Store door state (true = open, false = closed)\nflow.set('door_open', msg.payload);\n\n// Update activity time when door opens (entering bathroom)\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    node.status({fill: \"red\", shape: \"dot\", text: \"Door OPEN\"});\n} else {\n    node.status({fill: \"green\", shape: \"ring\", text: \"Door CLOSED\"});\n}\n\n// Trigger dashboard updates\nnode.send([null, null, {payload: true}]);\n\n// Route to appropriate output\nif (msg.payload === true) {\n    return [msg, null, null]; // Output 1: door opened\n} else {\n    return [null, msg, null]; // Output 2: door closed\n}",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
         "y": 440,
         "wires": [
             [
                 "bdc7a6b2a2bf8285"
             ],
-            []
+            [],
+            [
+                "ba_ui_activity_format",
+                "ba_ui_protection_format"
+            ]
         ]
     },
     {
@@ -12567,6 +12553,198 @@
         ]
     },
     {
+        "id": "ba_ui_fp2_format",
+        "type": "function",
+        "z": "a9a601907d96eb09",
+        "name": "Format FP2 Status",
+        "func": "const fp2Active = flow.get('fp2_presence') || false;\nconst lastActivity = flow.get('lastActivityTime') || 0;\n\nif (fp2Active) {\n    msg.payload = \"🟢 FP2: Active\";\n} else {\n    const timeSince = Date.now() - lastActivity;\n    const minAgo = Math.floor(timeSince / 60000);\n    msg.payload = `⚫ FP2: Inactive (${minAgo}m ago)`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 500,
+        "wires": [
+            [
+                "ba_ui_fp2_display"
+            ]
+        ]
+    },
+    {
+        "id": "ba_ui_fp2_display",
+        "type": "ui-text",
+        "z": "a9a601907d96eb09",
+        "group": "1257d664fb2a5f32",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "name": "FP2 Status",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 900,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ba_ui_movement_format",
+        "type": "function",
+        "z": "a9a601907d96eb09",
+        "name": "Format Movement Status",
+        "func": "const movement = flow.get('movement') || false;\n\nif (movement) {\n    msg.payload = \"🔵 IR Motion: Detected\";\n} else {\n    msg.payload = \"⚫ IR Motion: Clear\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 560,
+        "wires": [
+            [
+                "ba_ui_movement_display"
+            ]
+        ]
+    },
+    {
+        "id": "ba_ui_movement_display",
+        "type": "ui-text",
+        "z": "a9a601907d96eb09",
+        "group": "1257d664fb2a5f32",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "name": "Movement Status",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 910,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ba_ui_activity_format",
+        "type": "function",
+        "z": "a9a601907d96eb09",
+        "name": "Format Activity Time",
+        "func": "const lastActivity = flow.get('lastActivityTime') || 0;\nconst timeSince = Date.now() - lastActivity;\nconst minAgo = Math.floor(timeSince / 60000);\nconst secAgo = Math.floor((timeSince % 60000) / 1000);\n\nif (minAgo === 0) {\n    msg.payload = `⏱️ Last Activity: ${secAgo}s ago`;\n} else {\n    msg.payload = `⏱️ Last Activity: ${minAgo}m ${secAgo}s ago`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 620,
+        "wires": [
+            [
+                "ba_ui_activity_display"
+            ]
+        ]
+    },
+    {
+        "id": "ba_ui_activity_display",
+        "type": "ui-text",
+        "z": "a9a601907d96eb09",
+        "group": "1257d664fb2a5f32",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "name": "Last Activity",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 900,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ba_ui_protection_format",
+        "type": "function",
+        "z": "a9a601907d96eb09",
+        "name": "Format Protection Status",
+        "func": "const doorOpen = flow.get('door_open') || false;\nconst fp2Presence = flow.get('fp2_presence') || false;\nconst movement = flow.get('movement') || false;\nconst lastActivityTime = flow.get('lastActivityTime') || 0;\nconst timeSinceActivity = Date.now() - lastActivityTime;\nconst ACTIVITY_TIMEOUT = 5 * 60 * 1000;\n\n// Check protection rules\nif (!doorOpen && timeSinceActivity < ACTIVITY_TIMEOUT) {\n    msg.payload = \"🟡 PROTECTED: Recent activity\";\n} else if (!doorOpen && fp2Presence) {\n    msg.payload = \"🟡 PROTECTED: FP2 active\";\n} else if (movement) {\n    msg.payload = \"🔵 PROTECTED: Motion detected\";\n} else {\n    const minIdle = Math.floor(timeSinceActivity / 60000);\n    msg.payload = `🟢 Safe to turn off (${minIdle}m idle)`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 680,
+        "wires": [
+            [
+                "ba_ui_protection_display"
+            ]
+        ]
+    },
+    {
+        "id": "ba_ui_protection_display",
+        "type": "ui-text",
+        "z": "a9a601907d96eb09",
+        "group": "1257d664fb2a5f32",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "name": "Protection Status",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 910,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "ba_ui_update_trigger",
+        "type": "inject",
+        "z": "a9a601907d96eb09",
+        "name": "Update Dashboard Every 5s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 460,
+        "y": 600,
+        "wires": [
+            [
+                "ba_ui_fp2_format",
+                "ba_ui_movement_format",
+                "ba_ui_activity_format",
+                "ba_ui_protection_format"
+            ]
+        ]
+    },
+    {
         "id": "a9eef7ebd0b8a98e",
         "type": "trigger",
         "z": "a9a601907d96eb09",
@@ -12885,6 +13063,26 @@
         "repair": false,
         "outputs": 1,
         "x": 700,
+        "y": 200,
+        "wires": [
+            [
+                "ba_door_protection"
+            ]
+        ]
+    },
+    {
+        "id": "ba_door_protection",
+        "type": "function",
+        "z": "a9a601907d96eb09",
+        "name": "Door-Closed Protection",
+        "func": "// Get sensor states\nconst doorOpen = flow.get('door_open') || false;\nconst fp2Presence = flow.get('fp2_presence') || false;\nconst movement = flow.get('movement') || false;\nconst lastActivityTime = flow.get('lastActivityTime') || 0;\nconst now = Date.now();\n\nconst timeSinceActivity = now - lastActivityTime;\nconst ACTIVITY_TIMEOUT = 5 * 60 * 1000; // 5 minutes\n\n// PROTECTION RULE 1: Door closed + recent activity = BLOCK OFF\n// This handles the \"sitting on toilet\" scenario where FP2 can't detect\nif (!doorOpen && timeSinceActivity < ACTIVITY_TIMEOUT) {\n    node.status({\n        fill: \"yellow\", \n        shape: \"ring\", \n        text: \"Protected: Door closed + recent activity\"\n    });\n    return null; // Block OFF command\n}\n\n// PROTECTION RULE 2: Door closed + FP2 still detecting = BLOCK OFF\n// Extra safety if FP2 can partially see\nif (!doorOpen && fp2Presence) {\n    node.status({\n        fill: \"yellow\", \n        shape: \"dot\", \n        text: \"Protected: Door closed + FP2 active\"\n    });\n    return null; // Block OFF command\n}\n\n// PROTECTION RULE 3: Movement detected = BLOCK OFF\n// Redundant check but adds safety\nif (movement) {\n    node.status({\n        fill: \"blue\", \n        shape: \"dot\", \n        text: \"Protected: Movement detected\"\n    });\n    return null; // Block OFF command\n}\n\n// All clear - allow OFF to proceed\nconst minutesSinceActivity = Math.floor(timeSinceActivity / 60000);\nnode.status({\n    fill: \"green\", \n    shape: \"ring\", \n    text: `Safe to turn off (${minutesSinceActivity}m idle)`\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
         "y": 200,
         "wires": [
             [
