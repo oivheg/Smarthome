@@ -1924,30 +1924,19 @@
             "535c8e7c992bae6f",
             "7e80e61863ac84bb",
             "5f39912065e39f2b",
-            "2f34542ab25a2b78",
-            "53b6e2c165133960",
-            "59450958ab89d7e0",
             "230a2b494efecd7d",
-            "b05a48bd1b6d3165",
-            "c04a717471583b69",
-            "6bc69d4b02521386",
             "5215193faea2fd66",
             "bba1756f4addc872",
             "53e997fa7afcf406",
             "d4ea77e32be534e6",
             "62c48071ce1e806d",
-            "568760e0e7d11122",
-            "e81ff1e993240e56",
             "2bea738a0f41eed4",
-            "a66daf205957a322",
-            "913b5253d73d993c",
-            "822e6585aec2835a",
             "bedtime_trigger_link"
         ],
         "x": 2324,
         "y": 739,
-        "w": 1112,
-        "h": 322
+        "w": 752,
+        "h": 282
     },
     {
         "id": "86f688737e807f3f",
@@ -18572,108 +18561,6 @@
         "wires": []
     },
     {
-        "id": "2f34542ab25a2b78",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "Set Cooling Params (Bedtime)",
-        "rules": [
-            {
-                "t": "set",
-                "p": "mode",
-                "pt": "flow",
-                "to": "cool",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "flow",
-                "to": "fixedBottom",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "correctedTemp",
-                "pt": "flow",
-                "to": "16",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "flow",
-                "to": "medium",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "on",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "x": 2890,
-        "y": 880,
-        "wires": [
-            [
-                "6bc69d4b02521386",
-                "568760e0e7d11122"
-            ]
-        ]
-    },
-    {
-        "id": "53b6e2c165133960",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "Send Bedtime Cool to Heatpump",
-        "mode": "link",
-        "links": [
-            "209d6f954532c595",
-            "3c051d32eb2b0b36"
-        ],
-        "x": 3315,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "59450958ab89d7e0",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "Temp ≤ 19?",
-        "property": "downstairsCurrentTemp",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "lte",
-                "v": "19",
-                "vt": "num"
-            },
-            {
-                "t": "gt",
-                "v": "19",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 3170,
-        "y": 960,
-        "wires": [
-            [
-                "b05a48bd1b6d3165",
-                "230a2b494efecd7d"
-            ],
-            [
-                "c04a717471583b69"
-            ]
-        ]
-    },
-    {
         "id": "230a2b494efecd7d",
         "type": "change",
         "z": "6df0226504208616",
@@ -18693,20 +18580,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "b05a48bd1b6d3165",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "link out 21",
-        "mode": "link",
-        "links": [
-            "8990cd086ea9bbb7"
-        ],
-        "x": 3395,
-        "y": 940,
-        "wires": []
     },
     {
         "id": "ce0f2d7178f4c313",
@@ -18749,32 +18622,6 @@
         "wires": [
             [
                 "27a055fb484b9baf"
-            ]
-        ]
-    },
-    {
-        "id": "c04a717471583b69",
-        "type": "trigger",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "5",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 3170,
-        "y": 920,
-        "wires": [
-            [
-                "59450958ab89d7e0"
             ]
         ]
     },
@@ -18847,32 +18694,6 @@
             [
                 "230a2b494efecd7d",
                 "62c48071ce1e806d"
-            ]
-        ]
-    },
-    {
-        "id": "6bc69d4b02521386",
-        "type": "trigger",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "Wait 10 min (cooling)",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "10",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 2880,
-        "y": 940,
-        "wires": [
-            [
-                "59450958ab89d7e0"
             ]
         ]
     },
@@ -19600,70 +19421,6 @@
         ]
     },
     {
-        "id": "568760e0e7d11122",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "Heatpump Data",
-        "rules": [
-            {
-                "t": "set",
-                "p": "targetTemperature",
-                "pt": "msg",
-                "to": "correctedTemp",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "mode",
-                "pt": "msg",
-                "to": "mode",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "swing",
-                "pt": "msg",
-                "to": "swing",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "fanlevel",
-                "pt": "msg",
-                "to": "fanlevel",
-                "tot": "flow"
-            },
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "topic",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "_msgid",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 3190,
-        "y": 880,
-        "wires": [
-            [
-                "53b6e2c165133960"
-            ]
-        ]
-    },
-    {
         "id": "725c0257fa35396f",
         "type": "delay",
         "z": "6df0226504208616",
@@ -19686,36 +19443,6 @@
         "wires": [
             [
                 "1d5369f2e93e8467"
-            ]
-        ]
-    },
-    {
-        "id": "e81ff1e993240e56",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 3020,
-        "y": 1020,
-        "wires": [
-            [
-                "230a2b494efecd7d"
             ]
         ]
     },
@@ -19763,53 +19490,6 @@
             ],
             []
         ]
-    },
-    {
-        "id": "a66daf205957a322",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "Is Winter",
-        "property": "seasonName",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Winter",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 3110,
-        "y": 820,
-        "wires": [
-            [
-                "913b5253d73d993c",
-                "822e6585aec2835a"
-            ],
-            [
-                "2f34542ab25a2b78"
-            ]
-        ]
-    },
-    {
-        "id": "913b5253d73d993c",
-        "type": "link out",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "link out 10",
-        "mode": "link",
-        "links": [
-            "209d6f954532c595"
-        ],
-        "x": 3235,
-        "y": 780,
-        "wires": []
     },
     {
         "id": "16c24ed3a979e44d",
@@ -20355,38 +20035,6 @@
             [],
             [
                 "b893cefa0ddb6da8"
-            ]
-        ]
-    },
-    {
-        "id": "822e6585aec2835a",
-        "type": "switch",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "OutsideTemp",
-        "property": "OutsideTemp",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "gte",
-                "v": "5",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 3310,
-        "y": 820,
-        "wires": [
-            [
-                "2f34542ab25a2b78"
-            ],
-            [
-                "b05a48bd1b6d3165"
             ]
         ]
     },
