@@ -1941,7 +1941,8 @@
             "2bea738a0f41eed4",
             "a66daf205957a322",
             "913b5253d73d993c",
-            "822e6585aec2835a"
+            "822e6585aec2835a",
+            "bedtime_trigger_link"
         ],
         "x": 2324,
         "y": 739,
@@ -18552,9 +18553,23 @@
         "y": 840,
         "wires": [
             [
-                "a66daf205957a322"
+                "bedtime_trigger_link"
             ]
         ]
+    },
+    {
+        "id": "bedtime_trigger_link",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "Trigger Bedtime Controller",
+        "mode": "link",
+        "links": [
+            "2870f0783bcf45ed"
+        ],
+        "x": 3125,
+        "y": 840,
+        "wires": []
     },
     {
         "id": "2f34542ab25a2b78",
@@ -19908,7 +19923,8 @@
         "g": "81b3ee2115349953",
         "name": "link in 9",
         "links": [
-            "4b93c7c7130630d3"
+            "4b93c7c7130630d3",
+            "bedtime_trigger_link"
         ],
         "x": 1655,
         "y": 1560,
@@ -20004,25 +20020,25 @@
     },
     {
         "id": "2a1363e2ac53466c",
-        "type": "switch",
+        "type": "function",
         "z": "6df0226504208616",
         "g": "81b3ee2115349953",
-        "name": "bedTimeMode",
-        "property": "bedTimeMode",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
+        "name": "Bedtime Controller",
+        "func": "// ═══════════════════════════════════════════════════════════════════════\n// UNIFIED BEDTIME CONTROLLER\n// Handles all bedtime mode logic in one place\n// Output 1: Continue to normal temp control (bedtime inactive OR bedtime complete)\n// Output 2: Bedtime cooling active - send direct to heat pump\n// ═══════════════════════════════════════════════════════════════════════\n\nconst bedTimeMode = flow.get('bedTimeMode') || false;\nconst downstairsTemp = Number(flow.get('downstairsCurrentTemp')) || 20;\nconst currentHour = new Date().getHours();\nconst bedtimeTries = flow.get('bedtimeTries') || 0;\n\n// Bedtime configuration\nconst BEDTIME_TARGET_TEMP = 19;        // Goal: downstairs at 19°C for sleeping\nconst BEDTIME_COOLING_TEMP = 16;       // Aggressive cooling setpoint\nconst BEDTIME_FAN = 'medium';          // Not too loud for sleeping\nconst BEDTIME_SWING = 'fixedBottom';   // Always blow down for bedroom comfort\nconst MAX_BEDTIME_CYCLES = 6;          // Safety: max 60 min of bedtime cooling\n\n// Weekend detection\nconst isWeekend = global.get('isWeekend') || false;\nconst isWeekendMorning = isWeekend && currentHour >= 6 && currentHour < 10;\n\n// ─────────────────────────────────────────────────────────────────────\n// NOT IN BEDTIME MODE - pass through to normal control\n// ─────────────────────────────────────────────────────────────────────\nif (!bedTimeMode) {\n    // Add weekend quiet hours info for downstream processing\n    if (isWeekendMorning) {\n        msg.quietHours = { active: true, maxFan: 'medium', reason: 'Weekend quiet hours' };\n    }\n    node.status({fill: 'green', shape: 'ring', text: 'Normal mode'});\n    return [msg, null];\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// BEDTIME MODE ACTIVE\n// ─────────────────────────────────────────────────────────────────────\n\n// Safety check: too many cycles?\nif (bedtimeTries >= MAX_BEDTIME_CYCLES) {\n    flow.set('bedTimeMode', false);\n    flow.set('tempOn', true);\n    node.status({fill: 'yellow', shape: 'ring', text: 'Bedtime timeout - resuming auto'});\n    node.warn('Bedtime mode timed out after ' + MAX_BEDTIME_CYCLES + ' cycles');\n    return [msg, null];\n}\n\n// Check if we've reached bedtime goal\nif (downstairsTemp <= BEDTIME_TARGET_TEMP) {\n    // Goal reached! Reset bedtime mode\n    flow.set('bedTimeMode', false);\n    flow.set('tempOn', true);\n    \n    node.status({fill: 'green', shape: 'dot', text: 'Bedtime complete: ' + downstairsTemp.toFixed(1) + '°C'});\n    \n    // Send notification that bedtime is complete\n    const completeMsg = {\n        payload: 'Bedtime cooling complete. Downstairs: ' + downstairsTemp.toFixed(1) + '°C',\n        bedtimeComplete: true\n    };\n    \n    return [msg, completeMsg]; // Resume normal + notify\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// STILL COOLING - enforce bedtime settings\n// ─────────────────────────────────────────────────────────────────────\nflow.set('bedtimeTries', bedtimeTries + 1);\n\n// Set bedtime cooling parameters\nflow.set('mode', 'cool');\nflow.set('swing', BEDTIME_SWING);\nflow.set('correctedTemp', BEDTIME_COOLING_TEMP);\nflow.set('fanlevel', BEDTIME_FAN);\nflow.set('shouldTurnOn', true);\nflow.set('controlReason', 'Bedtime cooling: ' + downstairsTemp.toFixed(1) + '°C → ' + BEDTIME_TARGET_TEMP + '°C');\n\nconst bedtimeMsg = {\n    payload: {\n        mode: 'cool',\n        fanLevel: BEDTIME_FAN,\n        heatPumpTemp: BEDTIME_COOLING_TEMP,\n        swing: BEDTIME_SWING,\n        shouldTurnOn: true,\n        reason: 'Bedtime cooling cycle ' + (bedtimeTries + 1) + '/' + MAX_BEDTIME_CYCLES,\n        downstairsTemp: downstairsTemp,\n        targetTemp: BEDTIME_TARGET_TEMP\n    },\n    on: true\n};\n\nnode.status({fill: 'blue', shape: 'dot', text: 'Bedtime: ' + downstairsTemp.toFixed(1) + '°C → ' + BEDTIME_TARGET_TEMP + '°C [' + (bedtimeTries + 1) + '/' + MAX_BEDTIME_CYCLES + ']'});\n\nreturn [null, bedtimeMsg]; // Output 2: direct to heat pump",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 1770,
         "y": 1560,
         "wires": [
             [
                 "d0f6e607bfa2f492"
+            ],
+            [
+                "93e3349ea442bdd7"
             ]
         ]
     },
