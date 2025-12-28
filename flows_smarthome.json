@@ -538,10 +538,10 @@
                 "y": 260,
                 "wires": [
                     {
-                        "id": "5e0d8112.7e4fc"
+                        "id": "d672dd5902ab9ae0"
                     },
                     {
-                        "id": "d672dd5902ab9ae0"
+                        "id": "5e0d8112.7e4fc"
                     }
                 ]
             }
@@ -799,35 +799,6 @@
         "out": []
     },
     {
-        "id": "069cfb6e62a4bf1f",
-        "type": "subflow",
-        "name": "Process Simulation",
-        "info": "",
-        "in": [
-            {
-                "x": 37,
-                "y": 103,
-                "wires": [
-                    {
-                        "id": "2f5c66e8a1a8e9fd"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 728.5,
-                "y": 294,
-                "wires": [
-                    {
-                        "id": "ccec47e2cae003de",
-                        "port": 0
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "id": "4764ba70f833e4a9",
         "type": "group",
         "z": "aa0ae7ae.75d228",
@@ -890,7 +861,6 @@
             "bc57e78aaf68965d",
             "2cb600ab1cf6c9f0",
             "df0d0e357f912ecb",
-            "f1188083d10481a8",
             "53b8c66e905a41c3"
         ],
         "x": 124,
@@ -1494,7 +1464,6 @@
             "40891376e4d12769",
             "d37e09db5119549c",
             "8990cd086ea9bbb7",
-            "2fab9b8067e90fc6",
             "3b51d4daf94dd33e",
             "aaccb6aea908e630",
             "7b7668fba961576a",
@@ -1506,9 +1475,9 @@
             "d09ba2c7abff45fc",
             "725c0257fa35396f"
         ],
-        "x": 2134,
+        "x": 2174,
         "y": 319,
-        "w": 992,
+        "w": 952,
         "h": 342
     },
     {
@@ -1696,8 +1665,8 @@
         "nodes": [
             "869095c34955f071"
         ],
-        "x": 74,
-        "y": 1159,
+        "x": 34,
+        "y": 1539,
         "w": 292,
         "h": 82
     },
@@ -1853,7 +1822,7 @@
             "3d3ca528918b2cf8",
             "65244f1a97e864d4"
         ],
-        "x": 464,
+        "x": 1004,
         "y": 1119,
         "w": 642,
         "h": 262
@@ -1927,16 +1896,14 @@
             "230a2b494efecd7d",
             "5215193faea2fd66",
             "bba1756f4addc872",
-            "53e997fa7afcf406",
-            "d4ea77e32be534e6",
-            "62c48071ce1e806d",
             "2bea738a0f41eed4",
-            "bedtime_trigger_link"
+            "bedtime_trigger_link",
+            "e87f7aaffb6f405d"
         ],
         "x": 2324,
-        "y": 739,
-        "w": 752,
-        "h": 282
+        "y": 759,
+        "w": 842,
+        "h": 242
     },
     {
         "id": "86f688737e807f3f",
@@ -1956,8 +1923,8 @@
             "c9bb2a42b8eea219",
             "6e576b9caf9fecf2"
         ],
-        "x": 404,
-        "y": 1419,
+        "x": 104,
+        "y": 1119,
         "w": 892,
         "h": 202
     },
@@ -1998,12 +1965,14 @@
             "93e3349ea442bdd7",
             "ca36feb0e9257681",
             "ec0e1a7b3b4cbacc",
-            "882b25e10c1b9f7b"
+            "882b25e10c1b9f7b",
+            "7b9255326fb794be",
+            "79fa8bdca09df518"
         ],
-        "x": 1614,
-        "y": 1459,
+        "x": 1654,
+        "y": 1099,
         "w": 1462,
-        "h": 322
+        "h": 342
     },
     {
         "id": "6e32bf19c51ed3a4",
@@ -2134,8 +2103,8 @@
         "type": "junction",
         "z": "6df0226504208616",
         "g": "81b3ee2115349953",
-        "x": 2570,
-        "y": 1620,
+        "x": 2610,
+        "y": 1280,
         "wires": [
             [
                 "fb78cb8091c10398",
@@ -2152,8 +2121,8 @@
         "type": "junction",
         "z": "6df0226504208616",
         "g": "81b3ee2115349953",
-        "x": 2850,
-        "y": 1540,
+        "x": 2890,
+        "y": 1200,
         "wires": [
             [
                 "76fcd36e6a30654e"
@@ -2555,39 +2524,10 @@
         "disabled": false
     },
     {
-        "id": "5236c9cbf34a8239",
-        "type": "pushbullet-config",
-        "name": "test"
-    },
-    {
         "id": "5917da18bf053368",
         "type": "yr-config",
         "api": "https://api.met.no/weatherapi/locationforecast/2.0",
         "debug": false
-    },
-    {
-        "id": "ui_page",
-        "type": "ui-page",
-        "name": "Home Climate",
-        "ui": "7f0c45a9432dc256",
-        "path": "/climate",
-        "icon": "thermometer",
-        "layout": "grid",
-        "theme": "theme_default",
-        "order": 2,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "ui_group",
-        "type": "ui-group",
-        "name": "Heat Pump Control",
-        "page": "ui_page",
-        "width": "6",
-        "height": "1",
-        "order": 1,
-        "className": ""
     },
     {
         "id": "a2ca5e419e4f16a4",
@@ -4290,31 +4230,6 @@
         ]
     },
     {
-        "id": "5e0d8112.7e4fc",
-        "type": "traffic",
-        "z": "c15399232bac2ca3",
-        "name": "btn_block",
-        "property_allow": "payload",
-        "filter_allow": "go",
-        "ignore_case_allow": true,
-        "negate_allow": false,
-        "send_allow": false,
-        "property_stop": "payload",
-        "filter_stop": "stop",
-        "ignore_case_stop": true,
-        "negate_stop": false,
-        "send_stop": false,
-        "default_start": true,
-        "differ": false,
-        "x": 220,
-        "y": 240,
-        "wires": [
-            [
-                "vm_area_check"
-            ]
-        ]
-    },
-    {
         "id": "vm_area_check",
         "type": "function",
         "z": "c15399232bac2ca3",
@@ -4326,7 +4241,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
+        "x": 350,
         "y": 280,
         "wires": [
             [
@@ -4690,7 +4605,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 540,
+        "x": 580,
         "y": 280,
         "wires": [
             [
@@ -4865,6 +4780,31 @@
         ]
     },
     {
+        "id": "5e0d8112.7e4fc",
+        "type": "traffic",
+        "z": "c15399232bac2ca3",
+        "name": "btn_block",
+        "property_allow": "payload",
+        "filter_allow": "go",
+        "ignore_case_allow": true,
+        "negate_allow": false,
+        "send_allow": false,
+        "property_stop": "payload",
+        "filter_stop": "stop",
+        "ignore_case_stop": true,
+        "negate_stop": false,
+        "send_stop": false,
+        "default_start": true,
+        "differ": false,
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "vm_area_check"
+            ]
+        ]
+    },
+    {
         "id": "949ef7eeffd33778",
         "type": "delay",
         "z": "deda2575970f5ca9",
@@ -5009,129 +4949,6 @@
         "wires": [
             [],
             []
-        ]
-    },
-    {
-        "id": "f41c45c7e161bc83",
-        "type": "function",
-        "z": "069cfb6e62a4bf1f",
-        "name": "30 sec RC + 20",
-        "func": "// Applies a simple RC low pass filter to incoming payload values\nvar tc = 30*1000;       // time constant in milliseconds\n\nvar lastValue = context.get('lastValue');\nif (typeof lastValue == \"undefined\") lastValue = msg.payload;\nvar lastTime = context.get('lastTime') || null;\nvar now = new Date();\nvar currentValue = msg.payload;\nif (lastTime === null) {\n    // first time through\n    newValue = currentValue;\n} else {\n    var dt = now - lastTime;\n    var newValue;\n    \n    if (dt > 0) {\n        var dtotc = dt / tc;\n        newValue = lastValue * (1 - dtotc) + currentValue * dtotc;\n    } else {\n        // no time has elapsed leave output the same as last time\n        newValue = lastValue;\n    }\n}\ncontext.set('lastValue', newValue);\ncontext.set('lastTime', now);\n\nmsg.payload = newValue + 20;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 626.5,
-        "y": 207,
-        "wires": [
-            [
-                "ccec47e2cae003de"
-            ]
-        ]
-    },
-    {
-        "id": "5b5bfdbe25ea738d",
-        "type": "inject",
-        "z": "069cfb6e62a4bf1f",
-        "name": "Inject -0.2 at start",
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "topic": "",
-        "payload": "-0.2",
-        "payloadType": "num",
-        "x": 134.5,
-        "y": 30,
-        "wires": [
-            [
-                "2f5c66e8a1a8e9fd"
-            ]
-        ]
-    },
-    {
-        "id": "849dbdb2cc6eab79",
-        "type": "function",
-        "z": "069cfb6e62a4bf1f",
-        "name": "10 sec RC",
-        "func": "// Applies a simple RC low pass filter to incoming payload values\nvar tc = 10*1000;       // time constant in milliseconds\n\nvar lastValue = context.get('lastValue');\nif (typeof lastValue == \"undefined\") lastValue = msg.payload;\nvar lastTime = context.get('lastTime') || null;\nvar now = new Date();\nvar currentValue = msg.payload;\nif (lastTime === null) {\n    // first time through\n    newValue = currentValue;\n} else {\n    var dt = now - lastTime;\n    var newValue;\n    \n    if (dt > 0) {\n        var dtotc = dt / tc;\n        newValue = lastValue * (1 - dtotc) + currentValue * dtotc;\n    } else {\n        // no time has elapsed leave output the same as last time\n        newValue = lastValue;\n    }\n}\ncontext.set('lastValue', newValue);\ncontext.set('lastTime', now);\n\nmsg.payload = newValue;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 451,
-        "y": 207,
-        "wires": [
-            [
-                "f41c45c7e161bc83"
-            ]
-        ]
-    },
-    {
-        "id": "2f5c66e8a1a8e9fd",
-        "type": "delay",
-        "z": "069cfb6e62a4bf1f",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 268,
-        "y": 104,
-        "wires": [
-            [
-                "c46a76bd655c63be"
-            ]
-        ]
-    },
-    {
-        "id": "bde2a8a0b5309bb1",
-        "type": "function",
-        "z": "069cfb6e62a4bf1f",
-        "name": "2 msg transport delay",
-        "func": "// stores messages in a fifo until the specified number have been received, \n// then releases them as new messages are received.\n// during the filling phase the earliest message is passed on each time \n// a message is received, but it is also left in the fifo\nvar fifoMaxLength = 2;\nvar fifo = context.get('fifo') || [];\n// push the new message onto the top of the array, messages are shifted down and\n// drop off the front\nvar length = fifo.push(msg);  // returns new length\nif (length > fifoMaxLength) {\n    newMsg = fifo.shift();\n} else {\n    // not full yet, make a copy of the msg and pass it on\n    var newMsg = JSON.parse(JSON.stringify(fifo[0]));\n}\ncontext.set('fifo', fifo);\nreturn newMsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 258,
-        "y": 208,
-        "wires": [
-            [
-                "849dbdb2cc6eab79"
-            ]
-        ]
-    },
-    {
-        "id": "ccec47e2cae003de",
-        "type": "function",
-        "z": "069cfb6e62a4bf1f",
-        "name": "Clear all except payload",
-        "func": "msg2 = {payload: msg.payload};\nreturn msg2;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 545,
-        "y": 293,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c46a76bd655c63be",
-        "type": "range",
-        "z": "069cfb6e62a4bf1f",
-        "minin": "0",
-        "maxin": "1",
-        "minout": "0",
-        "maxout": "100",
-        "action": "scale",
-        "round": false,
-        "name": "",
-        "x": 87,
-        "y": 208,
-        "wires": [
-            [
-                "bde2a8a0b5309bb1"
-            ]
         ]
     },
     {
@@ -7377,36 +7194,6 @@
         "wires": [
             [
                 "183c95c7745f2ea4"
-            ]
-        ]
-    },
-    {
-        "id": "f1188083d10481a8",
-        "type": "inject",
-        "z": "aa0ae7ae.75d228",
-        "g": "172b4292bafc68a7",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 630,
-        "y": 1100,
-        "wires": [
-            [
-                "df0d0e357f912ecb"
             ]
         ]
     },
@@ -10209,7 +9996,7 @@
                 "output": "onchange",
                 "onstart": true,
                 "payload": [
-                    "__complete__"
+                    "presence"
                 ]
             }
         ],
@@ -12027,7 +11814,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 360,
         "y": 240,
         "wires": [
             [
@@ -12045,7 +11832,7 @@
         "links": [
             "ca84a21742d3e0cd"
         ],
-        "x": 255,
+        "x": 165,
         "y": 240,
         "wires": [
             [
@@ -12101,7 +11888,9 @@
         "y": 440,
         "wires": [
             [
-                "12daafe786835f3a"
+                "12daafe786835f3a",
+                "6b903f4ba071c52b",
+                "c91ca09967cda70e"
             ]
         ]
     },
@@ -12183,8 +11972,8 @@
         "op2": "false",
         "op1type": "bool",
         "op2type": "bool",
-        "duration": "6",
-        "extend": true,
+        "duration": "3",
+        "extend": false,
         "overrideDelay": false,
         "units": "min",
         "reset": "",
@@ -12670,8 +12459,8 @@
         "type": "function",
         "z": "a9a601907d96eb09",
         "name": "Format Protection Status",
-        "func": "const doorOpen = flow.get('door_open') || false;\nconst fp2Presence = flow.get('fp2_presence') || false;\nconst movement = flow.get('movement') || false;\nconst lastActivityTime = flow.get('lastActivityTime') || 0;\nconst timeSinceActivity = Date.now() - lastActivityTime;\nconst ACTIVITY_TIMEOUT = 5 * 60 * 1000;\n\n// Check protection rules\nif (!doorOpen && timeSinceActivity < ACTIVITY_TIMEOUT) {\n    msg.payload = \"🟡 PROTECTED: Recent activity\";\n} else if (!doorOpen && fp2Presence) {\n    msg.payload = \"🟡 PROTECTED: FP2 active\";\n} else if (movement) {\n    msg.payload = \"🔵 PROTECTED: Motion detected\";\n} else {\n    const minIdle = Math.floor(timeSinceActivity / 60000);\n    msg.payload = `🟢 Safe to turn off (${minIdle}m idle)`;\n}\n\nreturn msg;",
-        "outputs": 1,
+        "func": "const doorOpen = flow.get('door_open') || false;\nconst fp2Presence = flow.get('fp2_presence') || false;\nconst movement = flow.get('movement') || false;\nconst lastActivityTime = flow.get('lastActivityTime') || 0;\nconst timeSinceActivity = Date.now() - lastActivityTime;\nconst ACTIVITY_TIMEOUT = 5 * 60 * 1000;\n\n// Check protection rules\nif (!doorOpen && timeSinceActivity < ACTIVITY_TIMEOUT) {\n    msg.payload = \"🟡 PROTECTED: Recent activity\";\n} else if (fp2Presence && movement) {\n    msg.payload = \"🔴 PROTECTED: FP2 + Motion active\";\n} else if (fp2Presence) {\n    msg.payload = \"🟡 PROTECTED: FP2 active\";\n} else if (movement) {\n    msg.payload = \"🔵 PROTECTED: Motion detected\";\n} else {\n    const minIdle = Math.floor(timeSinceActivity / 60000);\n    msg.payload = `🟢 Safe to turn off (${minIdle}m idle)`;\n    let data = {};\n    data.payload = false;\n    node.send([null, data]);\n}\n\nreturn msg;",
+        "outputs": 2,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
@@ -12682,6 +12471,9 @@
         "wires": [
             [
                 "ba_ui_protection_display"
+            ],
+            [
+                "c91ca09967cda70e"
             ]
         ]
     },
@@ -12702,7 +12494,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 910,
+        "x": 1010,
         "y": 680,
         "wires": []
     },
@@ -12795,7 +12587,8 @@
         "wires": [
             [],
             [
-                "12daafe786835f3a"
+                "12daafe786835f3a",
+                "6b903f4ba071c52b"
             ]
         ]
     },
@@ -13095,13 +12888,13 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "false",
+        "payload": "true",
         "payloadType": "bool",
-        "x": 350,
-        "y": 80,
+        "x": 110,
+        "y": 100,
         "wires": [
             [
-                "0e5ecc0cc6d5191d"
+                "b590b37dc0fbc282"
             ]
         ]
     },
@@ -13178,6 +12971,47 @@
         "wires": [
             [
                 "5ae3babe85bed457"
+            ]
+        ]
+    },
+    {
+        "id": "6b903f4ba071c52b",
+        "type": "debug",
+        "z": "a9a601907d96eb09",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "c91ca09967cda70e",
+        "type": "trigger",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 950,
+        "y": 360,
+        "wires": [
+            [
+                "8c0c34a86ebdc4bb"
             ]
         ]
     },
@@ -16633,7 +16467,8 @@
         "links": [
             "a4c4757f465e4957",
             "1b3f70fcc9f4ecb3",
-            "a205c33069f74780"
+            "a205c33069f74780",
+            "5215193faea2fd66"
         ],
         "x": 925,
         "y": 300,
@@ -16962,8 +16797,8 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 220,
-        "y": 1200,
+        "x": 180,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -17165,7 +17000,8 @@
         "name": "link in 13",
         "links": [
             "a0261e00a4ebdb5a",
-            "be460bbbe929129a"
+            "be460bbbe929129a",
+            "7b9255326fb794be"
         ],
         "x": 2235,
         "y": 380,
@@ -17182,8 +17018,8 @@
         "g": "a1794e13fa3182f6",
         "name": "Turn OFF",
         "links": [
-            "b05a48bd1b6d3165",
-            "a35b67a3c28e4b2c"
+            "a35b67a3c28e4b2c",
+            "79fa8bdca09df518"
         ],
         "x": 2315,
         "y": 580,
@@ -17470,9 +17306,7 @@
         "name": "link in 17",
         "links": [
             "e9a5c977e13d6b89",
-            "7390da7f15be3f75",
-            "53b6e2c165133960",
-            "913b5253d73d993c"
+            "7390da7f15be3f75"
         ],
         "x": 505,
         "y": 720,
@@ -17534,7 +17368,7 @@
         "links": [
             "4d769e70a92d266c"
         ],
-        "x": 525,
+        "x": 1065,
         "y": 1180,
         "wires": [
             [
@@ -17729,7 +17563,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 650,
+        "x": 1190,
         "y": 1180,
         "wires": [
             [
@@ -17751,7 +17585,7 @@
         "links": [
             "bba1756f4addc872"
         ],
-        "x": 1065,
+        "x": 1605,
         "y": 1160,
         "wires": []
     },
@@ -17764,7 +17598,7 @@
         "links": [
             "c4c2684c239161a6"
         ],
-        "x": 505,
+        "x": 1045,
         "y": 1280,
         "wires": [
             [
@@ -17783,7 +17617,7 @@
         "links": [
             "a4c4757f465e4957"
         ],
-        "x": 1055,
+        "x": 1595,
         "y": 1280,
         "wires": []
     },
@@ -17797,7 +17631,7 @@
         "links": [
             "a4c4757f465e4957"
         ],
-        "x": 1055,
+        "x": 1595,
         "y": 1240,
         "wires": []
     },
@@ -17817,7 +17651,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 890,
+        "x": 1430,
         "y": 1280,
         "wires": [
             [
@@ -17841,7 +17675,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 600,
+        "x": 1140,
         "y": 1280,
         "wires": [
             [
@@ -17869,7 +17703,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
+        "x": 1440,
         "y": 1200,
         "wires": [
             []
@@ -17893,7 +17727,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 720,
+        "x": 1260,
         "y": 1240,
         "wires": [
             [
@@ -17922,65 +17756,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
+        "x": 1150,
         "y": 1340,
         "wires": [
             [
                 "2b0494dc83f08075"
-            ]
-        ]
-    },
-    {
-        "id": "d4ea77e32be534e6",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "bedTimeMode",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2740,
-        "y": 980,
-        "wires": [
-            [
-                "62c48071ce1e806d"
-            ]
-        ]
-    },
-    {
-        "id": "53e997fa7afcf406",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "Bedtime",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "00 04 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 2540,
-        "y": 980,
-        "wires": [
-            [
-                "d4ea77e32be534e6"
             ]
         ]
     },
@@ -18059,7 +17839,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
+        "x": 1500,
         "y": 1340,
         "wires": [
             [
@@ -18080,8 +17860,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2070,
-        "y": 1740,
+        "x": 2110,
+        "y": 1400,
         "wires": [
             []
         ]
@@ -18104,8 +17884,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1740,
-        "y": 1740,
+        "x": 1780,
+        "y": 1400,
         "wires": [
             [
                 "ec0e1a7b3b4cbacc"
@@ -18125,8 +17905,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2060,
-        "y": 1700,
+        "x": 2100,
+        "y": 1360,
         "wires": [
             []
         ]
@@ -18442,7 +18222,7 @@
         "y": 800,
         "wires": [
             [
-                "2bea738a0f41eed4"
+                "e87f7aaffb6f405d"
             ]
         ]
     },
@@ -18575,8 +18355,8 @@
                 "tot": "bool"
             }
         ],
-        "x": 3240,
-        "y": 1000,
+        "x": 2660,
+        "y": 960,
         "wires": [
             []
         ]
@@ -18686,14 +18466,14 @@
         "g": "ad60efdef8e2798a",
         "name": "link in 5",
         "links": [
-            "916bd70aa0a07205"
+            "916bd70aa0a07205",
+            "5346ecce7ddb6882"
         ],
-        "x": 2805,
-        "y": 1020,
+        "x": 2445,
+        "y": 960,
         "wires": [
             [
-                "230a2b494efecd7d",
-                "62c48071ce1e806d"
+                "230a2b494efecd7d"
             ]
         ]
     },
@@ -18711,35 +18491,6 @@
         "wires": [
             [
                 "535c8e7c992bae6f"
-            ]
-        ]
-    },
-    {
-        "id": "62c48071ce1e806d",
-        "type": "change",
-        "z": "6df0226504208616",
-        "g": "ad60efdef8e2798a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2950,
-        "y": 980,
-        "wires": [
-            [
-                "c04a717471583b69",
-                "6bc69d4b02521386"
             ]
         ]
     },
@@ -18763,7 +18514,8 @@
         "y": 420,
         "wires": [
             [
-                "723475d00b7a2827"
+                "723475d00b7a2827",
+                "1143fa19d1277481"
             ]
         ]
     },
@@ -18778,36 +18530,6 @@
         "x": 985,
         "y": 440,
         "wires": []
-    },
-    {
-        "id": "2fab9b8067e90fc6",
-        "type": "inject",
-        "z": "6df0226504208616",
-        "g": "a1794e13fa3182f6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 2240,
-        "y": 620,
-        "wires": [
-            [
-                "40891376e4d12769"
-            ]
-        ]
     },
     {
         "id": "d103c995936b4652",
@@ -19016,8 +18738,8 @@
         "longitude": "5.7629",
         "forecastType": "compact",
         "name": "",
-        "x": 710,
-        "y": 1520,
+        "x": 410,
+        "y": 1220,
         "wires": [
             [
                 "a4bf3e8c7ba415e5",
@@ -19048,8 +18770,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 520,
-        "y": 1500,
+        "x": 220,
+        "y": 1200,
         "wires": [
             [
                 "32c0b602d6016a84"
@@ -19069,8 +18791,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
-        "y": 1540,
+        "x": 550,
+        "y": 1240,
         "wires": []
     },
     {
@@ -19093,8 +18815,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
-        "y": 1460,
+        "x": 600,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -19113,8 +18835,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
-        "y": 1580,
+        "x": 750,
+        "y": 1280,
         "wires": [
             [
                 "6e576b9caf9fecf2"
@@ -19134,8 +18856,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 1580,
+        "x": 890,
+        "y": 1280,
         "wires": []
     },
     {
@@ -19221,9 +18943,7 @@
         "z": "6df0226504208616",
         "g": "a1794e13fa3182f6",
         "name": "link in 10",
-        "links": [
-            "53b6e2c165133960"
-        ],
+        "links": [],
         "x": 2875,
         "y": 520,
         "wires": [
@@ -19385,8 +19105,8 @@
         "endTime": "05:00",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 610,
-        "y": 340,
+        "x": 630,
+        "y": 320,
         "wires": [
             [],
             [
@@ -19452,7 +19172,7 @@
         "z": "6df0226504208616",
         "g": "ad60efdef8e2798a",
         "name": "",
-        "x": 2780,
+        "x": 2830,
         "y": 800,
         "wires": [
             [
@@ -19504,8 +19224,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1980,
-        "y": 1660,
+        "x": 2020,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -19519,8 +19239,8 @@
         "links": [
             "5346ecce7ddb6882"
         ],
-        "x": 1795,
-        "y": 1660,
+        "x": 1835,
+        "y": 1320,
         "wires": [
             [
                 "16c24ed3a979e44d",
@@ -19548,8 +19268,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1900,
-        "y": 1600,
+        "x": 1940,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -19567,8 +19287,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2440,
-        "y": 1520,
+        "x": 2480,
+        "y": 1180,
         "wires": [
             [
                 "7e87a39c51f83eb3"
@@ -19588,8 +19308,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2460,
-        "y": 1560,
+        "x": 2500,
+        "y": 1220,
         "wires": [
             [
                 "28e080f48586ab28"
@@ -19606,8 +19326,8 @@
             "4b93c7c7130630d3",
             "bedtime_trigger_link"
         ],
-        "x": 1655,
-        "y": 1560,
+        "x": 1695,
+        "y": 1220,
         "wires": [
             [
                 "2a1363e2ac53466c"
@@ -19625,8 +19345,8 @@
             "1ed32b866d4461c8",
             "3b51d4daf94dd33e"
         ],
-        "x": 3035,
-        "y": 1680,
+        "x": 3075,
+        "y": 1340,
         "wires": []
     },
     {
@@ -19650,8 +19370,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 2940,
-        "y": 1640,
+        "x": 2980,
+        "y": 1300,
         "wires": [
             [
                 "a35b67a3c28e4b2c"
@@ -19671,8 +19391,8 @@
         "links": [
             "8990cd086ea9bbb7"
         ],
-        "x": 3025,
-        "y": 1580,
+        "x": 3065,
+        "y": 1240,
         "wires": []
     },
     {
@@ -19687,8 +19407,8 @@
         "endTime": "08:30",
         "startOffset": 0,
         "endOffset": 0,
-        "x": 1960,
-        "y": 1560,
+        "x": 2000,
+        "y": 1220,
         "wires": [
             [
                 "c0c1ab8719682562"
@@ -19704,21 +19424,24 @@
         "z": "6df0226504208616",
         "g": "81b3ee2115349953",
         "name": "Bedtime Controller",
-        "func": "// ═══════════════════════════════════════════════════════════════════════\n// UNIFIED BEDTIME CONTROLLER\n// Handles all bedtime mode logic in one place\n// Output 1: Continue to normal temp control (bedtime inactive OR bedtime complete)\n// Output 2: Bedtime cooling active - send direct to heat pump\n// ═══════════════════════════════════════════════════════════════════════\n\nconst bedTimeMode = flow.get('bedTimeMode') || false;\nconst downstairsTemp = Number(flow.get('downstairsCurrentTemp')) || 20;\nconst currentHour = new Date().getHours();\nconst bedtimeTries = flow.get('bedtimeTries') || 0;\n\n// Bedtime configuration\nconst BEDTIME_TARGET_TEMP = 19;        // Goal: downstairs at 19°C for sleeping\nconst BEDTIME_COOLING_TEMP = 16;       // Aggressive cooling setpoint\nconst BEDTIME_FAN = 'medium';          // Not too loud for sleeping\nconst BEDTIME_SWING = 'fixedBottom';   // Always blow down for bedroom comfort\nconst MAX_BEDTIME_CYCLES = 6;          // Safety: max 60 min of bedtime cooling\n\n// Weekend detection\nconst isWeekend = global.get('isWeekend') || false;\nconst isWeekendMorning = isWeekend && currentHour >= 6 && currentHour < 10;\n\n// ─────────────────────────────────────────────────────────────────────\n// NOT IN BEDTIME MODE - pass through to normal control\n// ─────────────────────────────────────────────────────────────────────\nif (!bedTimeMode) {\n    // Add weekend quiet hours info for downstream processing\n    if (isWeekendMorning) {\n        msg.quietHours = { active: true, maxFan: 'medium', reason: 'Weekend quiet hours' };\n    }\n    node.status({fill: 'green', shape: 'ring', text: 'Normal mode'});\n    return [msg, null];\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// BEDTIME MODE ACTIVE\n// ─────────────────────────────────────────────────────────────────────\n\n// Safety check: too many cycles?\nif (bedtimeTries >= MAX_BEDTIME_CYCLES) {\n    flow.set('bedTimeMode', false);\n    flow.set('tempOn', true);\n    node.status({fill: 'yellow', shape: 'ring', text: 'Bedtime timeout - resuming auto'});\n    node.warn('Bedtime mode timed out after ' + MAX_BEDTIME_CYCLES + ' cycles');\n    return [msg, null];\n}\n\n// Check if we've reached bedtime goal\nif (downstairsTemp <= BEDTIME_TARGET_TEMP) {\n    // Goal reached! Reset bedtime mode\n    flow.set('bedTimeMode', false);\n    flow.set('tempOn', true);\n    \n    node.status({fill: 'green', shape: 'dot', text: 'Bedtime complete: ' + downstairsTemp.toFixed(1) + '°C'});\n    \n    // Send notification that bedtime is complete\n    const completeMsg = {\n        payload: 'Bedtime cooling complete. Downstairs: ' + downstairsTemp.toFixed(1) + '°C',\n        bedtimeComplete: true\n    };\n    \n    return [msg, completeMsg]; // Resume normal + notify\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// STILL COOLING - enforce bedtime settings\n// ─────────────────────────────────────────────────────────────────────\nflow.set('bedtimeTries', bedtimeTries + 1);\n\n// Set bedtime cooling parameters\nflow.set('mode', 'cool');\nflow.set('swing', BEDTIME_SWING);\nflow.set('correctedTemp', BEDTIME_COOLING_TEMP);\nflow.set('fanlevel', BEDTIME_FAN);\nflow.set('shouldTurnOn', true);\nflow.set('controlReason', 'Bedtime cooling: ' + downstairsTemp.toFixed(1) + '°C → ' + BEDTIME_TARGET_TEMP + '°C');\n\nconst bedtimeMsg = {\n    payload: {\n        mode: 'cool',\n        fanLevel: BEDTIME_FAN,\n        heatPumpTemp: BEDTIME_COOLING_TEMP,\n        swing: BEDTIME_SWING,\n        shouldTurnOn: true,\n        reason: 'Bedtime cooling cycle ' + (bedtimeTries + 1) + '/' + MAX_BEDTIME_CYCLES,\n        downstairsTemp: downstairsTemp,\n        targetTemp: BEDTIME_TARGET_TEMP\n    },\n    on: true\n};\n\nnode.status({fill: 'blue', shape: 'dot', text: 'Bedtime: ' + downstairsTemp.toFixed(1) + '°C → ' + BEDTIME_TARGET_TEMP + '°C [' + (bedtimeTries + 1) + '/' + MAX_BEDTIME_CYCLES + ']'});\n\nreturn [null, bedtimeMsg]; // Output 2: direct to heat pump",
-        "outputs": 2,
+        "func": "// ═══════════════════════════════════════════════════════════════════════\n// UNIFIED BEDTIME CONTROLLER\n// Handles all bedtime mode logic in one place\n// Output 1: Continue to normal temp control (bedtime inactive OR bedtime complete)\n// Output 2: Bedtime cooling active - send direct to heat pump\n// ═══════════════════════════════════════════════════════════════════════\n\nconst bedTimeMode = flow.get('bedTimeMode') || false;\nconst downstairsTemp = Number(flow.get('downstairsCurrentTemp')) || 20;\nconst currentHour = new Date().getHours();\nconst bedtimeTries = flow.get('bedtimeTries') || 0;\n\n// Bedtime configuration\nconst BEDTIME_TARGET_TEMP = 19;        // Goal: downstairs at 19°C for sleeping\nconst BEDTIME_COOLING_TEMP = 16;       // Aggressive cooling setpoint\nconst BEDTIME_FAN = 'medium';          // Not too loud for sleeping\nconst BEDTIME_SWING = 'fixedBottom';   // Always blow down for bedroom comfort\nconst MAX_BEDTIME_CYCLES = 6;          // Safety: max 60 min of bedtime cooling\n\n// Weekend detection\nconst isWeekend = global.get('isWeekend') || false;\nconst isWeekendMorning = isWeekend && currentHour >= 6 && currentHour < 10;\n\n// ─────────────────────────────────────────────────────────────────────\n// NOT IN BEDTIME MODE - pass through to normal control\n// ─────────────────────────────────────────────────────────────────────\nif (!bedTimeMode) {\n    // Add weekend quiet hours info for downstream processing\n    if (isWeekendMorning) {\n        msg.quietHours = { active: true, maxFan: 'medium', reason: 'Weekend quiet hours' };\n    }\n    node.status({fill: 'green', shape: 'ring', text: 'Normal mode'});\n    return [msg, null];\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// BEDTIME MODE ACTIVE\n// ─────────────────────────────────────────────────────────────────────\n\n// Safety check: too many cycles?\nif (bedtimeTries >= MAX_BEDTIME_CYCLES) {\n    flow.set('bedTimeMode', false);\n    flow.set('tempOn', true);\n    node.status({fill: 'yellow', shape: 'ring', text: 'Bedtime timeout - resuming auto'});\n    node.warn('Bedtime mode timed out after ' + MAX_BEDTIME_CYCLES + ' cycles');\n    return [msg, null];\n}\n\n// Check if we've reached bedtime goal\nif (downstairsTemp <= BEDTIME_TARGET_TEMP) {\n    // Goal reached! Reset bedtime mode\n    flow.set('bedTimeMode', false);\n    flow.set('tempOn', false);\n    \n    node.status({fill: 'green', shape: 'dot', text: 'Bedtime complete: ' + downstairsTemp.toFixed(1) + '°C'});\n    \n    // Send notification that bedtime is complete\n    const completeMsg = {\n        payload: 'Bedtime cooling complete. Downstairs: ' + downstairsTemp.toFixed(1) + '°C',\n        bedtimeComplete: true\n    };\n    \n    return [null, null, completeMsg]; // Resume normal + notify\n}\n\n// ─────────────────────────────────────────────────────────────────────\n// STILL COOLING - enforce bedtime settings\n// ─────────────────────────────────────────────────────────────────────\nflow.set('bedtimeTries', bedtimeTries + 1);\n\n// Set bedtime cooling parameters\nflow.set('mode', 'cool');\nflow.set('swing', BEDTIME_SWING);\nflow.set('correctedTemp', BEDTIME_COOLING_TEMP);\nflow.set('fanlevel', BEDTIME_FAN);\nflow.set('shouldTurnOn', true);\nflow.set('controlReason', 'Bedtime cooling: ' + downstairsTemp.toFixed(1) + '°C → ' + BEDTIME_TARGET_TEMP + '°C');\n\nconst bedtimeMsg = {\n    payload: {\n        mode: 'cool',\n        fanLevel: BEDTIME_FAN,\n        heatPumpTemp: BEDTIME_COOLING_TEMP,\n        swing: BEDTIME_SWING,\n        shouldTurnOn: true,\n        reason: 'Bedtime cooling cycle ' + (bedtimeTries + 1) + '/' + MAX_BEDTIME_CYCLES,\n        downstairsTemp: downstairsTemp,\n        targetTemp: BEDTIME_TARGET_TEMP\n    },\n    on: true\n};\n\nnode.status({fill: 'blue', shape: 'dot', text: 'Bedtime: ' + downstairsTemp.toFixed(1) + '°C → ' + BEDTIME_TARGET_TEMP + '°C [' + (bedtimeTries + 1) + '/' + MAX_BEDTIME_CYCLES + ']'});\n\nreturn [null, bedtimeMsg]; // Output 2: direct to heat pump",
+        "outputs": 3,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1770,
-        "y": 1560,
+        "x": 1810,
+        "y": 1220,
         "wires": [
             [
                 "d0f6e607bfa2f492"
             ],
             [
-                "93e3349ea442bdd7"
+                "7b9255326fb794be"
+            ],
+            [
+                "79fa8bdca09df518"
             ]
         ]
     },
@@ -19735,8 +19458,8 @@
         "septopics": false,
         "property": "payload.mode",
         "topi": "topic",
-        "x": 2700,
-        "y": 1540,
+        "x": 2740,
+        "y": 1200,
         "wires": [
             [
                 "93e3349ea442bdd7"
@@ -19756,8 +19479,8 @@
         "septopics": false,
         "property": "payload.fanLevel",
         "topi": "topic",
-        "x": 2710,
-        "y": 1580,
+        "x": 2750,
+        "y": 1240,
         "wires": [
             [
                 "93e3349ea442bdd7"
@@ -19777,8 +19500,8 @@
         "septopics": false,
         "property": "payload.heatPumpTemp",
         "topi": "topic",
-        "x": 2730,
-        "y": 1620,
+        "x": 2770,
+        "y": 1280,
         "wires": [
             [
                 "93e3349ea442bdd7"
@@ -19798,8 +19521,8 @@
         "septopics": false,
         "property": "payload.swing",
         "topi": "topic",
-        "x": 2700,
-        "y": 1660,
+        "x": 2740,
+        "y": 1320,
         "wires": [
             [
                 "93e3349ea442bdd7"
@@ -19819,8 +19542,8 @@
         "septopics": false,
         "property": "payload.shouldTurnOn",
         "topi": "topic",
-        "x": 2730,
-        "y": 1700,
+        "x": 2770,
+        "y": 1360,
         "wires": [
             [
                 "93e3349ea442bdd7"
@@ -19840,8 +19563,8 @@
         "septopics": false,
         "property": "payload.desiredTemp",
         "topi": "topic",
-        "x": 2720,
-        "y": 1740,
+        "x": 2760,
+        "y": 1400,
         "wires": [
             [
                 "93e3349ea442bdd7"
@@ -19857,8 +19580,8 @@
         "links": [
             "916bd70aa0a07205"
         ],
-        "x": 2265,
-        "y": 1680,
+        "x": 2305,
+        "y": 1340,
         "wires": [
             [
                 "67be3e8f4b62aa68"
@@ -19885,8 +19608,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2450,
-        "y": 1680,
+        "x": 2490,
+        "y": 1340,
         "wires": [
             [
                 "28e080f48586ab28"
@@ -19913,8 +19636,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2100,
-        "y": 1500,
+        "x": 2140,
+        "y": 1160,
         "wires": [
             [
                 "647e34b2866d723e"
@@ -19941,8 +19664,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2160,
-        "y": 1540,
+        "x": 2200,
+        "y": 1200,
         "wires": [
             [
                 "647e34b2866d723e"
@@ -19971,8 +19694,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2310,
-        "y": 1640,
+        "x": 2350,
+        "y": 1300,
         "wires": [
             [
                 "67be3e8f4b62aa68"
@@ -20035,6 +19758,58 @@
             [],
             [
                 "b893cefa0ddb6da8"
+            ]
+        ]
+    },
+    {
+        "id": "7b9255326fb794be",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "link out 21",
+        "mode": "link",
+        "links": [
+            "1ed32b866d4461c8"
+        ],
+        "x": 1945,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "79fa8bdca09df518",
+        "type": "link out",
+        "z": "6df0226504208616",
+        "g": "81b3ee2115349953",
+        "name": "link out 10",
+        "mode": "link",
+        "links": [
+            "8990cd086ea9bbb7"
+        ],
+        "x": 1965,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "e87f7aaffb6f405d",
+        "type": "switch",
+        "z": "6df0226504208616",
+        "g": "ad60efdef8e2798a",
+        "name": "",
+        "property": "isStandBy",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 2670,
+        "y": 800,
+        "wires": [
+            [
+                "2bea738a0f41eed4"
             ]
         ]
     },
