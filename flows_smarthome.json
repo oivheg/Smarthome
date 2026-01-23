@@ -21531,9 +21531,7 @@
         "type": "link in",
         "z": "19a61e2a.75f152",
         "name": "Remeber Garbage",
-        "links": [
-            "d7ad25e5346ae60c"
-        ],
+        "links": [],
         "x": 195,
         "y": 960,
         "wires": [
@@ -25662,7 +25660,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1780,
+        "x": 1830,
         "y": 200,
         "wires": [
             [
@@ -25709,7 +25707,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1810,
+        "x": 1860,
         "y": 240,
         "wires": [
             [
@@ -25756,8 +25754,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1820,
-        "y": 340,
+        "x": 1830,
+        "y": 320,
         "wires": [
             [
                 "a1360aa94e6f4fb6"
@@ -25803,39 +25801,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1780,
+        "x": 1830,
         "y": 280,
         "wires": [
             [
                 "a1360aa94e6f4fb6"
             ]
         ]
-    },
-    {
-        "id": "1e99da1c3a5ae1c2",
-        "type": "link out",
-        "z": "5f6e89b4b8794e08",
-        "name": "to batcher",
-        "mode": "link",
-        "links": [
-            "a1360aa94e6f4fb6"
-        ],
-        "x": 2030,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "3b107d2e2c2c601c",
-        "type": "link out",
-        "z": "5f6e89b4b8794e08",
-        "name": "to batcher",
-        "mode": "link",
-        "links": [
-            "a1360aa94e6f4fb6"
-        ],
-        "x": 2080,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "2b89b624ac60ea94",
@@ -25858,6 +25830,7 @@
         "id": "40f942f5d83d58fa",
         "type": "ui-button",
         "z": "5f6e89b4b8794e08",
+        "d": true,
         "g": "f71cc26218871cfd",
         "group": "f9c985920afe1003",
         "name": "BEDTIME COOL",
@@ -25895,6 +25868,7 @@
         "id": "05655572c95c865b",
         "type": "switch",
         "z": "5f6e89b4b8794e08",
+        "d": true,
         "g": "f71cc26218871cfd",
         "name": "Only if HOME",
         "property": "Mode",
@@ -25921,6 +25895,7 @@
         "id": "02b52a19fb9a94a8",
         "type": "inject",
         "z": "5f6e89b4b8794e08",
+        "d": true,
         "g": "f71cc26218871cfd",
         "name": "Bedtime (20:31 every day)",
         "props": [
@@ -25947,6 +25922,7 @@
         "id": "88b2a7e6a183531d",
         "type": "change",
         "z": "5f6e89b4b8794e08",
+        "d": true,
         "g": "f71cc26218871cfd",
         "name": "Set Bedtime Flags (block auto)",
         "rules": [
@@ -25977,6 +25953,7 @@
         "id": "e649ec85d54ffc64",
         "type": "change",
         "z": "5f6e89b4b8794e08",
+        "d": true,
         "g": "f71cc26218871cfd",
         "name": "Reset Bedtime Flags (resume auto)",
         "rules": [
@@ -25998,6 +25975,7 @@
         "id": "79507ddcefcbb384",
         "type": "link in",
         "z": "5f6e89b4b8794e08",
+        "d": true,
         "g": "f71cc26218871cfd",
         "name": "link in 7",
         "links": [
@@ -26016,6 +25994,7 @@
         "id": "f40935489ff9f776",
         "type": "link in",
         "z": "5f6e89b4b8794e08",
+        "d": true,
         "g": "f71cc26218871cfd",
         "name": "link in 8",
         "links": [
@@ -26033,6 +26012,7 @@
         "id": "1eed1292708f5cdc",
         "type": "subflow:05933d2d8abb4be7",
         "z": "5f6e89b4b8794e08",
+        "d": true,
         "g": "f71cc26218871cfd",
         "name": "",
         "x": 610,
@@ -26760,14 +26740,14 @@
             }
         ],
         "repeat": "",
-        "crontab": "58 05 * * *",
-        "once": false,
+        "crontab": "57 05 * * *",
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
         "x": 160,
-        "y": 600,
+        "y": 700,
         "wires": [
             [
                 "e3586fc03b33a4af",
@@ -26794,6 +26774,7 @@
         "id": "ce73bb0b0b9d3fe1",
         "type": "link out",
         "z": "5f6e89b4b8794e08",
+        "d": true,
         "g": "f71cc26218871cfd",
         "name": "link out 3",
         "mode": "link",
@@ -27694,7 +27675,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1280,
+        "x": 1160,
         "y": 460,
         "wires": [
             [
