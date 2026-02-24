@@ -923,8 +923,8 @@
             "d3afa1ea39895105",
             "8360c95b413918e1"
         ],
-        "x": 144,
-        "y": 479,
+        "x": 124,
+        "y": 519,
         "w": 622,
         "h": 142
     },
@@ -1749,7 +1749,10 @@
             "cdbf9d6db77f2f7a",
             "96bac76f7d25daf2",
             "9c3d3df273b6b28b",
-            "70b91a949e1a9b23"
+            "70b91a949e1a9b23",
+            "9e81447c3110f1b6",
+            "4be2606f81d19780",
+            "3de327782513bde4"
         ],
         "x": 714,
         "y": -1,
@@ -5783,6 +5786,36 @@
                 "name": "LightTreshold",
                 "value": "150",
                 "type": "num"
+            },
+            {
+                "name": "delay",
+                "value": "5",
+                "type": "num"
+            },
+            {
+                "name": "useTime",
+                "value": "true",
+                "type": "bool"
+            },
+            {
+                "name": "startTime",
+                "value": "8:00",
+                "type": "str"
+            },
+            {
+                "name": "endTime",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "name": "startTimeWeekend",
+                "value": "8:00",
+                "type": "str"
+            },
+            {
+                "name": "endTimeWeekend",
+                "value": "22:00",
+                "type": "str"
             }
         ],
         "x": 1190,
@@ -6145,8 +6178,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 520,
+        "x": 540,
+        "y": 560,
         "wires": [
             [
                 "d3afa1ea39895105"
@@ -6176,8 +6209,8 @@
                 "type": "num"
             }
         ],
-        "x": 330,
-        "y": 520,
+        "x": 310,
+        "y": 560,
         "wires": [
             [
                 "28f356670a5a6dc9"
@@ -6193,8 +6226,8 @@
         "links": [
             "b526ea173bec8f67"
         ],
-        "x": 185,
-        "y": 520,
+        "x": 165,
+        "y": 560,
         "wires": [
             [
                 "8360c95b413918e1"
@@ -6211,8 +6244,8 @@
         "links": [
             "e8a10173e53f4a16"
         ],
-        "x": 725,
-        "y": 520,
+        "x": 705,
+        "y": 560,
         "wires": []
     },
     {
@@ -6235,8 +6268,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 580,
+        "x": 340,
+        "y": 620,
         "wires": [
             [
                 "f2e0ac31e202a4e3"
@@ -17185,13 +17218,13 @@
         "z": "6a77c00f79a19693",
         "name": "ARP",
         "ips": "",
-        "x": 510,
+        "x": 430,
         "y": 660,
         "wires": [
             [
-                "eabe9d09ac5494a3",
                 "923123cf470fc3e4",
-                "46561a09fa8da2c4"
+                "46561a09fa8da2c4",
+                "389ea8c87570637e"
             ]
         ]
     },
@@ -17229,7 +17262,7 @@
         "links": [
             "9e9814a999c69457"
         ],
-        "x": 1445,
+        "x": 1575,
         "y": 680,
         "wires": []
     },
@@ -17289,7 +17322,7 @@
             "be2ad471.d9c448",
             "77e202e1f7cb4c98"
         ],
-        "x": 945,
+        "x": 1125,
         "y": 1100,
         "wires": []
     },
@@ -17935,7 +17968,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1240,
+        "x": 1370,
         "y": 680,
         "wires": [
             [],
@@ -18027,6 +18060,154 @@
         "wires": [
             [
                 "cb085ed683178e6d"
+            ]
+        ]
+    },
+    {
+        "id": "a3a30b18e27a2da1",
+        "type": "server-state-changed",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "server": "c8d8b6d992397cb8",
+        "version": 6,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [
+                "binary_sensor.bevegelse_oivind_kontor_bevegelse"
+            ],
+            "substring": [],
+            "regex": []
+        },
+        "outputInitially": true,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "ha_boolean",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 480,
+        "y": 1200,
+        "wires": [
+            [
+                "367a4d93e5c5f6d7",
+                "2e1b6d1c6b4e6868"
+            ]
+        ]
+    },
+    {
+        "id": "367a4d93e5c5f6d7",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "a09bf9651e2fe8bf",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "presence",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "389ea8c87570637e",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "property": "presence",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 660,
+        "wires": [
+            [
+                "eabe9d09ac5494a3"
+            ]
+        ]
+    },
+    {
+        "id": "2e1b6d1c6b4e6868",
+        "type": "trigger",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 850,
+        "y": 1200,
+        "wires": [
+            [
+                "a09bf9651e2fe8bf"
             ]
         ]
     },
@@ -20749,7 +20930,7 @@
         "y": 300,
         "wires": [
             [
-                "66294b131746695a"
+                "d6f0c1209533f50e"
             ]
         ]
     },
@@ -20776,8 +20957,7 @@
         "y": 780,
         "wires": [
             [
-                "a43988c0b007cfc6",
-                "1f8368ec333371ce"
+                "a43988c0b007cfc6"
             ]
         ]
     },
@@ -21328,33 +21508,6 @@
         ]
     },
     {
-        "id": "cc5ab9a6bfdc1b6a",
-        "type": "change",
-        "z": "19a61e2a.75f152",
-        "name": "Husk",
-        "rules": [
-            {
-                "t": "set",
-                "p": "text",
-                "pt": "msg",
-                "to": "Husk å ta ut",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 250,
-        "y": 880,
-        "wires": [
-            [
-                "cee713031b9e4b96"
-            ]
-        ]
-    },
-    {
         "id": "3f373bb9ada3dfc6",
         "type": "debug",
         "z": "19a61e2a.75f152",
@@ -21429,20 +21582,6 @@
         "wires": []
     },
     {
-        "id": "ce6346dfc59fd373",
-        "type": "link in",
-        "z": "19a61e2a.75f152",
-        "name": "Remeber Garbage",
-        "links": [],
-        "x": 195,
-        "y": 960,
-        "wires": [
-            [
-                "cc5ab9a6bfdc1b6a"
-            ]
-        ]
-    },
-    {
         "id": "a8707fb5af9d3632",
         "type": "change",
         "z": "19a61e2a.75f152",
@@ -21500,7 +21639,7 @@
         "y": 820,
         "wires": [
             [
-                "cc5ab9a6bfdc1b6a"
+                "66294b131746695a"
             ]
         ]
     },
@@ -21558,12 +21697,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 280,
+        "x": 100,
         "y": 820,
         "wires": [
             [
-                "1a2a1f5a64482b86",
-                "1f8368ec333371ce"
+                "6caf66e7e6f4fc81"
             ]
         ]
     },
@@ -21611,8 +21749,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1480,
-        "y": 300,
+        "x": 780,
+        "y": 820,
         "wires": [
             []
         ]
@@ -21680,47 +21818,163 @@
         "wires": []
     },
     {
-        "id": "1f8368ec333371ce",
-        "type": "debug",
+        "id": "4ee5a07948fd3db1",
+        "type": "bigtimer",
         "z": "19a61e2a.75f152",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
+        "outtopic": "",
+        "outpayload1": "",
+        "outpayload2": "",
+        "name": "Big Timer",
+        "comment": "",
+        "lat": 0,
+        "lon": 0,
+        "starttime": 5001,
+        "endtime": 1425,
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": 0,
+        "endoff": 0,
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "",
+        "outtext2": "",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": false,
+        "sat": false,
+        "jan": true,
+        "feb": false,
+        "mar": false,
+        "apr": false,
+        "may": true,
+        "jun": false,
+        "jul": false,
+        "aug": false,
+        "sep": true,
+        "oct": false,
+        "nov": false,
+        "dec": false,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "day7": 0,
+        "month7": 0,
+        "day8": 0,
+        "month8": 0,
+        "day9": 0,
+        "month9": 0,
+        "day10": 0,
+        "month10": 0,
+        "day11": 0,
+        "month11": 0,
+        "day12": 0,
+        "month12": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xday7": 0,
+        "xmonth7": 0,
+        "xday8": 0,
+        "xmonth8": 0,
+        "xday9": 0,
+        "xmonth9": 0,
+        "xday10": 0,
+        "xmonth10": 0,
+        "xday11": 0,
+        "xmonth11": 0,
+        "xday12": 0,
+        "xmonth12": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "randon1": false,
+        "randoff1": false,
+        "randon2": false,
+        "randoff2": false,
+        "repeat": true,
+        "atstart": true,
+        "odd": false,
+        "even": false,
+        "x": 280,
         "y": 800,
-        "wires": []
+        "wires": [
+            [
+                "1a2a1f5a64482b86"
+            ],
+            [],
+            []
+        ]
     },
     {
-        "id": "e66e374dfd797a1b",
-        "type": "inject",
+        "id": "6caf66e7e6f4fc81",
+        "type": "change",
         "z": "19a61e2a.75f152",
-        "name": "",
-        "props": [
+        "name": "Husk",
+        "rules": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "Husk å ta ut",
+                "tot": "str"
             }
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 250,
         "y": 880,
         "wires": [
             [
-                "cc5ab9a6bfdc1b6a"
+                "cee713031b9e4b96"
             ]
         ]
     },
@@ -24158,6 +24412,35 @@
         "wires": []
     },
     {
+        "id": "e95593b7532eeda4",
+        "type": "inject",
+        "z": "visitor_mode_tab",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "vm_sched_deactivate"
+            ]
+        ]
+    },
+    {
         "id": "8a4129f01fab764a",
         "type": "inject",
         "z": "7a24b3320c6e9d90",
@@ -24797,7 +25080,7 @@
         "z": "7a24b3320c6e9d90",
         "g": "0ece3a191666111e",
         "name": "Temperature Controller",
-        "func": "// ═══════════════════════════════════════════════════════════════════════════\n// SMART TEMPERATURE CONTROLLER V3 - Closed-Loop Feedback Control\n// ═══════════════════════════════════════════════════════════════════════════\n// Focus: Winter=Downstairs heating, Summer=Upstairs cooling\n// Key Feature: TARGET INFLATION - if room is below target, inflate HP setpoint\n// ═══════════════════════════════════════════════════════════════════════════\n\n// ═══════════════════════════════════════════════════════════════════════════\n// INPUTS\n// ═══════════════════════════════════════════════════════════════════════════\nconst upstairs = Number(flow.get('upstairsTemp')) || 20;\nconst downstairs = Number(flow.get('downstairsTemp')) || 20;\nconst outside = Number(flow.get('outsideTemp')) || 10;\n\n// Temperature targets\nconst bedtimeTemp = 19;  // Pre-bedtime cooling target\nconst awayTemp = 20;     // Away mode maintenance\nconst nightTemp = 17;    // Night minimum\nconst vacationTemp = 18; // Vacation maintenance\nconst summerCoolTrigger = 24;\nconst summerCoolTarget = 21;\nconst dogMaxTemp = 24;\n\n// Dynamic desired temp: 24°C if freezing outside, else 22°C\nconst desiredTemp = (outside < 0) ? 24 : 22;\n\n// State\nconst isSummer = flow.get('isSummer') || false;\nconst timeMode = flow.get('timeMode') || 'day';\nconst homeMode = global.get('Mode') || 'home';\nconst isWeekend = global.get('isWeekend') || false;\nconst isPlaying = global.get('is_playing') || false;\n\n// Time\nconst currentHour = new Date().getHours();\nconst currentMinutes = new Date().getMinutes();\nconst isEvening = currentHour >= 20 && currentHour < 22;\n\n// Focus temperature based on season\nconst focusTemp = isSummer ? upstairs : downstairs;\n\n// ═══════════════════════════════════════════════════════════════════════════\n// OUTPUT INITIALIZATION\n// ═══════════════════════════════════════════════════════════════════════════\nlet heatpumpAction = 'off';\nlet roomTarget = desiredTemp;  // What we want the ROOM to be\nlet hpSetpoint = desiredTemp;  // What we TELL the heat pump (may be inflated)\nlet fanlevel = 'low';\nlet swing = isSummer ? 'fixedTop' : 'fixedBottom';\nlet millTemp = 23;  // Default Mill temp\nlet reason = '';\n\n// ═══════════════════════════════════════════════════════════════════════════\n// CLOSED-LOOP TARGET INFLATION\n// If room is below target, inflate HP setpoint to force continued heating\n// ═══════════════════════════════════════════════════════════════════════════\nfunction getInflatedSetpoint(roomTarget, actualTemp, maxInflation = 4) {\n    const deficit = roomTarget - actualTemp;\n    if (deficit <= 0) return roomTarget;\n    \n    // Inflate by 1.5x the deficit, capped at maxInflation\n    const inflation = Math.min(deficit * 1.5, maxInflation);\n    return Math.round(roomTarget + inflation);\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// FAN LEVEL SELECTION\n// Based on deficit and whether noise is acceptable\n// ═══════════════════════════════════════════════════════════════════════════\nfunction selectFanLevel(deficit, allowHigh, allowMediumHigh) {\n    if (deficit > 3) {\n        return allowHigh ? 'high' : (allowMediumHigh ? 'medium_high' : 'medium');\n    } else if (deficit > 2) {\n        return allowMediumHigh ? 'medium_high' : 'medium';\n    } else if (deficit > 1) {\n        return 'medium';\n    } else {\n        return 'low';\n    }\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// MODE PRIORITY: Safety → Vacation → Away → Night → Pre-bedtime → Morning → Day\n// ═══════════════════════════════════════════════════════════════════════════\n\n// --- SAFETY OVERRIDE ---\nif (upstairs > 30 || downstairs > 30) {\n    heatpumpAction = 'cool';\n    hpSetpoint = 22;\n    fanlevel = 'high';\n    millTemp = 18;\n    reason = 'SAFETY: Emergency cooling (>30°C)';\n}\nelse if (upstairs < 12 || downstairs < 12) {\n    heatpumpAction = 'heat';\n    hpSetpoint = 22;\n    fanlevel = 'high';\n    millTemp = 25;\n    reason = 'SAFETY: Emergency heating (<12°C)';\n}\n\n// --- VACATION MODE ---\nelse if (homeMode === 'vacation') {\n    roomTarget = vacationTemp;\n    millTemp = 18;\n    \n    if (focusTemp < vacationTemp - 0.5) {\n        heatpumpAction = 'heat';\n        hpSetpoint = getInflatedSetpoint(vacationTemp, focusTemp, 3);\n        fanlevel = 'low';\n        reason = `Vacation: ${focusTemp.toFixed(1)}°C → ${vacationTemp}°C (HP:${hpSetpoint}°C)`;\n    } else {\n        heatpumpAction = 'off';\n        reason = `Vacation: OK at ${focusTemp.toFixed(1)}°C`;\n    }\n}\n\n// --- AWAY MODE ---\nelse if (homeMode === 'away') {\n    roomTarget = awayTemp;\n    millTemp = 23;  // Mill stays at 23 as passive backup\n    \n    if (isSummer) {\n        if (upstairs > dogMaxTemp) {\n            heatpumpAction = 'cool';\n            hpSetpoint = summerCoolTarget;\n            fanlevel = 'medium';\n            reason = `Away: dog cooling ${upstairs.toFixed(1)}°C → ${summerCoolTarget}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Away: dog OK at ${upstairs.toFixed(1)}°C`;\n        }\n    } else {\n        // Winter away - CLOSED LOOP with HIGH fan allowed (nobody home)\n        const deficit = awayTemp - downstairs;\n        \n        if (deficit > 0.5) {\n            heatpumpAction = 'heat';\n            hpSetpoint = getInflatedSetpoint(awayTemp, downstairs, 4);\n            fanlevel = selectFanLevel(deficit, true, true);  // HIGH allowed when away\n            reason = `Away: ${downstairs.toFixed(1)}°C → ${awayTemp}°C (HP:${hpSetpoint}°C, fan:${fanlevel})`;\n        } else if (deficit > 0) {\n            // Maintaining - keep heating on low to hold temp\n            heatpumpAction = 'heat';\n            hpSetpoint = awayTemp + 1;\n            fanlevel = 'low';\n            reason = `Away: holding ${downstairs.toFixed(1)}°C at ${awayTemp}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Away: warm at ${downstairs.toFixed(1)}°C`;\n        }\n    }\n}\n\n// --- NIGHT MODE (22:00 - morning) ---\nelse if (timeMode === 'night') {\n    roomTarget = nightTemp;\n    millTemp = 18;  // Lower Mill at night\n    \n    if (isSummer) {\n        heatpumpAction = 'off';\n        reason = 'Night: OFF (summer)';\n    } else {\n        const deficit = nightTemp - downstairs;\n        \n        if (deficit > 0.5) {\n            heatpumpAction = 'heat';\n            hpSetpoint = getInflatedSetpoint(nightTemp, downstairs, 3);\n            fanlevel = 'low';  // Quiet at night\n            reason = `Night: ${downstairs.toFixed(1)}°C → ${nightTemp}°C (HP:${hpSetpoint}°C)`;\n        } else if (deficit > -1) {\n            // Within 1°C above target - keep gently heating\n            heatpumpAction = 'heat';\n            hpSetpoint = nightTemp;\n            fanlevel = 'low';\n            reason = `Night: holding ${downstairs.toFixed(1)}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Night: warm at ${downstairs.toFixed(1)}°C`;\n        }\n    }\n}\n\n// --- PRE-BEDTIME MODE (20:30 - 22:00) ---\nelse if (timeMode === 'pre-bedtime') {\n    roomTarget = bedtimeTemp;\n    millTemp = 18;  // Lower Mill for bedtime\n    \n    const tempDiff = downstairs - bedtimeTemp;\n    \n    if (tempDiff <= 0) {\n        heatpumpAction = 'off';\n        reason = `Bedtime: ${bedtimeTemp}°C reached (${downstairs.toFixed(1)}°C)`;\n    } else if (tempDiff > 1.5) {\n        // Need active cooling\n        heatpumpAction = 'cool';\n        hpSetpoint = bedtimeTemp;\n        fanlevel = isPlaying ? 'low' : 'medium';\n        reason = `Bedtime: cooling ${downstairs.toFixed(1)}°C → ${bedtimeTemp}°C`;\n    } else {\n        // Let it cool naturally\n        heatpumpAction = 'off';\n        reason = `Bedtime: cooling naturally ${downstairs.toFixed(1)}°C → ${bedtimeTemp}°C`;\n    }\n}\n\n// --- MORNING MODE (05:30/07:30 - 09:00) ---\nelse if (timeMode === 'morning') {\n    roomTarget = desiredTemp;\n    millTemp = 23;\n    \n    if (isSummer) {\n        if (upstairs > summerCoolTrigger) {\n            heatpumpAction = 'cool';\n            hpSetpoint = summerCoolTarget;\n            fanlevel = 'low';\n            reason = `Morning: cooling ${upstairs.toFixed(1)}°C → ${summerCoolTarget}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Morning: comfortable at ${upstairs.toFixed(1)}°C`;\n        }\n    } else {\n        const deficit = desiredTemp - downstairs;\n        \n        if (deficit > 0.5) {\n            heatpumpAction = 'heat';\n            hpSetpoint = getInflatedSetpoint(desiredTemp, downstairs, 4);\n            // Morning: max MEDIUM for quiet\n            fanlevel = selectFanLevel(deficit, false, false);\n            reason = `Morning: ${downstairs.toFixed(1)}°C → ${desiredTemp}°C (HP:${hpSetpoint}°C)`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Morning: comfortable at ${downstairs.toFixed(1)}°C`;\n        }\n    }\n}\n\n// --- DAY MODE (09:00 - 20:30) ---\nelse if (timeMode === 'day' || timeMode === 'preheat') {\n    // Preheat mode uses same logic as day/home but triggered at 14:30 when away\n    roomTarget = desiredTemp;\n    millTemp = 23;\n    \n    if (isSummer) {\n        if (upstairs > summerCoolTrigger) {\n            heatpumpAction = 'cool';\n            hpSetpoint = summerCoolTarget;\n            fanlevel = (upstairs > summerCoolTrigger + 2) ? 'medium' : 'low';\n            reason = `Day: cooling ${upstairs.toFixed(1)}°C → ${summerCoolTarget}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Day: comfortable at ${upstairs.toFixed(1)}°C`;\n        }\n    } else {\n        // Winter day - full heating with closed loop\n        const effectiveTarget = isEvening ? bedtimeTemp : desiredTemp;\n        const deficit = effectiveTarget - downstairs;\n        \n        if (deficit > 0.5) {\n            heatpumpAction = 'heat';\n            hpSetpoint = getInflatedSetpoint(effectiveTarget, downstairs, 4);\n            \n            // Evening: quiet only. Day: allow high when big deficit\n            if (isEvening) {\n                fanlevel = 'low';\n                millTemp = 18;\n                reason = `Evening: ${downstairs.toFixed(1)}°C → ${effectiveTarget}°C (HP:${hpSetpoint}°C)`;\n            } else {\n                const allowHigh = !isPlaying;  // Don't use high when watching TV\n                fanlevel = selectFanLevel(deficit, allowHigh, true);\n                reason = `Day: ${downstairs.toFixed(1)}°C → ${effectiveTarget}°C (HP:${hpSetpoint}°C, fan:${fanlevel})`;\n            }\n        } else if (deficit > -0.5) {\n            // At target - maintain\n            heatpumpAction = 'heat';\n            hpSetpoint = effectiveTarget;\n            fanlevel = 'low';\n            reason = isEvening \n                ? `Evening: holding ${downstairs.toFixed(1)}°C`\n                : `Day: holding ${downstairs.toFixed(1)}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = isEvening\n                ? `Evening: warm at ${downstairs.toFixed(1)}°C`\n                : `Day: comfortable at ${downstairs.toFixed(1)}°C`;\n        }\n    }\n}\n\n// --- DEFAULT ---\nelse {\n    heatpumpAction = 'off';\n    reason = `Unknown mode: ${timeMode}/${homeMode}`;\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// STORE STATE\n// ═══════════════════════════════════════════════════════════════════════════\nflow.set('heatpumpAction', heatpumpAction);\nflow.set('targetTemp', hpSetpoint);\nflow.set('roomTarget', roomTarget);\nflow.set('controlReason', reason);\nflow.set('fanlevel', fanlevel);\n\n// ═══════════════════════════════════════════════════════════════════════════\n// BUILD OUTPUT\n// ═══════════════════════════════════════════════════════════════════════════\nmsg.heatpump = {\n    on: heatpumpAction !== 'off',\n    mode: heatpumpAction === 'off' ? 'heat' : heatpumpAction,\n    targetTemperature: hpSetpoint,\n    fanlevel: fanlevel,\n    swing: swing\n};\n\nmsg.mill = {\n    on: true,  // Mill always on, thermostat-controlled\n    temperature: millTemp\n};\n\nmsg.status = {\n    action: heatpumpAction,\n    reason: reason,\n    temps: {\n        upstairs: upstairs.toFixed(1),\n        downstairs: downstairs.toFixed(1),\n        outside: outside.toFixed(1),\n        roomTarget: roomTarget,\n        hpSetpoint: hpSetpoint\n    },\n    context: {\n        timeMode: timeMode,\n        homeMode: homeMode,\n        isSummer: isSummer,\n        isEvening: isEvening,\n        isPlaying: isPlaying,\n        fanlevel: fanlevel,\n        millTemp: millTemp\n    }\n};\n\nnode.status({\n    fill: heatpumpAction === 'heat' ? 'red' : (heatpumpAction === 'cool' ? 'blue' : 'grey'),\n    shape: 'dot',\n    text: `${reason.substring(0, 60)}`\n});\n\nreturn msg;",
+        "func": "// ═══════════════════════════════════════════════════════════════════════════\n// SMART TEMPERATURE CONTROLLER V3 - Closed-Loop Feedback Control\n// ═══════════════════════════════════════════════════════════════════════════\n// Focus: Winter=Downstairs heating, Summer=Upstairs cooling\n// Work From Home: 8-15 when home = focus upstairs\n// Key Feature: TARGET INFLATION - if room is below target, inflate HP setpoint\n// ═══════════════════════════════════════════════════════════════════════════\n\n// ═══════════════════════════════════════════════════════════════════════════\n// INPUTS\n// ═══════════════════════════════════════════════════════════════════════════\nconst upstairs = Number(flow.get('upstairsTemp')) || 20;\nconst downstairs = Number(flow.get('downstairsTemp')) || 20;\nconst outside = Number(flow.get('outsideTemp')) || 10;\n\n// Temperature targets\nconst bedtimeTemp = 19;  // Pre-bedtime cooling target\nconst awayTemp = 20;     // Away mode maintenance\nconst nightTemp = 17;    // Night minimum\nconst vacationTemp = 18; // Vacation maintenance\nconst summerCoolTrigger = 24;\nconst summerCoolTarget = 21;\nconst dogMaxTemp = 24;\n\n// Dynamic desired temp: 24°C if freezing outside, else 22°C\nconst desiredTemp = (outside < 0) ? 24 : flow.get(\"desiredTemp\");\n\n// State\nconst isSummer = flow.get('isSummer') || false;\nconst timeMode = flow.get('timeMode') || 'day';\nconst homeMode = global.get('Mode') || 'home';\nconst isWeekend = global.get('isWeekend') || false;\nconst isPlaying = global.get('is_playing') || false;\n\n// Time\nconst currentHour = new Date().getHours();\nconst currentMinutes = new Date().getMinutes();\nconst isEvening = currentHour >= 20 && currentHour < 22;\n\n// Work From Home detection: 8-15 when home\nconst isWorkHours = currentHour >= 8 && currentHour < 15;\nconst isWorkFromHome = isWorkHours && homeMode === 'home';\n\n// Focus temperature based on season and work-from-home\n// WFH: focus upstairs (office), otherwise: summer=upstairs, winter=downstairs\nconst focusTemp = (isWorkFromHome || isSummer) ? upstairs : downstairs;\n\n// ═══════════════════════════════════════════════════════════════════════════\n// OUTPUT INITIALIZATION\n// ═══════════════════════════════════════════════════════════════════════════\nlet heatpumpAction = 'off';\nlet roomTarget = desiredTemp;  // What we want the ROOM to be\nlet hpSetpoint = desiredTemp;  // What we TELL the heat pump (may be inflated)\nlet fanlevel = 'low';\nlet swing = isSummer ? 'fixedTop' : 'fixedBottom';\nlet millTemp = 23;  // Default Mill temp\nlet reason = '';\n\n// ═══════════════════════════════════════════════════════════════════════════\n// CLOSED-LOOP TARGET INFLATION\n// If room is below target, inflate HP setpoint to force continued heating\n// ═══════════════════════════════════════════════════════════════════════════\nfunction getInflatedSetpoint(roomTarget, actualTemp, maxInflation = 4) {\n    const deficit = roomTarget - actualTemp;\n    if (deficit <= 0) return roomTarget;\n\n    // Inflate by 1.5x the deficit, capped at maxInflation\n    const inflation = Math.min(deficit * 1.5, maxInflation);\n    return Math.round(roomTarget + inflation);\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// FAN LEVEL SELECTION\n// Based on deficit and whether noise is acceptable\n// ═══════════════════════════════════════════════════════════════════════════\nfunction selectFanLevel(deficit, allowHigh, allowMediumHigh) {\n    if (deficit > 3) {\n        return allowHigh ? 'high' : (allowMediumHigh ? 'medium_high' : 'medium');\n    } else if (deficit > 2) {\n        return allowMediumHigh ? 'medium_high' : 'medium';\n    } else if (deficit > 1) {\n        return 'medium';\n    } else {\n        return 'low';\n    }\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// MODE PRIORITY: Safety → Vacation → Away → Night → Pre-bedtime → Morning → Day\n// ═══════════════════════════════════════════════════════════════════════════\n\n// --- SAFETY OVERRIDE ---\nif (upstairs > 30 || downstairs > 30) {\n    heatpumpAction = 'cool';\n    hpSetpoint = 22;\n    fanlevel = 'high';\n    millTemp = 18;\n    reason = 'SAFETY: Emergency cooling (>30°C)';\n}\nelse if (upstairs < 12 || downstairs < 12) {\n    heatpumpAction = 'heat';\n    hpSetpoint = 22;\n    fanlevel = 'high';\n    millTemp = 25;\n    reason = 'SAFETY: Emergency heating (<12°C)';\n}\n\n// --- VACATION MODE ---\nelse if (homeMode === 'vacation') {\n    roomTarget = vacationTemp;\n    millTemp = 18;\n\n    if (focusTemp < vacationTemp - 0.5) {\n        heatpumpAction = 'heat';\n        hpSetpoint = getInflatedSetpoint(vacationTemp, focusTemp, 3);\n        fanlevel = 'low';\n        reason = `Vacation: ${focusTemp.toFixed(1)}°C → ${vacationTemp}°C (HP:${hpSetpoint}°C)`;\n    } else {\n        heatpumpAction = 'off';\n        reason = `Vacation: OK at ${focusTemp.toFixed(1)}°C`;\n    }\n}\n\n// --- AWAY MODE ---\nelse if (homeMode === 'away') {\n    roomTarget = awayTemp;\n    millTemp = 23;  // Mill stays at 23 as passive backup\n\n    if (isSummer) {\n        if (upstairs > dogMaxTemp) {\n            heatpumpAction = 'cool';\n            hpSetpoint = summerCoolTarget;\n            fanlevel = 'medium';\n            reason = `Away: dog cooling ${upstairs.toFixed(1)}°C → ${summerCoolTarget}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Away: dog OK at ${upstairs.toFixed(1)}°C`;\n        }\n    } else {\n        // Winter away - CLOSED LOOP with HIGH fan allowed (nobody home)\n        const deficit = awayTemp - downstairs;\n\n        if (deficit > 0.5) {\n            heatpumpAction = 'heat';\n            hpSetpoint = getInflatedSetpoint(awayTemp, downstairs, 4);\n            fanlevel = selectFanLevel(deficit, true, true);  // HIGH allowed when away\n            reason = `Away: ${downstairs.toFixed(1)}°C → ${awayTemp}°C (HP:${hpSetpoint}°C, fan:${fanlevel})`;\n        } else if (deficit > 0) {\n            // Maintaining - keep heating on low to hold temp\n            heatpumpAction = 'heat';\n            hpSetpoint = awayTemp + 1;\n            fanlevel = 'low';\n            reason = `Away: holding ${downstairs.toFixed(1)}°C at ${awayTemp}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Away: warm at ${downstairs.toFixed(1)}°C`;\n        }\n    }\n}\n\n// --- NIGHT MODE (22:00 - morning) ---\nelse if (timeMode === 'night') {\n    roomTarget = nightTemp;\n    millTemp = 18;  // Lower Mill at night\n\n    if (isSummer) {\n        heatpumpAction = 'off';\n        reason = 'Night: OFF (summer)';\n    } else {\n        const deficit = nightTemp - downstairs;\n\n        if (deficit > 0.5) {\n            heatpumpAction = 'heat';\n            hpSetpoint = getInflatedSetpoint(nightTemp, downstairs, 3);\n            fanlevel = 'low';  // Quiet at night\n            reason = `Night: ${downstairs.toFixed(1)}°C → ${nightTemp}°C (HP:${hpSetpoint}°C)`;\n        } else if (deficit > -1) {\n            // Within 1°C above target - keep gently heating\n            heatpumpAction = 'heat';\n            hpSetpoint = nightTemp;\n            fanlevel = 'low';\n            reason = `Night: holding ${downstairs.toFixed(1)}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Night: warm at ${downstairs.toFixed(1)}°C`;\n        }\n    }\n}\n\n// --- PRE-BEDTIME MODE (20:30 - 22:00) ---\nelse if (timeMode === 'pre-bedtime') {\n    roomTarget = bedtimeTemp;\n    millTemp = 18;  // Lower Mill for bedtime\n\n    const tempDiff = downstairs - bedtimeTemp;\n\n    if (tempDiff <= 0) {\n        heatpumpAction = 'off';\n        reason = `Bedtime: ${bedtimeTemp}°C reached (${downstairs.toFixed(1)}°C)`;\n    } else if (tempDiff > 1.5) {\n        // Need active cooling\n        heatpumpAction = 'cool';\n        hpSetpoint = bedtimeTemp;\n        fanlevel = isPlaying ? 'low' : 'medium';\n        reason = `Bedtime: cooling ${downstairs.toFixed(1)}°C → ${bedtimeTemp}°C`;\n    } else {\n        // Let it cool naturally\n        heatpumpAction = 'off';\n        reason = `Bedtime: cooling naturally ${downstairs.toFixed(1)}°C → ${bedtimeTemp}°C`;\n    }\n}\n\n// --- MORNING MODE (05:30/07:30 - 09:00) ---\nelse if (timeMode === 'morning') {\n    roomTarget = desiredTemp;\n    millTemp = 23;\n\n    if (isSummer) {\n        if (upstairs > summerCoolTrigger) {\n            heatpumpAction = 'cool';\n            hpSetpoint = summerCoolTarget;\n            fanlevel = 'low';\n            reason = `Morning: cooling ${upstairs.toFixed(1)}°C → ${summerCoolTarget}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Morning: comfortable at ${upstairs.toFixed(1)}°C`;\n        }\n    } else {\n        const deficit = desiredTemp - downstairs;\n\n        if (deficit > 0.5) {\n            heatpumpAction = 'heat';\n            hpSetpoint = getInflatedSetpoint(desiredTemp, downstairs, 4);\n            // Morning: max MEDIUM for quiet\n            fanlevel = selectFanLevel(deficit, false, false);\n            reason = `Morning: ${downstairs.toFixed(1)}°C → ${desiredTemp}°C (HP:${hpSetpoint}°C)`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Morning: comfortable at ${downstairs.toFixed(1)}°C`;\n        }\n    }\n}\n\n// --- DAY MODE (09:00 - 20:30) ---\nelse if (timeMode === 'day' || timeMode === 'preheat') {\n    // Preheat mode uses same logic as day/home but triggered at 14:30 when away\n    roomTarget = desiredTemp;\n    millTemp = 23;\n\n    if (isSummer) {\n        if (upstairs > summerCoolTrigger) {\n            heatpumpAction = 'cool';\n            hpSetpoint = summerCoolTarget;\n            fanlevel = (upstairs > summerCoolTrigger + 2) ? 'medium' : 'low';\n            reason = `Day: cooling ${upstairs.toFixed(1)}°C → ${summerCoolTarget}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `Day: comfortable at ${upstairs.toFixed(1)}°C`;\n        }\n    } else if (isWorkFromHome) {\n        // Work From Home (8-15): focus on upstairs (office)\n        const effectiveTarget = desiredTemp;\n        const deficit = effectiveTarget - upstairs;\n        swing = 'fixedTop';  // Push warm air UP to office\n\n        if (deficit > 0.5) {\n            heatpumpAction = 'heat';\n            hpSetpoint = getInflatedSetpoint(effectiveTarget, upstairs, 4);\n            // WFH: keep fan quieter for concentration\n            fanlevel = selectFanLevel(deficit, false, true);\n            reason = `WFH: ${upstairs.toFixed(1)}°C → ${effectiveTarget}°C (HP:${hpSetpoint}°C, fan:${fanlevel})`;\n        } else if (deficit > -0.5) {\n            // At target - maintain\n            heatpumpAction = 'heat';\n            hpSetpoint = effectiveTarget;\n            fanlevel = 'low';\n            reason = `WFH: holding ${upstairs.toFixed(1)}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = `WFH: comfortable at ${upstairs.toFixed(1)}°C`;\n        }\n    } else {\n        // Winter day - full heating with closed loop (downstairs focus)\n        const effectiveTarget = isEvening ? bedtimeTemp : desiredTemp;\n        const deficit = effectiveTarget - downstairs;\n\n        if (deficit > 0.5) {\n            heatpumpAction = 'heat';\n            hpSetpoint = getInflatedSetpoint(effectiveTarget, downstairs, 4);\n\n            // Evening: quiet only. Day: allow high when big deficit\n            if (isEvening) {\n                fanlevel = 'low';\n                millTemp = 18;\n                reason = `Evening: ${downstairs.toFixed(1)}°C → ${effectiveTarget}°C (HP:${hpSetpoint}°C)`;\n            } else {\n                const allowHigh = !isPlaying;  // Don't use high when watching TV\n                fanlevel = selectFanLevel(deficit, allowHigh, true);\n                reason = `Day: ${downstairs.toFixed(1)}°C → ${effectiveTarget}°C (HP:${hpSetpoint}°C, fan:${fanlevel})`;\n            }\n        } else if (deficit > -0.5) {\n            // At target - maintain\n            heatpumpAction = 'heat';\n            hpSetpoint = effectiveTarget;\n            fanlevel = 'low';\n            reason = isEvening\n                ? `Evening: holding ${downstairs.toFixed(1)}°C`\n                : `Day: holding ${downstairs.toFixed(1)}°C`;\n        } else {\n            heatpumpAction = 'off';\n            reason = isEvening\n                ? `Evening: warm at ${downstairs.toFixed(1)}°C`\n                : `Day: comfortable at ${downstairs.toFixed(1)}°C`;\n        }\n    }\n}\n\n// --- DEFAULT ---\nelse {\n    heatpumpAction = 'off';\n    reason = `Unknown mode: ${timeMode}/${homeMode}`;\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// STORE STATE\n// ═══════════════════════════════════════════════════════════════════════════\nflow.set('heatpumpAction', heatpumpAction);\nflow.set('targetTemp', hpSetpoint);\nflow.set('roomTarget', roomTarget);\nflow.set('controlReason', reason);\nflow.set('fanlevel', fanlevel);\nflow.set('swing', swing);\n\n// ═══════════════════════════════════════════════════════════════════════════\n// BUILD OUTPUT\n// ═══════════════════════════════════════════════════════════════════════════\nmsg.heatpump = {\n    on: heatpumpAction !== 'off',\n    mode: heatpumpAction === 'off' ? 'heat' : heatpumpAction,\n    targetTemperature: hpSetpoint,\n    fanlevel: fanlevel,\n    swing: swing\n};\n\nmsg.mill = {\n    on: true,  // Mill always on, thermostat-controlled\n    temperature: millTemp\n};\n\nmsg.status = {\n    action: heatpumpAction,\n    reason: reason,\n    temps: {\n        upstairs: upstairs.toFixed(1),\n        downstairs: downstairs.toFixed(1),\n        outside: outside.toFixed(1),\n        roomTarget: roomTarget,\n        hpSetpoint: hpSetpoint\n    },\n    context: {\n        timeMode: timeMode,\n        homeMode: homeMode,\n        isSummer: isSummer,\n        isEvening: isEvening,\n        isWorkFromHome: isWorkFromHome,\n        isPlaying: isPlaying,\n        fanlevel: fanlevel,\n        millTemp: millTemp\n    }\n};\n\nnode.status({\n    fill: heatpumpAction === 'heat' ? 'red' : (heatpumpAction === 'cool' ? 'blue' : 'grey'),\n    shape: 'dot',\n    text: `${reason.substring(0, 60)}`\n});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -25214,7 +25497,8 @@
         "wires": [
             [
                 "a0d659991eeb8a9b",
-                "d38c180b34e51611"
+                "d38c180b34e51611",
+                "4be2606f81d19780"
             ]
         ]
     },
@@ -25224,7 +25508,7 @@
         "z": "7a24b3320c6e9d90",
         "g": "c3650e70b501e4f4",
         "group": "f9c985920afe1003",
-        "order": 2,
+        "order": 1,
         "width": "6",
         "height": "1",
         "name": "Status",
@@ -25312,7 +25596,7 @@
         "z": "7a24b3320c6e9d90",
         "g": "c3650e70b501e4f4",
         "group": "f9c985920afe1003",
-        "order": 7,
+        "order": 6,
         "width": "2",
         "height": "1",
         "name": "Target",
@@ -25334,7 +25618,7 @@
         "z": "7a24b3320c6e9d90",
         "g": "c3650e70b501e4f4",
         "group": "f9c985920afe1003",
-        "order": 8,
+        "order": 7,
         "width": "2",
         "height": "1",
         "name": "Action",
@@ -25358,7 +25642,7 @@
         "group": "f9c985920afe1003",
         "name": "Desired Temp",
         "label": "Desired °C",
-        "order": 6,
+        "order": 5,
         "width": "2",
         "height": "1",
         "topic": "desiredTemp",
@@ -25414,7 +25698,7 @@
         "group": "f9c985920afe1003",
         "name": "HEAT",
         "label": "HEAT",
-        "order": 3,
+        "order": 2,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -25454,7 +25738,7 @@
         "group": "f9c985920afe1003",
         "name": "OFF",
         "label": "OFF",
-        "order": 5,
+        "order": 4,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -25494,7 +25778,7 @@
         "group": "f9c985920afe1003",
         "name": "AUTO",
         "label": "AUTO",
-        "order": 4,
+        "order": 3,
         "width": "2",
         "height": "1",
         "emulateClick": false,
@@ -25856,7 +26140,7 @@
         "z": "7a24b3320c6e9d90",
         "g": "c3650e70b501e4f4",
         "group": "f9c985920afe1003",
-        "order": 9,
+        "order": 8,
         "width": "2",
         "height": "1",
         "name": "FanLevel",
@@ -26058,6 +26342,74 @@
         "wires": [
             [],
             []
+        ]
+    },
+    {
+        "id": "9e81447c3110f1b6",
+        "type": "ui-text",
+        "z": "7a24b3320c6e9d90",
+        "g": "c3650e70b501e4f4",
+        "group": "f9c985920afe1003",
+        "order": 9,
+        "width": "2",
+        "height": "1",
+        "name": "FanLevel",
+        "label": "Swing",
+        "format": "{{flow.heatpumpAction}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1380,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4be2606f81d19780",
+        "type": "change",
+        "z": "7a24b3320c6e9d90",
+        "g": "c3650e70b501e4f4",
+        "name": "fanlevel",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "swing",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 320,
+        "wires": [
+            [
+                "9e81447c3110f1b6"
+            ]
+        ]
+    },
+    {
+        "id": "3de327782513bde4",
+        "type": "ui-event",
+        "z": "7a24b3320c6e9d90",
+        "g": "c3650e70b501e4f4",
+        "ui": "7f0c45a9432dc256",
+        "name": "",
+        "x": 800,
+        "y": 40,
+        "wires": [
+            [
+                "d00734b1ae0fb61a"
+            ]
         ]
     }
 ]
