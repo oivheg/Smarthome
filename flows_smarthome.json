@@ -1330,8 +1330,7 @@
             "aaf5b9532af1fbac",
             "d13df963babc7388",
             "d8ddcd9494c894c6",
-            "2d89c6f3277b5730",
-            "886397ee88c4a44f"
+            "2d89c6f3277b5730"
         ],
         "x": 934,
         "y": -1,
@@ -5799,7 +5798,7 @@
             },
             {
                 "name": "startTime",
-                "value": "8:00",
+                "value": "7:15",
                 "type": "str"
             },
             {
@@ -7490,28 +7489,7 @@
                 "d8ddcd9494c894c6"
             ],
             [
-                "visitor_gate_check",
-                "a5d3065e.5a0698"
-            ]
-        ]
-    },
-    {
-        "id": "visitor_gate_check",
-        "type": "function",
-        "z": "8b99f8fe.7b27b8",
-        "g": "0dc9ec7306f46565",
-        "name": "Visitor Mode Gate",
-        "func": "// Check if visitor mode is active\nconst visitorMode = global.get('VisitorMode') || {};\n\nif (visitorMode.enabled === true) {\n    // Visitor mode active - block away mode trigger\n    node.status({fill: \"yellow\", shape: \"ring\", text: \"Blocked: Visitor present\"});\n    return null; // Stop message flow\n}\n\n// No visitor mode - allow normal away mode logic\nnode.status({});\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1230,
-        "y": 180,
-        "wires": [
-            [
+                "a5d3065e.5a0698",
                 "9ab9f797bec97d04"
             ]
         ]
@@ -11241,8 +11219,8 @@
         "type": "function",
         "z": "a9a601907d96eb09",
         "name": "FP2 Presence + Activity Tracking",
-        "func": "// Store FP2 presence state\nflow.set('fp2_presence', msg.payload);\n\n// Track last activity time when presence detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    node.status({fill: \"green\", shape: \"dot\", text: \"Active: \" + new Date().toLocaleTimeString()});\n} else {\n    node.status({fill: \"grey\", shape: \"ring\", text: \"Inactive\"});\n}\n\nreturn msg;",
-        "outputs": 1,
+        "func": "\n\n// Track last activity time when presence detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    // Store FP2 presence state\n    node.status({fill: \"green\", shape: \"dot\", text: \"Active: \" + new Date().toLocaleTimeString()});\nreturn msg;\n} else {\n    node.status({fill: \"grey\", shape: \"ring\", text: \"Inactive\"});\n    node.send([null, msg]);\n}\n\n\n",
+        "outputs": 2,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
@@ -11253,7 +11231,11 @@
         "wires": [
             [
                 "bdc7a6b2a2bf8285",
-                "ba_ui_fp2_format"
+                "ba_ui_fp2_format",
+                "bee3860454e1e700"
+            ],
+            [
+                "86965b568eeaa56c"
             ]
         ]
     },
@@ -12438,7 +12420,91 @@
         ]
     },
     {
-        "id": "6dfa8a1d2171cc7d",
+        "id": "c5ff8c6bed410957",
+        "type": "change",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fp2_presence",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bee3860454e1e700",
+        "type": "change",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fp2_presence",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 160,
+        "wires": [
+            [
+                "86965b568eeaa56c"
+            ]
+        ]
+    },
+    {
+        "id": "86965b568eeaa56c",
+        "type": "trigger",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "op1": "",
+        "op2": "false",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "30",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 670,
+        "y": 240,
+        "wires": [
+            [
+                "c5ff8c6bed410957"
+            ]
+        ]
+    },
+    {
+        "id": "6b217a4d7acba765",
         "type": "inject",
         "z": "a9a601907d96eb09",
         "name": "",
@@ -12456,12 +12522,14 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 440,
-        "y": 140,
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 490,
+        "y": 160,
         "wires": [
-            []
+            [
+                "b590b37dc0fbc282"
+            ]
         ]
     },
     {
@@ -17119,7 +17187,7 @@
         "wires": [
             [
                 "f471eaf5a8b7a9c1",
-                "da091a4c003e3588"
+                "96b52fcc960c59d0"
             ]
         ],
         "outputLabels": [
@@ -17194,7 +17262,8 @@
         "name": "heggland",
         "mode": "link",
         "links": [
-            "d871d736.d19838"
+            "d871d736.d19838",
+            "b0e54fbbc4d9fa6a"
         ],
         "x": 1235,
         "y": 720,
@@ -17206,7 +17275,8 @@
         "z": "6a77c00f79a19693",
         "name": "karina",
         "links": [
-            "84abded8.462ac"
+            "84abded8.462ac",
+            "b0e54fbbc4d9fa6a"
         ],
         "x": 1235,
         "y": 760,
@@ -17260,7 +17330,8 @@
         "name": "Set Away",
         "mode": "link",
         "links": [
-            "9e9814a999c69457"
+            "9e9814a999c69457",
+            "b0e54fbbc4d9fa6a"
         ],
         "x": 1575,
         "y": 680,
@@ -17320,10 +17391,11 @@
         "mode": "link",
         "links": [
             "be2ad471.d9c448",
-            "77e202e1f7cb4c98"
+            "77e202e1f7cb4c98",
+            "b0e54fbbc4d9fa6a"
         ],
         "x": 1125,
-        "y": 1100,
+        "y": 1060,
         "wires": []
     },
     {
@@ -17335,7 +17407,8 @@
         "links": [
             "77e202e1f7cb4c98",
             "d9f59e6e05f7c5b4",
-            "f627f6e01a47a3da"
+            "f627f6e01a47a3da",
+            "b0e54fbbc4d9fa6a"
         ],
         "x": 735,
         "y": 900,
@@ -17968,7 +18041,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 1370,
+        "x": 1430,
         "y": 680,
         "wires": [
             [],
@@ -18117,26 +18190,9 @@
         "y": 1200,
         "wires": [
             [
-                "367a4d93e5c5f6d7",
                 "2e1b6d1c6b4e6868"
             ]
         ]
-    },
-    {
-        "id": "367a4d93e5c5f6d7",
-        "type": "debug",
-        "z": "6a77c00f79a19693",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 1260,
-        "wires": []
     },
     {
         "id": "a09bf9651e2fe8bf",
@@ -18207,7 +18263,67 @@
         "y": 1200,
         "wires": [
             [
-                "a09bf9651e2fe8bf"
+                "a09bf9651e2fe8bf",
+                "6ebad7a8159c86cb"
+            ]
+        ]
+    },
+    {
+        "id": "6ebad7a8159c86cb",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "name": " Read all relevant presence states",
+        "func": "// Read all relevant presence states from global context\nconst phonesHome = global.get('phonesHome') || false;\nconst fp2 = global.get('fp2_presence') || false;\nconst motion = global.get('motion') || false;\nconst door = global.get('door_open') || false;\nconst visitorMode = global.get('VisitorMode') || false;\nconst maidMode = global.get('MaidMode') || false;\nconst dogSitterMode = global.get('DogSitterMode') || false;\n\n// Zone presence variables\nconst oPresence = global.get('O-presence') || false;\nconst bPresence = global.get('B-Presence') || false;\nconst baPresence = global.get('BA-Presence') || false;\nconst haPresence = global.get('HA-Presence') || false;\nconst stPresence = global.get('ST-presence') || false;\n\n// Aggregate logic: present if any are true\nlet present = false;\nif (\n    phonesHome || fp2 || motion || door ||\n    visitorMode || maidMode || dogSitterMode ||\n    oPresence || bPresence || baPresence || haPresence || stPresence\n) {\n    present = true;\n}\n\n// Timeout logic for away\nlet lastPresent = flow.get('lastPresent') || Date.now();\nif (present) {\n    flow.set('lastPresent', Date.now());\n} else {\n    if (Date.now() - lastPresent < 10 * 60 * 1000) { // 10 min timeout\n        present = true;\n    }\n}\nglobal.set(\"presence\",  present);\n",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1600,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "b0e54fbbc4d9fa6a",
+        "type": "link in",
+        "z": "6a77c00f79a19693",
+        "name": "link in 5",
+        "links": [
+            "bc76c6da083bdd3b",
+            "772b0560.6b8bcc",
+            "47763aff.5ff334",
+            "6b9eeab08f2cdd54",
+            "ca84a21742d3e0cd"
+        ],
+        "x": 1345,
+        "y": 900,
+        "wires": [
+            [
+                "6ebad7a8159c86cb"
+            ]
+        ]
+    },
+    {
+        "id": "96b52fcc960c59d0",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "GLobal presence FALSE?",
+        "property": "presence",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1070,
+        "y": 620,
+        "wires": [
+            [
+                "da091a4c003e3588"
             ]
         ]
     },
