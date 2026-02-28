@@ -1,4 +1,4 @@
-[
+﻿[
     {
         "id": "1c11632f.f206fd",
         "type": "tab",
@@ -5419,7 +5419,7 @@
         "y": 400,
         "wires": [
             [
-                "e54806fb.80a248"
+                "4d78d8f1425ea3f4"
             ]
         ]
     },
@@ -7288,7 +7288,7 @@
         "z": "8b99f8fe.7b27b8",
         "g": "429d0786e75351cd",
         "name": "Sleep",
-        "func": "// msg.payload = {\"mode\":\"sleep\"};\n// global.set(\"Mode\", \"sleep\")\nreturn msg;",
+        "func": "global.set(\"Mode\", \"sleep\");\nglobal.set(\"modeSource\", \"nodered_sleep_flow\");\nmsg.mode = \"sleep\";\nmsg.mode_source = \"nodered_sleep_flow\";\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -9757,6 +9757,27 @@
         "wires": [
             [
                 "0187c3a623bbd919"
+            ]
+        ]
+    },
+    {
+        "id": "4d78d8f1425ea3f4",
+        "type": "function",
+        "z": "aa0ae7ae.75d228",
+        "g": "8da8f3a9a56fc7ee",
+        "name": "Track bedroom manual override",
+        "func": "const mode = global.get(\"Mode\");\nconst topic = (msg.topic || \"\").toString().toLowerCase();\n\nif (mode === \"sleep\" && topic !== \"auto\") {\n    const now = Date.now();\n    const ttlMs = 10 * 60 * 1000;\n    global.set(\"bedroomManualOverrideUntil\", now + ttlMs);\n\n    let overrides = global.get(\"manualOverrideLog\") || [];\n    overrides.unshift({\n        ts: new Date(now).toISOString(),\n        room: \"S-LYS\",\n        source: \"btn_Bedroom\",\n        topic: topic || \"manual\",\n        mode: mode\n    });\n\n    if (overrides.length > 200) {\n        overrides = overrides.slice(0, 200);\n    }\n\n    global.set(\"manualOverrideLog\", overrides);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 440,
+        "wires": [
+            [
+                "e54806fb.80a248"
             ]
         ]
     },
@@ -18253,7 +18274,7 @@
         "type": "function",
         "z": "6a77c00f79a19693",
         "name": " Read all relevant presence states",
-        "func": "// Read all relevant presence states from global context\nconst phonesHome = global.get('phonesHome') || false;\nconst fp2 = global.get('fp2_presence') || false;\nconst motion = global.get('motion') || false;\nconst door = global.get('door_open') || false;\nconst visitorMode = global.get('VisitorMode') || false;\nconst maidMode = global.get('MaidMode') || false;\nconst dogSitterMode = global.get('DogSitterMode') || false;\n\n// Zone presence variables\nconst oPresence = global.get('O-presence') || false;\nconst bPresence = global.get('B-Presence') || false;\nconst baPresence = global.get('BA-Presence') || false;\nconst haPresence = global.get('HA-Presence') || false;\nconst stPresence = global.get('ST-presence') || false;\n\n// Aggregate logic: present if any are true\nlet present = false;\nif (\n    phonesHome || fp2 || motion || door ||\n    visitorMode || maidMode || dogSitterMode ||\n    oPresence || bPresence || baPresence || haPresence || stPresence\n) {\n    present = true;\n}\n\n// Timeout logic for away\nlet lastPresent = flow.get('lastPresent') || Date.now();\nif (present) {\n    flow.set('lastPresent', Date.now());\n} else {\n    if (Date.now() - lastPresent < 10 * 60 * 1000) { // 10 min timeout\n        present = true;\n    }\n}\nglobal.set(\"presence\",  present);\n",
+        "func": "// Read all relevant presence states from global context\nconst phonesHome = global.get('phonesHome') || false;\nconst fp2 = global.get('fp2_presence') || false;\nconst motion = global.get('motion') || false;\nconst door = global.get('door_open') || false;\nconst visitorMode = global.get('VisitorMode') || false;\nconst maidMode = global.get('MaidMode') || false;\nconst dogSitterMode = global.get('DogSitterMode') || false;\n\n// Lock-based confidence (set by lock event handler)\nconst lockConfidenceUntil = global.get('lockConfidenceUntil') || 0;\nconst lockConfidenceActive = Date.now() < lockConfidenceUntil;\n\n// Zone presence variables\nconst oPresence = global.get('O-presence') || false;\nconst bPresence = global.get('B-Presence') || false;\nconst baPresence = global.get('BA-Presence') || false;\nconst haPresence = global.get('HA-Presence') || false;\nconst stPresence = global.get('ST-presence') || false;\n\n// Aggregate logic: present if any are true\nlet present = false;\nif (\n    phonesHome || fp2 || motion || door || lockConfidenceActive ||\n    visitorMode || maidMode || dogSitterMode ||\n    oPresence || bPresence || baPresence || haPresence || stPresence\n) {\n    present = true;\n}\n\n// Timeout logic for away\nlet lastPresent = flow.get('lastPresent') || Date.now();\nif (present) {\n    flow.set('lastPresent', Date.now());\n} else if (Date.now() - lastPresent < 10 * 60 * 1000) {\n    present = true;\n}\n\nconst mode = global.get('Mode') || 'unknown';\nconst occupancyState = present ? 'home' : 'away';\n\nglobal.set('presence', present);\nglobal.set('houseState', {\n    occupancy: occupancyState,\n    mode: mode,\n    lockConfidenceActive: lockConfidenceActive,\n    updatedAt: new Date().toISOString()\n});\n",
         "outputs": 0,
         "timeout": 0,
         "noerr": 0,
@@ -18311,17 +18332,17 @@
         "id": "643fc82f488376a7",
         "type": "server-state-changed",
         "z": "6a77c00f79a19693",
-        "name": "",
+        "name": "All locks",
         "server": "c8d8b6d992397cb8",
         "version": 6,
         "outputs": 1,
         "exposeAsEntityConfig": "",
         "entities": {
-            "entity": [
-                "lock.inngangsdor"
-            ],
+            "entity": [],
             "substring": [],
-            "regex": []
+            "regex": [
+                "^lock\\."
+            ]
         },
         "outputInitially": true,
         "stateType": "str",
@@ -18386,8 +18407,8 @@
         "id": "703ee5620b182cbb",
         "type": "function",
         "z": "6a77c00f79a19693",
-        "name": "function 2",
-        "func": "// Extract the data\nconst time = new Date().toLocaleString(\"no-NO\");\nconst state = msg.data.new_state.state;\nconst user = msg.data.new_state.attributes.changed_by || \"Unknown/Manual\";\n\n// Create a clean object for this specific event\nconst newEntry = { time: time, state: state, user: user };\n\n// Retrieve the existing history from the flow variable (or start an empty array)\nlet lockHistory = flow.get(\"yaleLockHistory\") || [];\n\n// Add the new entry to the top of the list\nlockHistory.unshift(newEntry);\n\n// Limit the history to the last 50 entries to save memory\nif (lockHistory.length > 50) {\n    lockHistory.pop();\n}\n\n// Save the updated list back to the flow variable\nflow.set(\"yaleLockHistory\", lockHistory);\n\n// Output the full history so you can see it in a debug node\nmsg.payload = lockHistory;\n\nreturn msg;",
+        "name": "Lock event handler",
+        "func": "// Extract the data\nconst time = new Date().toLocaleString(\"no-NO\");\nconst state = msg.data.new_state.state;\nconst entityId = msg.data.entity_id || (msg.data.new_state && msg.data.new_state.entity_id) || \"unknown.lock\";\nconst user = msg.data.new_state.attributes.changed_by || \"Unknown/Manual\";\n\n// Create a clean object for this specific event\nconst newEntry = { time: time, lock: entityId, state: state, user: user };\n\n// Retrieve the existing history from the flow variable (or start an empty array)\nlet lockHistory = flow.get(\"yaleLockHistory\") || [];\n\n// Add the new entry to the top of the list\nlockHistory.unshift(newEntry);\n\n// Limit the history to the last 50 entries to save memory\nif (lockHistory.length > 50) {\n    lockHistory.pop();\n}\n\n// Save the updated list back to the flow variable\nflow.set(\"yaleLockHistory\", lockHistory);\n\n// Presence confidence boost for 10 minutes after lock activity\nconst confidenceUntil = Date.now() + (10 * 60 * 1000);\nglobal.set(\"lockConfidenceUntil\", confidenceUntil);\nglobal.set(\"latestLockEvent\", newEntry);\n\n// Output history and trigger presence recalculation\nmsg.payload = lockHistory;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -18398,7 +18419,8 @@
         "y": 1460,
         "wires": [
             [
-                "682638f421e06cc4"
+                "682638f421e06cc4",
+                "b0e54fbbc4d9fa6a"
             ]
         ]
     },
@@ -18962,6 +18984,13 @@
                 "pt": "msg",
                 "to": "away",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "Mode",
+                "pt": "global",
+                "to": "away",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -18990,6 +19019,13 @@
                 "pt": "msg",
                 "to": "home",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "Mode",
+                "pt": "global",
+                "to": "home",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -19016,6 +19052,13 @@
                 "t": "set",
                 "p": "mode",
                 "pt": "msg",
+                "to": "sleep",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "Mode",
+                "pt": "global",
                 "to": "sleep",
                 "tot": "str"
             }
@@ -22143,7 +22186,7 @@
         ]
     },
     {
-        "id": "6caf66e7e6f4fc81",
+        "id": "a1b2c3d4e5f60897",
         "type": "change",
         "z": "19a61e2a.75f152",
         "name": "Husk",
@@ -24540,7 +24583,8 @@
         "y": 600,
         "wires": [
             [
-                "vm_sched_activate"
+                "682638f421e06cc4",
+                "b0e54fbbc4d9fa6a"
             ],
             [
                 "vm_sched_deactivate"
