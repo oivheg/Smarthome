@@ -135,19 +135,19 @@
         "env": []
     },
     {
-        "id": "7726ba2859088e60",
-        "type": "tab",
-        "label": "Presence Detection",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "189409faf8842877",
         "type": "tab",
         "label": "TemperatureControllV2",
         "disabled": false,
         "info": "## Temperature Control V2 - Simplified\n\n### Zones\n- Winter heating: Focus DOWNSTAIRS\n- Summer cooling: Focus UPSTAIRS\n- Bedtime: Cool DOWNSTAIRS to 19°C\n\n### Modes\n- HOME: Maintain desiredTemp\n- AWAY: Save energy (20°C), pre-heat at 15:00\n- SLEEP: 19°C then OFF\n\n### Schedule\n- Weekday morning: 06:30\n- Weekend morning: 08:00\n- Bedtime prep: 20:30 (if TV off)\n- Night: 22:00 OFF",
+        "env": []
+    },
+    {
+        "id": "6a77c00f79a19693",
+        "type": "tab",
+        "label": "Presence Detection",
+        "disabled": false,
+        "info": "",
         "env": []
     },
     {
@@ -826,7 +826,8 @@
             "f9450bda48f83deb",
             "f539323231f77776",
             "b9eed7dde8000c3e",
-            "0a13e388cbc5a023"
+            "0a13e388cbc5a023",
+            "193647e9d8ce5333"
         ],
         "x": 824,
         "y": 479,
@@ -1529,67 +1530,6 @@
         "h": 142
     },
     {
-        "id": "53a938c4afca7eab",
-        "type": "group",
-        "z": "7726ba2859088e60",
-        "name": "To Get device mac, based on known IP",
-        "style": {
-            "fill": "#bfc7d7",
-            "label": true,
-            "label-position": "n",
-            "color": "#000000"
-        },
-        "nodes": [
-            "f2b842dc205d9a7a",
-            "a6920b80ce904f84",
-            "5592b3d8c65342b1"
-        ],
-        "x": 465,
-        "y": 534,
-        "w": 432,
-        "h": 82
-    },
-    {
-        "id": "8b4b231bbf9f1d8a",
-        "type": "group",
-        "z": "7726ba2859088e60",
-        "name": "Dog Sitter Mode",
-        "style": {
-            "fill": "#7fb7df",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "e432ee5c79409b8d",
-            "53b0a6a7ff063793",
-            "44c69e868891a309",
-            "f65e0a81ecee162b",
-            "ea0b886631811fa6",
-            "23a3667a4eae95b9",
-            "8673992d4c2b2b8c",
-            "f8d38191a906deeb",
-            "2038d0b86be04a03",
-            "12b6a546094516b2",
-            "077bdeb57853c9f3",
-            "40aaf40d7332f0e3",
-            "deb8020ba162f101",
-            "67f4a2de72aeaf38",
-            "e012dad7bbaa75ad",
-            "0934c3f9201a3fc9",
-            "6ffc6a0174da7967",
-            "7595067cfe12ac50",
-            "cf4ece4263f34342",
-            "e59bbb6ec39cea89",
-            "a89b56716ef226c9",
-            "dfa4c1bb04cdde40",
-            "2b9c2d05691982f7"
-        ],
-        "x": 314,
-        "y": 19,
-        "w": 1252,
-        "h": 322
-    },
-    {
         "id": "e03c22601cc318e1",
         "type": "group",
         "z": "189409faf8842877",
@@ -1819,6 +1759,91 @@
         "y": 1099,
         "w": 942,
         "h": 122
+    },
+    {
+        "id": "f36c921c7f424de5",
+        "type": "group",
+        "z": "6a77c00f79a19693",
+        "name": "To Get device mac, based on known IP",
+        "style": {
+            "fill": "#bfc7d7",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "f76dc950e201b13c",
+            "923123cf470fc3e4",
+            "1860791aaa644301"
+        ],
+        "x": 465,
+        "y": 534,
+        "w": 432,
+        "h": 82
+    },
+    {
+        "id": "58a01d02b4619b46",
+        "type": "group",
+        "z": "6a77c00f79a19693",
+        "name": "Dog Sitter Mode",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "38519274c0551bb7",
+            "ed4c1dbd7e3c8218",
+            "d8cc8d6cd6ac5ca8",
+            "77e202e1f7cb4c98",
+            "99e34fb7e0972e1e",
+            "e4188f47293e43df",
+            "6504b75c810f8995",
+            "9ab71bb708f19c1b",
+            "3fc79d5f33bafedc",
+            "2f576cac154fabea",
+            "7f851e060826def4",
+            "092abfe4f694d244",
+            "b6a29855cdae995e",
+            "5f39989d186eff71",
+            "9bd4ae83dda03a5e",
+            "2269200b466aa112",
+            "ef6ae4e981532ef3",
+            "10e22a1e9cb69adb",
+            "fbc0b4b628c8de0f",
+            "87845e6165a9844d",
+            "bb4c524ddea9d903",
+            "cc6d1b5c216b0f73",
+            "8a959998326ddd98"
+        ],
+        "x": 314,
+        "y": 19,
+        "w": 1252,
+        "h": 322
+    },
+    {
+        "id": "aa11bb22cc33dd07",
+        "type": "group",
+        "z": "6a77c00f79a19693",
+        "name": "Arrival / Departure Detection",
+        "style": {
+            "fill": "#d4e6b5",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "aa11bb22cc33dd01",
+            "aa11bb22cc33dd02",
+            "aa11bb22cc33dd03",
+            "aa11bb22cc33dd05",
+            "aa11bb22cc33dd06",
+            "31bbe0578e084940"
+        ],
+        "x": 984,
+        "y": 1499,
+        "w": 932,
+        "h": 202
     },
     {
         "id": "aaf5b9532af1fbac",
@@ -4908,8 +4933,6 @@
             "858b8605826bec63",
             "e0f4bc77f36c022a",
             "4cf9b6efdbba67fa",
-            "bb4c524ddea9d903",
-            "b6a29855cdae995e",
             "a834552d0be27f3a",
             "vm_sched_announce"
         ],
@@ -4931,7 +4954,8 @@
             "9c907e1d118e1133",
             "a84ac6f3a352ff80",
             "f803dc8c9371fd5f",
-            "f676af51cded15ca"
+            "f676af51cded15ca",
+            "31bbe0578e084940"
         ],
         "x": 175,
         "y": 200,
@@ -5742,7 +5766,7 @@
         "y": 560,
         "wires": [
             [
-                "4ce3539c5f7a0ca7"
+                "193647e9d8ce5333"
             ]
         ]
     },
@@ -5822,9 +5846,7 @@
         "z": "aa0ae7ae.75d228",
         "g": "ff7ca7f8980ed0b1",
         "name": "Movement oppe",
-        "links": [
-            "bc76c6da083bdd3b"
-        ],
+        "links": [],
         "x": 175,
         "y": 880,
         "wires": [
@@ -6021,13 +6043,23 @@
             },
             {
                 "name": "LightTreshold",
-                "value": "ignore",
+                "value": "150",
                 "type": "str"
             },
             {
                 "name": "delay",
                 "value": "6",
                 "type": "num"
+            },
+            {
+                "name": "startTime",
+                "value": "07:00",
+                "type": "str"
+            },
+            {
+                "name": "endTime",
+                "value": "22:00",
+                "type": "str"
             }
         ],
         "x": 1340,
@@ -7150,6 +7182,34 @@
         ]
     },
     {
+        "id": "193647e9d8ce5333",
+        "type": "change",
+        "z": "aa0ae7ae.75d228",
+        "g": "a7b26502af3b65e3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "illum",
+                "pt": "msg",
+                "to": "U_illumenance",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 560,
+        "wires": [
+            [
+                "4ce3539c5f7a0ca7"
+            ]
+        ]
+    },
+    {
         "id": "1329b56.bea634b",
         "type": "link in",
         "z": "8b99f8fe.7b27b8",
@@ -7160,7 +7220,6 @@
             "455faa8d.6c9aa4",
             "63e9f9b.1d13608",
             "9ace10c4.4ce8f",
-            "cf3797c1e0b5c101",
             "dc7a9dbe.e7065",
             "e92f253c.11b9b8",
             "b526ea173bec8f67"
@@ -7702,8 +7761,7 @@
         "name": "Set Mode",
         "links": [
             "5c5afd3abb577912",
-            "6b9eeab08f2cdd54",
-            "99e34fb7e0972e1e"
+            "ab5068bd204634c6"
         ],
         "x": 985,
         "y": 100,
@@ -7814,9 +7872,7 @@
         "z": "8b99f8fe.7b27b8",
         "g": "0a0b0609692fe022",
         "name": "Activate manualmode",
-        "links": [
-            "2269200b466aa112"
-        ],
+        "links": [],
         "x": 195,
         "y": 220,
         "wires": [
@@ -7868,9 +7924,7 @@
         "z": "8b99f8fe.7b27b8",
         "g": "0a0b0609692fe022",
         "name": "Deactivate manualmode",
-        "links": [
-            "7f851e060826def4"
-        ],
+        "links": [],
         "x": 195,
         "y": 260,
         "wires": [
@@ -8872,7 +8926,6 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "77e202e1f7cb4c98",
             "f66e7e24.aca9d"
         ],
         "x": 695,
@@ -9000,8 +9053,7 @@
         "name": "Bvegelse Soverom",
         "links": [
             "50b0d259.df502c",
-            "1329b56.bea634b",
-            "77e202e1f7cb4c98"
+            "1329b56.bea634b"
         ],
         "x": 695,
         "y": 220,
@@ -9035,7 +9087,6 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "77e202e1f7cb4c98",
             "60b2567222677770"
         ],
         "x": 695,
@@ -9325,7 +9376,6 @@
         "links": [
             "1329b56.bea634b",
             "2214d9cb038cf259",
-            "77e202e1f7cb4c98",
             "c840b6850a9f9370"
         ],
         "x": 695,
@@ -9376,7 +9426,6 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "77e202e1f7cb4c98",
             "ca59d875951bc88c"
         ],
         "x": 695,
@@ -11332,9 +11381,7 @@
         "type": "link in",
         "z": "a9a601907d96eb09",
         "name": "Aqara FP2",
-        "links": [
-            "ca84a21742d3e0cd"
-        ],
+        "links": [],
         "x": 185,
         "y": 240,
         "wires": [
@@ -12669,9 +12716,7 @@
         "type": "link in",
         "z": "81eedfe27e202b5a",
         "name": "Aqara FP2",
-        "links": [
-            "ca84a21742d3e0cd"
-        ],
+        "links": [],
         "x": 255,
         "y": 240,
         "wires": [
@@ -17706,8 +17751,7 @@
         "g": "12605644788902fd",
         "name": "Set HOME",
         "links": [
-            "247260f.c82dca",
-            "fbc0b4b628c8de0f"
+            "247260f.c82dca"
         ],
         "x": 1895,
         "y": 120,
@@ -18839,8 +18883,7 @@
         "g": "833beeaf82e34801",
         "name": "Turn OFF ALL Lights",
         "links": [
-            "fc4fe81e.444628",
-            "b6a29855cdae995e"
+            "fc4fe81e.444628"
         ],
         "x": 305,
         "y": 1300,
@@ -19143,9 +19186,7 @@
         "z": "2153cce4d74e8cba",
         "g": "833beeaf82e34801",
         "name": "Turn ON ALL Lights",
-        "links": [
-            "2269200b466aa112"
-        ],
+        "links": [],
         "x": 305,
         "y": 1260,
         "wires": [
@@ -22650,9 +22691,7 @@
         "z": "61f713462b422a81",
         "g": "1f543c3859db0ffb",
         "name": "",
-        "links": [
-            "772b0560.6b8bcc"
-        ],
+        "links": [],
         "x": 235,
         "y": 160,
         "wires": [
@@ -22667,9 +22706,7 @@
         "z": "61f713462b422a81",
         "g": "1f543c3859db0ffb",
         "name": "",
-        "links": [
-            "47763aff.5ff334"
-        ],
+        "links": [],
         "x": 235,
         "y": 200,
         "wires": [
@@ -23231,1579 +23268,6 @@
         "wires": [
             [
                 "vm_sched_deactivate"
-            ]
-        ]
-    },
-    {
-        "id": "e432ee5c79409b8d",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "Mode",
-        "property": "Mode",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "away",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "home",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1090,
-        "y": 60,
-        "wires": [
-            [
-                "53b0a6a7ff063793"
-            ],
-            [
-                "44c69e868891a309"
-            ]
-        ]
-    },
-    {
-        "id": "53b0a6a7ff063793",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "link out 11",
-        "mode": "link",
-        "links": [],
-        "x": 1435,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "44c69e868891a309",
-        "type": "trigger",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "",
-        "op1": "",
-        "op2": "false",
-        "op1type": "nul",
-        "op2type": "bool",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1260,
-        "y": 120,
-        "wires": [
-            [
-                "ea0b886631811fa6"
-            ]
-        ]
-    },
-    {
-        "id": "f65e0a81ecee162b",
-        "type": "link in",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "Reset away mode",
-        "links": [
-            "455faa8d.6c9aa4",
-            "63e9f9b.1d13608",
-            "9ace10c4.4ce8f",
-            "b526ea173bec8f67",
-            "72ac60c726354be6",
-            "d8c124ac17fec14e",
-            "e92f253c.11b9b8"
-        ],
-        "x": 365,
-        "y": 120,
-        "wires": [
-            [
-                "23a3667a4eae95b9"
-            ]
-        ]
-    },
-    {
-        "id": "ea0b886631811fa6",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "d": true,
-        "g": "8b4b231bbf9f1d8a",
-        "name": "link out 12",
-        "mode": "link",
-        "links": [
-            "9e9814a999c69457"
-        ],
-        "x": 1525,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "23a3667a4eae95b9",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "Is Movement",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": true,
-        "outputs": 2,
-        "x": 560,
-        "y": 120,
-        "wires": [
-            [
-                "2038d0b86be04a03"
-            ],
-            [
-                "2b9c2d05691982f7"
-            ]
-        ]
-    },
-    {
-        "id": "8673992d4c2b2b8c",
-        "type": "delay",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "5",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 940,
-        "y": 60,
-        "wires": [
-            [
-                "e432ee5c79409b8d"
-            ]
-        ]
-    },
-    {
-        "id": "f8d38191a906deeb",
-        "type": "change",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "delete",
-                "p": "reset",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1270,
-        "y": 200,
-        "wires": [
-            [
-                "ea0b886631811fa6"
-            ]
-        ]
-    },
-    {
-        "id": "2038d0b86be04a03",
-        "type": "change",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 940,
-        "y": 160,
-        "wires": [
-            [
-                "f8d38191a906deeb",
-                "44c69e868891a309",
-                "dfa4c1bb04cdde40"
-            ]
-        ]
-    },
-    {
-        "id": "1e32253c833c2c6e",
-        "type": "function",
-        "z": "7726ba2859088e60",
-        "name": "Determine device presence",
-        "func": "// ARP-based phone presence detection\n// Scans local network for known MAC addresses\nlet data = { payload: false, people: [] };\n\nfor (let device in msg.payload) {\n    const mac = msg.payload[device].mac;\n    switch (mac) {\n        case \"fa:9b:7e:5a:6c:6e\":\n        case \"52:9c:f0:c9:7a:bd\":\n        case \"aa:e4:74:26:ba:e3\":\n        case \"6a:a4:ac:02:44:19\":\n        case \"ce:4b:f9:34:9b:7d\":\n        case \"46:5f:50:69:f1:6a\":\n            if (!data.people.includes(\"heggland\")) {\n                data.people.push(\"heggland\");\n            }\n            data.payload = true;\n            break;\n        case \"d6:05:24:1f:de:7a\":\n        case \"de:61:a8:7d:7f:6f\":\n        case \"52:e0:79:65:ea:f5\":\n        case \"ca:e7:6e:18:e6:66\":\n            if (!data.people.includes(\"karina\")) {\n                data.people.push(\"karina\");\n            }\n            data.payload = true;\n            break;\n        default:\n            break;\n    }\n}\n\n// Store phone presence globals for aggregation\nglobal.set('heggland_home', data.people.includes(\"heggland\"));\nglobal.set('karina_home', data.people.includes(\"karina\"));\nglobal.set('phonesHome', data.payload);\n\n// Node status\nif (data.payload) {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Home: \" + data.people.join(\", \")});\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No phones detected\"});\n}\n\nreturn data;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 711,
-        "y": 655,
-        "wires": [
-            [
-                "534c86c5a8dbdf0a",
-                "be78016b9b3e2b29"
-            ]
-        ],
-        "outputLabels": [
-            "oivheg "
-        ]
-    },
-    {
-        "id": "534c86c5a8dbdf0a",
-        "type": "function",
-        "z": "7726ba2859088e60",
-        "name": "Check Phones",
-        "func": "\nlet home = [{ payload: false }, { payload: false }];\nmsg.people.forEach(function(element) {\n    msg.payload =true;\n    if (element == \"heggland\"){\n       home[0].payload = true;\n        \n    }\n    if (element == \"karina\") {\n        home[1].payload = true;\n\n\n    }\n});\n\nreturn home;",
-        "outputs": 2,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 841,
-        "y": 715,
-        "wires": [
-            [
-                "bbb90a7b850c95c8"
-            ],
-            [
-                "5a0b17b4b2c9e183"
-            ]
-        ]
-    },
-    {
-        "id": "bbb90a7b850c95c8",
-        "type": "rbe",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1101,
-        "y": 715,
-        "wires": [
-            [
-                "65e50dc539dbdaef"
-            ]
-        ]
-    },
-    {
-        "id": "5a0b17b4b2c9e183",
-        "type": "rbe",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 1101,
-        "y": 755,
-        "wires": [
-            [
-                "023d7e96527a18d9"
-            ]
-        ]
-    },
-    {
-        "id": "65e50dc539dbdaef",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "name": "heggland",
-        "mode": "link",
-        "links": [
-            "d871d736.d19838",
-            "76e8a1dc28f85fdc"
-        ],
-        "x": 1266,
-        "y": 715,
-        "wires": []
-    },
-    {
-        "id": "023d7e96527a18d9",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "name": "karina",
-        "links": [
-            "84abded8.462ac",
-            "76e8a1dc28f85fdc"
-        ],
-        "x": 1266,
-        "y": 755,
-        "wires": []
-    },
-    {
-        "id": "6fb7c7282bc55f4c",
-        "type": "arp",
-        "z": "7726ba2859088e60",
-        "name": "ARP",
-        "ips": "",
-        "x": 461,
-        "y": 655,
-        "wires": [
-            [
-                "a6920b80ce904f84",
-                "b128e251eb79a010",
-                "1e32253c833c2c6e"
-            ]
-        ]
-    },
-    {
-        "id": "bbbdf6fc3c92b20c",
-        "type": "inject",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "27",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "30",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 241,
-        "y": 655,
-        "wires": [
-            [
-                "6fb7c7282bc55f4c"
-            ]
-        ]
-    },
-    {
-        "id": "198fd7c0d77caf25",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "name": "Set Away",
-        "mode": "link",
-        "links": [
-            "9e9814a999c69457",
-            "76e8a1dc28f85fdc"
-        ],
-        "x": 1606,
-        "y": 675,
-        "wires": []
-    },
-    {
-        "id": "f2b842dc205d9a7a",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "g": "53a938c4afca7eab",
-        "name": "",
-        "property": "payload.ip",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "192.168.1.196",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 661,
-        "y": 575,
-        "wires": [
-            [
-                "5592b3d8c65342b1"
-            ]
-        ]
-    },
-    {
-        "id": "a6920b80ce904f84",
-        "type": "split",
-        "z": "7726ba2859088e60",
-        "g": "53a938c4afca7eab",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 541,
-        "y": 575,
-        "wires": [
-            [
-                "f2b842dc205d9a7a"
-            ]
-        ]
-    },
-    {
-        "id": "72ac60c726354be6",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "name": "FP2 Livingroom",
-        "mode": "link",
-        "links": [
-            "be2ad471.d9c448",
-            "f65e0a81ecee162b",
-            "76e8a1dc28f85fdc"
-        ],
-        "x": 1125,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "d8c124ac17fec14e",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "name": "FP2 Bathroom",
-        "mode": "link",
-        "links": [
-            "f65e0a81ecee162b",
-            "d9f59e6e05f7c5b4",
-            "f627f6e01a47a3da",
-            "76e8a1dc28f85fdc"
-        ],
-        "x": 735,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "41868190ee9b3a28",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "name": "link out 18",
-        "mode": "link",
-        "links": [
-            "1329b56.bea634b"
-        ],
-        "x": 465,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "5592b3d8c65342b1",
-        "type": "debug",
-        "z": "7726ba2859088e60",
-        "g": "53a938c4afca7eab",
-        "name": "debug 64",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 791,
-        "y": 575,
-        "wires": []
-    },
-    {
-        "id": "0934c3f9201a3fc9",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "Maid",
-        "mode": "link",
-        "links": [
-            "16df02f3eb3587ef",
-            "f2c61516d13e4a6a"
-        ],
-        "x": 515,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "6ffc6a0174da7967",
-        "type": "change",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "DogSitterMode",
-        "rules": [
-            {
-                "t": "set",
-                "p": "DogSitterMode",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "text",
-                "pt": "msg",
-                "to": "DogSitterMode turned ON ",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 580,
-        "y": 240,
-        "wires": [
-            [
-                "a89b56716ef226c9",
-                "dfa4c1bb04cdde40"
-            ]
-        ]
-    },
-    {
-        "id": "12b6a546094516b2",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "DogSitterMode",
-        "property": "DogSitterMode",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 950,
-        "y": 100,
-        "wires": [
-            [
-                "44c69e868891a309",
-                "077bdeb57853c9f3",
-                "40aaf40d7332f0e3"
-            ]
-        ]
-    },
-    {
-        "id": "077bdeb57853c9f3",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "d": true,
-        "g": "8b4b231bbf9f1d8a",
-        "name": "MaidMode",
-        "mode": "link",
-        "links": [
-            "137603dc312c04a3"
-        ],
-        "x": 1235,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "40aaf40d7332f0e3",
-        "type": "change",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "DogSitterMode",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "text",
-                "pt": "msg",
-                "to": "DogSitterMode turned OFF ",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1270,
-        "y": 160,
-        "wires": [
-            [
-                "deb8020ba162f101"
-            ]
-        ]
-    },
-    {
-        "id": "deb8020ba162f101",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "Turn off al lights",
-        "mode": "link",
-        "links": [
-            "5cfbdbd83670143c",
-            "fa037bf9c192d1d3"
-        ],
-        "x": 1445,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "67f4a2de72aeaf38",
-        "type": "subflow:05933d2d8abb4be7",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "",
-        "x": 560,
-        "y": 60,
-        "wires": [
-            [
-                "8673992d4c2b2b8c"
-            ],
-            [
-                "12b6a546094516b2"
-            ]
-        ]
-    },
-    {
-        "id": "7595067cfe12ac50",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "Mode",
-        "property": "Mode",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "home",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "sleep",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 3,
-        "x": 550,
-        "y": 280,
-        "wires": [
-            [],
-            [],
-            [
-                "cf4ece4263f34342"
-            ]
-        ]
-    },
-    {
-        "id": "cf4ece4263f34342",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "LOCK USER NOT MAID ",
-        "mode": "link",
-        "links": [
-            "f27df5b9f6840243"
-        ],
-        "x": 675,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "f7c053e47f7f7617",
-        "type": "mqtt in",
-        "z": "7726ba2859088e60",
-        "name": "FP2 Bad",
-        "topic": "presence/bad",
-        "qos": "1",
-        "datatype": "auto-detect",
-        "broker": "5d47569e31e42f22",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 280,
-        "y": 920,
-        "wires": [
-            [
-                "41868190ee9b3a28",
-                "6f9acdddbd041894"
-            ]
-        ]
-    },
-    {
-        "id": "a210b0ee5fc37b23",
-        "type": "rbe",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1450,
-        "y": 680,
-        "wires": [
-            [
-                "198fd7c0d77caf25"
-            ]
-        ]
-    },
-    {
-        "id": "e012dad7bbaa75ad",
-        "type": "link in",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "Deactivate DogSitter Mode",
-        "links": [],
-        "x": 355,
-        "y": 60,
-        "wires": [
-            [
-                "67f4a2de72aeaf38"
-            ]
-        ]
-    },
-    {
-        "id": "e59bbb6ec39cea89",
-        "type": "link in",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "Activate DogSitterMode",
-        "links": [],
-        "x": 365,
-        "y": 240,
-        "wires": [
-            [
-                "0934c3f9201a3fc9",
-                "6ffc6a0174da7967",
-                "7595067cfe12ac50"
-            ]
-        ]
-    },
-    {
-        "id": "a89b56716ef226c9",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "d": true,
-        "g": "8b4b231bbf9f1d8a",
-        "name": "link out 33",
-        "mode": "link",
-        "links": [
-            "5cfbdbd83670143c"
-        ],
-        "x": 705,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "dfa4c1bb04cdde40",
-        "type": "trigger",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "3",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "hr",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 900,
-        "y": 220,
-        "wires": [
-            [
-                "40aaf40d7332f0e3"
-            ]
-        ]
-    },
-    {
-        "id": "2b9c2d05691982f7",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "g": "8b4b231bbf9f1d8a",
-        "name": "DogSitterMode",
-        "property": "DogSitterMode",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 640,
-        "y": 160,
-        "wires": [
-            [
-                "dfa4c1bb04cdde40"
-            ]
-        ]
-    },
-    {
-        "id": "b24621b43ec6377a",
-        "type": "server-state-changed",
-        "z": "7726ba2859088e60",
-        "name": "FP2 Combined",
-        "server": "c8d8b6d992397cb8",
-        "version": 6,
-        "outputs": 1,
-        "exposeAsEntityConfig": "",
-        "entities": {
-            "entity": [
-                "sensor.aqara_fp_combined"
-            ],
-            "substring": [],
-            "regex": []
-        },
-        "outputInitially": true,
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 270,
-        "y": 1000,
-        "wires": [
-            [
-                "3d115eba0c6bcb24"
-            ]
-        ]
-    },
-    {
-        "id": "3d115eba0c6bcb24",
-        "type": "json",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 540,
-        "y": 1000,
-        "wires": [
-            [
-                "4f93ea33b15bea9e"
-            ]
-        ]
-    },
-    {
-        "id": "90efcdcf2150d8ed",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 730,
-        "y": 1080,
-        "wires": [
-            [
-                "ceb7f829efc8ec46"
-            ],
-            [
-                "4e83fd36ace33158"
-            ]
-        ]
-    },
-    {
-        "id": "4e83fd36ace33158",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "name": "Mode",
-        "property": "Mode",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "home",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 850,
-        "y": 1140,
-        "wires": [
-            [
-                "ceb7f829efc8ec46"
-            ]
-        ]
-    },
-    {
-        "id": "6f9acdddbd041894",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 430,
-        "y": 860,
-        "wires": [
-            [
-                "d8c124ac17fec14e"
-            ],
-            [
-                "afc9029e403fef53"
-            ]
-        ]
-    },
-    {
-        "id": "afc9029e403fef53",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "name": "Mode",
-        "property": "Mode",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "away",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 430,
-        "y": 900,
-        "wires": [
-            [
-                "d8c124ac17fec14e"
-            ]
-        ]
-    },
-    {
-        "id": "4f93ea33b15bea9e",
-        "type": "change",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "illuminance",
-                "pt": "msg",
-                "to": "$number(payload.illuminance)\t\t",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.presence",
-                "tot": "msg"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "on",
-                "fromt": "str",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "off",
-                "fromt": "str",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "presence",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 720,
-        "y": 1000,
-        "wires": [
-            [
-                "90efcdcf2150d8ed",
-                "41868190ee9b3a28"
-            ]
-        ]
-    },
-    {
-        "id": "ceb7f829efc8ec46",
-        "type": "subflow:05933d2d8abb4be7",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "x": 990,
-        "y": 1060,
-        "wires": [
-            [
-                "72ac60c726354be6"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "b128e251eb79a010",
-        "type": "debug",
-        "z": "7726ba2859088e60",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 661,
-        "y": 755,
-        "wires": []
-    },
-    {
-        "id": "e88954f2727b28ff",
-        "type": "change",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1221,
-        "y": 535,
-        "wires": [
-            [
-                "a210b0ee5fc37b23"
-            ]
-        ]
-    },
-    {
-        "id": "295cfd4a2ed1f94f",
-        "type": "inject",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1041,
-        "y": 435,
-        "wires": [
-            [
-                "e88954f2727b28ff"
-            ]
-        ]
-    },
-    {
-        "id": "35cac8a1af81ec51",
-        "type": "server-state-changed",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "server": "c8d8b6d992397cb8",
-        "version": 6,
-        "outputs": 1,
-        "exposeAsEntityConfig": "",
-        "entities": {
-            "entity": [
-                "binary_sensor.bevegelse_oivind_kontor_bevegelse"
-            ],
-            "substring": [],
-            "regex": []
-        },
-        "outputInitially": true,
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "ha_boolean",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 480,
-        "y": 1200,
-        "wires": [
-            [
-                "c24fa6826901c7bc"
-            ]
-        ]
-    },
-    {
-        "id": "36ed3ac1f398e067",
-        "type": "change",
-        "z": "7726ba2859088e60",
-        "name": "Set Office Motion",
-        "rules": [
-            {
-                "t": "set",
-                "p": "office_motion",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1190,
-        "y": 1200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c24fa6826901c7bc",
-        "type": "trigger",
-        "z": "7726ba2859088e60",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "pay",
-        "op2type": "payl",
-        "duration": "5",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 850,
-        "y": 1200,
-        "wires": [
-            [
-                "36ed3ac1f398e067",
-                "ce1b39262e3ea154"
-            ]
-        ]
-    },
-    {
-        "id": "ce1b39262e3ea154",
-        "type": "function",
-        "z": "7726ba2859088e60",
-        "name": "Presence Aggregation",
-        "func": "// ====== PRESENCE AGGREGATION ======\n// Reads ALL presence signals and determines overall house occupancy\n\n// --- Phone presence (ARP) ---\nconst hegglandHome = global.get('heggland_home') || false;\nconst karinaHome = global.get('karina_home') || false;\nconst phonesHome = hegglandHome || karinaHome;\n\n// --- FP2 presence sensors ---\nconst fp2Presence = global.get('fp2_presence') || false;\nconst fp2Bathroom = global.get('fp2_bathroom') || false;\nconst globalPresenceSensor = global.get('presence') || false;\n\n// --- Motion sensors ---\nconst officeMotion = global.get('office_motion') || false;\nconst motionGeneral = global.get('motion') || false;\n\n// --- Room zone presence (from other tabs) ---\nconst oPresence = global.get('O-presence') || false;\nconst bPresence = global.get('B-Presence') || false;\nconst baPresence = global.get('BA-Presence') || false;\nconst haPresence = global.get('HA-Presence') || false;\nconst stPresence = global.get('ST-presence') || false;\n\n// --- Lock confidence ---\nconst lockConfidenceUntil = global.get('lockConfidenceUntil') || 0;\nconst lockConfidenceActive = Date.now() < lockConfidenceUntil;\n\n// --- Special modes ---\nconst visitorMode = global.get('VisitorMode') || false;\nconst maidMode = global.get('MaidMode') || false;\nconst dogSitterMode = flow.get('DogSitterMode') || false;\n\n// --- Door sensor ---\nconst doorOpen = global.get('door_open') || false;\n\n// ====== AGGREGATE ======\nlet present = false;\nlet reasons = [];\n\nif (phonesHome)           { present = true; reasons.push(hegglandHome && karinaHome ? 'phones(both)' : hegglandHome ? 'phone(H)' : 'phone(K)'); }\nif (fp2Presence)          { present = true; reasons.push('FP2'); }\nif (fp2Bathroom)          { present = true; reasons.push('FP2-bath'); }\nif (officeMotion)         { present = true; reasons.push('office'); }\nif (motionGeneral)        { present = true; reasons.push('motion'); }\nif (lockConfidenceActive) { present = true; reasons.push('lock-boost'); }\nif (oPresence)            { present = true; reasons.push('O-zone'); }\nif (bPresence)            { present = true; reasons.push('B-zone'); }\nif (baPresence)           { present = true; reasons.push('BA-zone'); }\nif (haPresence)           { present = true; reasons.push('HA-zone'); }\nif (stPresence)           { present = true; reasons.push('ST-zone'); }\nif (visitorMode)          { present = true; reasons.push('visitor'); }\nif (maidMode)             { present = true; reasons.push('maid'); }\nif (dogSitterMode)        { present = true; reasons.push('dogsitter'); }\nif (doorOpen)             { present = true; reasons.push('door-open'); }\n\n// ====== HYSTERESIS: 10 min buffer before going away ======\nlet lastPresent = flow.get('lastPresent') || Date.now();\nif (present) {\n    flow.set('lastPresent', Date.now());\n} else {\n    const elapsed = Date.now() - lastPresent;\n    if (elapsed < 10 * 60 * 1000) {\n        present = true;\n        reasons.push('hysteresis(' + Math.round((10*60*1000 - elapsed)/60000) + 'm)');\n    }\n}\n\n// ====== SET GLOBAL STATE ======\nconst mode = global.get('Mode') || 'unknown';\nconst occupancy = present ? 'home' : 'away';\n\nglobal.set('presence', present);\nglobal.set('houseState', {\n    occupancy: occupancy,\n    mode: mode,\n    present: present,\n    reasons: reasons,\n    hegglandHome: hegglandHome,\n    karinaHome: karinaHome,\n    lockConfidenceActive: lockConfidenceActive,\n    updatedAt: new Date().toISOString()\n});\n\n// ====== NODE STATUS ======\nconst reasonStr = reasons.join(', ');\nif (present) {\n    node.status({fill:'green',shape:'dot',text:'HOME: ' + reasonStr});\n} else {\n    node.status({fill:'red',shape:'ring',text:'AWAY - no signals'});\n}\n\n// Output the presence state for downstream processing\nmsg.payload = present;\nmsg.reasons = reasons;\nmsg.houseState = global.get('houseState');\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1600,
-        "y": 900,
-        "wires": [
-            [
-                "034c07f26e91157c"
-            ]
-        ]
-    },
-    {
-        "id": "76e8a1dc28f85fdc",
-        "type": "link in",
-        "z": "7726ba2859088e60",
-        "name": "link in 5",
-        "links": [
-            "72ac60c726354be6",
-            "65e50dc539dbdaef",
-            "023d7e96527a18d9",
-            "198fd7c0d77caf25",
-            "d8c124ac17fec14e",
-            "867be2b689cbfedb"
-        ],
-        "x": 1345,
-        "y": 900,
-        "wires": [
-            [
-                "ce1b39262e3ea154"
-            ]
-        ]
-    },
-    {
-        "id": "be78016b9b3e2b29",
-        "type": "switch",
-        "z": "7726ba2859088e60",
-        "name": "GLobal presence FALSE?",
-        "property": "presence",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1170,
-        "y": 680,
-        "wires": [
-            [
-                "a210b0ee5fc37b23"
-            ]
-        ]
-    },
-    {
-        "id": "3096dc14040b30ba",
-        "type": "server-state-changed",
-        "z": "7726ba2859088e60",
-        "name": "All locks",
-        "server": "c8d8b6d992397cb8",
-        "version": 6,
-        "outputs": 1,
-        "exposeAsEntityConfig": "",
-        "entities": {
-            "entity": [],
-            "substring": [],
-            "regex": [
-                "^lock\\."
-            ]
-        },
-        "outputInitially": true,
-        "stateType": "str",
-        "ifState": "",
-        "ifStateType": "str",
-        "ifStateOperator": "is",
-        "outputOnlyOnStateChange": true,
-        "for": "0",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "ha_boolean",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 390,
-        "y": 1460,
-        "wires": [
-            [
-                "98c180856b9f8210"
-            ]
-        ]
-    },
-    {
-        "id": "cfdb44214f6ec2c5",
-        "type": "debug",
-        "z": "7726ba2859088e60",
-        "name": "debug 5",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1100,
-        "y": 1480,
-        "wires": []
-    },
-    {
-        "id": "98c180856b9f8210",
-        "type": "function",
-        "z": "7726ba2859088e60",
-        "name": "Lock event handler",
-        "func": "// Extract lock event data\nconst time = new Date().toLocaleString(\"no-NO\");\nconst state = msg.data.new_state.state;\nconst entityId = msg.data.entity_id || (msg.data.new_state && msg.data.new_state.entity_id) || \"unknown.lock\";\nconst attrs = msg.data.new_state.attributes || {};\nconst user = attrs.changed_by || \"Unknown\";\n\n// Classify activity type based on user and state\nlet activityType = \"unknown\";\nlet icon = \"\\u2753\";\n\nif (user === \"Auto Lock\") {\n    activityType = \"auto-lock\";\n    icon = \"\\u23F1\\uFE0F\";\n} else if (user === \"Manual Unlock\" || user === \"Manual Lock\") {\n    activityType = \"manual\";\n    icon = state === \"unlocked\" ? \"\\uD83D\\uDD13\" : \"\\uD83D\\uDD12\";\n} else if (user === \"One-Touch Lock\") {\n    activityType = \"one-touch\";\n    icon = \"\\uD83D\\uDC46\";\n} else if (user !== \"Unknown\") {\n    // Named person - determine arrival vs departure\n    if (state === \"unlocked\") {\n        activityType = \"arrival\";\n        icon = \"\\uD83C\\uDFE0\";\n    } else {\n        activityType = \"departure\";\n        icon = \"\\uD83D\\uDEAA\";\n    }\n}\n\n// Friendly lock name\nconst lockName = entityId.replace('lock.', '').replace(/_/g, ' ');\n\n// Build event entry\nconst newEntry = {\n    time: time,\n    lock: entityId,\n    lockName: lockName,\n    state: state,\n    user: user,\n    activityType: activityType,\n    icon: icon\n};\n\n// Store history (max 50 entries)\nlet lockHistory = flow.get(\"yaleLockHistory\") || [];\nlockHistory.unshift(newEntry);\nif (lockHistory.length > 50) lockHistory.pop();\nflow.set(\"yaleLockHistory\", lockHistory);\n\n// Presence confidence boost: 10 min for named users, 5 min for others\nconst boostMinutes = (activityType === \"arrival\" || activityType === \"departure\") ? 10 : 5;\nconst confidenceUntil = Date.now() + (boostMinutes * 60 * 1000);\nglobal.set(\"lockConfidenceUntil\", confidenceUntil);\nglobal.set(\"latestLockEvent\", newEntry);\n\n// Status display\nnode.status({\n    fill: state === \"locked\" ? \"red\" : \"green\",\n    shape: \"dot\",\n    text: icon + \" \" + user + \" \" + state + \" \" + time\n});\n\nmsg.payload = lockHistory;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 1460,
-        "wires": [
-            [
-                "cfdb44214f6ec2c5",
-                "867be2b689cbfedb",
-                "8ea8c9228240e845"
-            ]
-        ]
-    },
-    {
-        "id": "867be2b689cbfedb",
-        "type": "link out",
-        "z": "7726ba2859088e60",
-        "name": "Lock → Aggregation",
-        "mode": "link",
-        "links": [
-            "76e8a1dc28f85fdc"
-        ],
-        "x": 1105,
-        "y": 1440,
-        "wires": []
-    },
-    {
-        "id": "034c07f26e91157c",
-        "type": "debug",
-        "z": "7726ba2859088e60",
-        "name": "Presence State",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "houseState",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1820,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "81492cf438b976da",
-        "type": "inject",
-        "z": "7726ba2859088e60",
-        "name": "Recalc every 5 min",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "300",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "60",
-        "topic": "",
-        "payload": "recalc",
-        "payloadType": "str",
-        "x": 1390,
-        "y": 960,
-        "wires": [
-            [
-                "ce1b39262e3ea154"
-            ]
-        ]
-    },
-    {
-        "id": "8ea8c9228240e845",
-        "type": "ui-template",
-        "z": "7726ba2859088e60",
-        "group": "e5f6b2c3d4a78901",
-        "page": "",
-        "ui": "",
-        "name": "Lock Activity Dashboard",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n  <div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-height: 480px; overflow-y: auto;\">\n    <div v-if=\"!msg?.payload || msg.payload.length === 0\" style=\"padding: 20px; color: #888; text-align: center;\">\n      Waiting for lock activity...\n    </div>\n    <table v-else style=\"width:100%; border-collapse: collapse; font-size: 13px;\">\n      <thead>\n        <tr style=\"background: #f0f2f5; text-align: left; position: sticky; top: 0;\">\n          <th style=\"padding: 8px 6px; width: 30px;\"></th>\n          <th style=\"padding: 8px 6px;\">Time</th>\n          <th style=\"padding: 8px 6px;\">Lock</th>\n          <th style=\"padding: 8px 6px;\">User</th>\n          <th style=\"padding: 8px 6px;\">State</th>\n          <th style=\"padding: 8px 6px;\">Activity</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr v-for=\"(entry, idx) in msg.payload\" :key=\"idx\"\n            :style=\"{ background: idx % 2 === 0 ? '#ffffff' : '#f9fafb',\n                       borderLeft: entry.activityType === 'arrival' ? '3px solid #27ae60' :\n                                   entry.activityType === 'departure' ? '3px solid #e74c3c' :\n                                   entry.activityType === 'auto-lock' ? '3px solid #3498db' :\n                                   '3px solid #95a5a6' }\">\n          <td style=\"padding: 6px; text-align: center; font-size: 16px;\">{{ entry.icon }}</td>\n          <td style=\"padding: 6px; white-space: nowrap; color: #555;\">{{ entry.time }}</td>\n          <td style=\"padding: 6px; text-transform: capitalize;\">{{ entry.lockName || entry.lock }}</td>\n          <td style=\"padding: 6px; font-weight: 600;\"\n              :style=\"{ color: entry.activityType === 'arrival' ? '#27ae60' :\n                               entry.activityType === 'departure' ? '#e74c3c' : '#333' }\">\n            {{ entry.user }}\n          </td>\n          <td style=\"padding: 6px;\">\n            <span :style=\"{ color: entry.state === 'locked' ? '#c0392b' : '#27ae60',\n                            fontWeight: 'bold', fontSize: '12px',\n                            padding: '2px 8px', borderRadius: '10px',\n                            background: entry.state === 'locked' ? '#fde8e8' : '#e8fde8' }\">\n              {{ entry.state === 'locked' ? '\\uD83D\\uDD12 Locked' : '\\uD83D\\uDD13 Unlocked' }}\n            </span>\n          </td>\n          <td style=\"padding: 6px; color: #888; font-size: 12px; text-transform: capitalize;\">\n            {{ entry.activityType }}\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</template>\n",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1110,
-        "y": 1520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "95d4554672220917",
-        "type": "inject",
-        "z": "7726ba2859088e60",
-        "name": "Load history on start",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "5",
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 450,
-        "y": 1520,
-        "wires": [
-            [
-                "69d7eb88ba6f8eef"
-            ]
-        ]
-    },
-    {
-        "id": "69d7eb88ba6f8eef",
-        "type": "function",
-        "z": "7726ba2859088e60",
-        "name": "Load saved history",
-        "func": "// Load previously saved lock history on startup\nconst history = flow.get('yaleLockHistory') || [];\nmsg.payload = history;\nif (history.length > 0) {\n    node.status({fill:'green',shape:'dot',text:history.length + ' entries loaded'});\n} else {\n    node.status({fill:'grey',shape:'ring',text:'No history yet'});\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 1520,
-        "wires": [
-            [
-                "8ea8c9228240e845"
             ]
         ]
     },
@@ -25868,7 +24332,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 2,
+        "order": 1,
         "width": "6",
         "height": "1",
         "name": "Status",
@@ -25890,7 +24354,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 11,
+        "order": 10,
         "width": "2",
         "height": "1",
         "name": "Upstairs",
@@ -25912,7 +24376,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 12,
+        "order": 11,
         "width": "2",
         "height": "1",
         "name": "Downstairs",
@@ -25934,7 +24398,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 13,
+        "order": 12,
         "width": "2",
         "height": "1",
         "name": "Outside",
@@ -25956,7 +24420,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 7,
+        "order": 6,
         "width": "2",
         "height": "1",
         "name": "Target",
@@ -25978,7 +24442,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 8,
+        "order": 7,
         "width": "2",
         "height": "1",
         "name": "Action",
@@ -26002,7 +24466,7 @@
         "group": "f9c985920afe1003",
         "name": "Desired Temp",
         "label": "Desired °C",
-        "order": 6,
+        "order": 5,
         "width": "2",
         "height": "1",
         "topic": "desiredTemp",
@@ -26058,7 +24522,7 @@
         "group": "f9c985920afe1003",
         "name": "HEAT",
         "label": "HEAT",
-        "order": 3,
+        "order": 2,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -26098,7 +24562,7 @@
         "group": "f9c985920afe1003",
         "name": "OFF",
         "label": "OFF",
-        "order": 5,
+        "order": 4,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -26138,7 +24602,7 @@
         "group": "f9c985920afe1003",
         "name": "AUTO",
         "label": "AUTO",
-        "order": 4,
+        "order": 3,
         "width": "2",
         "height": "1",
         "emulateClick": false,
@@ -26500,7 +24964,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 9,
+        "order": 8,
         "width": "2",
         "height": "1",
         "name": "FanLevel",
@@ -26710,7 +25174,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 10,
+        "order": 9,
         "width": "2",
         "height": "1",
         "name": "FanLevel",
@@ -26909,5 +25373,1856 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "38519274c0551bb7",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "Mode",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "away",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1090,
+        "y": 60,
+        "wires": [
+            [
+                "ed4c1dbd7e3c8218"
+            ],
+            [
+                "d8cc8d6cd6ac5ca8"
+            ]
+        ]
+    },
+    {
+        "id": "ed4c1dbd7e3c8218",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [],
+        "x": 1435,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d8cc8d6cd6ac5ca8",
+        "type": "trigger",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "",
+        "op1": "",
+        "op2": "false",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1260,
+        "y": 120,
+        "wires": [
+            [
+                "99e34fb7e0972e1e"
+            ]
+        ]
+    },
+    {
+        "id": "77e202e1f7cb4c98",
+        "type": "link in",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "Reset away mode",
+        "links": [
+            "455faa8d.6c9aa4",
+            "63e9f9b.1d13608",
+            "9ace10c4.4ce8f",
+            "b526ea173bec8f67",
+            "bc76c6da083bdd3b",
+            "ca84a21742d3e0cd",
+            "e92f253c.11b9b8"
+        ],
+        "x": 365,
+        "y": 120,
+        "wires": [
+            [
+                "e4188f47293e43df"
+            ]
+        ]
+    },
+    {
+        "id": "99e34fb7e0972e1e",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "d": true,
+        "g": "58a01d02b4619b46",
+        "name": "link out 12",
+        "mode": "link",
+        "links": [
+            "9e9814a999c69457"
+        ],
+        "x": 1525,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e4188f47293e43df",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "Is Movement",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": true,
+        "outputs": 2,
+        "x": 560,
+        "y": 120,
+        "wires": [
+            [
+                "3fc79d5f33bafedc"
+            ],
+            [
+                "8a959998326ddd98"
+            ]
+        ]
+    },
+    {
+        "id": "6504b75c810f8995",
+        "type": "delay",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 60,
+        "wires": [
+            [
+                "38519274c0551bb7"
+            ]
+        ]
+    },
+    {
+        "id": "9ab71bb708f19c1b",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "delete",
+                "p": "reset",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1270,
+        "y": 200,
+        "wires": [
+            [
+                "99e34fb7e0972e1e"
+            ]
+        ]
+    },
+    {
+        "id": "3fc79d5f33bafedc",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 160,
+        "wires": [
+            [
+                "9ab71bb708f19c1b",
+                "d8cc8d6cd6ac5ca8",
+                "cc6d1b5c216b0f73"
+            ]
+        ]
+    },
+    {
+        "id": "eabe9d09ac5494a3",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "name": "Determine device presence",
+        "func": "// ARP-based phone presence detection\n// Scans local network for known MAC addresses\nlet data = { payload: false, people: [] };\n\nfor (let device in msg.payload) {\n    const mac = msg.payload[device].mac;\n    switch (mac) {\n        case \"fa:9b:7e:5a:6c:6e\":\n        case \"52:9c:f0:c9:7a:bd\":\n        case \"aa:e4:74:26:ba:e3\":\n        case \"6a:a4:ac:02:44:19\":\n        case \"ce:4b:f9:34:9b:7d\":\n        case \"46:5f:50:69:f1:6a\":\n            if (!data.people.includes(\"heggland\")) {\n                data.people.push(\"heggland\");\n            }\n            data.payload = true;\n            break;\n        case \"d6:05:24:1f:de:7a\":\n        case \"de:61:a8:7d:7f:6f\":\n        case \"52:e0:79:65:ea:f5\":\n        case \"ca:e7:6e:18:e6:66\":\n            if (!data.people.includes(\"karina\")) {\n                data.people.push(\"karina\");\n            }\n            data.payload = true;\n            break;\n        default:\n            break;\n    }\n}\n\n// Store phone presence globals for aggregation\nglobal.set('heggland_home', data.people.includes(\"heggland\"));\nglobal.set('karina_home', data.people.includes(\"karina\"));\nglobal.set('phonesHome', data.payload);\n\n// Node status\nif (data.payload) {\n    node.status({fill:\"green\",shape:\"dot\",text:\"Home: \" + data.people.join(\", \")});\n} else {\n    node.status({fill:\"red\",shape:\"ring\",text:\"No phones detected\"});\n}\n\nreturn data;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 711,
+        "y": 655,
+        "wires": [
+            [
+                "f471eaf5a8b7a9c1",
+                "6b9eeab08f2cdd54"
+            ]
+        ],
+        "outputLabels": [
+            "oivheg "
+        ]
+    },
+    {
+        "id": "f471eaf5a8b7a9c1",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "name": "Check Phones",
+        "func": "\nlet home = [{ payload: false }, { payload: false }];\nmsg.people.forEach(function(element) {\n    msg.payload =true;\n    if (element == \"heggland\"){\n       home[0].payload = true;\n        \n    }\n    if (element == \"karina\") {\n        home[1].payload = true;\n\n\n    }\n});\n\nreturn home;",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 841,
+        "y": 715,
+        "wires": [
+            [
+                "d6d8cf38.1794d"
+            ],
+            [
+                "3d692d1e.98b022"
+            ]
+        ]
+    },
+    {
+        "id": "d6d8cf38.1794d",
+        "type": "rbe",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1101,
+        "y": 715,
+        "wires": [
+            [
+                "772b0560.6b8bcc"
+            ]
+        ]
+    },
+    {
+        "id": "3d692d1e.98b022",
+        "type": "rbe",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1101,
+        "y": 755,
+        "wires": [
+            [
+                "47763aff.5ff334"
+            ]
+        ]
+    },
+    {
+        "id": "772b0560.6b8bcc",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "heggland",
+        "mode": "link",
+        "links": [
+            "d871d736.d19838",
+            "b0e54fbbc4d9fa6a"
+        ],
+        "x": 1266,
+        "y": 715,
+        "wires": []
+    },
+    {
+        "id": "47763aff.5ff334",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "karina",
+        "links": [
+            "84abded8.462ac",
+            "b0e54fbbc4d9fa6a"
+        ],
+        "x": 1266,
+        "y": 755,
+        "wires": []
+    },
+    {
+        "id": "05d9e9467b811a09",
+        "type": "arp",
+        "z": "6a77c00f79a19693",
+        "name": "ARP",
+        "ips": "",
+        "x": 461,
+        "y": 655,
+        "wires": [
+            [
+                "923123cf470fc3e4",
+                "46561a09fa8da2c4",
+                "eabe9d09ac5494a3"
+            ]
+        ]
+    },
+    {
+        "id": "71e547f174525c61",
+        "type": "inject",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "30",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 241,
+        "y": 655,
+        "wires": [
+            [
+                "05d9e9467b811a09"
+            ]
+        ]
+    },
+    {
+        "id": "6b9eeab08f2cdd54",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "Set Away",
+        "mode": "link",
+        "links": [
+            "9e9814a999c69457",
+            "b0e54fbbc4d9fa6a"
+        ],
+        "x": 1275,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "f76dc950e201b13c",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "g": "f36c921c7f424de5",
+        "name": "",
+        "property": "payload.ip",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "192.168.1.196",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 661,
+        "y": 575,
+        "wires": [
+            [
+                "1860791aaa644301"
+            ]
+        ]
+    },
+    {
+        "id": "923123cf470fc3e4",
+        "type": "split",
+        "z": "6a77c00f79a19693",
+        "g": "f36c921c7f424de5",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 541,
+        "y": 575,
+        "wires": [
+            [
+                "f76dc950e201b13c"
+            ]
+        ]
+    },
+    {
+        "id": "bc76c6da083bdd3b",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "FP2 Livingroom",
+        "mode": "link",
+        "links": [
+            "be2ad471.d9c448",
+            "77e202e1f7cb4c98",
+            "b0e54fbbc4d9fa6a"
+        ],
+        "x": 1125,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "ca84a21742d3e0cd",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "FP2 Bathroom",
+        "mode": "link",
+        "links": [
+            "77e202e1f7cb4c98",
+            "d9f59e6e05f7c5b4",
+            "f627f6e01a47a3da",
+            "b0e54fbbc4d9fa6a"
+        ],
+        "x": 735,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "cf3797c1e0b5c101",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "1329b56.bea634b"
+        ],
+        "x": 465,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "1860791aaa644301",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "g": "f36c921c7f424de5",
+        "name": "debug 64",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 791,
+        "y": 575,
+        "wires": []
+    },
+    {
+        "id": "2269200b466aa112",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "Maid",
+        "mode": "link",
+        "links": [
+            "16df02f3eb3587ef",
+            "f2c61516d13e4a6a"
+        ],
+        "x": 515,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ef6ae4e981532ef3",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "DogSitterMode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "DogSitterMode",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "DogSitterMode turned ON ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 240,
+        "wires": [
+            [
+                "bb4c524ddea9d903",
+                "cc6d1b5c216b0f73"
+            ]
+        ]
+    },
+    {
+        "id": "2f576cac154fabea",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "DogSitterMode",
+        "property": "DogSitterMode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 950,
+        "y": 100,
+        "wires": [
+            [
+                "d8cc8d6cd6ac5ca8",
+                "7f851e060826def4",
+                "092abfe4f694d244"
+            ]
+        ]
+    },
+    {
+        "id": "7f851e060826def4",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "d": true,
+        "g": "58a01d02b4619b46",
+        "name": "MaidMode",
+        "mode": "link",
+        "links": [
+            "137603dc312c04a3"
+        ],
+        "x": 1235,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "092abfe4f694d244",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "DogSitterMode",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "DogSitterMode turned OFF ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1270,
+        "y": 160,
+        "wires": [
+            [
+                "b6a29855cdae995e"
+            ]
+        ]
+    },
+    {
+        "id": "b6a29855cdae995e",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "Turn off al lights",
+        "mode": "link",
+        "links": [
+            "5cfbdbd83670143c",
+            "fa037bf9c192d1d3"
+        ],
+        "x": 1445,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5f39989d186eff71",
+        "type": "subflow:05933d2d8abb4be7",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "",
+        "x": 560,
+        "y": 60,
+        "wires": [
+            [
+                "6504b75c810f8995"
+            ],
+            [
+                "2f576cac154fabea"
+            ]
+        ]
+    },
+    {
+        "id": "10e22a1e9cb69adb",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "Mode",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "home",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "sleep",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 550,
+        "y": 280,
+        "wires": [
+            [],
+            [],
+            [
+                "fbc0b4b628c8de0f"
+            ]
+        ]
+    },
+    {
+        "id": "fbc0b4b628c8de0f",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "LOCK USER NOT MAID ",
+        "mode": "link",
+        "links": [
+            "f27df5b9f6840243"
+        ],
+        "x": 675,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5ae85538c239b7ab",
+        "type": "mqtt in",
+        "z": "6a77c00f79a19693",
+        "name": "FP2 Bad",
+        "topic": "presence/bad",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "5d47569e31e42f22",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 920,
+        "wires": [
+            [
+                "cf3797c1e0b5c101",
+                "c60c2aeb2a5f38b4"
+            ]
+        ]
+    },
+    {
+        "id": "9bd4ae83dda03a5e",
+        "type": "link in",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "Deactivate DogSitter Mode",
+        "links": [],
+        "x": 355,
+        "y": 60,
+        "wires": [
+            [
+                "5f39989d186eff71"
+            ]
+        ]
+    },
+    {
+        "id": "87845e6165a9844d",
+        "type": "link in",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "Activate DogSitterMode",
+        "links": [],
+        "x": 365,
+        "y": 240,
+        "wires": [
+            [
+                "2269200b466aa112",
+                "ef6ae4e981532ef3",
+                "10e22a1e9cb69adb"
+            ]
+        ]
+    },
+    {
+        "id": "bb4c524ddea9d903",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "d": true,
+        "g": "58a01d02b4619b46",
+        "name": "link out 33",
+        "mode": "link",
+        "links": [
+            "5cfbdbd83670143c"
+        ],
+        "x": 705,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cc6d1b5c216b0f73",
+        "type": "trigger",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "3",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 900,
+        "y": 220,
+        "wires": [
+            [
+                "092abfe4f694d244"
+            ]
+        ]
+    },
+    {
+        "id": "8a959998326ddd98",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "g": "58a01d02b4619b46",
+        "name": "DogSitterMode",
+        "property": "DogSitterMode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 160,
+        "wires": [
+            [
+                "cc6d1b5c216b0f73"
+            ]
+        ]
+    },
+    {
+        "id": "779458453f211e42",
+        "type": "server-state-changed",
+        "z": "6a77c00f79a19693",
+        "name": "FP2 Combined",
+        "server": "c8d8b6d992397cb8",
+        "version": 6,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [
+                "sensor.aqara_fp_combined"
+            ],
+            "substring": [],
+            "regex": []
+        },
+        "outputInitially": true,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 270,
+        "y": 1000,
+        "wires": [
+            [
+                "0474d8dcceeabbfe"
+            ]
+        ]
+    },
+    {
+        "id": "0474d8dcceeabbfe",
+        "type": "json",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 540,
+        "y": 1000,
+        "wires": [
+            [
+                "ce6a6d205a83129b"
+            ]
+        ]
+    },
+    {
+        "id": "f38e2ab61d16cb7f",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 1080,
+        "wires": [
+            [
+                "0345e9c8f91734a4"
+            ],
+            [
+                "f0fc36ab5d3f19ff"
+            ]
+        ]
+    },
+    {
+        "id": "f0fc36ab5d3f19ff",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "Mode",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 850,
+        "y": 1140,
+        "wires": [
+            [
+                "0345e9c8f91734a4"
+            ]
+        ]
+    },
+    {
+        "id": "c60c2aeb2a5f38b4",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 860,
+        "wires": [
+            [
+                "ca84a21742d3e0cd"
+            ],
+            [
+                "91a62c0970200190"
+            ]
+        ]
+    },
+    {
+        "id": "91a62c0970200190",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "Mode",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "away",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 900,
+        "wires": [
+            [
+                "ca84a21742d3e0cd"
+            ]
+        ]
+    },
+    {
+        "id": "ce6a6d205a83129b",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "illuminance",
+                "pt": "msg",
+                "to": "$number(payload.illuminance)\t\t",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.presence",
+                "tot": "msg"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "on",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "off",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "presence",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 1000,
+        "wires": [
+            [
+                "f38e2ab61d16cb7f",
+                "cf3797c1e0b5c101"
+            ]
+        ]
+    },
+    {
+        "id": "0345e9c8f91734a4",
+        "type": "subflow:05933d2d8abb4be7",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "x": 990,
+        "y": 1060,
+        "wires": [
+            [
+                "bc76c6da083bdd3b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "46561a09fa8da2c4",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 661,
+        "y": 755,
+        "wires": []
+    },
+    {
+        "id": "cb085ed683178e6d",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1221,
+        "y": 535,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "205bf19b9171c690",
+        "type": "inject",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1041,
+        "y": 435,
+        "wires": [
+            [
+                "cb085ed683178e6d"
+            ]
+        ]
+    },
+    {
+        "id": "a3a30b18e27a2da1",
+        "type": "server-state-changed",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "server": "c8d8b6d992397cb8",
+        "version": 6,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [
+                "binary_sensor.bevegelse_oivind_kontor_bevegelse"
+            ],
+            "substring": [],
+            "regex": []
+        },
+        "outputInitially": true,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "ha_boolean",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 480,
+        "y": 1200,
+        "wires": [
+            [
+                "2e1b6d1c6b4e6868"
+            ]
+        ]
+    },
+    {
+        "id": "a09bf9651e2fe8bf",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "name": "Set Office Motion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "office_motion",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e1b6d1c6b4e6868",
+        "type": "trigger",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 850,
+        "y": 1200,
+        "wires": [
+            [
+                "a09bf9651e2fe8bf",
+                "6ebad7a8159c86cb"
+            ]
+        ]
+    },
+    {
+        "id": "6ebad7a8159c86cb",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "name": "Presence Aggregation",
+        "func": "// ====== PRESENCE AGGREGATION ======\n// Reads ALL presence signals and determines overall house occupancy\n\n// --- Phone presence (ARP) ---\nconst hegglandHome = global.get('heggland_home') || false;\nconst karinaHome = global.get('karina_home') || false;\nconst phonesHome = hegglandHome || karinaHome;\n\n// --- FP2 presence sensors ---\nconst fp2Presence = global.get('fp2_presence') || false;\nconst fp2Bathroom = global.get('fp2_bathroom') || false;\nconst globalPresenceSensor = global.get('presence') || false;\n\n// --- Motion sensors ---\nconst officeMotion = global.get('office_motion') || false;\nconst motionGeneral = global.get('motion') || false;\n\n// --- Room zone presence (from other tabs) ---\nconst oPresence = global.get('O-presence') || false;\nconst bPresence = global.get('B-Presence') || false;\nconst baPresence = global.get('BA-Presence') || false;\nconst haPresence = global.get('HA-Presence') || false;\nconst stPresence = global.get('ST-presence') || false;\n\n// --- Lock confidence ---\nconst lockConfidenceUntil = global.get('lockConfidenceUntil') || 0;\nconst lockConfidenceActive = Date.now() < lockConfidenceUntil;\n\n// --- Special modes ---\nconst visitorMode = global.get('VisitorMode') || false;\nconst maidMode = global.get('MaidMode') || false;\nconst dogSitterMode = flow.get('DogSitterMode') || false;\n\n// --- Door sensor ---\nconst doorOpen = global.get('door_open') || false;\n\n// ====== AGGREGATE ======\nlet present = false;\nlet reasons = [];\n\nif (phonesHome)           { present = true; reasons.push(hegglandHome && karinaHome ? 'phones(both)' : hegglandHome ? 'phone(H)' : 'phone(K)'); }\nif (fp2Presence)          { present = true; reasons.push('FP2'); }\nif (fp2Bathroom)          { present = true; reasons.push('FP2-bath'); }\nif (officeMotion)         { present = true; reasons.push('office'); }\nif (motionGeneral)        { present = true; reasons.push('motion'); }\nif (lockConfidenceActive) { present = true; reasons.push('lock-boost'); }\nif (oPresence)            { present = true; reasons.push('O-zone'); }\nif (bPresence)            { present = true; reasons.push('B-zone'); }\nif (baPresence)           { present = true; reasons.push('BA-zone'); }\nif (haPresence)           { present = true; reasons.push('HA-zone'); }\nif (stPresence)           { present = true; reasons.push('ST-zone'); }\nif (visitorMode)          { present = true; reasons.push('visitor'); }\nif (maidMode)             { present = true; reasons.push('maid'); }\nif (dogSitterMode)        { present = true; reasons.push('dogsitter'); }\nif (doorOpen)             { present = true; reasons.push('door-open'); }\n\n// ====== HYSTERESIS: adaptive buffer before going away ======\n// If someone recently departed via lock, use shorter hysteresis (5 min)\n// Otherwise use standard 10 min hysteresis\nconst lastDeparture = global.get('lastDepartureTime') || 0;\nconst recentDeparture = (Date.now() - lastDeparture) < 15 * 60 * 1000;\nconst hysteresisMinutes = recentDeparture ? 5 : 10;\n\nlet lastPresent = flow.get('lastPresent') || Date.now();\nif (present) {\n    flow.set('lastPresent', Date.now());\n} else {\n    const elapsed = Date.now() - lastPresent;\n    if (elapsed < hysteresisMinutes * 60 * 1000) {\n        present = true;\n        reasons.push('hysteresis(' + Math.round((hysteresisMinutes*60*1000 - elapsed)/60000) + 'm)');\n    }\n}\n\n// ====== SET GLOBAL STATE ======\nconst previousPresent = flow.get('previousPresent');\nconst mode = global.get('Mode') || 'unknown';\nconst occupancy = present ? 'home' : 'away';\n\nglobal.set('presence', present);\nglobal.set('houseState', {\n    occupancy: occupancy,\n    mode: mode,\n    present: present,\n    reasons: reasons,\n    hegglandHome: hegglandHome,\n    karinaHome: karinaHome,\n    lockConfidenceActive: lockConfidenceActive,\n    recentDeparture: recentDeparture,\n    hysteresisMinutes: hysteresisMinutes,\n    updatedAt: new Date().toISOString()\n});\n\n// ====== NODE STATUS ======\nconst reasonStr = reasons.join(', ');\nif (present) {\n    node.status({fill:'green',shape:'dot',text:'HOME: ' + reasonStr});\n} else {\n    node.status({fill:'red',shape:'ring',text:'AWAY - no signals'});\n}\n\n// Track previous state for transition detection\nflow.set('previousPresent', present);\n\n// Output the presence state for downstream processing\nmsg.payload = present;\nmsg.previousPresent = previousPresent;\nmsg.reasons = reasons;\nmsg.houseState = global.get('houseState');\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1600,
+        "y": 900,
+        "wires": [
+            [
+                "a7b8d4e5f6c90123",
+                "aa11bb22cc33dd04"
+            ]
+        ]
+    },
+    {
+        "id": "b0e54fbbc4d9fa6a",
+        "type": "link in",
+        "z": "6a77c00f79a19693",
+        "name": "link in 5",
+        "links": [
+            "bc76c6da083bdd3b",
+            "772b0560.6b8bcc",
+            "47763aff.5ff334",
+            "6b9eeab08f2cdd54",
+            "ca84a21742d3e0cd",
+            "d4e5a1b2c3f67890",
+            "aa11bb22cc33dd06"
+        ],
+        "x": 1345,
+        "y": 900,
+        "wires": [
+            [
+                "6ebad7a8159c86cb"
+            ]
+        ]
+    },
+    {
+        "id": "643fc82f488376a7",
+        "type": "server-state-changed",
+        "z": "6a77c00f79a19693",
+        "name": "All locks",
+        "server": "c8d8b6d992397cb8",
+        "version": 6,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [
+                "lock.inngangsdor"
+            ],
+            "substring": [],
+            "regex": []
+        },
+        "outputInitially": true,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": false,
+        "for": "5",
+        "forType": "num",
+        "forUnits": "seconds",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "ha_boolean",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 390,
+        "y": 1460,
+        "wires": [
+            [
+                "cf5394f78572a323"
+            ]
+        ]
+    },
+    {
+        "id": "682638f421e06cc4",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "703ee5620b182cbb",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "name": "Lock event handler",
+        "func": "// Lock Event Handler\n// Yale lock behavior:\n//   - UNLOCK + person name in changed_by = code/app from OUTSIDE → arriving\n//   - UNLOCK + system action (stale changed_by) = inside handle → potentially leaving\n//   - LOCK after inside-handle unlock = auto-locked behind them → departed\n//   - LOCK after code/app unlock = auto-locked behind them → arrived, door secured\n\nconst time = new Date().toLocaleString(\"no-NO\");\nconst newState = msg.data.new_state;\nconst oldState = msg.data.old_state;\nconst state = newState.state;\nconst prevState = oldState ? oldState.state : null;\nconst entityId = msg.data.entity_id || newState.entity_id || \"unknown.lock\";\nconst newAttrs = newState.attributes || {};\nconst oldAttrs = (oldState && oldState.attributes) ? oldState.attributes : {};\nconst currentMode = global.get(\"Mode\") || \"home\";\n\nconst newChangedBy = newAttrs.changed_by || \"\";\nconst oldChangedBy = oldAttrs.changed_by || \"\";\n\n// System action names (NOT person names)\nconst systemActions = [\"Auto Lock\", \"Manual Unlock\", \"Manual Lock\", \"One-Touch Lock\", \"Keypad\", \"Unknown\", \"\"];\n\nconst userNameMap = {\n    \"øivind\": \"Øivind\",\n    \"oivind\": \"Øivind\",\n    \"heggland\": \"Øivind\",\n    \"karina\": \"Karina\"\n};\n\nfunction findPerson(changedBy) {\n    if (!changedBy || systemActions.includes(changedBy)) return null;\n    const lower = changedBy.toLowerCase();\n    for (const [key, name] of Object.entries(userNameMap)) {\n        if (lower.includes(key)) return name;\n    }\n    if (!systemActions.includes(changedBy)) return changedBy;\n    return null;\n}\n\nlet personName = findPerson(newChangedBy) || findPerson(oldChangedBy);\n\nlet activityType = \"unknown\";\nlet direction = null;\nlet icon = \"❓\";\n flow.set(\"newChangedBy\", newChangedBy);\nif (state === \"unlocked\") {\n    // ====== DOOR UNLOCKED ======\n    if (personName) {\n        // changed_by has a person name = code/app used from OUTSIDE = arriving\n        activityType = \"arrival\";\n        direction = \"arriving\";\n        icon = \"🏠\";\n        flow.set(\"lastUnlockType\", \"arrival\");\n        flow.set(\"lastUnlockedBy\", personName);\n        flow.set(\"lastUnlockTime\", Date.now());\n    } else {\n        // changed_by is a system action (stale) = inside handle = potentially leaving\n        activityType = \"leaving\";\n        direction = \"leaving\";\n        icon = \"🚪\";\n        flow.set(\"lastUnlockType\", \"leaving\");\n        flow.set(\"lastUnlockedBy\", null);\n        flow.set(\"lastUnlockTime\", Date.now());\n    }\n\n} else if (state === \"locked\") {\n    // ====== DOOR LOCKED ======\n    if (prevState === \"unlocked\") {\n        const lastUnlockType = flow.get(\"lastUnlockType\");\n        const lastUnlockedBy = flow.get(\"lastUnlockedBy\");\n        const lastUnlockTime = flow.get(\"lastUnlockTime\") || 0;\n        const timeSinceUnlock = Date.now() - lastUnlockTime;\n\n        if (lastUnlockType === \"arrival\" && timeSinceUnlock < 5 * 60 * 1000) {\n            // Lock after person-unlock = they came in, door auto-locked\n            activityType = \"arrival-locked\";\n            direction = \"arrived\";\n            icon = \"🔒\";\n            personName = personName || lastUnlockedBy;\n        } else if (lastUnlockType === \"leaving\") {\n            // Lock after inside-handle unlock = they went out, door auto-locked\n            activityType = \"departure-locked\";\n            direction = \"departing\";\n            icon = \"🚶\";\n        } else {\n            // Fallback: unknown lock after unlock\n            activityType = \"door-locked\";\n            direction = \"departing\";\n            icon = \"🔒\";\n        }\n\n        flow.set(\"lastUnlockType\", null);\n        flow.set(\"lastUnlockedBy\", null);\n        flow.set(\"lastUnlockTime\", null);\n    } else {\n        activityType = \"lock-status\";\n        icon = \"🔒\";\n    }\n}\n\n// ====== BUILD PERSONALIZED TEXT ======\nlet text = \"\";\nif (direction === \"arriving\" && personName) {\n    text = \"Welcome home \" + personName;\n} else if (direction === \"arriving\") {\n    text = \"Detected coming home\";\n} else if (direction === \"arrived\" && personName) {\n    text = personName + \" is home - door locked\";\n} else if (direction === \"arrived\") {\n    text = \"Door locked after arrival\";\n} else if (direction === \"leaving\") {\n    text = \"Door opened from inside - someone may be leaving\";\n} else if (direction === \"departing\" && personName) {\n    text = personName + \" has left\";\n} else if (direction === \"departing\") {\n    text = \"Someone has left - door locked\";\n} else {\n    text = \"Lock \" + state;\n}\n\nconst lockName = entityId.replace('lock.', '').replace(/_/g, ' ');\n\nconst newEntry = {\n    time: time,\n    lock: entityId,\n    lockName: lockName,\n    state: state,\n    prevState: prevState,\n    changedBy: newChangedBy,\n    prevChangedBy: oldChangedBy,\n    activityType: activityType,\n    direction: direction,\n    personName: personName,\n    icon: icon,\n    text: text\n};\n\nlet lockHistory = flow.get(\"yaleLockHistory\") || [];\nlockHistory.unshift(newEntry);\nif (lockHistory.length > 50) lockHistory.pop();\nflow.set(\"yaleLockHistory\", lockHistory);\n\n// Presence confidence\nif (direction === \"arriving\" || direction === \"arrived\") {\n    global.set(\"lockConfidenceUntil\", Date.now() + 15 * 60 * 1000);\n} else if (direction === \"leaving\") {\n    // Don't clear confidence yet - they might just be checking outside\n    // Wait for the lock event to confirm departure\n    global.set(\"lockConfidenceUntil\", Date.now() + 2 * 60 * 1000);\n} else if (direction === \"departing\") {\n    global.set(\"lockConfidenceUntil\", 0);\n    global.set(\"lastDepartureTime\", Date.now());\n    global.set(\"lastDepartingPerson\", personName);\n}\n\nglobal.set(\"latestLockEvent\", newEntry);\n\nconst fillColor = direction === \"arriving\" ? \"green\"\n    : direction === \"arrived\" ? \"green\"\n    : direction === \"leaving\" ? \"blue\"\n    : direction === \"departing\" ? \"yellow\"\n    : state === \"locked\" ? \"red\" : \"green\";\nnode.status({\n    fill: fillColor,\n    shape: (direction === \"departing\" || direction === \"leaving\") ? \"ring\" : \"dot\",\n    text: icon + \" \" + text + \" - \" + time\n});\n\nmsg.payload = lockHistory;\nmsg.text = text;\nmsg.direction = direction;\nmsg.personName = personName;\nmsg.activityType = activityType;\nmsg.lockEntry = newEntry;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 1460,
+        "wires": [
+            [
+                "682638f421e06cc4",
+                "d4e5a1b2c3f67890",
+                "f6a7c3d4e5b89012",
+                "aa11bb22cc33dd01"
+            ]
+        ]
+    },
+    {
+        "id": "d4e5a1b2c3f67890",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "Lock → Aggregation",
+        "mode": "link",
+        "links": [
+            "b0e54fbbc4d9fa6a"
+        ],
+        "x": 1105,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "a7b8d4e5f6c90123",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "name": "Presence State",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "houseState",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1820,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "b3c4d5e6f7a89012",
+        "type": "inject",
+        "z": "6a77c00f79a19693",
+        "name": "Recalc every 5 min",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "60",
+        "topic": "",
+        "payload": "recalc",
+        "payloadType": "str",
+        "x": 1390,
+        "y": 960,
+        "wires": [
+            [
+                "6ebad7a8159c86cb"
+            ]
+        ]
+    },
+    {
+        "id": "f6a7c3d4e5b89012",
+        "type": "ui-template",
+        "z": "6a77c00f79a19693",
+        "group": "e5f6b2c3d4a78901",
+        "page": "",
+        "ui": "",
+        "name": "Lock Activity Dashboard",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-height: 480px; overflow-y: auto;\">\n    <div v-if=\"!msg?.payload || msg.payload.length === 0\" style=\"padding: 20px; color: #888; text-align: center;\">\n      Waiting for lock activity...\n    </div>\n    <table v-else style=\"width:100%; border-collapse: collapse; font-size: 13px;\">\n      <thead>\n        <tr style=\"background: #f0f2f5; text-align: left; position: sticky; top: 0;\">\n          <th style=\"padding: 8px 6px; width: 30px;\"></th>\n          <th style=\"padding: 8px 6px;\">Time</th>\n          <th style=\"padding: 8px 6px;\">Lock</th>\n          <th style=\"padding: 8px 6px;\">User</th>\n          <th style=\"padding: 8px 6px;\">State</th>\n          <th style=\"padding: 8px 6px;\">Activity</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr v-for=\"(entry, idx) in msg.payload\" :key=\"idx\"\n            :style=\"{ background: idx % 2 === 0 ? '#ffffff' : '#f9fafb',\n                       borderLeft: entry.activityType === 'arrival' ? '3px solid #27ae60' :\n                                   entry.activityType === 'departure' ? '3px solid #e74c3c' :\n                                   entry.activityType === 'auto-lock' ? '3px solid #3498db' :\n                                   '3px solid #95a5a6' }\">\n          <td style=\"padding: 6px; text-align: center; font-size: 16px;\">{{ entry.icon }}</td>\n          <td style=\"padding: 6px; white-space: nowrap; color: #555;\">{{ entry.time }}</td>\n          <td style=\"padding: 6px; text-transform: capitalize;\">{{ entry.lockName || entry.lock }}</td>\n          <td style=\"padding: 6px; font-weight: 600;\"\n              :style=\"{ color: entry.activityType === 'arrival' ? '#27ae60' :\n                               entry.activityType === 'departure' ? '#e74c3c' : '#333' }\">\n            {{ entry.changedBy }}\n          </td>\n          <td style=\"padding: 6px;\">\n            <span :style=\"{ color: entry.state === 'locked' ? '#c0392b' : '#27ae60',\n                            fontWeight: 'bold', fontSize: '12px',\n                            padding: '2px 8px', borderRadius: '10px',\n                            background: entry.state === 'locked' ? '#fde8e8' : '#e8fde8' }\">\n              {{ entry.state === 'locked' ? '\\uD83D\\uDD12 Locked' : '\\uD83D\\uDD13 Unlocked' }}\n            </span>\n          </td>\n          <td style=\"padding: 6px; color: #888; font-size: 12px; text-transform: capitalize;\">\n            {{ entry.activityType }}\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</template>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1110,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4d5e6f7a8b90123",
+        "type": "inject",
+        "z": "6a77c00f79a19693",
+        "name": "Load history on start",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 450,
+        "y": 1520,
+        "wires": [
+            [
+                "d5e6f7a8b9c01234"
+            ]
+        ]
+    },
+    {
+        "id": "d5e6f7a8b9c01234",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "name": "Load saved history",
+        "func": "// Load previously saved lock history on startup\nconst history = flow.get('yaleLockHistory') || [];\nmsg.payload = history;\nif (history.length > 0) {\n    node.status({fill:'green',shape:'dot',text:history.length + ' entries loaded'});\n} else {\n    node.status({fill:'grey',shape:'ring',text:'No history yet'});\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 1520,
+        "wires": [
+            [
+                "f6a7c3d4e5b89012"
+            ]
+        ]
+    },
+    {
+        "id": "aa11bb22cc33dd01",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "g": "aa11bb22cc33dd07",
+        "name": "Arrival/Departure Handler",
+        "func": "// Arrival/Departure Handler\n// Processes lock events and manages mode transitions\nconst direction = msg.direction;\nconst personName = msg.personName;\nconst currentMode = global.get(\"Mode\") || \"home\";\nconst text = msg.text || \"\";\nconst activityType = msg.activityType;\n\nif (direction === \"arriving\") {\n    // ===== ARRIVAL: Someone is coming home =====\n    global.set(\"Mode\", \"home\");\n    global.set(\"lastDepartureTime\", 0);\n    global.set(\"lastDepartingPerson\", null);\n    flow.set(\"departureInProgress\", false);\n    global.set(\"lockConfidenceUntil\", Date.now() + 15 * 60 * 1000);\n\n    if (personName) {\n        msg.text = \"Welcome home \" + personName;\n    } else {\n        msg.text = \"Detected coming home\";\n    }\n\n    node.status({fill:\"green\", shape:\"dot\", text: msg.text});\n    return [msg, null]; // Output 1: arrival\n\n} else if (direction === \"departing\") {\n    // ===== DEPARTURE: Door locked after being opened =====\n    // Don't switch to away immediately - let Presence Aggregation decide\n    // Just flag that a departure event happened\n    flow.set(\"departureInProgress\", true);\n    flow.set(\"departureTime\", Date.now());\n\n    if (personName) {\n        msg.text = personName + \" is leaving\";\n    } else {\n        msg.text = \"Detected going away\";\n    }\n\n    node.status({fill:\"yellow\", shape:\"ring\", text: msg.text});\n    return [null, msg]; // Output 2: departure\n\n} else if (direction === \"opening\") {\n    // ===== DOOR OPENED while home =====\n    // This is the first signal that someone might be leaving\n    // Don't change mode, just note it\n    if (personName) {\n        msg.text = personName + \" opened the door\";\n    } else {\n        msg.text = \"Door opened\";\n    }\n\n    node.status({fill:\"blue\", shape:\"ring\", text: msg.text});\n    return [null, msg]; // Output 2: potential departure\n}\n\n// Other lock events - pass through to output 2 for logging\nif (text) {\n    msg.text = text;\n    node.status({fill:\"grey\", shape:\"ring\", text: text});\n    return [null, msg];\n}\n\nreturn null;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 1600,
+        "wires": [
+            [
+                "aa11bb22cc33dd02",
+                "aa11bb22cc33dd06"
+            ],
+            [
+                "aa11bb22cc33dd03"
+            ]
+        ],
+        "outputLabels": [
+            "Arrival",
+            "Departure"
+        ]
+    },
+    {
+        "id": "aa11bb22cc33dd02",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "g": "aa11bb22cc33dd07",
+        "name": "Set Arrival Text",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "arrival",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1430,
+        "y": 1580,
+        "wires": [
+            [
+                "aa11bb22cc33dd05",
+                "31bbe0578e084940"
+            ]
+        ]
+    },
+    {
+        "id": "aa11bb22cc33dd03",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "g": "aa11bb22cc33dd07",
+        "name": "Set Departure Text",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "departure",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1440,
+        "y": 1640,
+        "wires": [
+            [
+                "aa11bb22cc33dd05",
+                "31bbe0578e084940"
+            ]
+        ]
+    },
+    {
+        "id": "aa11bb22cc33dd04",
+        "type": "function",
+        "z": "6a77c00f79a19693",
+        "name": "Mode Controller",
+        "func": "// Mode Controller\n// Monitors presence aggregation output and transitions Mode between home/away\nconst present = msg.payload;\nconst previousPresent = msg.previousPresent;\nconst currentMode = global.get(\"Mode\") || \"home\";\nconst latestLock = global.get(\"latestLockEvent\") || {};\nconst lastDepartingPerson = global.get(\"lastDepartingPerson\") || null;\n\n// Only act on state transitions\nif (previousPresent === undefined || previousPresent === null) {\n    node.status({fill: present ? \"green\" : \"red\", shape:\"dot\",\n        text: present ? \"HOME (initialized)\" : \"AWAY (initialized)\"});\n    return null;\n}\n\nif (!present && previousPresent) {\n    // ===== TRANSITION: HOME -> AWAY =====\n    // All presence signals have dropped (after hysteresis)\n    // global.set(\"Mode\", \"away\");\n\n    let text = \"Everyone has left - house is in away mode\";\n    if (lastDepartingPerson) {\n        text = lastDepartingPerson + \" has left - house is in away mode\";\n    }\n\n    msg.text = text;\n    msg.modeChange = \"away\";\n    node.status({fill:\"red\", shape:\"ring\", text: \"AWAY - \" + new Date().toLocaleTimeString(\"no-NO\")});\n    return msg;\n\n} else if (present && !previousPresent) {\n    // ===== TRANSITION: AWAY -> HOME =====\n    // global.set(\"Mode\", \"home\");\n\n    let text = \"Detected coming home\";\n    if (latestLock.personName && latestLock.direction === \"arriving\") {\n        text = \"Welcome home \" + latestLock.personName;\n    }\n\n    msg.text = text;\n    msg.modeChange = \"home\";\n    node.status({fill:\"green\", shape:\"dot\", text: \"HOME - \" + new Date().toLocaleTimeString(\"no-NO\")});\n    return msg;\n}\n\n// No transition\nnode.status({fill: present ? \"green\" : \"red\", shape:\"dot\",\n    text: (present ? \"HOME\" : \"AWAY\") + \" - \" + new Date().toLocaleTimeString(\"no-NO\")});\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1840,
+        "y": 960,
+        "wires": [
+            [
+                "aa11bb22cc33dd05",
+                "3ed6af7ae9816987"
+            ]
+        ]
+    },
+    {
+        "id": "aa11bb22cc33dd05",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "g": "aa11bb22cc33dd07",
+        "name": "Mode & Status Messages",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "text",
+        "targetType": "msg",
+        "statusVal": "text",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "aa11bb22cc33dd06",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "g": "aa11bb22cc33dd07",
+        "name": "Arrival → Recalc Presence",
+        "mode": "link",
+        "links": [
+            "b0e54fbbc4d9fa6a"
+        ],
+        "x": 1425,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "31bbe0578e084940",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "g": "aa11bb22cc33dd07",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "662ff2faf119d193"
+        ],
+        "x": 1665,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "cf5394f78572a323",
+        "type": "trigger",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 540,
+        "y": 1460,
+        "wires": [
+            [
+                "703ee5620b182cbb",
+                "9c6eab0e53bd340a"
+            ]
+        ]
+    },
+    {
+        "id": "9c6eab0e53bd340a",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "6ebaa2153d3c14da",
+        "type": "trigger",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "nul",
+        "op2type": "str",
+        "duration": "10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1540,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5fdf8d37080b1dbc",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2380,
+        "y": 920,
+        "wires": [
+            [
+                "ab5068bd204634c6"
+            ]
+        ]
+    },
+    {
+        "id": "3ed6af7ae9816987",
+        "type": "switch",
+        "z": "6a77c00f79a19693",
+        "name": "modeChange [home/away]",
+        "property": "modeChange",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "away",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 2140,
+        "y": 940,
+        "wires": [
+            [
+                "5fdf8d37080b1dbc"
+            ],
+            [
+                "7e3f0e8652c2cdfd"
+            ]
+        ]
+    },
+    {
+        "id": "7e3f0e8652c2cdfd",
+        "type": "change",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2380,
+        "y": 960,
+        "wires": [
+            [
+                "ab5068bd204634c6"
+            ]
+        ]
+    },
+    {
+        "id": "ab5068bd204634c6",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "link out 5",
+        "mode": "link",
+        "links": [
+            "9e9814a999c69457"
+        ],
+        "x": 2565,
+        "y": 940,
+        "wires": []
     }
 ]
