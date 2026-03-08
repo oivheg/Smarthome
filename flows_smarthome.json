@@ -4955,7 +4955,8 @@
             "a84ac6f3a352ff80",
             "f803dc8c9371fd5f",
             "f676af51cded15ca",
-            "31bbe0578e084940"
+            "31bbe0578e084940",
+            "e9aa8b7fec7e563c"
         ],
         "x": 175,
         "y": 200,
@@ -8326,9 +8327,9 @@
         "z": "8b99f8fe.7b27b8",
         "g": "0dc9ec7306f46565",
         "name": "vacation",
-        "op1": "true",
+        "op1": "",
         "op2": "false",
-        "op1type": "bool",
+        "op1type": "nul",
         "op2type": "bool",
         "duration": "15",
         "extend": false,
@@ -8571,6 +8572,102 @@
             ],
             []
         ]
+    },
+    {
+        "id": "7024cf13904af3e0",
+        "type": "inject",
+        "z": "1b14ec1b.20ab54",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "30 20 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 420,
+        "wires": [
+            [
+                "a37b68380548d223"
+            ]
+        ]
+    },
+    {
+        "id": "a37b68380548d223",
+        "type": "change",
+        "z": "1b14ec1b.20ab54",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Mode",
+                "pt": "global",
+                "to": "home",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 420,
+        "wires": [
+            [
+                "835f2c9ef615a6ae"
+            ]
+        ]
+    },
+    {
+        "id": "835f2c9ef615a6ae",
+        "type": "change",
+        "z": "1b14ec1b.20ab54",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "text",
+                "pt": "msg",
+                "to": "IT's time for happy food and happy pee",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 420,
+        "wires": [
+            [
+                "e9aa8b7fec7e563c"
+            ]
+        ]
+    },
+    {
+        "id": "e9aa8b7fec7e563c",
+        "type": "link out",
+        "z": "1b14ec1b.20ab54",
+        "name": "link out 9",
+        "mode": "link",
+        "links": [
+            "662ff2faf119d193"
+        ],
+        "x": 865,
+        "y": 420,
+        "wires": []
     },
     {
         "id": "a4770dbb.04eff",
@@ -11460,7 +11557,6 @@
         "wires": [
             [
                 "bdc7a6b2a2bf8285",
-                "703541eac38a33b4",
                 "ba_ui_movement_format"
             ]
         ]
@@ -12071,8 +12167,7 @@
         "wires": [
             [
                 "ba_ui_fp2_format",
-                "ba_ui_movement_format",
-                "ba_ui_protection_format"
+                "ba_ui_movement_format"
             ]
         ]
     },
@@ -12303,27 +12398,6 @@
         ]
     },
     {
-        "id": "703541eac38a33b4",
-        "type": "switch",
-        "z": "a9a601907d96eb09",
-        "name": "fp2_presence false",
-        "property": "fp2_presence",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 710,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "9a055681e2b48e5d",
         "type": "change",
         "z": "a9a601907d96eb09",
@@ -12432,18 +12506,18 @@
         "z": "a9a601907d96eb09",
         "name": "",
         "op1": "",
-        "op2": "0",
+        "op2": "false",
         "op1type": "pay",
-        "op2type": "str",
+        "op2type": "bool",
         "duration": "0",
-        "extend": false,
+        "extend": true,
         "overrideDelay": false,
-        "units": "ms",
+        "units": "s",
         "reset": "",
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 950,
+        "x": 1020,
         "y": 360,
         "wires": [
             [
@@ -12630,8 +12704,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 670,
-        "y": 240,
+        "x": 750,
+        "y": 120,
         "wires": [
             [
                 "c5ff8c6bed410957"
@@ -12664,6 +12738,93 @@
         "wires": [
             [
                 "b590b37dc0fbc282"
+            ]
+        ]
+    },
+    {
+        "id": "7de8196c9b8e4cc4",
+        "type": "inject",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "b590b37dc0fbc282"
+            ]
+        ]
+    },
+    {
+        "id": "167f1545be70efe3",
+        "type": "inject",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "6381072ee0756353"
+            ]
+        ]
+    },
+    {
+        "id": "7fc7874edbd56e2b",
+        "type": "inject",
+        "z": "a9a601907d96eb09",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 500,
+        "wires": [
+            [
+                "6381072ee0756353"
             ]
         ]
     },
@@ -26705,7 +26866,7 @@
         "ifStateType": "str",
         "ifStateOperator": "is",
         "outputOnlyOnStateChange": false,
-        "for": "5",
+        "for": "0",
         "forType": "num",
         "forUnits": "seconds",
         "ignorePrevStateNull": false,
@@ -26737,7 +26898,8 @@
         "y": 1460,
         "wires": [
             [
-                "cf5394f78572a323"
+                "cf5394f78572a323",
+                "9c6eab0e53bd340a"
             ]
         ]
     },
@@ -27009,7 +27171,7 @@
         "wires": [
             [
                 "aa11bb22cc33dd05",
-                "3ed6af7ae9816987"
+                "cdf828298ff19ee8"
             ]
         ]
     },
@@ -27049,6 +27211,7 @@
         "id": "31bbe0578e084940",
         "type": "link out",
         "z": "6a77c00f79a19693",
+        "d": true,
         "g": "aa11bb22cc33dd07",
         "name": "link out 3",
         "mode": "link",
@@ -27057,49 +27220,6 @@
         ],
         "x": 1665,
         "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "cf5394f78572a323",
-        "type": "trigger",
-        "z": "6a77c00f79a19693",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 540,
-        "y": 1460,
-        "wires": [
-            [
-                "703ee5620b182cbb",
-                "9c6eab0e53bd340a"
-            ]
-        ]
-    },
-    {
-        "id": "9c6eab0e53bd340a",
-        "type": "debug",
-        "z": "6a77c00f79a19693",
-        "name": "debug 7",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 1360,
         "wires": []
     },
     {
@@ -27144,7 +27264,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2380,
+        "x": 2540,
         "y": 920,
         "wires": [
             [
@@ -27174,7 +27294,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "x": 2140,
+        "x": 2300,
         "y": 940,
         "wires": [
             [
@@ -27204,7 +27324,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2380,
+        "x": 2540,
         "y": 960,
         "wires": [
             [
@@ -27221,8 +27341,70 @@
         "links": [
             "9e9814a999c69457"
         ],
-        "x": 2565,
+        "x": 2725,
         "y": 940,
+        "wires": []
+    },
+    {
+        "id": "cdf828298ff19ee8",
+        "type": "rbe",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "modeChange",
+        "topi": "topic",
+        "x": 2100,
+        "y": 940,
+        "wires": [
+            [
+                "3ed6af7ae9816987"
+            ]
+        ]
+    },
+    {
+        "id": "cf5394f78572a323",
+        "type": "trigger",
+        "z": "6a77c00f79a19693",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 540,
+        "y": 1460,
+        "wires": [
+            [
+                "703ee5620b182cbb"
+            ]
+        ]
+    },
+    {
+        "id": "9c6eab0e53bd340a",
+        "type": "debug",
+        "z": "6a77c00f79a19693",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 634,
+        "y": 1356,
         "wires": []
     }
 ]
