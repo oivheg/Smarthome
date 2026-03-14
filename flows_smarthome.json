@@ -50,22 +50,6 @@
         "env": []
     },
     {
-        "id": "a9a601907d96eb09",
-        "type": "tab",
-        "label": "Bathroom",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "81eedfe27e202b5a",
-        "type": "tab",
-        "label": "Bathroom",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "021cd6ea3e90db93",
         "type": "tab",
         "label": "Stairs",
@@ -146,6 +130,14 @@
         "id": "6a77c00f79a19693",
         "type": "tab",
         "label": "Presence Detection",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d77a99302c4e6503",
+        "type": "tab",
+        "label": "Bathroom",
         "disabled": false,
         "info": "",
         "env": []
@@ -9472,7 +9464,6 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "2214d9cb038cf259",
             "c840b6850a9f9370"
         ],
         "x": 695,
@@ -9487,7 +9478,6 @@
         "mode": "link",
         "links": [
             "1329b56.bea634b",
-            "271f90f30bdc06b6",
             "ea645748ca3e406e",
             "f66e7e24.aca9d"
         ],
@@ -11445,2485 +11435,6 @@
             [
                 "81af6cca.e9c66",
                 "13862cdd3cdbbc65"
-            ]
-        ]
-    },
-    {
-        "id": "b590b37dc0fbc282",
-        "type": "function",
-        "z": "a9a601907d96eb09",
-        "name": "FP2 Presence + Activity Tracking",
-        "func": "\n\n// Track last activity time when presence detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    // Store FP2 presence state\n    node.status({fill: \"green\", shape: \"dot\", text: \"Active: \" + new Date().toLocaleTimeString()});\nreturn msg;\n} else {\n    node.status({fill: \"grey\", shape: \"ring\", text: \"Inactive\"});\n    node.send([null, msg]);\n}\n\n\n",
-        "outputs": 2,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 240,
-        "wires": [
-            [
-                "bdc7a6b2a2bf8285",
-                "ba_ui_fp2_format",
-                "bee3860454e1e700"
-            ],
-            [
-                "86965b568eeaa56c"
-            ]
-        ]
-    },
-    {
-        "id": "d9f59e6e05f7c5b4",
-        "type": "link in",
-        "z": "a9a601907d96eb09",
-        "name": "Aqara FP2",
-        "links": [],
-        "x": 185,
-        "y": 240,
-        "wires": [
-            [
-                "b590b37dc0fbc282"
-            ]
-        ]
-    },
-    {
-        "id": "bdc7a6b2a2bf8285",
-        "type": "switch",
-        "z": "a9a601907d96eb09",
-        "name": "ON",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 590,
-        "y": 400,
-        "wires": [
-            [
-                "fd9acad7f44237b8",
-                "574aa3734542d7dc",
-                "dc59445212c92f7c"
-            ]
-        ]
-    },
-    {
-        "id": "574aa3734542d7dc",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 440,
-        "wires": [
-            [
-                "12daafe786835f3a",
-                "c91ca09967cda70e"
-            ]
-        ]
-    },
-    {
-        "id": "dc2a2ebf5212b35b",
-        "type": "function",
-        "z": "a9a601907d96eb09",
-        "name": "Movement + Activity Tracking",
-        "func": "// Store movement state\nflow.set('movement', msg.payload);\n\n// Track last activity time when movement detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    node.status({fill: \"blue\", shape: \"dot\", text: \"Motion: \" + new Date().toLocaleTimeString()});\n} else {\n    node.status({fill: \"grey\", shape: \"ring\", text: \"No motion\"});\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 320,
-        "wires": [
-            [
-                "bdc7a6b2a2bf8285",
-                "ba_ui_movement_format"
-            ]
-        ]
-    },
-    {
-        "id": "9a6c7e2adae19dbe",
-        "type": "function",
-        "z": "a9a601907d96eb09",
-        "name": "Door State Tracker",
-        "func": "// Store door state (true = open, false = closed)\nflow.set('door_open', msg.payload);\n\n// Update activity time when door opens (entering bathroom)\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    node.status({fill: \"red\", shape: \"dot\", text: \"Door OPEN\"});\n} else {\n    node.status({fill: \"green\", shape: \"ring\", text: \"Door CLOSED\"});\n}\n\n// Trigger dashboard updates\nnode.send([null, null, {payload: true}]);\n\n// Route to appropriate output\nif (msg.payload === true) {\n    return [msg, null, null]; // Output 1: door opened\n} else {\n    return [null, msg, null]; // Output 2: door closed\n}",
-        "outputs": 3,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 440,
-        "wires": [
-            [
-                "bdc7a6b2a2bf8285"
-            ],
-            [],
-            [
-                "ba_ui_activity_format",
-                "ba_ui_protection_format"
-            ]
-        ]
-    },
-    {
-        "id": "2ebf80ed57b96fc3",
-        "type": "time-range-switch",
-        "z": "a9a601907d96eb09",
-        "name": "Dag",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "06:00",
-        "endTime": "21:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 990,
-        "y": 400,
-        "wires": [
-            [
-                "e06c1ce2758c7f85"
-            ],
-            [
-                "f6c1c04e41814de2"
-            ]
-        ]
-    },
-    {
-        "id": "12daafe786835f3a",
-        "type": "trigger",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "op1": "true",
-        "op2": "false",
-        "op1type": "bool",
-        "op2type": "bool",
-        "duration": "2",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1050,
-        "y": 280,
-        "wires": [
-            [
-                "8c0c34a86ebdc4bb"
-            ]
-        ]
-    },
-    {
-        "id": "c840b6850a9f9370",
-        "type": "link in",
-        "z": "a9a601907d96eb09",
-        "name": "Batroom_Movement",
-        "links": [
-            "455faa8d.6c9aa4"
-        ],
-        "x": 255,
-        "y": 320,
-        "wires": [
-            [
-                "dc2a2ebf5212b35b"
-            ]
-        ]
-    },
-    {
-        "id": "ea645748ca3e406e",
-        "type": "link in",
-        "z": "a9a601907d96eb09",
-        "name": "Bathroom_Door",
-        "links": [
-            "dc7a9dbe.e7065"
-        ],
-        "x": 255,
-        "y": 400,
-        "wires": [
-            [
-                "6381072ee0756353"
-            ]
-        ]
-    },
-    {
-        "id": "e06c1ce2758c7f85",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "Day",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "100",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 400,
-        "wires": [
-            [
-                "9a055681e2b48e5d"
-            ]
-        ]
-    },
-    {
-        "id": "f6c1c04e41814de2",
-        "type": "time-range-switch",
-        "z": "a9a601907d96eb09",
-        "name": "Natt",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "21:00",
-        "endTime": "23:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 990,
-        "y": 460,
-        "wires": [
-            [
-                "431b24da5c1cf8a9"
-            ],
-            [
-                "6e23ce00bcce09a8"
-            ]
-        ]
-    },
-    {
-        "id": "694353d781c790bc",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "bathroom OFF",
-        "rules": [
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "BA-LYS",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "islight_on",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1360,
-        "y": 280,
-        "wires": [
-            [
-                "a9eef7ebd0b8a98e",
-                "2cd7beb6601eb278",
-                "489a70e46708be19"
-            ]
-        ]
-    },
-    {
-        "id": "2cd7beb6601eb278",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "BA-Presence",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BA-Presence",
-                "pt": "global",
-                "to": "islight_on",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1630,
-        "y": 280,
-        "wires": [
-            [
-                "4c1858d290c94d44"
-            ]
-        ]
-    },
-    {
-        "id": "431b24da5c1cf8a9",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "Evening",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "30",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1140,
-        "y": 440,
-        "wires": [
-            [
-                "9a055681e2b48e5d"
-            ]
-        ]
-    },
-    {
-        "id": "6e23ce00bcce09a8",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "Night",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "15",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1130,
-        "y": 480,
-        "wires": [
-            [
-                "9a055681e2b48e5d"
-            ]
-        ]
-    },
-    {
-        "id": "4c1858d290c94d44",
-        "type": "link out",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "e8a10173e53f4a16"
-        ],
-        "x": 1765,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "759977ced6b96acf",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "bathroom ON",
-        "rules": [
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "BA-LYS",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "percent_bathroom",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "islight_on",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1360,
-        "y": 320,
-        "wires": [
-            [
-                "a9eef7ebd0b8a98e",
-                "2cd7beb6601eb278",
-                "d75a3fcd498a1213"
-            ]
-        ]
-    },
-    {
-        "id": "0d76a80b287e9f32",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "percent_bathroom",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "status.state.dimlevel",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2010,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "cd274e19cc986be4",
-        "type": "Thing List",
-        "z": "a9a601907d96eb09",
-        "nodeName": "bathroom",
-        "outputType": "individual",
-        "outputValue": "thing",
-        "property": "status",
-        "discardInput": false,
-        "rules": [
-            {
-                "compare": "eq",
-                "thingProp": "name",
-                "value": "bathroom",
-                "type": "str"
-            }
-        ],
-        "x": 1800,
-        "y": 320,
-        "wires": [
-            [
-                "0d76a80b287e9f32"
-            ]
-        ]
-    },
-    {
-        "id": "6381072ee0756353",
-        "type": "ui-switch",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "label": "DOOR",
-        "group": "1257d664fb2a5f32",
-        "order": 2,
-        "width": 1,
-        "height": "1",
-        "passthru": true,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "layout": "",
-        "clickableArea": "switch",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "lock-open",
-        "oncolor": "red",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "lock",
-        "offcolor": "greed",
-        "x": 410,
-        "y": 400,
-        "wires": [
-            [
-                "9a6c7e2adae19dbe"
-            ]
-        ]
-    },
-    {
-        "id": "ba_ui_fp2_format",
-        "type": "function",
-        "z": "a9a601907d96eb09",
-        "name": "Format FP2 Status",
-        "func": "const fp2Active = flow.get('fp2_presence') || false;\nconst lastActivity = flow.get('lastActivityTime') || 0;\n\nif (fp2Active) {\n    msg.payload = \"🟢 FP2: Active\";\n} else {\n    const timeSince = Date.now() - lastActivity;\n    const minAgo = Math.floor(timeSince / 60000);\n    msg.payload = `⚫ FP2: Inactive (${minAgo}m ago)`;\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 640,
-        "wires": [
-            [
-                "ba_ui_fp2_display"
-            ]
-        ]
-    },
-    {
-        "id": "ba_ui_fp2_display",
-        "type": "ui-text",
-        "z": "a9a601907d96eb09",
-        "group": "1257d664fb2a5f32",
-        "order": 3,
-        "width": 3,
-        "height": "1",
-        "name": "FP2 Status",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "",
-        "x": 990,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "ba_ui_movement_format",
-        "type": "function",
-        "z": "a9a601907d96eb09",
-        "name": "Format Movement Status",
-        "func": "const movement = flow.get('movement') || false;\n\nif (movement) {\n    msg.payload = \"🔵 IR Motion: Detected\";\n} else {\n    msg.payload = \"⚫ IR Motion: Clear\";\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 730,
-        "y": 560,
-        "wires": [
-            [
-                "ba_ui_movement_display"
-            ]
-        ]
-    },
-    {
-        "id": "ba_ui_movement_display",
-        "type": "ui-text",
-        "z": "a9a601907d96eb09",
-        "group": "1257d664fb2a5f32",
-        "order": 6,
-        "width": 3,
-        "height": "1",
-        "name": "Movement Status",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "",
-        "x": 1010,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "ba_ui_activity_format",
-        "type": "function",
-        "z": "a9a601907d96eb09",
-        "name": "Format Activity Time",
-        "func": "const lastActivity = flow.get('lastActivityTime') || 0;\nconst timeSince = Date.now() - lastActivity;\nconst minAgo = Math.floor(timeSince / 60000);\nconst secAgo = Math.floor((timeSince % 60000) / 1000);\n\nif (minAgo === 0) {\n    msg.payload = `⏱️ Last Activity: ${secAgo}s ago`;\n} else {\n    msg.payload = `⏱️ Last Activity: ${minAgo}m ${secAgo}s ago`;\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 720,
-        "y": 600,
-        "wires": [
-            [
-                "ba_ui_activity_display"
-            ]
-        ]
-    },
-    {
-        "id": "ba_ui_activity_display",
-        "type": "ui-text",
-        "z": "a9a601907d96eb09",
-        "group": "1257d664fb2a5f32",
-        "order": 8,
-        "width": 3,
-        "height": "1",
-        "name": "Last Activity",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "",
-        "x": 990,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "ba_ui_protection_format",
-        "type": "function",
-        "z": "a9a601907d96eb09",
-        "name": "Format Protection Status",
-        "func": "const doorOpen = flow.get('door_open') || false;\nconst fp2Presence = flow.get('fp2_presence') || false;\nconst movement = flow.get('movement') || false;\nconst lastActivityTime = flow.get('lastActivityTime') || 0;\nconst timeSinceActivity = Date.now() - lastActivityTime;\nconst ACTIVITY_TIMEOUT = 4 * 60 * 1000;\n\n// Check protection rules\nif (!doorOpen && timeSinceActivity < ACTIVITY_TIMEOUT) {\n    msg.payload = \"🟡 PROTECTED: Recent activity\";\n} else if (fp2Presence && movement) {\n    msg.payload = \"🔴 PROTECTED: FP2 + Motion active\";\n} else if (fp2Presence) {\n    msg.payload = \"🟡 PROTECTED: FP2 active\";\n} else if (movement) {\n    msg.payload = \"🔵 PROTECTED: Motion detected\";\n} else {\n    const minIdle = Math.floor(timeSinceActivity / 60000);\n    msg.payload = `🟢 Safe to turn off (${minIdle}m idle)`;\n    let data = {};\n    data.payload = false;\n    node.send([null, data]);\n}\n\nreturn msg;",
-        "outputs": 2,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 730,
-        "y": 520,
-        "wires": [
-            [
-                "ba_ui_protection_display"
-            ],
-            [
-                "c91ca09967cda70e"
-            ]
-        ]
-    },
-    {
-        "id": "ba_ui_protection_display",
-        "type": "ui-text",
-        "z": "a9a601907d96eb09",
-        "group": "1257d664fb2a5f32",
-        "order": 1,
-        "width": 3,
-        "height": "1",
-        "name": "Protection Status",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "",
-        "x": 1010,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "ba_ui_update_trigger",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "Update Dashboard Every 15s",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "15",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 370,
-        "y": 620,
-        "wires": [
-            [
-                "ba_ui_fp2_format",
-                "ba_ui_movement_format"
-            ]
-        ]
-    },
-    {
-        "id": "a9eef7ebd0b8a98e",
-        "type": "trigger",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1620,
-        "y": 320,
-        "wires": [
-            [
-                "cd274e19cc986be4"
-            ]
-        ]
-    },
-    {
-        "id": "d75a3fcd498a1213",
-        "type": "link out",
-        "z": "a9a601907d96eb09",
-        "name": "Reset mirror ",
-        "mode": "link",
-        "links": [
-            "b68b07285e615789"
-        ],
-        "x": 1615,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "8c0c34a86ebdc4bb",
-        "type": "switch",
-        "z": "a9a601907d96eb09",
-        "name": "paylaod False",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1060,
-        "y": 240,
-        "wires": [
-            [
-                "41e16a5e73288fc6"
-            ],
-            [
-                "694353d781c790bc",
-                "d75a3fcd498a1213"
-            ]
-        ]
-    },
-    {
-        "id": "5ae3babe85bed457",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "bathroom Dimm OFF close",
-        "rules": [
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "BA-LYS",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "10",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "tmpDimmed",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "tmp_percent_bathroom",
-                "pt": "flow",
-                "to": "percent_bathroom",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 140,
-        "wires": [
-            [
-                "a9eef7ebd0b8a98e",
-                "4c1858d290c94d44"
-            ]
-        ]
-    },
-    {
-        "id": "dc59445212c92f7c",
-        "type": "switch",
-        "z": "a9a601907d96eb09",
-        "name": "is tmpDimmed",
-        "property": "tmpDimmed",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 740,
-        "y": 360,
-        "wires": [
-            [
-                "b20ce97136a7c3a4"
-            ]
-        ]
-    },
-    {
-        "id": "b20ce97136a7c3a4",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "bathroom Dimm reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "tmpDimmed",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "tmp_percent_bathroom",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1080,
-        "y": 320,
-        "wires": [
-            [
-                "759977ced6b96acf"
-            ]
-        ]
-    },
-    {
-        "id": "fd9acad7f44237b8",
-        "type": "switch",
-        "z": "a9a601907d96eb09",
-        "name": "islight_on",
-        "property": "islight_on",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 720,
-        "y": 400,
-        "wires": [
-            [],
-            [
-                "2ebf80ed57b96fc3"
-            ]
-        ]
-    },
-    {
-        "id": "489a70e46708be19",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "islight_on",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1370,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9a055681e2b48e5d",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "bathroom Dimm OFF close",
-        "rules": [
-            {
-                "t": "set",
-                "p": "tmp_percent_bathroom",
-                "pt": "flow",
-                "to": "percent_bathroom",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1360,
-        "y": 400,
-        "wires": [
-            [
-                "759977ced6b96acf"
-            ]
-        ]
-    },
-    {
-        "id": "41e16a5e73288fc6",
-        "type": "time-range-switch",
-        "z": "a9a601907d96eb09",
-        "name": "Dag",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "06:00",
-        "endTime": "21:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 1210,
-        "y": 140,
-        "wires": [
-            [
-                "02eff22aca2a8ec6"
-            ],
-            [
-                "34e93c09513999f0"
-            ]
-        ]
-    },
-    {
-        "id": "02eff22aca2a8ec6",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "Set dim 75",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "75",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1410,
-        "y": 100,
-        "wires": [
-            [
-                "8ab59e27d798ed60"
-            ]
-        ]
-    },
-    {
-        "id": "34e93c09513999f0",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "Set dim 15",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "15",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1410,
-        "y": 140,
-        "wires": [
-            [
-                "5ae3babe85bed457"
-            ]
-        ]
-    },
-    {
-        "id": "c91ca09967cda70e",
-        "type": "trigger",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "op1": "",
-        "op2": "false",
-        "op1type": "pay",
-        "op2type": "bool",
-        "duration": "0",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1020,
-        "y": 360,
-        "wires": [
-            [
-                "12daafe786835f3a"
-            ]
-        ]
-    },
-    {
-        "id": "e87b0901614d212a",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 450,
-        "y": 500,
-        "wires": [
-            [
-                "574aa3734542d7dc"
-            ]
-        ]
-    },
-    {
-        "id": "8ab59e27d798ed60",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "bathroom Dimm OFF close",
-        "rules": [
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "BA-LYS",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "75",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "tmpDimmed",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "tmp_percent_bathroom",
-                "pt": "flow",
-                "to": "percent_bathroom",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1640,
-        "y": 100,
-        "wires": [
-            [
-                "a9eef7ebd0b8a98e",
-                "4c1858d290c94d44"
-            ]
-        ]
-    },
-    {
-        "id": "ae45298f049b87f6",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 350,
-        "y": 560,
-        "wires": [
-            [
-                "ba_ui_activity_format"
-            ]
-        ]
-    },
-    {
-        "id": "c5ff8c6bed410957",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fp2_presence",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 820,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bee3860454e1e700",
-        "type": "change",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fp2_presence",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 160,
-        "wires": [
-            [
-                "86965b568eeaa56c"
-            ]
-        ]
-    },
-    {
-        "id": "86965b568eeaa56c",
-        "type": "trigger",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "op1": "",
-        "op2": "false",
-        "op1type": "nul",
-        "op2type": "bool",
-        "duration": "30",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 750,
-        "y": 120,
-        "wires": [
-            [
-                "c5ff8c6bed410957"
-            ]
-        ]
-    },
-    {
-        "id": "6b217a4d7acba765",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 490,
-        "y": 160,
-        "wires": [
-            [
-                "b590b37dc0fbc282"
-            ]
-        ]
-    },
-    {
-        "id": "7de8196c9b8e4cc4",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 250,
-        "y": 100,
-        "wires": [
-            [
-                "b590b37dc0fbc282"
-            ]
-        ]
-    },
-    {
-        "id": "167f1545be70efe3",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 130,
-        "y": 440,
-        "wires": [
-            [
-                "6381072ee0756353"
-            ]
-        ]
-    },
-    {
-        "id": "7fc7874edbd56e2b",
-        "type": "inject",
-        "z": "a9a601907d96eb09",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 90,
-        "y": 500,
-        "wires": [
-            [
-                "6381072ee0756353"
-            ]
-        ]
-    },
-    {
-        "id": "ae311c4db6e56d39",
-        "type": "switch",
-        "z": "81eedfe27e202b5a",
-        "name": "OFF",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 570,
-        "y": 240,
-        "wires": [
-            [
-                "37436e4d3a7713d2"
-            ]
-        ]
-    },
-    {
-        "id": "d063c7cde31095b8",
-        "type": "function",
-        "z": "81eedfe27e202b5a",
-        "name": "FP2 Presence",
-        "func": "// Store FP2 presence state\nflow.set('fp2_presence', msg.payload);\n\n// Update activity timestamp when presence detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 240,
-        "wires": [
-            [
-                "a3596ea4652f4781",
-                "ae311c4db6e56d39"
-            ]
-        ]
-    },
-    {
-        "id": "f627f6e01a47a3da",
-        "type": "link in",
-        "z": "81eedfe27e202b5a",
-        "name": "Aqara FP2",
-        "links": [],
-        "x": 255,
-        "y": 240,
-        "wires": [
-            [
-                "d063c7cde31095b8"
-            ]
-        ]
-    },
-    {
-        "id": "a3596ea4652f4781",
-        "type": "switch",
-        "z": "81eedfe27e202b5a",
-        "name": "ON",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 570,
-        "y": 400,
-        "wires": [
-            [
-                "a5298eebaa1406ae",
-                "f84aec200172692f",
-                "7a55227e73379517"
-            ]
-        ]
-    },
-    {
-        "id": "f84aec200172692f",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 440,
-        "wires": [
-            [
-                "b37f9344a44156eb"
-            ]
-        ]
-    },
-    {
-        "id": "3459e431fca4758f",
-        "type": "function",
-        "z": "81eedfe27e202b5a",
-        "name": "movement",
-        "func": "// Store movement state\nflow.set('movement', msg.payload);\n\n// Update activity timestamp when movement detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 390,
-        "y": 320,
-        "wires": [
-            [
-                "a3596ea4652f4781",
-                "23796465c61d729a"
-            ]
-        ]
-    },
-    {
-        "id": "ff6e2c73d81400a7",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "Store Door State",
-        "rules": [
-            {
-                "t": "set",
-                "p": "door_open",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 410,
-        "y": 440,
-        "wires": [
-            [
-                "21a6ec0a34f66ad0"
-            ]
-        ]
-    },
-    {
-        "id": "21a6ec0a34f66ad0",
-        "type": "switch",
-        "z": "81eedfe27e202b5a",
-        "name": "Door Action",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 570,
-        "y": 440,
-        "wires": [
-            [
-                "a3596ea4652f4781"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "34160b8f67f08a13",
-        "type": "time-range-switch",
-        "z": "81eedfe27e202b5a",
-        "name": "Dag",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "06:00",
-        "endTime": "21:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 1110,
-        "y": 400,
-        "wires": [
-            [
-                "130c8e606a7ae5f6"
-            ],
-            [
-                "d669c29570928ec8"
-            ]
-        ]
-    },
-    {
-        "id": "b37f9344a44156eb",
-        "type": "trigger",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "op1": "true",
-        "op2": "false",
-        "op1type": "bool",
-        "op2type": "bool",
-        "duration": "6",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1170,
-        "y": 300,
-        "wires": [
-            [
-                "5aa31dda5144330d"
-            ]
-        ]
-    },
-    {
-        "id": "2214d9cb038cf259",
-        "type": "link in",
-        "z": "81eedfe27e202b5a",
-        "name": "Batroom_Movement",
-        "links": [
-            "455faa8d.6c9aa4"
-        ],
-        "x": 255,
-        "y": 320,
-        "wires": [
-            [
-                "3459e431fca4758f"
-            ]
-        ]
-    },
-    {
-        "id": "271f90f30bdc06b6",
-        "type": "link in",
-        "z": "81eedfe27e202b5a",
-        "name": "Bathroom_Door",
-        "links": [
-            "dc7a9dbe.e7065"
-        ],
-        "x": 255,
-        "y": 400,
-        "wires": [
-            [
-                "520b112f818a4214"
-            ]
-        ]
-    },
-    {
-        "id": "130c8e606a7ae5f6",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "Day",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "100",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1250,
-        "y": 400,
-        "wires": [
-            [
-                "a83e83d43e9fad9d"
-            ]
-        ]
-    },
-    {
-        "id": "d669c29570928ec8",
-        "type": "time-range-switch",
-        "z": "81eedfe27e202b5a",
-        "name": "Natt",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "21:00",
-        "endTime": "23:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 1110,
-        "y": 460,
-        "wires": [
-            [
-                "a53e1683544a2527"
-            ],
-            [
-                "de1664c16f6c3ca3"
-            ]
-        ]
-    },
-    {
-        "id": "4219203ecedf6e85",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "bathroom OFF",
-        "rules": [
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "BA-LYS",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "islight_on",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1480,
-        "y": 280,
-        "wires": [
-            [
-                "b495c2b0d9420e46",
-                "96746b4052bcd68d",
-                "b43b03308b3a32dc"
-            ]
-        ]
-    },
-    {
-        "id": "96746b4052bcd68d",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "BA-Presence",
-        "rules": [
-            {
-                "t": "set",
-                "p": "BA-Presence",
-                "pt": "global",
-                "to": "islight_on",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1750,
-        "y": 280,
-        "wires": [
-            [
-                "2acf2e9e39519966"
-            ]
-        ]
-    },
-    {
-        "id": "a53e1683544a2527",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "Evening",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "30",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1260,
-        "y": 440,
-        "wires": [
-            [
-                "a83e83d43e9fad9d"
-            ]
-        ]
-    },
-    {
-        "id": "de1664c16f6c3ca3",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "Night",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "15",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1250,
-        "y": 480,
-        "wires": [
-            [
-                "a83e83d43e9fad9d"
-            ]
-        ]
-    },
-    {
-        "id": "2acf2e9e39519966",
-        "type": "link out",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "e8a10173e53f4a16"
-        ],
-        "x": 1885,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "fe4e6ca838d46c7d",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "bathroom ON",
-        "rules": [
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "BA-LYS",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "percent_bathroom",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "islight_on",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1480,
-        "y": 320,
-        "wires": [
-            [
-                "b495c2b0d9420e46",
-                "96746b4052bcd68d",
-                "94f167f5c3077859"
-            ]
-        ]
-    },
-    {
-        "id": "d96187e4c5a2f765",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "percent_bathroom",
-        "rules": [
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "status.state.dimlevel",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2130,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "136c3dd86f0940f4",
-        "type": "Thing List",
-        "z": "81eedfe27e202b5a",
-        "nodeName": "bathroom",
-        "outputType": "individual",
-        "outputValue": "thing",
-        "property": "status",
-        "discardInput": false,
-        "rules": [
-            {
-                "compare": "eq",
-                "thingProp": "name",
-                "value": "bathroom",
-                "type": "str"
-            }
-        ],
-        "x": 1920,
-        "y": 320,
-        "wires": [
-            [
-                "d96187e4c5a2f765"
-            ]
-        ]
-    },
-    {
-        "id": "520b112f818a4214",
-        "type": "ui-switch",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "label": "DOOR",
-        "group": "1257d664fb2a5f32",
-        "order": 4,
-        "width": "2",
-        "height": "1",
-        "passthru": true,
-        "decouple": false,
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "className": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "lock-open",
-        "oncolor": "red",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "lock",
-        "offcolor": "greed",
-        "x": 410,
-        "y": 400,
-        "wires": [
-            [
-                "ff6e2c73d81400a7"
-            ]
-        ]
-    },
-    {
-        "id": "b495c2b0d9420e46",
-        "type": "trigger",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1740,
-        "y": 320,
-        "wires": [
-            [
-                "136c3dd86f0940f4"
-            ]
-        ]
-    },
-    {
-        "id": "94f167f5c3077859",
-        "type": "link out",
-        "z": "81eedfe27e202b5a",
-        "name": "Reset mirror ",
-        "mode": "link",
-        "links": [
-            "b68b07285e615789"
-        ],
-        "x": 1735,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "957367a642a8f932",
-        "type": "switch",
-        "z": "81eedfe27e202b5a",
-        "name": "islight_on",
-        "property": "islight_on",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 820,
-        "y": 240,
-        "wires": [
-            [],
-            [
-                "2776a0c811928535"
-            ]
-        ]
-    },
-    {
-        "id": "2776a0c811928535",
-        "type": "function",
-        "z": "81eedfe27e202b5a",
-        "name": "Door-Closed Protection",
-        "func": "// Check if door is closed (false = closed, true = open)\nconst doorOpen = flow.get('door_open');\nconst fp2Presence = flow.get('fp2_presence');\nconst movement = flow.get('movement');\n\n// Get last activity time\nlet lastActivityTime = flow.get('lastActivityTime') || 0;\nconst now = Date.now();\n\n// Update activity timestamp if any sensor is active\nif (fp2Presence || movement) {\n    lastActivityTime = now;\n    flow.set('lastActivityTime', lastActivityTime);\n}\n\nconst timeSinceActivity = now - lastActivityTime;\nconst ACTIVITY_TIMEOUT = 5 * 60 * 1000; // 5 minutes\n\n// CRITICAL: Block turn-off if door is closed and recent activity\nif (!doorOpen && timeSinceActivity < ACTIVITY_TIMEOUT) {\n    node.status({\n        fill: \"yellow\",\n        shape: \"dot\",\n        text: `Door closed - blocking OFF (activity ${Math.round(timeSinceActivity/1000)}s ago)`\n    });\n    return null; // Block the message - don't start timer\n}\n\n// Allow timer to proceed\nnode.status({\n    fill: \"green\",\n    shape: \"dot\",\n    text: \"Door open or no recent activity - allowing timer\"\n});\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1030,
-        "y": 200,
-        "wires": [
-            [
-                "b37f9344a44156eb"
-            ]
-        ]
-    },
-    {
-        "id": "5aa31dda5144330d",
-        "type": "switch",
-        "z": "81eedfe27e202b5a",
-        "name": "paylaod False",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 1180,
-        "y": 260,
-        "wires": [
-            [
-                "20441058ceaa89d2"
-            ],
-            [
-                "4219203ecedf6e85",
-                "94f167f5c3077859"
-            ]
-        ]
-    },
-    {
-        "id": "7b60170b73c4fe03",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "bathroom Dimm OFF close",
-        "rules": [
-            {
-                "t": "set",
-                "p": "room",
-                "pt": "msg",
-                "to": "BA-LYS",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "75",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "tmpDimmed",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "tmp_percent_bathroom",
-                "pt": "flow",
-                "to": "percent_bathroom",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1580,
-        "y": 140,
-        "wires": [
-            [
-                "b495c2b0d9420e46",
-                "2acf2e9e39519966"
-            ]
-        ]
-    },
-    {
-        "id": "7a55227e73379517",
-        "type": "switch",
-        "z": "81eedfe27e202b5a",
-        "name": "is tmpDimmed",
-        "property": "tmpDimmed",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 740,
-        "y": 360,
-        "wires": [
-            [
-                "adfcc1c9dc3626f2"
-            ]
-        ]
-    },
-    {
-        "id": "adfcc1c9dc3626f2",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "bathroom Dimm reset",
-        "rules": [
-            {
-                "t": "set",
-                "p": "tmpDimmed",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "percent_bathroom",
-                "pt": "flow",
-                "to": "tmp_percent_bathroom",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1200,
-        "y": 340,
-        "wires": [
-            [
-                "fe4e6ca838d46c7d"
-            ]
-        ]
-    },
-    {
-        "id": "a5298eebaa1406ae",
-        "type": "switch",
-        "z": "81eedfe27e202b5a",
-        "name": "islight_on",
-        "property": "islight_on",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 720,
-        "y": 400,
-        "wires": [
-            [],
-            [
-                "34160b8f67f08a13"
-            ]
-        ]
-    },
-    {
-        "id": "b43b03308b3a32dc",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "islight_on",
-                "pt": "flow",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1490,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "23796465c61d729a",
-        "type": "switch",
-        "z": "81eedfe27e202b5a",
-        "name": "fp2_presence false",
-        "property": "fp2_presence",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 630,
-        "y": 320,
-        "wires": [
-            [
-                "ae311c4db6e56d39"
-            ]
-        ]
-    },
-    {
-        "id": "a83e83d43e9fad9d",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "bathroom Dimm OFF close",
-        "rules": [
-            {
-                "t": "set",
-                "p": "tmp_percent_bathroom",
-                "pt": "flow",
-                "to": "percent_bathroom",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1480,
-        "y": 400,
-        "wires": [
-            [
-                "fe4e6ca838d46c7d"
-            ]
-        ]
-    },
-    {
-        "id": "37436e4d3a7713d2",
-        "type": "switch",
-        "z": "81eedfe27e202b5a",
-        "name": "movement false",
-        "property": "movement",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 700,
-        "y": 200,
-        "wires": [
-            [
-                "957367a642a8f932"
-            ]
-        ]
-    },
-    {
-        "id": "b2431ebafdbafd5b",
-        "type": "inject",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 70,
-        "y": 100,
-        "wires": [
-            [
-                "d063c7cde31095b8"
-            ]
-        ]
-    },
-    {
-        "id": "20441058ceaa89d2",
-        "type": "time-range-switch",
-        "z": "81eedfe27e202b5a",
-        "name": "Dag",
-        "lat": "58.851468",
-        "lon": "5.748852",
-        "startTime": "06:00",
-        "endTime": "21:00",
-        "startOffset": 0,
-        "endOffset": 0,
-        "x": 1330,
-        "y": 140,
-        "wires": [
-            [
-                "2d171009544cc13a"
-            ],
-            [
-                "5c58166e260ef9d6"
-            ]
-        ]
-    },
-    {
-        "id": "2d171009544cc13a",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "Set dim 75",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "75",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1530,
-        "y": 100,
-        "wires": [
-            [
-                "7b60170b73c4fe03"
-            ]
-        ]
-    },
-    {
-        "id": "5c58166e260ef9d6",
-        "type": "change",
-        "z": "81eedfe27e202b5a",
-        "name": "Set dim 15",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "15",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1450,
-        "y": 180,
-        "wires": [
-            [
-                "7b60170b73c4fe03"
-            ]
-        ]
-    },
-    {
-        "id": "a06b8b8fe054a921",
-        "type": "inject",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 70,
-        "y": 160,
-        "wires": [
-            [
-                "d063c7cde31095b8",
-                "3459e431fca4758f",
-                "520b112f818a4214"
-            ]
-        ]
-    },
-    {
-        "id": "c048d104fd00f2fc",
-        "type": "inject",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 90,
-        "y": 360,
-        "wires": [
-            [
-                "520b112f818a4214"
-            ]
-        ]
-    },
-    {
-        "id": "550ffc19d0f226cf",
-        "type": "inject",
-        "z": "81eedfe27e202b5a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 90,
-        "y": 420,
-        "wires": [
-            [
-                "520b112f818a4214"
             ]
         ]
     },
@@ -25427,6 +22938,7 @@
         "id": "30c6f6bd94814054",
         "type": "inject",
         "z": "189409faf8842877",
+        "d": true,
         "g": "a43790b1a5c19601",
         "name": "Every 30 min",
         "props": [
@@ -25434,14 +22946,14 @@
                 "p": "payload"
             }
         ],
-        "repeat": "1800",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": "120",
         "topic": "",
         "payload": "refresh",
         "payloadType": "str",
-        "x": 150,
+        "x": 140,
         "y": 1140,
         "wires": [
             [
@@ -26001,7 +23513,6 @@
         "links": [
             "77e202e1f7cb4c98",
             "d9f59e6e05f7c5b4",
-            "f627f6e01a47a3da",
             "b0e54fbbc4d9fa6a"
         ],
         "x": 735,
@@ -27406,5 +24917,1386 @@
         "x": 634,
         "y": 1356,
         "wires": []
+    },
+    {
+        "id": "b590b37dc0fbc282",
+        "type": "function",
+        "z": "d77a99302c4e6503",
+        "name": "FP2 Presence + Activity Tracking",
+        "func": "\n\n// Track last activity time when presence detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    // Store FP2 presence state\n    node.status({fill: \"green\", shape: \"dot\", text: \"Active: \" + new Date().toLocaleTimeString()});\nreturn msg;\n} else {\n    node.status({fill: \"grey\", shape: \"ring\", text: \"Inactive\"});\n    node.send([null, msg]);\n}\n\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 320,
+        "wires": [
+            [
+                "bdc7a6b2a2bf8285",
+                "ba_ui_fp2_format",
+                "bee3860454e1e700"
+            ],
+            [
+                "86965b568eeaa56c"
+            ]
+        ]
+    },
+    {
+        "id": "d9f59e6e05f7c5b4",
+        "type": "link in",
+        "z": "d77a99302c4e6503",
+        "name": "Aqara FP2",
+        "links": [],
+        "x": 385,
+        "y": 320,
+        "wires": [
+            [
+                "b590b37dc0fbc282"
+            ]
+        ]
+    },
+    {
+        "id": "bdc7a6b2a2bf8285",
+        "type": "switch",
+        "z": "d77a99302c4e6503",
+        "name": "ON",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 480,
+        "wires": [
+            [
+                "fd9acad7f44237b8",
+                "574aa3734542d7dc",
+                "dc59445212c92f7c"
+            ]
+        ]
+    },
+    {
+        "id": "574aa3734542d7dc",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 520,
+        "wires": [
+            [
+                "12daafe786835f3a",
+                "c91ca09967cda70e"
+            ]
+        ]
+    },
+    {
+        "id": "dc2a2ebf5212b35b",
+        "type": "function",
+        "z": "d77a99302c4e6503",
+        "name": "Movement + Activity Tracking",
+        "func": "// Store movement state\nflow.set('movement', msg.payload);\n\n// Track last activity time when movement detected\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    node.status({fill: \"blue\", shape: \"dot\", text: \"Motion: \" + new Date().toLocaleTimeString()});\n} else {\n    node.status({fill: \"grey\", shape: \"ring\", text: \"No motion\"});\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 400,
+        "wires": [
+            [
+                "bdc7a6b2a2bf8285",
+                "ba_ui_movement_format"
+            ]
+        ]
+    },
+    {
+        "id": "9a6c7e2adae19dbe",
+        "type": "function",
+        "z": "d77a99302c4e6503",
+        "name": "Door State Tracker",
+        "func": "// Store door state (true = open, false = closed)\nflow.set('door_open', msg.payload);\n\n// Update activity time when door opens (entering bathroom)\nif (msg.payload === true) {\n    flow.set('lastActivityTime', Date.now());\n    node.status({fill: \"red\", shape: \"dot\", text: \"Door OPEN\"});\n} else {\n    node.status({fill: \"green\", shape: \"ring\", text: \"Door CLOSED\"});\n}\n\n// Trigger dashboard updates\nnode.send([null, null, {payload: true}]);\n\n// Route to appropriate output\nif (msg.payload === true) {\n    return [msg, null, null]; // Output 1: door opened\n} else {\n    return [null, msg, null]; // Output 2: door closed\n}",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 520,
+        "wires": [
+            [
+                "bdc7a6b2a2bf8285"
+            ],
+            [],
+            [
+                "ba_ui_activity_format",
+                "ba_ui_protection_format"
+            ]
+        ]
+    },
+    {
+        "id": "2ebf80ed57b96fc3",
+        "type": "time-range-switch",
+        "z": "d77a99302c4e6503",
+        "name": "Dag",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "06:00",
+        "endTime": "21:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1190,
+        "y": 480,
+        "wires": [
+            [
+                "e06c1ce2758c7f85"
+            ],
+            [
+                "f6c1c04e41814de2"
+            ]
+        ]
+    },
+    {
+        "id": "12daafe786835f3a",
+        "type": "trigger",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "2",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1250,
+        "y": 360,
+        "wires": [
+            [
+                "8c0c34a86ebdc4bb"
+            ]
+        ]
+    },
+    {
+        "id": "c840b6850a9f9370",
+        "type": "link in",
+        "z": "d77a99302c4e6503",
+        "name": "Batroom_Movement",
+        "links": [
+            "455faa8d.6c9aa4"
+        ],
+        "x": 455,
+        "y": 400,
+        "wires": [
+            [
+                "dc2a2ebf5212b35b"
+            ]
+        ]
+    },
+    {
+        "id": "ea645748ca3e406e",
+        "type": "link in",
+        "z": "d77a99302c4e6503",
+        "name": "Bathroom_Door",
+        "links": [
+            "dc7a9dbe.e7065"
+        ],
+        "x": 455,
+        "y": 480,
+        "wires": [
+            [
+                "6381072ee0756353"
+            ]
+        ]
+    },
+    {
+        "id": "e06c1ce2758c7f85",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "Day",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "100",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 480,
+        "wires": [
+            [
+                "9a055681e2b48e5d"
+            ]
+        ]
+    },
+    {
+        "id": "f6c1c04e41814de2",
+        "type": "time-range-switch",
+        "z": "d77a99302c4e6503",
+        "name": "Natt",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "21:00",
+        "endTime": "23:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1190,
+        "y": 540,
+        "wires": [
+            [
+                "431b24da5c1cf8a9"
+            ],
+            [
+                "6e23ce00bcce09a8"
+            ]
+        ]
+    },
+    {
+        "id": "694353d781c790bc",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "bathroom OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "BA-LYS",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "islight_on",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 360,
+        "wires": [
+            [
+                "a9eef7ebd0b8a98e",
+                "2cd7beb6601eb278",
+                "489a70e46708be19"
+            ]
+        ]
+    },
+    {
+        "id": "2cd7beb6601eb278",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "BA-Presence",
+        "rules": [
+            {
+                "t": "set",
+                "p": "BA-Presence",
+                "pt": "global",
+                "to": "islight_on",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1830,
+        "y": 360,
+        "wires": [
+            [
+                "4c1858d290c94d44"
+            ]
+        ]
+    },
+    {
+        "id": "431b24da5c1cf8a9",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "Evening",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "30",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1340,
+        "y": 520,
+        "wires": [
+            [
+                "9a055681e2b48e5d"
+            ]
+        ]
+    },
+    {
+        "id": "6e23ce00bcce09a8",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "Night",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "15",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1330,
+        "y": 560,
+        "wires": [
+            [
+                "9a055681e2b48e5d"
+            ]
+        ]
+    },
+    {
+        "id": "4c1858d290c94d44",
+        "type": "link out",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "e8a10173e53f4a16"
+        ],
+        "x": 1965,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "759977ced6b96acf",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "bathroom ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "BA-LYS",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "percent_bathroom",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "islight_on",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 400,
+        "wires": [
+            [
+                "a9eef7ebd0b8a98e",
+                "2cd7beb6601eb278",
+                "d75a3fcd498a1213"
+            ]
+        ]
+    },
+    {
+        "id": "0d76a80b287e9f32",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "percent_bathroom",
+        "rules": [
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "status.state.dimlevel",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2210,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cd274e19cc986be4",
+        "type": "Thing List",
+        "z": "d77a99302c4e6503",
+        "nodeName": "bathroom",
+        "outputType": "individual",
+        "outputValue": "thing",
+        "property": "status",
+        "discardInput": false,
+        "rules": [
+            {
+                "compare": "eq",
+                "thingProp": "name",
+                "value": "bathroom",
+                "type": "str"
+            }
+        ],
+        "x": 2000,
+        "y": 400,
+        "wires": [
+            [
+                "0d76a80b287e9f32"
+            ]
+        ]
+    },
+    {
+        "id": "6381072ee0756353",
+        "type": "ui-switch",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "label": "DOOR",
+        "group": "1257d664fb2a5f32",
+        "order": 2,
+        "width": 1,
+        "height": "1",
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "lock-open",
+        "oncolor": "red",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "lock",
+        "offcolor": "greed",
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "9a6c7e2adae19dbe"
+            ]
+        ]
+    },
+    {
+        "id": "ba_ui_fp2_format",
+        "type": "function",
+        "z": "d77a99302c4e6503",
+        "name": "Format FP2 Status",
+        "func": "const fp2Active = flow.get('fp2_presence') || false;\nconst lastActivity = flow.get('lastActivityTime') || 0;\n\nif (fp2Active) {\n    msg.payload = \"🟢 FP2: Active\";\n} else {\n    const timeSince = Date.now() - lastActivity;\n    const minAgo = Math.floor(timeSince / 60000);\n    msg.payload = `⚫ FP2: Inactive (${minAgo}m ago)`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 720,
+        "wires": [
+            [
+                "ba_ui_fp2_display"
+            ]
+        ]
+    },
+    {
+        "id": "ba_ui_fp2_display",
+        "type": "ui-text",
+        "z": "d77a99302c4e6503",
+        "group": "1257d664fb2a5f32",
+        "order": 3,
+        "width": 3,
+        "height": "1",
+        "name": "FP2 Status",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 1190,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "ba_ui_movement_format",
+        "type": "function",
+        "z": "d77a99302c4e6503",
+        "name": "Format Movement Status",
+        "func": "const movement = flow.get('movement') || false;\n\nif (movement) {\n    msg.payload = \"🔵 IR Motion: Detected\";\n} else {\n    msg.payload = \"⚫ IR Motion: Clear\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 640,
+        "wires": [
+            [
+                "ba_ui_movement_display"
+            ]
+        ]
+    },
+    {
+        "id": "ba_ui_movement_display",
+        "type": "ui-text",
+        "z": "d77a99302c4e6503",
+        "group": "1257d664fb2a5f32",
+        "order": 6,
+        "width": 3,
+        "height": "1",
+        "name": "Movement Status",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 1210,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "ba_ui_activity_format",
+        "type": "function",
+        "z": "d77a99302c4e6503",
+        "name": "Format Activity Time",
+        "func": "const lastActivity = flow.get('lastActivityTime') || 0;\nconst timeSince = Date.now() - lastActivity;\nconst minAgo = Math.floor(timeSince / 60000);\nconst secAgo = Math.floor((timeSince % 60000) / 1000);\n\nif (minAgo === 0) {\n    msg.payload = `⏱️ Last Activity: ${secAgo}s ago`;\n} else {\n    msg.payload = `⏱️ Last Activity: ${minAgo}m ${secAgo}s ago`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 680,
+        "wires": [
+            [
+                "ba_ui_activity_display"
+            ]
+        ]
+    },
+    {
+        "id": "ba_ui_activity_display",
+        "type": "ui-text",
+        "z": "d77a99302c4e6503",
+        "group": "1257d664fb2a5f32",
+        "order": 8,
+        "width": 3,
+        "height": "1",
+        "name": "Last Activity",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 1190,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "ba_ui_protection_format",
+        "type": "function",
+        "z": "d77a99302c4e6503",
+        "name": "Format Protection Status",
+        "func": "const doorOpen = flow.get('door_open') || false;\nconst fp2Presence = flow.get('fp2_presence') || false;\nconst movement = flow.get('movement') || false;\nconst lastActivityTime = flow.get('lastActivityTime') || 0;\nconst timeSinceActivity = Date.now() - lastActivityTime;\nconst ACTIVITY_TIMEOUT = 4 * 60 * 1000;\n\n// Check protection rules\nif (!doorOpen && timeSinceActivity < ACTIVITY_TIMEOUT) {\n    msg.payload = \"🟡 PROTECTED: Recent activity\";\n} else if (fp2Presence && movement) {\n    msg.payload = \"🔴 PROTECTED: FP2 + Motion active\";\n} else if (fp2Presence) {\n    msg.payload = \"🟡 PROTECTED: FP2 active\";\n} else if (movement) {\n    msg.payload = \"🔵 PROTECTED: Motion detected\";\n} else {\n    const minIdle = Math.floor(timeSinceActivity / 60000);\n    msg.payload = `🟢 Safe to turn off (${minIdle}m idle)`;\n    let data = {};\n    data.payload = false;\n    node.send([null, data]);\n}\n\nreturn msg;",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 600,
+        "wires": [
+            [
+                "ba_ui_protection_display"
+            ],
+            [
+                "c91ca09967cda70e"
+            ]
+        ]
+    },
+    {
+        "id": "ba_ui_protection_display",
+        "type": "ui-text",
+        "z": "d77a99302c4e6503",
+        "group": "1257d664fb2a5f32",
+        "order": 1,
+        "width": 3,
+        "height": "1",
+        "name": "Protection Status",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 1210,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "ba_ui_update_trigger",
+        "type": "inject",
+        "z": "d77a99302c4e6503",
+        "name": "Update Dashboard Every 15s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 570,
+        "y": 700,
+        "wires": [
+            [
+                "ba_ui_fp2_format",
+                "ba_ui_movement_format",
+                "ba_ui_protection_format"
+            ]
+        ]
+    },
+    {
+        "id": "a9eef7ebd0b8a98e",
+        "type": "trigger",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1820,
+        "y": 400,
+        "wires": [
+            [
+                "cd274e19cc986be4"
+            ]
+        ]
+    },
+    {
+        "id": "d75a3fcd498a1213",
+        "type": "link out",
+        "z": "d77a99302c4e6503",
+        "name": "Reset mirror ",
+        "mode": "link",
+        "links": [
+            "b68b07285e615789"
+        ],
+        "x": 1815,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8c0c34a86ebdc4bb",
+        "type": "switch",
+        "z": "d77a99302c4e6503",
+        "name": "paylaod False",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1260,
+        "y": 320,
+        "wires": [
+            [
+                "41e16a5e73288fc6"
+            ],
+            [
+                "694353d781c790bc",
+                "d75a3fcd498a1213"
+            ]
+        ]
+    },
+    {
+        "id": "5ae3babe85bed457",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "bathroom Dimm OFF close",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "BA-LYS",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "10",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "tmpDimmed",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "tmp_percent_bathroom",
+                "pt": "flow",
+                "to": "percent_bathroom",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1840,
+        "y": 220,
+        "wires": [
+            [
+                "a9eef7ebd0b8a98e",
+                "4c1858d290c94d44"
+            ]
+        ]
+    },
+    {
+        "id": "dc59445212c92f7c",
+        "type": "switch",
+        "z": "d77a99302c4e6503",
+        "name": "is tmpDimmed",
+        "property": "tmpDimmed",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 440,
+        "wires": [
+            [
+                "b20ce97136a7c3a4"
+            ]
+        ]
+    },
+    {
+        "id": "b20ce97136a7c3a4",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "bathroom Dimm reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tmpDimmed",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "percent_bathroom",
+                "pt": "flow",
+                "to": "tmp_percent_bathroom",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 400,
+        "wires": [
+            [
+                "759977ced6b96acf"
+            ]
+        ]
+    },
+    {
+        "id": "fd9acad7f44237b8",
+        "type": "switch",
+        "z": "d77a99302c4e6503",
+        "name": "islight_on",
+        "property": "islight_on",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 920,
+        "y": 480,
+        "wires": [
+            [],
+            [
+                "2ebf80ed57b96fc3"
+            ]
+        ]
+    },
+    {
+        "id": "489a70e46708be19",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "islight_on",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1570,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a055681e2b48e5d",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "bathroom Dimm OFF close",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tmp_percent_bathroom",
+                "pt": "flow",
+                "to": "percent_bathroom",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1560,
+        "y": 480,
+        "wires": [
+            [
+                "759977ced6b96acf"
+            ]
+        ]
+    },
+    {
+        "id": "41e16a5e73288fc6",
+        "type": "time-range-switch",
+        "z": "d77a99302c4e6503",
+        "name": "Dag",
+        "lat": "58.851468",
+        "lon": "5.748852",
+        "startTime": "06:00",
+        "endTime": "21:00",
+        "startOffset": 0,
+        "endOffset": 0,
+        "x": 1410,
+        "y": 220,
+        "wires": [
+            [
+                "02eff22aca2a8ec6"
+            ],
+            [
+                "34e93c09513999f0"
+            ]
+        ]
+    },
+    {
+        "id": "02eff22aca2a8ec6",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "Set dim 75",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "75",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 180,
+        "wires": [
+            [
+                "8ab59e27d798ed60"
+            ]
+        ]
+    },
+    {
+        "id": "34e93c09513999f0",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "Set dim 15",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "15",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 220,
+        "wires": [
+            [
+                "5ae3babe85bed457"
+            ]
+        ]
+    },
+    {
+        "id": "c91ca09967cda70e",
+        "type": "trigger",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "op1": "",
+        "op2": "false",
+        "op1type": "pay",
+        "op2type": "bool",
+        "duration": "0",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1220,
+        "y": 440,
+        "wires": [
+            [
+                "12daafe786835f3a"
+            ]
+        ]
+    },
+    {
+        "id": "e87b0901614d212a",
+        "type": "inject",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 650,
+        "y": 580,
+        "wires": [
+            [
+                "574aa3734542d7dc"
+            ]
+        ]
+    },
+    {
+        "id": "8ab59e27d798ed60",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "bathroom Dimm OFF close",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "BA-LYS",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "75",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "tmpDimmed",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "tmp_percent_bathroom",
+                "pt": "flow",
+                "to": "percent_bathroom",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1840,
+        "y": 180,
+        "wires": [
+            [
+                "a9eef7ebd0b8a98e",
+                "4c1858d290c94d44"
+            ]
+        ]
+    },
+    {
+        "id": "ae45298f049b87f6",
+        "type": "inject",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 640,
+        "wires": [
+            [
+                "ba_ui_activity_format"
+            ]
+        ]
+    },
+    {
+        "id": "c5ff8c6bed410957",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fp2_presence",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bee3860454e1e700",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fp2_presence",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 240,
+        "wires": [
+            [
+                "86965b568eeaa56c"
+            ]
+        ]
+    },
+    {
+        "id": "86965b568eeaa56c",
+        "type": "trigger",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "op1": "",
+        "op2": "false",
+        "op1type": "nul",
+        "op2type": "bool",
+        "duration": "30",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 950,
+        "y": 200,
+        "wires": [
+            [
+                "c5ff8c6bed410957"
+            ]
+        ]
+    },
+    {
+        "id": "6b217a4d7acba765",
+        "type": "inject",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 690,
+        "y": 240,
+        "wires": [
+            [
+                "b590b37dc0fbc282"
+            ]
+        ]
+    },
+    {
+        "id": "7de8196c9b8e4cc4",
+        "type": "inject",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "b590b37dc0fbc282"
+            ]
+        ]
+    },
+    {
+        "id": "167f1545be70efe3",
+        "type": "inject",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 330,
+        "y": 520,
+        "wires": [
+            [
+                "6381072ee0756353"
+            ]
+        ]
+    },
+    {
+        "id": "7fc7874edbd56e2b",
+        "type": "inject",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 290,
+        "y": 580,
+        "wires": [
+            [
+                "6381072ee0756353"
+            ]
+        ]
     }
 ]
