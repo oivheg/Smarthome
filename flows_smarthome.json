@@ -1536,7 +1536,7 @@
         ],
         "x": 14,
         "y": 19,
-        "w": 412,
+        "w": 422,
         "h": 82
     },
     {
@@ -1649,7 +1649,7 @@
         ],
         "x": 34,
         "y": 979,
-        "w": 702,
+        "w": 712,
         "h": 122
     },
     {
@@ -10465,8 +10465,7 @@
                 "onstart": false,
                 "payload": [
                     "__complete__"
-                ],
-                "uniqueId": "ui-id-5"
+                ]
             },
             {
                 "type": "homekit",
@@ -10475,8 +10474,7 @@
                 "onerror": false,
                 "payload": [
                     "__auto__"
-                ],
-                "uniqueId": "ui-id-6"
+                ]
             }
         ],
         "x": 240,
@@ -10662,6 +10660,16 @@
                 "45cb9cc4a62bb031"
             ]
         ]
+    },
+    {
+        "id": "a7a6ccdf27bc9db2",
+        "type": "comment",
+        "z": "a7af161f.d5ece8",
+        "name": "Compose file Decons ",
+        "info": "version: \"2\"\nservices:\n  deconz:\n    image: deconzcommunity/deconz\n    container_name: deconz\n    restart: always\n    ports:\n      - 80:80\n      - 443:443\n    volumes:\n      - /opt/deconz:/opt/deCONZ\n    devices:\n      - /dev/ttyACM0\n    environment:\n      - DECONZ_WEB_PORT=80\n      - DECONZ_WS_PORT=443\n      - DEBUG_INFO=1\n      - DEBUG_APS=0\n      - DEBUG_ZCL=0\n      - DEBUG_ZDP=0\n      - DEBUG_OTAU=0\n\n\n      https://hub.docker.com/r/deconzcommunity/deconz",
+        "x": 1070,
+        "y": 240,
+        "wires": []
     },
     {
         "id": "81af6cca.e9c66",
