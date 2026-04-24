@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "id": "1c11632f.f206fd",
         "type": "tab",
@@ -1623,10 +1623,10 @@
             "efeebb86ae576e31",
             "5bfc7f7061fecc0e"
         ],
-        "x": 14,
+        "x": 394,
         "y": 759,
-        "w": 1072,
-        "h": 162
+        "w": 692,
+        "h": 142
     },
     {
         "id": "c6d89bb6766b3bd0",
@@ -4080,7 +4080,7 @@
         "y": 180,
         "wires": [
             [
-                "adc5b3cc5fb3acb9"
+                "0c9dbb75cb05fab9"
             ],
             [
                 "25b0ce2a287f7a88"
@@ -4303,6 +4303,13 @@
                 "pt": "msg",
                 "to": "OFF",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "isLightOn",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -4659,6 +4666,35 @@
         "wires": [
             [
                 "vm_area_check"
+            ]
+        ]
+    },
+    {
+        "id": "0c9dbb75cb05fab9",
+        "type": "switch",
+        "z": "c15399232bac2ca3",
+        "name": "isLightOn",
+        "property": "isLightOn",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 920,
+        "y": 120,
+        "wires": [
+            [
+                "096fc2a5f95b7fe3"
+            ],
+            [
+                "adc5b3cc5fb3acb9"
             ]
         ]
     },
@@ -5861,7 +5897,7 @@
             },
             {
                 "name": "LightTreshold",
-                "value": "150",
+                "value": "200",
                 "type": "num"
             },
             {
