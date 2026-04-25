@@ -1689,10 +1689,7 @@
             "swing_clear_001",
             "6d0c2b6b4cb3ff5a",
             "7fe3530efb93c127",
-            "66c3edfbc823bbf1",
-            "mill_input_001",
-            "mill_store_001",
-            "mill_disp_001"
+            "66c3edfbc823bbf1"
         ],
         "x": 714,
         "y": -1,
@@ -1916,8 +1913,8 @@
         "type": "junction",
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
-        "x": 1580,
-        "y": 80,
+        "x": 870,
+        "y": 60,
         "wires": [
             [
                 "a63adc0bcd302284",
@@ -21194,27 +21191,6 @@
                 "pt": "flow",
                 "to": "18",
                 "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "millWinterTemp",
-                "pt": "flow",
-                "to": "23",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "millSummerTemp",
-                "pt": "flow",
-                "to": "20",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "cloudCover",
-                "pt": "flow",
-                "to": "50",
-                "tot": "num"
             }
         ],
         "action": "",
@@ -21362,13 +21338,6 @@
                 "p": "isSummer",
                 "pt": "flow",
                 "to": "(    $month := $number($fromMillis($millis(), '[M]'));    $temp := payload.properties.timeseries[0].data.instant.details.air_temperature;    ($month >= 5 and $month <= 9) or $temp > 18 )",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "cloudCover",
-                "pt": "flow",
-                "to": "$number(payload.properties.timeseries[0].data.instant.details.cloud_area_fraction) ? payload.properties.timeseries[0].data.instant.details.cloud_area_fraction : 50",
                 "tot": "jsonata"
             }
         ],
@@ -21719,7 +21688,7 @@
         "links": [
             "9121b3fbb51f781e"
         ],
-        "x": 1315,
+        "x": 775,
         "y": 340,
         "wires": []
     },
@@ -21772,7 +21741,7 @@
         "z": "189409faf8842877",
         "g": "d97117a1dc66902a",
         "name": "Temperature Controller",
-        "func": "// ═══════════════════════════════════════════════════════════════════════════\r\n// SMART TEMPERATURE CONTROLLER V6 - KISS Edition\r\n// ═══════════════════════════════════════════════════════════════════════════\r\n// Rules (per spec):\r\n//  - Heating focuses fixedBottom (downstairs) — heat rises\r\n//  - Cooling focuses fixedTop (upstairs) — cool sinks\r\n//  - Sleep / pre-bedtime / night → ALWAYS fixedBottom (bedrooms downstairs)\r\n//  - Visitor / manual / VisitorMode.enabled → automation BLOCKED, returns null\r\n//  - Summer/sunny upstairs hard cap 24°C (uses Yr cloud_area_fraction)\r\n//  - Watching TV at night (isStandBy=false) → no fan-cooling, only heat-low\r\n//  - Mill: winter 23°C / summer 20°C (configurable from dashboard)\r\n//  - Fan night caps: <22h ok, 22–23h ≤ medium, ≥23h low only\r\n// ═══════════════════════════════════════════════════════════════════════════\r\n\r\nconst num = (k, d) => { const v = Number(flow.get(k)); return isFinite(v) ? v : d; };\r\n\r\n// Sensors\r\nconst upstairs   = num('upstairsTemp', 20);\r\nconst downstairs = num('downstairsTemp', 20);\r\nconst outside    = num('outsideTemp', 10);\r\nconst cloud      = num('cloudCover', 50);   // % from Yr (0=clear, 100=overcast)\r\n\r\n// Targets / config\r\nconst desired      = num('desiredTemp', 22);\r\nconst bedtime      = num('bedtimeTemp', 19);\r\nconst nightTgt     = num('nightTemp', 17);\r\nconst awayTgt      = num('awayTemp', 21);\r\nconst vacationTgt  = num('vacationTemp', 18);\r\nconst millWinter   = num('millWinterTemp', 23);\r\nconst millSummer   = num('millSummerTemp', 20);\r\nconst SUMMER_CAP   = 24;     // upstairs hard cap in summer\r\n\r\n// State\r\nconst homeMode      = (global.get('Mode') || 'home').toLowerCase();\r\nconst timeMode      = flow.get('timeMode') || 'day';\r\nconst isSummer      = !!flow.get('isSummer');\r\nconst manualOR      = flow.get('manualOverride');     // heat|cool|on|off|null\r\nconst swingOR       = flow.get('swingOverride');      // fixedTop|fixedBottom|null\r\nconst manualMode    = !!global.get('manualmode');\r\nconst visitorMode   = (global.get('VisitorMode') || {}).enabled === true;\r\nconst standby       = global.get('isStandBy');         // true=standby, false=watching\r\nconst watching      = standby === false;               // explicit \"TV is on\"\r\nconst lastAction    = flow.get('lastHPAction') || 'off';\r\nconst lastActionTs  = flow.get('lastHPActionTime') || 0;\r\n\r\nconst now = Date.now();\r\nconst hour = new Date().getHours();\r\nconst isNightHours = (timeMode === 'night' || timeMode === 'pre-bedtime' || homeMode === 'sleep');\r\n\r\n// Hysteresis & min-run\r\nconst HEAT_ON = 1.0, HEAT_OFF = 0.3;\r\nconst COOL_ON = 0.5, COOL_OFF = 0.3;\r\nconst MIN_RUN_MS = 10 * 60 * 1000;\r\n\r\n// ─────────────────────────────────────────────────────────────────────────────\r\n// HARD BLOCK — visitor / manual / VisitorMode → do nothing, leave system alone\r\n// ─────────────────────────────────────────────────────────────────────────────\r\nconst blocked = ['visitor','guest','manual'].includes(homeMode) || manualMode || visitorMode;\r\nif (blocked) {\r\n    const why = visitorMode ? 'visitor' : (manualMode ? 'manual' : homeMode);\r\n    flow.set('controlReason', 'BLOCKED: ' + why + ' (automation paused)');\r\n    flow.set('heatpumpAction', 'paused');\r\n    node.status({ fill:'yellow', shape:'ring', text:'BLOCKED: ' + why });\r\n    return null;   // do NOT touch heat pump or mill\r\n}\r\n\r\n// ─────────────────────────────────────────────────────────────────────────────\r\n// HELPERS\r\n// ─────────────────────────────────────────────────────────────────────────────\r\nfunction canChange(next) {\r\n    if (lastAction === 'off' || next === lastAction) return true;\r\n    return (now - lastActionTs) >= MIN_RUN_MS;\r\n}\r\nfunction needsHeat(temp, target) {\r\n    return lastAction === 'heat' ? (temp < target + HEAT_OFF) : (temp < target - HEAT_ON);\r\n}\r\nfunction needsCool(temp, target) {\r\n    return lastAction === 'cool' ? (temp > target - COOL_OFF) : (temp > target + COOL_ON);\r\n}\r\n\r\n// Outputs (defaults)\r\nlet action = 'off';\r\nlet setpoint = desired;\r\nlet fan = 'low';\r\nlet swing = 'fixedBottom';\r\nlet millTemp = isSummer ? millSummer : millWinter;\r\nlet reason = '';\r\n\r\n// Yr-based summer cooling pre-trigger\r\nconst sunny = cloud < 30;\r\nconst hotOutside = outside > 22;\r\nconst summerPreCool = isSummer && (hotOutside || sunny) && upstairs >= 23;\r\n\r\n// ─────────────────────────────────────────────────────────────────────────────\r\n// 1) MANUAL OVERRIDE BUTTONS (heat/cool/on/off) — user takes the wheel\r\n// ─────────────────────────────────────────────────────────────────────────────\r\nif (manualOR && manualOR !== 'auto') {\r\n    if (manualOR === 'heat') {\r\n        action = 'heat'; setpoint = desired + 2; fan = 'medium';\r\n        reason = 'OVERRIDE Heat → ' + desired + '°C';\r\n    } else if (manualOR === 'cool') {\r\n        action = 'cool'; setpoint = Math.min(desired, 21); fan = 'medium';\r\n        reason = 'OVERRIDE Cool → ' + setpoint + '°C';\r\n    } else if (manualOR === 'on') {\r\n        action = isSummer ? 'cool' : 'heat';\r\n        setpoint = isSummer ? Math.min(desired, 21) : desired + 2;\r\n        fan = 'medium';\r\n        reason = 'OVERRIDE On (' + action + ') → ' + setpoint + '°C';\r\n    } else { // 'off'\r\n        action = 'off'; reason = 'OVERRIDE Off';\r\n    }\r\n}\r\n\r\n// ─────────────────────────────────────────────────────────────────────────────\r\n// 2) SAFETY (always wins over auto)\r\n// ─────────────────────────────────────────────────────────────────────────────\r\nelse if (upstairs > 30 || downstairs > 30) {\r\n    action = 'cool'; setpoint = 22; fan = 'high';\r\n    swing = upstairs > downstairs ? 'fixedTop' : 'fixedBottom';\r\n    reason = 'SAFETY >30°C';\r\n}\r\nelse if (upstairs < 12 || downstairs < 12) {\r\n    action = 'heat'; setpoint = 22; fan = 'high';\r\n    swing = upstairs < downstairs ? 'fixedTop' : 'fixedBottom';\r\n    millTemp = 25;\r\n    reason = 'SAFETY <12°C';\r\n}\r\n\r\n// ─────────────────────────────────────────────────────────────────────────────\r\n// 3) SLEEP / NIGHT / PRE-BEDTIME — bedrooms are DOWNSTAIRS\r\n// ─────────────────────────────────────────────────────────────────────────────\r\nelse if (homeMode === 'sleep' || timeMode === 'night' || timeMode === 'pre-bedtime') {\r\n    const bedTarget = (homeMode === 'sleep' || timeMode === 'night') ? bedtime : Math.max(bedtime, 20);\r\n    millTemp = isSummer ? millSummer : Math.min(millWinter, 21);\r\n    swing = 'fixedBottom';\r\n\r\n    if (needsCool(downstairs, bedTarget) && canChange('cool') && !watching) {\r\n        action = 'cool';\r\n        setpoint = Math.max(bedTarget - 1, 17);\r\n        fan = 'low';\r\n        reason = 'Night: cool ' + downstairs.toFixed(1) + '→' + bedTarget + '°C';\r\n    } else if (needsHeat(downstairs, bedTarget) && canChange('heat')) {\r\n        action = 'heat';\r\n        setpoint = bedTarget + 2;\r\n        fan = 'low';\r\n        reason = 'Night: heat ' + downstairs.toFixed(1) + '→' + bedTarget + '°C'\r\n              + (watching ? ' (TV on)' : '');\r\n    } else if (watching && downstairs < bedTarget + 0.5) {\r\n        action = 'heat'; setpoint = bedTarget + 1; fan = 'low';\r\n        reason = 'Night: TV on, heat-low hold';\r\n    } else {\r\n        action = 'off';\r\n        reason = 'Night: OK ' + downstairs.toFixed(1) + '°C'\r\n              + (watching ? ' (TV on)' : '');\r\n    }\r\n}\r\n\r\n// ─────────────────────────────────────────────────────────────────────────────\r\n// 4) VACATION\r\n// ─────────────────────────────────────────────────────────────────────────────\r\nelse if (homeMode === 'vacation') {\r\n    millTemp = isSummer ? millSummer : 19;\r\n    const cold = Math.min(upstairs, downstairs);\r\n    if (needsHeat(cold, vacationTgt) && canChange('heat')) {\r\n        action = 'heat'; setpoint = vacationTgt + 3; fan = 'low';\r\n        swing = upstairs < downstairs ? 'fixedTop' : 'fixedBottom';\r\n        reason = 'Vacation: heat ' + cold.toFixed(1) + '→' + vacationTgt;\r\n    } else if (upstairs > 28 && canChange('cool')) {\r\n        action = 'cool'; setpoint = 24; fan = 'low'; swing = 'fixedTop';\r\n        reason = 'Vacation: cool ' + upstairs.toFixed(1);\r\n    } else {\r\n        action = 'off'; reason = 'Vacation: OK';\r\n    }\r\n}\r\n\r\n// ─────────────────────────────────────────────────────────────────────────────\r\n// 5) AWAY\r\n// ─────────────────────────────────────────────────────────────────────────────\r\nelse if (homeMode === 'away') {\r\n    millTemp = isSummer ? millSummer : 20;\r\n    if (upstairs > 26 && canChange('cool')) {\r\n        action = 'cool'; setpoint = 24; fan = 'medium'; swing = 'fixedTop';\r\n        reason = 'Away: dog safety ' + upstairs.toFixed(1);\r\n    } else if (needsHeat(downstairs, awayTgt) && canChange('heat')) {\r\n        action = 'heat'; setpoint = awayTgt + 2; fan = 'medium'; swing = 'fixedBottom';\r\n        reason = 'Away: heat ' + downstairs.toFixed(1) + '→' + awayTgt;\r\n    } else {\r\n        action = 'off'; reason = 'Away: OK';\r\n    }\r\n}\r\n\r\n// ─────────────────────────────────────────────────────────────────────────────\r\n// 6) DAY / MORNING — keep BOTH floors close to desired\r\n// ─────────────────────────────────────────────────────────────────────────────\r\nelse {\r\n    const label = timeMode === 'morning' ? 'Morning' : 'Day';\r\n\r\n    if (isSummer && (upstairs > SUMMER_CAP || summerPreCool) && canChange('cool')) {\r\n        action = 'cool';\r\n        setpoint = Math.max(desired - 1, 20);\r\n        fan = upstairs > SUMMER_CAP + 1 ? 'high' : 'medium';\r\n        swing = 'fixedTop';\r\n        reason = label + ': SUMMER cool ' + upstairs.toFixed(1)\r\n              + (summerPreCool ? ' (sun/out=' + outside.toFixed(0) + ')' : '');\r\n    }\r\n    else if (needsCool(Math.max(upstairs, downstairs), desired) && canChange('cool')) {\r\n        const hot = upstairs >= downstairs;\r\n        action = 'cool';\r\n        setpoint = Math.max(desired - 1, 20);\r\n        fan = (Math.max(upstairs,downstairs) - desired) > 1.5 ? 'medium' : 'low';\r\n        swing = hot ? 'fixedTop' : 'fixedBottom';\r\n        reason = label + ': cool ' + (hot?'up':'dn') + ' ' + Math.max(upstairs,downstairs).toFixed(1) + '→' + desired;\r\n    }\r\n    else if (needsHeat(Math.min(upstairs, downstairs), desired) && canChange('heat')) {\r\n        const cold = Math.min(upstairs, downstairs);\r\n        const colderIsUp = upstairs < downstairs - 0.5;\r\n        action = 'heat';\r\n        const deficit = desired - cold;\r\n        setpoint = Math.min(desired + Math.round(deficit * 1.5) + 1, desired + 4);\r\n        fan = deficit > 2 ? 'medium' : 'low';\r\n        swing = colderIsUp ? 'fixedTop' : 'fixedBottom';\r\n        reason = label + ': heat ' + (colderIsUp?'up':'dn') + ' ' + cold.toFixed(1) + '→' + desired;\r\n    }\r\n    else {\r\n        action = 'off';\r\n        reason = label + ': OK up=' + upstairs.toFixed(1) + ' dn=' + downstairs.toFixed(1);\r\n    }\r\n}\r\n\r\n// SWING OVERRIDE (manual button)\r\nif (swingOR === 'fixedTop' || swingOR === 'fixedBottom') {\r\n    swing = swingOR;\r\n    reason += ' [swing OVR:' + swingOR + ']';\r\n}\r\n\r\n// NIGHT FAN CAPS (rule 9): 22–23 → max medium, ≥23 → low only\r\nif (isNightHours) {\r\n    if (hour >= 23 || hour < 5) {\r\n        if (fan !== 'low') fan = 'low';\r\n    } else if (hour >= 22) {\r\n        if (fan === 'high') fan = 'medium';\r\n    }\r\n}\r\n\r\n// PERSIST STATE\r\nif (action !== lastAction) {\r\n    flow.set('lastHPAction', action);\r\n    flow.set('lastHPActionTime', now);\r\n}\r\nflow.set('heatpumpAction', action);\r\nflow.set('targetTemp', setpoint);\r\nflow.set('controlReason', reason);\r\nflow.set('fanlevel', fan);\r\nflow.set('swing', swing);\r\n\r\n// OUTPUT\r\nmsg.on = action !== 'off';\r\nmsg.mode = action === 'off' ? 'heat' : action;\r\nmsg.targetTemperature = setpoint;\r\nmsg.fanlevel = fan;\r\nmsg.swing = swing;\r\nmsg.cmdHash = msg.on ? ('ON-' + msg.mode + '-' + setpoint + '-' + fan + '-' + swing) : 'OFF';\r\nmsg.mill = { on: true, temperature: millTemp };\r\nmsg.status = {\r\n    action, reason,\r\n    temps: { up:+upstairs.toFixed(1), dn:+downstairs.toFixed(1), out:+outside.toFixed(1), cloud },\r\n    ctx: { homeMode, timeMode, isSummer, watching, manualOR: manualOR||'auto', swingOR: swingOR||'auto' }\r\n};\r\n\r\nnode.status({\r\n    fill: action==='heat' ? 'red' : (action==='cool' ? 'blue' : 'grey'),\r\n    shape: 'dot',\r\n    text: reason.substring(0, 60)\r\n});\r\n\r\nreturn msg;\r\n",
+        "func": "// ═══════════════════════════════════════════════════════════════════════════\n// SMART TEMPERATURE CONTROLLER V5 - KISS Edition (Reviewed)\n// ═══════════════════════════════════════════════════════════════════════════\n// Sensibo Swing: fixedTop=vanes UP (upstairs), fixedBottom=vanes DOWN (downstairs)\n// Heat pump best practice: 1°C+ hysteresis, avoid rapid cycling\n// ═══════════════════════════════════════════════════════════════════════════\n\n// ═══════════════════════════════════════════════════════════════════════════\n// INPUTS\n// ═══════════════════════════════════════════════════════════════════════════\nconst upstairs = Number(flow.get('upstairsTemp')) || 20;\nconst downstairs = Number(flow.get('downstairsTemp')) || 20;\nconst outside = Number(flow.get('outsideTemp')) || 10;\n\n// Targets\nconst desiredTemp = Number(flow.get('desiredTemp')) || 22;\nconst bedtimeTemp = Number(flow.get('bedtimeTemp')) || 19;\nconst nightTemp = Number(flow.get('nightTemp')) || 17;\nconst awayTemp = Number(flow.get('awayTemp')) || 20;\nconst vacationTemp = Number(flow.get('vacationTemp')) || 18;\nconst coolTrigger = Number(flow.get('summerCoolTrigger')) || 24;\nconst coolTarget = Number(flow.get('summerCoolTarget')) || 21;\n\n// State\nconst homeMode = (global.get('Mode') || 'home').toLowerCase();\nconst timeMode = flow.get('timeMode') || 'day';\nconst isSummer = flow.get('isSummer') || false;\nconst manualOverride = flow.get('manualOverride');\nconst swingOverride = flow.get('swingOverride');  // 'fixedTop', 'fixedBottom', or null\nconst manualmode = global.get('manualmode') || false;\nconst visitorMode = global.get('VisitorMode') || {};\nconst lastAction = flow.get('lastHPAction') || 'off';\nconst lastActionTime = flow.get('lastHPActionTime') || 0;\n\n// Time\nconst now = Date.now();\nconst hour = new Date().getHours();\nconst isWeekend = global.get('isWeekend') || false;\nconst isWFH = (hour >= 8 && hour < 15) && homeMode === 'home' && !isWeekend;\n\n// Hysteresis settings (heat pump best practice)\nconst HEAT_ON = 1.0;\nconst HEAT_OFF = 0.3;\nconst COOL_ON = 0.5;   // Lower for bedtime cooling\nconst COOL_OFF = 0.3;\nconst MIN_RUN_MS = 10 * 60 * 1000;\n\n// ═══════════════════════════════════════════════════════════════════════════\n// OUTPUT DEFAULTS\n// ═══════════════════════════════════════════════════════════════════════════\nlet action = 'off';\nlet setpoint = desiredTemp;\nlet fan = 'low';\nlet swing = 'fixedBottom';  // Default: downstairs\nlet millTemp = 22;\nlet reason = '';\n\n// ═══════════════════════════════════════════════════════════════════════════\n// HELPERS\n// ═══════════════════════════════════════════════════════════════════════════\nfunction canChange(newAction) {\n    if (lastAction === 'off' || newAction === lastAction) return true;\n    return (now - lastActionTime) >= MIN_RUN_MS;\n}\n\nfunction needsHeat(temp, target) {\n    if (lastAction === 'heat') return temp < target + HEAT_OFF;\n    return temp < target - HEAT_ON;\n}\n\nfunction needsCool(temp, target) {\n    if (lastAction === 'cool') return temp > target - COOL_OFF;\n    return temp > target + COOL_ON;\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// 1. BLOCKED MODES - visitor, guest, manual\n// ═══════════════════════════════════════════════════════════════════════════\nconst blockedModes = ['visitor', 'guest', 'manual'];\nconst isBlocked = blockedModes.includes(homeMode) || manualmode || visitorMode.enabled;\n\nif (isBlocked) {\n    reason = `BLOCKED: ${homeMode}${manualmode ? '/manual' : ''}${visitorMode.enabled ? '/visitor' : ''}`;\n    flow.set('heatpumpAction', 'off');\n    flow.set('controlReason', reason);\n    msg.on = false;\n    msg.mode = 'heat';\n    msg.targetTemperature = 20;\n    msg.fanlevel = 'low';\n    msg.swing = 'fixedBottom';\n    msg.cmdHash = 'OFF';\n    msg.mill = { on: true, temperature: 18 };\n    msg.status = { action: 'off', reason, blocked: true };\n    node.status({ fill: 'yellow', shape: 'ring', text: reason });\n    return msg;\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// 2. MANUAL OVERRIDE\n// ═══════════════════════════════════════════════════════════════════════════\nif (manualOverride && manualOverride !== 'auto') {\n    if (manualOverride === 'heat') {\n        action = 'heat';\n        setpoint = desiredTemp + 2;\n        fan = 'medium';\n        swing = 'fixedBottom';\n        millTemp = 23;\n        reason = `MANUAL: Heat → ${desiredTemp}°C`;\n    } else if (manualOverride === 'cool') {\n        action = 'cool';\n        setpoint = coolTarget;\n        fan = 'medium';\n        swing = 'fixedTop';\n        millTemp = 18;\n        reason = `MANUAL: Cool → ${coolTarget}°C`;\n    } else if (manualOverride === 'on') {\n        if (isSummer) {\n            action = 'cool';\n            setpoint = coolTarget;\n            fan = 'medium';\n            swing = 'fixedTop';\n            millTemp = 18;\n            reason = `MANUAL: ON (cool) → ${coolTarget}°C`;\n        } else {\n            action = 'heat';\n            setpoint = desiredTemp + 2;\n            fan = 'medium';\n            swing = 'fixedBottom';\n            millTemp = 23;\n            reason = `MANUAL: ON (heat) → ${desiredTemp}°C`;\n        }\n    } else {\n        action = 'off';\n        millTemp = 18;\n        reason = 'MANUAL: Off';\n    }\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// 3. SAFETY\n// ═══════════════════════════════════════════════════════════════════════════\nelse if (upstairs > 30 || downstairs > 30) {\n    action = 'cool';\n    setpoint = 22;\n    fan = 'high';\n    swing = upstairs > downstairs ? 'fixedTop' : 'fixedBottom';  // Cool the hotter floor\n    millTemp = 18;\n    reason = 'SAFETY: >30°C emergency';\n}\nelse if (upstairs < 12 || downstairs < 12) {\n    action = 'heat';\n    setpoint = 22;\n    fan = 'high';\n    swing = upstairs < downstairs ? 'fixedTop' : 'fixedBottom';  // Heat the colder floor\n    millTemp = 25;\n    reason = 'SAFETY: <12°C emergency';\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// 4. SLEEP MODE\n// ═══════════════════════════════════════════════════════════════════════════\nelse if (homeMode === 'sleep') {\n    millTemp = 18;\n    if (needsCool(downstairs, bedtimeTemp) && canChange('cool')) {\n        action = 'cool';\n        setpoint = Math.max(bedtimeTemp - 1, 16);\n        fan = 'low';\n        swing = 'fixedTop';\n        reason = `Sleep: cool ${downstairs.toFixed(1)}→${bedtimeTemp}°C`;\n    } else if (needsHeat(downstairs, nightTemp) && canChange('heat')) {\n        action = 'heat';\n        setpoint = nightTemp + 2;\n        fan = 'low';\n        swing = 'fixedBottom';\n        reason = `Sleep: heat ${downstairs.toFixed(1)}→${nightTemp}°C`;\n    } else {\n        action = 'off';\n        reason = `Sleep: OK ${downstairs.toFixed(1)}°C`;\n    }\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// 5. VACATION MODE\n// ═══════════════════════════════════════════════════════════════════════════\nelse if (homeMode === 'vacation') {\n    millTemp = 18;\n    const focusTemp = Math.min(upstairs, downstairs);\n    if (needsHeat(focusTemp, vacationTemp) && canChange('heat')) {\n        action = 'heat';\n        setpoint = vacationTemp + 3;\n        fan = 'low';\n        swing = upstairs < downstairs ? 'fixedTop' : 'fixedBottom';  // Heat colder floor\n        reason = `Vacation: heat ${focusTemp.toFixed(1)}→${vacationTemp}°C`;\n    } else if (upstairs > 28 && canChange('cool')) {\n        action = 'cool';\n        setpoint = 24;\n        fan = 'low';\n        swing = 'fixedTop';\n        reason = `Vacation: cool ${upstairs.toFixed(1)}→24°C`;\n    } else {\n        action = 'off';\n        reason = `Vacation: OK ${focusTemp.toFixed(1)}°C`;\n    }\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// 6. AWAY MODE\n// ═══════════════════════════════════════════════════════════════════════════\nelse if (homeMode === 'away') {\n    millTemp = 20;\n    if (upstairs > 26 && canChange('cool')) {\n        action = 'cool';\n        setpoint = 24;\n        fan = 'medium';\n        swing = 'fixedTop';\n        reason = `Away: dog safety ${upstairs.toFixed(1)}→24°C`;\n    } else if (needsHeat(downstairs, awayTemp) && canChange('heat')) {\n        action = 'heat';\n        setpoint = awayTemp + 2;\n        fan = 'medium';\n        swing = 'fixedBottom';\n        reason = `Away: heat ${downstairs.toFixed(1)}→${awayTemp}°C`;\n    } else {\n        action = 'off';\n        reason = `Away: OK ${downstairs.toFixed(1)}°C`;\n    }\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// 7. NIGHT / PRE-BEDTIME\n// ═══════════════════════════════════════════════════════════════════════════\nelse if (timeMode === 'night' || timeMode === 'pre-bedtime') {\n    millTemp = 18;\n    if (needsCool(downstairs, bedtimeTemp) && canChange('cool')) {\n        action = 'cool';\n        setpoint = Math.max(bedtimeTemp - 1, 16);\n        fan = (timeMode === 'pre-bedtime' && hour < 21) ? 'medium' : 'low';\n        swing = 'fixedTop';\n        reason = `${timeMode}: cool ${downstairs.toFixed(1)}→${bedtimeTemp}°C`;\n    } else if (needsHeat(downstairs, nightTemp) && canChange('heat')) {\n        action = 'heat';\n        setpoint = nightTemp + 2;\n        fan = 'low';\n        swing = 'fixedBottom';\n        reason = `${timeMode}: heat ${downstairs.toFixed(1)}→${nightTemp}°C`;\n    } else {\n        action = 'off';\n        reason = `${timeMode}: OK ${downstairs.toFixed(1)}°C`;\n    }\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// 8. DAY MODE (morning, WFH, day)\n// ═══════════════════════════════════════════════════════════════════════════\nelse {\n    millTemp = 22;\n    const target = desiredTemp;\n    const focusRoom = (isWFH || isSummer) ? upstairs : downstairs;\n    const label = isWFH ? 'WFH' : (timeMode === 'morning' ? 'Morning' : 'Day');\n    const overheatLimit = isSummer ? target : Math.max(target + 2, 24);\n    \n    if (focusRoom > overheatLimit && canChange('cool')) {\n        action = 'cool';\n        setpoint = isSummer ? coolTarget : target;\n        fan = (focusRoom > overheatLimit + 1) ? 'medium' : 'low';\n        swing = 'fixedTop';\n        reason = `${label}: cool ${focusRoom.toFixed(1)}→${target}°C`;\n    } else if (needsHeat(focusRoom, target) && canChange('heat')) {\n        action = 'heat';\n        const deficit = target - focusRoom;\n        setpoint = Math.min(target + Math.round(deficit * 1.5), target + 4);\n        fan = deficit > 2 ? 'medium' : 'low';\n        swing = (isWFH && upstairs < downstairs) ? 'fixedTop' : 'fixedBottom';  // WFH: heat upstairs if colder\n        reason = `${label}: heat ${focusRoom.toFixed(1)}→${target}°C (HP:${setpoint})`;\n    } else {\n        action = 'off';\n        reason = `${label}: OK ${focusRoom.toFixed(1)}°C`;\n    }\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// SWING OVERRIDE - Manual swing direction\n// ═══════════════════════════════════════════════════════════════════════════\nif (swingOverride && (swingOverride === 'fixedTop' || swingOverride === 'fixedBottom')) {\n    swing = swingOverride;\n    reason = reason + ` [swing:${swingOverride}]`;\n}\n\n// ═══════════════════════════════════════════════════════════════════════════\n// TRACK STATE\n// ═══════════════════════════════════════════════════════════════════════════\nif (action !== lastAction) {\n    flow.set('lastHPAction', action);\n    flow.set('lastHPActionTime', now);\n}\n\nflow.set('heatpumpAction', action);\nflow.set('targetTemp', setpoint);\nflow.set('controlReason', reason);\nflow.set('fanlevel', fan);\nflow.set('swing', swing);\n\n// ═══════════════════════════════════════════════════════════════════════════\n// OUTPUT\n// ═══════════════════════════════════════════════════════════════════════════\nmsg.on = action !== 'off';\nmsg.mode = action === 'off' ? 'heat' : action;\nmsg.targetTemperature = setpoint;\nmsg.fanlevel = fan;\nmsg.swing = swing;\nmsg.cmdHash = msg.on ? `ON-${msg.mode}-${setpoint}-${fan}-${swing}` : 'OFF';\nmsg.mill = { on: true, temperature: millTemp };\nmsg.status = {\n    action, reason,\n    temps: { up: upstairs.toFixed(1), dn: downstairs.toFixed(1), out: outside.toFixed(1) },\n    context: { homeMode, timeMode, isSummer, isWFH, manualOverride: manualOverride || 'auto', swingOverride: swingOverride || 'auto', lastAction }\n};\n\nnode.status({\n    fill: action === 'heat' ? 'red' : (action === 'cool' ? 'blue' : 'grey'),\n    shape: 'dot',\n    text: reason.substring(0, 60)\n});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -22026,7 +21995,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1350,
+        "x": 810,
         "y": 60,
         "wires": [
             [
@@ -22054,7 +22023,7 @@
         "fontSize": 14,
         "color": "#717171",
         "className": "",
-        "x": 1910,
+        "x": 1370,
         "y": 40,
         "wires": []
     },
@@ -22064,7 +22033,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 12,
+        "order": 11,
         "width": "2",
         "height": "1",
         "name": "Upstairs",
@@ -22076,7 +22045,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1920,
+        "x": 1380,
         "y": 80,
         "wires": []
     },
@@ -22086,7 +22055,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 13,
+        "order": 12,
         "width": "2",
         "height": "1",
         "name": "Downstairs",
@@ -22098,7 +22067,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1930,
+        "x": 1390,
         "y": 120,
         "wires": []
     },
@@ -22108,7 +22077,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 14,
+        "order": 13,
         "width": "2",
         "height": "1",
         "name": "Outside",
@@ -22120,7 +22089,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1920,
+        "x": 1380,
         "y": 160,
         "wires": []
     },
@@ -22130,7 +22099,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 15,
+        "order": 14,
         "width": "2",
         "height": "1",
         "name": "Target",
@@ -22142,7 +22111,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1910,
+        "x": 1370,
         "y": 200,
         "wires": []
     },
@@ -22164,7 +22133,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1930,
+        "x": 1390,
         "y": 240,
         "wires": []
     },
@@ -22188,7 +22157,7 @@
         "sendOnBlur": true,
         "sendOnEnter": true,
         "className": "",
-        "x": 1370,
+        "x": 830,
         "y": 140,
         "wires": [
             [
@@ -22216,7 +22185,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1510,
+        "x": 970,
         "y": 140,
         "wires": [
             [
@@ -22246,7 +22215,7 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "buttonColor": "orange",
+        "buttonColor": "",
         "textColor": "",
         "iconColor": "",
         "enableClick": true,
@@ -22256,7 +22225,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1350,
+        "x": 810,
         "y": 220,
         "wires": [
             [
@@ -22286,7 +22255,7 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "buttonColor": "blue",
+        "buttonColor": "",
         "textColor": "",
         "iconColor": "",
         "enableClick": true,
@@ -22296,8 +22265,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1330,
-        "y": 100,
+        "x": 810,
+        "y": 180,
         "wires": [
             [
                 "5d1e3f3531e370d6"
@@ -22336,8 +22305,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1350,
-        "y": 180,
+        "x": 810,
+        "y": 200,
         "wires": [
             [
                 "5d1e3f3531e370d6"
@@ -22360,13 +22329,13 @@
         "color": "",
         "bgcolor": "#9e9e9e",
         "className": "",
-        "icon": "mode_off_on",
+        "icon": "",
         "iconPosition": "left",
         "payload": "off",
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "buttonColor": "red",
+        "buttonColor": "",
         "textColor": "",
         "iconColor": "",
         "enableClick": true,
@@ -22376,7 +22345,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1350,
+        "x": 810,
         "y": 260,
         "wires": [
             [
@@ -22400,13 +22369,13 @@
         "color": "",
         "bgcolor": "#4caf50",
         "className": "",
-        "icon": "hdr_auto",
+        "icon": "",
         "iconPosition": "left",
         "payload": "auto",
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "buttonColor": "yellow",
+        "buttonColor": "",
         "textColor": "",
         "iconColor": "",
         "enableClick": true,
@@ -22416,7 +22385,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1350,
+        "x": 810,
         "y": 300,
         "wires": [
             [
@@ -22444,7 +22413,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1530,
+        "x": 990,
         "y": 240,
         "wires": [
             [
@@ -22471,7 +22440,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1510,
+        "x": 970,
         "y": 300,
         "wires": [
             [
@@ -22489,7 +22458,7 @@
         "group": "f9c985920afe1003",
         "name": "SWING UP",
         "label": "↑ UP",
-        "order": 9,
+        "order": 8,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -22497,7 +22466,7 @@
         "color": "",
         "bgcolor": "#9c27b0",
         "className": "",
-        "icon": "arrow_circle_up",
+        "icon": "",
         "iconPosition": "left",
         "payload": "fixedTop",
         "payloadType": "str",
@@ -22513,7 +22482,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1350,
+        "x": 810,
         "y": 340,
         "wires": [
             [
@@ -22529,7 +22498,7 @@
         "group": "f9c985920afe1003",
         "name": "SWING DOWN",
         "label": "↓ DOWN",
-        "order": 17,
+        "order": 9,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -22537,7 +22506,7 @@
         "color": "",
         "bgcolor": "#673ab7",
         "className": "",
-        "icon": "arrow_circle_down",
+        "icon": "",
         "iconPosition": "left",
         "payload": "fixedBottom",
         "payloadType": "str",
@@ -22553,7 +22522,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1350,
+        "x": 810,
         "y": 380,
         "wires": [
             [
@@ -22569,7 +22538,7 @@
         "group": "f9c985920afe1003",
         "name": "SWING AUTO",
         "label": "SWING AUTO",
-        "order": 16,
+        "order": 10,
         "width": "2",
         "height": "1",
         "emulateClick": false,
@@ -22577,7 +22546,7 @@
         "color": "",
         "bgcolor": "#607d8b",
         "className": "",
-        "icon": "swap_calls",
+        "icon": "",
         "iconPosition": "left",
         "payload": "auto",
         "payloadType": "str",
@@ -22593,7 +22562,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1350,
+        "x": 810,
         "y": 420,
         "wires": [
             [
@@ -22621,7 +22590,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1530,
+        "x": 990,
         "y": 360,
         "wires": [
             [
@@ -22648,7 +22617,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1540,
+        "x": 1000,
         "y": 420,
         "wires": [
             [
@@ -22759,7 +22728,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1730,
+        "x": 1190,
         "y": 80,
         "wires": [
             [
@@ -22787,7 +22756,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1740,
+        "x": 1200,
         "y": 120,
         "wires": [
             [
@@ -22815,7 +22784,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1720,
+        "x": 1180,
         "y": 40,
         "wires": [
             [
@@ -22843,7 +22812,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1750,
+        "x": 1210,
         "y": 160,
         "wires": [
             [
@@ -22871,7 +22840,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1730,
+        "x": 1190,
         "y": 200,
         "wires": [
             [
@@ -22899,7 +22868,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1760,
+        "x": 1220,
         "y": 240,
         "wires": [
             [
@@ -22936,7 +22905,7 @@
         "height": "1",
         "name": "FanLevel",
         "label": "FanLevel",
-        "format": "{{flow.fanlevel}}",
+        "format": "{{flow.heatpumpAction}}",
         "layout": "row-left",
         "style": false,
         "font": "",
@@ -22970,7 +22939,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1740,
+        "x": 1200,
         "y": 280,
         "wires": [
             [
@@ -23116,9 +23085,9 @@
         "order": 10,
         "width": "2",
         "height": "1",
-        "name": "Swing",
+        "name": "FanLevel",
         "label": "Swing",
-        "format": "{{flow.swing}}",
+        "format": "{{flow.heatpumpAction}}",
         "layout": "row-left",
         "style": false,
         "font": "",
@@ -23152,7 +23121,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1740,
+        "x": 1200,
         "y": 320,
         "wires": [
             [
@@ -23167,7 +23136,7 @@
         "g": "15b9c68154d48bdf",
         "ui": "7f0c45a9432dc256",
         "name": "",
-        "x": 1340,
+        "x": 800,
         "y": 40,
         "wires": [
             [
@@ -26550,81 +26519,5 @@
                 "6381072ee0756353"
             ]
         ]
-    },
-    {
-        "id": "mill_input_001",
-        "type": "ui-text-input",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Mill Setpoint",
-        "label": "Mill °C (active season)",
-        "tooltip": "",
-        "order": 0,
-        "width": "2",
-        "height": "1",
-        "topic": "millSetpoint",
-        "topicType": "msg",
-        "mode": "number",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": true,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "validation": "none",
-        "validationType": "msg",
-        "className": "",
-        "clearable": false,
-        "group": "f9c985920afe1003",
-        "x": 830,
-        "y": 180,
-        "wires": [
-            [
-                "mill_store_001"
-            ]
-        ]
-    },
-    {
-        "id": "mill_store_001",
-        "type": "function",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Store Mill °C",
-        "func": "const v = Number(msg.payload);\r\nif (!isFinite(v)) return null;\r\nconst key = flow.get('isSummer') ? 'millSummerTemp' : 'millWinterTemp';\r\nflow.set(key, v);\r\nnode.status({fill:'green',shape:'dot',text: key + '=' + v});\r\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 970,
-        "y": 180,
-        "wires": [
-            [
-                "744c985b060fa1ee"
-            ]
-        ]
-    },
-    {
-        "id": "mill_disp_001",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 0,
-        "width": "4",
-        "height": "1",
-        "name": "Mill Targets",
-        "label": "Mill targets",
-        "format": "Winter {{flow.millWinterTemp}}°C · Summer {{flow.millSummerTemp}}°C",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 14,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "x": 1130,
-        "y": 180,
-        "wires": []
     }
 ]
