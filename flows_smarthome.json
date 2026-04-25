@@ -1691,10 +1691,10 @@
             "7fe3530efb93c127",
             "66c3edfbc823bbf1"
         ],
-        "x": 714,
+        "x": 1244,
         "y": -1,
-        "w": 772,
-        "h": 382
+        "w": 782,
+        "h": 462
     },
     {
         "id": "03c4eca16c6608a9",
@@ -1913,8 +1913,8 @@
         "type": "junction",
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
-        "x": 870,
-        "y": 60,
+        "x": 1580,
+        "y": 80,
         "wires": [
             [
                 "a63adc0bcd302284",
@@ -21688,7 +21688,7 @@
         "links": [
             "9121b3fbb51f781e"
         ],
-        "x": 775,
+        "x": 1315,
         "y": 340,
         "wires": []
     },
@@ -21995,7 +21995,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
+        "x": 1350,
         "y": 60,
         "wires": [
             [
@@ -22023,7 +22023,7 @@
         "fontSize": 14,
         "color": "#717171",
         "className": "",
-        "x": 1370,
+        "x": 1910,
         "y": 40,
         "wires": []
     },
@@ -22033,7 +22033,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 11,
+        "order": 12,
         "width": "2",
         "height": "1",
         "name": "Upstairs",
@@ -22045,7 +22045,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1380,
+        "x": 1920,
         "y": 80,
         "wires": []
     },
@@ -22055,7 +22055,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 12,
+        "order": 13,
         "width": "2",
         "height": "1",
         "name": "Downstairs",
@@ -22067,7 +22067,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1390,
+        "x": 1930,
         "y": 120,
         "wires": []
     },
@@ -22077,7 +22077,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 13,
+        "order": 14,
         "width": "2",
         "height": "1",
         "name": "Outside",
@@ -22089,7 +22089,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1380,
+        "x": 1920,
         "y": 160,
         "wires": []
     },
@@ -22099,7 +22099,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 14,
+        "order": 15,
         "width": "2",
         "height": "1",
         "name": "Target",
@@ -22111,7 +22111,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1370,
+        "x": 1910,
         "y": 200,
         "wires": []
     },
@@ -22133,7 +22133,7 @@
         "fontSize": 16,
         "color": "#717171",
         "className": "",
-        "x": 1390,
+        "x": 1930,
         "y": 240,
         "wires": []
     },
@@ -22157,7 +22157,7 @@
         "sendOnBlur": true,
         "sendOnEnter": true,
         "className": "",
-        "x": 830,
+        "x": 1370,
         "y": 140,
         "wires": [
             [
@@ -22185,7 +22185,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
+        "x": 1510,
         "y": 140,
         "wires": [
             [
@@ -22215,7 +22215,7 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "buttonColor": "",
+        "buttonColor": "orange",
         "textColor": "",
         "iconColor": "",
         "enableClick": true,
@@ -22225,7 +22225,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 810,
+        "x": 1350,
         "y": 220,
         "wires": [
             [
@@ -22255,7 +22255,7 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "buttonColor": "",
+        "buttonColor": "blue",
         "textColor": "",
         "iconColor": "",
         "enableClick": true,
@@ -22265,8 +22265,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 810,
-        "y": 180,
+        "x": 1330,
+        "y": 100,
         "wires": [
             [
                 "5d1e3f3531e370d6"
@@ -22305,8 +22305,8 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 810,
-        "y": 200,
+        "x": 1350,
+        "y": 180,
         "wires": [
             [
                 "5d1e3f3531e370d6"
@@ -22329,13 +22329,13 @@
         "color": "",
         "bgcolor": "#9e9e9e",
         "className": "",
-        "icon": "",
+        "icon": "mode_off_on",
         "iconPosition": "left",
         "payload": "off",
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "buttonColor": "",
+        "buttonColor": "red",
         "textColor": "",
         "iconColor": "",
         "enableClick": true,
@@ -22345,7 +22345,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 810,
+        "x": 1350,
         "y": 260,
         "wires": [
             [
@@ -22369,13 +22369,13 @@
         "color": "",
         "bgcolor": "#4caf50",
         "className": "",
-        "icon": "",
+        "icon": "hdr_auto",
         "iconPosition": "left",
         "payload": "auto",
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "buttonColor": "",
+        "buttonColor": "yellow",
         "textColor": "",
         "iconColor": "",
         "enableClick": true,
@@ -22385,7 +22385,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 810,
+        "x": 1350,
         "y": 300,
         "wires": [
             [
@@ -22413,7 +22413,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 990,
+        "x": 1530,
         "y": 240,
         "wires": [
             [
@@ -22440,7 +22440,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 970,
+        "x": 1510,
         "y": 300,
         "wires": [
             [
@@ -22458,7 +22458,7 @@
         "group": "f9c985920afe1003",
         "name": "SWING UP",
         "label": "↑ UP",
-        "order": 8,
+        "order": 9,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -22466,7 +22466,7 @@
         "color": "",
         "bgcolor": "#9c27b0",
         "className": "",
-        "icon": "",
+        "icon": "arrow_circle_up",
         "iconPosition": "left",
         "payload": "fixedTop",
         "payloadType": "str",
@@ -22482,7 +22482,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 810,
+        "x": 1350,
         "y": 340,
         "wires": [
             [
@@ -22498,7 +22498,7 @@
         "group": "f9c985920afe1003",
         "name": "SWING DOWN",
         "label": "↓ DOWN",
-        "order": 9,
+        "order": 17,
         "width": "1",
         "height": "1",
         "emulateClick": false,
@@ -22506,7 +22506,7 @@
         "color": "",
         "bgcolor": "#673ab7",
         "className": "",
-        "icon": "",
+        "icon": "arrow_circle_down",
         "iconPosition": "left",
         "payload": "fixedBottom",
         "payloadType": "str",
@@ -22522,7 +22522,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 810,
+        "x": 1350,
         "y": 380,
         "wires": [
             [
@@ -22538,7 +22538,7 @@
         "group": "f9c985920afe1003",
         "name": "SWING AUTO",
         "label": "SWING AUTO",
-        "order": 10,
+        "order": 16,
         "width": "2",
         "height": "1",
         "emulateClick": false,
@@ -22546,7 +22546,7 @@
         "color": "",
         "bgcolor": "#607d8b",
         "className": "",
-        "icon": "",
+        "icon": "swap_calls",
         "iconPosition": "left",
         "payload": "auto",
         "payloadType": "str",
@@ -22562,7 +22562,7 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 810,
+        "x": 1350,
         "y": 420,
         "wires": [
             [
@@ -22590,7 +22590,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 990,
+        "x": 1530,
         "y": 360,
         "wires": [
             [
@@ -22617,7 +22617,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1000,
+        "x": 1540,
         "y": 420,
         "wires": [
             [
@@ -22728,7 +22728,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1190,
+        "x": 1730,
         "y": 80,
         "wires": [
             [
@@ -22756,7 +22756,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1200,
+        "x": 1740,
         "y": 120,
         "wires": [
             [
@@ -22784,7 +22784,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1180,
+        "x": 1720,
         "y": 40,
         "wires": [
             [
@@ -22812,7 +22812,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1210,
+        "x": 1750,
         "y": 160,
         "wires": [
             [
@@ -22840,7 +22840,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1190,
+        "x": 1730,
         "y": 200,
         "wires": [
             [
@@ -22868,7 +22868,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
+        "x": 1760,
         "y": 240,
         "wires": [
             [
@@ -22900,7 +22900,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 9,
+        "order": 10,
         "width": "2",
         "height": "1",
         "name": "FanLevel",
@@ -22915,7 +22915,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1380,
+        "x": 1920,
         "y": 280,
         "wires": []
     },
@@ -22939,7 +22939,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1200,
+        "x": 1740,
         "y": 280,
         "wires": [
             [
@@ -23082,7 +23082,7 @@
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
-        "order": 10,
+        "order": 11,
         "width": "2",
         "height": "1",
         "name": "FanLevel",
@@ -23097,7 +23097,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1380,
+        "x": 1920,
         "y": 320,
         "wires": []
     },
@@ -23121,7 +23121,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1200,
+        "x": 1740,
         "y": 320,
         "wires": [
             [
@@ -23136,7 +23136,7 @@
         "g": "15b9c68154d48bdf",
         "ui": "7f0c45a9432dc256",
         "name": "",
-        "x": 800,
+        "x": 1340,
         "y": 40,
         "wires": [
             [
