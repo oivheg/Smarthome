@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "id": "1c11632f.f206fd",
         "type": "tab",
@@ -1693,11 +1693,12 @@
             "mill_input_001",
             "mill_store_001",
             "mill_disp_001",
-            "season_disp_001"
+            "season_disp_001",
+            "b10f48fc6f572770"
         ],
-        "x": 714,
+        "x": 84,
         "y": -1,
-        "w": 1312,
+        "w": 1942,
         "h": 462
     },
     {
@@ -21144,7 +21145,7 @@
                 "t": "set",
                 "p": "summerCoolTrigger",
                 "pt": "flow",
-                "to": "24",
+                "to": "25",
                 "tot": "num"
             },
             {
@@ -21158,7 +21159,7 @@
                 "t": "set",
                 "p": "dogMaxTemp",
                 "pt": "flow",
-                "to": "24",
+                "to": "25",
                 "tot": "num"
             },
             {
@@ -21340,7 +21341,8 @@
         "y": 220,
         "wires": [
             [
-                "cb7d9c7fa236e729"
+                "cb7d9c7fa236e729",
+                "b10f48fc6f572770"
             ]
         ]
     },
@@ -23409,6 +23411,53 @@
         "className": "",
         "x": 170,
         "y": 180,
+        "wires": []
+    },
+    {
+        "id": "584db6aa59798c0d",
+        "type": "inject",
+        "z": "189409faf8842877",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 780,
+        "wires": [
+            [
+                "b58e88e0612d7576"
+            ]
+        ]
+    },
+    {
+        "id": "b10f48fc6f572770",
+        "type": "debug",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 260,
         "wires": []
     },
     {
