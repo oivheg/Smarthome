@@ -21159,7 +21159,7 @@
                 "t": "set",
                 "p": "dogMaxTemp",
                 "pt": "flow",
-                "to": "25",
+                "to": "23",
                 "tot": "num"
             },
             {
@@ -21367,7 +21367,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 350,
+        "x": 400,
         "y": 280,
         "wires": [
             [
@@ -21387,7 +21387,7 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 560,
+        "x": 630,
         "y": 280,
         "wires": [
             []
@@ -23566,6 +23566,71 @@
         "statusType": "auto",
         "x": 430,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "65cece8810c42c21",
+        "type": "file in",
+        "z": "189409faf8842877",
+        "name": "",
+        "filename": "D:\\02-Honeypot\\miles\\Smarthome\\temperature_log.csv",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1490,
+        "y": 960,
+        "wires": [
+            [
+                "cc3af6e664f36d6b"
+            ]
+        ]
+    },
+    {
+        "id": "1308a1fc98457819",
+        "type": "inject",
+        "z": "189409faf8842877",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1190,
+        "y": 960,
+        "wires": [
+            [
+                "65cece8810c42c21"
+            ]
+        ]
+    },
+    {
+        "id": "cc3af6e664f36d6b",
+        "type": "debug",
+        "z": "189409faf8842877",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1790,
+        "y": 860,
         "wires": []
     },
     {
