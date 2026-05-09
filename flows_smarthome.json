@@ -17613,7 +17613,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
+        "x": 520,
         "y": 780,
         "wires": [
             [
@@ -18360,7 +18360,9 @@
         "x": 100,
         "y": 820,
         "wires": [
-            []
+            [
+                "a1b2c3d4e5f60897"
+            ]
         ]
     },
     {
@@ -18407,7 +18409,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 780,
+        "x": 900,
         "y": 820,
         "wires": [
             []
@@ -18486,7 +18488,7 @@
         "comment": "",
         "lat": 0,
         "lon": 0,
-        "starttime": 5001,
+        "starttime": "75",
         "endtime": 1425,
         "starttime2": 0,
         "endtime2": 0,
@@ -21159,7 +21161,7 @@
                 "t": "set",
                 "p": "dogMaxTemp",
                 "pt": "flow",
-                "to": "23",
+                "to": "24",
                 "tot": "num"
             },
             {
