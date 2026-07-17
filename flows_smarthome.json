@@ -1550,64 +1550,17 @@
         },
         "nodes": [
             "0a3b56fe7e18c0d1",
-            "73c674f990fa0904",
+            "1c341801efd5fc1f",
             "f5d4e138dad05cb5",
+            "73c674f990fa0904",
             "24f4dc99818ef650",
             "27b7c6d1a8d92a17",
-            "cb7d9c7fa236e729"
+            "5min00aa11bb22cc"
         ],
-        "x": 14,
-        "y": 179,
-        "w": 622,
-        "h": 142
-    },
-    {
-        "id": "a6d83dbb51a7a7fc",
-        "type": "group",
-        "z": "189409faf8842877",
-        "name": "⏰ Schedule",
-        "style": {
-            "fill": "#fff3e0",
-            "label": true
-        },
-        "nodes": [
-            "f011c082798d4d65",
-            "9178d61809a49a3a",
-            "e15a857eb1b07941",
-            "18c1440fc315b7f8",
-            "18863718458b2083",
-            "f9bc47f82205e9bc",
-            "0065e763ec5e55e0",
-            "20030999c53bc276",
-            "c798937a8103a538",
-            "cca4eca47e148dcb",
-            "1772bd2ac3f5c917",
-            "a706f7e6fbe95bdd"
-        ],
-        "x": 54,
-        "y": 479,
-        "w": 642,
-        "h": 322
-    },
-    {
-        "id": "d97117a1dc66902a",
-        "type": "group",
-        "z": "189409faf8842877",
-        "name": "🧠 Control Logic",
-        "style": {
-            "fill": "#ffecb3",
-            "label": true
-        },
-        "nodes": [
-            "9121b3fbb51f781e",
-            "b58e88e0612d7576",
-            "492258646c12c886",
-            "3d88ac222d635b1e"
-        ],
-        "x": 114,
-        "y": 939,
-        "w": 642,
-        "h": 102
+        "x": 34,
+        "y": 219,
+        "w": 612,
+        "h": 302
     },
     {
         "id": "fb4d535274ae6266",
@@ -1625,9 +1578,9 @@
             "5bfc7f7061fecc0e"
         ],
         "x": 1354,
-        "y": 519,
+        "y": 579,
         "w": 692,
-        "h": 142
+        "h": 162
     },
     {
         "id": "c6d89bb6766b3bd0",
@@ -1639,16 +1592,13 @@
             "label": true
         },
         "nodes": [
-            "30b2f8bea26a2297",
-            "4ecf1b8fa1286f68",
-            "a625cc6ea662956d",
-            "86a0ac883b2694e9",
-            "3a8c7d56155ca2ee"
+            "3a8c7d56155ca2ee",
+            "187fbdccd7e3333d"
         ],
-        "x": 854,
-        "y": 1059,
-        "w": 712,
-        "h": 122
+        "x": 1054,
+        "y": 959,
+        "w": 492,
+        "h": 82
     },
     {
         "id": "15b9c68154d48bdf",
@@ -1692,15 +1642,17 @@
             "7fe3530efb93c127",
             "66c3edfbc823bbf1",
             "mill_input_001",
-            "mill_store_001",
             "mill_disp_001",
             "season_disp_001",
-            "27045e7a26327303"
+            "27045e7a26327303",
+            "d1364b187eebfdb0",
+            "bc01c1ee412d258d",
+            "6e3a8416aea99792"
         ],
-        "x": 634,
-        "y": 19,
-        "w": 1472,
-        "h": 462
+        "x": 734,
+        "y": 79,
+        "w": 1452,
+        "h": 442
     },
     {
         "id": "03c4eca16c6608a9",
@@ -1716,10 +1668,10 @@
             "997c7708e93ccdec",
             "0e22b9349e2d4f47"
         ],
-        "x": 104,
-        "y": 819,
+        "x": 44,
+        "y": 779,
         "w": 482,
-        "h": 102
+        "h": 82
     },
     {
         "id": "373af117a783f7e4",
@@ -1733,12 +1685,15 @@
         "nodes": [
             "20f91b09a7274086",
             "99e6f1051b2095be",
-            "498360f6e046e829"
+            "498360f6e046e829",
+            "65cece8810c42c21",
+            "1308a1fc98457819",
+            "cc3af6e664f36d6b"
         ],
-        "x": 134,
-        "y": 1119,
-        "w": 582,
-        "h": 82
+        "x": 1594,
+        "y": 899,
+        "w": 822,
+        "h": 162
     },
     {
         "id": "a43790b1a5c19601",
@@ -1756,8 +1711,8 @@
             "1676d14dcda015b6",
             "b504a432f19b430f"
         ],
-        "x": 814,
-        "y": 779,
+        "x": 1354,
+        "y": 759,
         "w": 942,
         "h": 122
     },
@@ -1845,6 +1800,28 @@
         "y": 1499,
         "w": 932,
         "h": 202
+    },
+    {
+        "id": "d97117a1dc66902a",
+        "type": "group",
+        "z": "189409faf8842877",
+        "name": "🧠 Control Logic",
+        "style": {
+            "fill": "#ffecb3",
+            "label": true
+        },
+        "nodes": [
+            "9121b3fbb51f781e",
+            "492258646c12c886",
+            "3d88ac222d635b1e",
+            "bec1e15f2ea813de",
+            "93d07b59b2e19eed",
+            "9380619e855a7649"
+        ],
+        "x": 44,
+        "y": 599,
+        "w": 652,
+        "h": 162
     },
     {
         "id": "aaf5b9532af1fbac",
@@ -6063,7 +6040,7 @@
             },
             {
                 "name": "LightTreshold",
-                "value": "150",
+                "value": "200",
                 "type": "str"
             },
             {
@@ -6078,6 +6055,16 @@
             },
             {
                 "name": "endTime",
+                "value": "22:00",
+                "type": "str"
+            },
+            {
+                "name": "startTimeWeekend",
+                "value": "08:00",
+                "type": "str"
+            },
+            {
+                "name": "endTimeWeekend",
                 "value": "22:00",
                 "type": "str"
             }
@@ -21280,8 +21267,8 @@
         "once": true,
         "onceDelay": "5",
         "topic": "",
-        "x": 130,
-        "y": 220,
+        "x": 150,
+        "y": 320,
         "wires": [
             [
                 "73c674f990fa0904"
@@ -21299,8 +21286,8 @@
         "getconfig": true,
         "getACState": false,
         "polltime": "0",
-        "x": 300,
-        "y": 220,
+        "x": 320,
+        "y": 320,
         "wires": [
             [
                 "f5d4e138dad05cb5"
@@ -21334,8 +21321,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
-        "y": 220,
+        "x": 520,
+        "y": 320,
         "wires": [
             [
                 "744c985b060fa1ee"
@@ -21354,8 +21341,8 @@
         "once": true,
         "onceDelay": "10",
         "topic": "",
-        "x": 120,
-        "y": 280,
+        "x": 140,
+        "y": 380,
         "wires": [
             [
                 "27b7c6d1a8d92a17"
@@ -21367,7 +21354,7 @@
         "type": "inject",
         "z": "189409faf8842877",
         "g": "c15f8d1bde3e4d99",
-        "name": "Every 5 min Refresh & Log",
+        "name": "Every 5 min Refresh",
         "props": [
             {
                 "p": "payload"
@@ -21380,52 +21367,12 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 400,
+        "x": 180,
+        "y": 260,
         "wires": [
             [
-                "73c674f990fa0904",
-                "bldlog00aa11bb22"
+                "73c674f990fa0904"
             ]
-        ]
-    },
-    {
-        "id": "bldlog00aa11bb22",
-        "type": "function",
-        "z": "189409faf8842877",
-        "g": "c15f8d1bde3e4d99",
-        "name": "Build Log Line",
-        "func": "const ts = new Date().toISOString();\nconst f = (k, d) => { const v = flow.get(k); return v === undefined || v === null ? d : v; };\nconst g = (k, d) => { const v = global.get(k); return v === undefined || v === null ? d : v; };\nconst row = [\n    ts,\n    f('upstairsTemp',''),\n    f('downstairsTemp',''),\n    f('outsideTemp',''),\n    f('outside1h',''),\n    f('outside6h',''),\n    f('forecast24hAvg',''),\n    f('cloudCover',''),\n    f('windSpeed',''),\n    f('humidityOut',''),\n    f('rain6h',''),\n    f('desiredTemp',''),\n    f('targetTemp',''),\n    f('heatpumpAction',''),\n    f('fanlevel',''),\n    f('swing',''),\n    f('isSummer',''),\n    f('timeMode',''),\n    g('Mode',''),\n    g('isStandBy',''),\n    String(f('controlReason','')).replace(/[\",\\r\\n]/g,' ')\n].join(',');\nmsg.payload = row;\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 240,
-        "y": 440,
-        "wires": [
-            [
-                "filelog00aa11bbcc"
-            ]
-        ]
-    },
-    {
-        "id": "filelog00aa11bbcc",
-        "type": "file",
-        "z": "189409faf8842877",
-        "g": "c15f8d1bde3e4d99",
-        "name": "Append CSV Log",
-        "filename": "D:\\02-Honeypot\\miles\\Smarthome\\temperature_log.csv",
-        "filenameType": "str",
-        "appendNewline": true,
-        "createDir": true,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 470,
-        "y": 440,
-        "wires": [
-            []
         ]
     },
     {
@@ -21438,16 +21385,1627 @@
         "longitude": "5.7629",
         "forecastType": "compact",
         "name": "Yr Weather",
-        "x": 280,
-        "y": 280,
+        "x": 370,
+        "y": 380,
         "wires": [
             [
-                "cb7d9c7fa236e729"
+                "1c341801efd5fc1f"
             ]
         ]
     },
     {
-        "id": "cb7d9c7fa236e729",
+        "id": "0e22b9349e2d4f47",
+        "type": "switch",
+        "z": "189409faf8842877",
+        "g": "03c4eca16c6608a9",
+        "name": "After 20:00?",
+        "property": "$number($fromMillis($millis(), '[H]')) >= 20",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "744c985b060fa1ee",
+        "type": "link out",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "→ Control Logic",
+        "mode": "link",
+        "links": [
+            "9121b3fbb51f781e"
+        ],
+        "x": 1055,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3f85282b23944147",
+        "type": "rbe",
+        "z": "189409faf8842877",
+        "g": "fb4d535274ae6266",
+        "name": "Only on change",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "cmdHash",
+        "topi": "topic",
+        "x": 1480,
+        "y": 700,
+        "wires": [
+            [
+                "efeebb86ae576e31"
+            ]
+        ]
+    },
+    {
+        "id": "00fb06d15a8d5259",
+        "type": "sensibo send",
+        "z": "189409faf8842877",
+        "g": "fb4d535274ae6266",
+        "sensiboAPI": "8500b44945f22748",
+        "name": "Send to Sensibo",
+        "pod": "VfTc6vFm",
+        "podSelector": "",
+        "x": 1940,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a8c7d56155ca2ee",
+        "type": "api-call-service",
+        "z": "189409faf8842877",
+        "g": "c6d89bb6766b3bd0",
+        "name": "Mill Set Temp",
+        "server": "c8d8b6d992397cb8",
+        "version": 7,
+        "debugenabled": false,
+        "action": "climate.set_temperature",
+        "floorId": [],
+        "areaId": [],
+        "deviceId": [
+            "5a4e2f4e0df2023b5ff44b3687215459"
+        ],
+        "entityId": [],
+        "labelId": [],
+        "data": "",
+        "dataType": "json",
+        "mergeContext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "blockInputOverrides": false,
+        "domain": "climate",
+        "service": "set_temperature",
+        "x": 1440,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "291aa7bea3cc6663",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "Prep UI Data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "upstairs",
+                "pt": "msg",
+                "to": "upstairsTemp",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "downstairs",
+                "pt": "msg",
+                "to": "downstairsTemp",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "outside",
+                "pt": "msg",
+                "to": "outsideTemp",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "target",
+                "pt": "msg",
+                "to": "targetTemp",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "reason",
+                "pt": "msg",
+                "to": "controlReason",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1690,
+        "y": 260,
+        "wires": [
+            [
+                "7970dddc491fc5fc",
+                "7fe3530efb93c127",
+                "a63adc0bcd302284",
+                "5bd59f269f732544",
+                "105e63c0b34fd0ee",
+                "b74868338c677221",
+                "35a56eeef425c9d7",
+                "bb176951ec72f7f9"
+            ]
+        ]
+    },
+    {
+        "id": "1675533c7dac75c9",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "name": "Status",
+        "label": "",
+        "format": "{{msg.reason}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 14,
+        "color": "#717171",
+        "className": "",
+        "x": 2070,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "09212714c088da95",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 14,
+        "width": "2",
+        "height": "1",
+        "name": "Upstairs",
+        "label": "Upstairs",
+        "format": "{{msg.upstairs}}°C",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 2080,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "361d83874edb234e",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 15,
+        "width": "2",
+        "height": "1",
+        "name": "Downstairs",
+        "label": "Downstairs",
+        "format": "{{msg.downstairs}}°C",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 2090,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4766e46dc959b513",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 16,
+        "width": "2",
+        "height": "1",
+        "name": "Outside",
+        "label": "Outside",
+        "format": "{{msg.outside}}°C",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 2080,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "bdfd9ad559553eb4",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 17,
+        "width": "2",
+        "height": "1",
+        "name": "Target",
+        "label": "Target",
+        "format": "{{msg.target}}°C",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 2070,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ab85c4f6a79a70c0",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 10,
+        "width": "2",
+        "height": "1",
+        "name": "Action",
+        "label": "Action",
+        "format": "{{flow.heatpumpAction}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 2090,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3d33e3f7468bce6b",
+        "type": "ui-text-input",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "Desired Temp",
+        "label": "Desired °C",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "topic": "desiredTemp",
+        "topicType": "str",
+        "mode": "number",
+        "delay": "500",
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "x": 840,
+        "y": 160,
+        "wires": [
+            [
+                "5b4c9163fde54aac"
+            ]
+        ]
+    },
+    {
+        "id": "5b4c9163fde54aac",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "Store",
+        "rules": [
+            {
+                "t": "set",
+                "p": "desiredTemp",
+                "pt": "flow",
+                "to": "$number(payload)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 160,
+        "wires": [
+            [
+                "744c985b060fa1ee"
+            ]
+        ]
+    },
+    {
+        "id": "68819997e58ffb60",
+        "type": "ui-button",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "HEAT",
+        "label": "HEAT",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#ff5722",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "heat",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "buttonColor": "orange",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1190,
+        "y": 280,
+        "wires": [
+            [
+                "5d1e3f3531e370d6"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60001",
+        "type": "ui-button",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "COOL",
+        "label": "COOL",
+        "order": 8,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#2196f3",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "cool",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "buttonColor": "blue",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1110,
+        "y": 200,
+        "wires": [
+            [
+                "5d1e3f3531e370d6"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60002",
+        "type": "ui-button",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "ON",
+        "label": "ON",
+        "order": 9,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#ff9800",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1110,
+        "y": 240,
+        "wires": [
+            [
+                "5d1e3f3531e370d6"
+            ]
+        ]
+    },
+    {
+        "id": "e9f35063f9b25eda",
+        "type": "ui-button",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "OFF",
+        "label": "OFF",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#9e9e9e",
+        "className": "",
+        "icon": "mode_off_on",
+        "iconPosition": "left",
+        "payload": "off",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "buttonColor": "red",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1190,
+        "y": 320,
+        "wires": [
+            [
+                "5d1e3f3531e370d6"
+            ]
+        ]
+    },
+    {
+        "id": "b3803e98ef8de25f",
+        "type": "ui-button",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "AUTO",
+        "label": "AUTO",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#4caf50",
+        "className": "",
+        "icon": "hdr_auto",
+        "iconPosition": "left",
+        "payload": "auto",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "buttonColor": "yellow",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1190,
+        "y": 360,
+        "wires": [
+            [
+                "f2d1557167d15045"
+            ]
+        ]
+    },
+    {
+        "id": "5d1e3f3531e370d6",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "Set Manual Mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "manualOverride",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 300,
+        "wires": [
+            [
+                "5bfc7f7061fecc0e",
+                "27045e7a26327303"
+            ]
+        ]
+    },
+    {
+        "id": "f2d1557167d15045",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "Clear Manual",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "manualOverride",
+                "pt": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1510,
+        "y": 340,
+        "wires": [
+            [
+                "291aa7bea3cc6663",
+                "5bfc7f7061fecc0e",
+                "27045e7a26327303"
+            ]
+        ]
+    },
+    {
+        "id": "swing_btn_up_001",
+        "type": "ui-button",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "SWING UP",
+        "label": "↑ UP",
+        "order": 13,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "Vanes UP - focus upstairs",
+        "color": "",
+        "bgcolor": "#9c27b0",
+        "className": "",
+        "icon": "arrow_circle_up",
+        "iconPosition": "left",
+        "payload": "fixedTop",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1210,
+        "y": 400,
+        "wires": [
+            [
+                "swing_set_001"
+            ]
+        ]
+    },
+    {
+        "id": "swing_btn_down_001",
+        "type": "ui-button",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "SWING DOWN",
+        "label": "↓ DOWN",
+        "order": 19,
+        "width": "1",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "Vanes DOWN - focus downstairs",
+        "color": "",
+        "bgcolor": "#673ab7",
+        "className": "",
+        "icon": "arrow_circle_down",
+        "iconPosition": "left",
+        "payload": "fixedBottom",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1240,
+        "y": 440,
+        "wires": [
+            [
+                "swing_set_001"
+            ]
+        ]
+    },
+    {
+        "id": "swing_btn_auto_001",
+        "type": "ui-button",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "SWING AUTO",
+        "label": "SWING AUTO",
+        "order": 18,
+        "width": "2",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "Auto swing based on temperature",
+        "color": "",
+        "bgcolor": "#607d8b",
+        "className": "",
+        "icon": "swap_calls",
+        "iconPosition": "left",
+        "payload": "auto",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1200,
+        "y": 480,
+        "wires": [
+            [
+                "swing_clear_001"
+            ]
+        ]
+    },
+    {
+        "id": "swing_set_001",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "Set Swing Override",
+        "rules": [
+            {
+                "t": "set",
+                "p": "swingOverride",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 380,
+        "wires": [
+            [
+                "291aa7bea3cc6663",
+                "27045e7a26327303"
+            ]
+        ]
+    },
+    {
+        "id": "swing_clear_001",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "Clear Swing Override",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "swingOverride",
+                "pt": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 420,
+        "wires": [
+            [
+                "291aa7bea3cc6663",
+                "27045e7a26327303"
+            ]
+        ]
+    },
+    {
+        "id": "54a8a5e0102d437e",
+        "type": "switch",
+        "z": "189409faf8842877",
+        "g": "03c4eca16c6608a9",
+        "name": "isStandBy changed?",
+        "property": "isStandBy",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 240,
+        "y": 820,
+        "wires": [
+            [
+                "0e22b9349e2d4f47"
+            ]
+        ]
+    },
+    {
+        "id": "20f91b09a7274086",
+        "type": "inject",
+        "z": "189409faf8842877",
+        "g": "373af117a783f7e4",
+        "name": "Check Status",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1710,
+        "y": 940,
+        "wires": [
+            [
+                "99e6f1051b2095be"
+            ]
+        ]
+    },
+    {
+        "id": "99e6f1051b2095be",
+        "type": "function",
+        "z": "189409faf8842877",
+        "g": "373af117a783f7e4",
+        "name": "Show All State",
+        "func": "msg.payload = {\n    temps: {\n        upstairs: flow.get('upstairsTemp'),\n        downstairs: flow.get('downstairsTemp'),\n        outside: flow.get('outsideTemp'),\n        desired: flow.get('desiredTemp'),\n        target: flow.get('targetTemp')\n    },\n    state: {\n        isSummer: flow.get('isSummer'),\n        timeMode: flow.get('timeMode'),\n        homeMode: global.get('Mode'),\n        isStandBy: global.get('isStandBy'),\n        heatpumpAction: flow.get('heatpumpAction'),\n        reason: flow.get('controlReason'),\n        fanlevel: flow.get('fanlevel'),\n        swing: flow.get('swing')\n\n    }\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1870,
+        "y": 940,
+        "wires": [
+            [
+                "498360f6e046e829"
+            ]
+        ]
+    },
+    {
+        "id": "997c7708e93ccdec",
+        "type": "link in",
+        "z": "189409faf8842877",
+        "g": "03c4eca16c6608a9",
+        "name": "link in 2",
+        "links": [
+            "5e8d3398.55375c"
+        ],
+        "x": 85,
+        "y": 820,
+        "wires": [
+            [
+                "54a8a5e0102d437e"
+            ]
+        ]
+    },
+    {
+        "id": "a63adc0bcd302284",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "Prep UI Data",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "upstairsTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1890,
+        "y": 160,
+        "wires": [
+            [
+                "09212714c088da95"
+            ]
+        ]
+    },
+    {
+        "id": "5bd59f269f732544",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "downstairsTemp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "downstairsTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1900,
+        "y": 200,
+        "wires": [
+            [
+                "361d83874edb234e"
+            ]
+        ]
+    },
+    {
+        "id": "7970dddc491fc5fc",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "controlReason",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "controlReason",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1900,
+        "y": 120,
+        "wires": [
+            [
+                "1675533c7dac75c9"
+            ]
+        ]
+    },
+    {
+        "id": "105e63c0b34fd0ee",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "outsideTemp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "outsideTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1890,
+        "y": 240,
+        "wires": [
+            [
+                "4766e46dc959b513"
+            ]
+        ]
+    },
+    {
+        "id": "b74868338c677221",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "target",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "targetTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1870,
+        "y": 280,
+        "wires": [
+            [
+                "bdfd9ad559553eb4"
+            ]
+        ]
+    },
+    {
+        "id": "35a56eeef425c9d7",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "heatpumpAction",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "heatpumpAction",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1900,
+        "y": 320,
+        "wires": [
+            [
+                "ab85c4f6a79a70c0"
+            ]
+        ]
+    },
+    {
+        "id": "498360f6e046e829",
+        "type": "debug",
+        "z": "189409faf8842877",
+        "g": "373af117a783f7e4",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2070,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "26174b0d06301935",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 11,
+        "width": "2",
+        "height": "1",
+        "name": "FanLevel",
+        "label": "FanLevel",
+        "format": "{{flow.fanlevel}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 2100,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bb176951ec72f7f9",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "fanlevel",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "fanlevel",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1880,
+        "y": 360,
+        "wires": [
+            [
+                "26174b0d06301935"
+            ]
+        ]
+    },
+    {
+        "id": "efeebb86ae576e31",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "fb4d535274ae6266",
+        "name": "Clean for Sensibo",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "cmdHash",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "heatpump",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "mill",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "status",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "_event",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "_msgid",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "result",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "_msgid",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "_client",
+                "pt": "msg"
+            }
+        ],
+        "x": 1710,
+        "y": 700,
+        "wires": [
+            [
+                "00fb06d15a8d5259"
+            ]
+        ]
+    },
+    {
+        "id": "6515993b9c68afb1",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "desiredTemp",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 120,
+        "wires": [
+            [
+                "3d33e3f7468bce6b"
+            ]
+        ]
+    },
+    {
+        "id": "5bfc7f7061fecc0e",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "fb4d535274ae6266",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1460,
+        "y": 620,
+        "wires": [
+            [
+                "3f85282b23944147",
+                "73c674f990fa0904"
+            ]
+        ]
+    },
+    {
+        "id": "6d0c2b6b4cb3ff5a",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 12,
+        "width": "2",
+        "height": "1",
+        "name": "Swing",
+        "label": "Swing",
+        "format": "{{flow.swing}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 2090,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "7fe3530efb93c127",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "fanlevel",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "swing",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1880,
+        "y": 400,
+        "wires": [
+            [
+                "6d0c2b6b4cb3ff5a"
+            ]
+        ]
+    },
+    {
+        "id": "66c3edfbc823bbf1",
+        "type": "ui-event",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "ui": "7f0c45a9432dc256",
+        "name": "",
+        "x": 1210,
+        "y": 120,
+        "wires": [
+            [
+                "291aa7bea3cc6663"
+            ]
+        ]
+    },
+    {
+        "id": "30c6f6bd94814054",
+        "type": "inject",
+        "z": "189409faf8842877",
+        "g": "a43790b1a5c19601",
+        "name": "Every 30 min",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "120",
+        "topic": "",
+        "payload": "refresh",
+        "payloadType": "str",
+        "x": 1470,
+        "y": 800,
+        "wires": [
+            [
+                "0cfd6d9c8cdd4123"
+            ]
+        ]
+    },
+    {
+        "id": "0cfd6d9c8cdd4123",
+        "type": "function",
+        "z": "189409faf8842877",
+        "g": "a43790b1a5c19601",
+        "name": "Swing Toggle",
+        "func": "// Sensibo swing refresh: toggle to a different swing first,\n// then the correct value will be sent after a delay.\n// This fixes the bug where Sensibo reports fixedBottom\n// but the physical unit is actually stuck on fixedTop.\n\nconst heatpumpAction = flow.get('heatpumpAction') || 'off';\nconst desiredSwing = flow.get('swing') || 'fixedBottom';\n\n// Skip if HP is off\nif (heatpumpAction === 'off') {\n    node.status({fill:'grey',shape:'ring',text:'HP off, skip'});\n    return null;\n}\n\n// Pick a different swing value to toggle to\nconst toggleSwing = (desiredSwing === 'fixedBottom') ? 'fixedTop' : 'fixedBottom';\n\nnode.status({fill:'yellow',shape:'dot',text:'Toggle → ' + toggleSwing + ' → ' + desiredSwing});\n\n// Output 1: immediate toggle to different swing\n// Output 2: delayed correction to correct swing\nconst msg1 = { swing: toggleSwing };\nconst msg2 = { swing: desiredSwing };\nreturn [msg1, msg2];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 800,
+        "wires": [
+            [
+                "b504a432f19b430f"
+            ],
+            [
+                "a28a7033e7c4a91d"
+            ]
+        ]
+    },
+    {
+        "id": "a28a7033e7c4a91d",
+        "type": "delay",
+        "z": "189409faf8842877",
+        "g": "a43790b1a5c19601",
+        "name": "Wait 5s",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1870,
+        "y": 840,
+        "wires": [
+            [
+                "1676d14dcda015b6"
+            ]
+        ]
+    },
+    {
+        "id": "1676d14dcda015b6",
+        "type": "function",
+        "z": "189409faf8842877",
+        "g": "a43790b1a5c19601",
+        "name": "Log Swing Refresh",
+        "func": "const swing = msg.swing;\nnode.status({fill:'green',shape:'dot',text:'Set → ' + swing + ' @ ' + new Date().toLocaleTimeString()});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2040,
+        "y": 840,
+        "wires": [
+            [
+                "b504a432f19b430f"
+            ]
+        ]
+    },
+    {
+        "id": "b504a432f19b430f",
+        "type": "sensibo send",
+        "z": "189409faf8842877",
+        "g": "a43790b1a5c19601",
+        "sensiboAPI": "8500b44945f22748",
+        "name": "Swing Refresh",
+        "pod": "VfTc6vFm",
+        "podSelector": "",
+        "x": 2190,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "mill_input_001",
+        "type": "ui-text-input",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "name": "Mill Setpoint",
+        "label": "Mill °C (active season)",
+        "order": 20,
+        "width": "2",
+        "height": "1",
+        "topic": "millSetpoint",
+        "topicType": "msg",
+        "mode": "number",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": false,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "bc01c1ee412d258d"
+            ]
+        ]
+    },
+    {
+        "id": "mill_disp_001",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "name": "Mill Targets",
+        "label": "Mill targets",
+        "format": "Winter {{flow.millWinterTemp}}°C · Summer {{flow.millSummerTemp}}°C",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 14,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 2090,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "season_disp_001",
+        "type": "ui-text",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "group": "f9c985920afe1003",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "name": "Season",
+        "label": "Season",
+        "format": "{{flow.seasonLabel}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 2100,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "65cece8810c42c21",
+        "type": "file in",
+        "z": "189409faf8842877",
+        "g": "373af117a783f7e4",
+        "name": "",
+        "filename": "D:\\02-Honeypot\\miles\\Smarthome\\temperature_log.csv",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2000,
+        "y": 1020,
+        "wires": [
+            [
+                "cc3af6e664f36d6b"
+            ]
+        ]
+    },
+    {
+        "id": "1308a1fc98457819",
+        "type": "inject",
+        "z": "189409faf8842877",
+        "g": "373af117a783f7e4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1700,
+        "y": 1020,
+        "wires": [
+            [
+                "65cece8810c42c21"
+            ]
+        ]
+    },
+    {
+        "id": "cc3af6e664f36d6b",
+        "type": "debug",
+        "z": "189409faf8842877",
+        "g": "373af117a783f7e4",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2310,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "27045e7a26327303",
+        "type": "link out",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "link out 14",
+        "mode": "link",
+        "links": [
+            "3d88ac222d635b1e"
+        ],
+        "x": 1785,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "79abffa46d47b848",
+        "type": "catch",
+        "z": "189409faf8842877",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 910,
+        "y": 600,
+        "wires": [
+            [
+                "92041d49f2d0a10d"
+            ]
+        ]
+    },
+    {
+        "id": "92041d49f2d0a10d",
+        "type": "debug",
+        "z": "189409faf8842877",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "1c341801efd5fc1f",
         "type": "change",
         "z": "189409faf8842877",
         "g": "c15f8d1bde3e4d99",
@@ -21506,14 +23064,14 @@
                 "t": "set",
                 "p": "forecast24hAvg",
                 "pt": "flow",
-                "to": "$avg([0..23].(payload.properties.timeseries[$].data.instant.details.air_temperature))",
+                "to": "$average(payload.properties.timeseries[[0..23]].data.instant.details.air_temperature)",
                 "tot": "jsonata"
             },
             {
                 "t": "set",
                 "p": "isSummer",
                 "pt": "flow",
-                "to": "(    $month := $number($fromMillis($millis(), '[M]'));    $avgT := $avg([0..23].(payload.properties.timeseries[$].data.instant.details.air_temperature));    ($month >= 5 and $month <= 9) and $avgT >= 13 )",
+                "to": "(\t$month := $number($fromMillis($millis(), '[M]'));\t$avgT := $average(payload.properties.timeseries[[0..23]].data.instant.details.air_temperature);\t($month >= 5 and $month <= 9) and $avgT >= 13)",
                 "tot": "jsonata"
             }
         ],
@@ -21522,351 +23080,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
-        "y": 280,
+        "x": 510,
+        "y": 480,
         "wires": [
             [
                 "744c985b060fa1ee"
             ]
         ]
-    },
-    {
-        "id": "f011c082798d4d65",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "Weekday 05:30",
-        "props": [
-            {
-                "p": "payload",
-                "v": "morning",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "30 05 * * 1,2,3,4,5",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 210,
-        "y": 520,
-        "wires": [
-            [
-                "0065e763ec5e55e0"
-            ]
-        ]
-    },
-    {
-        "id": "9178d61809a49a3a",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "Weekend 07:30",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "30 07 * * 6,0",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "morning",
-        "payloadType": "str",
-        "x": 210,
-        "y": 560,
-        "wires": [
-            [
-                "0065e763ec5e55e0"
-            ]
-        ]
-    },
-    {
-        "id": "e15a857eb1b07941",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "Daily 08:30",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "00 09 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "day",
-        "payloadType": "str",
-        "x": 200,
-        "y": 600,
-        "wires": [
-            [
-                "20030999c53bc276"
-            ]
-        ]
-    },
-    {
-        "id": "18c1440fc315b7f8",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "Daily 20:30",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "30 20 * * 1,2,3,4",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "pre-bedtime",
-        "payloadType": "str",
-        "x": 200,
-        "y": 640,
-        "wires": [
-            [
-                "c798937a8103a538"
-            ]
-        ]
-    },
-    {
-        "id": "18863718458b2083",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "Daily 22:00",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "00 22 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "night",
-        "payloadType": "str",
-        "x": 200,
-        "y": 720,
-        "wires": [
-            [
-                "cca4eca47e148dcb"
-            ]
-        ]
-    },
-    {
-        "id": "f9bc47f82205e9bc",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "Weekday 14:30 Preheat",
-        "props": [
-            {
-                "p": "payload",
-                "v": "preheat",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "30 14 * * 1,2,3,4,5",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 240,
-        "y": 760,
-        "wires": [
-            [
-                "1772bd2ac3f5c917"
-            ]
-        ]
-    },
-    {
-        "id": "1772bd2ac3f5c917",
-        "type": "switch",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "If Away",
-        "property": "Mode",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "away",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 430,
-        "y": 760,
-        "wires": [
-            [
-                "20030999c53bc276"
-            ]
-        ]
-    },
-    {
-        "id": "0065e763ec5e55e0",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "→ morning",
-        "rules": [
-            {
-                "t": "set",
-                "p": "timeMode",
-                "pt": "flow",
-                "to": "morning",
-                "tot": "str"
-            },
-            {
-                "t": "delete",
-                "p": "manualOverride",
-                "pt": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 440,
-        "y": 540,
-        "wires": [
-            [
-                "744c985b060fa1ee"
-            ]
-        ]
-    },
-    {
-        "id": "20030999c53bc276",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "→ day",
-        "rules": [
-            {
-                "t": "set",
-                "p": "timeMode",
-                "pt": "flow",
-                "to": "day",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 600,
-        "wires": [
-            [
-                "744c985b060fa1ee"
-            ]
-        ]
-    },
-    {
-        "id": "c798937a8103a538",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "→ pre-bedtime",
-        "rules": [
-            {
-                "t": "set",
-                "p": "timeMode",
-                "pt": "flow",
-                "to": "pre-bedtime",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 590,
-        "y": 640,
-        "wires": [
-            [
-                "744c985b060fa1ee",
-                "0cfd6d9c8cdd4123"
-            ]
-        ]
-    },
-    {
-        "id": "cca4eca47e148dcb",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "→ night",
-        "rules": [
-            {
-                "t": "set",
-                "p": "timeMode",
-                "pt": "flow",
-                "to": "night",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 720,
-        "wires": [
-            [
-                "744c985b060fa1ee"
-            ]
-        ]
-    },
-    {
-        "id": "0e22b9349e2d4f47",
-        "type": "switch",
-        "z": "189409faf8842877",
-        "g": "03c4eca16c6608a9",
-        "name": "After 20:00?",
-        "property": "$number($fromMillis($millis(), '[H]')) >= 20",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 490,
-        "y": 880,
-        "wires": [
-            [
-                "c798937a8103a538"
-            ]
-        ]
-    },
-    {
-        "id": "744c985b060fa1ee",
-        "type": "link out",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "→ Control Logic",
-        "mode": "link",
-        "links": [
-            "9121b3fbb51f781e"
-        ],
-        "x": 1085,
-        "y": 340,
-        "wires": []
     },
     {
         "id": "9121b3fbb51f781e",
@@ -21877,8 +23097,8 @@
         "links": [
             "744c985b060fa1ee"
         ],
-        "x": 155,
-        "y": 1000,
+        "x": 105,
+        "y": 680,
         "wires": [
             [
                 "492258646c12c886"
@@ -21903,188 +23123,120 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 390,
-        "y": 1000,
+        "x": 340,
+        "y": 680,
         "wires": [
             [
-                "b58e88e0612d7576"
+                "bec1e15f2ea813de"
             ]
         ]
     },
     {
-        "id": "b58e88e0612d7576",
+        "id": "3d88ac222d635b1e",
+        "type": "link in",
+        "z": "189409faf8842877",
+        "g": "d97117a1dc66902a",
+        "name": "link in 6",
+        "links": [
+            "27045e7a26327303"
+        ],
+        "x": 285,
+        "y": 640,
+        "wires": [
+            [
+                "bec1e15f2ea813de"
+            ]
+        ]
+    },
+    {
+        "id": "bec1e15f2ea813de",
         "type": "function",
         "z": "189409faf8842877",
         "g": "d97117a1dc66902a",
-        "name": "Temperature Controller",
-        "func": "// ═══════════════════════════════════════════════════════════════════════════\r\n// SMART TEMPERATURE CONTROLLER V9.5 - Cap DN heat fan when upstairs comfortable\r\n// ═══════════════════════════════════════════════════════════════════════════\r\n// Heat pump is in stairwell middle: cool floats UP, heat falls DOWN.\r\n//   → Cool target = upstairs   (swing fixedTop)\r\n//   → Heat target = downstairs (swing fixedBottom)\r\n//\r\n// SEASON RULES (isSummer now = month 5-9 AND 24h forecast avg >= 13°C)\r\n//  WINTER (isSummer=false)\r\n//    • Day/Morning: HEAT + overshoot protection. Cool upstairs if >desired+1.\r\n//    • Predictive: cloud, solar gain, outside6h forecast, wind → adjust.\r\n//    • HP blocked if upstairs already above heat ceiling (heat rises).\r\n//    • WFH (Mon–Fri 08–15, home): focus upstairs heat (fixedTop).\r\n//    • Otherwise: focus downstairs (fixedBottom), keep upstairs ≥ desired-1.\r\n//  SUMMER (isSummer=true)\r\n//    • Cool upstairs primarily.\r\n//    • DOG SAFETY enforced (cool if upstairs >= dogMaxTemp).\r\n//    • COLD-SUMMER FALLBACK: when outside cold (<15°C) AND downstairs deficit\r\n//      >1°C AND upstairs not too warm → heat downstairs (fixedBottom).\r\n//\r\n// NIGHT / PRE-BEDTIME / SLEEP\r\n//    • Bedrooms downstairs → swing fixedBottom.\r\n//    • Pre-bedtime: aggressive cool (high<22h, med<23h, med<midnight if deficit>2).\r\n//    • Mill=19 during bedtime.\r\n//    • TV watching (isStandBy=false): no fan-cool, only heat-low hold.\r\n//    • Sleep/Night fan caps: ≥23h low only, 22–23h max medium (pre-bedtime exempt).\r\n//\r\n// BLOCKED MODES (visitor / manual / VisitorMode.enabled / global manualmode):\r\n//    • return null → no command sent. Physical Sensibo remote owns the unit.\r\n// ═══════════════════════════════════════════════════════════════════════════\r\n\r\nconst num = (k, d) => { const v = Number(flow.get(k)); return isFinite(v) ? v : d; };\r\n\r\n// Sensors\r\nconst upstairs   = num('upstairsTemp', 20);\r\nconst downstairs = num('downstairsTemp', 20);\r\nconst outside    = num('outsideTemp', 10);\r\nconst cloud      = num('cloudCover', 50);\r\nconst wind       = num('windSpeed', 0);\r\nconst out1h      = num('outside1h', outside);\r\nconst out6h      = num('outside6h', outside);\r\nconst rain6h     = num('rain6h', 0);\r\nconst fc24Avg    = num('forecast24hAvg', outside);\r\n\r\n// Targets / config\r\nconst desired      = num('desiredTemp', 22);\r\nconst bedtime      = num('bedtimeTemp', 19);\r\nconst awayTgt      = num('awayTemp', 21);\r\nconst vacationTgt  = num('vacationTemp', 18);\r\nconst millWinter   = num('millWinterTemp', 23);\r\nconst millSummer   = num('millSummerTemp', 20);\r\nconst SUMMER_CAP   = 24;\r\n\r\n// State\r\nlet   homeMode      = (global.get('Mode') || 'home').toLowerCase();\r\nconst timeMode      = flow.get('timeMode') || 'day';\r\nconst isSummer      = !!flow.get('isSummer');\r\nconst seasonLabel   = isSummer ? 'Summer' : 'Winter';\r\nflow.set('seasonLabel', seasonLabel);\r\n\r\nconst manualOR      = flow.get('manualOverride');\r\nconst swingOR       = flow.get('swingOverride');\r\nconst manualMode    = !!global.get('manualmode');\r\nconst visitorMode   = (global.get('VisitorMode') || {}).enabled === true;\r\nconst standby       = global.get('isStandBy');\r\nconst watching      = standby === false;\r\nconst lastAction    = flow.get('lastHPAction') || 'off';\r\nconst lastActionTs  = flow.get('lastHPActionTime') || 0;\r\n\r\nconst now = Date.now();\r\n// TV hysteresis: treat as watching for 15 min after last 'on' signal so brief\r\n// standby flips (pauses, idle detection) don't ramp the fan back up.\r\nif (watching) flow.set('lastTvOnTime', now);\r\nconst lastTvOn = flow.get('lastTvOnTime') || 0;\r\nconst tvActive = watching || (now - lastTvOn) < 15 * 60 * 1000;\r\nconst d = new Date();\r\nconst hour = d.getHours();\r\nconst dow = d.getDay();                       // 0=Sun..6=Sat\r\nconst isWeekend = (dow === 0 || dow === 6);\r\nconst isWFH = !isSummer && homeMode === 'home' && !isWeekend && hour >= 8 && hour < 15;\r\nconst isNightHours = (timeMode === 'night' || timeMode === 'pre-bedtime' || homeMode === 'sleep');\r\n\r\n// V9.2: Presence anti-flap — require homeMode stable for 5 min before honoring change.\r\n// Visitor/manual modes are still honored immediately (handled by blocked check above).\r\nconst lastStableMode   = flow.get('lastStableHomeMode') || homeMode;\r\nconst lastStableModeTs = flow.get('lastStableHomeModeTime') || 0;\r\nif (homeMode !== lastStableMode) {\r\n    if ((now - lastStableModeTs) < 5 * 60 * 1000) {\r\n        homeMode = lastStableMode;  // ignore flap, stick with last stable mode\r\n    } else {\r\n        flow.set('lastStableHomeMode', homeMode);\r\n        flow.set('lastStableHomeModeTime', now);\r\n    }\r\n} else if (!lastStableModeTs) {\r\n    flow.set('lastStableHomeMode', homeMode);\r\n    flow.set('lastStableHomeModeTime', now);\r\n}\r\n\r\n// Hysteresis & min-run\r\nconst HEAT_ON = 1.0, HEAT_OFF = 0.3;\r\nconst COOL_ON = 0.5, COOL_OFF = 0.3;\r\nconst MIN_RUN_MS = 10 * 60 * 1000;\r\nconst MIN_RUN_REVERSE_MS = 20 * 60 * 1000;  // anti-flap: 20 min before flipping cool⇄heat\r\n\r\n// ─── BLOCKED ─────────────────────────────────────────────────────────────────\r\nconst blocked = ['visitor','guest','manual'].includes(homeMode) || manualMode || visitorMode;\r\nif (blocked) {\r\n    const why = visitorMode ? 'visitor' : (manualMode ? 'manual' : homeMode);\r\n    flow.set('controlReason', 'BLOCKED: ' + why + ' (physical remote in control)');\r\n    flow.set('heatpumpAction', 'paused');\r\n    node.status({ fill:'yellow', shape:'ring', text:'BLOCKED: ' + why });\r\n    return null;   // no Sensibo / no Mill message\r\n}\r\n\r\n// ─── HELPERS ─────────────────────────────────────────────────────────────────\r\nfunction canChange(next) {\r\n    if (lastAction === 'off' || next === lastAction) return true;\r\n    // Reversing direction (heat↔cool) requires a longer settle period\r\n    const reversing = (lastAction === 'heat' && next === 'cool') || (lastAction === 'cool' && next === 'heat');\r\n    const minRun = reversing ? MIN_RUN_REVERSE_MS : MIN_RUN_MS;\r\n    return (now - lastActionTs) >= minRun;\r\n}\r\nfunction needsHeat(temp, target) {\r\n    return lastAction === 'heat' ? (temp < target + HEAT_OFF) : (temp < target - HEAT_ON);\r\n}\r\nfunction needsCool(temp, target) {\r\n    return lastAction === 'cool' ? (temp > target - COOL_OFF) : (temp > target + COOL_ON);\r\n}\r\n\r\nlet action = 'off';\r\nlet setpoint = desired;\r\nlet fan = 'low';\r\nlet swing = 'fixedBottom';\r\nlet millTemp = isSummer ? millSummer : millWinter;\r\nlet reason = '';\r\n\r\n// ─── 1) MANUAL OVERRIDE BUTTONS ──────────────────────────────────────────────\r\nif (manualOR && manualOR !== 'auto') {\r\n    if (manualOR === 'heat') {\r\n        action = 'heat'; setpoint = desired + 2; fan = 'medium'; swing = 'fixedBottom';\r\n        reason = 'OVERRIDE Heat → ' + desired + '°C';\r\n    } else if (manualOR === 'cool') {\r\n        action = 'cool'; setpoint = Math.min(desired, 21); fan = 'medium'; swing = 'fixedTop';\r\n        reason = 'OVERRIDE Cool → ' + setpoint + '°C';\r\n    } else if (manualOR === 'on') {\r\n        action = isSummer ? 'cool' : 'heat';\r\n        setpoint = isSummer ? Math.min(desired, 21) : desired + 2;\r\n        fan = 'medium';\r\n        swing = isSummer ? 'fixedTop' : 'fixedBottom';\r\n        reason = 'OVERRIDE On (' + action + ') → ' + setpoint + '°C';\r\n    } else { // off\r\n        action = 'off'; reason = 'OVERRIDE Off';\r\n    }\r\n}\r\n\r\n// ─── 2) SAFETY ───────────────────────────────────────────────────────────────\r\nelse if (upstairs > 30 || downstairs > 30) {\r\n    action = 'cool'; setpoint = 22; fan = 'high';\r\n    swing = upstairs > downstairs ? 'fixedTop' : 'fixedBottom';\r\n    reason = 'SAFETY >30°C';\r\n}\r\nelse if (upstairs < 12 || downstairs < 12) {\r\n    action = 'heat'; setpoint = 22; fan = 'high';\r\n    swing = upstairs < downstairs ? 'fixedTop' : 'fixedBottom';\r\n    millTemp = 25;\r\n    reason = 'SAFETY <12°C';\r\n}\r\n\r\n// ─── 3) SLEEP / NIGHT / PRE-BEDTIME — bedrooms downstairs ────────────────────\r\nelse if (homeMode === 'sleep' || timeMode === 'night' || timeMode === 'pre-bedtime') {\r\n    const bedTarget = bedtime;                         // 19 by default\r\n    // V9.3: Mill at 17 during bedtime — effectively off unless dn drops very low.\r\n    // We want the room cooler at night, not Mill heating it.\r\n    millTemp = 17;\r\n    swing = 'fixedBottom';\r\n\r\n    // No cooling while watching TV (15min hysteresis) — too noisy and cools too fast.\r\n    // Fall through to heat-low-hold or off so it stays quiet.\r\n    const allowCool = !tvActive;\r\n    if (needsCool(downstairs, bedTarget) && canChange('cool') && allowCool) {\r\n        action = 'cool';\r\n        setpoint = Math.max(bedTarget - 1, 17);\r\n        // V9.3: Pre-bedtime aggressive cool 20:30–22:00 — high fan to drop temp before sleep.\r\n        // After 22:00 just maintain (fan caps applied below).\r\n        const deficit = downstairs - bedTarget;\r\n        if (timeMode === 'pre-bedtime') {\r\n            // V9.4: KISS deficit-scaled fan — only as fast as needed.\r\n            // TV on (15min hysteresis): keep quiet regardless of deficit.\r\n            if (tvActive) fan = 'low';\r\n            else if (deficit > 1.5) fan = 'high';\r\n            else if (deficit > 0.5) fan = 'medium';\r\n            else fan = 'low';\r\n            // After 22:00 cap: high→medium. After 23:00: low only (maintenance).\r\n            if (hour >= 23 && fan !== 'low') fan = 'low';\r\n            else if (hour >= 22 && fan === 'high') fan = 'medium';\r\n        } else {\r\n            fan = 'low';\r\n        }\r\n        reason = 'Night: cool ' + downstairs.toFixed(1) + '→' + bedTarget;\r\n    } else if (needsHeat(downstairs, bedTarget) && canChange('heat')) {\r\n        action = 'heat';\r\n        setpoint = bedTarget + 2;\r\n        fan = 'low';\r\n        reason = 'Night: heat ' + downstairs.toFixed(1) + '→' + bedTarget\r\n              + (watching ? ' (TV)' : '');\r\n    } else if (tvActive && downstairs < bedTarget + 0.5) {\r\n        action = 'heat'; setpoint = bedTarget + 1; fan = 'low';\r\n        reason = 'Night: TV on, heat-low hold';\r\n    } else {\r\n        action = 'off';\r\n        reason = 'Night: OK ' + downstairs.toFixed(1) + (tvActive ? ' (TV)' : '');\r\n    }\r\n}\r\n\r\n// ─── 4) VACATION ─────────────────────────────────────────────────────────────\r\nelse if (homeMode === 'vacation') {\r\n    millTemp = isSummer ? millSummer : 19;\r\n    const cold = Math.min(upstairs, downstairs);\r\n    if (needsHeat(cold, vacationTgt) && canChange('heat')) {\r\n        action = 'heat'; setpoint = vacationTgt + 3; fan = 'low';\r\n        swing = upstairs < downstairs ? 'fixedTop' : 'fixedBottom';\r\n        reason = 'Vacation: heat ' + cold.toFixed(1) + '→' + vacationTgt;\r\n    } else if (upstairs >= num('dogMaxTemp', 24) && canChange('cool')) {\r\n        action = 'cool'; setpoint = Math.max(desired - 1, 20); fan = 'medium'; swing = 'fixedTop';\r\n        reason = 'Vacation: DOG SAFETY cool up=' + upstairs.toFixed(1);\r\n    } else {\r\n        action = 'off'; reason = 'Vacation: OK';\r\n    }\r\n}\r\n\r\n// ─── 5) AWAY ─────────────────────────────────────────────────────────────────\r\nelse if (homeMode === 'away') {\r\n    millTemp = isSummer ? millSummer : 20;\r\n    const dogMaxAway = num('dogMaxTemp', 24);\r\n    if (upstairs >= dogMaxAway && canChange('cool')) {\r\n        // Dog safety: cool upstairs whenever it exceeds dogMaxTemp, regardless of season\r\n        action = 'cool'; setpoint = Math.max(desired - 1, 20); fan = 'high'; swing = 'fixedTop';\r\n        reason = 'Away: DOG SAFETY cool up=' + upstairs.toFixed(1) + '>=' + dogMaxAway;\r\n    } else if (!isSummer && downstairs < awayTgt - 0.5 && upstairs >= awayTgt + 0.5) {\r\n        // V9.2: Mill-only — HP heat would cook upstairs (heat rises). Push Mill instead.\r\n        action = 'off'; millTemp = Math.max(millTemp, 26);\r\n        reason = 'Away: Mill-only up=' + upstairs.toFixed(1) + ' dn=' + downstairs.toFixed(1) + ' Mill→26';\r\n    } else if (!isSummer && needsHeat(downstairs, awayTgt) && canChange('heat')) {\r\n        action = 'heat'; setpoint = awayTgt + 2; fan = 'medium'; swing = 'fixedBottom';\r\n        reason = 'Away: heat ' + downstairs.toFixed(1) + '→' + awayTgt;\r\n    } else {\r\n        action = 'off'; reason = 'Away: OK';\r\n    }\r\n}\r\n\r\n// ─── 6) DAY / MORNING — season-split ─────────────────────────────────────────\r\nelse if (isSummer) {\r\n    // ---------- SUMMER DAY ----------\r\n    // Cool upstairs primarily, BUT heat downstairs when outside is cold\r\n    // and the house can't catch up passively.\r\n    const label = timeMode === 'morning' ? 'Morning' : 'Day';\r\n    const dogMaxS = num('dogMaxTemp', 24);\r\n    const coldOutside = outside < 15 && fc24Avg < 16;\r\n    const dnDeficit = desired - downstairs;\r\n\r\n    if (upstairs >= dogMaxS && canChange('cool')) {\r\n        action = 'cool'; setpoint = Math.max(desired - 1, 20); fan = 'high'; swing = 'fixedTop';\r\n        reason = label + ' Summer: DOG SAFETY cool up=' + upstairs.toFixed(1) + '>=' + dogMaxS;\r\n    } else if (upstairs > SUMMER_CAP && canChange('cool')) {\r\n        action = 'cool'; setpoint = Math.max(desired - 1, 20); fan = 'high'; swing = 'fixedTop';\r\n        reason = label + ' Summer: FULL cool ' + upstairs.toFixed(1) + '>24';\r\n    } else if (needsCool(upstairs, desired) && canChange('cool')) {\r\n        action = 'cool';\r\n        setpoint = Math.max(desired - 1, 20);\r\n        fan = (upstairs - desired) > 1.5 ? 'medium' : 'low';\r\n        swing = 'fixedTop';\r\n        reason = label + ' Summer: cool up ' + upstairs.toFixed(1) + '→' + desired;\r\n    } else if (coldOutside && dnDeficit > 1 && upstairs < desired + 0.5 && canChange('heat')) {\r\n        // Cold-summer fallback: cold outside + downstairs >1°C below desired\r\n        // and upstairs not too warm → heat downstairs\r\n        action = 'heat';\r\n        setpoint = desired + Math.min(2, Math.max(1, Math.round(dnDeficit)));\r\n        fan = dnDeficit > 2 ? 'medium' : 'low';\r\n        swing = 'fixedBottom';\r\n        reason = label + ' ColdSummer: heat dn ' + downstairs.toFixed(1) + '→' + desired + ' (out=' + outside.toFixed(1) + ')';\r\n    } else {\r\n        action = 'off';\r\n        reason = label + ' Summer: OK up=' + upstairs.toFixed(1) + ' dn=' + downstairs.toFixed(1);\r\n    }\r\n} else {\r\n    // ---------- WINTER DAY: HEAT + overshoot protection ----------\r\n    const label = timeMode === 'morning' ? 'Morning' : (isWFH ? 'WFH' : 'Day');\r\n\r\n    // Predictive: warm outside / solar gain → house heats passively\r\n    const solarGain = (cloud < 40 && hour >= 9 && hour < 16);\r\n    // Forecast: outside warming significantly in next 6h → reduce heat ceiling\r\n    const warmingFast = (out6h - outside) > 4;\r\n    // Wind: high wind = more heat loss → raise ceiling slightly (heat more)\r\n    const windAdj = wind > 5 ? 0.2 : 0;\r\n    let heatCeiling = desired + (outside > 10 ? (solarGain ? 0 : 0.3) : 0.5) + windAdj;\r\n    if (warmingFast) heatCeiling -= 0.3;\r\n    const upTooWarm = upstairs > heatCeiling;\r\n\r\n    // COOL: upstairs overshoot → cool (always fixedTop, even winter)\r\n    // But protect downstairs: skip if dn < desired-1, cap fan if dn < desired\r\n    const dnCold = downstairs < desired - 1;\r\n    const dnCool = downstairs < desired;\r\n    const dogMax = num('dogMaxTemp', 24);\r\n    if (upstairs >= dogMax && canChange('cool')) {\r\n        // Dog safety overrides dnCold protection — upstairs must not exceed dogMaxTemp\r\n        action = 'cool';\r\n        setpoint = Math.max(desired - 1, 20);\r\n        fan = 'high';\r\n        swing = 'fixedTop';\r\n        reason = label + ': DOG SAFETY cool up=' + upstairs.toFixed(1) + '>=' + dogMax;\r\n        // When upstairs is hot AND downstairs is cold, push Mill harder so dn catches up\r\n        if (downstairs < desired - 1) millTemp = Math.max(millTemp, 25);\r\n    }\r\n    // COMFORT CAP: upstairs significantly above desired — cool even when dn is cold.\r\n    // Rationale: HP cooling upstairs doesn't directly cool downstairs; Mill heats dn.\r\n    else if (upstairs >= desired + 1.5 && canChange('cool')) {\r\n        action = 'cool';\r\n        setpoint = Math.max(desired - 1, 20);\r\n        const over = upstairs - desired;\r\n        // Cap fan when dn is very cold to limit downward draft, but always do something\r\n        fan = dnCold ? (over > 2.5 ? 'medium' : 'low') : (over > 2 ? 'high' : 'medium');\r\n        swing = 'fixedTop';\r\n        reason = label + ': COMFORT cool up=' + upstairs.toFixed(1) + '>' + desired + (dnCold ? ' (dn cold, Mill boost)' : '');\r\n        if (dnCold) millTemp = Math.max(millTemp, 25);  // boost Mill to compensate\r\n    }\r\n    else if (!dnCool && upstairs > desired + 1.0 && canChange('cool')) {\r\n        // V9.2: raised trigger from +0.5 to +1.0 and require dn at/above desired (anti-flap)\r\n        action = 'cool';\r\n        setpoint = Math.max(desired - 1, 18);\r\n        const over = upstairs - desired;\r\n        fan = (over > 2 ? 'high' : (over > 1.5 ? 'medium' : 'low'));\r\n        swing = 'fixedTop';\r\n        reason = label + ': cool overshoot up=' + upstairs.toFixed(1) + '>' + desired;\r\n    }\r\n    else if (isWFH) {\r\n        // V9.2: if dn is cold but up already at/above target, HP heat is wasted (heat rises) — Mill-only.\r\n        if (dnCold && upstairs >= desired - 0.3) {\r\n            action = 'off'; millTemp = Math.max(millTemp, 27);\r\n            reason = label + ': Mill-only up=' + upstairs.toFixed(1) + ' dn=' + downstairs.toFixed(1) + ' Mill→27';\r\n        } else if (!upTooWarm && needsHeat(upstairs, desired) && canChange('heat')) {\r\n            const deficit = desired - upstairs;\r\n            action = 'heat';\r\n            setpoint = Math.min(desired + Math.round(deficit * 1.5) + 1, desired + 4);\r\n            fan = deficit > 2 ? 'high' : (deficit > 1 ? 'medium' : 'low');\r\n            swing = 'fixedTop';\r\n            reason = label + ': heat UP ' + upstairs.toFixed(1) + '→' + desired;\r\n        } else if (!upTooWarm && needsHeat(downstairs, desired - 1) && canChange('heat')) {\r\n            action = 'heat'; setpoint = desired + 1; fan = 'low'; swing = 'fixedBottom';\r\n            reason = label + ': heat dn ' + downstairs.toFixed(1);\r\n        } else {\r\n            action = 'off';\r\n            reason = label + ': OK up=' + upstairs.toFixed(1) + ' dn=' + downstairs.toFixed(1);\r\n        }\r\n    } else {\r\n        // V9.2: Mill-only — HP heat doesn't reach dn (heat rises). When up already fine, push Mill.\r\n        if (dnCold && upstairs >= desired - 0.3) {\r\n            action = 'off'; millTemp = Math.max(millTemp, 27);\r\n            reason = label + ': Mill-only up=' + upstairs.toFixed(1) + ' dn=' + downstairs.toFixed(1) + ' Mill→27';\r\n        } else if (!upTooWarm && needsHeat(downstairs, desired) && canChange('heat')) {\r\n            const deficit = desired - downstairs;\r\n            action = 'heat';\r\n            setpoint = Math.min(desired + Math.round(deficit * 1.5) + 1, desired + 4);\r\n            // V9.5: cap fan when upstairs is already comfortable — heat rises, no need to blast.\r\n            // up >= desired   -> low (just trickle, Mill does the work)\r\n            // up >= desired-1 -> medium max\r\n            // otherwise scale by deficit\r\n            if (upstairs >= desired) fan = 'low';\r\n            else if (upstairs >= desired - 1) fan = deficit > 1.5 ? 'medium' : 'low';\r\n            else fan = deficit > 2 ? 'high' : (deficit > 1 ? 'medium' : 'low');\r\n            swing = 'fixedBottom';\r\n            // Big dn deficit + cold outside → boost Mill alongside HP\r\n            if (deficit > 1.5) millTemp = Math.max(millTemp, 25);\r\n            reason = label + ': heat DN ' + downstairs.toFixed(1) + '→' + desired + ' (up=' + upstairs.toFixed(1) + ')';\r\n        } else if (!upTooWarm && needsHeat(upstairs, desired - 1) && canChange('heat')) {\r\n            action = 'heat'; setpoint = desired + 1; fan = 'low'; swing = 'fixedTop';\r\n            reason = label + ': heat up ' + upstairs.toFixed(1);\r\n        } else {\r\n            action = 'off';\r\n            reason = label + ': OK up=' + upstairs.toFixed(1) + ' dn=' + downstairs.toFixed(1);\r\n        }\r\n    }\r\n}\r\n\r\n// ─── SWING OVERRIDE ──────────────────────────────────────────────────────────\r\nif (swingOR === 'fixedTop' || swingOR === 'fixedBottom') {\r\n    swing = swingOR;\r\n    reason += ' [swing OVR:' + swingOR + ']';\r\n}\r\n\r\n// ─── NIGHT FAN CAPS ──────────────────────────────────────────────────────────\r\nif (isNightHours && timeMode !== 'pre-bedtime') {\r\n    if (hour >= 23 || hour < 5) {\r\n        if (fan !== 'low') fan = 'low';\r\n    } else if (hour >= 22) {\r\n        if (fan === 'high') fan = 'medium';\r\n    }\r\n}\r\n\r\n// ─── PERSIST ─────────────────────────────────────────────────────────────────\r\nif (action !== lastAction) {\r\n    flow.set('lastHPAction', action);\r\n    flow.set('lastHPActionTime', now);\r\n}\r\nflow.set('heatpumpAction', action);\r\nflow.set('targetTemp', setpoint);\r\nflow.set('controlReason', reason);\r\nflow.set('fanlevel', fan);\r\nflow.set('swing', swing);\r\n\r\n// ─── OUTPUT ──────────────────────────────────────────────────────────────────\r\nmsg.on = action !== 'off';\r\nmsg.mode = action === 'off' ? 'heat' : action;\r\nmsg.targetTemperature = setpoint;\r\nmsg.fanlevel = fan;\r\nmsg.swing = swing;\r\nmsg.cmdHash = msg.on ? ('ON-' + msg.mode + '-' + setpoint + '-' + fan + '-' + swing) : 'OFF';\r\nmsg.mill = { on: true, temperature: millTemp };\r\nmsg.status = {\r\n    action, reason, season: seasonLabel, isWFH,\r\n    temps: { up:+upstairs.toFixed(1), dn:+downstairs.toFixed(1), out:+outside.toFixed(1), cloud, wind, out6h:+out6h.toFixed(1), rain6h, fc24Avg:+fc24Avg.toFixed(1) },\r\n    ctx: { homeMode, timeMode, watching, manualOR: manualOR||'auto', swingOR: swingOR||'auto' }\r\n};\r\n\r\nnode.status({\r\n    fill: action==='heat' ? 'red' : (action==='cool' ? 'blue' : 'grey'),\r\n    shape: 'dot',\r\n    text: seasonLabel + (isWFH?'/WFH':'') + ' · ' + reason.substring(0, 50)\r\n});\r\n\r\nreturn msg;\r\n",
+        "name": "Context & State Ingestion",
+        "func": "// 1. STATE & CONTEXT INGESTION\nconst num = (k, d) => { const v = Number(flow.get(k)); return isFinite(v) ? v : d; };\nconst now = Date.now();\nconst d = new Date();\nconst hour = d.getHours();\nconst min = d.getMinutes();\nconst dow = d.getDay(); \nconst isWeekend = (dow === 0 || dow === 6);\n\n// --- DYNAMIC SCHEDULE CALCULATION ---\n// We calculate this on the fly so a system restart never leaves us in the wrong state\nlet calculatedTimeMode = 'night'; \nconst timeAsFloat = hour + (min / 60); // e.g., 08:30 becomes 8.5, 20:30 becomes 20.5\nconst morningStart = isWeekend ? 7.5 : 5.5; // 07:30 weekend, 05:30 weekday\n\nif (timeAsFloat >= 22 || timeAsFloat < morningStart) {\n    calculatedTimeMode = 'night';\n} else if (timeAsFloat >= morningStart && timeAsFloat < 8.5) {\n    calculatedTimeMode = 'morning'; // Lasts until 08:30\n} else if (timeAsFloat >= 8.5 && timeAsFloat < 20.5) {\n    calculatedTimeMode = 'day';\n} else if (timeAsFloat >= 20.5 && timeAsFloat < 22) {\n    calculatedTimeMode = 'pre-bedtime';\n}\n\n// Persist it so your UI Dashboard and logs can still track the current mode\nflow.set('timeMode', calculatedTimeMode);\n// ------------------------------------\n\nlet ctx = {\n    upstairs: num('upstairsTemp', 20),\n    downstairs: num('downstairsTemp', 20),\n    outside: num('outsideTemp', 10),\n    cloud: num('cloudCover', 50),\n    wind: num('windSpeed', 0),\n    out1h: num('outside1h', num('outsideTemp', 10)),\n    out6h: num('outside6h', num('outsideTemp', 10)),\n    rain6h: num('rain6h', 0),\n    fc24Avg: num('forecast24hAvg', num('outsideTemp', 10)),\n    \n    desired: num('desiredTemp', 22),\n    bedtime: num('bedtimeTemp', 19),\n    awayTgt: num('awayTemp', 21),\n    vacationTgt: num('vacationTemp', 18),\n    millWinter: num('millWinterTemp', 23),\n    millSummer: num('millSummerTemp', 22),\n    dogMaxTemp: num('dogMaxTemp', 24),\n    \n    isSummer: !!flow.get('isSummer'),\n    timeMode: calculatedTimeMode, // Set directly from our dynamic calculation above\n    manualOR: flow.get('manualOverride'),\n    swingOR: flow.get('swingOverride'),\n    manualMode: !!global.get('manualmode'),\n    visitorMode: (global.get('VisitorMode') || {}).enabled === true,\n    standby: global.get('isStandBy'),\n    \n    lastAction: flow.get('lastHPAction') || 'off',\n    lastActionTs: flow.get('lastHPActionTime') || 0,\n    \n    now: now,\n    hour: hour\n};\n\nctx.seasonLabel = ctx.isSummer ? 'Summer' : 'Winter';\nflow.set('seasonLabel', ctx.seasonLabel);\n\n// TV Logic\nctx.watching = ctx.standby === false;\nif (ctx.watching) flow.set('lastTvOnTime', now);\nconst lastTvOn = flow.get('lastTvOnTime') || 0;\nctx.tvActive = ctx.watching || (now - lastTvOn) < 15 * 60 * 1000;\n\n// Time & WFH Logic\nctx.isNightTime = (hour >= 23 || hour < 5);\nlet rawHomeMode = (global.get('Mode') || 'home').toLowerCase();\n\n// Presence Anti-flap (5 min)\nconst lastStableMode = flow.get('lastStableHomeMode') || rawHomeMode;\nconst lastStableModeTs = flow.get('lastStableHomeModeTime') || 0;\nif (rawHomeMode !== lastStableMode) {\n    if ((now - lastStableModeTs) < 5 * 60 * 1000) {\n        rawHomeMode = lastStableMode; \n    } else {\n        flow.set('lastStableHomeMode', rawHomeMode);\n        flow.set('lastStableHomeModeTime', now);\n    }\n} else if (!lastStableModeTs) {\n    flow.set('lastStableHomeMode', rawHomeMode);\n    flow.set('lastStableHomeModeTime', now);\n}\n\nctx.homeMode = rawHomeMode;\nctx.isWFH = !ctx.isSummer && ctx.homeMode === 'home' && !isWeekend && hour >= 8 && hour < 15;\nctx.isNightHours = (ctx.timeMode === 'night' || ctx.timeMode === 'pre-bedtime' || ctx.homeMode === 'sleep' || ctx.isNightTime);\n\nmsg.ctx = ctx;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 1000,
+        "x": 560,
+        "y": 680,
+        "wires": [
+            [
+                "93d07b59b2e19eed"
+            ]
+        ]
+    },
+    {
+        "id": "93d07b59b2e19eed",
+        "type": "function",
+        "z": "189409faf8842877",
+        "g": "d97117a1dc66902a",
+        "name": "Core Rules Engine",
+        "func": "// 1. CONTEXT & SAFETY\nlet ctx = msg.ctx;\nconst num = (k, d) => { const v = Number(flow.get(k)); return isFinite(v) ? v : d; };\n\n// Apply predictive weather boost (if not night)\nif (!ctx.isSummer && !ctx.isNightHours) {\n    const lowestForecast = Math.min(ctx.outside, ctx.out1h, ctx.out6h);\n    if (lowestForecast < 20) ctx.desired += 0.5;\n    if (lowestForecast < 12) ctx.desired += 0.5;\n}\n\n// Check Blocked Status (Safety First)\nconst isBlocked = ['visitor','guest','manual'].includes(ctx.homeMode) || ctx.manualMode || ctx.visitorMode;\nif (isBlocked) {\n    flow.set('controlReason', 'BLOCKED: ' + (ctx.visitorMode ? 'visitor' : 'manual'));\n    flow.set('heatpumpAction', 'paused');\n    node.status({ fill:'yellow', shape:'ring', text:'BLOCKED' });\n    return null; \n}\n\n// 2. CORE LOGIC\nlet action = 'off', setpoint = ctx.desired, fan = 'low', swing = 'fixedBottom', reason = '';\nconst dogMax = ctx.dogMaxTemp;\n\n// Helper: Hysteresis\nconst needsHeat = (t, tgt) => ctx.lastAction === 'heat' ? (t < tgt + 0.3) : (t < tgt - 0.5);\nconst needsCool = (t, tgt) => ctx.lastAction === 'cool' ? (t > tgt - 0.3) : (t > tgt + 0.5);\n\n// LOGIC TREE\nif (ctx.manualOR && ctx.manualOR !== 'auto') {\n    action = ctx.manualOR === 'on' ? (ctx.isSummer ? 'cool' : 'heat') : ctx.manualOR;\n    reason = 'Manual OVR: ' + action;\n} else if (ctx.upstairs > 30 || ctx.downstairs > 30) {\n    action = 'cool'; setpoint = 22; fan = 'high'; reason = 'SAFETY HIGH';\n} else if (ctx.isNightHours) {\n    // NIGHT MODE\n    if (needsCool(ctx.downstairs, ctx.bedtime)) {\n        action = 'cool'; setpoint = ctx.bedtime - 1; fan = ctx.tvActive ? 'low' : 'medium'; reason = 'Night Cooling';\n    } else if (!ctx.tvActive && needsHeat(ctx.downstairs, ctx.bedtime)) {\n        action = 'heat'; setpoint = ctx.bedtime + 2; fan = 'low'; reason = 'Night Heating';\n    } else {\n        action = 'off'; reason = 'Night Mode Idle';\n    }\n} else if (ctx.isSummer) {\n    // SUMMER MODE\n    if (ctx.upstairs >= dogMax) { \n        action = 'cool'; setpoint = 20; fan = 'high'; swing = 'fixedTop'; reason = 'DOG SAFETY'; \n    } else if (needsCool(ctx.upstairs, ctx.desired)) { \n        action = 'cool'; setpoint = 20; fan = 'medium'; swing = 'fixedTop'; reason = 'Summer Cooling'; \n    } else { \n        action = 'off'; reason = 'Temp OK (Summer)'; // <--- FIXED\n    }\n} else {\n    // WINTER / WFH MODE\n    if (ctx.upstairs >= dogMax) { \n        action = 'cool'; setpoint = 20; fan = 'high'; swing = 'fixedTop'; reason = 'DOG SAFETY'; \n    } else if (needsHeat(ctx.downstairs, ctx.desired)) { \n        action = 'heat'; setpoint = ctx.desired + 3; fan = 'medium'; reason = 'Winter Heating'; \n    } else { \n        action = 'off'; reason = 'Temp OK (Winter)'; \n    }\n}\n\n// 3. PERSISTENCE & OUTPUT\nif (action !== ctx.lastAction) { flow.set('lastHPAction', action); flow.set('lastHPActionTime', ctx.now); }\nflow.set('heatpumpAction', action);\nflow.set('fanlevel', fan);\nflow.set('swing', swing);\nflow.set('controlReason', reason);\n\nmsg.on = action !== 'off';\nmsg.mode = action === 'off' ? 'heat' : action;\nmsg.targetTemperature = Math.round(setpoint);\nmsg.fanlevel = fan;\nmsg.swing = swing;\nmsg.cmdHash = msg.on ? ('ON-' + msg.mode + '-' + setpoint + '-' + fan + '-' + swing) : 'OFF';\n\nnode.status({ fill: action==='heat'?'red':(action==='cool'?'blue':'grey'), text: reason });\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 720,
         "wires": [
             [
                 "3f85282b23944147",
-                "30b2f8bea26a2297",
-                "291aa7bea3cc6663"
+                "291aa7bea3cc6663",
+                "187fbdccd7e3333d"
             ]
         ]
     },
     {
-        "id": "3f85282b23944147",
-        "type": "rbe",
+        "id": "9380619e855a7649",
+        "type": "inject",
         "z": "189409faf8842877",
-        "g": "fb4d535274ae6266",
-        "name": "Only on change",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "cmdHash",
-        "topi": "topic",
-        "x": 1460,
-        "y": 620,
-        "wires": [
-            [
-                "efeebb86ae576e31"
-            ]
-        ]
-    },
-    {
-        "id": "00fb06d15a8d5259",
-        "type": "sensibo send",
-        "z": "189409faf8842877",
-        "g": "fb4d535274ae6266",
-        "sensiboAPI": "8500b44945f22748",
-        "name": "Send to Sensibo",
-        "pod": "VfTc6vFm",
-        "podSelector": "",
-        "x": 1940,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "30b2f8bea26a2297",
-        "type": "switch",
-        "z": "189409faf8842877",
-        "g": "c6d89bb6766b3bd0",
-        "name": "Mill On/Off?",
-        "property": "mill.on",
-        "propertyType": "msg",
-        "rules": [
+        "g": "d97117a1dc66902a",
+        "name": "",
+        "props": [
             {
-                "t": "true"
+                "p": "payload"
             },
             {
-                "t": "false"
+                "p": "topic",
+                "vt": "str"
             }
         ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 950,
-        "y": 1120,
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 640,
         "wires": [
             [
-                "4ecf1b8fa1286f68"
-            ],
-            [
-                "a625cc6ea662956d"
+                "bec1e15f2ea813de"
             ]
         ]
     },
     {
-        "id": "4ecf1b8fa1286f68",
-        "type": "change",
+        "id": "187fbdccd7e3333d",
+        "type": "function",
         "z": "189409faf8842877",
         "g": "c6d89bb6766b3bd0",
-        "name": "Mill Set Temp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "payload.data.temperature",
-                "pt": "msg",
-                "to": "mill.temperature",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1110,
-        "y": 1100,
-        "wires": [
-            [
-                "86a0ac883b2694e9"
-            ]
-        ]
-    },
-    {
-        "id": "a625cc6ea662956d",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "c6d89bb6766b3bd0",
-        "name": "Mill OFF 18°C",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "payload.data.temperature",
-                "pt": "msg",
-                "to": "18",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1110,
-        "y": 1140,
-        "wires": [
-            [
-                "86a0ac883b2694e9"
-            ]
-        ]
-    },
-    {
-        "id": "86a0ac883b2694e9",
-        "type": "rbe",
-        "z": "189409faf8842877",
-        "g": "c6d89bb6766b3bd0",
-        "name": "Only on change",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.data.temperature",
-        "topi": "topic",
-        "x": 1280,
-        "y": 1120,
+        "name": "Format for Mill",
+        "func": "// 1. Get current settings from flow\nconst isSummer = !!flow.get('isSummer');\nconst timeMode = flow.get('timeMode');\nconst isNight = (timeMode === 'night' || timeMode === 'pre-bedtime');\n\nconst millSummer = Number(flow.get('millSummerTemp')) || 20;\nconst millWinter = Number(flow.get('millWinterTemp')) || 23;\n\n// 2. Calculate target (Night = 19, otherwise Summer/Winter setting)\nlet target = 19; \nif (!isNight) {\n    target = isSummer ? millSummer : millWinter;\n}\n\n// 3. Determine if we are \"ON\" (using the same logic as your previous Switch node)\n// Note: Ensure your input message has 'mill.on' (true/false)\nconst isOn = (msg.mill && msg.mill.on === true);\n\n// 4. Debounce (Only send if the target or state has changed)\nconst lastTarget = flow.get('lastMillTarget') || 0;\nconst lastState = flow.get('lastMillState') || false;\n\nif (target !== lastTarget || isOn !== lastState) {\n    flow.set('lastMillTarget', target);\n    flow.set('lastMillState', isOn);\n    \n    // If OFF, we set to 18 as per your requirement\n    msg.payload = {\n        data: {\n            temperature: isOn ? target : 18\n        }\n    };\n    return msg; // Pass through to Call Service\n}\n\nreturn null; // Don't send anything if nothing changed",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 1000,
         "wires": [
             [
                 "3a8c7d56155ca2ee"
@@ -22092,1485 +23244,7 @@
         ]
     },
     {
-        "id": "3a8c7d56155ca2ee",
-        "type": "api-call-service",
-        "z": "189409faf8842877",
-        "g": "c6d89bb6766b3bd0",
-        "name": "Mill Set Temp",
-        "server": "c8d8b6d992397cb8",
-        "version": 7,
-        "debugenabled": false,
-        "action": "climate.set_temperature",
-        "floorId": [],
-        "areaId": [],
-        "deviceId": [
-            "5a4e2f4e0df2023b5ff44b3687215459"
-        ],
-        "entityId": [],
-        "labelId": [],
-        "data": "{}",
-        "dataType": "json",
-        "mergeContext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "blockInputOverrides": false,
-        "domain": "climate",
-        "service": "set_temperature",
-        "x": 1460,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "291aa7bea3cc6663",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Prep UI Data",
-        "rules": [
-            {
-                "t": "set",
-                "p": "upstairs",
-                "pt": "msg",
-                "to": "upstairsTemp",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "downstairs",
-                "pt": "msg",
-                "to": "downstairsTemp",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "outside",
-                "pt": "msg",
-                "to": "outsideTemp",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "target",
-                "pt": "msg",
-                "to": "targetTemp",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "reason",
-                "pt": "msg",
-                "to": "controlReason",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1610,
-        "y": 200,
-        "wires": [
-            [
-                "7970dddc491fc5fc",
-                "7fe3530efb93c127",
-                "a63adc0bcd302284",
-                "5bd59f269f732544",
-                "105e63c0b34fd0ee",
-                "b74868338c677221",
-                "35a56eeef425c9d7",
-                "bb176951ec72f7f9"
-            ]
-        ]
-    },
-    {
-        "id": "1675533c7dac75c9",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 3,
-        "width": "6",
-        "height": "1",
-        "name": "Status",
-        "label": "",
-        "format": "{{msg.reason}}",
-        "layout": "col-center",
-        "style": false,
-        "font": "",
-        "fontSize": 14,
-        "color": "#717171",
-        "className": "",
-        "x": 1990,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "09212714c088da95",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 14,
-        "width": "2",
-        "height": "1",
-        "name": "Upstairs",
-        "label": "Upstairs",
-        "format": "{{msg.upstairs}}°C",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "",
-        "x": 2000,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "361d83874edb234e",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 15,
-        "width": "2",
-        "height": "1",
-        "name": "Downstairs",
-        "label": "Downstairs",
-        "format": "{{msg.downstairs}}°C",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "",
-        "x": 2010,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "4766e46dc959b513",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 16,
-        "width": "2",
-        "height": "1",
-        "name": "Outside",
-        "label": "Outside",
-        "format": "{{msg.outside}}°C",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "",
-        "x": 2000,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "bdfd9ad559553eb4",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 17,
-        "width": "2",
-        "height": "1",
-        "name": "Target",
-        "label": "Target",
-        "format": "{{msg.target}}°C",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "",
-        "x": 1990,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "ab85c4f6a79a70c0",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 10,
-        "width": "2",
-        "height": "1",
-        "name": "Action",
-        "label": "Action",
-        "format": "{{flow.heatpumpAction}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "className": "",
-        "x": 2010,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "3d33e3f7468bce6b",
-        "type": "ui-text-input",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "Desired Temp",
-        "label": "Desired °C",
-        "order": 7,
-        "width": "2",
-        "height": "1",
-        "topic": "desiredTemp",
-        "topicType": "str",
-        "mode": "number",
-        "delay": "500",
-        "passthru": false,
-        "sendOnDelay": true,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "x": 980,
-        "y": 140,
-        "wires": [
-            [
-                "5b4c9163fde54aac"
-            ]
-        ]
-    },
-    {
-        "id": "5b4c9163fde54aac",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Store",
-        "rules": [
-            {
-                "t": "set",
-                "p": "desiredTemp",
-                "pt": "flow",
-                "to": "$number(payload)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 970,
-        "y": 240,
-        "wires": [
-            [
-                "744c985b060fa1ee"
-            ]
-        ]
-    },
-    {
-        "id": "68819997e58ffb60",
-        "type": "ui-button",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "HEAT",
-        "label": "HEAT",
-        "order": 4,
-        "width": "1",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#ff5722",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "heat",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "buttonColor": "orange",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 1120,
-        "y": 220,
-        "wires": [
-            [
-                "5d1e3f3531e370d6"
-            ]
-        ]
-    },
-    {
-        "id": "a1b2c3d4e5f60001",
-        "type": "ui-button",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "COOL",
-        "label": "COOL",
-        "order": 8,
-        "width": "1",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#2196f3",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "cool",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "buttonColor": "blue",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 1130,
-        "y": 140,
-        "wires": [
-            [
-                "5d1e3f3531e370d6"
-            ]
-        ]
-    },
-    {
-        "id": "a1b2c3d4e5f60002",
-        "type": "ui-button",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "ON",
-        "label": "ON",
-        "order": 9,
-        "width": "1",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#ff9800",
-        "className": "",
-        "icon": "",
-        "iconPosition": "left",
-        "payload": "on",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 1120,
-        "y": 180,
-        "wires": [
-            [
-                "5d1e3f3531e370d6"
-            ]
-        ]
-    },
-    {
-        "id": "e9f35063f9b25eda",
-        "type": "ui-button",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "OFF",
-        "label": "OFF",
-        "order": 6,
-        "width": "1",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#9e9e9e",
-        "className": "",
-        "icon": "mode_off_on",
-        "iconPosition": "left",
-        "payload": "off",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "buttonColor": "red",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 1120,
-        "y": 260,
-        "wires": [
-            [
-                "5d1e3f3531e370d6"
-            ]
-        ]
-    },
-    {
-        "id": "b3803e98ef8de25f",
-        "type": "ui-button",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "AUTO",
-        "label": "AUTO",
-        "order": 5,
-        "width": "2",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "#4caf50",
-        "className": "",
-        "icon": "hdr_auto",
-        "iconPosition": "left",
-        "payload": "auto",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "buttonColor": "yellow",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 1120,
-        "y": 300,
-        "wires": [
-            [
-                "f2d1557167d15045"
-            ]
-        ]
-    },
-    {
-        "id": "5d1e3f3531e370d6",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Set Manual Mode",
-        "rules": [
-            {
-                "t": "set",
-                "p": "manualOverride",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1450,
-        "y": 240,
-        "wires": [
-            [
-                "5bfc7f7061fecc0e",
-                "27045e7a26327303"
-            ]
-        ]
-    },
-    {
-        "id": "f2d1557167d15045",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Clear Manual",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "manualOverride",
-                "pt": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1430,
-        "y": 280,
-        "wires": [
-            [
-                "291aa7bea3cc6663",
-                "5bfc7f7061fecc0e",
-                "27045e7a26327303"
-            ]
-        ]
-    },
-    {
-        "id": "swing_btn_up_001",
-        "type": "ui-button",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "SWING UP",
-        "label": "↑ UP",
-        "order": 13,
-        "width": "1",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "Vanes UP - focus upstairs",
-        "color": "",
-        "bgcolor": "#9c27b0",
-        "className": "",
-        "icon": "arrow_circle_up",
-        "iconPosition": "left",
-        "payload": "fixedTop",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 1120,
-        "y": 340,
-        "wires": [
-            [
-                "swing_set_001"
-            ]
-        ]
-    },
-    {
-        "id": "swing_btn_down_001",
-        "type": "ui-button",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "SWING DOWN",
-        "label": "↓ DOWN",
-        "order": 19,
-        "width": "1",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "Vanes DOWN - focus downstairs",
-        "color": "",
-        "bgcolor": "#673ab7",
-        "className": "",
-        "icon": "arrow_circle_down",
-        "iconPosition": "left",
-        "payload": "fixedBottom",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 1120,
-        "y": 380,
-        "wires": [
-            [
-                "swing_set_001"
-            ]
-        ]
-    },
-    {
-        "id": "swing_btn_auto_001",
-        "type": "ui-button",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "SWING AUTO",
-        "label": "SWING AUTO",
-        "order": 18,
-        "width": "2",
-        "height": "1",
-        "emulateClick": false,
-        "tooltip": "Auto swing based on temperature",
-        "color": "",
-        "bgcolor": "#607d8b",
-        "className": "",
-        "icon": "swap_calls",
-        "iconPosition": "left",
-        "payload": "auto",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "buttonColor": "",
-        "textColor": "",
-        "iconColor": "",
-        "enableClick": true,
-        "enablePointerdown": false,
-        "pointerdownPayload": "",
-        "pointerdownPayloadType": "str",
-        "enablePointerup": false,
-        "pointerupPayload": "",
-        "pointerupPayloadType": "str",
-        "x": 1120,
-        "y": 420,
-        "wires": [
-            [
-                "swing_clear_001"
-            ]
-        ]
-    },
-    {
-        "id": "swing_set_001",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Set Swing Override",
-        "rules": [
-            {
-                "t": "set",
-                "p": "swingOverride",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1450,
-        "y": 320,
-        "wires": [
-            [
-                "291aa7bea3cc6663",
-                "27045e7a26327303"
-            ]
-        ]
-    },
-    {
-        "id": "swing_clear_001",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Clear Swing Override",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "swingOverride",
-                "pt": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1460,
-        "y": 360,
-        "wires": [
-            [
-                "291aa7bea3cc6663",
-                "27045e7a26327303"
-            ]
-        ]
-    },
-    {
-        "id": "54a8a5e0102d437e",
-        "type": "switch",
-        "z": "189409faf8842877",
-        "g": "03c4eca16c6608a9",
-        "name": "isStandBy changed?",
-        "property": "isStandBy",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 300,
-        "y": 860,
-        "wires": [
-            [
-                "0e22b9349e2d4f47"
-            ]
-        ]
-    },
-    {
-        "id": "20f91b09a7274086",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "373af117a783f7e4",
-        "name": "Check Status",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 250,
-        "y": 1160,
-        "wires": [
-            [
-                "99e6f1051b2095be"
-            ]
-        ]
-    },
-    {
-        "id": "99e6f1051b2095be",
-        "type": "function",
-        "z": "189409faf8842877",
-        "g": "373af117a783f7e4",
-        "name": "Show All State",
-        "func": "msg.payload = {\n    temps: {\n        upstairs: flow.get('upstairsTemp'),\n        downstairs: flow.get('downstairsTemp'),\n        outside: flow.get('outsideTemp'),\n        desired: flow.get('desiredTemp'),\n        target: flow.get('targetTemp')\n    },\n    state: {\n        isSummer: flow.get('isSummer'),\n        timeMode: flow.get('timeMode'),\n        homeMode: global.get('Mode'),\n        isStandBy: global.get('isStandBy'),\n        heatpumpAction: flow.get('heatpumpAction'),\n        reason: flow.get('controlReason'),\n        fanlevel: flow.get('fanlevel'),\n        swing: flow.get('swing')\n\n    }\n};\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 410,
-        "y": 1160,
-        "wires": [
-            [
-                "498360f6e046e829"
-            ]
-        ]
-    },
-    {
-        "id": "997c7708e93ccdec",
-        "type": "link in",
-        "z": "189409faf8842877",
-        "g": "03c4eca16c6608a9",
-        "name": "link in 2",
-        "links": [
-            "5e8d3398.55375c"
-        ],
-        "x": 145,
-        "y": 860,
-        "wires": [
-            [
-                "54a8a5e0102d437e"
-            ]
-        ]
-    },
-    {
-        "id": "a63adc0bcd302284",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Prep UI Data",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "upstairsTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1810,
-        "y": 100,
-        "wires": [
-            [
-                "09212714c088da95"
-            ]
-        ]
-    },
-    {
-        "id": "5bd59f269f732544",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "downstairsTemp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "downstairsTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1820,
-        "y": 140,
-        "wires": [
-            [
-                "361d83874edb234e"
-            ]
-        ]
-    },
-    {
-        "id": "7970dddc491fc5fc",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "controlReason",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "controlReason",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1820,
-        "y": 60,
-        "wires": [
-            [
-                "1675533c7dac75c9"
-            ]
-        ]
-    },
-    {
-        "id": "105e63c0b34fd0ee",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "outsideTemp",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "outsideTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1810,
-        "y": 180,
-        "wires": [
-            [
-                "4766e46dc959b513"
-            ]
-        ]
-    },
-    {
-        "id": "b74868338c677221",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "target",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "targetTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1790,
-        "y": 220,
-        "wires": [
-            [
-                "bdfd9ad559553eb4"
-            ]
-        ]
-    },
-    {
-        "id": "35a56eeef425c9d7",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "heatpumpAction",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "heatpumpAction",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1820,
-        "y": 260,
-        "wires": [
-            [
-                "ab85c4f6a79a70c0"
-            ]
-        ]
-    },
-    {
-        "id": "498360f6e046e829",
-        "type": "debug",
-        "z": "189409faf8842877",
-        "g": "373af117a783f7e4",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 1160,
-        "wires": []
-    },
-    {
-        "id": "26174b0d06301935",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 11,
-        "width": "2",
-        "height": "1",
-        "name": "FanLevel",
-        "label": "FanLevel",
-        "format": "{{flow.fanlevel}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 2020,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "bb176951ec72f7f9",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "fanlevel",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "fanlevel",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1800,
-        "y": 300,
-        "wires": [
-            [
-                "26174b0d06301935"
-            ]
-        ]
-    },
-    {
-        "id": "efeebb86ae576e31",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "fb4d535274ae6266",
-        "name": "Clean for Sensibo",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "cmdHash",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "heatpump",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "mill",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "status",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "topic",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "_event",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "_msgid",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "result",
-                "pt": "msg"
-            }
-        ],
-        "x": 1710,
-        "y": 620,
-        "wires": [
-            [
-                "00fb06d15a8d5259"
-            ]
-        ]
-    },
-    {
-        "id": "6515993b9c68afb1",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "desiredTemp",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 800,
-        "y": 140,
-        "wires": [
-            [
-                "3d33e3f7468bce6b"
-            ]
-        ]
-    },
-    {
-        "id": "5bfc7f7061fecc0e",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "fb4d535274ae6266",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1460,
-        "y": 560,
-        "wires": [
-            [
-                "3f85282b23944147",
-                "73c674f990fa0904"
-            ]
-        ]
-    },
-    {
-        "id": "6d0c2b6b4cb3ff5a",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 12,
-        "width": "2",
-        "height": "1",
-        "name": "Swing",
-        "label": "Swing",
-        "format": "{{flow.swing}}",
-        "layout": "row-left",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 2010,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "7fe3530efb93c127",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "fanlevel",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "swing",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1800,
-        "y": 340,
-        "wires": [
-            [
-                "6d0c2b6b4cb3ff5a"
-            ]
-        ]
-    },
-    {
-        "id": "66c3edfbc823bbf1",
-        "type": "ui-event",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "ui": "7f0c45a9432dc256",
-        "name": "",
-        "x": 1410,
-        "y": 140,
-        "wires": [
-            [
-                "291aa7bea3cc6663"
-            ]
-        ]
-    },
-    {
-        "id": "a706f7e6fbe95bdd",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "a6d83dbb51a7a7fc",
-        "name": "Pre-bedtime FRI/SAT/SUN 20:30",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "30 20 * * 5,6,0",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "pre-bedtime",
-        "payloadType": "str",
-        "x": 240,
-        "y": 680,
-        "wires": [
-            [
-                "c798937a8103a538"
-            ]
-        ]
-    },
-    {
-        "id": "30c6f6bd94814054",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "name": "Every 30 min",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "120",
-        "topic": "",
-        "payload": "refresh",
-        "payloadType": "str",
-        "x": 930,
-        "y": 820,
-        "wires": [
-            [
-                "0cfd6d9c8cdd4123"
-            ]
-        ]
-    },
-    {
-        "id": "0cfd6d9c8cdd4123",
-        "type": "function",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "name": "Swing Toggle",
-        "func": "// Sensibo swing refresh: toggle to a different swing first,\n// then the correct value will be sent after a delay.\n// This fixes the bug where Sensibo reports fixedBottom\n// but the physical unit is actually stuck on fixedTop.\n\nconst heatpumpAction = flow.get('heatpumpAction') || 'off';\nconst desiredSwing = flow.get('swing') || 'fixedBottom';\n\n// Skip if HP is off\nif (heatpumpAction === 'off') {\n    node.status({fill:'grey',shape:'ring',text:'HP off, skip'});\n    return null;\n}\n\n// Pick a different swing value to toggle to\nconst toggleSwing = (desiredSwing === 'fixedBottom') ? 'fixedTop' : 'fixedBottom';\n\nnode.status({fill:'yellow',shape:'dot',text:'Toggle → ' + toggleSwing + ' → ' + desiredSwing});\n\n// Output 1: immediate toggle to different swing\n// Output 2: delayed correction to correct swing\nconst msg1 = { swing: toggleSwing };\nconst msg2 = { swing: desiredSwing };\nreturn [msg1, msg2];",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1140,
-        "y": 820,
-        "wires": [
-            [
-                "b504a432f19b430f"
-            ],
-            [
-                "a28a7033e7c4a91d"
-            ]
-        ]
-    },
-    {
-        "id": "a28a7033e7c4a91d",
-        "type": "delay",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "name": "Wait 5s",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1330,
-        "y": 860,
-        "wires": [
-            [
-                "1676d14dcda015b6"
-            ]
-        ]
-    },
-    {
-        "id": "1676d14dcda015b6",
-        "type": "function",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "name": "Log Swing Refresh",
-        "func": "const swing = msg.swing;\nnode.status({fill:'green',shape:'dot',text:'Set → ' + swing + ' @ ' + new Date().toLocaleTimeString()});\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1500,
-        "y": 860,
-        "wires": [
-            [
-                "b504a432f19b430f"
-            ]
-        ]
-    },
-    {
-        "id": "b504a432f19b430f",
-        "type": "sensibo send",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "sensiboAPI": "8500b44945f22748",
-        "name": "Swing Refresh",
-        "pod": "VfTc6vFm",
-        "podSelector": "",
-        "x": 1650,
-        "y": 820,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "mill_input_001",
-        "type": "ui-text-input",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "name": "Mill Setpoint",
-        "label": "Mill °C (active season)",
-        "order": 20,
-        "width": "2",
-        "height": "1",
-        "topic": "millSetpoint",
-        "topicType": "msg",
-        "mode": "number",
-        "tooltip": "",
-        "delay": 300,
-        "passthru": false,
-        "sendOnDelay": true,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "x": 730,
-        "y": 340,
-        "wires": [
-            [
-                "mill_store_001"
-            ]
-        ]
-    },
-    {
-        "id": "mill_store_001",
-        "type": "function",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "name": "Store Mill °C",
-        "func": "const v = Number(msg.payload);\r\nif (!isFinite(v)) return null;\r\nconst key = flow.get('isSummer') ? 'millSummerTemp' : 'millWinterTemp';\r\nflow.set(key, v);\r\nnode.status({fill:'green',shape:'dot',text: key + '=' + v});\r\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 890,
-        "y": 340,
-        "wires": [
-            [
-                "744c985b060fa1ee"
-            ]
-        ]
-    },
-    {
-        "id": "mill_disp_001",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 2,
-        "width": "4",
-        "height": "1",
-        "name": "Mill Targets",
-        "label": "Mill targets",
-        "format": "Winter {{flow.millWinterTemp}}°C · Summer {{flow.millSummerTemp}}°C",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 14,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "x": 2010,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "season_disp_001",
-        "type": "ui-text",
-        "z": "189409faf8842877",
-        "g": "15b9c68154d48bdf",
-        "group": "f9c985920afe1003",
-        "order": 1,
-        "width": "2",
-        "height": "1",
-        "name": "Season",
-        "label": "Season",
-        "format": "{{flow.seasonLabel}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#717171",
-        "wrapText": false,
-        "className": "",
-        "x": 2020,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "65cece8810c42c21",
-        "type": "file in",
-        "z": "189409faf8842877",
-        "name": "",
-        "filename": "D:\\02-Honeypot\\miles\\Smarthome\\temperature_log.csv",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1220,
-        "y": 980,
-        "wires": [
-            [
-                "cc3af6e664f36d6b"
-            ]
-        ]
-    },
-    {
-        "id": "1308a1fc98457819",
+        "id": "0331eb66422cd055",
         "type": "inject",
         "z": "189409faf8842877",
         "name": "",
@@ -23590,59 +23264,94 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 920,
-        "y": 980,
+        "x": 900,
+        "y": 1000,
         "wires": [
             [
-                "65cece8810c42c21"
+                "187fbdccd7e3333d"
             ]
         ]
     },
     {
-        "id": "cc3af6e664f36d6b",
-        "type": "debug",
-        "z": "189409faf8842877",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1530,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "27045e7a26327303",
-        "type": "link out",
+        "id": "d1364b187eebfdb0",
+        "type": "change",
         "z": "189409faf8842877",
         "g": "15b9c68154d48bdf",
-        "name": "link out 14",
-        "mode": "link",
-        "links": [
-            "3d88ac222d635b1e"
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "millSummerTemp",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
         ],
-        "x": 1705,
-        "y": 420,
-        "wires": []
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 180,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "3d88ac222d635b1e",
-        "type": "link in",
+        "id": "bc01c1ee412d258d",
+        "type": "switch",
         "z": "189409faf8842877",
-        "g": "d97117a1dc66902a",
-        "name": "link in 6",
-        "links": [
-            "27045e7a26327303"
+        "g": "15b9c68154d48bdf",
+        "name": "",
+        "property": "isSummer",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
         ],
-        "x": 415,
-        "y": 980,
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1010,
+        "y": 360,
         "wires": [
             [
-                "b58e88e0612d7576"
+                "d1364b187eebfdb0"
+            ],
+            [
+                "6e3a8416aea99792"
             ]
+        ]
+    },
+    {
+        "id": "6e3a8416aea99792",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "15b9c68154d48bdf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "millWinterTemp",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1310,
+        "y": 240,
+        "wires": [
+            []
         ]
     },
     {
@@ -24923,7 +24632,6 @@
         "y": 900,
         "wires": [
             [
-                "a7b8d4e5f6c90123",
                 "aa11bb22cc33dd04"
             ]
         ]
@@ -25058,23 +24766,6 @@
         ],
         "x": 1105,
         "y": 1440,
-        "wires": []
-    },
-    {
-        "id": "a7b8d4e5f6c90123",
-        "type": "debug",
-        "z": "6a77c00f79a19693",
-        "name": "Presence State",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1820,
-        "y": 900,
         "wires": []
     },
     {
@@ -25275,7 +24966,6 @@
         "wires": [
             [
                 "aa11bb22cc33dd05",
-                "f1a1b4d6c75bea5f",
                 "ab5068bd204634c6"
             ]
         ]
@@ -25366,22 +25056,6 @@
         ]
     },
     {
-        "id": "f1a1b4d6c75bea5f",
-        "type": "debug",
-        "z": "6a77c00f79a19693",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2170,
-        "y": 740,
-        "wires": []
-    },
-    {
         "id": "e714cfd19827da7b",
         "type": "function",
         "z": "6a77c00f79a19693",
@@ -25397,8 +25071,7 @@
         "y": 640,
         "wires": [
             [
-                "aa11bb22cc33dd04",
-                "70d18da2a7255d7d"
+                "aa11bb22cc33dd04"
             ]
         ]
     },
@@ -25430,23 +25103,6 @@
                 "e714cfd19827da7b"
             ]
         ]
-    },
-    {
-        "id": "70d18da2a7255d7d",
-        "type": "debug",
-        "z": "6a77c00f79a19693",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2250,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "c645385040f4dcf6",
