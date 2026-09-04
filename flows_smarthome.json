@@ -1572,15 +1572,12 @@
             "label": true
         },
         "nodes": [
-            "00fb06d15a8d5259",
-            "3f85282b23944147",
-            "efeebb86ae576e31",
-            "5bfc7f7061fecc0e"
+            "00fb06d15a8d5259"
         ],
-        "x": 1354,
-        "y": 579,
-        "w": 692,
-        "h": 162
+        "x": 854,
+        "y": 659,
+        "w": 212,
+        "h": 82
     },
     {
         "id": "c6d89bb6766b3bd0",
@@ -1595,8 +1592,8 @@
             "3a8c7d56155ca2ee",
             "187fbdccd7e3333d"
         ],
-        "x": 1054,
-        "y": 959,
+        "x": 794,
+        "y": 779,
         "w": 492,
         "h": 82
     },
@@ -1668,8 +1665,8 @@
             "997c7708e93ccdec",
             "0e22b9349e2d4f47"
         ],
-        "x": 44,
-        "y": 779,
+        "x": 104,
+        "y": 899,
         "w": 482,
         "h": 82
     },
@@ -1690,31 +1687,10 @@
             "1308a1fc98457819",
             "cc3af6e664f36d6b"
         ],
-        "x": 1594,
-        "y": 899,
+        "x": 1334,
+        "y": 699,
         "w": 822,
         "h": 162
-    },
-    {
-        "id": "a43790b1a5c19601",
-        "type": "group",
-        "z": "189409faf8842877",
-        "name": "🔄 Sensibo Swing Refresh",
-        "style": {
-            "fill": "#e0f7fa",
-            "label": true
-        },
-        "nodes": [
-            "30c6f6bd94814054",
-            "0cfd6d9c8cdd4123",
-            "a28a7033e7c4a91d",
-            "1676d14dcda015b6",
-            "b504a432f19b430f"
-        ],
-        "x": 1354,
-        "y": 759,
-        "w": 942,
-        "h": 122
     },
     {
         "id": "f36c921c7f424de5",
@@ -1816,12 +1792,16 @@
             "3d88ac222d635b1e",
             "bec1e15f2ea813de",
             "93d07b59b2e19eed",
-            "9380619e855a7649"
+            "9380619e855a7649",
+            "dd4a7af8e91d6a9a",
+            "b6e4433644ede280",
+            "89f856a17eb2e8f5",
+            "d342de2a9feab6c2"
         ],
         "x": 44,
-        "y": 599,
-        "w": 652,
-        "h": 162
+        "y": 579,
+        "w": 862,
+        "h": 282
     },
     {
         "id": "aaf5b9532af1fbac",
@@ -2029,8 +2009,7 @@
     },
     {
         "id": "8500b44945f22748",
-        "type": "sensibo-config",
-        "senAPI": "55wTDKNXVkZ5jNpgWv8cafwRNGZR2R"
+        "type": "sensibo-config"
     },
     {
         "id": "12895ae7.9c6bf5",
@@ -17414,7 +17393,7 @@
                 "t": "set",
                 "p": "date",
                 "pt": "msg",
-                "to": " \t\t   \t\t$trim($substringBefore(payload,'-'))& '.'&$moment().format('YYYY')\t\t \t",
+                "to": "$trim($substringBefore(payload, '-')) & '.' & $now('[Y0001]')",
                 "tot": "jsonata"
             }
         ],
@@ -17587,7 +17566,7 @@
                 "t": "set",
                 "p": "today",
                 "pt": "flow",
-                "to": "$moment().format('DD/MM/YYYY')\t",
+                "to": "$millis() ~> $fromMillis('[D01]/[M01]/[Y0001]')",
                 "tot": "jsonata"
             }
         ],
@@ -18214,7 +18193,6 @@
         "id": "f676af51cded15ca",
         "type": "link out",
         "z": "19a61e2a.75f152",
-        "d": true,
         "name": "link out 19",
         "mode": "link",
         "links": [
@@ -18471,66 +18449,12 @@
         ]
     },
     {
-        "id": "e6dcf8fd0b8b34d2",
-        "type": "change",
-        "z": "19a61e2a.75f152",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "today",
-                "pt": "flow",
-                "to": "$moment().subtract(1, 'days').format('DD/MM/YYYY')",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1500,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6eb6d90404b15c0e",
-        "type": "inject",
-        "z": "19a61e2a.75f152",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1360,
-        "y": 120,
-        "wires": [
-            [
-                "e6dcf8fd0b8b34d2"
-            ]
-        ]
-    },
-    {
         "id": "0b24c14be8e94b86",
         "type": "bigtimer",
         "z": "19a61e2a.75f152",
         "outtopic": "",
-        "outpayload1": "",
-        "outpayload2": "",
+        "outpayload1": "ON",
+        "outpayload2": "OFF",
         "name": "Big Timer",
         "comment": "",
         "lat": 0,
@@ -18544,8 +18468,8 @@
         "startoff2": 0,
         "endoff2": 0,
         "offs": 0,
-        "outtext1": "",
-        "outtext2": "",
+        "outtext1": "ON",
+        "outtext2": "OFF",
         "timeout": 1440,
         "sun": true,
         "mon": true,
@@ -18649,13 +18573,42 @@
         "odd": false,
         "even": false,
         "x": 320,
-        "y": 760,
+        "y": 780,
         "wires": [
             [
                 "1a2a1f5a64482b86"
             ],
             [],
             []
+        ]
+    },
+    {
+        "id": "1b48641af2331ecc",
+        "type": "inject",
+        "z": "19a61e2a.75f152",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "sync",
+        "payloadType": "str",
+        "x": 90,
+        "y": 620,
+        "wires": [
+            [
+                "0b24c14be8e94b86"
+            ]
         ]
     },
     {
@@ -21409,8 +21362,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 430,
-        "y": 820,
+        "x": 490,
+        "y": 940,
         "wires": [
             []
         ]
@@ -21430,27 +21383,6 @@
         "wires": []
     },
     {
-        "id": "3f85282b23944147",
-        "type": "rbe",
-        "z": "189409faf8842877",
-        "g": "fb4d535274ae6266",
-        "name": "Only on change",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "cmdHash",
-        "topi": "topic",
-        "x": 1480,
-        "y": 700,
-        "wires": [
-            [
-                "efeebb86ae576e31"
-            ]
-        ]
-    },
-    {
         "id": "00fb06d15a8d5259",
         "type": "sensibo send",
         "z": "189409faf8842877",
@@ -21459,8 +21391,8 @@
         "name": "Send to Sensibo",
         "pod": "VfTc6vFm",
         "podSelector": "",
-        "x": 1940,
-        "y": 680,
+        "x": 960,
+        "y": 700,
         "wires": [
             []
         ]
@@ -21491,8 +21423,8 @@
         "blockInputOverrides": false,
         "domain": "climate",
         "service": "set_temperature",
-        "x": 1440,
-        "y": 1000,
+        "x": 1180,
+        "y": 820,
         "wires": [
             []
         ]
@@ -21972,8 +21904,8 @@
         "y": 300,
         "wires": [
             [
-                "5bfc7f7061fecc0e",
-                "27045e7a26327303"
+                "27045e7a26327303",
+                "73c674f990fa0904"
             ]
         ]
     },
@@ -22000,8 +21932,8 @@
         "wires": [
             [
                 "291aa7bea3cc6663",
-                "5bfc7f7061fecc0e",
-                "27045e7a26327303"
+                "27045e7a26327303",
+                "73c674f990fa0904"
             ]
         ]
     },
@@ -22197,8 +22129,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 1,
-        "x": 240,
-        "y": 820,
+        "x": 300,
+        "y": 940,
         "wires": [
             [
                 "0e22b9349e2d4f47"
@@ -22217,8 +22149,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1710,
-        "y": 940,
+        "x": 1450,
+        "y": 740,
         "wires": [
             [
                 "99e6f1051b2095be"
@@ -22238,8 +22170,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1870,
-        "y": 940,
+        "x": 1610,
+        "y": 740,
         "wires": [
             [
                 "498360f6e046e829"
@@ -22255,8 +22187,8 @@
         "links": [
             "5e8d3398.55375c"
         ],
-        "x": 85,
-        "y": 820,
+        "x": 145,
+        "y": 940,
         "wires": [
             [
                 "54a8a5e0102d437e"
@@ -22445,8 +22377,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2070,
-        "y": 940,
+        "x": 1810,
+        "y": 740,
         "wires": []
     },
     {
@@ -22503,77 +22435,6 @@
         ]
     },
     {
-        "id": "efeebb86ae576e31",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "fb4d535274ae6266",
-        "name": "Clean for Sensibo",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "cmdHash",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "heatpump",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "mill",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "status",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "topic",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "_event",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "_msgid",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "result",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "_msgid",
-                "pt": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "_client",
-                "pt": "msg"
-            }
-        ],
-        "x": 1710,
-        "y": 700,
-        "wires": [
-            [
-                "00fb06d15a8d5259"
-            ]
-        ]
-    },
-    {
         "id": "6515993b9c68afb1",
         "type": "change",
         "z": "189409faf8842877",
@@ -22598,35 +22459,6 @@
         "wires": [
             [
                 "3d33e3f7468bce6b"
-            ]
-        ]
-    },
-    {
-        "id": "5bfc7f7061fecc0e",
-        "type": "change",
-        "z": "189409faf8842877",
-        "g": "fb4d535274ae6266",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1460,
-        "y": 620,
-        "wires": [
-            [
-                "3f85282b23944147",
-                "73c674f990fa0904"
             ]
         ]
     },
@@ -22696,118 +22528,6 @@
             [
                 "291aa7bea3cc6663"
             ]
-        ]
-    },
-    {
-        "id": "30c6f6bd94814054",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "name": "Every 30 min",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "120",
-        "topic": "",
-        "payload": "refresh",
-        "payloadType": "str",
-        "x": 1470,
-        "y": 800,
-        "wires": [
-            [
-                "0cfd6d9c8cdd4123"
-            ]
-        ]
-    },
-    {
-        "id": "0cfd6d9c8cdd4123",
-        "type": "function",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "name": "Swing Toggle",
-        "func": "// Sensibo swing refresh: toggle to a different swing first,\n// then the correct value will be sent after a delay.\n// This fixes the bug where Sensibo reports fixedBottom\n// but the physical unit is actually stuck on fixedTop.\n\nconst heatpumpAction = flow.get('heatpumpAction') || 'off';\nconst desiredSwing = flow.get('swing') || 'fixedBottom';\n\n// Skip if HP is off\nif (heatpumpAction === 'off') {\n    node.status({fill:'grey',shape:'ring',text:'HP off, skip'});\n    return null;\n}\n\n// Pick a different swing value to toggle to\nconst toggleSwing = (desiredSwing === 'fixedBottom') ? 'fixedTop' : 'fixedBottom';\n\nnode.status({fill:'yellow',shape:'dot',text:'Toggle → ' + toggleSwing + ' → ' + desiredSwing});\n\n// Output 1: immediate toggle to different swing\n// Output 2: delayed correction to correct swing\nconst msg1 = { swing: toggleSwing };\nconst msg2 = { swing: desiredSwing };\nreturn [msg1, msg2];",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1680,
-        "y": 800,
-        "wires": [
-            [
-                "b504a432f19b430f"
-            ],
-            [
-                "a28a7033e7c4a91d"
-            ]
-        ]
-    },
-    {
-        "id": "a28a7033e7c4a91d",
-        "type": "delay",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "name": "Wait 5s",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1870,
-        "y": 840,
-        "wires": [
-            [
-                "1676d14dcda015b6"
-            ]
-        ]
-    },
-    {
-        "id": "1676d14dcda015b6",
-        "type": "function",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "name": "Log Swing Refresh",
-        "func": "const swing = msg.swing;\nnode.status({fill:'green',shape:'dot',text:'Set → ' + swing + ' @ ' + new Date().toLocaleTimeString()});\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2040,
-        "y": 840,
-        "wires": [
-            [
-                "b504a432f19b430f"
-            ]
-        ]
-    },
-    {
-        "id": "b504a432f19b430f",
-        "type": "sensibo send",
-        "z": "189409faf8842877",
-        "g": "a43790b1a5c19601",
-        "sensiboAPI": "8500b44945f22748",
-        "name": "Swing Refresh",
-        "pod": "VfTc6vFm",
-        "podSelector": "",
-        "x": 2190,
-        "y": 800,
-        "wires": [
-            []
         ]
     },
     {
@@ -22903,8 +22623,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2000,
-        "y": 1020,
+        "x": 1740,
+        "y": 820,
         "wires": [
             [
                 "cc3af6e664f36d6b"
@@ -22933,8 +22653,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1700,
-        "y": 1020,
+        "x": 1440,
+        "y": 820,
         "wires": [
             [
                 "65cece8810c42c21"
@@ -22954,8 +22674,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2310,
-        "y": 1020,
+        "x": 2050,
+        "y": 820,
         "wires": []
     },
     {
@@ -23144,7 +22864,7 @@
         "y": 640,
         "wires": [
             [
-                "bec1e15f2ea813de"
+                "dd4a7af8e91d6a9a"
             ]
         ]
     },
@@ -23165,7 +22885,8 @@
         "y": 680,
         "wires": [
             [
-                "93d07b59b2e19eed"
+                "93d07b59b2e19eed",
+                "187fbdccd7e3333d"
             ]
         ]
     },
@@ -23175,20 +22896,21 @@
         "z": "189409faf8842877",
         "g": "d97117a1dc66902a",
         "name": "Core Rules Engine",
-        "func": "// 1. CONTEXT & SAFETY\nlet ctx = msg.ctx;\nconst num = (k, d) => { const v = Number(flow.get(k)); return isFinite(v) ? v : d; };\n\n// Apply predictive weather boost (if not night)\nif (!ctx.isSummer && !ctx.isNightHours) {\n    const lowestForecast = Math.min(ctx.outside, ctx.out1h, ctx.out6h);\n    if (lowestForecast < 20) ctx.desired += 0.5;\n    if (lowestForecast < 12) ctx.desired += 0.5;\n}\n\n// Check Blocked Status (Safety First)\nconst isBlocked = ['visitor','guest','manual'].includes(ctx.homeMode) || ctx.manualMode || ctx.visitorMode;\nif (isBlocked) {\n    flow.set('controlReason', 'BLOCKED: ' + (ctx.visitorMode ? 'visitor' : 'manual'));\n    flow.set('heatpumpAction', 'paused');\n    node.status({ fill:'yellow', shape:'ring', text:'BLOCKED' });\n    return null; \n}\n\n// 2. CORE LOGIC\nlet action = 'off', setpoint = ctx.desired, fan = 'low', swing = 'fixedBottom', reason = '';\nconst dogMax = ctx.dogMaxTemp;\n\n// Helper: Hysteresis\nconst needsHeat = (t, tgt) => ctx.lastAction === 'heat' ? (t < tgt + 0.3) : (t < tgt - 0.5);\nconst needsCool = (t, tgt) => ctx.lastAction === 'cool' ? (t > tgt - 0.3) : (t > tgt + 0.5);\n\n// LOGIC TREE\nif (ctx.manualOR && ctx.manualOR !== 'auto') {\n    action = ctx.manualOR === 'on' ? (ctx.isSummer ? 'cool' : 'heat') : ctx.manualOR;\n    reason = 'Manual OVR: ' + action;\n} else if (ctx.upstairs > 30 || ctx.downstairs > 30) {\n    action = 'cool'; setpoint = 22; fan = 'high'; reason = 'SAFETY HIGH';\n} else if (ctx.isNightHours) {\n    // NIGHT MODE\n    if (needsCool(ctx.downstairs, ctx.bedtime)) {\n        action = 'cool'; setpoint = ctx.bedtime - 1; fan = ctx.tvActive ? 'low' : 'medium'; reason = 'Night Cooling';\n    } else if (!ctx.tvActive && needsHeat(ctx.downstairs, ctx.bedtime)) {\n        action = 'heat'; setpoint = ctx.bedtime + 2; fan = 'low'; reason = 'Night Heating';\n    } else {\n        action = 'off'; reason = 'Night Mode Idle';\n    }\n} else if (ctx.isSummer) {\n    // SUMMER MODE\n    if (ctx.upstairs >= dogMax) { \n        action = 'cool'; setpoint = 20; fan = 'high'; swing = 'fixedTop'; reason = 'DOG SAFETY'; \n    } else if (needsCool(ctx.upstairs, ctx.desired)) { \n        action = 'cool'; setpoint = 20; fan = 'medium'; swing = 'fixedTop'; reason = 'Summer Cooling'; \n    } else { \n        action = 'off'; reason = 'Temp OK (Summer)'; // <--- FIXED\n    }\n} else {\n    // WINTER / WFH MODE\n    if (ctx.upstairs >= dogMax) { \n        action = 'cool'; setpoint = 20; fan = 'high'; swing = 'fixedTop'; reason = 'DOG SAFETY'; \n    } else if (needsHeat(ctx.downstairs, ctx.desired)) { \n        action = 'heat'; setpoint = ctx.desired + 3; fan = 'medium'; reason = 'Winter Heating'; \n    } else { \n        action = 'off'; reason = 'Temp OK (Winter)'; \n    }\n}\n\n// 3. PERSISTENCE & OUTPUT\nif (action !== ctx.lastAction) { flow.set('lastHPAction', action); flow.set('lastHPActionTime', ctx.now); }\nflow.set('heatpumpAction', action);\nflow.set('fanlevel', fan);\nflow.set('swing', swing);\nflow.set('controlReason', reason);\n\nmsg.on = action !== 'off';\nmsg.mode = action === 'off' ? 'heat' : action;\nmsg.targetTemperature = Math.round(setpoint);\nmsg.fanlevel = fan;\nmsg.swing = swing;\nmsg.cmdHash = msg.on ? ('ON-' + msg.mode + '-' + setpoint + '-' + fan + '-' + swing) : 'OFF';\n\nnode.status({ fill: action==='heat'?'red':(action==='cool'?'blue':'grey'), text: reason });\nreturn msg;",
+        "func": "// 1. CONTEXT & SAFETY\nlet ctx = msg.ctx;\nconst num = (k, d) => { const v = Number(flow.get(k)); return isFinite(v) ? v : d; };\n\n// --- PREDICTIVE WEATHER BOOST ---\nconst lowestForecast = Math.min(ctx.outside, ctx.out1h, ctx.out6h);\n\nif (!ctx.isNightHours) {\n    if (lowestForecast < 10) {\n        ctx.desired += 1.0;\n    } else if (lowestForecast < 15) {\n        ctx.desired += 0.5;\n    }\n}\n// ---------------------------------\n\nconst isBlocked = ['visitor', 'guest', 'manual'].includes(ctx.homeMode) || ctx.manualMode || ctx.visitorMode;\nif (isBlocked) {\n    flow.set('controlReason', 'BLOCKED'); flow.set('heatpumpAction', 'paused'); return null;\n}\n\n// 2. CORE LOGIC\nlet action = 'off', setpoint = ctx.desired, fan = 'low', swing = 'fixedBottom', reason = '';\nconst dogMax = ctx.dogMaxTemp;\n\nconst needsHeat = (t, tgt) => ctx.lastAction === 'heat' ? (t < tgt + 0.3) : (t < tgt - 0.5);\nconst needsCool = (t, tgt) => ctx.lastAction === 'cool' ? (t > tgt - 0.3) : (t > tgt + 0.5);\n\n// Calculate deltas for granularity\nconst upstairsDelta = ctx.upstairs - ctx.desired;\nconst downstairsDelta = ctx.downstairs - ctx.desired;\n\n// LOGIC TREE (Top Priority Emergencies)\nif (ctx.manualOR && ctx.manualOR !== 'auto') {\n    action = ctx.manualOR === 'on' ? (ctx.isSummer ? 'cool' : 'heat') : ctx.manualOR;\n    reason = 'Manual OVR: ' + action;\n} else if (ctx.upstairs > 30 || ctx.downstairs > 30) {\n    action = 'cool'; setpoint = 22; fan = 'high'; swing = 'fixedBottom'; reason = 'SAFETY HIGH';\n} else if (ctx.upstairs >= dogMax) {\n    // --- DOG SAFETY ---\n    action = 'cool'; setpoint = 20; fan = 'high'; swing = 'fixedTop'; reason = 'DOG SAFETY';\n} else if (ctx.timeMode === 'pre-bedtime') {\n    // --- PRE-BEDTIME AGGRESSIVE COOLING (20:30 to 22:00) ---\n    if (needsCool(ctx.downstairs, ctx.bedtime) || needsCool(ctx.upstairs, ctx.bedtime + 1)) {\n        action = 'cool';\n        setpoint = 16;\n        fan = ctx.tvActive ? 'medium' : 'high';\n        swing = 'fixedBottom';\n        reason = 'Pre-Bedtime Rapid Cool';\n    } else if (!ctx.tvActive && needsHeat(ctx.downstairs, ctx.bedtime)) {\n        action = 'heat'; setpoint = ctx.bedtime + 1; fan = 'low'; reason = 'Pre-Bedtime Heating';\n    } else {\n        action = 'off'; reason = 'Pre-Bedtime Idle';\n    }\n} else if (ctx.isNightHours) {\n    // --- NIGHT MODE (22:00 onwards) ---\n    if (needsCool(ctx.downstairs, ctx.bedtime)) {\n        action = 'cool'; setpoint = ctx.bedtime - 1; fan = 'low'; swing = 'fixedBottom'; reason = 'Night Cooling';\n    } else if (!ctx.tvActive && needsHeat(ctx.downstairs, ctx.bedtime)) {\n        action = 'heat'; setpoint = ctx.bedtime + 2; fan = 'low'; reason = 'Night Heating';\n    } else {\n        action = 'off'; reason = 'Night Mode Idle';\n    }\n} else if (ctx.isSummer) {\n    // --- SUMMER MODE (Granular Steps) ---\n    const isCooling = ctx.lastAction === 'cool'; // Helper for clean cut-offs\n\n    if (downstairsDelta >= 1.5) {\n        // Tier 3: Downstairs Overheat (Downstairs is 1.5+ above desired, e.g. 23.5)\n        // Absolute priority to cool the living space\n        action = 'cool'; setpoint = 18; fan = 'high'; swing = 'fixedBottom'; reason = 'Summer Cooling (Downstairs Hot)';\n    } else if (upstairsDelta >= 1.5) {\n        // Tier 2: Upstairs Moderate Heat (e.g. 23.5)\n        action = 'cool'; setpoint = 20; fan = 'medium'; swing = 'fixedTop'; reason = 'Summer Cooling (Upstairs Med)';\n    } else if (upstairsDelta >= (isCooling ? 0.5 : 1.0)) {\n        // Tier 1: Gentle baseline cooling (Driven ONLY by upstairs comfort)\n        // Turns ON when temp is 1.0 over desired (23.0). Turns OFF as soon as it drops to 0.5 over desired (22.5).\n        // Downstairs is completely ignored here.\n        action = 'cool'; setpoint = 21; fan = 'low'; swing = 'fixedTop'; reason = 'Summer Cooling (Upstairs Low)';\n    } else if (needsHeat(ctx.downstairs, ctx.desired - 0.5)) {\n        action = 'heat'; setpoint = ctx.desired + 1; fan = 'medium'; reason = 'Summer Heating (Cold Forecast)';\n    } else {\n        action = 'off'; reason = 'Temp OK (Summer)';\n    }\n} else {\n    // --- WINTER / WFH MODE ---\n    if (needsHeat(ctx.downstairs, ctx.desired)) {\n        action = 'heat'; setpoint = ctx.desired + 3; fan = 'medium'; reason = 'Winter Heating';\n    } else if (needsCool(ctx.upstairs, ctx.desired) || needsCool(ctx.downstairs, ctx.desired)) {\n        action = 'cool'; setpoint = 20; fan = 'low'; swing = 'fixedBottom'; reason = 'Winter Cooldown';\n    } else {\n        action = 'off'; reason = 'Temp OK (Winter)';\n    }\n}\n\n// --- STRICT QUIET FAN OVERRIDE ---\nconst bypassQuietFan = ['SAFETY HIGH', 'DOG SAFETY', 'Pre-Bedtime Rapid Cool', 'Summer Cooling (Downstairs Hot)'].includes(reason);\n\nif (ctx.isQuietFan && action !== 'off' && !bypassQuietFan) {\n    fan = 'low';\n    reason += ' (Quiet Fan Active)';\n}\n// ---------------------------------\n\n// 3. PERSISTENCE & PAYLOAD\nif (action !== ctx.lastAction) { flow.set('lastHPAction', action); flow.set('lastHPActionTime', ctx.now); }\nflow.set('heatpumpAction', action);\nflow.set('fanlevel', fan);\nflow.set('swing', swing);\nflow.set('controlReason', reason);\n\nmsg.on = action !== 'off';\nmsg.mode = action === 'off' ? 'heat' : action;\nmsg.targetTemperature = Math.round(setpoint);\nmsg.fanlevel = fan;\nmsg.swing = swing;\n\n// --- 4. AUTO-RESET & DEBOUNCE ---\nconst currentContextState = ctx.homeMode + (ctx.manualOR || '');\nif (flow.get('lastContextState') !== currentContextState || msg.payload === 'reset') {\n    flow.set('lastContextState', currentContextState);\n    flow.set('lastSensiboHash', '');\n}\n\nconst currentHash = msg.on ? `ON-${msg.mode}-${msg.targetTemperature}-${msg.fanlevel}-${msg.swing}` : 'OFF';\nconst lastHash = flow.get('lastSensiboHash') || '';\n\nif (currentHash !== lastHash) {\n    flow.set('lastSensiboHash', currentHash);\n    node.status({ fill: action === 'heat' ? 'red' : (action === 'cool' ? 'blue' : 'grey'), shape: 'dot', text: reason });\n    return msg;\n}\n\nnode.status({ fill: \"grey\", shape: \"ring\", text: \"Holding: \" + reason });\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 580,
-        "y": 720,
+        "x": 570,
+        "y": 740,
         "wires": [
             [
-                "3f85282b23944147",
                 "291aa7bea3cc6663",
-                "187fbdccd7e3333d"
+                "00fb06d15a8d5259",
+                "89f856a17eb2e8f5",
+                "d342de2a9feab6c2"
             ]
         ]
     },
@@ -23228,47 +22950,18 @@
         "z": "189409faf8842877",
         "g": "c6d89bb6766b3bd0",
         "name": "Format for Mill",
-        "func": "// 1. Get current settings from flow\nconst isSummer = !!flow.get('isSummer');\nconst timeMode = flow.get('timeMode');\nconst isNight = (timeMode === 'night' || timeMode === 'pre-bedtime');\n\nconst millSummer = Number(flow.get('millSummerTemp')) || 20;\nconst millWinter = Number(flow.get('millWinterTemp')) || 23;\n\n// 2. Calculate target (Night = 19, otherwise Summer/Winter setting)\nlet target = 19; \nif (!isNight) {\n    target = isSummer ? millSummer : millWinter;\n}\n\n// 3. Determine if we are \"ON\" (using the same logic as your previous Switch node)\n// Note: Ensure your input message has 'mill.on' (true/false)\nconst isOn = (msg.mill && msg.mill.on === true);\n\n// 4. Debounce (Only send if the target or state has changed)\nconst lastTarget = flow.get('lastMillTarget') || 0;\nconst lastState = flow.get('lastMillState') || false;\n\nif (target !== lastTarget || isOn !== lastState) {\n    flow.set('lastMillTarget', target);\n    flow.set('lastMillState', isOn);\n    \n    // If OFF, we set to 18 as per your requirement\n    msg.payload = {\n        data: {\n            temperature: isOn ? target : 18\n        }\n    };\n    return msg; // Pass through to Call Service\n}\n\nreturn null; // Don't send anything if nothing changed",
+        "func": "// 1. Get current settings from flow and global\nconst isSummer = !!flow.get('isSummer');\nconst timeMode = flow.get('timeMode') || 'day';\nconst homeMode = (global.get('Mode') || 'home').toLowerCase();\n\n// Get the AC state and the REASON it is running\nconst hpAction = flow.get('heatpumpAction') || 'off'; \nconst hpReason = flow.get('controlReason') || '';\n\nconst millSummer = Number(flow.get('millSummerTemp')) || 23;\nconst millWinter = Number(flow.get('millWinterTemp')) || 23;\n\n// 2. Are we sleeping? \nconst isSleepMode = (timeMode === 'night' || timeMode === 'pre-bedtime' || homeMode === 'sleep');\n\n// 3. Calculate baseline target temperature\nlet target = isSleepMode ? 18 : (isSummer ? millSummer : millWinter);\n\n// --- REFINED ANTI-FIGHTING RULE ---\n// Only drop the Mill heater to 18°C if the AC is doing an AGGRESSIVE cooldown.\n// Standard gentle summer cooling will no longer shut off the Mill heater.\nconst isAggressiveCooling = hpReason.includes('Pre-Bedtime') || hpReason.includes('DOG SAFETY') || hpReason.includes('SAFETY HIGH');\n\nif (hpAction === 'cool' && isAggressiveCooling) {\n    target = 18;\n}\n// ----------------------------------\n\n// 4. Always build payload\nmsg.payload = { \n    data: { \n        temperature: target \n    } \n};\n\n// 5. Debounce Check\nconst lastTarget = flow.get('lastMillTarget') || 0;\n\nif (target !== lastTarget) {\n    flow.set('lastMillTarget', target);\n    node.status({ fill: \"green\", shape: \"dot\", text: \"Sent new target: \" + target + \"°C\" });\n    return msg; \n}\n\n// 6. Block if unchanged\nnode.status({ fill: \"grey\", shape: \"ring\", text: \"Holding at: \" + target + \"°C\" });\nreturn null;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 1000,
+        "x": 900,
+        "y": 820,
         "wires": [
             [
                 "3a8c7d56155ca2ee"
-            ]
-        ]
-    },
-    {
-        "id": "0331eb66422cd055",
-        "type": "inject",
-        "z": "189409faf8842877",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 900,
-        "y": 1000,
-        "wires": [
-            [
-                "187fbdccd7e3333d"
             ]
         ]
     },
@@ -23352,6 +23045,104 @@
         "y": 240,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "dd4a7af8e91d6a9a",
+        "type": "change",
+        "z": "189409faf8842877",
+        "g": "d97117a1dc66902a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "reset",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 640,
+        "wires": [
+            [
+                "bec1e15f2ea813de"
+            ]
+        ]
+    },
+    {
+        "id": "b6e4433644ede280",
+        "type": "trigger",
+        "z": "189409faf8842877",
+        "g": "d97117a1dc66902a",
+        "name": "",
+        "op1": "fixedTop",
+        "op2": "fixedBottom",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 620,
+        "y": 820,
+        "wires": [
+            [
+                "00fb06d15a8d5259"
+            ]
+        ]
+    },
+    {
+        "id": "89f856a17eb2e8f5",
+        "type": "debug",
+        "z": "189409faf8842877",
+        "g": "d97117a1dc66902a",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "d342de2a9feab6c2",
+        "type": "switch",
+        "z": "189409faf8842877",
+        "g": "d97117a1dc66902a",
+        "name": "",
+        "property": "timeMode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "pre-bedtime",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 820,
+        "wires": [
+            [
+                "b6e4433644ede280"
+            ]
         ]
     },
     {
