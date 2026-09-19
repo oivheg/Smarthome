@@ -843,7 +843,8 @@
             "bc57e78aaf68965d",
             "2cb600ab1cf6c9f0",
             "df0d0e357f912ecb",
-            "53b8c66e905a41c3"
+            "53b8c66e905a41c3",
+            "e37d3caa530b400b"
         ],
         "x": 134,
         "y": 939,
@@ -867,7 +868,6 @@
             "ed863371775575ab",
             "60b2567222677770",
             "a26b85b9381b87e5",
-            "c1cdd26489314e43",
             "7b175354f8d58739",
             "a0287f6dea869c13",
             "d434dc021a16f48a"
@@ -1795,13 +1795,12 @@
             "9380619e855a7649",
             "dd4a7af8e91d6a9a",
             "b6e4433644ede280",
-            "89f856a17eb2e8f5",
             "d342de2a9feab6c2"
         ],
         "x": 44,
-        "y": 579,
-        "w": 862,
-        "h": 282
+        "y": 599,
+        "w": 662,
+        "h": 262
     },
     {
         "id": "aaf5b9532af1fbac",
@@ -2018,7 +2017,7 @@
         "config_version": 1,
         "ip": "localhost",
         "port": "80",
-        "ws_port": "443",
+        "ws_port": "80",
         "secure": false,
         "polling": ""
     },
@@ -5172,8 +5171,10 @@
         "type": "link in",
         "z": "aa0ae7ae.75d228",
         "g": "dabbbe0f6cfeecac",
-        "name": "Set Upstairs lights ",
-        "links": [],
+        "name": "Set U_illumenance",
+        "links": [
+            "904cd18b176fe737"
+        ],
         "x": 285,
         "y": 340,
         "wires": [
@@ -5571,7 +5572,7 @@
                 "t": "set",
                 "p": "U_illumenance",
                 "pt": "flow",
-                "to": "payload",
+                "to": "illuminance",
                 "tot": "msg"
             }
         ],
@@ -5822,13 +5823,15 @@
         "z": "aa0ae7ae.75d228",
         "g": "ff7ca7f8980ed0b1",
         "name": "Movement oppe",
-        "links": [],
+        "links": [
+            "bc76c6da083bdd3b"
+        ],
         "x": 175,
         "y": 880,
         "wires": [
             [
                 "a26b85b9381b87e5",
-                "c1cdd26489314e43"
+                "ed863371775575ab"
             ]
         ]
     },
@@ -6949,34 +6952,6 @@
         ]
     },
     {
-        "id": "c1cdd26489314e43",
-        "type": "change",
-        "z": "aa0ae7ae.75d228",
-        "g": "ff7ca7f8980ed0b1",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "U_illumenance",
-                "pt": "flow",
-                "to": "illuminance",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 480,
-        "y": 880,
-        "wires": [
-            [
-                "ed863371775575ab"
-            ]
-        ]
-    },
-    {
         "id": "7b175354f8d58739",
         "type": "switch",
         "z": "aa0ae7ae.75d228",
@@ -7207,6 +7182,36 @@
         "wires": [
             [
                 "4ce3539c5f7a0ca7"
+            ]
+        ]
+    },
+    {
+        "id": "e37d3caa530b400b",
+        "type": "inject",
+        "z": "aa0ae7ae.75d228",
+        "g": "172b4292bafc68a7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 940,
+        "y": 980,
+        "wires": [
+            [
+                "df0d0e357f912ecb"
             ]
         ]
     },
@@ -9493,7 +9498,7 @@
             "ea645748ca3e406e",
             "f66e7e24.aca9d"
         ],
-        "x": 795,
+        "x": 695,
         "y": 580,
         "wires": []
     },
@@ -9706,8 +9711,7 @@
                 "onstart": true,
                 "payload": [
                     "presence"
-                ],
-                "uniqueId": "ui-id-26"
+                ]
             }
         ],
         "x": 270,
@@ -9830,7 +9834,7 @@
                 "output": "always",
                 "onstart": true,
                 "payload": [
-                    "presence"
+                    "__complete__"
                 ]
             }
         ],
@@ -9912,7 +9916,7 @@
             {
                 "type": "state",
                 "format": "single",
-                "output": "always",
+                "output": "onchange",
                 "onstart": true,
                 "payload": [
                     "presence"
@@ -9953,7 +9957,7 @@
                 "payload": [
                     "open"
                 ],
-                "uniqueId": "ui-id-6"
+                "uniqueId": "ui-id-5"
             }
         ],
         "x": 240,
@@ -10024,9 +10028,8 @@
                 "output": "onchange",
                 "onstart": true,
                 "payload": [
-                    "presence"
-                ],
-                "uniqueId": "ui-id-6"
+                    "__complete__"
+                ]
             }
         ],
         "x": 250,
@@ -10061,7 +10064,7 @@
                 "output": "onchange",
                 "onstart": true,
                 "payload": [
-                    "presence"
+                    "__complete__"
                 ]
             }
         ],
@@ -10173,26 +10176,6 @@
         ]
     },
     {
-        "id": "e0b7b5594378e257",
-        "type": "rbe",
-        "z": "a7af161f.d5ece8",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload",
-        "topi": "topic",
-        "x": 690,
-        "y": 580,
-        "wires": [
-            [
-                "dc7a9dbe.e7065"
-            ]
-        ]
-    },
-    {
         "id": "e51348f9105fec0e",
         "type": "subflow:94ff8f0f.02c5a",
         "z": "a7af161f.d5ece8",
@@ -10228,7 +10211,7 @@
         "y": 580,
         "wires": [
             [
-                "e0b7b5594378e257"
+                "dc7a9dbe.e7065"
             ]
         ]
     },
@@ -16769,7 +16752,7 @@
         "y": 1640,
         "wires": [
             [
-                "9b29720688f4f892"
+                "3e5515ba1d6c857c"
             ]
         ]
     },
@@ -22907,7 +22890,6 @@
             [
                 "291aa7bea3cc6663",
                 "00fb06d15a8d5259",
-                "89f856a17eb2e8f5",
                 "d342de2a9feab6c2"
             ]
         ]
@@ -23098,24 +23080,6 @@
                 "00fb06d15a8d5259"
             ]
         ]
-    },
-    {
-        "id": "89f856a17eb2e8f5",
-        "type": "debug",
-        "z": "189409faf8842877",
-        "g": "d97117a1dc66902a",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 620,
-        "wires": []
     },
     {
         "id": "d342de2a9feab6c2",
@@ -23494,7 +23458,6 @@
         "wires": [
             [
                 "923123cf470fc3e4",
-                "46561a09fa8da2c4",
                 "eabe9d09ac5494a3"
             ]
         ]
@@ -23974,14 +23937,14 @@
         "id": "779458453f211e42",
         "type": "server-state-changed",
         "z": "6a77c00f79a19693",
-        "name": "FP2 Combined",
+        "name": "FP2 Stue Presence",
         "server": "c8d8b6d992397cb8",
         "version": 6,
         "outputs": 1,
         "exposeAsEntityConfig": "",
         "entities": {
             "entity": [
-                "sensor.aqara_fp_combined"
+                "binary_sensor.presence_sensor_fp2_6feb_presence_sensor_1"
             ],
             "substring": [],
             "regex": []
@@ -24004,7 +23967,7 @@
             {
                 "property": "payload",
                 "propertyType": "msg",
-                "value": "",
+                "value": "ha_boolean",
                 "valueType": "entityState"
             },
             {
@@ -24020,27 +23983,12 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 270,
+        "x": 280,
         "y": 1000,
         "wires": [
             [
-                "0474d8dcceeabbfe"
-            ]
-        ]
-    },
-    {
-        "id": "0474d8dcceeabbfe",
-        "type": "json",
-        "z": "6a77c00f79a19693",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 540,
-        "y": 1000,
-        "wires": [
-            [
-                "ce6a6d205a83129b"
+                "f38e2ab61d16cb7f",
+                "cf3797c1e0b5c101"
             ]
         ]
     },
@@ -24153,66 +24101,6 @@
         ]
     },
     {
-        "id": "ce6a6d205a83129b",
-        "type": "change",
-        "z": "6a77c00f79a19693",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "illuminance",
-                "pt": "msg",
-                "to": "$number(payload.illuminance)\t\t",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.presence",
-                "tot": "msg"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "on",
-                "fromt": "str",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "change",
-                "p": "payload",
-                "pt": "msg",
-                "from": "off",
-                "fromt": "str",
-                "to": "false",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "presence",
-                "pt": "global",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 720,
-        "y": 1000,
-        "wires": [
-            [
-                "f38e2ab61d16cb7f",
-                "cf3797c1e0b5c101"
-            ]
-        ]
-    },
-    {
         "id": "0345e9c8f91734a4",
         "type": "subflow:05933d2d8abb4be7",
         "z": "6a77c00f79a19693",
@@ -24225,22 +24113,6 @@
             ],
             []
         ]
-    },
-    {
-        "id": "46561a09fa8da2c4",
-        "type": "debug",
-        "z": "6a77c00f79a19693",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 661,
-        "y": 755,
-        "wires": []
     },
     {
         "id": "cb085ed683178e6d",
@@ -24948,6 +24820,65 @@
         ]
     },
     {
+        "id": "7006949013fa6a1b",
+        "type": "server-state-changed",
+        "z": "6a77c00f79a19693",
+        "name": "FP2 STUE Illumenation",
+        "server": "c8d8b6d992397cb8",
+        "version": 6,
+        "outputs": 1,
+        "exposeAsEntityConfig": "",
+        "entities": {
+            "entity": [
+                "sensor.presence_sensor_fp2_6feb_light_sensor_light_level"
+            ],
+            "substring": [],
+            "regex": []
+        },
+        "outputInitially": true,
+        "stateType": "str",
+        "ifState": "",
+        "ifStateType": "str",
+        "ifStateOperator": "is",
+        "outputOnlyOnStateChange": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "illuminance",
+                "propertyType": "msg",
+                "value": "number",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 300,
+        "y": 1100,
+        "wires": [
+            [
+                "904cd18b176fe737"
+            ]
+        ]
+    },
+    {
+        "id": "904cd18b176fe737",
+        "type": "link out",
+        "z": "6a77c00f79a19693",
+        "name": "FP2 Stue illuminance",
+        "mode": "link",
+        "links": [
+            "99ed1ce4.90a0c"
+        ],
+        "x": 435,
+        "y": 1140,
+        "wires": []
+    },
+    {
         "id": "b590b37dc0fbc282",
         "type": "function",
         "z": "d77a99302c4e6503",
@@ -24968,7 +24899,7 @@
                 "bee3860454e1e700"
             ],
             [
-                "86965b568eeaa56c"
+                "604829f3d7b9206f"
             ]
         ]
     },
@@ -24977,7 +24908,9 @@
         "type": "link in",
         "z": "d77a99302c4e6503",
         "name": "Aqara FP2",
-        "links": [],
+        "links": [
+            "ca84a21742d3e0cd"
+        ],
         "x": 385,
         "y": 320,
         "wires": [
@@ -25239,6 +25172,13 @@
                 "pt": "flow",
                 "to": "false",
                 "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "tmpDimmed",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -25250,9 +25190,9 @@
         "y": 360,
         "wires": [
             [
-                "a9eef7ebd0b8a98e",
                 "2cd7beb6601eb278",
-                "489a70e46708be19"
+                "489a70e46708be19",
+                "cd274e19cc986be4"
             ]
         ]
     },
@@ -25387,9 +25327,9 @@
         "y": 400,
         "wires": [
             [
-                "a9eef7ebd0b8a98e",
                 "2cd7beb6601eb278",
-                "d75a3fcd498a1213"
+                "d75a3fcd498a1213",
+                "cd274e19cc986be4"
             ]
         ]
     },
@@ -25473,7 +25413,7 @@
         "y": 480,
         "wires": [
             [
-                "9a6c7e2adae19dbe"
+                "212b17bf228508dc"
             ]
         ]
     },
@@ -25605,7 +25545,7 @@
         "type": "function",
         "z": "d77a99302c4e6503",
         "name": "Format Protection Status",
-        "func": "const doorOpen = flow.get('door_open') || false;\nconst fp2Presence = flow.get('fp2_presence') || false;\nconst movement = flow.get('movement') || false;\nconst lastActivityTime = flow.get('lastActivityTime') || 0;\nconst timeSinceActivity = Date.now() - lastActivityTime;\nconst ACTIVITY_TIMEOUT = 4 * 60 * 1000;\n\n// Check protection rules\nif (!doorOpen && timeSinceActivity < ACTIVITY_TIMEOUT) {\n    msg.payload = \"🟡 PROTECTED: Recent activity\";\n} else if (fp2Presence && movement) {\n    msg.payload = \"🔴 PROTECTED: FP2 + Motion active\";\n} else if (fp2Presence) {\n    msg.payload = \"🟡 PROTECTED: FP2 active\";\n} else if (movement) {\n    msg.payload = \"🔵 PROTECTED: Motion detected\";\n} else {\n    const minIdle = Math.floor(timeSinceActivity / 60000);\n    msg.payload = `🟢 Safe to turn off (${minIdle}m idle)`;\n    let data = {};\n    data.payload = false;\n    node.send([null, data]);\n}\n\nreturn msg;",
+        "func": "const doorOpen = flow.get('door_open') || false;\nconst fp2Presence = flow.get('fp2_presence') || false;\nconst movement = flow.get('movement') || false;\nconst lastActivityTime = flow.get('lastActivityTime') || 0;\nconst timeSinceActivity = Date.now() - lastActivityTime;\n\nconst CLOSED_DOOR_TIMEOUT = 4 * 60 * 1000;   // 4 minutes\nconst OPEN_DOOR_TIMEOUT = 1 * 60 * 1000;     // 8 minutes grace when open\n\n// 1. LIVE SENSORS: If sensors see you, stay on AND CANCEL any pending shutdown!\nif (fp2Presence && movement) {\n    msg.payload = \"🔴 PROTECTED: FP2 + Motion active\";\n    node.send([msg, { reset: true }]); // Sends a hard cancel to your timers\n    return;\n} else if (fp2Presence) {\n    msg.payload = \"🟡 PROTECTED: FP2 active\";\n    node.send([msg, { reset: true }]);\n    return;\n} else if (movement) {\n    msg.payload = \"🔵 PROTECTED: Motion detected\";\n    node.send([msg, { reset: true }]);\n    return;\n} \n// 2. RECENT ACTIVITY: Within timer limits\nelse if (!doorOpen && timeSinceActivity < CLOSED_DOOR_TIMEOUT) {\n    msg.payload = \"🟡 PROTECTED: Closed Door Timer\";\n    node.send([msg, { reset: true }]);\n    return;\n} else if (doorOpen && timeSinceActivity < OPEN_DOOR_TIMEOUT) {\n    msg.payload = \"🟡 PROTECTED: Open Door Grace Timer\";\n    node.send([msg, { reset: true }]);\n    return;\n} \n// 3. EXPIRED: Safe to turn off\nelse {\n    const minIdle = Math.floor(timeSinceActivity / 60000);\n    msg.payload = `🟢 Safe to turn off (${minIdle}m idle)`;\n    node.send([msg, { payload: false }]);\n    return;\n}",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
@@ -25668,31 +25608,6 @@
                 "ba_ui_fp2_format",
                 "ba_ui_movement_format",
                 "ba_ui_protection_format"
-            ]
-        ]
-    },
-    {
-        "id": "a9eef7ebd0b8a98e",
-        "type": "trigger",
-        "z": "d77a99302c4e6503",
-        "name": "",
-        "op1": "",
-        "op2": "",
-        "op1type": "nul",
-        "op2type": "payl",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1820,
-        "y": 400,
-        "wires": [
-            [
-                "cd274e19cc986be4"
             ]
         ]
     },
@@ -25783,8 +25698,8 @@
         "y": 220,
         "wires": [
             [
-                "a9eef7ebd0b8a98e",
-                "4c1858d290c94d44"
+                "4c1858d290c94d44",
+                "cd274e19cc986be4"
             ]
         ]
     },
@@ -25868,7 +25783,7 @@
         "wires": [
             [],
             [
-                "2ebf80ed57b96fc3"
+                "621af50154f0c906"
             ]
         ]
     },
@@ -26026,35 +25941,6 @@
         ]
     },
     {
-        "id": "e87b0901614d212a",
-        "type": "inject",
-        "z": "d77a99302c4e6503",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 650,
-        "y": 580,
-        "wires": [
-            [
-                "574aa3734542d7dc"
-            ]
-        ]
-    },
-    {
         "id": "8ab59e27d798ed60",
         "type": "change",
         "z": "d77a99302c4e6503",
@@ -26098,8 +25984,8 @@
         "y": 180,
         "wires": [
             [
-                "a9eef7ebd0b8a98e",
-                "4c1858d290c94d44"
+                "4c1858d290c94d44",
+                "cd274e19cc986be4"
             ]
         ]
     },
@@ -26129,7 +26015,72 @@
         ]
     },
     {
-        "id": "c5ff8c6bed410957",
+        "id": "bee3860454e1e700",
+        "type": "change",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "fp2_presence",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "621af50154f0c906",
+        "type": "function",
+        "z": "d77a99302c4e6503",
+        "name": "function 2",
+        "func": "const doorOpen = flow.get('door_open') || false;\nconst movement = flow.get('movement') || false;\n\n// If the door is closed/locked and the physical PIR detects no movement, \n// this is an FP2 ghost. Block it from turning the light on.\nif (doorOpen === false && movement === false) {\n    node.status({fill: \"red\", shape: \"dot\", text: \"Blocked FP2 Ghost\"});\n    return null; // Stop the flow\n}\n\nnode.status({});\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 480,
+        "wires": [
+            [
+                "2ebf80ed57b96fc3"
+            ]
+        ]
+    },
+    {
+        "id": "212b17bf228508dc",
+        "type": "rbe",
+        "z": "d77a99302c4e6503",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload",
+        "topi": "topic",
+        "x": 690,
+        "y": 480,
+        "wires": [
+            [
+                "9a6c7e2adae19dbe"
+            ]
+        ]
+    },
+    {
+        "id": "604829f3d7b9206f",
         "type": "change",
         "z": "d77a99302c4e6503",
         "name": "",
@@ -26147,102 +26098,43 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1020,
-        "y": 280,
+        "x": 920,
+        "y": 300,
         "wires": [
             []
         ]
     },
     {
-        "id": "bee3860454e1e700",
-        "type": "change",
+        "id": "07a63d566c1f234a",
+        "type": "inject",
         "z": "d77a99302c4e6503",
         "name": "",
-        "rules": [
+        "props": [
             {
-                "t": "set",
-                "p": "fp2_presence",
-                "pt": "flow",
-                "to": "true",
-                "tot": "bool"
+                "p": "payload"
             },
             {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
+                "p": "topic",
+                "vt": "str"
             }
         ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 900,
-        "y": 240,
-        "wires": [
-            [
-                "86965b568eeaa56c"
-            ]
-        ]
-    },
-    {
-        "id": "86965b568eeaa56c",
-        "type": "trigger",
-        "z": "d77a99302c4e6503",
-        "name": "",
-        "op1": "",
-        "op2": "false",
-        "op1type": "nul",
-        "op2type": "bool",
-        "duration": "30",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 950,
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 310,
         "y": 200,
         "wires": [
             [
-                "c5ff8c6bed410957"
-            ]
-        ]
-    },
-    {
-        "id": "6b217a4d7acba765",
-        "type": "inject",
-        "z": "d77a99302c4e6503",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 690,
-        "y": 240,
-        "wires": [
-            [
                 "b590b37dc0fbc282"
             ]
         ]
     },
     {
-        "id": "7de8196c9b8e4cc4",
+        "id": "78df962cc22c9acd",
         "type": "inject",
         "z": "d77a99302c4e6503",
         "name": "",
@@ -26262,69 +26154,11 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 450,
-        "y": 180,
+        "x": 310,
+        "y": 140,
         "wires": [
             [
                 "b590b37dc0fbc282"
-            ]
-        ]
-    },
-    {
-        "id": "167f1545be70efe3",
-        "type": "inject",
-        "z": "d77a99302c4e6503",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 330,
-        "y": 520,
-        "wires": [
-            [
-                "6381072ee0756353"
-            ]
-        ]
-    },
-    {
-        "id": "7fc7874edbd56e2b",
-        "type": "inject",
-        "z": "d77a99302c4e6503",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 290,
-        "y": 580,
-        "wires": [
-            [
-                "6381072ee0756353"
             ]
         ]
     }
