@@ -7846,7 +7846,7 @@
         "name": "Manual Mode",
         "label": "Manual Mode",
         "group": "3f286b473c9966df",
-        "order": 1,
+        "order": 2,
         "width": "2",
         "height": "1",
         "passthru": false,
@@ -8188,7 +8188,7 @@
         "name": "Visitor Mode",
         "label": "Visitor Mode",
         "group": "3f286b473c9966df",
-        "order": 2,
+        "order": 3,
         "width": "2",
         "height": "1",
         "passthru": false,
@@ -8630,11 +8630,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 280,
+        "x": 210,
         "y": 420,
         "wires": [
             [
-                "835f2c9ef615a6ae"
+                "3708430c4ae78a58"
             ]
         ]
     },
@@ -8642,7 +8642,7 @@
         "id": "835f2c9ef615a6ae",
         "type": "change",
         "z": "1b14ec1b.20ab54",
-        "name": "",
+        "name": "Time for Happy Pee and Food",
         "rules": [
             {
                 "t": "set",
@@ -8657,7 +8657,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
+        "x": 790,
         "y": 420,
         "wires": [
             [
@@ -8674,9 +8674,141 @@
         "links": [
             "662ff2faf119d193"
         ],
-        "x": 865,
+        "x": 995,
         "y": 420,
         "wires": []
+    },
+    {
+        "id": "b37a31e934d9fabd",
+        "type": "switch",
+        "z": "1b14ec1b.20ab54",
+        "name": "Mode?",
+        "property": "Mode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 420,
+        "wires": [
+            [
+                "835f2c9ef615a6ae"
+            ]
+        ]
+    },
+    {
+        "id": "89e82eef594dd453",
+        "type": "change",
+        "z": "1b14ec1b.20ab54",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "blockHappyTime",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3708430c4ae78a58",
+        "type": "switch",
+        "z": "1b14ec1b.20ab54",
+        "name": "blockHappyTime?",
+        "property": "blockHappyTime",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [
+                "b37a31e934d9fabd"
+            ]
+        ]
+    },
+    {
+        "id": "9bfcad64b7f7fd57",
+        "type": "ui-switch",
+        "z": "1b14ec1b.20ab54",
+        "name": "",
+        "label": "Block Happy Time",
+        "group": "3f286b473c9966df",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "89e82eef594dd453"
+            ]
+        ]
+    },
+    {
+        "id": "a28a27b1f1e7de6f",
+        "type": "inject",
+        "z": "1b14ec1b.20ab54",
+        "name": "Reset Block",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "00 12 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 360,
+        "wires": [
+            [
+                "9bfcad64b7f7fd57"
+            ]
+        ]
     },
     {
         "id": "a4770dbb.04eff",
@@ -14444,7 +14576,7 @@
         "name": "Mr Robot Status",
         "label": "Mr Robot Status",
         "group": "3f286b473c9966df",
-        "order": 7,
+        "order": 8,
         "width": "2",
         "height": "1",
         "passthru": false,
@@ -20441,7 +20573,7 @@
         "name": "Home Status",
         "label": "Home Status",
         "group": "3f286b473c9966df",
-        "order": 3,
+        "order": 4,
         "width": "2",
         "height": "1",
         "passthru": true,
@@ -20557,7 +20689,7 @@
         "name": "Karina",
         "label": "Karina",
         "group": "3f286b473c9966df",
-        "order": 6,
+        "order": 7,
         "width": "2",
         "height": "1",
         "passthru": true,
@@ -20587,7 +20719,7 @@
         "name": "Øivind",
         "label": "Øivind",
         "group": "3f286b473c9966df",
-        "order": 5,
+        "order": 6,
         "width": "2",
         "height": "1",
         "passthru": true,
@@ -20787,7 +20919,7 @@
         "type": "ui-text",
         "z": "visitor_mode_tab",
         "group": "3f286b473c9966df",
-        "order": 4,
+        "order": 5,
         "width": "6",
         "height": "2",
         "name": "Visitor Mode Status",
