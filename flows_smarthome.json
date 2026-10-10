@@ -1573,12 +1573,15 @@
             "label": true
         },
         "nodes": [
-            "00fb06d15a8d5259"
+            "00fb06d15a8d5259",
+            "sensibo_queue_001",
+            "sensibo_reassert_001",
+            "sensibo_current_001"
         ],
-        "x": 934,
+        "x": 754,
         "y": 659,
-        "w": 212,
-        "h": 82
+        "w": 392,
+        "h": 112
     },
     {
         "id": "c6d89bb6766b3bd0",
@@ -1793,8 +1796,6 @@
             "3d88ac222d635b1e",
             "9380619e855a7649",
             "dd4a7af8e91d6a9a",
-            "b6e4433644ede280",
-            "d342de2a9feab6c2",
             "b306055a7b2b1708",
             "2eb3560ab590e2bb"
         ],
@@ -21513,6 +21514,84 @@
         ]
     },
     {
+        "id": "sensibo_queue_001",
+        "type": "delay",
+        "z": "189409faf8842877",
+        "g": "fb4d535274ae6266",
+        "name": "Sensibo queue (1 / 15s)",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 700,
+        "wires": [
+            [
+                "00fb06d15a8d5259"
+            ]
+        ]
+    },
+    {
+        "id": "sensibo_reassert_001",
+        "type": "trigger",
+        "z": "189409faf8842877",
+        "g": "fb4d535274ae6266",
+        "name": "Re-assert latest after 60s",
+        "op1": "",
+        "op2": "",
+        "op1type": "nul",
+        "op2type": "payl",
+        "duration": "60",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 880,
+        "y": 740,
+        "wires": [
+            [
+                "sensibo_current_001"
+            ]
+        ]
+    },
+    {
+        "id": "sensibo_current_001",
+        "type": "switch",
+        "z": "189409faf8842877",
+        "g": "fb4d535274ae6266",
+        "name": "Still current cmd?",
+        "property": "cmdHash",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "lastSensiboHash",
+                "vt": "flow"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 740,
+        "wires": [
+            [
+                "sensibo_queue_001"
+            ]
+        ]
+    },
+    {
         "id": "3a8c7d56155ca2ee",
         "type": "api-call-service",
         "z": "189409faf8842877",
@@ -22652,7 +22731,7 @@
         "g": "15b9c68154d48bdf",
         "group": "f9c985920afe1003",
         "name": "Mill Setpoint",
-        "label": "Mill °C (active season)",
+        "label": "Mill max °C (active season)",
         "order": 20,
         "width": "2",
         "height": "1",
@@ -23018,8 +23097,8 @@
         "type": "function",
         "z": "189409faf8842877",
         "g": "c6d89bb6766b3bd0",
-        "name": "Format for Mill",
-        "func": "// 1. Get current settings\nconst isSummer = !!flow.get('isSummer');\nconst timeMode = flow.get('timeMode') || 'day';\nconst homeMode = (global.get('Mode') || 'home').toLowerCase();\n\n// Fixed: Read from msg first to prevent race condition with flow context updates\nconst hpAction = msg.hpAction || flow.get('heatpumpAction') || 'off'; \nconst hpReason = msg.hpReason || flow.get('controlReason') || '';\n\nconst millSummer = Number(flow.get('millSummerTemp')) || 23;\nconst millWinter = Number(flow.get('millWinterTemp')) || 23;\n\n// 2. Are we sleeping?\nconst isSleepMode = (timeMode === 'night' || timeMode === 'pre-bedtime' || homeMode === 'sleep');\n\n// 3. Calculate baseline target temperature\nlet target = isSleepMode ? 18 : (isSummer ? millSummer : millWinter);\n\n// --- ANTI-FIGHTING RULE ---\nconst isAggressiveCooling = hpReason.includes('Pre-Bedtime') || hpReason.includes('DOG SAFETY') || hpReason.includes('SAFETY HIGH');\n\nif (hpAction === 'cool' && isAggressiveCooling) {\n    target = 18;\n}\n\n// Build payload\nmsg.payload = { \n    data: { \n        temperature: target \n    } \n};\n\n// Debounce Check\nconst lastTarget = flow.get('lastMillTarget') || 0;\n\nif (target !== lastTarget) {\n    flow.set('lastMillTarget', target);\n    node.status({ fill: \"green\", shape: \"dot\", text: \"Sent new target: \" + target + \"°C\" });\n    return msg; \n}\n\nnode.status({ fill: \"grey\", shape: \"ring\", text: \"Holding at: \" + target + \"°C\" });\nreturn null;",
+        "name": "Mill Controller",
+        "func": "// MILL CONTROLLER – dynamic setpoint for the downstairs Mill heater.\n// Runs every control cycle (not only when the heat pump command changes).\n// The Mill regulates on its own sensor, so a fixed 23°C let downstairs drift above 23\n// with the heat pump off. Here the setpoint is closed-loop on the downstairs sensor:\n//   • downstairs ≥ zone target + 0.3 (or rising fast near target) → idle (millIdleTemp)\n//   • slightly below target → hold at target, further below → +1/+2 boost\n//   • never above millWinterTemp / millSummerTemp (these are now MAX caps)\n//   • idle while the heat pump is cooling (no fighting), no stacking while HP heats downstairs\nconst ctx = msg.ctx;\nconst hp = msg.hp || {};\nif (!ctx || hp.action === 'paused') {\n    node.status({ fill: 'yellow', shape: 'ring', text: 'Paused (blocked)' });\n    return null;\n}\n\nconst RESEND_MS = 30 * 60 * 1000;   // re-assert periodically in case the Mill/app changed it\nconst IDLE_ABOVE = 0.3, RESUME_BELOW = 0.2;\nconst idleTemp = ctx.millIdle;\nconst cap = ctx.isSummer ? ctx.millSummer : ctx.millWinter;\nconst isSleep = ctx.timeMode === 'night' || ctx.timeMode === 'pre-bedtime' || ctx.homeMode === 'sleep';\n\n// 1. What should downstairs be right now?\nlet zoneTarget, zone;\nif (ctx.homeMode === 'vacation') {\n    zoneTarget = ctx.vacationTgt; zone = 'vacation';\n} else if (ctx.homeMode === 'away') {\n    zoneTarget = Math.min(ctx.awayTgt, ctx.desired) - 1; zone = 'away';\n} else if (isSleep) {\n    zoneTarget = ctx.bedtime - 1; zone = 'sleep';          // HP owns bedtime comfort, Mill is backstop only\n} else if (ctx.preBedCoast) {\n    zoneTarget = Math.min(ctx.desired, ctx.bedtime + 1); zone = 'coast';\n} else {\n    zoneTarget = ctx.desired; zone = 'day';\n}\nif (ctx.isSummer) zoneTarget -= 1;                         // Summer: backstop only\n\n// 2. Hysteresis on idle state\nconst dn = ctx.downstairs;\nconst error = zoneTarget - dn;                             // > 0 means too cold\nlet idle = !!flow.get('millIdle');\nif (dn >= zoneTarget + IDLE_ABOVE) idle = true;\nelse if (dn < zoneTarget - RESUME_BELOW) idle = false;\nconst risingFast = ctx.dnTrend > 0.5 && error < 0.5;\n\n// 3. Setpoint\nlet target, why;\nif (hp.action === 'cool') {\n    target = idleTemp; why = 'HP cooling';\n} else if (idle) {\n    target = idleTemp; why = 'idle, DN ' + dn.toFixed(1) + ' (target ' + zoneTarget + ')';\n} else if (risingFast) {\n    target = idleTemp; why = 'DN rising ' + ctx.dnTrend.toFixed(1) + '°/h';\n} else {\n    let boost = error >= 0.75 ? 2 : (error >= 0.25 ? 1 : 0);\n    // HP already heating downstairs → let it do the work, only help when it's really cold\n    if (hp.action === 'heat' && hp.swing === 'fixedBottom' && error < 1) boost = 0;\n    target = Math.min(Math.round(zoneTarget) + boost, cap);\n    why = 'DN ' + dn.toFixed(1) + '→' + zoneTarget + (boost ? ' +' + boost : '');\n}\ntarget = Math.max(idleTemp, Math.round(target));\n\nflow.set('millIdle', idle);\nflow.set('millTarget', target);\nflow.set('millReason', zone + ': ' + why);\n\n// 4. Debounce + periodic re-send\nconst lastTarget = flow.get('lastMillTarget');\nconst lastSent = flow.get('lastMillSentTs') || 0;\nif (target !== lastTarget || ctx.now - lastSent > RESEND_MS || msg.force) {\n    flow.set('lastMillTarget', target);\n    flow.set('lastMillSentTs', ctx.now);\n    node.status({ fill: target > idleTemp ? 'red' : 'grey', shape: 'dot', text: 'Sent ' + target + '°C · ' + zone + ': ' + why });\n    return { topic: 'mill', payload: { data: { temperature: target } } };\n}\n\nnode.status({ fill: 'grey', shape: 'ring', text: 'Holding ' + target + '°C · ' + zone + ': ' + why });\nreturn null;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -23057,7 +23136,9 @@
         "x": 1250,
         "y": 180,
         "wires": [
-            []
+            [
+                "744c985b060fa1ee"
+            ]
         ]
     },
     {
@@ -23113,7 +23194,9 @@
         "x": 1310,
         "y": 240,
         "wires": [
-            []
+            [
+                "744c985b060fa1ee"
+            ]
         ]
     },
     {
@@ -23145,64 +23228,12 @@
         ]
     },
     {
-        "id": "b6e4433644ede280",
-        "type": "trigger",
-        "z": "189409faf8842877",
-        "g": "d97117a1dc66902a",
-        "name": "",
-        "op1": "fixedTop",
-        "op2": "fixedBottom",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "5",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 620,
-        "y": 820,
-        "wires": [
-            [
-                "00fb06d15a8d5259"
-            ]
-        ]
-    },
-    {
-        "id": "d342de2a9feab6c2",
-        "type": "switch",
-        "z": "189409faf8842877",
-        "g": "d97117a1dc66902a",
-        "name": "",
-        "property": "timeMode",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "pre-bedtime",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 430,
-        "y": 820,
-        "wires": [
-            [
-                "b6e4433644ede280"
-            ]
-        ]
-    },
-    {
         "id": "2eb3560ab590e2bb",
         "type": "function",
         "z": "189409faf8842877",
         "g": "d97117a1dc66902a",
         "name": "Context & State Ingestion",
-        "func": "// 1. STATE & CONTEXT INGESTION\nconst num = (k, d) => { const v = Number(flow.get(k)); return isFinite(v) ? v : d; };\nconst now = Date.now();\nconst d = new Date();\nconst hour = d.getHours();\nconst min = d.getMinutes();\nconst dow = d.getDay(); \nconst isWeekend = (dow === 0 || dow === 6);\n\n// --- DYNAMIC SCHEDULE CALCULATION ---\nlet calculatedTimeMode = 'night'; \nconst timeAsFloat = hour + (min / 60);\nconst morningStart = isWeekend ? 7.5 : 5.5;\n\nif (timeAsFloat >= 22 || timeAsFloat < morningStart) {\n    calculatedTimeMode = 'night';\n} else if (timeAsFloat >= morningStart && timeAsFloat < 8.5) {\n    calculatedTimeMode = 'morning';\n} else if (timeAsFloat >= 8.5 && timeAsFloat < 20.5) {\n    calculatedTimeMode = 'day';\n} else if (timeAsFloat >= 20.5 && timeAsFloat < 22) {\n    calculatedTimeMode = 'pre-bedtime';\n}\n\nflow.set('timeMode', calculatedTimeMode);\n\nlet ctx = {\n    upstairs: num('upstairsTemp', 20),\n    downstairs: num('downstairsTemp', 20),\n    outside: num('outsideTemp', 10),\n    cloud: num('cloudCover', 50),\n    wind: num('windSpeed', 0),\n    out1h: num('outside1h', num('outsideTemp', 10)),\n    out6h: num('outside6h', num('outsideTemp', 10)),\n    rain6h: num('rain6h', 0),\n    fc24Avg: num('forecast24hAvg', num('outsideTemp', 10)),\n    \n    desired: num('desiredTemp', 22),\n    bedtime: num('bedtimeTemp', 19),\n    awayTgt: num('awayTemp', 21),\n    vacationTgt: num('vacationTemp', 18),\n    millWinter: num('millWinterTemp', 23),\n    millSummer: num('millSummerTemp', 22),\n    dogMaxTemp: num('dogMaxTemp', 24),\n    \n    isSummer: !!flow.get('isSummer'),\n    isQuietFan: !!flow.get('isQuietFan'),\n    timeMode: calculatedTimeMode,\n    manualOR: flow.get('manualOverride'),\n    swingOR: flow.get('swingOverride'),\n    manualMode: !!global.get('manualmode'),\n    visitorMode: (global.get('VisitorMode') || {}).enabled === true,\n    standby: global.get('isStandBy'),\n    \n    lastAction: flow.get('lastHPAction') || 'off',\n    lastActionTs: flow.get('lastHPActionTime') || 0,\n    \n    now: now,\n    hour: hour\n};\n\nctx.seasonLabel = ctx.isSummer ? 'Summer' : 'Winter';\nflow.set('seasonLabel', ctx.seasonLabel);\n\n// TV Logic\nctx.watching = ctx.standby === false;\nif (ctx.watching) flow.set('lastTvOnTime', now);\nconst lastTvOn = flow.get('lastTvOnTime') || 0;\nctx.tvActive = ctx.watching || (now - lastTvOn) < 15 * 60 * 1000;\n\n// Time & WFH Logic\nctx.isNightTime = (hour >= 23 || hour < 5);\nlet rawHomeMode = (global.get('Mode') || 'home').toLowerCase();\n\n// Presence Anti-flap (5 min)\nconst lastStableMode = flow.get('lastStableHomeMode') || rawHomeMode;\nconst lastStableModeTs = flow.get('lastStableHomeModeTime') || 0;\nif (rawHomeMode !== lastStableMode) {\n    if ((now - lastStableModeTs) < 5 * 60 * 1000) {\n        rawHomeMode = lastStableMode; \n    } else {\n        flow.set('lastStableHomeMode', rawHomeMode);\n        flow.set('lastStableHomeModeTime', now);\n    }\n} else if (!lastStableModeTs) {\n    flow.set('lastStableHomeMode', rawHomeMode);\n    flow.set('lastStableHomeModeTime', now);\n}\n\nctx.homeMode = rawHomeMode;\nctx.isWFH = !ctx.isSummer && ctx.homeMode === 'home' && !isWeekend && hour >= 8 && hour < 15;\n\nctx.isNightHours = (ctx.timeMode === 'night' || ctx.homeMode === 'sleep' || ctx.isNightTime);\n\nmsg.ctx = ctx;\nreturn msg;",
+        "func": "// 1. STATE & CONTEXT INGESTION\nconst num = (k, d) => { const v = Number(flow.get(k)); return isFinite(v) ? v : d; };\nconst now = Date.now();\nconst d = new Date();\nconst hour = d.getHours();\nconst min = d.getMinutes();\nconst dow = d.getDay(); \nconst isWeekend = (dow === 0 || dow === 6);\n\n// --- DYNAMIC SCHEDULE CALCULATION ---\nconst PRE_BED_START = 20.5;   // pre-bedtime window 20:30-22:00\nconst BED_START = 22;\nconst COAST_HOURS = 1;        // stop adding heat this long before pre-bedtime so bedrooms drift down\n\nlet calculatedTimeMode = 'night'; \nconst timeAsFloat = hour + (min / 60);\nconst morningStart = isWeekend ? 7.5 : 5.5;\n\nif (timeAsFloat >= BED_START || timeAsFloat < morningStart) {\n    calculatedTimeMode = 'night';\n} else if (timeAsFloat >= morningStart && timeAsFloat < 8.5) {\n    calculatedTimeMode = 'morning';\n} else if (timeAsFloat >= 8.5 && timeAsFloat < PRE_BED_START) {\n    calculatedTimeMode = 'day';\n} else if (timeAsFloat >= PRE_BED_START && timeAsFloat < BED_START) {\n    calculatedTimeMode = 'pre-bedtime';\n}\n\nflow.set('timeMode', calculatedTimeMode);\n\nlet ctx = {\n    upstairs: num('upstairsTemp', 20),\n    downstairs: num('downstairsTemp', 20),\n    outside: num('outsideTemp', 10),\n    cloud: num('cloudCover', 50),\n    wind: num('windSpeed', 0),\n    out1h: num('outside1h', num('outsideTemp', 10)),\n    out6h: num('outside6h', num('outsideTemp', 10)),\n    rain6h: num('rain6h', 0),\n    fc24Avg: num('forecast24hAvg', num('outsideTemp', 10)),\n    \n    desired: num('desiredTemp', 22),\n    bedtime: num('bedtimeTemp', 19),\n    awayTgt: num('awayTemp', 21),\n    vacationTgt: num('vacationTemp', 18),\n    millWinter: num('millWinterTemp', 23),\n    millSummer: num('millSummerTemp', 22),\n    millIdle: num('millIdleTemp', 16),\n    dogMaxTemp: num('dogMaxTemp', 24),\n    \n    isSummer: !!flow.get('isSummer'),\n    isQuietFan: !!flow.get('isQuietFan'),\n    timeMode: calculatedTimeMode,\n    preBedCoast: calculatedTimeMode === 'day' && timeAsFloat >= PRE_BED_START - COAST_HOURS,\n    manualOR: flow.get('manualOverride'),\n    swingOR: flow.get('swingOverride'),\n    manualMode: !!global.get('manualmode'),\n    visitorMode: (global.get('VisitorMode') || {}).enabled === true,\n    standby: global.get('isStandBy'),\n    \n    lastAction: flow.get('lastHPAction') || 'off',\n    lastActionTs: flow.get('lastHPActionTime') || 0,\n    \n    now: now,\n    hour: hour\n};\n\nctx.seasonLabel = ctx.isSummer ? 'Summer' : 'Winter';\nflow.set('seasonLabel', ctx.seasonLabel);\n\n// Downstairs trend (°C per hour) over the last ~30 min.\n// Used to anticipate overshoot (sun, cooking, Mill thermal lag) before it happens.\nconst TREND_WINDOW_MS = 30 * 60 * 1000;\nconst TREND_MIN_SPAN_MS = 15 * 60 * 1000;\nconst samples = (flow.get('dnSamples') || []).filter(s => now - s.ts <= TREND_WINDOW_MS);\nconst lastSample = samples[samples.length - 1];\nif (!lastSample || now - lastSample.ts >= 60 * 1000) samples.push({ ts: now, v: ctx.downstairs });\nflow.set('dnSamples', samples);\nconst oldest = samples[0];\nctx.dnTrend = (oldest && now - oldest.ts >= TREND_MIN_SPAN_MS)\n    ? (ctx.downstairs - oldest.v) / ((now - oldest.ts) / 3600000)\n    : 0;\n\n// TV Logic\nctx.watching = ctx.standby === false;\nif (ctx.watching) flow.set('lastTvOnTime', now);\nconst lastTvOn = flow.get('lastTvOnTime') || 0;\nctx.tvActive = ctx.watching || (now - lastTvOn) < 15 * 60 * 1000;\n\n// Time & WFH Logic\nctx.isNightTime = (hour >= 23 || hour < 5);\nlet rawHomeMode = (global.get('Mode') || 'home').toLowerCase();\n\n// Presence Anti-flap (5 min)\nconst lastStableMode = flow.get('lastStableHomeMode') || rawHomeMode;\nconst lastStableModeTs = flow.get('lastStableHomeModeTime') || 0;\nif (rawHomeMode !== lastStableMode) {\n    if ((now - lastStableModeTs) < 5 * 60 * 1000) {\n        rawHomeMode = lastStableMode; \n    } else {\n        flow.set('lastStableHomeMode', rawHomeMode);\n        flow.set('lastStableHomeModeTime', now);\n    }\n} else if (!lastStableModeTs) {\n    flow.set('lastStableHomeMode', rawHomeMode);\n    flow.set('lastStableHomeModeTime', now);\n}\n\nctx.homeMode = rawHomeMode;\nctx.isWFH = !ctx.isSummer && ctx.homeMode === 'home' && !isWeekend && hour >= 8 && hour < 15;\n\nctx.isNightHours = (ctx.timeMode === 'night' || ctx.homeMode === 'sleep' || ctx.isNightTime);\n\nmsg.ctx = ctx;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -23223,8 +23254,8 @@
         "z": "189409faf8842877",
         "g": "d97117a1dc66902a",
         "name": "Core Rules Engine",
-        "func": "// 1. CONTEXT & SAFETY\nlet ctx = msg.ctx;\n\nconst isBlocked = ['visitor', 'guest', 'manual'].includes(ctx.homeMode) || ctx.manualMode || ctx.visitorMode;\nif (isBlocked) {\n    flow.set('controlReason', 'BLOCKED'); \n    flow.set('heatpumpAction', 'paused'); \n    return null;\n}\n\n// --- PREDICTIVE WEATHER BOOST ---\nlet weatherBoost = 0;\nconst lowestForecast = Math.min(ctx.outside, ctx.out1h, ctx.out6h);\n\nif (!ctx.isNightHours && ctx.timeMode !== 'pre-bedtime') {\n    if (lowestForecast < 10) {\n        weatherBoost = 1.0;\n    } else if (lowestForecast < 15) {\n        weatherBoost = 0.5;\n    }\n}\nconst heatTarget = ctx.desired + weatherBoost;\n// ---------------------------------\n\n// 2. CORE LOGIC\nlet action = 'off', setpoint = ctx.desired, fan = 'low', swing = 'fixedBottom', reason = '';\nconst dogMax = ctx.dogMaxTemp;\n\n// UPGRADED HYSTERESIS: Add a hard limit so weatherBoost doesn't push the room past what is comfortable (e.g., 23C)\nconst needsHeat = (t, tgt, limit) => {\n    if (t >= limit + 0.2) return false; // Hard shutoff: never keep heating if we are already slightly over the actual desired temp\n    return ctx.lastAction === 'heat' ? (t < tgt + 0.2) : (t < tgt - 0.5);\n};\n\n// UPGRADED COOLING: Require a much larger overshoot to actively trigger AC during Winter\nconst needsCool = (t, tgt) => {\n    return ctx.lastAction === 'cool' ? (t > tgt - 0.3) : (t > tgt + 1.5);\n};\n\nconst upstairsDelta = ctx.upstairs - ctx.desired;\nconst downstairsDelta = ctx.downstairs - ctx.desired;\n\n// LOGIC TREE\nif (ctx.manualOR && ctx.manualOR !== 'auto') {\n    action = ctx.manualOR === 'on' ? (ctx.isSummer ? 'cool' : 'heat') : ctx.manualOR;\n    reason = 'Manual OVR: ' + action;\n} else if (ctx.upstairs > 30 || ctx.downstairs > 30) {\n    action = 'cool'; setpoint = 22; fan = 'high'; swing = 'fixedBottom'; reason = 'SAFETY HIGH';\n} else if (ctx.upstairs >= dogMax) {\n    action = 'cool'; setpoint = 20; fan = 'high'; swing = 'fixedTop'; reason = 'DOG SAFETY';\n} else if (ctx.timeMode === 'pre-bedtime') {\n    if (needsCool(ctx.downstairs, ctx.bedtime) || needsCool(ctx.upstairs, ctx.bedtime + 1)) {\n        action = 'cool'; setpoint = 16; fan = ctx.tvActive ? 'medium' : 'high'; swing = 'fixedBottom'; reason = 'Pre-Bedtime Rapid Cool';\n    } else if (!ctx.tvActive && needsHeat(ctx.downstairs, ctx.bedtime, ctx.bedtime)) {\n        action = 'heat'; setpoint = ctx.bedtime + 1; fan = 'low'; reason = 'Pre-Bedtime Heating';\n    } else {\n        action = 'off'; reason = 'Pre-Bedtime Idle';\n    }\n} else if (ctx.isNightHours) {\n    if (needsCool(ctx.downstairs, ctx.bedtime)) {\n        action = 'cool'; setpoint = ctx.bedtime - 1; fan = 'low'; swing = 'fixedBottom'; reason = 'Night Cooling';\n    } else if (!ctx.tvActive && needsHeat(ctx.downstairs, ctx.bedtime, ctx.bedtime)) {\n        action = 'heat'; setpoint = ctx.bedtime + 2; fan = 'low'; reason = 'Night Heating';\n    } else {\n        action = 'off'; reason = 'Night Mode Idle';\n    }\n} else if (ctx.isSummer) {\n    const isCooling = ctx.lastAction === 'cool';\n\n    if (downstairsDelta >= 1.5) {\n        action = 'cool'; setpoint = 18; fan = 'high'; swing = 'fixedBottom'; reason = 'Summer Cooling (Downstairs Hot)';\n    } else if (upstairsDelta >= 1.5) {\n        action = 'cool'; setpoint = 20; fan = 'medium'; swing = 'fixedTop'; reason = 'Summer Cooling (Upstairs Med)';\n    } else if (upstairsDelta >= (isCooling ? 0.5 : 1.0)) {\n        action = 'cool'; setpoint = 21; fan = 'low'; swing = 'fixedTop'; reason = 'Summer Cooling (Upstairs Low)';\n    } else if (needsHeat(ctx.downstairs, heatTarget - 0.5, ctx.desired)) {\n        action = 'heat'; setpoint = heatTarget + 1; fan = 'medium'; reason = 'Summer Heating (Cold Forecast)';\n    } else {\n        action = 'off'; reason = 'Temp OK (Summer)';\n    }\n} else {\n    // WINTER / WFH MODE\n    \n    // We tolerate the upstairs being slightly cooler than the downstairs (e.g. 20 is fine if desired is 22)\n    const upstairsTolerated = ctx.desired - 2.0; \n\n    if (needsHeat(ctx.downstairs, heatTarget, ctx.desired)) {\n        // Downstairs is cold. Less aggressive setpoint to prevent overshooting to 23C.\n        action = 'heat'; setpoint = heatTarget + 1.5; fan = 'medium'; swing = 'fixedBottom'; reason = 'Winter Heating';\n    } else if (needsHeat(ctx.upstairs, upstairsTolerated, upstairsTolerated)) {\n        // Downstairs is fine, but upstairs is genuinely cold (dropped below the tolerated 2-degree gradient)\n        action = 'heat'; setpoint = ctx.desired; fan = 'low'; swing = 'fixedTop'; reason = 'Winter Heating (Upstairs Cold)';\n    } else if (needsCool(ctx.downstairs, ctx.desired) || needsCool(ctx.upstairs, ctx.desired)) {\n        // Only ACTIVELY blow cold air in Winter if it gets uncomfortably hot (requires 1.5C overshoot)\n        action = 'cool'; setpoint = 20; fan = 'low'; swing = 'fixedBottom'; reason = 'Winter Cooldown';\n    } else {\n        action = 'off'; reason = 'Temp OK (Winter)';\n    }\n}\n\n// --- SWING OVERRIDE ---\nconst isSafetyMode = ['SAFETY HIGH', 'DOG SAFETY'].includes(reason);\nif (ctx.swingOR && ctx.swingOR !== 'auto' && !isSafetyMode) {\n    swing = ctx.swingOR;\n}\n\n// --- QUIET FAN OVERRIDE ---\nconst bypassQuietFan = ['SAFETY HIGH', 'DOG SAFETY', 'Pre-Bedtime Rapid Cool', 'Summer Cooling (Downstairs Hot)'].includes(reason);\nif (ctx.isQuietFan && action !== 'off' && !bypassQuietFan) {\n    fan = 'low';\n    reason += ' (Quiet Fan Active)';\n}\n\n// 3. PERSISTENCE & PAYLOAD\nif (action !== ctx.lastAction) { \n    flow.set('lastHPAction', action); \n    flow.set('lastHPActionTime', ctx.now); \n}\nflow.set('heatpumpAction', action);\nflow.set('fanlevel', fan);\nflow.set('swing', swing);\nflow.set('controlReason', reason);\n\nmsg.on = action !== 'off';\nmsg.mode = action === 'off' ? 'heat' : action;\nmsg.targetTemperature = Math.round(setpoint);\nmsg.fanlevel = fan;\nmsg.swing = swing;\n\n// Pass calculated state directly to downstream nodes\nmsg.hpAction = action;\nmsg.hpReason = reason;\n\n// 4. AUTO-RESET & DEBOUNCE\nconst currentContextState = ctx.homeMode + (ctx.manualOR || '');\nif (flow.get('lastContextState') !== currentContextState || msg.payload === 'reset') {\n    flow.set('lastContextState', currentContextState);\n    flow.set('lastSensiboHash', '');\n}\n\nconst currentHash = msg.on ? `ON-${msg.mode}-${msg.targetTemperature}-${msg.fanlevel}-${msg.swing}` : 'OFF';\nconst lastHash = flow.get('lastSensiboHash') || '';\n\nif (currentHash !== lastHash || msg.payload === 'force') {\n    flow.set('lastSensiboHash', currentHash);\n    node.status({ fill: action === 'heat' ? 'red' : (action === 'cool' ? 'blue' : 'grey'), shape: 'dot', text: reason });\n    return msg;\n}\n\nnode.status({ fill: \"grey\", shape: \"ring\", text: \"Holding: \" + reason });\nreturn null;",
-        "outputs": 1,
+        "func": "// CORE RULES ENGINE (heat pump)\n// Outputs:\n//   1. Sensibo command  – only when the command changed (→ Sensibo queue)\n//   2. State            – every cycle (→ UI + Mill Controller)\n//   3. Re-assert        – every ON command, re-sent once 60s later if still current\n//                         (IR can be missed; this keeps swing/mode in sync with Sensibo)\n\n// 1. CONTEXT & SAFETY\nconst ctx = msg.ctx;\nconst force = msg.payload === 'reset' || msg.payload === 'force';\n\nconst isBlocked = ['visitor', 'guest', 'manual'].includes(ctx.homeMode) || ctx.manualMode || ctx.visitorMode;\nif (isBlocked) {\n    flow.set('controlReason', 'BLOCKED'); \n    flow.set('heatpumpAction', 'paused'); \n    node.status({ fill: 'yellow', shape: 'ring', text: 'BLOCKED (remote in control)' });\n    return [null, { ctx: ctx, hp: { action: 'paused', reason: 'BLOCKED' }, force: force }, null];\n}\n\n// --- PREDICTIVE WEATHER BOOST ---\n// Cold forecast → start heating a little earlier and run the HP a bit harder.\n// It never raises the STOP temperature (that caused short cycling / overshoot).\nlet weatherBoost = 0;\nconst lowestForecast = Math.min(ctx.outside, ctx.out1h, ctx.out6h);\n\nif (!ctx.isNightHours && ctx.timeMode !== 'pre-bedtime') {\n    if (lowestForecast < 10) {\n        weatherBoost = 1.0;\n    } else if (lowestForecast < 15) {\n        weatherBoost = 0.5;\n    }\n}\n// ---------------------------------\n\n// 2. CORE LOGIC\nlet action = 'off', setpoint = ctx.desired, fan = 'low', swing = 'fixedBottom', reason = '';\nlet bypassQuietFan = false;\nconst dogMax = ctx.dogMaxTemp;\nconst isCooling = ctx.lastAction === 'cool';\n\n// Hysteresis: start below tgt-0.5 (earlier by startEarly), stop at tgt+0.2.\nconst HEAT_START = 0.5, HEAT_STOP = 0.2;\nconst needsHeat = (t, tgt, startEarly) => {\n    return ctx.lastAction === 'heat' ? (t < tgt + HEAT_STOP) : (t < tgt - HEAT_START + (startEarly || 0));\n};\n\n// Require a large overshoot to actively cool in Winter/night\nconst needsCool = (t, tgt) => {\n    return isCooling ? (t > tgt - 0.3) : (t > tgt + 1.5);\n};\n\nconst upstairsDelta = ctx.upstairs - ctx.desired;\nconst downstairsDelta = ctx.downstairs - ctx.desired;\n\n// LOGIC TREE\nif (ctx.manualOR && ctx.manualOR !== 'auto') {\n    action = ctx.manualOR === 'on' ? (ctx.isSummer ? 'cool' : 'heat') : ctx.manualOR;\n    reason = 'Manual OVR: ' + action;\n} else if (ctx.upstairs > 30 || ctx.downstairs > 30) {\n    action = 'cool'; setpoint = 22; fan = 'high'; swing = 'fixedBottom'; reason = 'SAFETY HIGH'; bypassQuietFan = true;\n} else if (ctx.upstairs >= dogMax) {\n    action = 'cool'; setpoint = 20; fan = 'high'; swing = 'fixedTop'; reason = 'DOG SAFETY'; bypassQuietFan = true;\n} else if (ctx.timeMode === 'pre-bedtime') {\n    // Bedrooms are downstairs → cool the downstairs to bedtime temp before 22:00.\n    // Start early (+0.5) because the window is short, stop at -0.3 so bedrooms don't get overcooled.\n    const bedTgt = ctx.bedtime;\n    const dnOver = ctx.downstairs - bedTgt;\n    const upOver = ctx.upstairs - bedTgt;\n    const preBedCoolDn = isCooling ? dnOver > -0.3 : dnOver > 0.5;\n    const preBedCoolUp = (isCooling ? upOver > 1.5 : upOver > 2.5) && dnOver > -0.3;\n\n    if (preBedCoolDn) {\n        action = 'cool'; swing = 'fixedBottom';\n        // Proportional: the warmer the bedrooms, the colder the air and stronger the fan\n        setpoint = dnOver > 2 ? 16 : (dnOver > 1 ? 17 : 18);\n        fan = dnOver > 1.5 ? 'high' : (dnOver > 0.5 ? 'medium' : 'low');\n        if (ctx.tvActive && fan === 'high') fan = 'medium';   // keep it quieter while watching TV\n        bypassQuietFan = dnOver > 1.5;\n        reason = (dnOver > 1.5 ? 'Pre-Bedtime Rapid Cool' : 'Pre-Bedtime Cool') + ' DN ' + ctx.downstairs.toFixed(1) + '→' + bedTgt;\n    } else if (preBedCoolUp) {\n        // Only upstairs is warm: cool it gently with air aimed up, without chilling the bedrooms\n        action = 'cool'; setpoint = 19; fan = 'low'; swing = 'fixedTop';\n        reason = 'Pre-Bedtime Cool UP ' + ctx.upstairs.toFixed(1);\n    } else if (!ctx.tvActive && needsHeat(ctx.downstairs, bedTgt - 0.5)) {\n        // Wider gap to the cooling stop point so we don't flip cool → heat after cooling\n        action = 'heat'; setpoint = bedTgt + 1; fan = 'low'; reason = 'Pre-Bedtime Heating';\n    } else {\n        action = 'off'; reason = 'Pre-Bedtime Idle';\n    }\n} else if (ctx.isNightHours) {\n    if (needsCool(ctx.downstairs, ctx.bedtime)) {\n        action = 'cool'; setpoint = ctx.bedtime - 1; fan = 'low'; swing = 'fixedBottom'; reason = 'Night Cooling';\n    } else if (!ctx.tvActive && needsHeat(ctx.downstairs, ctx.bedtime)) {\n        action = 'heat'; setpoint = ctx.bedtime + 2; fan = 'low'; reason = 'Night Heating';\n    } else {\n        action = 'off'; reason = 'Night Mode Idle';\n    }\n} else if (ctx.isSummer) {\n    if (downstairsDelta >= 1.5) {\n        action = 'cool'; setpoint = 18; fan = 'high'; swing = 'fixedBottom'; reason = 'Summer Cooling (Downstairs Hot)'; bypassQuietFan = true;\n    } else if (upstairsDelta >= 1.5) {\n        action = 'cool'; setpoint = 20; fan = 'medium'; swing = 'fixedTop'; reason = 'Summer Cooling (Upstairs Med)';\n    } else if (upstairsDelta >= (isCooling ? 0.5 : 1.0)) {\n        action = 'cool'; setpoint = 21; fan = 'low'; swing = 'fixedTop'; reason = 'Summer Cooling (Upstairs Low)';\n    } else if (needsHeat(ctx.downstairs, ctx.desired - 0.5)) {\n        action = 'heat'; setpoint = ctx.desired + 1; fan = 'medium'; reason = 'Summer Heating (Cold Forecast)';\n    } else {\n        action = 'off'; reason = 'Temp OK (Summer)';\n    }\n} else {\n    // WINTER / WFH MODE\n\n    // Coast down before pre-bedtime so the bedrooms don't need hard cooling later\n    const dnTarget = ctx.preBedCoast ? Math.min(ctx.desired, ctx.bedtime + 1) : ctx.desired;\n    // Predictive stop: sun on the house or room already climbing fast → stop a bit earlier\n    const solarGain = ctx.cloud < 40 && ctx.hour >= 9 && ctx.hour < 16;\n    const dnStop = dnTarget - ((solarGain || ctx.dnTrend > 0.5) ? 0.3 : 0);\n\n    // We tolerate the upstairs being slightly cooler than the downstairs (e.g. 20 is fine if desired is 22)\n    const upstairsTolerated = ctx.desired - 2.0; \n\n    if (needsHeat(ctx.downstairs, dnStop, weatherBoost > 0 ? 0.2 : 0)) {\n        action = 'heat'; setpoint = Math.min(ctx.desired + 1 + weatherBoost, ctx.desired + 2.5); fan = 'medium'; swing = 'fixedBottom';\n        reason = 'Winter Heating DN ' + ctx.downstairs.toFixed(1) + '→' + dnTarget + (ctx.preBedCoast ? ' (coast)' : '');\n    } else if (needsHeat(ctx.upstairs, upstairsTolerated)) {\n        // Downstairs is fine, but upstairs is genuinely cold (dropped below the tolerated 2-degree gradient)\n        action = 'heat'; setpoint = ctx.desired; fan = 'low'; swing = 'fixedTop'; reason = 'Winter Heating (Upstairs Cold)';\n    } else if (needsCool(ctx.downstairs, ctx.desired) || needsCool(ctx.upstairs, ctx.desired)) {\n        // Only ACTIVELY blow cold air in Winter if it gets uncomfortably hot (requires 1.5C overshoot)\n        action = 'cool'; setpoint = 20; fan = 'low'; swing = 'fixedBottom'; reason = 'Winter Cooldown';\n    } else {\n        action = 'off'; reason = 'Temp OK (Winter)';\n    }\n}\n\n// --- SWING OVERRIDE ---\nconst isSafetyMode = ['SAFETY HIGH', 'DOG SAFETY'].includes(reason);\nif (ctx.swingOR && ctx.swingOR !== 'auto' && !isSafetyMode) {\n    swing = ctx.swingOR;\n}\n\n// --- QUIET FAN OVERRIDE ---\nif (ctx.isQuietFan && action !== 'off' && !bypassQuietFan) {\n    fan = 'low';\n    reason += ' (Quiet Fan Active)';\n}\n\n// 3. PERSISTENCE\nif (action !== ctx.lastAction) { \n    flow.set('lastHPAction', action); \n    flow.set('lastHPActionTime', ctx.now); \n}\nsetpoint = Math.round(setpoint);\nflow.set('heatpumpAction', action);\nflow.set('targetTemp', setpoint);\nflow.set('fanlevel', fan);\nflow.set('swing', swing);\nflow.set('controlReason', reason);\n\nconst hp = { action: action, reason: reason, setpoint: setpoint, fan: fan, swing: swing };\nconst stateMsg = { ctx: ctx, hp: hp, force: force };\n\n// 4. AUTO-RESET & DEBOUNCE\nconst currentContextState = ctx.homeMode + (ctx.manualOR || '');\nif (flow.get('lastContextState') !== currentContextState || msg.payload === 'reset') {\n    flow.set('lastContextState', currentContextState);\n    flow.set('lastSensiboHash', '');\n}\n\nconst on = action !== 'off';\nconst cmd = {\n    topic: 'sensibo',\n    on: on,\n    mode: on ? action : 'heat',\n    targetTemperature: setpoint,\n    fanlevel: fan,\n    swing: swing,\n    hpAction: action,\n    hpReason: reason\n};\ncmd.cmdHash = on ? `ON-${cmd.mode}-${cmd.targetTemperature}-${cmd.fanlevel}-${cmd.swing}` : 'OFF';\nconst lastHash = flow.get('lastSensiboHash') || '';\n\nif (cmd.cmdHash !== lastHash || msg.payload === 'force') {\n    flow.set('lastSensiboHash', cmd.cmdHash);\n    node.status({ fill: action === 'heat' ? 'red' : (action === 'cool' ? 'blue' : 'grey'), shape: 'dot', text: reason });\n    return [cmd, stateMsg, on ? RED.util.cloneMessage(cmd) : null];\n}\n\nnode.status({ fill: \"grey\", shape: \"ring\", text: \"Holding: \" + reason });\nreturn [null, stateMsg, null];\n",
+        "outputs": 3,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -23234,10 +23265,14 @@
         "y": 760,
         "wires": [
             [
+                "sensibo_queue_001"
+            ],
+            [
                 "291aa7bea3cc6663",
-                "00fb06d15a8d5259",
-                "d342de2a9feab6c2",
                 "187fbdccd7e3333d"
+            ],
+            [
+                "sensibo_reassert_001"
             ]
         ]
     },
