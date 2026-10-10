@@ -167,6 +167,23 @@ This Node-RED project provides a complete smart home automation solution designe
 - `seasonName`: 'Summer' or 'Winter'
 - `controlReason`: Current automation decision context
 
+### TemperatureControllV2 (current)
+**Location:** `TemperatureControllV2` tab
+
+`Context & State Ingestion` → `Core Rules Engine` (3 outputs):
+1. **Sensibo command** (only when changed) → `Sensibo queue (1 / 15s)` → Sensibo. Commands are spaced ≥15 s so IR commands are never sent back-to-back (that made the unit lose swing and stay on `fixedTop`).
+2. **State** (every cycle) → UI + `Mill Controller`.
+3. **Re-assert**: the latest ON command is re-sent once 60 s later if it is still current, keeping swing/mode in sync with what Sensibo reports.
+
+**Mill Controller** (downstairs Mill heater) runs every cycle and is closed-loop on the downstairs sensor:
+- Idles (`millIdleTemp`, default 16 °C) when downstairs ≥ target + 0.3 °C, when downstairs is rising > 0.5 °C/h near target, or while the heat pump cools.
+- Holds the target, or boosts +1/+2 °C when downstairs is 0.25/0.75 °C below it; no boost while the heat pump heats downstairs unless ≥1 °C below.
+- `millWinterTemp` / `millSummerTemp` (dashboard "Mill max °C") are the **maximum** setpoint.
+- Zone target: day = `desiredTemp`, 1 h before pre-bedtime = min(desired, bedtime + 1) (coast-down), night/pre-bedtime = bedtime − 1, away/vacation use their own targets.
+- Re-sent every 30 min in case it was changed from the Mill app.
+
+**Pre-bedtime (20:30–22:00)** cools the downstairs bedrooms towards `bedtimeTemp`: starts at +0.5 °C, stops at −0.3 °C, setpoint/fan scale with how warm it is (fan max medium while TV is on). Upstairs-only heat is cooled gently with `fixedTop` without overcooling bedrooms.
+
 ### Visitor Mode System
 **Location:** `Visitor Mode Scheduler` tab
 
